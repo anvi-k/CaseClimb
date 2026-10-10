@@ -51,6 +51,7 @@ def main(argv: list[str] | None = None) -> int:
     record, episode = load_json(args.record), load_json(args.episode)
     llm = ReplayLLM(args.replay) if args.replay else BedrockLLM(model=args.model)
 
+    print(f"Grading {episode['episode_id']} with {llm.model}. This can take a few minutes...", file=sys.stderr)
     result = evaluate_episode(
         record,
         episode,
