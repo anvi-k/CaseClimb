@@ -1,0 +1,246 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "CaseClimb synthetic encounter API and web client",
+  "Parameters": {
+    "ArtifactBucket": {"Type": "String"},
+    "ArtifactKey": {"Type": "String"},
+    "AdminToken": {"Type": "String", "NoEcho": true, "MinLength": 32},
+    "StudentCode": {"Type": "String", "NoEcho": true, "MinLength": 20},
+    "AppPassword": {"Type": "String", "NoEcho": true, "MinLength": 12},
+    "SessionSecret": {"Type": "String", "NoEcho": true, "MinLength": 32},
+    "ElevenLabsKey": {"Type": "String", "NoEcho": true, "Default": ""},
+    "VoiceId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9_-]*"},
+    "BedrockModelId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9.:-]*"}
+  },
+  "Conditions": {"UseBedrock": {"Fn::Not": [{"Fn::Equals": [{"Ref": "BedrockModelId"}, ""]}]}},
+  "Resources": {
+    "Records": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [{"AttributeName": "pk", "AttributeType": "S"}],
+        "KeySchema": [{"AttributeName": "pk", "KeyType": "HASH"}],
+        "SSESpecification": {"SSEEnabled": true},
+        "PointInTimeRecoverySpecification": {"PointInTimeRecoveryEnabled": true, "RecoveryPeriodInDays": 7},
+        "TimeToLiveSpecification": {"AttributeName": "expires_at", "Enabled": true}
+      }
+    },
+    "Logs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {"LogGroupName": {"Fn::Sub": "/aws/lambda/${AWS::StackName}-api"}, "RetentionInDays": 7}
+    },
+    "RuntimeRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]},
+        "Policies": [{"PolicyName": "ScopedRuntime", "PolicyDocument": {"Version": "2012-10-17", "Statement": [
+          {"Effect": "Allow", "Action": ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Scan"], "Resource": {"Fn::GetAtt": ["Records", "Arn"]}},
+          {"Effect": "Allow", "Action": ["logs:CreateLogStream", "logs:PutLogEvents"], "Resource": {"Fn::GetAtt": ["Logs", "Arn"]}},
+          {"Fn::If": ["UseBedrock", {"Effect": "Allow", "Action": "bedrock:InvokeModel", "Resource": {"Fn::Sub": "arn:${AWS::Partition}:bedrock:${AWS::Region}::foundation-model/${BedrockModelId}"}}, {"Ref": "AWS::NoValue"}]}
+        ]}}]
+      }
+    },
+    "ApiFunction": {
+      "Type": "AWS::Lambda::Function",
+      "DependsOn": "Logs",
+      "Properties": {
+        "FunctionName": {"Fn::Sub": "${AWS::StackName}-api"},
+        "Runtime": "python3.12",
+        "Architectures": ["arm64"],
+        "Handler": "backend.app.handler",
+        "Role": {"Fn::GetAtt": ["RuntimeRole", "Arn"]},
+        "MemorySize": 512,
+        "Timeout": 30,
+        "ReservedConcurrentExecutions": 2,
+        "Code": {"S3Bucket": {"Ref": "ArtifactBucket"}, "S3Key": {"Ref": "ArtifactKey"}},
+        "Environment": {"Variables": {
+          "CASECLIMB_STORE": "dynamodb", "CASECLIMB_TABLE_NAME": {"Ref": "Records"},
+          "CASECLIMB_ADMIN_TOKEN": {"Ref": "AdminToken"}, "CASECLIMB_STUDENT_CODE": {"Ref": "StudentCode"},
+          "CASECLIMB_APP_PASSWORD": {"Ref": "AppPassword"}, "CASECLIMB_SESSION_SECRET": {"Ref": "SessionSecret"},
+          "ELEVENLABS_API_KEY": {"Ref": "ElevenLabsKey"}, "CASECLIMB_VOICE_ID": {"Ref": "VoiceId"},
+          "CASECLIMB_BEDROCK_MODEL_ID": {"Ref": "BedrockModelId"},
+          "CASECLIMB_DEBRIEF_MODEL_ID": {"Ref": "BedrockModelId"},
+          "CASECLIMB_SESSION_BUDGET": "200", "CASECLIMB_BEDROCK_CALL_BUDGET": "300", "CASECLIMB_TTS_CHARACTER_BUDGET": "5000"
+        }}
+      }
+    },
+    "HttpApi": {"Type": "AWS::ApiGatewayV2::Api", "Properties": {"Name": {"Fn::Sub": "${AWS::StackName}-api"}, "ProtocolType": "HTTP"}},
+    "Integration": {"Type": "AWS::ApiGatewayV2::Integration", "Properties": {"ApiId": {"Ref": "HttpApi"}, "IntegrationType": "AWS_PROXY", "IntegrationUri": {"Fn::GetAtt": ["ApiFunction", "Arn"]}, "PayloadFormatVersion": "2.0", "TimeoutInMillis": 29000}},
+    "DefaultRoute": {"Type": "AWS::ApiGatewayV2::Route", "Properties": {"ApiId": {"Ref": "HttpApi"}, "RouteKey": "$default", "Target": {"Fn::Join": ["/", ["integrations", {"Ref": "Integration"}]]}}},
+    "Stage": {"Type": "AWS::ApiGatewayV2::Stage", "Properties": {"ApiId": {"Ref": "HttpApi"}, "StageName": "$default", "AutoDeploy": true, "DefaultRouteSettings": {"ThrottlingBurstLimit": 10, "ThrottlingRateLimit": 5}}},
+    "InvokePermission": {"Type": "AWS::Lambda::Permission", "Properties": {"Action": "lambda:InvokeFunction", "FunctionName": {"Ref": "ApiFunction"}, "Principal": "apigateway.amazonaws.com", "SourceArn": {"Fn::Sub": "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${HttpApi}/*"}}},
+    "OperationsDashboard": {
+      "Type": "AWS::CloudWatch::Dashboard",
+      "Properties": {
+        "DashboardName": {
+          "Fn::Sub": "${AWS::StackName}-${AWS::Region}-operations"
+        },
+        "DashboardBody": {
+          "Fn::Sub": "{\"start\":\"-PT3H\",\"periodOverride\":\"inherit\",\"widgets\":[{\"type\":\"metric\",\"x\":0,\"y\":0,\"width\":12,\"height\":6,\"properties\":{\"title\":\"Lambda errors and throttles\",\"region\":\"${AWS::Region}\",\"view\":\"timeSeries\",\"stat\":\"Sum\",\"period\":300,\"metrics\":[[\"AWS/Lambda\",\"Errors\",\"FunctionName\",\"${ApiFunction}\"],[\"AWS/Lambda\",\"Throttles\",\"FunctionName\",\"${ApiFunction}\"]],\"yAxis\":{\"left\":{\"min\":0,\"label\":\"Count\"}}}},{\"type\":\"metric\",\"x\":12,\"y\":0,\"width\":12,\"height\":6,\"properties\":{\"title\":\"Lambda duration p95 (ms)\",\"region\":\"${AWS::Region}\",\"view\":\"timeSeries\",\"stat\":\"p95\",\"period\":300,\"metrics\":[[\"AWS/Lambda\",\"Duration\",\"FunctionName\",\"${ApiFunction}\"]],\"yAxis\":{\"left\":{\"min\":0,\"label\":\"Milliseconds\"}}}},{\"type\":\"metric\",\"x\":0,\"y\":6,\"width\":12,\"height\":6,\"properties\":{\"title\":\"HTTP API requests and server errors\",\"region\":\"${AWS::Region}\",\"view\":\"timeSeries\",\"stat\":\"Sum\",\"period\":300,\"metrics\":[[\"AWS/ApiGateway\",\"Count\",\"ApiId\",\"${HttpApi}\",\"Stage\",\"$default\"],[\"AWS/ApiGateway\",\"5xx\",\"ApiId\",\"${HttpApi}\",\"Stage\",\"$default\"]],\"yAxis\":{\"left\":{\"min\":0,\"label\":\"Count\"}}}},{\"type\":\"metric\",\"x\":12,\"y\":6,\"width\":12,\"height\":6,\"properties\":{\"title\":\"HTTP API latency p95 (ms)\",\"region\":\"${AWS::Region}\",\"view\":\"timeSeries\",\"stat\":\"p95\",\"period\":300,\"metrics\":[[\"AWS/ApiGateway\",\"Latency\",\"ApiId\",\"${HttpApi}\",\"Stage\",\"$default\"],[\"AWS/ApiGateway\",\"IntegrationLatency\",\"ApiId\",\"${HttpApi}\",\"Stage\",\"$default\"]],\"yAxis\":{\"left\":{\"min\":0,\"label\":\"Milliseconds\"}}}},{\"type\":\"metric\",\"x\":0,\"y\":12,\"width\":12,\"height\":6,\"properties\":{\"title\":\"DynamoDB table throttle events\",\"region\":\"${AWS::Region}\",\"view\":\"timeSeries\",\"stat\":\"Sum\",\"period\":300,\"metrics\":[[\"AWS/DynamoDB\",\"ReadThrottleEvents\",\"TableName\",\"${Records}\"],[\"AWS/DynamoDB\",\"WriteThrottleEvents\",\"TableName\",\"${Records}\"]],\"yAxis\":{\"left\":{\"min\":0,\"label\":\"Count\"}}}},{\"type\":\"text\",\"x\":12,\"y\":12,\"width\":12,\"height\":6,\"properties\":{\"markdown\":\"# CaseClimb operations\\nWorkshop prototype: 5 requests/s, burst 10; Lambda concurrency 2. Four alarms use 5-minute windows and have no notification actions. Missing error/throttle data can be normal when idle. Provider quotas and educational outcomes are not CloudWatch metrics. See infra/README.md for checks, backup, expiry, and teardown.\"}}]}"
+        }
+      }
+    },
+    "LambdaErrorAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-lambda-errors"
+        },
+        "AlarmDescription": "One or more Lambda runtime/function errors in five minutes. Inspect project logs privately; HTTP application 5xx errors may only appear in the API alarm.",
+        "ActionsEnabled": false,
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Errors",
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "ApiFunction"
+            }
+          }
+        ],
+        "Statistic": "Sum",
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    },
+    "LambdaThrottleAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-lambda-throttles"
+        },
+        "AlarmDescription": "One or more Lambda invocation throttles in five minutes. Workshop reserved concurrency is two; inspect demand before changing limits.",
+        "ActionsEnabled": false,
+        "Namespace": "AWS/Lambda",
+        "MetricName": "Throttles",
+        "Dimensions": [
+          {
+            "Name": "FunctionName",
+            "Value": {
+              "Ref": "ApiFunction"
+            }
+          }
+        ],
+        "Statistic": "Sum",
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    },
+    "ApiServerErrorAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-http-server-errors"
+        },
+        "AlarmDescription": "Three or more HTTP API server errors in five minutes. Check Lambda errors, throttles, and integration latency.",
+        "ActionsEnabled": false,
+        "Namespace": "AWS/ApiGateway",
+        "MetricName": "5xx",
+        "Dimensions": [
+          {
+            "Name": "ApiId",
+            "Value": {
+              "Ref": "HttpApi"
+            }
+          },
+          {
+            "Name": "Stage",
+            "Value": "$default"
+          }
+        ],
+        "Statistic": "Sum",
+        "Period": 300,
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 3,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    },
+    "DynamoThrottleAlarm": {
+      "Type": "AWS::CloudWatch::Alarm",
+      "Properties": {
+        "AlarmName": {
+          "Fn::Sub": "${AWS::StackName}-dynamodb-throttles"
+        },
+        "AlarmDescription": "One or more table read/write throttle events in five minutes. This table has no global secondary indexes.",
+        "ActionsEnabled": false,
+        "Metrics": [
+          {
+            "Id": "total",
+            "Expression": "read + write",
+            "Label": "Table read/write throttle events",
+            "ReturnData": true
+          },
+          {
+            "Id": "read",
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/DynamoDB",
+                "MetricName": "ReadThrottleEvents",
+                "Dimensions": [
+                  {
+                    "Name": "TableName",
+                    "Value": {
+                      "Ref": "Records"
+                    }
+                  }
+                ]
+              },
+              "Period": 300,
+              "Stat": "Sum"
+            },
+            "ReturnData": false
+          },
+          {
+            "Id": "write",
+            "MetricStat": {
+              "Metric": {
+                "Namespace": "AWS/DynamoDB",
+                "MetricName": "WriteThrottleEvents",
+                "Dimensions": [
+                  {
+                    "Name": "TableName",
+                    "Value": {
+                      "Ref": "Records"
+                    }
+                  }
+                ]
+              },
+              "Period": 300,
+              "Stat": "Sum"
+            },
+            "ReturnData": false
+          }
+        ],
+        "EvaluationPeriods": 1,
+        "DatapointsToAlarm": 1,
+        "Threshold": 1,
+        "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+        "TreatMissingData": "notBreaching"
+      }
+    }
+  },
+  "Outputs": {
+    "ApiUrl": {"Value": {"Fn::Sub": "https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"}},
+    "FunctionName": {"Value": {"Ref": "ApiFunction"}},
+    "TableName": {"Value": {"Ref": "Records"}},
+    "DashboardName": {"Value": {"Ref": "OperationsDashboard"}},
+    "DashboardUrl": {"Value": {"Fn::Sub": "https://console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#dashboards:name=${OperationsDashboard}"}},
+    "LogGroupName": {"Value": {"Ref": "Logs"}},
+    "LambdaErrorAlarmName": {"Value": {"Ref": "LambdaErrorAlarm"}},
+    "LambdaThrottleAlarmName": {"Value": {"Ref": "LambdaThrottleAlarm"}},
+    "ApiServerErrorAlarmName": {"Value": {"Ref": "ApiServerErrorAlarm"}},
+    "DynamoThrottleAlarmName": {"Value": {"Ref": "DynamoThrottleAlarm"}}
+  }
+}

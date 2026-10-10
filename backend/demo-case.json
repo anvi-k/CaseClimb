@@ -1,0 +1,24 @@
+{
+  "title": "ED communication practice — medication routine",
+  "patient_name": "Jordan Example",
+  "age": 42,
+  "setting": "Emergency department",
+  "summary": "Fictional communication example. Explore concerns and clarify the patient's medication routine. Draft: no diagnosis or treatment advice; qualified clinical review required before learners use it.",
+  "synthetic": true,
+  "opening": "I'm worried, and I don't want to be judged. Can we talk about what has been difficult lately?",
+  "fallback_answer": "Could you ask about my concerns or my medication routine? I don't have that information.",
+  "facts": [
+    {"id": "concern", "label": "Main concern", "text": "The fictional patient is worried about being judged when discussing a medication routine.", "audience": "both", "initially_released": true, "patient_answer": "I'm worried about being judged when we discuss my medication routine.", "keywords": ["worry", "worried", "concern", "difficult"]},
+    {"id": "routine", "label": "Medication routine", "text": "The fictional patient missed several doses because the routine was hard to remember. No medicine or diagnosis is specified.", "audience": "both", "keywords": ["medication", "medications", "medicine", "medicines", "routine", "doses"], "patient_answer": "Actually, I missed several doses. The routine was hard to remember, and I was embarrassed to tell you.", "nondisclosure_answer": "I think I've been following the routine.", "clarification_keywords": ["missed", "remember", "hard", "difficult", "day", "walk me through", "yesterday"], "requires": ["concern"]},
+    {"id": "unknown_lab", "label": "Lab availability", "text": "No lab results were authored for this communication example.", "state": "unknown", "audience": "chart", "keywords": ["lab", "labs", "test", "tests", "results"]}
+  ],
+  "artifacts": [
+    {"id": "instruction_note", "title": "Synthetic communication note", "kind": "note", "body": "Practice respectful clarification of the patient's routine. This is not a real chart, diagnosis, prescription, or clinical recommendation.", "initially_released": true}
+  ],
+  "objectives": [
+    {"id": "explore_concern", "label": "Invite the patient's concerns", "keywords": ["concern", "worried", "worry", "tell me", "difficult"], "opportunity_fact_ids": ["concern"], "guidance": "Invite the patient to explain what worries them; do not infer inner empathy from phrasing alone.", "next_question": "What has been worrying you most?"},
+    {"id": "clarify_routine", "label": "Clarify the medication routine respectfully", "keywords": ["missed", "remember", "walk me through", "yesterday", "difficult"], "required_fact_ids": ["routine"], "opportunity_fact_ids": ["concern"], "guidance": "Use a concrete, nonjudgmental question about routines rather than accusing the patient of dishonesty.", "next_question": "Could you walk me through yesterday and what made your medication routine difficult?"}
+  ],
+  "behavior": {"mood": "guarded", "initial_rapport": 30},
+  "author_note": "Unreviewed synthetic demonstration only. Created to exercise authoring/disclosure mechanics, not derived from a clinical dataset. No faculty clinical approval or validation is established."
+}

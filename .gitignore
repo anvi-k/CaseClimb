@@ -1,0 +1,17 @@
+# Keep original recordings, private sources, and credentials out of publication.
+.private/
+.env
+.env.*
+!.env.example
+*.m4a
+*.wav
+*.mp3
+*.mp4
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/

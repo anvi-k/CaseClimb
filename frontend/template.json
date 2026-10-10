@@ -1,0 +1,67 @@
+{
+  "title": "New teaching encounter",
+  "patient_name": "Synthetic patient",
+  "age": 40,
+  "setting": "Emergency department",
+  "summary": "Replace this public brief with your encounter's learning context. Keep hidden findings out of the summary.",
+  "synthetic": true,
+  "opening": "Replace this with the patient's authored opening statement.",
+  "fallback_answer": "I'm not sure what you mean. Could you ask about a specific concern?",
+  "facts": [
+    {
+      "id": "primary_concern",
+      "label": "Replace with a fact label",
+      "text": "Replace with an approved synthetic fact.",
+      "state": "known",
+      "audience": "both",
+      "initially_released": false,
+      "keywords": [],
+      "requires": [],
+      "patient_answer": "Replace with the patient's authored answer.",
+      "nondisclosure_answer": null,
+      "clarification_keywords": [],
+      "source": "Faculty-authored synthetic teaching case"
+    }
+  ],
+  "artifacts": [],
+  "objectives": [
+    {
+      "id": "learning_objective",
+      "label": "Replace with an observable learning objective",
+      "keywords": [],
+      "required_fact_ids": [],
+      "opportunity_fact_ids": [],
+      "guidance": "Replace with faculty-authored feedback guidance.",
+      "next_question": "Replace with an example question for the next attempt.",
+      "debrief_focus": "missed_follow_up"
+    }
+  ],
+  "behavior": {
+    "mood": "guarded",
+    "initial_rapport": 30,
+    "supportive_keywords": [
+      "understand",
+      "sounds difficult",
+      "concern",
+      "thank you"
+    ],
+    "dismissive_keywords": [
+      "just calm down",
+      "you are lying"
+    ],
+    "supportive_response": "Thank you for listening. What would you like to know?",
+    "dismissive_response": "That makes me less comfortable talking. Please listen to my concerns."
+  },
+  "voice_id": null,
+  "avatar_id": null,
+  "author_note": "Authoring template only. Add facts and observable objectives, then complete a qualified clinical review. This template is not an approved clinical case.",
+  "voice_delivery": {
+    "model_id": "eleven_multilingual_v2",
+    "emotion": "neutral",
+    "emotion_source": "faculty",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0,
+    "speed": 1
+  }
+}
