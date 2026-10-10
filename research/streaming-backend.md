@@ -78,7 +78,7 @@ Encounters retain the ten-minute deadline, sixty-turn limit, authored clinical t
 
 The Scribe token expires after fifteen minutes for connection initiation. It does **not** bind an already-open provider connection to our encounter or revoke it server-side. The normal client enforces pause and encounter deadlines, and the server reserves the entire remaining session duration before minting each token. These are application controls, not a hard provider-duration ceiling. The scoped ElevenLabs key's credit cap is the independent spending ceiling. A persistent server relay would be required for hard upstream audio-duration enforcement against a modified client.
 
-Live video remains the free LiveAvatar Wayne sandbox, capped at roughly one minute and shared across the four demo profiles. ElevenLabs supplies transcription and expressive voice; LiveAvatar renders live video. The native ElevenLabs Image & Video introduction is prerecorded.
+Live video remains the free LiveAvatar Wayne sandbox, capped at roughly one minute with a shared rendered face. Patient cases retain their authored words, configured voice, and illustration. ElevenLabs supplies transcription and expressive voice; LiveAvatar renders live video. The native ElevenLabs Image & Video introduction is prerecorded. The unified patient-case interface requires a reviewed, published case and student access code before an encounter can start; communication templates are editable drafts, not automatically approved cases.
 
 ## Verification
 

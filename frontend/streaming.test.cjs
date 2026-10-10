@@ -261,10 +261,21 @@ test("actual app uses streamed audio once with legacy recognition and hydrates t
   sockets[0].receive({ type: "audio.start", request_id: requestId, utterance_id: "u-app", event_id: "e2", format: "pcm_s16le", sample_rate: 24000, channels: 1 });
   sockets[0].receive({ type: "audio.chunk", request_id: requestId, utterance_id: "u-app", sequence: 0, audio: "AAA=" }); await flush();
   assert.equal(env.appState.encounter.confirmed_turns, 1); assert.equal(contexts[0].sources.length, 1); assert.equal(recognitions.length, 1);
+  assert.match(node("audio-status").textContent, /Streaming ElevenLabs voice/);
   sockets[0].receive({ type: "audio.end", request_id: requestId, utterance_id: "u-app" }); await flush(); assert.equal(recognitions.length, 1);
+  assert.match(node("audio-status").textContent, /Streaming ElevenLabs voice/, "EOF must not claim audible playback has finished");
   contexts[0].sources[0].onended(); await flush();
+  assert.equal(node("audio-status").textContent, "Patient audio finished. Captions remain available.");
   assert.equal(recognitions.length, 2, "legacy microphone resumes only after streamed audio drains");
   assert.equal(sockets[0].sent.filter((frame) => frame.action === "turn").length, 1);
   assert.deepEqual(requests, ["/encounters/streaming-app-test/stream-ticket"], "streamed reply must not also fetch buffered MP3 or synthesize twice");
+  // A drain resolving immediately before cancellation must not publish a
+  // success into the paused UI from a later continuation.
+  const replay = env.appState.streamClient.speak("e2", { requestId: "replay" }); const interrupted = assert.rejects(replay, (error) => error.kind === "cancelled"); await flush();
+  sockets[0].receive({ type: "audio.start", request_id: "replay", utterance_id: "u-replay", event_id: "e2", format: "pcm_s16le", sample_rate: 24000, channels: 1 });
+  sockets[0].receive({ type: "audio.chunk", request_id: "replay", utterance_id: "u-replay", sequence: 0, audio: "AAA=" });
+  sockets[0].receive({ type: "audio.end", request_id: "replay", utterance_id: "u-replay" }); await flush();
+  contexts[0].sources[1].onended(); env.appState.streamClient.cancel(); node("audio-status").textContent = "Response stopped.";
+  await interrupted; await flush(); assert.equal(node("audio-status").textContent, "Response stopped.");
   env.appState.conversation.stop(); env.appState.streamClient.close(); env.appState.pcmPlayer.close();
 });

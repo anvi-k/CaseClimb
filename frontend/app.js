@@ -327,10 +327,21 @@ function encounterStreamClient() {
     refreshState: async () => { const state = await request(""); if (current()) updateEncounter(state); return state; },
     onConfirmed: (state) => { if (current()) { app.pendingTurn = null; $("turn-text").value = ""; updateEncounter(state); } },
     onStatus: (text) => { if (current()) $("audio-status").textContent = text; },
-    createSink: () => app.video?.active ? {
-      begin: (frame, options) => { app.conversation?.replySpeaking?.(); return app.video.beginStreaming(frame, options); },
-      push: (audio) => app.video.pushStreaming(audio), finish: () => app.video.finishStreaming(), stop: () => app.video?.interrupt(),
-    } : app.pcmPlayer,
+    createSink: () => {
+      if (app.video?.active) return {
+        begin: (frame, options) => { app.conversation?.replySpeaking?.(); return app.video.beginStreaming(frame, options); },
+        push: (audio) => app.video.pushStreaming(audio), finish: () => app.video.finishStreaming(), stop: () => app.video?.interrupt(),
+      };
+      const player = app.pcmPlayer; let generation;
+      return {
+        begin: async (frame, options) => { await player.begin(frame, options); generation = player.generation; },
+        push: (audio) => player.push(audio), stop: () => player.stop(),
+        finish: async () => {
+          await player.finish();
+          if (current() && app.pcmPlayer === player && player.generation === generation) $("audio-status").textContent = "Patient audio finished. Captions remain available.";
+        },
+      };
+    },
   });
   return app.streamClient;
 }
