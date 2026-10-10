@@ -50,6 +50,25 @@ python -m evaluator --record examples/patient_record.json --episode examples/epi
 
 `examples/grader_response.json` contains one misquote, one citation of a turn that does not exist, and one over-generous objective result, so the output shows each correction.
 
+### Grading encounters from the app
+
+The deployed app (`main`, `backend/`) stores cases as `CaseDraft` and sessions as encounter records with an event log. `evaluator.app_bridge` converts both into the evaluator's inputs:
+
+```python
+from evaluator.app_bridge import episode_from_encounter, record_from_case
+
+record = record_from_case(case.model_dump(), case_id=case_id, version=version, published_at=published_at)
+episode = episode_from_encounter(encounter, case.model_dump(), student_id="u.jo", student_name="Jo")
+result = evaluate_episode(record, episode, BedrockLLM())
+```
+
+- Release rules map to `at_start` (initially released), `after_fact` (has prerequisites), or `when_asked` (keywords only), so only facts the student earned count as elicited.
+- A fact with a `nondisclosure_answer` becomes a discrepancy: the cover answer is the patient's claim and the fact is the truth.
+- Objectives keep their `required_fact_ids` as critical facts; their label and guidance become the description the grader reads.
+- The app has no patient sex or fact categories, so the record uses `unknown` and `other`.
+
+`examples/app/` holds the app's demo case and an encounter produced by running the app's engine on it.
+
 ## Setup
 
 ```bash
