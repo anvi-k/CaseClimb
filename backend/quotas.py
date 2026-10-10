@@ -10,6 +10,7 @@ LIMITS = {
     "tts_characters": ("CASECLIMB_TTS_CHARACTER_BUDGET", 20_000, 1_000_000),
     "video_sessions": ("CASECLIMB_VIDEO_SESSION_BUDGET", 2, 100),
     "video_minutes": ("CASECLIMB_VIDEO_MINUTE_BUDGET", 20, 1000),
+    "stt_seconds": ("CASECLIMB_STT_SECOND_BUDGET", 3600, 36_000),
 }
 
 

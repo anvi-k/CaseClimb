@@ -17,7 +17,9 @@ Implementation: [application routes](../backend/app.py), [app access](../backend
 
 The current frontend and API share an origin. If the redesigned frontend moves to another domain, CORS, cookie/session behavior, and CSRF/authentication need an explicit contract; the current strict cookie is not a ready-made cross-domain sign-in solution. Keep the new frontend on the API origin initially, or complete that identity integration before treating a separate deployment as connected.
 
-## What streams today
+## Buffered release audit
+
+This section records the earlier `0b42252` release. The newer [streaming backend](streaming-backend.md) implements realtime Scribe, an authenticated AWS WebSocket service, incremental TTS forwarding, spoken interruption, and recovery without automatic paid replay. Clinical case review, institutional identity, validated assessment, and pilot operations below remain separate work.
 
 The browser receives actual avatar video/audio through LiveKit/WebRTC and sends PCM to LiveAvatar over a WebSocket. Signed-in AWS Chrome checks decoded a 640×360 avatar, played actual ElevenLabs speech for a typed question, and reached the renderer's reply-completion status. The user separately confirmed that spoken start reaches Listening. That confirms microphone startup; it does not by itself prove a recognized spoken question and a heard reply.
 

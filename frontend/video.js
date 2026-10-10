@@ -40,6 +40,7 @@ class PatientVideoRenderer {
     this.deadline = null; this.serverAttempted = false; this.serverStopped = false; this.stopPromise = null; this.audioController = null;
     this.deadlineTimer = null; this.heartbeat = null; this.frameTimer = null;
     this.utterance = null; this.sandbox = false; this.avatarName = ""; this.socketReadyCleanup = null;
+    this.streamingOperation = null;
   }
 
   changed() { this.onChange(this); }
@@ -198,6 +199,10 @@ class PatientVideoRenderer {
   }
 
   interrupt() {
+    if (this.streamingOperation) {
+      this.streamingOperation.signal?.removeEventListener("abort", this.streamingOperation.onAbort);
+      this.streamingOperation = null;
+    }
     this.speechGeneration += 1; this.audioController?.abort(); this.audioController = null;
     this.settleUtterance(new Error("Video reply stopped."));
     if (this.socket?.readyState === WebSocket.OPEN) {
@@ -205,6 +210,52 @@ class PatientVideoRenderer {
       catch { this.stop(); this.onStatus("The video connection ended. Continue with captions."); }
     }
     this.speaking = false; this.changed();
+  }
+
+  beginStreaming(frame, { signal } = {}) {
+    if (!this.active || this.socket?.readyState !== WebSocket.OPEN || this.remaining() <= 0 || signal?.aborted) throw new Error("Live video is unavailable.");
+    if (this.needsPlayback) throw new Error("Allow video playback before replaying the reply.");
+    if (frame.format !== "pcm_s16le" || frame.sample_rate !== 24000 || frame.channels !== 1 || typeof frame.utterance_id !== "string") throw new Error("Unexpected audio format.");
+    this.interrupt();
+    const operation = { generation: this.generation, speechGeneration: this.speechGeneration, id: frame.utterance_id, signal, ended: false };
+    let resolve, reject; operation.finished = new Promise((yes, no) => { resolve = yes; reject = no; }); operation.finished.catch(() => {});
+    operation.onAbort = () => { if (this.streamingOperation === operation) this.interrupt(); };
+    signal?.addEventListener("abort", operation.onAbort, { once: true });
+    this.streamingOperation = operation;
+    this.utterance = { id: operation.id, resolve, reject, timer: setTimeout(() => {
+      if (this.streamingOperation !== operation) return;
+      this.stop(); this.onStatus("The video reply timed out. Continue with voice and captions.");
+    }, Math.min(90000, this.remaining() * 1000)) };
+    this.speaking = true; this.changed(); this.onStatus("ElevenLabs audio is streaming to the live avatar. Speak to interrupt.");
+  }
+
+  streamingCurrent(operation) {
+    return this.streamingOperation === operation && this.stillCurrent(operation.generation) && operation.speechGeneration === this.speechGeneration && !operation.signal?.aborted && this.socket?.readyState === WebSocket.OPEN;
+  }
+
+  async pushStreaming(audio) {
+    const operation = this.streamingOperation;
+    if (!operation || operation.ended || !this.streamingCurrent(operation)) throw new Error("Video reply stopped.");
+    if (typeof audio !== "string" || audio.length > 11000 || !/^[A-Za-z0-9+/]+={0,2}$/.test(audio)) throw new Error("Unexpected audio chunk.");
+    const deadline = Date.now() + 5000;
+    while (this.socket.bufferedAmount > 250000) {
+      if (!this.streamingCurrent(operation) || Date.now() > deadline) throw new Error("Audio transport interrupted.");
+      await new Promise((resolve) => setTimeout(resolve, 50));
+    }
+    if (!this.streamingCurrent(operation)) throw new Error("Video reply stopped.");
+    this.socket.send(JSON.stringify({ type: "agent.speak", event_id: operation.id, audio }));
+  }
+
+  async finishStreaming() {
+    const operation = this.streamingOperation;
+    if (!operation || operation.ended || !this.streamingCurrent(operation)) throw new Error("Video reply stopped.");
+    operation.ended = true;
+    this.socket.send(JSON.stringify({ type: "agent.speak_end", event_id: operation.id }));
+    try { await operation.finished; }
+    finally {
+      operation.signal?.removeEventListener("abort", operation.onAbort);
+      if (this.streamingOperation === operation) this.streamingOperation = null;
+    }
   }
 
   async speak(eventId, { signal } = {}) {
@@ -258,6 +309,10 @@ class PatientVideoRenderer {
   }
 
   stop({ notifyServer = true, keepalive = false } = {}) {
+    if (this.streamingOperation) {
+      this.streamingOperation.signal?.removeEventListener("abort", this.streamingOperation.onAbort);
+      this.streamingOperation = null;
+    }
     this.generation += 1; this.speechGeneration += 1;
     this.audioController?.abort(); this.audioController = null;
     this.settleUtterance(new Error("Video session ended."));

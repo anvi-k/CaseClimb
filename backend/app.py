@@ -20,10 +20,11 @@ from .access import AppAccess
 from .conversation_demo import DEMO_ID, DEMO_MODE, NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, PROFILES as DEMO_PROFILES, StartDemo, demo_case, demo_feedback, is_demo, profile_prompts, public_event, public_profile
 from .debrief import BedrockDebriefSelector, enrich_feedback
 from .engine import disclosed_chart, feedback, reply, validate_case
-from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, Turn
+from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, StreamCancel, Turn
 from .providers import BedrockSelector, ElevenLabsTTS, speech_plan
 from .quotas import BudgetedSelector, Quotas
 from .store import Conflict, configured_store
+from .streaming import StreamAuthorization, StreamService
 from .video import LiveAvatarClient, SANDBOX_AVATAR_ID, VideoService
 
 CAP_SECONDS = 600
@@ -92,8 +93,12 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         record = app.state.store.get(f"encounter:{encounter_id}")
         if not record:
             raise HTTPException(404, "Encounter not found.")
-        supplied = auth.credentials if auth else ""
-        if not supplied or not secrets.compare_digest(digest(supplied), record["payload"]["token_hash"]):
+        if isinstance(auth, StreamAuthorization):
+            supplied_hash = auth.token_hash if auth.encounter_id == encounter_id else ""
+        else:
+            supplied = auth.credentials if auth else ""
+            supplied_hash = digest(supplied) if supplied else ""
+        if not supplied_hash or not secrets.compare_digest(supplied_hash, record["payload"]["token_hash"]):
             raise HTTPException(401, "This encounter's bearer token is required.", headers={"WWW-Authenticate": "Bearer"})
         return record
 
@@ -132,6 +137,31 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
                 return
             except Conflict:
                 continue
+
+    def cancel_turn_by_request(encounter_id, request_id, auth):
+        # Cancellation and nonce release share the ledger CAS, preventing a
+        # cancelled worker from reserving after its acknowledgement.
+        for _ in range(5):
+            record = encounter_record(encounter_id, auth)
+            encounter = record["payload"]
+            cancelled = encounter.setdefault("cancelled_stream_requests", [])
+            if request_id not in cancelled:
+                if len(cancelled) >= 120:
+                    raise HTTPException(429, "Stream interruption limit reached.")
+                cancelled.append(request_id)
+            pending = encounter.get("pending_turn")
+            if pending and pending["request_id"] == request_id:
+                cancel_pending(encounter, "stream_interrupted")
+            try:
+                persist_encounter(encounter, record["revision"])
+                return state(encounter)
+            except Conflict:
+                continue
+        raise HTTPException(409, "Could not confirm interruption. Refresh this encounter.")
+
+    def streaming_status():
+        return {"streaming_configured": bool(os.getenv("CASECLIMB_STREAM_WS_URL")),
+                "stt_available": bool(app.state.tts and os.getenv("CASECLIMB_STT_ENABLED", "").lower() == "true" and app.state.quotas.remaining("stt_seconds") > 0)}
 
     def finished_feedback(encounter_id, auth):
         """Reserve one optional debrief attempt, including uncertain failures."""
@@ -216,6 +246,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             "assessment_notice": "Synthetic practice only. Rapport is simulated; feedback is unvalidated and requires faculty review.",
         }
         result["mode"] = encounter.get("mode", "clinical_practice")
+        result.update(streaming_status())
         if is_demo(encounter):
             result.update(events=[public_event(e) for e in encounter["events"]], chart={"facts": [], "artifacts": []},
                           video_available=app.state.video.available(case, demo=True), video_sandbox=app.state.video.sandbox_metadata(),
@@ -232,7 +263,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
 
     @app.get("/api/status")
     def status():
-        return {"status": "ok", "storage": os.getenv("CASECLIMB_STORE", "file"), "app_access_required": app.state.access.required, "faculty_access_configured": bool(os.getenv("CASECLIMB_ADMIN_TOKEN")), "student_access_required": True, "student_access_configured": bool(os.getenv("CASECLIMB_STUDENT_CODE")), "bedrock_configured": app.state.selector is not None, "debrief_configured": app.state.debrief_selector is not None, "tts_configured": app.state.tts is not None, "tts_available": app.state.tts is not None and app.state.quotas.remaining("tts_characters") > 0, "video_configured": app.state.video.client is not None, "video_available": app.state.video.available(), "demo_video_available": app.state.video.available(demo=True), "video_sandbox": app.state.video.sandbox_metadata(), "encounter_seconds": CAP_SECONDS, "max_turns": MAX_TURNS, "synthetic_only": True, "budgets_remaining": {name: app.state.quotas.remaining(name) for name in app.state.quotas.limits}, "budget_notice": "Finite workshop lifetime quotas. Reserved unsuccessful provider attempts count; use authored text/captions when exhausted."}
+        return {**streaming_status(), "status": "ok", "storage": os.getenv("CASECLIMB_STORE", "file"), "app_access_required": app.state.access.required, "faculty_access_configured": bool(os.getenv("CASECLIMB_ADMIN_TOKEN")), "student_access_required": True, "student_access_configured": bool(os.getenv("CASECLIMB_STUDENT_CODE")), "bedrock_configured": app.state.selector is not None, "debrief_configured": app.state.debrief_selector is not None, "tts_configured": app.state.tts is not None, "tts_available": app.state.tts is not None and app.state.quotas.remaining("tts_characters") > 0, "video_configured": app.state.video.client is not None, "video_available": app.state.video.available(), "demo_video_available": app.state.video.available(demo=True), "video_sandbox": app.state.video.sandbox_metadata(), "encounter_seconds": CAP_SECONDS, "max_turns": MAX_TURNS, "synthetic_only": True, "budgets_remaining": {name: app.state.quotas.remaining(name) for name in app.state.quotas.limits}, "budget_notice": "Finite workshop lifetime quotas. Reserved unsuccessful provider attempts count; use authored text/captions when exhausted."}
 
     @app.get("/api/library")
     def library():
@@ -369,12 +400,17 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
 
     @app.post("/api/encounters/{encounter_id}/turns")
     def turn(encounter_id: str, request: Turn, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
+        return submit_turn(encounter_id, request, auth)
+
+    def submit_turn(encounter_id, request, auth, allowed=None):
         text = request.text.strip()
         if not text:
             raise HTTPException(422, "A confirmed nonempty turn is required.")
         nonce = secrets.token_urlsafe(20)
         reserved = None
         for _ in range(5):
+            if allowed is not None and not allowed():
+                raise HTTPException(409, "Response interrupted before turn reservation.")
             record = encounter_record(encounter_id, auth)
             encounter = record["payload"]
             expire(encounter)
@@ -394,6 +430,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
                         continue
                     raise HTTPException(409, "This request was abandoned or expired. Retry explicitly with a new request_id if time remains.")
                 raise HTTPException(409, "This request is still being processed.", headers={"Retry-After": "2"})
+            if request.request_id in encounter.get("cancelled_stream_requests", []):
+                raise HTTPException(409, "This stream request was interrupted. Use a new request_id.")
             if encounter["status"] != "active":
                 raise HTTPException(409, "Encounter has ended; no new turns are accepted.")
             if encounter.get("pending_turn"):
@@ -423,6 +461,9 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             encounter = record["payload"]
             pending = encounter.get("pending_turn")
             now = app.state.clock()
+            if allowed is not None and not allowed():
+                abort_pending(encounter_id, nonce, "stream_interrupted")
+                raise HTTPException(409, "Response interrupted. Late output was discarded.")
             if not pending or pending["nonce"] != nonce or encounter["status"] != "active" or now >= min(pending["lease_until"], encounter["deadline"]):
                 abort_pending(encounter_id, nonce, "reply_expired")
                 raise HTTPException(409, "The pending turn ended or its lease expired. Late output was discarded.")
@@ -532,6 +573,38 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             app.state.store.put(key, {"status": "failed"}, reservation["revision"], int(encounter["started_at"] + 86400))
             raise HTTPException(502, "Speech provider failed. Use text or browser speech.")
         return Response(audio, media_type="audio/mpeg", headers={"Cache-Control": "no-store"})
+
+    def stream_scope(request, encounter_id, auth):
+        if not app.state.access.same_origin(request):
+            raise HTTPException(403, "Same-origin stream setup is required.")
+        record = encounter_record(encounter_id, auth)
+        sid = app.state.access.session_id(request)
+        if not app.state.access.session_active(sid):
+            raise HTTPException(401, "App sign-in required.")
+        origin = f"{request.url.scheme}://{request.url.netloc}"
+        return record, sid, origin
+
+    @app.post("/api/encounters/{encounter_id}/stream-ticket")
+    def stream_ticket(encounter_id: str, request: Request, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
+        record, sid, origin = stream_scope(request, encounter_id, auth)
+        return app.state.stream.mint_ticket(record, sid, origin)
+
+    @app.post("/api/encounters/{encounter_id}/speech/token")
+    def speech_token(encounter_id: str, request: Request, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
+        record, sid, origin = stream_scope(request, encounter_id, auth)
+        return app.state.stream.speech_token(record, sid, origin)
+
+    @app.post("/api/encounters/{encounter_id}/stream-cancel")
+    def stream_cancel(encounter_id: str, body: StreamCancel, request: Request, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
+        stream_scope(request, encounter_id, auth)
+        return app.state.stream.cancel(encounter_id, body.request_id, auth)
+
+    app.state.encounter_record = encounter_record
+    app.state.case_snapshot = case_snapshot
+    app.state.public_state = state
+    app.state.submit_turn = submit_turn
+    app.state.cancel_turn_by_request = cancel_turn_by_request
+    app.state.stream = StreamService(app)
 
     @app.middleware("http")
     async def response_headers(request: Request, call_next):

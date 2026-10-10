@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./styles.css">
   <script src="./video.js" defer></script>
   <script src="./conversation.js" defer></script>
+  <script src="./streaming.js" defer></script>
   <script src="./app.js" defer></script>
 </head>
 <body>
@@ -82,9 +83,9 @@
     <label for="demo-emotion">How they sound</label><select id="demo-emotion"><option value="worried">Worried</option><option value="neutral">Neutral</option><option value="frustrated">Frustrated</option><option value="curious">Curious</option><option value="calm">Calm</option></select>
     <p class="small-note delivery-note">An expressive voice preset; delivery varies.</p>
     <label id="demo-video-option" class="checkbox demo-video-option" hidden><input id="demo-video" type="checkbox"><span><strong>See a live avatar · 60 seconds</strong><br>LiveAvatar’s shared Wayne face speaks your profile’s words with ElevenLabs voice. Reply audio goes to LiveAvatar; no webcam is used. Voice, illustration, and captions continue afterward.</span></label>
-    <details class="demo-privacy"><summary>Microphone & privacy</summary><p>Speaking requests microphone access. Your browser may send microphone audio to its speech recognition service. Final recognized phrases go to the encounter server. Replies go to ElevenLabs for speech. No webcam is used. Pause listening to type.</p></details>
+    <details class="demo-privacy"><summary>Microphone & privacy</summary><p id="demo-privacy-description">Speaking requests microphone access. Your browser may send microphone audio to its speech recognition service. Final recognized phrases go to the encounter server. Replies go to ElevenLabs for speech. No webcam is used. Pause listening to type.</p></details>
     <p id="demo-availability" class="small-note"></p><div id="demo-error" class="message error" role="alert" hidden></div>
-    <p class="setup-consent-summary">Speaking uses your microphone and your browser’s speech recognition service. Recognized words go to our server; ElevenLabs generates replies. No webcam is used.</p>
+    <p id="demo-consent-summary" class="setup-consent-summary">Speaking uses your microphone and your browser’s speech recognition service. Recognized words go to our server; ElevenLabs generates replies. No webcam is used.</p>
     <div class="setup-actions"><button id="demo-speak" class="button primary full" type="button" disabled>Agree & start speaking <span aria-hidden="true">↗</span></button><button id="demo-type" class="button secondary full" type="button" disabled>Start with typing</button></div>
     <p class="small-note setup-footnote">Ten minutes of nonclinical practice. No medical advice or clinical assessment. Finish before reloading to keep your transcript.</p>
   </dialog>

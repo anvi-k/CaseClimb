@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "CaseClimb synthetic encounter API and web client",
+  "Description": "CaseClimb synthetic encounter API, streaming audio transport, and web client",
   "Parameters": {
     "ArtifactBucket": {"Type": "String"},
     "ArtifactKey": {"Type": "String"},
@@ -13,7 +13,9 @@
     "LiveAvatarId": {"Type": "String", "Default": "", "AllowedPattern": "[a-fA-F0-9-]*"},
     "LiveAvatarSandbox": {"Type": "String", "Default": "false", "AllowedValues": ["true", "false"]},
     "VoiceId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9_-]*"},
-    "BedrockModelId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9.:-]*"}
+    "BedrockModelId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9.:-]*"},
+    "SttEnabled": {"Type": "String", "Default": "false", "AllowedValues": ["true", "false"]},
+    "SttSecondBudget": {"Type": "Number", "Default": 3600, "MinValue": 1, "MaxValue": 3600}
   },
   "Conditions": {"UseBedrock": {"Fn::Not": [{"Fn::Equals": [{"Ref": "BedrockModelId"}, ""]}]}},
   "Resources": {
@@ -68,7 +70,10 @@
           "CASECLIMB_VIDEO_SESSION_BUDGET": "20", "CASECLIMB_VIDEO_MINUTE_BUDGET": "20",
           "CASECLIMB_BEDROCK_MODEL_ID": {"Ref": "BedrockModelId"},
           "CASECLIMB_DEBRIEF_MODEL_ID": {"Ref": "BedrockModelId"},
-          "CASECLIMB_SESSION_BUDGET": "200", "CASECLIMB_BEDROCK_CALL_BUDGET": "300", "CASECLIMB_TTS_CHARACTER_BUDGET": "5000"
+          "CASECLIMB_SESSION_BUDGET": "200", "CASECLIMB_BEDROCK_CALL_BUDGET": "300", "CASECLIMB_TTS_CHARACTER_BUDGET": "5000",
+          "CASECLIMB_STT_ENABLED": {"Ref": "SttEnabled"}, "CASECLIMB_STT_SECOND_BUDGET": {"Ref": "SttSecondBudget"},
+          "CASECLIMB_STREAM_WS_URL": {"Fn::Sub": "wss://${StreamApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/stream"},
+          "CASECLIMB_APP_ORIGIN": {"Fn::Sub": "https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"}
         }}
       }
     },
@@ -77,6 +82,74 @@
     "DefaultRoute": {"Type": "AWS::ApiGatewayV2::Route", "Properties": {"ApiId": {"Ref": "HttpApi"}, "RouteKey": "$default", "Target": {"Fn::Join": ["/", ["integrations", {"Ref": "Integration"}]]}}},
     "Stage": {"Type": "AWS::ApiGatewayV2::Stage", "Properties": {"ApiId": {"Ref": "HttpApi"}, "StageName": "$default", "AutoDeploy": true, "DefaultRouteSettings": {"ThrottlingBurstLimit": 30, "ThrottlingRateLimit": 10}}},
     "InvokePermission": {"Type": "AWS::Lambda::Permission", "Properties": {"Action": "lambda:InvokeFunction", "FunctionName": {"Ref": "ApiFunction"}, "Principal": "apigateway.amazonaws.com", "SourceArn": {"Fn::Sub": "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${HttpApi}/*"}}},
+    "StreamLogs": {
+      "Type": "AWS::Logs::LogGroup",
+      "Properties": {"LogGroupName": {"Fn::Sub": "/aws/lambda/${AWS::StackName}-stream"}, "RetentionInDays": 7}
+    },
+    "StreamRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {"Version": "2012-10-17", "Statement": [{"Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]},
+        "Policies": [{"PolicyName": "ScopedStreamingRuntime", "PolicyDocument": {"Version": "2012-10-17", "Statement": [
+          {"Effect": "Allow", "Action": ["dynamodb:GetItem", "dynamodb:PutItem", "dynamodb:Scan"], "Resource": {"Fn::GetAtt": ["Records", "Arn"]}},
+          {"Effect": "Allow", "Action": ["logs:CreateLogStream", "logs:PutLogEvents"], "Resource": {"Fn::GetAtt": ["StreamLogs", "Arn"]}},
+          {"Effect": "Allow", "Action": "execute-api:ManageConnections", "Resource": {"Fn::Sub": "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${StreamApi}/stream/*/@connections/*"}},
+          {"Effect": "Allow", "Action": "lambda:InvokeFunction", "Resource": {"Fn::Sub": "arn:${AWS::Partition}:lambda:${AWS::Region}:${AWS::AccountId}:function:${AWS::StackName}-stream"}},
+          {"Fn::If": ["UseBedrock", {"Effect": "Allow", "Action": "bedrock:InvokeModel", "Resource": {"Fn::Sub": "arn:${AWS::Partition}:bedrock:${AWS::Region}::foundation-model/${BedrockModelId}"}}, {"Ref": "AWS::NoValue"}]}
+        ]}}]
+      }
+    },
+    "StreamFunction": {
+      "Type": "AWS::Lambda::Function",
+      "DependsOn": "StreamLogs",
+      "Properties": {
+        "FunctionName": {"Fn::Sub": "${AWS::StackName}-stream"},
+        "Runtime": "python3.12", "Architectures": ["arm64"], "Handler": "backend.streaming_lambda.handler",
+        "Role": {"Fn::GetAtt": ["StreamRole", "Arn"]}, "MemorySize": 512,
+        "Timeout": 75, "ReservedConcurrentExecutions": 5,
+        "Code": {"S3Bucket": {"Ref": "ArtifactBucket"}, "S3Key": {"Ref": "ArtifactKey"}},
+        "Environment": {"Variables": {
+          "CASECLIMB_STORE": "dynamodb", "CASECLIMB_TABLE_NAME": {"Ref": "Records"},
+          "CASECLIMB_ADMIN_TOKEN": {"Ref": "AdminToken"}, "CASECLIMB_STUDENT_CODE": {"Ref": "StudentCode"},
+          "CASECLIMB_APP_PASSWORD": {"Ref": "AppPassword"}, "CASECLIMB_SESSION_SECRET": {"Ref": "SessionSecret"},
+          "ELEVENLABS_API_KEY": {"Ref": "ElevenLabsKey"}, "CASECLIMB_VOICE_ID": {"Ref": "VoiceId"},
+          "LIVEAVATAR_API_KEY": {"Ref": "LiveAvatarKey"}, "LIVEAVATAR_AVATAR_ID": {"Ref": "LiveAvatarId"},
+          "CASECLIMB_LIVEAVATAR_SANDBOX": {"Ref": "LiveAvatarSandbox"},
+          "CASECLIMB_VIDEO_SESSION_BUDGET": "20", "CASECLIMB_VIDEO_MINUTE_BUDGET": "20",
+          "CASECLIMB_BEDROCK_MODEL_ID": {"Ref": "BedrockModelId"}, "CASECLIMB_DEBRIEF_MODEL_ID": {"Ref": "BedrockModelId"},
+          "CASECLIMB_SESSION_BUDGET": "200", "CASECLIMB_BEDROCK_CALL_BUDGET": "300", "CASECLIMB_TTS_CHARACTER_BUDGET": "5000",
+          "CASECLIMB_STT_ENABLED": {"Ref": "SttEnabled"}, "CASECLIMB_STT_SECOND_BUDGET": {"Ref": "SttSecondBudget"},
+          "CASECLIMB_STREAM_WS_URL": {"Fn::Sub": "wss://${StreamApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/stream"},
+          "CASECLIMB_STREAM_MANAGEMENT_URL": {"Fn::Sub": "https://${StreamApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/stream"},
+          "CASECLIMB_STREAM_FUNCTION_NAME": {"Fn::Sub": "${AWS::StackName}-stream"},
+          "CASECLIMB_APP_ORIGIN": {"Fn::Sub": "https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"}
+        }}
+      }
+    },
+    "StreamAsyncConfiguration": {
+      "Type": "AWS::Lambda::EventInvokeConfig",
+      "Properties": {"FunctionName": {"Ref": "StreamFunction"}, "Qualifier": "$LATEST", "MaximumRetryAttempts": 0, "MaximumEventAgeInSeconds": 60}
+    },
+    "StreamApi": {
+      "Type": "AWS::ApiGatewayV2::Api",
+      "Properties": {"Name": {"Fn::Sub": "${AWS::StackName}-stream"}, "ProtocolType": "WEBSOCKET", "RouteSelectionExpression": "$request.body.action"}
+    },
+    "StreamIntegration": {
+      "Type": "AWS::ApiGatewayV2::Integration",
+      "Properties": {"ApiId": {"Ref": "StreamApi"}, "IntegrationType": "AWS_PROXY", "IntegrationMethod": "POST", "IntegrationUri": {"Fn::Sub": "arn:${AWS::Partition}:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${StreamFunction.Arn}/invocations"}, "TimeoutInMillis": 29000}
+    },
+    "StreamConnectRoute": {"Type": "AWS::ApiGatewayV2::Route", "Properties": {"ApiId": {"Ref": "StreamApi"}, "RouteKey": "$connect", "AuthorizationType": "NONE", "Target": {"Fn::Join": ["/", ["integrations", {"Ref": "StreamIntegration"}]]}}},
+    "StreamDisconnectRoute": {"Type": "AWS::ApiGatewayV2::Route", "Properties": {"ApiId": {"Ref": "StreamApi"}, "RouteKey": "$disconnect", "AuthorizationType": "NONE", "Target": {"Fn::Join": ["/", ["integrations", {"Ref": "StreamIntegration"}]]}}},
+    "StreamDefaultRoute": {"Type": "AWS::ApiGatewayV2::Route", "Properties": {"ApiId": {"Ref": "StreamApi"}, "RouteKey": "$default", "AuthorizationType": "NONE", "Target": {"Fn::Join": ["/", ["integrations", {"Ref": "StreamIntegration"}]]}}},
+    "StreamStage": {
+      "Type": "AWS::ApiGatewayV2::Stage",
+      "DependsOn": ["StreamConnectRoute", "StreamDisconnectRoute", "StreamDefaultRoute", "StreamInvokePermission", "StreamAsyncConfiguration"],
+      "Properties": {"ApiId": {"Ref": "StreamApi"}, "StageName": "stream", "AutoDeploy": true, "DefaultRouteSettings": {"DataTraceEnabled": false, "DetailedMetricsEnabled": false, "LoggingLevel": "OFF", "ThrottlingBurstLimit": 30, "ThrottlingRateLimit": 10}}
+    },
+    "StreamInvokePermission": {
+      "Type": "AWS::Lambda::Permission",
+      "Properties": {"Action": "lambda:InvokeFunction", "FunctionName": {"Ref": "StreamFunction"}, "Principal": "apigateway.amazonaws.com", "SourceArn": {"Fn::Sub": "arn:${AWS::Partition}:execute-api:${AWS::Region}:${AWS::AccountId}:${StreamApi}/stream/*"}}
+    },
     "OperationsDashboard": {
       "Type": "AWS::CloudWatch::Dashboard",
       "Properties": {
@@ -240,6 +313,9 @@
   "Outputs": {
     "ApiUrl": {"Value": {"Fn::Sub": "https://${HttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}"}},
     "FunctionName": {"Value": {"Ref": "ApiFunction"}},
+    "StreamUrl": {"Value": {"Fn::Sub": "wss://${StreamApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/stream"}},
+    "StreamFunctionName": {"Value": {"Ref": "StreamFunction"}},
+    "StreamLogGroupName": {"Value": {"Ref": "StreamLogs"}},
     "TableName": {"Value": {"Ref": "Records"}},
     "DashboardName": {"Value": {"Ref": "OperationsDashboard"}},
     "DashboardUrl": {"Value": {"Fn::Sub": "https://console.aws.amazon.com/cloudwatch/home?region=${AWS::Region}#dashboards:name=${OperationsDashboard}"}},

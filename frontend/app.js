@@ -14,6 +14,7 @@ const app = {
   audioGeneration: 0, voiceMode: null, dictationConsent: false, recognition: null,
   video: null, videoAttempted: false,
   conversation: null, audioPlayback: null, turnOperation: null,
+  streamClient: null, pcmPlayer: null,
   demoStarting: null, demoGeneration: 0,
   demoProfiles: [], selectedDemoProfile: null, portraitKey: null,
 };
@@ -352,6 +353,35 @@ async function startEncounter(event) {
 }
 
 function encounterCanInteract() { return !!app.encounter && app.encounter.status === "active" && remainingSeconds() > 0 && !app.finishOperation; }
+function streamingConfigured() { return !!app.status?.streaming_configured && typeof EncounterStreamingClient === "function"; }
+function streamingSpeechAvailable() {
+  return streamingConfigured() && !!app.status?.stt_available && typeof ScribeMicrophone === "function" && !!navigator.mediaDevices?.getUserMedia && !!(window.AudioContext || window.webkitAudioContext) && typeof AudioWorkletNode === "function";
+}
+
+function encounterStreamClient() {
+  if (app.streamClient) return app.streamClient;
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
+  const current = () => encounterCanInteract() && app.encounter?.encounter_id === encounterId && app.encounterToken === token;
+  const request = (path, options = {}) => api(`/encounters/${encounterId}${path}`, { ...options, token });
+  app.pcmPlayer ||= new StreamingPcmPlayer({ onPlaying: (playing) => {
+    $("patient-scene").classList.toggle("speaking", playing);
+    $("stop-audio").disabled = !playing;
+    if (playing) { $("audio-status").textContent = "Streaming ElevenLabs voice. Speak to interrupt, or stop the response."; app.conversation?.replySpeaking?.(); }
+  } });
+  app.streamClient = new EncounterStreamingClient({
+    requestTicket: () => request("/stream-ticket", { method: "POST" }), canInteract: current,
+    cancelRequest: (requestId) => request("/stream-cancel", { method: "POST", body: { request_id: requestId }, timeout: 10000 }),
+    requestTimeout: () => Math.min(70000, Math.max(1, remainingSeconds() * 1000)),
+    refreshState: async () => { const state = await request(""); if (current()) updateEncounter(state); return state; },
+    onConfirmed: (state) => { if (current()) { app.pendingTurn = null; $("turn-text").value = ""; updateEncounter(state); } },
+    onStatus: (text) => { if (current()) $("audio-status").textContent = text; },
+    createSink: () => app.video?.active ? {
+      begin: (frame, options) => { app.conversation?.replySpeaking?.(); return app.video.beginStreaming(frame, options); },
+      push: (audio) => app.video.pushStreaming(audio), finish: () => app.video.finishStreaming(), stop: () => app.video?.interrupt(),
+    } : app.pcmPlayer,
+  });
+  return app.streamClient;
+}
 
 function isConversationDemo() { return app.encounter?.mode === "conversation_demo"; }
 
@@ -364,7 +394,11 @@ function openDemo(profileId) {
   $("demo-type").disabled = !selectedDemoProfile();
   $("demo-video-option").hidden = !app.status?.demo_video_available;
   $("demo-video").checked = false;
-  $("demo-availability").textContent = !supported ? "Speech recognition is unavailable in this browser. Open this app in Chrome for spoken turns, or start with typing." : !voice ? "Voice is unavailable in this environment. Start with typing and visible replies." : "The microphone listens between replies. Chrome supports browser speech recognition; you can stop at any time.";
+  $("demo-availability").textContent = !supported ? "Speech recognition is unavailable in this browser. Open this app in Chrome for spoken turns, or start with typing." : !voice ? "Voice is unavailable in this environment. Start with typing and visible replies." : streamingSpeechAvailable() ? "Live microphone audio goes to ElevenLabs for streaming transcription. Speak naturally; you can interrupt replies and pause at any time." : "The microphone listens between replies. Chrome supports browser speech recognition; you can stop at any time.";
+  const privacy = $("demo-privacy-description");
+  if (privacy) privacy.textContent = streamingSpeechAvailable() ? "Speaking requests microphone access and streams audio to ElevenLabs for transcription. Committed phrases go to the encounter server. Replies stream from ElevenLabs; optional reply audio goes to LiveAvatar. No webcam is used. Pause listening to type." : "Speaking requests microphone access. Your browser may send microphone audio to its speech recognition service. Final recognized phrases go to the encounter server. Replies go to ElevenLabs for speech. No webcam is used. Pause listening to type.";
+  const summary = $("demo-consent-summary");
+  if (summary) summary.textContent = streamingSpeechAvailable() ? "Speaking streams microphone audio to ElevenLabs. Confirmed words go to our server; ElevenLabs streams the replies. No webcam is used." : "Speaking uses your microphone and your browser’s speech recognition service. Recognized words go to our server; ElevenLabs generates replies. No webcam is used.";
   $("demo-dialog").showModal();
 }
 
@@ -406,12 +440,19 @@ async function startDemo(spoken) {
 }
 
 function createLiveConversation() {
-  app.conversation = new LiveSpeechConversation({
+  const streaming = streamingSpeechAvailable();
+  const Controller = streaming ? StreamingSpeechConversation : LiveSpeechConversation;
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
+  app.conversation = new Controller({
+    createTranscriber: (callbacks) => new ScribeMicrophone({ ...callbacks,
+      requestToken: () => api(`/encounters/${encounterId}/speech/token`, { method: "POST", token }),
+      canInteract: () => encounterCanInteract() && app.encounter?.encounter_id === encounterId && app.encounterToken === token,
+    }),
     createRecognition: () => new (window.SpeechRecognition || window.webkitSpeechRecognition)(),
     availability: () => ({ sessionActive: encounterCanInteract() && app.encounter.confirmed_turns < app.encounter.max_turns,
       recognition: speechSupported(), voice: !!app.encounter?.tts_available && (app.audioEnabled || !!app.video?.active), busy: app.sending || !!app.video?.starting || !!app.encounter?.pending_turn }),
     sendFinal: (text, { requestId, signal }) => submitEncounterTurn(text, { requestId, signal, live: true }),
-    speakReply: (reply, { signal }) => playPatientReply(reply.id, { signal, strict: true }),
+    speakReply: (reply, { signal }) => reply.streamed ? Promise.resolve() : playPatientReply(reply.id, { signal, strict: true }),
     stopPlayback: () => { stopAudio(); app.video?.interrupt(); }, onState: renderLiveConversation,
     onTranscript: ({ text, final }) => {
       $("live-caption").textContent = text ? `${final ? "You said" : "Listening"}: ${text}` : "";
@@ -451,7 +492,9 @@ function renderLiveConversation({ state, reason, enabled }) {
   $("live-state").textContent = labels[state] || "Listening paused";
   $("live-state").dataset.state = state;
   const fallback = !speechSupported() ? reasons["recognition-unavailable"] : !app.encounter?.tts_available || !(app.audioEnabled || app.video?.active) ? reasons["voice-unavailable"] : "";
-  $("live-status").textContent = fallback || reasons[reason] || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: "Microphone paused while the server prepares a reply.", speaking: "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || `Listening is paused. Type a message or choose ${action}.`;
+  const liveStreaming = typeof StreamingSpeechConversation === "function" && app.conversation instanceof StreamingSpeechConversation;
+  const streamingMessages = { interrupted: "Reply interrupted. Keep speaking, then pause; your next phrase sends when the previous turn settles." };
+  $("live-status").textContent = fallback || reasons[reason] || (liveStreaming ? streamingMessages[reason] : "") || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: liveStreaming ? "Your microphone streams to ElevenLabs. Speak, then pause; committed phrases send automatically. You can interrupt replies." : "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: liveStreaming ? "The server is preparing a reply. Your microphone stays ready if you want to interrupt." : "Microphone paused while the server prepares a reply.", speaking: liveStreaming ? "ElevenLabs voice is streaming. Speak to interrupt; captions stay visible." : "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || `Listening is paused. Type a message or choose ${action}.`;
   $("live-toggle").textContent = enabled ? "Pause conversation" : action;
   $("live-toggle").disabled = !encounterCanInteract() || !speechSupported() || !app.encounter?.tts_available || app.sending || !!app.encounter?.pending_turn;
   // Pause remains available while a request/audio operation is in progress.
@@ -462,6 +505,7 @@ function updateEncounter(state) {
   // Closing a session is irreversible. A delayed timer or turn snapshot cannot
   // bring back an active editor after the conclude response has been applied.
   if (app.encounter && app.encounter.encounter_id === state.encounter_id && app.encounter.status !== "active" && state.status === "active") return;
+  if (app.encounter && app.encounter.encounter_id === state.encounter_id && state.confirmed_turns < app.encounter.confirmed_turns) return;
   if (state !== app.encounter) app.clockOffset = state.server_time * 1000 - Date.now();
   app.encounter = state;
   const demo = isConversationDemo();
@@ -611,16 +655,17 @@ async function submitEncounterTurn(text, { requestId, signal, live = false } = {
   setBusy($("send-turn"), true, "Patient is responding…"); $("turn-text").disabled = true; $("dictate").disabled = true;
   message("encounter-message", "");
   try {
-    const result = await api(`/encounters/${encounterId}/turns`, { method: "POST", token, body: app.pendingTurn, signal: operation.signal });
+    const useStream = streamingConfigured() && !!app.encounter.tts_available && (app.audioEnabled || !!app.video?.active);
+    const result = useStream ? await encounterStreamClient().turn(app.pendingTurn, { signal: operation.signal }) : await api(`/encounters/${encounterId}/turns`, { method: "POST", token, body: app.pendingTurn, signal: operation.signal });
     if (!current() || operation.signal.aborted || app.encounter.status !== "active" || remainingSeconds() <= 0) return null;
     app.pendingTurn = null; $("turn-text").value = "";
     updateEncounter(result.state);
     if (result.patient_event && app.encounter.status === "active") {
       // Spoken turns are played exactly once by the speech controller, which
       // waits for the chosen audio/video transport to finish before listening.
-      if (!live && (app.video?.active || app.audioEnabled)) await playPatientReply(result.patient_event.id, { signal: operation.signal });
+      if (!live && !result.streamed && (app.video?.active || app.audioEnabled)) await playPatientReply(result.patient_event.id, { signal: operation.signal });
     }
-    return result.patient_event || null;
+    return result.patient_event ? { ...result.patient_event, streamed: !!result.streamed } : null;
   } catch (error) {
     if (!current() || operation.signal.aborted) throw error;
     if (error.kind === "pending") message("encounter-message", "A question is still being processed. Wait briefly, then retry the same question; a confirmed replay will not count twice.", "warning");
@@ -649,6 +694,7 @@ async function finishEncounter() {
   const operation = new AbortController(); app.finishOperation = operation;
   ++app.demoGeneration; // Permanently cancel an earlier spoken/video startup, even if concluding fails.
   app.conversation?.stop("session-ending"); app.turnOperation?.abort(); app.turnOperation = null; app.sending = false;
+  app.streamClient?.close(); app.streamClient = null;
   stopAudio(); stopDictation(); app.video?.stop(); app.voiceMode = null; $("voice-dialog").close();
   setBusy($("send-turn"), false); updateEncounter(app.encounter);
   const button = $("finish-encounter"); setBusy(button, true, isConversationDemo() ? "Ending conversation…" : "Preparing review…");
@@ -806,6 +852,12 @@ async function startPatientVideo({ playOpening = true } = {}) {
 // player simultaneously, and never resolve merely because audio was submitted.
 async function playPatientReply(eventId, { signal, strict = false } = {}) {
   if (!encounterCanInteract()) { if (strict) throw new RequestError("This conversation is ending or has ended."); return; }
+  if (streamingConfigured() && app.encounter.tts_available && (app.audioEnabled || app.video?.active)) {
+    stopAudio();
+    try { await encounterStreamClient().speak(eventId, { signal }); }
+    catch (error) { if (!signal?.aborted && error.kind !== "cancelled") $("audio-status").textContent = "Streaming voice stopped. Read the confirmed reply, or replay it explicitly."; if (strict) throw error; }
+    return;
+  }
   if (!app.video?.active) return playPatientAudio(eventId, { signal, strict });
   try { await app.video.speak(eventId, { signal }); }
   catch (error) {
@@ -815,6 +867,7 @@ async function playPatientReply(eventId, { signal, strict = false } = {}) {
 }
 
 function stopAudio() {
+  app.streamClient?.cancel(); app.pcmPlayer?.stop();
   app.audioGeneration += 1;
   app.audioPlayback?.reject(new RequestError("Audio stopped.")); app.audioPlayback = null;
   app.audioController?.abort(); app.audioController = null;
@@ -824,6 +877,7 @@ function stopAudio() {
 }
 
 async function playPatientAudio(eventId, { signal, strict = false } = {}) {
+  if (streamingConfigured() && app.audioEnabled && app.encounter?.tts_available) return playPatientReply(eventId, { signal, strict });
   if (!app.audioEnabled || !app.encounter?.tts_available || !encounterCanInteract()) {
     if (strict) throw new RequestError("Patient voice is unavailable."); return;
   }
@@ -860,7 +914,7 @@ async function playPatientAudio(eventId, { signal, strict = false } = {}) {
   } finally { signal?.removeEventListener("abort", onAbort); }
 }
 
-function speechSupported() { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); }
+function speechSupported() { return streamingSpeechAvailable() || !!(window.SpeechRecognition || window.webkitSpeechRecognition); }
 function requestVoiceConsent(mode) {
   if (!encounterCanInteract()) return;
   app.voiceMode = mode;
@@ -875,7 +929,7 @@ function requestVoiceConsent(mode) {
     $("voice-confirm").textContent = sandbox ? "Start 60-second video preview" : "Enable video patient";
   } else if (mode === "conversation") {
     $("voice-dialog-title").textContent = app.conversation?.consent ? "Resume spoken conversation" : "Start spoken conversation";
-    $("voice-dialog-description").textContent = "Your browser requests microphone access and may transmit microphone audio to its speech recognition service. Final recognized phrases automatically send to this nonclinical encounter. ElevenLabs generates the character's voice; the microphone pauses during each reply. Captions remain visible. No webcam is used.";
+    $("voice-dialog-description").textContent = streamingSpeechAvailable() ? "Your microphone streams audio to ElevenLabs for live transcription. Committed phrases automatically send to this encounter, and ElevenLabs streams the character's voice. Speak to interrupt a reply, or pause listening to type. Captions remain visible. No webcam is used." : "Your browser requests microphone access and may transmit microphone audio to its speech recognition service. Final recognized phrases automatically send to this nonclinical encounter. ElevenLabs generates the character's voice; the microphone pauses during each reply. Captions remain visible. No webcam is used.";
     $("voice-confirm").textContent = "Agree & start listening";
   } else {
     $("voice-dialog-title").textContent = "Dictate with your browser";
@@ -892,7 +946,7 @@ function stopDictation() {
 }
 
 function startDictation() {
-  if (!speechSupported() || app.sending || !encounterCanInteract()) return;
+  if (!(window.SpeechRecognition || window.webkitSpeechRecognition) || app.sending || !encounterCanInteract()) return;
   stopAudio(); stopDictation(); app.video?.interrupt();
   const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new Recognition(); app.recognition = recognition;
@@ -923,6 +977,7 @@ function cleanupEncounter() {
   app.finishOperation?.abort(); app.finishOperation = null;
   app.conversation?.stop(); app.conversation = null; app.turnOperation?.abort(); app.turnOperation = null; app.sending = false; setBusy($("send-turn"), false);
   clearInterval(app.timer); app.timer = null; stopAudio(); stopDictation();
+  app.streamClient?.close(); app.streamClient = null; app.pcmPlayer?.close(); app.pcmPlayer = null;
   app.video?.stop(); app.video = null; app.videoAttempted = false;
   app.encounter = null; app.encounterToken = ""; app.feedback = null;
   app.expiryRefreshing = false;

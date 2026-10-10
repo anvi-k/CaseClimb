@@ -113,3 +113,7 @@ class Turn(StrictModel):
 
 class SpeechRequest(StrictModel):
     event_id: str = Field(min_length=1, max_length=100)
+
+
+class StreamCancel(StrictModel):
+    request_id: str = Field(min_length=1, max_length=100, pattern=r"^[a-zA-Z0-9_-]+$")

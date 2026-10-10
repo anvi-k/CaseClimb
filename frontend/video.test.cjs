@@ -74,6 +74,30 @@ test("requests only recorded event ID and sends fixed PCM envelopes", async () =
   f.renderer.stop();
 });
 
+test("incremental video forwards the first PCM before EOF and waits for matched audible completion", async () => {
+  const f = fixture(); await connect(f);
+  f.renderer.beginStreaming({ format: "pcm_s16le", sample_rate: 24000, channels: 1, utterance_id: "streamed-utterance", event_id: "e2" });
+  await f.renderer.pushStreaming("AAA=");
+  assert.equal(f.requests.some((request) => request.path === "/video/audio"), false);
+  assert.deepEqual(f.sockets[0].sent.map((packet) => packet.type), ["agent.interrupt", "agent.speak"]);
+  assert.equal(f.sockets[0].sent[1].event_id, "streamed-utterance");
+  await f.renderer.pushStreaming("AQABAA=="); let done = false;
+  const finished = f.renderer.finishStreaming().then(() => { done = true; }); await flush();
+  assert.equal(f.sockets[0].sent.at(-1).type, "agent.speak_end"); assert.equal(done, false);
+  f.sockets[0].receive({ type: "agent.audio_buffer_committed", source_event_id: "streamed-utterance" });
+  f.sockets[0].receive({ type: "agent.speak_ended", source_event_id: "older-utterance" }); await flush(); assert.equal(done, false);
+  f.sockets[0].receive({ type: "agent.speak_ended", source_event_id: "streamed-utterance" }); await finished; assert.equal(done, true); f.renderer.stop();
+});
+
+test("incremental video interruption rejects drain and discards delayed PCM without closing the avatar", async () => {
+  const f = fixture(); await connect(f); const abort = new AbortController();
+  f.renderer.beginStreaming({ format: "pcm_s16le", sample_rate: 24000, channels: 1, utterance_id: "streamed-utterance" }, { signal: abort.signal });
+  await f.renderer.pushStreaming("AAA="); const finished = f.renderer.finishStreaming(); const rejected = assert.rejects(finished, /stopped/);
+  abort.abort(); await rejected; await assert.rejects(f.renderer.pushStreaming("AAA="), /stopped/);
+  assert.equal(f.renderer.active, true); assert.equal(f.renderer.speaking, false); assert.equal(f.sockets[0].sent.filter((packet) => packet.type === "agent.speak").length, 1);
+  f.renderer.stop();
+});
+
 test("interruption prevents delayed audio from reaching the renderer", async () => {
   let resolveAudio;
   const f = fixture({ request: (path) => {
