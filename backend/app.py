@@ -17,7 +17,7 @@ from fastapi.staticfiles import StaticFiles
 from mangum import Mangum
 
 from .access import AppAccess
-from .conversation_demo import DEMO_ID, DEMO_MODE, NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, StartDemo, demo_case, demo_feedback, is_demo, public_event
+from .conversation_demo import DEMO_ID, DEMO_MODE, NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, PROFILES as DEMO_PROFILES, StartDemo, demo_case, demo_feedback, is_demo, profile_prompts, public_event, public_profile
 from .debrief import BedrockDebriefSelector, enrich_feedback
 from .engine import disclosed_chart, feedback, reply, validate_case
 from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, Turn
@@ -217,7 +217,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         result["mode"] = encounter.get("mode", "clinical_practice")
         if is_demo(encounter):
             result.update(events=[public_event(e) for e in encounter["events"]], chart={"facts": [], "artifacts": []}, video_available=False,
-                          conversation_prompts=list(DEMO_PROMPTS), assessment_notice=DEMO_NOTICE,
+                          conversation_prompts=list(encounter.get("conversation_prompts", DEMO_PROMPTS)),
+                          conversation_profile=copy.deepcopy(encounter.get("conversation_profile", public_profile())), assessment_notice=DEMO_NOTICE,
                           simulated_mood={"mood": encounter["simulated_mood"]["mood"], "label": "Preset fictional delivery; no learner score"})
             result["patient"]["age"] = None
         return result
@@ -316,7 +317,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             raise HTTPException(409, "Only a published, reviewer-attested case version can be launched.")
         return begin_encounter(CaseDraft.model_validate(published["case"]), request.case_id, published["version"])
 
-    def begin_encounter(case, case_id, version, demo=False):
+    def begin_encounter(case, case_id, version, demo=False, demo_profile=None, demo_prompts=None):
         if not app.state.quotas.reserve("sessions"):
             raise HTTPException(429, "Workshop session allowance exhausted. Ask the administrator to review the deployment budget.")
         encounter_id, token, now = str(uuid.uuid4()), secrets.token_urlsafe(32), app.state.clock()
@@ -327,17 +328,25 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         if demo:
             snapshot = case.model_dump()
             snapshot["behavior"].pop("initial_rapport", None)
-            encounter.update(mode=DEMO_MODE, demo_snapshot=snapshot)
+            encounter.update(mode=DEMO_MODE, demo_snapshot=snapshot,
+                             conversation_profile=copy.deepcopy(demo_profile or public_profile()),
+                             conversation_prompts=list(demo_prompts or DEMO_PROMPTS))
         else:
             encounter["initial_rapport"] = case.behavior.initial_rapport
             encounter["simulated_mood"]["rapport"] = case.behavior.initial_rapport
         persist_encounter(encounter, None)
         return {"encounter_id": encounter_id, "token": token, "state": state(encounter)}
 
+    @app.get("/api/demo/profiles")
+    def demo_profiles():
+        return {"profiles": [public_profile(profile_id) for profile_id in DEMO_PROFILES]}
+
     @app.post("/api/demo/encounters", status_code=201)
     def start_demo(request: StartDemo):
-        case = demo_case(getattr(app.state.tts, "voice_id", None), request.emotion)
-        return begin_encounter(case, DEMO_ID, 1, demo=True)
+        case = demo_case(getattr(app.state.tts, "voice_id", None), request.emotion, request.profile_id)
+        return begin_encounter(case, DEMO_ID, 1, demo=True,
+                               demo_profile=public_profile(request.profile_id),
+                               demo_prompts=profile_prompts(request.profile_id))
 
     @app.get("/api/encounters/{encounter_id}")
     def get_encounter(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):

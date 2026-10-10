@@ -3,15 +3,17 @@ import json
 
 import pytest
 
-from backend.conversation_demo import DEMO_ID, DEMO_MODE
+from backend.conversation_demo import DEMO_ID, DEMO_MODE, PROFILES, PUBLIC_PROFILE_FIELDS
 from test_access import gated, login
 from test_backend import ADMIN, harness, sample, turn
 
 
-def begin(client, emotion=None):
+def begin(client, emotion=None, profile_id=None):
     body = {"nonclinical_demo": True}
     if emotion:
         body["emotion"] = emotion
+    if profile_id:
+        body["profile_id"] = profile_id
     result = client.post("/api/demo/encounters", json=body)
     assert result.status_code == 201, result.text
     data = result.json()
@@ -26,6 +28,104 @@ def test_demo_requires_app_signin_and_strict_nonclinical_confirmation(gated):
         assert client.post("/api/demo/encounters", json=body).status_code == 422, body
     assert app.state.quotas.remaining("sessions") == 200
     assert client.post("/api/demo/encounters", json={"nonclinical_demo": True}).status_code == 201
+
+
+def test_demo_profiles_require_signin_and_return_only_curated_public_metadata(gated):
+    client, _, app = gated
+    assert client.get("/api/demo/profiles").status_code == 401
+    assert login(client).status_code == 303
+    result = client.get("/api/demo/profiles")
+    assert result.status_code == 200 and result.headers["cache-control"] == "no-store"
+    profiles = result.json()["profiles"]
+    assert [p["id"] for p in profiles] == ["alex", "maya", "jordan", "evelyn"]
+    assert all(set(p) == set(PUBLIC_PROFILE_FIELDS) for p in profiles)
+    assert len({p["description"] for p in profiles}) == 4
+    assert len({p["style"] for p in profiles}) == 4
+    assert [p["voice_label"] for p in profiles] == [f"{name} · ElevenLabs stock voice" for name in ["George", "Jessica", "River", "Matilda"]]
+    assert {p["presentation_key"] for p in profiles} == {p["id"] for p in profiles}
+    for private in ["voice_id", "patient_answer", "keywords", "supportive_response", "prompts", "token", "score"]:
+        assert private not in result.text
+    assert app.state.quotas.remaining("sessions") == 200
+
+
+def test_profiles_have_distinct_authored_encounters_without_clinical_publication(harness):
+    client, _, app = harness
+    expected_voices = {"alex": "JBFqnCBsd6RMkjVDRZzb", "maya": "cgSgspJ2msm6clMCkdW9", "jordan": "SAz9YHcvj6GT2YYXdXww", "evelyn": "XrExE9yKIg1WjnnlVkGX"}
+    openings, interests, preferences, support, prompts = set(), set(), set(), set(), set()
+    for profile_id, profile in PROFILES.items():
+        eid, auth, data = begin(client, profile_id=profile_id)
+        state = data["state"]
+        assert state["conversation_profile"]["id"] == profile_id
+        assert profile["name"] in state["patient"]["name"]
+        assert state["patient"]["age"] is None and not state["video_available"]
+        openings.add(state["events"][0]["text"])
+        prompts.add(tuple(state["conversation_prompts"]))
+        for topic, question, answers in [("interests", "What do you enjoy?", interests), ("preferences", "How do you prefer to communicate?", preferences), ("support", "What would help you feel supported?", support)]:
+            response = turn(client, eid, auth, question, topic)
+            assert response.status_code == 200
+            answer = response.json()["patient_event"]["text"]
+            assert profile[topic] in answer
+            answers.add(answer)
+        record = app.state.store.get(f"encounter:{eid}")["payload"]
+        assert record["demo_snapshot"]["voice_id"] == expected_voices[profile_id]
+        assert record["demo_snapshot"]["voice_delivery"]["emotion"] == profile["default_emotion"]
+        assert record["demo_snapshot"]["objectives"] == []
+        assert state["chart"] == {"facts": [], "artifacts": []}
+    assert all(len(values) == 4 for values in [openings, interests, preferences, support, prompts])
+    assert client.get("/api/library").json() == {"cases": []}
+    assert client.get("/api/faculty/cases", headers=ADMIN).json() == {"cases": []}
+    assert client.get("/api/faculty/analytics", headers=ADMIN).json()["encounters"] == 0
+
+
+def test_profile_metadata_prompts_snapshot_and_voice_are_pinned(harness, monkeypatch):
+    client, _, app = harness
+    class Speech:
+        voice_id = "original-stock-voice"
+        calls = []
+        def speak_plan(self, plan, pcm=False):
+            self.calls.append(plan)
+            return b"synthetic-audio"
+    provider = app.state.tts = Speech()
+    eid, auth, data = begin(client, "frustrated", "maya")
+    original_record = copy.deepcopy(app.state.store.get(f"encounter:{eid}")["payload"])
+    assert original_record["demo_snapshot"]["voice_id"] == "cgSgspJ2msm6clMCkdW9"
+    assert data["state"]["conversation_profile"]["voice_label"] == "Jessica · ElevenLabs stock voice"
+    changed = copy.deepcopy(PROFILES["maya"])
+    changed.update(name="Replacement", presentation_key="replacement", voice_id="changed-voice", voice_label="Changed voice", prompts=["replacement question"], interests="Replacement text")
+    monkeypatch.setitem(PROFILES, "maya", changed)
+    provider.voice_id = "changed-runtime-voice"
+    state = client.get(f"/api/encounters/{eid}", headers=auth).json()
+    assert state["conversation_profile"] == data["state"]["conversation_profile"]
+    assert state["conversation_prompts"] == data["state"]["conversation_prompts"]
+    answer = turn(client, eid, auth, "What do you enjoy?", "interests").json()["patient_event"]["text"]
+    assert "sketching" in answer and "Replacement" not in answer
+    assert client.post(f"/api/encounters/{eid}/tts", headers=auth, json={"event_id": "e0"}).status_code == 200
+    assert provider.calls[0].voice_id == original_record["demo_snapshot"]["voice_id"]
+    assert provider.calls[0].text.startswith("[frustrated]")
+    assert provider.calls[0].display_text == data["state"]["events"][0]["text"]
+    completed = client.post(f"/api/encounters/{eid}/conclude", headers=auth).json()
+    assert completed["feedback"]["conversation_profile"] == data["state"]["conversation_profile"]
+
+
+def test_profile_selection_is_bounded_and_old_demo_records_remain_readable(harness):
+    client, _, app = harness
+    for profile_id in ["clinical", DEMO_ID, "unknown", "", "../../faculty", 1, {}, None]:
+        result = client.post("/api/demo/encounters", json={"nonclinical_demo": True, "profile_id": profile_id})
+        assert result.status_code == 422, profile_id
+    assert app.state.quotas.remaining("sessions") == 200
+    eid, auth, data = begin(client)
+    assert data["state"]["conversation_profile"]["id"] == "alex"
+    record = app.state.store.get(f"encounter:{eid}")
+    payload = record["payload"]
+    payload.pop("conversation_profile")
+    payload.pop("conversation_prompts")
+    app.state.store.put(f"encounter:{eid}", payload, record["revision"])
+    restored = client.get(f"/api/encounters/{eid}", headers=auth)
+    assert restored.status_code == 200
+    assert restored.json()["conversation_profile"]["id"] == "alex"
+    assert restored.json()["conversation_prompts"] == data["state"]["conversation_prompts"]
+    assert "Alex" in turn(client, eid, auth, "Could you introduce yourself?").json()["patient_event"]["text"]
+    assert client.post(f"/api/encounters/{eid}/conclude", headers=auth).json()["feedback"]["conversation_profile"]["id"] == "alex"
 
 
 def test_original_demo_does_not_publish_or_bypass_clinical_launch(harness, monkeypatch):
@@ -113,7 +213,7 @@ def test_demo_uses_shared_admission_and_tts_budgets_with_pinned_stock_voice(harn
     plan = provider.calls[0]
     authored = data["state"]["events"][0]["text"]
     assert plan.text == f"[frustrated] {authored}" and plan.display_text == authored
-    assert plan.voice_id == "original-stock-voice" and plan.model_id == "eleven_v4_turbo"
+    assert plan.voice_id == "JBFqnCBsd6RMkjVDRZzb" and plan.model_id == "eleven_v4_turbo"
     assert plan.voice_settings == {"stability": 0.4, "similarity_boost": 0.75}
     assert app.state.quotas.remaining("tts_characters") == 20_000 - len(plan.text)
     assert client.post(f"/api/encounters/{eid}/tts", headers=auth, json={"event_id": "e0"}).status_code == 200
@@ -138,18 +238,21 @@ def test_demo_selector_cannot_create_or_disclose_unapproved_clinical_prose(harne
     assert app.state.quotas.remaining("bedrock") == 299
 
 
-def test_demo_stores_no_hidden_numeric_rapport_after_supportive_or_dismissive_turns(harness):
+@pytest.mark.parametrize("profile_id", ["alex", "maya", "jordan", "evelyn"])
+def test_demo_stores_no_hidden_numeric_rapport_after_supportive_or_dismissive_turns(harness, profile_id):
     client, _, app = harness
-    eid, auth, _ = begin(client)
+    eid, auth, _ = begin(client, profile_id=profile_id)
     supportive = turn(client, eid, auth, "Thank you for talking", "supportive").json()["patient_event"]["text"]
-    assert "low-pressure" in supportive
+    assert PROFILES[profile_id]["support"] in supportive
     dismissive = turn(client, eid, auth, "Just calm down", "dismissive").json()["patient_event"]["text"]
-    assert "slowed down" in dismissive
+    assert dismissive == PROFILES[profile_id]["dismissive_response"]
     record = app.state.store.get(f"encounter:{eid}")["payload"]
     assert "initial_rapport" not in record
     assert "rapport" not in record["simulated_mood"]
     assert "initial_rapport" not in record["demo_snapshot"]["behavior"]
     assert all("rapport_change" not in event for event in record["events"])
+    for field in ["score", "grade", "clinical_score", "empathy_score"]:
+        assert field not in record and field not in record["demo_snapshot"]
     result = client.post(f"/api/encounters/{eid}/conclude", headers=auth).json()
     assert "simulated_rapport" not in result["feedback"]
     assert "initial_rapport" not in app.state.store.get(f"encounter:{eid}")["payload"]

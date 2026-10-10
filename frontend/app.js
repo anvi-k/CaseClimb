@@ -15,8 +15,129 @@ const app = {
   video: null, videoAttempted: false,
   conversation: null, audioPlayback: null, turnOperation: null,
   demoStarting: null, demoGeneration: 0,
+  demoProfiles: [], selectedDemoProfile: null, portraitKey: null,
 };
 const introVideoUrl = new URL("./media/caseclimb-introduction.mp4", location.href).href;
+
+// Portraits are original local illustrations. Server text is never SVG markup.
+const portraitPresets = Object.freeze({
+  alex: { skin: "#d4a68a", shade: "#b88970", hair: "#4c4642", shirt: "#587887", collar: "#d9e4df", backdrop: "#e4eee9" },
+  maya: { skin: "#bd865e", shade: "#a36d4d", hair: "#29292f", shirt: "#8b6581", collar: "#ecdae6", backdrop: "#f0e7ee" },
+  jordan: { skin: "#8e6148", shade: "#724834", hair: "#292827", shirt: "#b66c47", collar: "#f1dbca", backdrop: "#f4e9dc" },
+  evelyn: { skin: "#e0b495", shade: "#bc8e73", hair: "#a4aaa6", shirt: "#68816c", collar: "#e6e8d9", backdrop: "#e9eee2" },
+});
+let clinicalPortrait = null;
+
+function createConversationPortrait(presentationKey, name, compact = false) {
+  const key = Object.hasOwn(portraitPresets, presentationKey) ? presentationKey : "alex";
+  const colors = portraitPresets[key];
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 320 300");
+  svg.setAttribute("class", compact ? "profile-portrait" : "patient-avatar conversation-avatar");
+  if (compact) svg.setAttribute("aria-hidden", "true");
+  else { svg.setAttribute("role", "img"); svg.setAttribute("aria-label", `Original illustrated conversation partner: ${name}`); }
+  const draw = (tag, attributes) => {
+    const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    Object.entries(attributes).forEach(([attribute, value]) => node.setAttribute(attribute, String(value)));
+    svg.append(node); return node;
+  };
+  draw("ellipse", { cx: 160, cy: 282, rx: 101, ry: 12, fill: colors.shade, opacity: .12 });
+  if (key === "maya") draw("path", { d: "M93 118c-9-63 20-95 67-95 50 0 76 38 67 101l8 108H83z", fill: colors.hair });
+  if (key === "evelyn") {
+    draw("circle", { cx: 205, cy: 56, r: 28, fill: colors.hair });
+    draw("path", { d: "M101 93c-3-49 23-72 61-72s66 32 59 80l-13 66h-99z", fill: colors.hair });
+  }
+  draw("path", { d: "M77 300v-36c0-36 28-69 64-75h38c36 6 64 39 64 75v36", fill: colors.shirt });
+  draw("path", { d: "M137 162v42c11 16 35 16 46 0v-42", fill: colors.shade });
+  if (key === "jordan") draw("path", { d: "M131 195q29 30 58 0l13 13q-42 39-84 0z", fill: colors.collar });
+  else if (key === "evelyn") draw("path", { d: "M135 194l25 31 25-31 16 16-22 86h-38l-22-86z", fill: colors.collar });
+  else draw("path", { d: "M136 194l24 23-18 27-29-44m71-6-24 23 18 27 29-44", fill: colors.collar });
+  draw("ellipse", { cx: 109, cy: 124, rx: 11, ry: 18, fill: colors.shade });
+  draw("ellipse", { cx: 211, cy: 124, rx: 11, ry: 18, fill: colors.shade });
+  draw("path", { d: "M112 79c9-24 26-29 48-29s41 8 48 29v58c0 37-23 62-48 62s-48-25-48-62z", fill: colors.skin });
+  const hairstyles = {
+    alex: "M103 99c-7-50 18-76 58-76 40 0 67 32 57 78l-12-21-21-25c-17 22-43 26-69 29l-7 30z",
+    maya: "M105 123c-15-54 11-96 56-96 37 0 62 26 58 74l-13 28V80c-18-1-40-13-46-29-12 24-27 27-44 30v46z",
+    jordan: "M106 93c-8-8-8-18-2-26-5-13 5-26 16-27 5-13 22-14 30-9 11-10 25-7 31 2 17-4 28 4 29 16 15 5 19 24 10 33l-14 19-1-23c-23 4-52-3-74-12l-14 36z",
+    evelyn: "M105 107c-10-38 13-76 56-76 32 0 57 25 56 64l-12-11-25-28c-15 21-39 27-64 28l-7 37z",
+  };
+  draw("path", { d: hairstyles[key], fill: colors.hair });
+  draw("path", { d: key === "jordan" ? "M126 104q9-2 18 1" : "M126 104q9-5 18-1", stroke: colors.hair, "stroke-width": 3, fill: "none", "stroke-linecap": "round" });
+  draw("path", { d: "M177 103q9-4 17 1", stroke: colors.hair, "stroke-width": 3, fill: "none", "stroke-linecap": "round" });
+  draw("ellipse", { class: "avatar-eye avatar-eye-left", cx: 136, cy: 118, rx: 3.6, ry: 4.1, fill: "#343534" });
+  draw("ellipse", { class: "avatar-eye avatar-eye-right", cx: 185, cy: 118, rx: 3.6, ry: 4.1, fill: "#343534" });
+  draw("path", { d: "M159 120l-5 25q6 5 12 0", stroke: colors.shade, "stroke-width": 2.6, fill: "none", "stroke-linecap": "round" });
+  draw("ellipse", { class: "avatar-mouth", cx: 160, cy: 163, rx: key === "jordan" ? 15 : 13, ry: 2.6, fill: "#775048" });
+  if (key === "alex" || key === "evelyn") {
+    draw("path", { d: "M119 132q9 6 19 3m44 0q10 3 19-3", stroke: colors.shade, "stroke-width": 1.7, fill: "none", opacity: .6 });
+  }
+  if (key === "maya") {
+    draw("circle", { cx: 109, cy: 145, r: 5, stroke: "#d9b66d", "stroke-width": 2.5, fill: "none" });
+    draw("circle", { cx: 211, cy: 145, r: 5, stroke: "#d9b66d", "stroke-width": 2.5, fill: "none" });
+    draw("path", { d: "M130 231q30 17 60 0", stroke: "#bd9fb6", "stroke-width": 2, fill: "none" });
+  }
+  if (key === "jordan") draw("path", { d: "M135 151q26 34 51 0l-6 32q-21 14-40-1z", fill: colors.hair, opacity: .13 });
+  if (key === "evelyn") {
+    draw("rect", { x: 118, y: 109, width: 34, height: 23, rx: 8, stroke: "#705e4f", "stroke-width": 2.5, fill: "#ffffff10" });
+    draw("rect", { x: 169, y: 109, width: 34, height: 23, rx: 8, stroke: "#705e4f", "stroke-width": 2.5, fill: "#ffffff10" });
+    draw("path", { d: "M152 117q9-7 17 0m-52-3-10-2m97 2 9-2", stroke: "#705e4f", "stroke-width": 2.5, fill: "none" });
+    [240, 262, 284].forEach((cy) => draw("circle", { cx: 160, cy, r: 3, fill: "#b7c5ae" }));
+  }
+  draw("path", { d: "M99 257l-3 43m126-43 3 43", stroke: colors.shade, "stroke-width": 2.5, fill: "none", opacity: .35 });
+  return svg;
+}
+
+function selectedDemoProfile() {
+  return app.demoProfiles.find((profile) => profile.id === app.selectedDemoProfile) || null;
+}
+
+function selectDemoProfile(profileId, resetDelivery = true) {
+  if (app.demoStarting) return;
+  const profile = app.demoProfiles.find((item) => item.id === profileId); if (!profile) return;
+  app.selectedDemoProfile = profile.id;
+  document.querySelectorAll('input[name="demo-profile"]').forEach((input) => { input.checked = input.value === profile.id; });
+  if (resetDelivery) $("demo-emotion").value = profile.default_emotion;
+  $("demo-profile-name").textContent = `A conversation with ${profile.name}`;
+  $("demo-profile-description").textContent = profile.description;
+  $("demo-profile-voice").textContent = `${profile.voice_label} · illustrated avatar`;
+}
+
+function renderDemoProfiles() {
+  const library = $("demo-profile-library"), choices = $("demo-profile-choices");
+  library.replaceChildren(); choices.replaceChildren();
+  app.demoProfiles.forEach((profile) => {
+    const key = Object.hasOwn(portraitPresets, profile.presentation_key) ? profile.presentation_key : "alex";
+    const card = el("article", "demo-profile-card"); card.style.setProperty("--profile-backdrop", portraitPresets[key].backdrop);
+    const portrait = el("div", "profile-portrait-stage"); portrait.append(createConversationPortrait(key, profile.name, true));
+    portrait.append(el("span", "profile-style", profile.style));
+    const content = el("div", "profile-card-content");
+    content.append(el("h3", "", profile.name), el("p", "", profile.description));
+    const button = el("button", "button secondary", `Talk with ${profile.name} ↗`); button.type = "button";
+    button.addEventListener("click", () => openDemo(profile.id)); content.append(button); card.append(portrait, content); library.append(card);
+    const label = el("label", "demo-profile-choice"), input = el("input"); input.type = "radio"; input.name = "demo-profile"; input.value = profile.id;
+    input.addEventListener("change", () => selectDemoProfile(profile.id));
+    const details = el("span", "profile-choice-copy"); details.append(el("strong", "", profile.name), el("span", "", profile.style));
+    label.append(input, createConversationPortrait(key, profile.name, true), details); choices.append(label);
+  });
+  if (app.demoProfiles.length) {
+    if (!selectedDemoProfile()) app.selectedDemoProfile = app.demoProfiles[0].id;
+    selectDemoProfile(app.selectedDemoProfile, false);
+    $("demo-open").disabled = false; message("demo-profiles-message", "");
+  } else {
+    app.selectedDemoProfile = null; $("demo-open").disabled = true;
+    message("demo-profiles-message", "Conversation profiles are unavailable. Refresh the page to try again.", "warning");
+  }
+}
+
+function renderEncounterPortrait(profile) {
+  const current = $("patient-scene").querySelector(".patient-avatar");
+  if (!clinicalPortrait) clinicalPortrait = current.cloneNode(true);
+  const key = profile ? (Object.hasOwn(portraitPresets, profile.presentation_key) ? profile.presentation_key : "alex") : "clinical";
+  if (app.portraitKey === key) return;
+  current.replaceWith(profile ? createConversationPortrait(key, profile.name) : clinicalPortrait.cloneNode(true));
+  $("patient-scene").style.setProperty("--profile-backdrop", profile ? portraitPresets[key].backdrop : "#e9ede5");
+  app.portraitKey = key;
+}
 
 async function checkIntroVideo() {
   const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 8000);
@@ -151,13 +272,19 @@ function setBusy(button, busy, busyText) {
 async function loadLibrary() {
   checkIntroVideo();
   message("library-message", "");
-  const results = await Promise.allSettled([api("/library"), api("/status")]);
+  const results = await Promise.allSettled([api("/library"), api("/status"), api("/demo/profiles")]);
   if (results[1].status === "fulfilled") {
     app.status = results[1].value;
     $("app-lock-form").hidden = !app.status.app_access_required;
     $("service-status").textContent = app.status.tts_available ? "Connected · Voice configured" : "Connected · Text practice available";
   } else {
     $("service-status").textContent = "Connection unavailable";
+  }
+  if (results[2].status === "fulfilled") {
+    app.demoProfiles = (results[2].value.profiles || []).filter((profile) => typeof profile.id === "string" && typeof profile.name === "string");
+    renderDemoProfiles();
+  } else {
+    app.demoProfiles = []; renderDemoProfiles();
   }
   if (results[0].status === "fulfilled") {
     app.library = results[0].value.cases || [];
@@ -226,22 +353,30 @@ async function startEncounter(event) {
 
 function isConversationDemo() { return app.encounter?.mode === "conversation_demo"; }
 
-function openDemo() {
+function openDemo(profileId) {
   message("demo-error", "");
+  if (typeof profileId === "string") selectDemoProfile(profileId);
+  else if (selectedDemoProfile()) selectDemoProfile(app.selectedDemoProfile);
   const supported = speechSupported(), voice = !!app.status?.tts_available;
-  $("demo-speak").disabled = !supported || !voice;
+  $("demo-speak").disabled = !selectedDemoProfile() || !supported || !voice;
+  $("demo-type").disabled = !selectedDemoProfile();
   $("demo-availability").textContent = !supported ? "Speech recognition is unavailable in this browser. Open this app in Chrome for spoken turns, or start with typing." : !voice ? "Voice is unavailable in this environment. Start with typing and visible replies." : "The microphone listens between replies. Chrome supports browser speech recognition; you can stop at any time.";
   $("demo-dialog").showModal();
 }
 
 async function startDemo(spoken) {
   if (app.demoStarting) return;
+  if (typeof LiveSpeechConversation !== "function") {
+    message("demo-error", "Conversation controls did not finish loading. Reload this page and try again.", "error"); return;
+  }
+  const profile = selectedDemoProfile();
+  if (!profile) { message("demo-error", "Choose a conversation profile before starting.", "error"); return; }
   const controller = new AbortController(); app.demoStarting = controller;
   const generation = ++app.demoGeneration;
   setBusy($("demo-speak"), true, "Opening conversation…"); setBusy($("demo-type"), true, "Opening conversation…");
   message("demo-error", "");
   try {
-    const result = await api("/demo/encounters", { method: "POST", body: { nonclinical_demo: true, emotion: $("demo-emotion").value }, signal: controller.signal });
+    const result = await api("/demo/encounters", { method: "POST", body: { nonclinical_demo: true, profile_id: profile.id, emotion: $("demo-emotion").value }, signal: controller.signal });
     if (controller.signal.aborted || generation !== app.demoGeneration || !$("demo-dialog").open) return;
     cleanupEncounter(); app.encounterToken = result.token; app.audioEnabled = !!result.state.tts_available;
     $("turn-text").value = ""; $("feedback-panel").hidden = true; message("encounter-message", "");
@@ -254,7 +389,8 @@ async function startDemo(spoken) {
   finally {
     if (app.demoStarting === controller) app.demoStarting = null;
     setBusy($("demo-speak"), false); setBusy($("demo-type"), false);
-    $("demo-speak").disabled = !speechSupported() || !app.status?.tts_available;
+    $("demo-speak").disabled = !selectedDemoProfile() || !speechSupported() || !app.status?.tts_available;
+    $("demo-type").disabled = !selectedDemoProfile();
   }
 }
 
@@ -309,7 +445,11 @@ function updateEncounter(state) {
   $("encounter-heading").textContent = state.title;
   $("encounter-context").textContent = demo ? "Live conversation · Nonclinical demo" : `Student encounter · Version ${state.version}`;
   $("patient-name").textContent = state.patient.name;
-  $("patient-detail").textContent = demo ? "Synthetic character · ElevenLabs voice when available" : `${state.patient.age} years · ${state.patient.setting}`;
+  const profile = demo ? state.conversation_profile : null;
+  renderEncounterPortrait(profile);
+  $("patient-detail").textContent = demo ? profile ? `${profile.style} · ${profile.voice_label}` : "Synthetic character · ElevenLabs voice when available" : `${state.patient.age} years · ${state.patient.setting}`;
+  $("switch-demo-profile").hidden = !demo;
+  $("turn-text").placeholder = demo ? "Ask about their interests, preferences, or what helps them feel understood…" : "Start with what matters to your patient…";
   $("patient-mood").hidden = demo; $("dictate").hidden = demo;
   $("live-conversation-controls").hidden = !demo;
   $("conversation-guide").hidden = !demo; $("chart-heading").closest(".chart-panel").hidden = demo;
@@ -318,6 +458,8 @@ function updateEncounter(state) {
   if (!app.sending) $("send-turn").textContent = demo ? "Send message ↗" : "Send question ↗";
   $("composer-note").textContent = demo ? "Typing pauses spoken turn-taking. Ctrl/⌘ + Enter sends your message." : "Review dictated words before sending. Ctrl/⌘ + Enter sends your question.";
   if (demo) {
+    $("conversation-guide-heading").textContent = profile ? `Get to know ${profile.name}.` : "Make room for a conversation.";
+    $("conversation-profile-description").textContent = profile?.description || "Try one of these openings, then follow what you hear.";
     $("demo-notice").textContent = state.assessment_notice || state.notice || "Original nonclinical conversation demo. No medical advice or clinical assessment.";
     const prompts = $("conversation-prompts"); prompts.replaceChildren();
     (state.conversation_prompts || []).forEach((text) => {
@@ -576,7 +718,8 @@ function renderVoiceControls() {
   const videoActive = !!app.video?.active;
   const videoBusy = videoActive || !!app.video?.starting;
   $("enable-audio").closest(".voice-controls").hidden = !available && !videoBusy;
-  $("enable-audio").textContent = app.audioEnabled ? "Disable patient voice" : "Enable patient voice";
+  const person = isConversationDemo() ? "character" : "patient";
+  $("enable-audio").textContent = app.audioEnabled ? `Disable ${person} voice` : `Enable ${person} voice`;
   $("enable-audio").disabled = !available || !active || videoBusy;
   $("enable-audio").title = videoBusy ? "Turn off video to use audio-only playback." : "";
   $("play-response").disabled = !active || !(videoActive || (available && app.audioEnabled)) || !latestPatient();
@@ -588,7 +731,8 @@ function renderVoiceControls() {
 }
 
 function renderPresentationLabel() {
-  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? "Live rendered video · stored replies" : app.audioEnabled ? "Illustrated patient · voice on" : "Illustrated patient · captions";
+  const person = isConversationDemo() ? "avatar" : "patient";
+  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? "Live rendered video · stored replies" : app.audioEnabled ? `Illustrated ${person} · voice on` : `Illustrated ${person} · captions`;
 }
 
 function renderVideoControls() {
@@ -972,6 +1116,16 @@ $("intro-preview").addEventListener("click", previewIntroVideo);
 $("demo-open").addEventListener("click", openDemo);
 $("demo-speak").addEventListener("click", () => startDemo(true));
 $("demo-type").addEventListener("click", () => startDemo(false));
+$("switch-demo-profile").addEventListener("click", async () => {
+  const button = $("switch-demo-profile"); if (button.disabled) return;
+  const encounterId = app.encounter?.encounter_id; button.disabled = true;
+  try {
+    if (app.encounter?.status === "active") await finishEncounter();
+    if (app.encounter?.encounter_id !== encounterId || app.encounter?.status === "active") return;
+    cleanupEncounter(); setView("practice");
+    $("profiles-heading").scrollIntoView({ behavior: "smooth", block: "start" });
+  } finally { button.disabled = false; }
+});
 $("demo-dialog").addEventListener("close", () => {
   if (app.demoStarting) { ++app.demoGeneration; app.demoStarting.abort(); app.demoStarting = null; }
 });
