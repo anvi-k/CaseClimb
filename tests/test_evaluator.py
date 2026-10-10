@@ -318,3 +318,26 @@ def test_replay_llm_serves_recorded_debrief_lines():
     llm = ReplayLLM(EXAMPLES / "grader_response.json", debrief_lines=["first"])
     assert llm.complete_text("s", []) == "first"
     assert "replay mode" in llm.complete_text("s", [])
+
+
+@pytest.mark.parametrize(
+    "name, elicited_count, missed, contradiction_visible",
+    [
+        ("episode.json", 3, ["f.fh.mother", "f.med.refills", "f.med.side_effects"], False),
+        ("episode_strong.json", 6, [], True),
+        ("episode_confrontational.json", 4, ["f.sh.diet", "f.med.side_effects"], True),
+    ],
+)
+def test_sample_episodes_are_valid_and_differ_as_described(
+    record, name, elicited_count, missed, contradiction_visible
+):
+    sample = load(name)
+    validate(sample, "episode")
+    turn_ids = {t["turn_id"] for t in sample["turns"]}
+    assert all(d["turn_id"] in turn_ids for d in sample["disclosures"])
+
+    findings = analyze(record, sample, pick_graded_participant(sample))
+    assert len(findings["elicited_fact_ids"]) == elicited_count
+    assert findings["missed_fact_ids"] == missed
+    assert findings["discrepancies"][0]["contradiction_was_visible"] is contradiction_visible
+    assert findings["over_time_limit"] is False
