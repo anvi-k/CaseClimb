@@ -14,6 +14,13 @@ def main():
         shutil.rmtree(build)
     build.mkdir(parents=True)
     requirements = build.parent / "lambda-requirements.txt"
+    # Mangum returns binary content through Lambda's bounded response payload.
+    # Only the reviewed optional demo filename belongs in this deployment.
+    media = ROOT / "frontend" / "media"
+    if media.exists():
+        for source in media.iterdir():
+            if source.suffix == ".mp4" and (source.name != "caseclimb-introduction.mp4" or source.stat().st_size > 2_000_000):
+                raise ValueError("Unexpected or oversized demo media; inspect it before packaging")
     subprocess.run(["uv", "export", "--frozen", "--no-dev", "--no-emit-project", "--format", "requirements-txt", "--output-file", str(requirements)], cwd=ROOT, check=True, capture_output=True)
     subprocess.run(["uv", "pip", "install", "--python-platform", "aarch64-manylinux2014", "--python-version", "3.12", "--only-binary", ":all:", "--target", str(build), "-r", str(requirements)], cwd=ROOT, check=True, capture_output=True)
     for folder in ("backend", "frontend"):

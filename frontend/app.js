@@ -14,6 +14,29 @@ const app = {
   audioGeneration: 0, voiceMode: null, dictationConsent: false, recognition: null,
   video: null, videoAttempted: false,
 };
+const introVideoUrl = new URL("./media/caseclimb-introduction.mp4", location.href).href;
+
+async function checkIntroVideo() {
+  const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const response = await fetch(introVideoUrl, { method: "HEAD", credentials: "same-origin", cache: "no-store", signal: controller.signal });
+    const available = response.ok && response.headers.get("content-type")?.startsWith("video/");
+    $("intro-preview").hidden = !available; $("intro-preview-note").hidden = !available;
+    $("intro-poster-frame").hidden = !available;
+    if (available) $("intro-poster").src = introVideoUrl;
+  } catch { $("intro-preview").hidden = true; $("intro-preview-note").hidden = true; $("intro-poster-frame").hidden = true; }
+  finally { clearTimeout(timer); }
+}
+
+function stopIntroVideo() {
+  const video = $("intro-video"); video.pause(); video.removeAttribute("src"); video.load();
+}
+
+function previewIntroVideo() {
+  stopAudio(); stopDictation(); $("intro-video-status").textContent = "";
+  $("intro-video-dialog").showModal(); const video = $("intro-video"); video.src = introVideoUrl;
+  video.play().catch(() => { $("intro-video-status").textContent = "Choose Play in the video player to begin. The transcript is below the clip."; });
+}
 
 class RequestError extends Error {
   constructor(message, status = 0, kind = "") { super(message); this.status = status; this.kind = kind; }
@@ -122,6 +145,7 @@ function setBusy(button, busy, busyText) {
 }
 
 async function loadLibrary() {
+  checkIntroVideo();
   message("library-message", "");
   const results = await Promise.allSettled([api("/library"), api("/status")]);
   if (results[1].status === "fulfilled") {
@@ -213,6 +237,7 @@ function updateEncounter(state) {
   $("patient-caption").textContent = latest?.text || "";
   renderTranscript(); renderChart(); renderVoiceControls(); renderVideoControls();
   const active = state.status === "active" && remainingSeconds() > 0;
+  $("encounter-view").classList.toggle("ended", !active); $("encounter-ended").hidden = active;
   const canSend = active && state.confirmed_turns < state.max_turns;
   $("turn-text").disabled = !canSend || app.sending;
   $("send-turn").disabled = !canSend || app.sending;
@@ -347,6 +372,13 @@ async function finishEncounter() {
 async function loadFeedback() {
   app.feedback = await api(`/encounters/${app.encounter.encounter_id}/feedback`, { token: app.encounterToken });
   clearInterval(app.timer); app.timer = null; renderFeedback();
+  $("feedback-panel").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function revealEvidence(event, eventId) {
+  const row = $(`event-${eventId}`); if (!row) return;
+  event.preventDefault(); history.replaceState(null, "", `#event-${encodeURIComponent(eventId)}`);
+  row.tabIndex = -1; row.scrollIntoView({ behavior: "auto", block: "center" }); row.focus({ preventScroll: true });
 }
 
 function renderFeedback() {
@@ -369,7 +401,7 @@ function renderFeedback() {
       (priority.evidence || []).forEach((evidence) => {
         const quote = el("blockquote", "", `${evidence.text}${evidence.excerpt ? "…" : ""}`);
         const link = el("a", "evidence-link", "Review the recorded moment ↗"); link.href = `#event-${encodeURIComponent(evidence.event_id)}`;
-        link.addEventListener("click", () => { setTimeout(() => $(`event-${evidence.event_id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 0); });
+        link.addEventListener("click", (event) => revealEvidence(event, evidence.event_id));
         quote.append(el("br"), link); item.append(quote);
       });
       item.append(el("p", "next-question", `A next question: ${priority.next_question}`)); priorities.append(item);
@@ -381,20 +413,21 @@ function renderFeedback() {
   const grid = el("div", "feedback-grid");
   (feedback.assessments || []).forEach((assessment) => {
     const card = el("article", "assessment-card");
-    const labels = { observed: "Observed", missed: "Available opportunity missed", not_assessable: "Not assessable" };
+    const labels = { observed: "✓ Observed", missed: "◐ Available opportunity missed", not_assessable: "– Not assessable" };
     card.append(el("span", `pill ${assessment.result}`, labels[assessment.result] || assessment.result), el("h3", "", assessment.label), el("p", "", assessment.explanation), el("p", "", assessment.guidance));
     (assessment.evidence || []).forEach((evidence) => {
       const quote = el("blockquote", "", evidence.text);
       const link = el("a", "evidence-link", "Review the recorded moment ↗"); link.href = `#event-${encodeURIComponent(evidence.event_id)}`;
-      link.addEventListener("click", () => { setTimeout(() => $(`event-${evidence.event_id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }), 0); });
+      link.addEventListener("click", (event) => revealEvidence(event, evidence.event_id));
       quote.append(el("br"), link); card.append(quote);
     });
     if (assessment.result !== "observed") card.append(el("p", "", `A next question: ${assessment.next_question}`));
     grid.append(card);
   });
   target.append(grid);
-  if (feedback.simulated_rapport) target.append(el("p", "fine-print", `Simulated rapport: ${feedback.simulated_rapport.initial} → ${feedback.simulated_rapport.final}. ${feedback.simulated_rapport.label}.`));
+  if (feedback.simulated_rapport) target.append(el("p", "notice rapport-notice", `Simulated rapport: ${feedback.simulated_rapport.initial} → ${feedback.simulated_rapport.final}. ${feedback.simulated_rapport.label}.`));
   $("feedback-panel").hidden = false;
+  $("feedback-heading").focus({ preventScroll: true });
 }
 
 function renderVoiceControls() {
@@ -402,25 +435,32 @@ function renderVoiceControls() {
   const available = !!app.encounter?.tts_available;
   const videoActive = !!app.video?.active;
   const videoBusy = videoActive || !!app.video?.starting;
+  $("enable-audio").closest(".voice-controls").hidden = !available && !videoBusy;
   $("enable-audio").textContent = app.audioEnabled ? "Disable patient voice" : "Enable patient voice";
   $("enable-audio").disabled = !available || !active || videoBusy;
   $("enable-audio").title = videoBusy ? "Turn off video to use audio-only playback." : "";
   $("play-response").disabled = !active || !(videoActive || (available && app.audioEnabled)) || !latestPatient();
   if (videoActive) $("stop-audio").disabled = !app.video.speaking;
-  if (!available) $("audio-status").textContent = "Patient voice is unavailable in this environment. Continue with text and captions.";
+  if (!available) $("audio-status").textContent = app.encounter?.video_available ? "Patient voice plays through the video feed when enabled. Captions remain available." : "Voice and live video are unavailable here. Continue with the illustrated patient and captions.";
   else if (videoBusy) $("audio-status").textContent = "Patient voice plays through the video feed. Captions remain available.";
   else if (!app.audioEnabled) $("audio-status").textContent = "Captions are always available. Voice is optional.";
+  renderPresentationLabel();
+}
+
+function renderPresentationLabel() {
+  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? "Live rendered video · stored replies" : app.audioEnabled ? "Illustrated patient · voice on" : "Illustrated patient · captions";
 }
 
 function renderVideoControls() {
   const active = app.encounter?.status === "active" && remainingSeconds() > 0;
   const videoBusy = !!(app.video?.active || app.video?.starting);
+  $("enable-video").closest(".video-controls").hidden = !app.encounter?.video_available && !videoBusy && !app.videoAttempted;
   $("enable-video").textContent = videoBusy ? "Turn off video" : "Enable video patient";
   $("enable-video").disabled = !active || (!videoBusy && (!app.encounter?.video_available || app.videoAttempted));
   $("allow-video-playback").hidden = !active || !app.video?.needsPlayback;
   $("video-stage").hidden = !app.video?.visual;
   $("patient-scene").classList.toggle("video-live", !!app.video?.visual);
-  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? "Live video patient" : "Illustrated patient";
+  renderPresentationLabel();
   if (!videoBusy && !app.videoAttempted) $("video-status").textContent = app.encounter?.video_available ? "Video is optional. Enable it to receive a live synthetic patient feed." : "Live video is unavailable here. The illustrated patient and captions remain available.";
 }
 
@@ -532,6 +572,7 @@ function cleanupEncounter() {
   app.video?.stop(); app.video = null; app.videoAttempted = false;
   app.encounter = null; app.encounterToken = ""; app.feedback = null;
   app.audioEnabled = false; app.dictationConsent = false; app.pendingTurn = null;
+  if (location.hash.startsWith("#event-")) history.replaceState(null, "", location.pathname + location.search);
 }
 
 function openStudio() {
@@ -656,6 +697,11 @@ function updateDraftHeading() {
   const published = app.currentCase?.draft_status === "published" && !app.draftDirty;
   $("draft-state").textContent = app.draftDirty ? "Unsaved draft changes" : published ? "Published · Reviewer attested" : "Unreviewed draft";
   $("save-draft").textContent = app.currentCase ? "Save draft" : "Create draft";
+  const currentStep = app.draftDirty || !app.currentCase ? 0 : app.validation?.valid || published ? 2 : 1;
+  [...$("publishing-workflow").children].forEach((step, index) => {
+    step.dataset.state = index < currentStep || published ? "done" : index === currentStep ? "current" : "todo";
+    if (index === currentStep && !published) step.setAttribute("aria-current", "step"); else step.removeAttribute("aria-current");
+  });
 }
 
 function addPreviewSection(target, title, items, renderItem) {
@@ -729,6 +775,7 @@ async function validateDraft() {
     }
     box.append(el("p", "", "A qualified reviewer must assess the content, permissions, disclosure logic, and learning objectives."));
     $("open-approval").disabled = !app.validation.valid;
+    updateDraftHeading();
   } catch (error) { message("faculty-message", error.message, "error"); }
   finally { setBusy(button, false); }
 }
@@ -747,6 +794,7 @@ async function approveDraft(event) {
       $("open-approval").disabled = true;
       $("clinical-confirmation").checked = false;
       $("synthetic-confirmation").checked = false;
+      updateDraftHeading();
       message("approval-error", "The draft changed after your review. Close this dialog, select the case again to load its current content, then check and review it before publishing.", "error");
     } else { message("approval-error", error.message, "error"); }
   }
@@ -761,6 +809,9 @@ function clearFaculty() {
 }
 
 $("practice-nav").addEventListener("click", () => setView(app.encounter ? "encounter" : "practice"));
+$("intro-preview").addEventListener("click", previewIntroVideo);
+$("intro-video-dialog").addEventListener("close", stopIntroVideo);
+$("intro-video").addEventListener("error", () => { $("intro-video-status").textContent = "The introduction could not play. Continue with text practice; the transcript is above."; });
 $("app-lock-form").addEventListener("submit", async (event) => {
   event.preventDefault(); setBusy($("app-lock"), true, "Locking…");
   stopAudio(); stopDictation(); await app.video?.stop();
@@ -829,6 +880,6 @@ $("approval-dialog").addEventListener("close", () => { $("approval-form").reset(
 window.addEventListener("beforeunload", (event) => {
   if (app.encounter?.status === "active" || app.draftDirty) { event.preventDefault(); event.returnValue = ""; }
 });
-window.addEventListener("pagehide", () => { app.video?.stop({ keepalive: true }); stopAudio(); stopDictation(); });
+window.addEventListener("pagehide", () => { app.video?.stop({ keepalive: true }); stopIntroVideo(); stopAudio(); stopDictation(); });
 setEditorTab("preview");
 loadLibrary();
