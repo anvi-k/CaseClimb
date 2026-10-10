@@ -53,6 +53,8 @@ Live AWS inspection at 22:09:58 UTC verified `UPDATE_COMPLETE`, the six-widget `
 
 The [team setup runbook](../infra/README.md) documents verified-account login, locked build/deploy, private provider configuration, access controls, smoke checks, metrics, quotas, retention, recovery, and workshop migration. The GitHub Actions definition adds locked backend/browser/infrastructure checks with read-only permissions and no deployment credentials. Hosted CI results are recorded separately from local test results.
 
+The [hosted GitHub Actions run](https://github.com/AkeBoss-tech/CaseClimb/actions/runs/38090468954) succeeded for implementation commit `05ba97959dcc40a8d20bcddfe42956e14bfcd1b1`, including 119 backend tests, 25 JavaScript tests, syntax checks, and infrastructure JSON validation on the configured Linux runner. CloudFormation lint also passed locally. This establishes source checks and deployed server/provider behavior; microphone acceptance and a recovery restore remain separate.
+
 ## Remaining limits
 
 Qualified faculty must review imported drafts, reveal rules, objectives, clinical wording, and teaching permissions before publishing. No real-patient/PHI authorization, educational outcome validation, validated numerical clinical/empathy grades, classroom capacity acceptance, institutional identity integration, or live interactive video is established. The deployed clinical encounter/voice loop cannot be claimed accepted while the case library remains unpublished.
