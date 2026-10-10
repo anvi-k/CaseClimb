@@ -169,3 +169,40 @@ def test_lambda_http_api_cookies_are_passed_to_gate(gated):
     assert handler(event, {})["statusCode"] == 401
     event["cookies"] = [f"{COOKIE}={cookie}"]
     assert handler(event, {})["statusCode"] == 200
+
+
+def test_lambda_native_form_origin_survives_login_page_policy(gated):
+    _, _, app = gated
+    handler = Mangum(app, lifespan="off")
+    origin = "https://example.execute-api.us-west-2.amazonaws.com"
+    host = "example.execute-api.us-west-2.amazonaws.com"
+
+    def event(method, path, extra_headers=None, cookie=None):
+        value = {"version": "2.0", "routeKey": "$default", "rawPath": path,
+                 "rawQueryString": "", "headers": {"host": host, "x-forwarded-proto": "https", **(extra_headers or {})},
+                 "requestContext": {"http": {"method": method, "path": path, "sourceIp": "127.0.0.1", "protocol": "HTTP/1.1"}},
+                 "isBase64Encoded": False}
+        if cookie:
+            value["cookies"] = [cookie]
+        if method == "POST" and path == "/auth/login":
+            value["body"] = f"password={PASSWORD}"
+            value["headers"]["content-type"] = "application/x-www-form-urlencoded"
+        return value
+
+    for path in ["/", "/web/", "/auth/login"]:
+        page = handler(event("GET", path), {})
+        # no-referrer makes a native form navigation send Origin:null even
+        # to this same host. Keep the real origin and suppress foreign referrers.
+        assert page["headers"]["referrer-policy"] == "same-origin"
+    browser_headers = {"origin": origin, "sec-fetch-site": "same-origin", "sec-fetch-mode": "navigate"}
+    for invalid in ["null", "https://foreign.example.test"]:
+        assert handler(event("POST", "/auth/login", {**browser_headers, "origin": invalid}), {})["statusCode"] == 403
+        assert handler(event("POST", "/auth/logout", {**browser_headers, "origin": invalid}), {})["statusCode"] == 403
+    assert handler(event("POST", "/auth/login", {**browser_headers, "sec-fetch-site": "cross-site"}), {})["statusCode"] == 403
+    assert handler(event("POST", "/auth/login", {"sec-fetch-site": "cross-site"}), {})["statusCode"] == 403
+    signed_in = handler(event("POST", "/auth/login", browser_headers), {})
+    assert signed_in["statusCode"] == 303
+    cookie = signed_in["cookies"][0].split(";", 1)[0]
+    assert handler(event("GET", "/api/status", cookie=cookie), {})["statusCode"] == 200
+    assert handler(event("POST", "/auth/logout", browser_headers, cookie), {})["statusCode"] == 303
+    assert handler(event("GET", "/api/status", cookie=cookie), {})["statusCode"] == 401

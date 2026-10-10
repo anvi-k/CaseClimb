@@ -189,6 +189,8 @@ class AppAccess:
             if self.required or request.url.path.startswith("/auth/"):
                 response.headers["Cache-Control"] = "no-store"
             response.headers["X-Content-Type-Options"] = "nosniff"
-            response.headers["Referrer-Policy"] = "no-referrer"
+            # Native form POSTs serialize Origin:null under no-referrer,
+            # preventing legitimate sign-in/logout. Foreign referrers remain hidden.
+            response.headers["Referrer-Policy"] = "same-origin"
             response.headers["Permissions-Policy"] = "camera=(), microphone=(self)"
             return response
