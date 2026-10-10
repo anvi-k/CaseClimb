@@ -1,8 +1,10 @@
 """Dry-run a case: validate it, then play scripted learner questions through the engine.
 
-Shows exactly what the patient says and which facts and artifacts each question
-releases, so authors can catch keyword collisions and unreachable facts before
-publishing. No provider, network, or store is used; replies are authored text only.
+Shows which facts and artifacts each question can release, so authors can catch
+keyword collisions and unreachable facts before publishing. It runs the engine
+without the Bedrock selector, so it reports every fact the rules allow. A deployed
+encounter with a selector may release only a subset of these on a given turn, so a
+fact listed here is reachable, not guaranteed. No provider, network, or store is used.
 Run `uv run python scripts/simulate_case.py --case <case.json> --questions <file>`,
 one learner question per line.
 """
@@ -10,6 +12,7 @@ one learner question per line.
 import argparse
 import json
 import sys
+import unicodedata
 from pathlib import Path
 
 if __package__ in (None, ""):
@@ -17,6 +20,14 @@ if __package__ in (None, ""):
 
 from backend.engine import reply, validate_case
 from backend.models import CaseDraft
+
+
+def printable(value) -> str:
+    """Escape control and format characters so case text cannot drive the terminal."""
+    return "".join(
+        ch.encode("unicode_escape").decode() if unicodedata.category(ch) in ("Cc", "Cf") else ch
+        for ch in str(value)
+    )
 
 
 def simulate(case: CaseDraft, questions: list[str]):
@@ -48,14 +59,18 @@ def main(argv=None):
     questions = [line.strip() for line in args.questions.read_text().splitlines() if line.strip()]
     result = {"issues": issues, **simulate(case, questions)}
     if args.json:
-        print(json.dumps(result, indent=2, ensure_ascii=False))
+        # ASCII-only JSON escapes every control character, including C1 codes.
+        print(json.dumps(result, indent=2))
     else:
-        print("Validation issues:", "; ".join(issues) or "none")
+        print("Validation issues:", printable("; ".join(issues) or "none"))
+        print("Authored rules only: a deployed Bedrock selector may release a subset of each turn's facts.")
         for turn in result["turns"]:
-            print(f"\nQ: {turn['question']}\nA: {turn['answer']}")
-            print(f"   released facts {turn['released_facts']}, artifacts {turn['released_artifacts']}, "
+            print(f"\nQ: {printable(turn['question'])}\nA: {printable(turn['answer'])}")
+            print(f"   can release facts {printable(turn['released_facts'])}, "
+                  f"artifacts {printable(turn['released_artifacts'])}, "
                   f"rapport {turn['rapport_change']:+d} -> {turn['rapport']}")
-        print("\nNever released: facts", result["unreleased_facts"], "artifacts", result["unreleased_artifacts"])
+        print("\nNever released: facts", printable(result["unreleased_facts"]),
+              "artifacts", printable(result["unreleased_artifacts"]))
     return 1 if issues else 0
 
 
