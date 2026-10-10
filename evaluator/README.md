@@ -60,7 +60,7 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/python -m pytest
 ```
 
-Bedrock uses the standard AWS credential chain. `AWS_REGION` sets the region (default `us-east-1`) and `CASECLIMB_GRADER_MODEL` sets the model (default `anthropic.claude-opus-5-5`).
+Bedrock uses the standard AWS credential chain. `AWS_REGION` or `AWS_DEFAULT_REGION` sets the region (default `us-east-1`) and `CASECLIMB_GRADER_MODEL` sets the model (default `us.anthropic.claude-sonnet-5`, the best model the challenge's workshop accounts allow). Run `python scripts/check_bedrock.py` to see which models an account may call.
 
 ## Inputs that have no schema yet
 

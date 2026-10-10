@@ -7,7 +7,9 @@ import os
 from pathlib import Path
 from typing import Protocol
 
-DEFAULT_MODEL = "anthropic.claude-opus-5-5"
+# The best Claude model the challenge's workshop AWS accounts are allowed to call.
+DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"
+DEFAULT_CLIENT = "runtime"
 DEFAULT_REGION = "us-east-1"
 
 
@@ -27,15 +29,32 @@ class BedrockLLM:
     """Claude on Amazon Bedrock.
 
     Credentials come from the usual AWS chain (env vars, profile, role).
-    Override the model with CASECLIMB_GRADER_MODEL and the region with AWS_REGION.
+    Environment overrides: CASECLIMB_GRADER_MODEL for the model id,
+    AWS_REGION or AWS_DEFAULT_REGION for the region, and
+    CASECLIMB_BEDROCK_CLIENT for the endpoint: "runtime" (default), which
+    takes inference-profile ids such as "us.anthropic.claude-sonnet-5", or
+    "mantle" for the newer endpoint, which takes ids such as
+    "anthropic.claude-opus-5-5". The model must support adaptive thinking
+    (Claude Sonnet 4.6 or later); scripts/check_bedrock.py shows what an
+    account allows.
     """
 
-    def __init__(self, model: str | None = None, region: str | None = None, effort: str = "high"):
-        from anthropic import AnthropicBedrockMantle
+    def __init__(
+        self,
+        model: str | None = None,
+        region: str | None = None,
+        effort: str = "high",
+        client: str | None = None,
+    ):
+        from anthropic import AnthropicBedrock, AnthropicBedrockMantle
 
         self.model = model or os.environ.get("CASECLIMB_GRADER_MODEL", DEFAULT_MODEL)
         self.effort = effort
-        self._client = AnthropicBedrockMantle(
+        kind = client or os.environ.get("CASECLIMB_BEDROCK_CLIENT", DEFAULT_CLIENT)
+        if kind not in ("mantle", "runtime"):
+            raise ValueError(f"Unknown Bedrock client {kind!r}; use 'mantle' or 'runtime'")
+        make = AnthropicBedrockMantle if kind == "mantle" else AnthropicBedrock
+        self._client = make(
             aws_region=region
             or os.environ.get("AWS_REGION")
             or os.environ.get("AWS_DEFAULT_REGION")
