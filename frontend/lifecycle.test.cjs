@@ -52,7 +52,7 @@ function fixture() {
     this.actions = { createLiveConversation, updateEncounter, finishEncounter,
       tickTimer, toggleLiveConversation, confirmVoiceConsent, requestVoiceConsent,
       submitEncounterTurn, startDictation, startPatientVideo, playPatientReply,
-      renderLiveConversation, startDemo };
+      renderLiveConversation, startEncounter };
     renderEncounterPortrait = renderTranscript = renderChart = renderFeedback = renderPresentationLabel = () => {};
     setView = () => {};
   `, context);
@@ -62,14 +62,13 @@ function fixture() {
   const profile = { id: "maya", name: "Maya", style: "Thoughtful", voice_label: "Jessica", default_emotion: "worried" };
   const state = {
     encounter_id: "local-demo", status: "active", server_time: Date.now() / 1000,
-    deadline: Date.now() / 1000 + 600, mode: "conversation_demo", title: "A conversation with Maya",
-    patient: { name: "Maya" }, conversation_profile: profile,
+    deadline: Date.now() / 1000 + 600, mode: "clinical_practice", version: 1, learning_focus: "communication", title: "Getting to know Maya",
+    patient: { name: "Maya", age: 28, setting: "Outpatient clinic", presentation_key: "maya" }, conversation_profile: profile,
     confirmed_turns: 0, max_turns: 60, tts_available: true, video_available: true,
     events: [{ id: "e0", actor: "patient", text: "Hello, I'm Maya." }], conversation_prompts: [],
   };
   context.appState.encounterToken = "local-scoped-token";
   context.appState.audioEnabled = true;
-  context.appState.demoProfiles = [profile]; context.appState.selectedDemoProfile = profile.id;
   context.actions.updateEncounter(state); context.actions.createLiveConversation();
   context.actions.renderLiveConversation(context.appState.conversation);
   const closed = () => ({ ...state, status: "concluded", server_time: Date.now() / 1000 });
@@ -96,7 +95,6 @@ test("finishing immediately freezes actions and an old consent confirmation cann
   assert.equal(f.node("voice-dialog").open, false);
   assert.equal(f.app.voiceMode, null);
   assert.equal(f.node("finish-encounter").disabled, true);
-  assert.equal(f.node("switch-demo-profile").disabled, true);
   f.actions.toggleLiveConversation(); f.actions.confirmVoiceConsent(); f.actions.startDictation();
   await f.actions.startPatientVideo(); await f.actions.playPatientReply("e0");
   await f.app.conversation.start({ consented: true });
@@ -170,24 +168,4 @@ test("an aborted turn arriving during finish cannot reenable composer or play a 
   assert.equal(f.app.encounter.confirmed_turns, 0); assert.equal(f.requests.length, 2);
   conclude.resolve({ state: f.closed(), feedback: {} }); await finishing;
   assertFrozen(f, false);
-});
-
-test("a video startup delayed beyond a failed finish cannot auto-start the microphone", async () => {
-  const f = fixture(), connected = deferred(), conclude = deferred();
-  f.app.status = { tts_available: true, demo_video_available: true };
-  f.node("demo-dialog").open = true; f.node("demo-video").checked = true;
-  f.node("demo-emotion").value = "worried";
-  f.api((path) => path === "/demo/encounters" ? Promise.resolve({ state: f.state, token: "local-scoped-token" }) : conclude.promise);
-  f.context.waitForVideo = () => connected.promise;
-  vm.runInContext("startPatientVideo = async () => waitForVideo();", f.context);
-  const opening = f.actions.startDemo(true); await flush();
-  assert.equal(f.node("demo-dialog").open, false);
-  const finishing = f.actions.finishEncounter();
-  conclude.reject(new Error("Please retry concluding.")); await finishing;
-  assert.equal(f.app.encounter.status, "active"); assert.equal(f.app.finishOperation, null);
-  connected.resolve(); await opening;
-  assert.equal(f.recognitions.length, 0);
-  assert.equal(f.requests.length, 2, "no late opening TTS or spoken turn may be requested");
-  assert.equal(f.app.conversation.enabled, false);
-  assert.equal(f.node("live-toggle").textContent, "Start speaking");
 });

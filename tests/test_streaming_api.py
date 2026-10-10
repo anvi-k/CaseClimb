@@ -8,8 +8,12 @@ from backend.access import COOKIE
 from backend.models import Turn
 from backend.streaming import StreamAuthorization
 from test_access import gated, login
-from test_backend import harness
-from test_conversation_demo import begin
+from test_backend import harness, publish, start
+from backend.case_templates import case_template
+
+
+def begin(client):
+    return start(client, publish(client, case_template("communication-maya").model_dump()))
 
 
 def test_stream_setup_requires_app_encounter_and_same_origin(gated, monkeypatch):

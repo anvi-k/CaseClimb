@@ -17,7 +17,8 @@ from fastapi.staticfiles import StaticFiles
 from mangum import Mangum
 
 from .access import AppAccess
-from .conversation_demo import DEMO_ID, DEMO_MODE, NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, PROFILES as DEMO_PROFILES, StartDemo, demo_case, demo_feedback, is_demo, profile_prompts, public_event, public_profile
+from .conversation_demo import NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, PROFILES as DEMO_PROFILES, StartDemo, demo_feedback, is_demo, public_event, public_profile
+from .case_templates import TEMPLATES, case_template
 from .debrief import BedrockDebriefSelector, enrich_feedback
 from .engine import disclosed_chart, feedback, reply, validate_case
 from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, StreamCancel, Turn
@@ -235,13 +236,14 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         now = app.state.clock()
         result = {
             "encounter_id": encounter["id"], "case_id": encounter["case_id"], "version": encounter["version"],
-            "patient": {"name": case.patient_name, "age": case.age, "setting": case.setting},
+            "patient": {"name": case.patient_name, "age": case.age, "setting": case.setting, "presentation_key": case.presentation_key},
+            "learning_focus": case.learning_focus,
             "title": case.title, "status": encounter["status"], "started_at": encounter["started_at"], "deadline": encounter["deadline"],
             "server_time": now, "remaining_seconds": max(0, int(encounter["deadline"] - now)),
             "events": encounter["events"], "chart": disclosed_chart(case, encounter),
             "simulated_mood": encounter["simulated_mood"], "confirmed_turns": encounter["turn_count"], "max_turns": MAX_TURNS,
             "tts_available": app.state.tts is not None and (not isinstance(app.state.tts, ElevenLabsTTS) or bool(case.voice_id or app.state.tts.voice_id)) and app.state.quotas.remaining("tts_characters") > 0,
-            "video_available": app.state.video.available(case), "video": app.state.video.public_status(encounter["id"]),
+            "video_available": app.state.video.available(case), "video_sandbox": app.state.video.sandbox_metadata(), "video": app.state.video.public_status(encounter["id"]),
             "pending_turn": ({"request_id": encounter["pending_turn"]["request_id"], "lease_until": encounter["pending_turn"]["lease_until"]} if encounter.get("pending_turn") else None),
             "assessment_notice": "Synthetic practice only. Rapport is simulated; feedback is unvalidated and requires faculty review.",
         }
@@ -273,8 +275,19 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             if c["versions"]:
                 v = c["versions"][-1]
                 case = v["case"]
-                result.append({"case_id": c["id"], "version": v["version"], "title": case["title"], "patient_name": case["patient_name"], "age": case["age"], "setting": case["setting"], "summary": case["summary"], "synthetic": True, "review_status": "Reviewer-attested; independent clinical validation not established"})
+                result.append({"case_id": c["id"], "version": v["version"], "title": case["title"], "patient_name": case["patient_name"], "age": case["age"], "setting": case["setting"], "summary": case["summary"], "learning_focus": case.get("learning_focus", "clinical_history"), "synthetic": True, "review_status": "Reviewer-attested; independent clinical validation not established"})
         return {"cases": result}
+
+    @app.get("/api/faculty/templates", dependencies=[Depends(admin)])
+    def templates():
+        return {"templates": TEMPLATES}
+
+    @app.get("/api/faculty/templates/{template_id}", dependencies=[Depends(admin)])
+    def template(template_id: str):
+        try:
+            return {"draft": case_template(template_id).model_dump()}
+        except KeyError:
+            raise HTTPException(404, "Patient case template not found.")
 
     @app.get("/api/faculty/cases", dependencies=[Depends(admin)])
     def faculty_cases():
@@ -350,36 +363,26 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             raise HTTPException(409, "Only a published, reviewer-attested case version can be launched.")
         return begin_encounter(CaseDraft.model_validate(published["case"]), request.case_id, published["version"])
 
-    def begin_encounter(case, case_id, version, demo=False, demo_profile=None, demo_prompts=None):
+    def begin_encounter(case, case_id, version):
         if not app.state.quotas.reserve("sessions"):
             raise HTTPException(429, "Workshop session allowance exhausted. Ask the administrator to review the deployment budget.")
         encounter_id, token, now = str(uuid.uuid4()), secrets.token_urlsafe(32), app.state.clock()
         initial_facts = [f.id for f in case.facts if f.initially_released]
         initial_artifacts = [a.id for a in case.artifacts if a.initially_released]
         opening = " ".join(dict.fromkeys([case.opening, *[f.patient_answer for f in case.facts if f.initially_released and f.audience != "chart" and f.patient_answer]]))
-        encounter = {"id": encounter_id, "case_id": case_id, "version": version, "token_hash": digest(token), "started_at": now, "deadline": now + CAP_SECONDS, "status": "active", "turn_count": 0, "provider_attempts": 0, "pending_turn": None, "requests": {}, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "simulated_mood": {"mood": case.behavior.mood, "label": "Preset fictional delivery; no learner score" if demo else "Simulated state, not an empathy score"}, "events": [{"id": "e0", "actor": "patient", "text": opening, "timestamp": now, "confirmed": True, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "provider": "authored"}]}
-        if demo:
-            snapshot = case.model_dump()
-            snapshot["behavior"].pop("initial_rapport", None)
-            encounter.update(mode=DEMO_MODE, demo_snapshot=snapshot,
-                             conversation_profile=copy.deepcopy(demo_profile or public_profile()),
-                             conversation_prompts=list(demo_prompts or DEMO_PROMPTS))
-        else:
-            encounter["initial_rapport"] = case.behavior.initial_rapport
-            encounter["simulated_mood"]["rapport"] = case.behavior.initial_rapport
+        encounter = {"id": encounter_id, "case_id": case_id, "version": version, "token_hash": digest(token), "started_at": now, "deadline": now + CAP_SECONDS, "status": "active", "turn_count": 0, "provider_attempts": 0, "pending_turn": None, "requests": {}, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "simulated_mood": {"mood": case.behavior.mood, "label": "Simulated state, not an empathy score"}, "events": [{"id": "e0", "actor": "patient", "text": opening, "timestamp": now, "confirmed": True, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "provider": "authored"}]}
+        encounter["initial_rapport"] = case.behavior.initial_rapport
+        encounter["simulated_mood"]["rapport"] = case.behavior.initial_rapport
         persist_encounter(encounter, None)
         return {"encounter_id": encounter_id, "token": token, "state": state(encounter)}
 
-    @app.get("/api/demo/profiles")
+    @app.get("/api/demo/profiles", deprecated=True)
     def demo_profiles():
         return {"profiles": [public_profile(profile_id) for profile_id in DEMO_PROFILES]}
 
-    @app.post("/api/demo/encounters", status_code=201)
+    @app.post("/api/demo/encounters", deprecated=True)
     def start_demo(request: StartDemo):
-        case = demo_case(getattr(app.state.tts, "voice_id", None), request.emotion, request.profile_id)
-        return begin_encounter(case, DEMO_ID, 1, demo=True,
-                               demo_profile=public_profile(request.profile_id),
-                               demo_prompts=profile_prompts(request.profile_id))
+        raise HTTPException(410, "Practice chat has been retired. Create a patient case from a communication template in Patient Studio, then review and publish it before starting an encounter.")
 
     @app.get("/api/encounters/{encounter_id}")
     def get_encounter(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):

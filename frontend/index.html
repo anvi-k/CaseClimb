@@ -15,31 +15,24 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="CaseClimb home"><span class="brand-mark" aria-hidden="true">C<span>↗</span></span><span>CaseClimb<small>Patient Encounter Studio</small></span></a>
-    <nav aria-label="Main navigation"><button class="nav-button active" id="practice-nav" type="button">Practice</button><button class="nav-button" id="studio-nav" type="button">Patient Studio</button></nav>
+    <nav aria-label="Main navigation"><button class="nav-button active" id="practice-nav" type="button">Patient cases</button><button class="nav-button" id="studio-nav" type="button">Patient Studio</button></nav>
     <span class="header-badge">Synthetic practice</span>
   </header>
   <main id="main" tabindex="-1">
     <section id="practice-view" class="view" aria-labelledby="practice-heading">
       <div class="hero">
-        <div><p class="eyebrow"><span class="status-dot"></span> A little practice. A better conversation.</p><h1 id="practice-heading">Better conversations<br>begin here.</h1><p class="hero-description">Four distinct personalities. Expressive voices. A space to practice the art of listening.</p><div class="hero-preview-action"><button id="demo-open" class="button primary" type="button" disabled>Start live conversation <span aria-hidden="true">↗</span></button><p class="small-note">Four people to meet · Ten minutes to practice</p><button id="intro-preview" class="button secondary" type="button" hidden>Watch the introduction <span aria-hidden="true">▶</span></button><p id="intro-preview-note" class="small-note" hidden>Prerecorded media demonstration · original synthetic introduction</p></div></div>
-        <div class="hero-note"><div id="intro-poster-frame" class="intro-poster-frame" hidden><video id="intro-poster" poster="./media/caseclimb-introduction.jpg" muted playsinline preload="metadata" aria-hidden="true"></video><span class="recorded-chip">Recorded introduction</span></div><span class="note-icon" aria-hidden="true">↗</span><p>Make room for<br><strong>a real conversation.</strong></p><small>Original synthetic characters.<br>A safe space to try a different approach.</small></div>
+        <div><p class="eyebrow"><span class="status-dot"></span> Every conversation begins with a patient case.</p><h1 id="practice-heading">Meet the patient.<br>Build your approach.</h1><p class="hero-description">Practice listening, history taking, and shared understanding with synthetic patients. Choose a reviewed case to begin.</p><div class="hero-preview-action"><button id="create-case-open" class="button primary" type="button">Create a patient case <span aria-hidden="true">↗</span></button><p class="small-note">Ten-minute encounters · Voice or text · Evidence-linked feedback</p><button id="intro-preview" class="button secondary" type="button" hidden>Watch the introduction <span aria-hidden="true">▶</span></button><p id="intro-preview-note" class="small-note" hidden>Prerecorded media demonstration · original synthetic introduction</p></div></div>
+        <div class="hero-note"><div id="intro-poster-frame" class="intro-poster-frame" hidden><video id="intro-poster" poster="./media/caseclimb-introduction.jpg" muted playsinline preload="metadata" aria-hidden="true"></video><span class="recorded-chip">Recorded introduction</span></div><span class="note-icon" aria-hidden="true">↗</span><p>One patient.<br><strong>A purposeful conversation.</strong></p><small>Start from a communication template<br>or author a clinical history case.</small></div>
       </div>
-      <section class="demo-profiles-section" aria-labelledby="profiles-heading">
-        <div class="section-heading"><div><p class="eyebrow">Live conversation partners</p><h2 id="profiles-heading">Who would you like to meet?</h2></div><span class="pill">10 minutes each</span></div>
-        <p class="profiles-intro">Different personalities. Different ways into a conversation.</p>
-        <div id="demo-profiles-message" class="message" role="status">Loading conversation profiles…</div>
-        <div id="demo-profile-library" class="demo-profile-grid"></div>
-        <p class="small-note profiles-footnote">Original, nonclinical characters. Live video uses a shared Wayne face for up to 60 seconds; each profile has its own words, voice, and illustration.</p>
+      <section class="patient-library" aria-labelledby="cases-heading">
+        <div class="section-heading"><div><p class="eyebrow">Reviewed and ready to practice</p><h2 id="cases-heading">Patient cases</h2></div><button id="refresh-library" class="button ghost" type="button">Refresh cases <span aria-hidden="true">↻</span></button></div>
+        <div id="library-message" class="message" role="status" hidden></div>
+        <div id="case-library" class="case-grid" aria-live="polite"><div class="empty-state"><span class="spinner" aria-hidden="true"></span><h3>Opening the patient case library</h3><p>Checking which cases are available.</p></div></div>
+        <p class="notice library-notice">Cases are synthetic and reviewer attested. Independent clinical validation and validated educational scoring have not been established.</p>
       </section>
-      <details class="clinical-library"><summary><span>Looking for a clinical encounter?</span><span class="small-note">Browse reviewed patient cases <span aria-hidden="true">↗</span></span></summary><div class="clinical-library-content">
-      <div class="section-heading"><div><p class="eyebrow">Faculty reviewed practice</p><h2>Patient cases</h2></div><button id="refresh-library" class="button ghost" type="button">Refresh cases <span aria-hidden="true">↻</span></button></div>
-      <div id="library-message" class="message" role="status" hidden></div>
-      <div id="case-library" class="case-grid" aria-live="polite"><div class="empty-state"><span class="spinner" aria-hidden="true"></span><h3>Opening the practice library</h3><p>Checking which cases are available.</p></div></div>
-      <p class="notice library-notice">Cases are synthetic and reviewer attested. Independent clinical validation and validated educational scoring have not been established.</p>
-      </div></details>
     </section>
     <section id="encounter-view" class="view encounter-view" aria-labelledby="encounter-heading" hidden>
-      <div class="encounter-top"><div><p class="eyebrow" id="encounter-context">Student encounter</p><h1 id="encounter-heading">Patient encounter</h1></div><div class="encounter-controls"><button id="switch-demo-profile" class="button ghost" type="button" hidden>End & switch profile</button><div class="timer" id="timer-box"><span>Time remaining</span><strong id="encounter-timer" aria-live="off">10:00</strong></div><button id="finish-encounter" class="button secondary" type="button">Finish & review</button></div></div>
+      <div class="encounter-top"><div><p class="eyebrow" id="encounter-context">Student encounter</p><h1 id="encounter-heading">Patient encounter</h1></div><div class="encounter-controls"><div class="timer" id="timer-box"><span>Time remaining</span><strong id="encounter-timer" aria-live="off">10:00</strong></div><button id="finish-encounter" class="button secondary" type="button">Finish & review</button></div></div>
       <div id="encounter-message" class="message" role="status" hidden></div>
       <div class="encounter-columns">
         <section class="patient-panel" aria-label="Patient conversation">
@@ -73,21 +66,12 @@
   </main>
   <footer class="site-footer"><span>CaseClimb <span aria-hidden="true">↗</span></span><p>Built for practice. Every patient is synthetic.</p><span id="service-status" class="small-note">Checking connection…</span><form id="app-lock-form" action="/auth/logout" method="post" hidden><button id="app-lock" class="button small ghost" type="submit">Lock app</button></form></footer>
   <dialog id="intro-video-dialog" class="dialog intro-video-dialog" aria-labelledby="intro-video-title"><button class="dialog-close" type="button" data-close="intro-video-dialog" aria-label="Close video preview">×</button><p class="eyebrow">Prerecorded media demonstration</p><h2 id="intro-video-title">Meet a synthetic patient.</h2><p>This original ElevenLabs video is an introduction preview. It is independent of the practice library; encounter replies use separate audio and captions.</p><video id="intro-video" controls playsinline preload="none" aria-label="Prerecorded synthetic patient introduction"><track kind="captions" src="./media/caseclimb-introduction.vtt" srclang="en" label="English" default></video><p class="intro-caption">“I am feeling a little overwhelmed. Could you explain what happens next?”</p><p id="intro-video-status" class="small-note" aria-live="polite"></p><button class="button secondary" type="button" data-close="intro-video-dialog">Return to practice</button></dialog>
-  <dialog id="demo-dialog" class="dialog demo-dialog" aria-labelledby="demo-title">
-    <button class="dialog-close" type="button" data-close="demo-dialog" aria-label="Close conversation setup">×</button>
-    <p class="eyebrow">Your next conversation</p>
-    <h2 id="demo-title">Make yourself comfortable.</h2>
-    <p class="setup-intro">Choose a partner and how you’d like to begin.</p>
-    <fieldset class="demo-profile-picker"><legend>Your conversation partner</legend><div id="demo-profile-choices" class="demo-profile-choices"></div></fieldset>
-    <div class="demo-profile-summary"><h3 id="demo-profile-name">Choose a profile</h3><p id="demo-profile-description"></p><p id="demo-profile-voice" class="small-note"></p></div>
-    <label for="demo-emotion">How they sound</label><select id="demo-emotion"><option value="worried">Worried</option><option value="neutral">Neutral</option><option value="frustrated">Frustrated</option><option value="curious">Curious</option><option value="calm">Calm</option></select>
-    <p class="small-note delivery-note">An expressive voice preset; delivery varies.</p>
-    <label id="demo-video-option" class="checkbox demo-video-option" hidden><input id="demo-video" type="checkbox"><span><strong>See a live avatar · 60 seconds</strong><br>LiveAvatar’s shared Wayne face speaks your profile’s words with ElevenLabs voice. Reply audio goes to LiveAvatar; no webcam is used. Voice, illustration, and captions continue afterward.</span></label>
-    <details class="demo-privacy"><summary>Microphone & privacy</summary><p id="demo-privacy-description">Speaking requests microphone access. Your browser may send microphone audio to its speech recognition service. Final recognized phrases go to the encounter server. Replies go to ElevenLabs for speech. No webcam is used. Pause listening to type.</p></details>
-    <p id="demo-availability" class="small-note"></p><div id="demo-error" class="message error" role="alert" hidden></div>
-    <p id="demo-consent-summary" class="setup-consent-summary">Speaking uses your microphone and your browser’s speech recognition service. Recognized words go to our server; ElevenLabs generates replies. No webcam is used.</p>
-    <div class="setup-actions"><button id="demo-speak" class="button primary full" type="button" disabled>Agree & start speaking <span aria-hidden="true">↗</span></button><button id="demo-type" class="button secondary full" type="button" disabled>Start with typing</button></div>
-    <p class="small-note setup-footnote">Ten minutes of nonclinical practice. No medical advice or clinical assessment. Finish before reloading to keep your transcript.</p>
+  <dialog id="template-dialog" class="dialog template-dialog" aria-labelledby="template-heading">
+    <button class="dialog-close" type="button" data-close="template-dialog" aria-label="Close">×</button>
+    <p class="eyebrow">New patient case</p><h2 id="template-heading">Choose a starting point.</h2>
+    <p>Start with a communication template or build a clinical history case. Every template becomes an editable patient case draft.</p>
+    <div id="template-message" class="message" role="status" hidden></div><div id="case-templates" class="template-grid"></div>
+    <p class="small-note">Templates require faculty review and publication before they appear in the patient case library.</p>
   </dialog>
   <dialog id="start-dialog" class="dialog" aria-labelledby="start-case-title"><form id="start-form"><button class="dialog-close" type="button" data-close="start-dialog" aria-label="Close">×</button><p class="eyebrow">Your next encounter</p><h2 id="start-case-title">Start practice</h2><p id="start-case-summary"></p><div class="dialog-note">You have ten minutes. Finish before reloading this tab so you can review the encounter.</div><label for="student-code">Student access code</label><input id="student-code" type="password" autocomplete="off" required maxlength="500"><div id="start-error" class="message error" role="alert" hidden></div><button id="start-button" class="button primary full" type="submit">Begin encounter <span aria-hidden="true">↗</span></button></form></dialog>
   <dialog id="voice-dialog" class="dialog" aria-labelledby="voice-dialog-title"><button class="dialog-close" type="button" data-close="voice-dialog" aria-label="Close">×</button><p class="eyebrow">Choose how you practice</p><h2 id="voice-dialog-title">Enable patient voice</h2><p id="voice-dialog-description"></p><div class="dialog-note">You can continue with text and captions at any time.</div><button id="voice-confirm" class="button primary full" type="button">Enable patient voice</button><button class="button ghost full" type="button" data-close="voice-dialog">Continue with text</button></dialog>
