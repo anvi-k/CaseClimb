@@ -8,3 +8,10 @@
 *.mp3
 *.mp4
 .DS_Store
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+dist/
+build/
