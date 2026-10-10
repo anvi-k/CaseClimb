@@ -18,6 +18,7 @@ Captured and researched October 10, 2026, America/New_York. The meeting date is 
 | [Sponsor resources](sponsor-resources-2026-10-10.md) | ElevenLabs redemption, AWS/Kiro separation, Anakin and Vlada offers and limits |
 | [Resource and dataset review](resource-and-dataset-review-2026-10-10.md) | Challenge packages, patient assets, rubric, Sevaro kit, thesis relevance and provenance |
 | [Implementation and verification](implementation-and-verification-2026-10-10.md) | Built behavior, actual AWS/provider checks, remaining delivery limits |
+| [Backend APIs and remaining work](backend-api-status-and-next-steps.md) | Existing API contract, actual streaming boundaries, and prioritized backend acceptance |
 | [Source register](sources.md) | Provenance and limits of the sources used |
 
 Three conclusions change how the brainstorm should be implemented: an avatar-facing gaze check does not establish empathy; discrepant patient reports need authored evidence and respectful clarification rather than automatic accusations of lying; and an LLM must not invent clinical facts or approve its own generated cases. Claims in the recording that work was already nearly complete are unverified: the repository's initial inspected snapshot contained only a README. Subsequent implementation and deployment checks are recorded separately above.

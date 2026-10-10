@@ -9,7 +9,7 @@ const app = {
   status: null, library: [], selectedCase: null, facultyKey: "", cases: [],
   currentCase: null, draftDirty: false, validation: null, template: null,
   encounter: null, encounterToken: "", clockOffset: 0, timer: null,
-  expiryRefreshing: false, feedback: null, sending: false, pendingTurn: null,
+  expiryRefreshing: false, feedback: null, sending: false, pendingTurn: null, finishOperation: null,
   audioEnabled: false, audio: null, audioUrl: null, audioController: null,
   audioGeneration: 0, voiceMode: null, dictationConsent: false, recognition: null,
   video: null, videoAttempted: false,
@@ -351,6 +351,8 @@ async function startEncounter(event) {
   finally { setBusy(button, false); }
 }
 
+function encounterCanInteract() { return !!app.encounter && app.encounter.status === "active" && remainingSeconds() > 0 && !app.finishOperation; }
+
 function isConversationDemo() { return app.encounter?.mode === "conversation_demo"; }
 
 function openDemo(profileId) {
@@ -406,7 +408,7 @@ async function startDemo(spoken) {
 function createLiveConversation() {
   app.conversation = new LiveSpeechConversation({
     createRecognition: () => new (window.SpeechRecognition || window.webkitSpeechRecognition)(),
-    availability: () => ({ sessionActive: app.encounter?.status === "active" && remainingSeconds() > 0 && app.encounter.confirmed_turns < app.encounter.max_turns,
+    availability: () => ({ sessionActive: encounterCanInteract() && app.encounter.confirmed_turns < app.encounter.max_turns,
       recognition: speechSupported(), voice: !!app.encounter?.tts_available && (app.audioEnabled || !!app.video?.active), busy: app.sending || !!app.video?.starting || !!app.encounter?.pending_turn }),
     sendFinal: (text, { requestId, signal }) => submitEncounterTurn(text, { requestId, signal, live: true }),
     speakReply: (reply, { signal }) => playPatientReply(reply.id, { signal, strict: true }),
@@ -421,32 +423,45 @@ function createLiveConversation() {
 
 function renderLiveConversation({ state, reason, enabled }) {
   const labels = { off: "Listening paused", stopped: "Listening paused", starting: "Starting microphone", listening: "Listening to you", submitting: "Preparing reply", speaking: "Character speaking", error: "Listening stopped", unavailable: "Typing available" };
+  const action = app.conversation?.consent ? "Resume listening" : "Start speaking";
   const reasons = {
-    "typed-start": "Type a message below. Choose Resume listening when you want spoken turns.",
+    "typed-start": `Type a message below. Choose ${action} when you want spoken turns.`,
     "recognition-unavailable": "Speech recognition is unavailable here. Open this app in Chrome for spoken turns, or continue typing.",
     "voice-unavailable": "Voice is unavailable. Continue with typing and visible replies.",
-    "microphone-denied": "Microphone access was denied. Adjust your browser permission, then choose Resume listening; or type a message.",
+    "microphone-denied": `Microphone access was denied. Adjust your browser permission, then choose ${action}; or type a message.`,
     "microphone-unavailable": "No microphone was available. Check your input device or continue typing.",
-    "recognition-network": "The speech recognition connection stopped. Choose Resume listening when ready, or continue typing.",
-    "no-speech": "No final phrase was heard. Choose Resume listening to try again, or type a message.",
+    "recognition-network": `The speech recognition connection stopped. Choose ${action} when ready, or continue typing.`,
+    "no-speech": `No final phrase was heard. Choose ${action} to try again, or type a message.`,
     "turn-error": "The turn could not complete. Review the message below and retry it explicitly; listening stays paused.",
-    "playback-error": "Voice could not finish. Read the visible reply; choose Resume listening when ready.",
+    "playback-error": `Voice could not finish. Read the visible reply; choose ${action} when ready.`,
     "turn-pending": "A turn is still processing. Wait for its result before resuming listening.",
     "session-ended": "The conversation has ended. Your transcript is available below.",
     "phrase-too-long": "That phrase was too long. Shorten it in the editor and send it explicitly.",
-    "paused": "Listening is paused. Type a message or choose Resume listening.",
+    "paused": `Listening is paused. Type a message or choose ${action}.`,
   };
+  if (app.finishOperation || !encounterCanInteract()) {
+    const ending = !!app.finishOperation;
+    $("live-state").textContent = ending ? "Ending conversation" : "Conversation ended";
+    $("live-state").dataset.state = "stopped";
+    $("live-status").textContent = ending ? "Speaking and typing are paused while your transcript is prepared." : reasons["session-ended"];
+    $("live-toggle").textContent = ending ? "Ending conversation…" : "Conversation ended";
+    $("live-toggle").disabled = true;
+    return;
+  }
   $("live-state").textContent = labels[state] || "Listening paused";
   $("live-state").dataset.state = state;
   const fallback = !speechSupported() ? reasons["recognition-unavailable"] : !app.encounter?.tts_available || !(app.audioEnabled || app.video?.active) ? reasons["voice-unavailable"] : "";
-  $("live-status").textContent = fallback || reasons[reason] || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: "Microphone paused while the server prepares a reply.", speaking: "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || "Listening is paused. Type a message or choose Resume listening.";
-  $("live-toggle").textContent = enabled ? "Pause conversation" : "Resume listening";
-  $("live-toggle").disabled = app.encounter?.status !== "active" || remainingSeconds() <= 0 || !speechSupported() || !app.encounter?.tts_available || app.sending || !!app.encounter?.pending_turn;
+  $("live-status").textContent = fallback || reasons[reason] || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: "Microphone paused while the server prepares a reply.", speaking: "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || `Listening is paused. Type a message or choose ${action}.`;
+  $("live-toggle").textContent = enabled ? "Pause conversation" : action;
+  $("live-toggle").disabled = !encounterCanInteract() || !speechSupported() || !app.encounter?.tts_available || app.sending || !!app.encounter?.pending_turn;
   // Pause remains available while a request/audio operation is in progress.
   if (enabled) $("live-toggle").disabled = false;
 }
 
 function updateEncounter(state) {
+  // Closing a session is irreversible. A delayed timer or turn snapshot cannot
+  // bring back an active editor after the conclude response has been applied.
+  if (app.encounter && app.encounter.encounter_id === state.encounter_id && app.encounter.status !== "active" && state.status === "active") return;
   if (state !== app.encounter) app.clockOffset = state.server_time * 1000 - Date.now();
   app.encounter = state;
   const demo = isConversationDemo();
@@ -457,7 +472,7 @@ function updateEncounter(state) {
   const profile = demo ? state.conversation_profile : null;
   renderEncounterPortrait(profile);
   $("patient-detail").textContent = demo ? profile ? `${profile.style} · ${profile.voice_label}` : "Synthetic character · ElevenLabs voice when available" : `${state.patient.age} years · ${state.patient.setting}`;
-  $("switch-demo-profile").hidden = !demo;
+  $("switch-demo-profile").hidden = !demo; $("switch-demo-profile").disabled = !!app.finishOperation;
   $("turn-text").placeholder = demo ? "Ask about their interests, preferences, or what helps them feel understood…" : "Start with what matters to your patient…";
   $("patient-mood").hidden = demo; $("dictate").hidden = demo;
   $("live-conversation-controls").hidden = !demo;
@@ -487,12 +502,13 @@ function updateEncounter(state) {
   renderTranscript(); renderChart(); renderVoiceControls(); renderVideoControls();
   const active = state.status === "active" && remainingSeconds() > 0;
   $("encounter-view").classList.toggle("ended", !active); $("encounter-ended").hidden = active;
-  const canSend = active && state.confirmed_turns < state.max_turns;
+  const canSend = active && !app.finishOperation && state.confirmed_turns < state.max_turns;
   $("turn-text").disabled = !canSend || app.sending;
   $("send-turn").disabled = !canSend || app.sending;
   $("dictate").disabled = !canSend || app.sending || !speechSupported();
   if (!speechSupported()) $("dictate").title = "Dictation is unavailable in this browser. Type your question instead.";
-  $("finish-encounter").textContent = active ? (demo ? "End conversation" : "Finish & review") : (demo ? "View transcript" : "Load review");
+  $("finish-encounter").textContent = app.finishOperation ? (demo ? "Ending conversation…" : "Preparing review…") : active ? (demo ? "End conversation" : "Finish & review") : (demo ? "View transcript" : "Load review");
+  $("finish-encounter").disabled = !!app.finishOperation;
   if (demo && app.conversation) renderLiveConversation(app.conversation);
   if (state.video?.deadline && app.video) app.video.limitDeadline(state.video.deadline);
   if (!active) { app.conversation?.sessionEnded(); stopAudio(); stopDictation(); app.video?.stop(); }
@@ -505,7 +521,7 @@ function remainingSeconds() {
 }
 
 async function tickTimer() {
-  if (!app.encounter) return;
+  if (!app.encounter || app.finishOperation) return;
   const encounterId = app.encounter.encounter_id, token = app.encounterToken;
   const seconds = app.encounter.status === "active" ? remainingSeconds() : 0;
   $("encounter-timer").textContent = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
@@ -514,10 +530,11 @@ async function tickTimer() {
   if (seconds || app.encounter.status !== "active" || app.expiryRefreshing) return;
   clearInterval(app.timer); app.timer = null;
   app.expiryRefreshing = true; app.conversation?.sessionEnded(); stopAudio(); stopDictation(); app.video?.stop();
+  updateEncounter(app.encounter);
   $("send-turn").disabled = true; $("turn-text").disabled = true; $("dictate").disabled = true;
   try {
     const state = await api(`/encounters/${encounterId}`, { token });
-    if (app.encounter?.encounter_id !== encounterId || app.encounterToken !== token) return;
+    if (app.encounter?.encounter_id !== encounterId || app.encounterToken !== token || app.finishOperation || app.encounter.status !== "active") return;
     updateEncounter(state);
     if (state.status !== "active") {
       message("encounter-message", isConversationDemo() ? "Your ten-minute conversation has ended. Your transcript remains available." : "Your ten-minute encounter has ended. Review the evidence and plan your next conversation.");
@@ -576,14 +593,14 @@ function renderChart() {
 
 async function sendTurn(event) {
   event.preventDefault();
-  if (app.sending || !app.encounter || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
+  if (app.sending || !encounterCanInteract()) return;
   const text = $("turn-text").value.trim(); if (!text) return;
   app.conversation?.stop();
   try { await submitEncounterTurn(text); } catch { /* Static error and recoverable editor are shown by the shared submitter. */ }
 }
 
 async function submitEncounterTurn(text, { requestId, signal, live = false } = {}) {
-  if (app.sending || !app.encounter || app.encounter.status !== "active" || remainingSeconds() <= 0) throw new RequestError("This turn is unavailable.");
+  if (app.sending || !encounterCanInteract()) throw new RequestError("This turn is unavailable.");
   const encounterId = app.encounter.encounter_id, token = app.encounterToken;
   const operation = new AbortController(); app.turnOperation = operation;
   const onAbort = () => operation.abort(); signal?.addEventListener("abort", onAbort, { once: true });
@@ -626,23 +643,28 @@ async function submitEncounterTurn(text, { requestId, signal, live = false } = {
 }
 
 async function finishEncounter() {
-  if (!app.encounter) return;
+  if (!app.encounter || app.finishOperation) return;
   const encounterId = app.encounter.encounter_id, token = app.encounterToken;
   const current = () => app.encounter?.encounter_id === encounterId && app.encounterToken === token;
-  app.conversation?.sessionEnded(); app.turnOperation?.abort(); stopAudio(); stopDictation(); app.video?.stop();
-  const button = $("finish-encounter"); setBusy(button, true, "Preparing review…");
+  const operation = new AbortController(); app.finishOperation = operation;
+  ++app.demoGeneration; // Permanently cancel an earlier spoken/video startup, even if concluding fails.
+  app.conversation?.stop("session-ending"); app.turnOperation?.abort(); app.turnOperation = null; app.sending = false;
+  stopAudio(); stopDictation(); app.video?.stop(); app.voiceMode = null; $("voice-dialog").close();
+  setBusy($("send-turn"), false); updateEncounter(app.encounter);
+  const button = $("finish-encounter"); setBusy(button, true, isConversationDemo() ? "Ending conversation…" : "Preparing review…");
   message("encounter-message", "");
   try {
-    const result = await api(`/encounters/${encounterId}/conclude`, { method: "POST", token });
+    const result = await api(`/encounters/${encounterId}/conclude`, { method: "POST", token, signal: operation.signal });
     if (!current()) return;
     updateEncounter(result.state); app.feedback = result.feedback; renderFeedback();
     clearInterval(app.timer); app.timer = null; tickTimer();
     $("feedback-panel").scrollIntoView({ behavior: "smooth", block: "start" });
-  } catch (error) { if (current()) message("encounter-message", error.message, "error"); }
-  finally {
-    if (!current()) return;
-    setBusy(button, false);
-    updateEncounter(app.encounter);
+  } catch (error) {
+    if (current()) { app.conversation?.stop("paused"); message("encounter-message", error.message, "error"); }
+  } finally {
+    if (!current() || app.finishOperation !== operation) return;
+    app.finishOperation = null;
+    setBusy(button, false); updateEncounter(app.encounter); tickTimer();
   }
 }
 
@@ -724,7 +746,7 @@ function renderFeedback() {
 }
 
 function renderVoiceControls() {
-  const active = app.encounter?.status === "active" && remainingSeconds() > 0;
+  const active = encounterCanInteract();
   const available = !!app.encounter?.tts_available;
   const videoActive = !!app.video?.active;
   const videoBusy = videoActive || !!app.video?.starting;
@@ -734,7 +756,8 @@ function renderVoiceControls() {
   $("enable-audio").disabled = !available || !active || videoBusy;
   $("enable-audio").title = videoBusy ? "Turn off video to use audio-only playback." : "";
   $("play-response").disabled = !active || !(videoActive || (available && app.audioEnabled)) || !latestPatient();
-  if (videoActive) $("stop-audio").disabled = !app.video.speaking;
+  if (!active) $("stop-audio").disabled = true;
+  else if (videoActive) $("stop-audio").disabled = !app.video.speaking;
   if (!available) $("audio-status").textContent = isConversationDemo() ? "Voice is unavailable here. Type a message and read the character's reply below." : app.encounter?.video_available ? "Patient voice plays through the video feed when enabled. Captions remain available." : "Voice and live video are unavailable here. Continue with the illustrated patient and captions.";
   else if (videoBusy) $("audio-status").textContent = "Patient voice plays through the video feed. Captions remain available.";
   else if (!app.audioEnabled) $("audio-status").textContent = "Captions are always available. Voice is optional.";
@@ -747,7 +770,7 @@ function renderPresentationLabel() {
 }
 
 function renderVideoControls() {
-  const active = app.encounter?.status === "active" && remainingSeconds() > 0;
+  const active = encounterCanInteract();
   const videoBusy = !!(app.video?.active || app.video?.starting);
   $("enable-video").closest(".video-controls").hidden = !app.encounter?.video_available && !videoBusy && !app.videoAttempted;
   const sandbox = !!app.encounter?.video_sandbox?.enabled;
@@ -763,7 +786,7 @@ function renderVideoControls() {
 }
 
 async function startPatientVideo({ playOpening = true } = {}) {
-  if (!app.encounter?.video_available || app.videoAttempted || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
+  if (!app.encounter?.video_available || app.videoAttempted || !encounterCanInteract()) return;
   app.conversation?.stop(); stopAudio();
   const encounterId = app.encounter.encounter_id; const token = app.encounterToken;
   const renderer = new PatientVideoRenderer({
@@ -782,6 +805,7 @@ async function startPatientVideo({ playOpening = true } = {}) {
 // A reply has one audible path. Never send it to the live avatar and to an MP3
 // player simultaneously, and never resolve merely because audio was submitted.
 async function playPatientReply(eventId, { signal, strict = false } = {}) {
+  if (!encounterCanInteract()) { if (strict) throw new RequestError("This conversation is ending or has ended."); return; }
   if (!app.video?.active) return playPatientAudio(eventId, { signal, strict });
   try { await app.video.speak(eventId, { signal }); }
   catch (error) {
@@ -800,7 +824,7 @@ function stopAudio() {
 }
 
 async function playPatientAudio(eventId, { signal, strict = false } = {}) {
-  if (!app.audioEnabled || !app.encounter?.tts_available || app.encounter.status !== "active" || remainingSeconds() <= 0) {
+  if (!app.audioEnabled || !app.encounter?.tts_available || !encounterCanInteract()) {
     if (strict) throw new RequestError("Patient voice is unavailable."); return;
   }
   stopAudio(); const generation = app.audioGeneration;
@@ -813,7 +837,7 @@ async function playPatientAudio(eventId, { signal, strict = false } = {}) {
   $("audio-status").textContent = "Preparing patient audio…"; $("stop-audio").disabled = false;
   try {
     const blob = await api(`/encounters/${encounterId}/tts`, { method: "POST", token, body: { event_id: eventId }, binary: true, signal: controller.signal, timeout: 30000 });
-    if (!current() || !app.audioEnabled || app.encounter.status !== "active" || remainingSeconds() <= 0) { if (strict) throw new RequestError("Audio stopped."); return; }
+    if (!current() || !app.audioEnabled || !encounterCanInteract()) { if (strict) throw new RequestError("Audio stopped."); return; }
     app.audioUrl = URL.createObjectURL(blob); app.audio = new Audio(app.audioUrl);
     await new Promise((resolve, reject) => {
       const timeout = setTimeout(() => fail(new RequestError("Audio playback timed out. Continue with captions.")), Math.min(90000, remainingSeconds() * 1000));
@@ -838,6 +862,7 @@ async function playPatientAudio(eventId, { signal, strict = false } = {}) {
 
 function speechSupported() { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); }
 function requestVoiceConsent(mode) {
+  if (!encounterCanInteract()) return;
   app.voiceMode = mode;
   if (mode === "audio") {
     $("voice-dialog-title").textContent = "Enable patient voice";
@@ -849,7 +874,7 @@ function requestVoiceConsent(mode) {
     $("voice-dialog-description").textContent = `${sandbox ? "This free preview lasts up to 60 seconds and uses the same Wayne face for every profile. Your selected profile still supplies the words and voice. " : ""}Stored replies go to ElevenLabs for speech, then that audio goes to LiveAvatar for synchronized live video. Your browser receives the provider's LiveKit video and audio; no webcam or microphone feed goes to the video provider. ${sandbox ? "Afterward, continue with ElevenLabs voice, the profile's illustration, and captions." : "Video ends with this encounter; voice and captions remain available if it fails."}`;
     $("voice-confirm").textContent = sandbox ? "Start 60-second video preview" : "Enable video patient";
   } else if (mode === "conversation") {
-    $("voice-dialog-title").textContent = "Resume spoken conversation";
+    $("voice-dialog-title").textContent = app.conversation?.consent ? "Resume spoken conversation" : "Start spoken conversation";
     $("voice-dialog-description").textContent = "Your browser requests microphone access and may transmit microphone audio to its speech recognition service. Final recognized phrases automatically send to this nonclinical encounter. ElevenLabs generates the character's voice; the microphone pauses during each reply. Captions remain visible. No webcam is used.";
     $("voice-confirm").textContent = "Agree & start listening";
   } else {
@@ -867,7 +892,7 @@ function stopDictation() {
 }
 
 function startDictation() {
-  if (!speechSupported() || app.sending || app.encounter?.status !== "active" || remainingSeconds() <= 0) return;
+  if (!speechSupported() || app.sending || !encounterCanInteract()) return;
   stopAudio(); stopDictation(); app.video?.interrupt();
   const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   const recognition = new Recognition(); app.recognition = recognition;
@@ -895,6 +920,7 @@ function startDictation() {
 }
 
 function cleanupEncounter() {
+  app.finishOperation?.abort(); app.finishOperation = null;
   app.conversation?.stop(); app.conversation = null; app.turnOperation?.abort(); app.turnOperation = null; app.sending = false; setBusy($("send-turn"), false);
   clearInterval(app.timer); app.timer = null; stopAudio(); stopDictation();
   app.video?.stop(); app.video = null; app.videoAttempted = false;
@@ -1137,6 +1163,22 @@ function clearFaculty() {
   $("approval-form").reset(); $("validation-result").hidden = true;
 }
 
+function toggleLiveConversation() {
+  if (!app.conversation || !encounterCanInteract()) return;
+  if (app.conversation.enabled) app.conversation.stop();
+  else if (app.conversation.consent) { stopDictation(); app.conversation.start(); }
+  else requestVoiceConsent("conversation");
+}
+function confirmVoiceConsent() {
+  const mode = app.voiceMode; app.voiceMode = null;
+  $("voice-dialog").close();
+  if (!mode || !encounterCanInteract()) return;
+  if (mode === "audio") { app.audioEnabled = true; renderVoiceControls(); if (latestPatient()) playPatientAudio(latestPatient().id); }
+  else if (mode === "video") startPatientVideo();
+  else if (mode === "conversation") { app.audioEnabled = true; stopDictation(); app.conversation?.start({ consented: true }); }
+  else { app.dictationConsent = true; startDictation(); }
+}
+
 $("practice-nav").addEventListener("click", () => setView(app.encounter ? "encounter" : "practice"));
 $("intro-preview").addEventListener("click", previewIntroVideo);
 $("demo-open").addEventListener("click", openDemo);
@@ -1155,12 +1197,7 @@ $("switch-demo-profile").addEventListener("click", async () => {
 $("demo-dialog").addEventListener("close", () => {
   if (app.demoStarting) { ++app.demoGeneration; app.demoStarting.abort(); app.demoStarting = null; }
 });
-$("live-toggle").addEventListener("click", () => {
-  if (!app.conversation) return;
-  if (app.conversation.enabled) app.conversation.stop();
-  else if (app.conversation.consent) { stopDictation(); app.conversation.start(); }
-  else requestVoiceConsent("conversation");
-});
+$("live-toggle").addEventListener("click", toggleLiveConversation);
 $("intro-video-dialog").addEventListener("close", stopIntroVideo);
 $("intro-video").addEventListener("error", () => { $("intro-video-status").textContent = "The introduction could not play. Continue with text practice; the transcript is above."; });
 $("app-lock-form").addEventListener("submit", async (event) => {
@@ -1188,19 +1225,13 @@ $("enable-video").addEventListener("click", () => {
   if (app.video?.active || app.video?.starting) { app.conversation?.stop(); app.video.stop(); $("video-status").textContent = "Video stopped. A new video session cannot be started in this encounter. Continue with your profile's ElevenLabs voice, illustration, and captions; choose Resume listening when ready."; }
   else requestVoiceConsent("video");
 });
-$("allow-video-playback").addEventListener("click", () => app.video?.allowPlayback());
+$("allow-video-playback").addEventListener("click", () => { if (encounterCanInteract()) app.video?.allowPlayback(); });
 $("dictate").addEventListener("click", () => {
   if (app.recognition) stopDictation();
   else if (app.dictationConsent) startDictation();
   else requestVoiceConsent("dictation");
 });
-$("voice-confirm").addEventListener("click", () => {
-  $("voice-dialog").close();
-  if (app.voiceMode === "audio") { app.audioEnabled = true; renderVoiceControls(); if (latestPatient()) playPatientAudio(latestPatient().id); }
-  else if (app.voiceMode === "video") startPatientVideo();
-  else if (app.voiceMode === "conversation") { app.audioEnabled = true; stopDictation(); app.conversation?.start({ consented: true }); }
-  else { app.dictationConsent = true; startDictation(); }
-});
+$("voice-confirm").addEventListener("click", confirmVoiceConsent);
 $("faculty-login").addEventListener("submit", facultyLogin);
 $("faculty-logout").addEventListener("click", () => { clearFaculty(); message("faculty-message", "Faculty access closed for this tab."); });
 $("new-case").addEventListener("click", newCase);
