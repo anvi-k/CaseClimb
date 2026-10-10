@@ -1,0 +1,163 @@
+{
+  "title": "ED communication practice — medication routine",
+  "patient_name": "Jordan Example",
+  "age": 42,
+  "setting": "Emergency department",
+  "summary": "Fictional communication example. Explore concerns and clarify the patient's medication routine. Draft: no diagnosis or treatment advice; qualified clinical review required before learners use it.",
+  "synthetic": true,
+  "opening": "I'm worried, and I don't want to be judged. Can we talk about what has been difficult lately?",
+  "fallback_answer": "Could you ask about my concerns or my medication routine? I don't have that information.",
+  "facts": [
+    {
+      "id": "concern",
+      "label": "Main concern",
+      "text": "The fictional patient is worried about being judged when discussing a medication routine.",
+      "state": "known",
+      "audience": "both",
+      "initially_released": true,
+      "keywords": [
+        "worry",
+        "worried",
+        "concern",
+        "difficult"
+      ],
+      "requires": [],
+      "patient_answer": "I'm worried about being judged when we discuss my medication routine.",
+      "nondisclosure_answer": null,
+      "clarification_keywords": [],
+      "source": "Faculty-authored synthetic example"
+    },
+    {
+      "id": "routine",
+      "label": "Medication routine",
+      "text": "The fictional patient missed several doses because the routine was hard to remember. No medicine or diagnosis is specified.",
+      "state": "known",
+      "audience": "both",
+      "initially_released": false,
+      "keywords": [
+        "medication",
+        "medications",
+        "medicine",
+        "medicines",
+        "routine",
+        "doses"
+      ],
+      "requires": [
+        "concern"
+      ],
+      "patient_answer": "Actually, I missed several doses. The routine was hard to remember, and I was embarrassed to tell you.",
+      "nondisclosure_answer": "I think I've been following the routine.",
+      "clarification_keywords": [
+        "missed",
+        "remember",
+        "hard",
+        "difficult",
+        "day",
+        "walk me through",
+        "yesterday"
+      ],
+      "source": "Faculty-authored synthetic example"
+    },
+    {
+      "id": "unknown_lab",
+      "label": "Lab availability",
+      "text": "No lab results were authored for this communication example.",
+      "state": "unknown",
+      "audience": "chart",
+      "initially_released": false,
+      "keywords": [
+        "lab",
+        "labs",
+        "test",
+        "tests",
+        "results"
+      ],
+      "requires": [],
+      "patient_answer": null,
+      "nondisclosure_answer": null,
+      "clarification_keywords": [],
+      "source": "Faculty-authored synthetic example"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "instruction_note",
+      "title": "Synthetic communication note",
+      "kind": "note",
+      "body": "Practice respectful clarification of the patient's routine. This is not a real chart, diagnosis, prescription, or clinical recommendation.",
+      "metadata": {},
+      "initially_released": true,
+      "keywords": [],
+      "requires": [],
+      "source": "Faculty-authored synthetic example"
+    }
+  ],
+  "objectives": [
+    {
+      "id": "explore_concern",
+      "label": "Invite the patient's concerns",
+      "keywords": [
+        "concern",
+        "worried",
+        "worry",
+        "tell me",
+        "difficult"
+      ],
+      "required_fact_ids": [],
+      "opportunity_fact_ids": [
+        "concern"
+      ],
+      "guidance": "Invite the patient to explain what worries them; do not infer inner empathy from phrasing alone.",
+      "next_question": "What has been worrying you most?",
+      "debrief_focus": "missed_follow_up"
+    },
+    {
+      "id": "clarify_routine",
+      "label": "Clarify the medication routine respectfully",
+      "keywords": [
+        "missed",
+        "remember",
+        "walk me through",
+        "yesterday",
+        "difficult"
+      ],
+      "required_fact_ids": [
+        "routine"
+      ],
+      "opportunity_fact_ids": [
+        "concern"
+      ],
+      "guidance": "Use a concrete, nonjudgmental question about routines rather than accusing the patient of dishonesty.",
+      "next_question": "Could you walk me through yesterday and what made your medication routine difficult?",
+      "debrief_focus": "missed_follow_up"
+    }
+  ],
+  "behavior": {
+    "mood": "guarded",
+    "initial_rapport": 30,
+    "supportive_keywords": [
+      "understand",
+      "sounds difficult",
+      "concern",
+      "thank you"
+    ],
+    "dismissive_keywords": [
+      "just calm down",
+      "you are lying"
+    ],
+    "supportive_response": "Thank you for listening. What would you like to know?",
+    "dismissive_response": "That makes me less comfortable talking. Please listen to my concerns."
+  },
+  "voice_id": null,
+  "voice_delivery": {
+    "model_id": "eleven_multilingual_v2",
+    "emotion": "neutral",
+    "emotion_source": "faculty",
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": null,
+    "speed": null
+  },
+  "avatar_id": null,
+  "author_note": "Unreviewed synthetic demonstration only. Created to exercise authoring/disclosure mechanics, not derived from a clinical dataset. No faculty clinical approval or validation is established."
+}

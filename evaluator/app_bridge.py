@@ -54,6 +54,11 @@ def record_from_case(
     case: dict, *, case_id: str, version: int, published_at: float | str | datetime
 ) -> dict:
     """Build a `patient_record` from a published CaseDraft dict."""
+    if not case.get("objectives"):
+        raise ValueError(
+            f"Case {case_id!r} has no learning objectives, so there is nothing to grade it against. "
+            "The app's nonclinical conversation demo is built this way on purpose."
+        )
     behavior = case.get("behavior", {})
     mood = behavior.get("mood", "guarded")
 
@@ -213,3 +218,44 @@ def episode_from_encounter(
     if encounter.get("ended_at") is not None:
         episode["ended_at"] = _iso(encounter["ended_at"])
     return episode
+
+
+def grade_app_encounter(
+    case: dict,
+    encounter: dict,
+    llm,
+    *,
+    published_at: float | str | datetime | None = None,
+    student_id: str = "student",
+    student_name: str = "Student",
+    student_role: str = "clinician",
+    **evaluate_options,
+) -> dict:
+    """Grade a finished app encounter in one call.
+
+    `case` is the published version's CaseDraft dict (`versions[n]["case"]`)
+    and `encounter` is the stored encounter payload. Extra keyword arguments
+    (`rubric`, `checklist`, `goals`, `encounter_type`) go to `evaluate_episode`.
+    Returns the `evaluation`, the episode `grading` block, and the
+    `debrief_result` document the debrief screen renders.
+    """
+    from .evaluate import evaluate_episode
+    from .report import build_debrief_result
+
+    if encounter.get("mode") == "conversation_demo":
+        raise ValueError("Nonclinical conversation demos have no objectives or clinical facts to grade")
+    record = record_from_case(
+        case,
+        case_id=encounter["case_id"],
+        version=encounter["version"],
+        published_at=published_at if published_at is not None else encounter["started_at"],
+    )
+    episode = episode_from_encounter(
+        encounter, case, student_id=student_id, student_name=student_name, student_role=student_role
+    )
+    result = evaluate_episode(record, episode, llm, **evaluate_options)
+    return {
+        "evaluation": result.evaluation,
+        "grading": result.grading,
+        "debrief_result": build_debrief_result(record, episode, result),
+    }

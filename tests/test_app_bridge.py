@@ -157,3 +157,80 @@ def test_app_encounter_grades_end_to_end(record, episode):
     assert objectives["clarify_routine"]["result"] == "met"
     # A quote that is not in the cited turn is dropped; the turn reference stays.
     assert objectives["explore_concern"]["evidence"] == [{"turn_id": "e1"}]
+
+
+def _stub_grade(schema):
+    """A minimal valid grader reply for whatever case the schema was built from."""
+    ids = lambda key, field: schema["properties"][key]["items"]["properties"][field].get("enum", [])
+    return {
+        "domain_scores": [
+            {"domain_id": d, "score": "3", "rationale": "Adequate.", "evidence": []}
+            for d in ids("domain_scores", "domain_id")
+        ],
+        "written_evidence": {
+            "strength": {"text": "s", "evidence": [ev("e5", "walk me through yesterday")]},
+            "important_gap": {"text": "g", "evidence": []},
+            "safety_or_accuracy_concern": {"present": False, "text": "", "evidence": []},
+        },
+        "objective_results": [
+            {"objective_id": o, "result": "met", "evidence": [], "feedback": "f"}
+            for o in ids("objective_results", "objective_id")
+        ],
+        "behaviors": [],
+        "discrepancy_findings": [
+            {"discrepancy_id": d, "outcome": "uncovered", "evidence": [], "feedback": "f"}
+            for d in ids("discrepancy_findings", "discrepancy_id")
+        ],
+        "under_probing": [], "checklist_results": [], "goal_progress": [],
+        "strengths": [], "improvements": [], "next_attempt_suggestions": [], "debrief_questions": [],
+    }
+
+
+class SchemaLLM:
+    model = "fake"
+
+    def complete_json(self, system, user, schema):
+        self.prompt = user
+        return _stub_grade(schema)
+
+
+def test_encounter_stored_by_the_live_api_grades_in_one_call():
+    from evaluator.app_bridge import grade_app_encounter
+
+    # Captured from main's FastAPI app: publish the demo case, run four turns, conclude.
+    # These are the stored payloads, with every field the app keeps.
+    stored_case = json.loads((APP / "api_case.json").read_text())
+    stored_encounter = json.loads((APP / "api_encounter.json").read_text())
+    assert {"feedback", "requests", "simulated_mood", "turn_count"} <= set(stored_encounter)
+    assert "rapport_change" in stored_encounter["events"][2]
+
+    llm = SchemaLLM()
+    graded = grade_app_encounter(stored_case, stored_encounter, llm, now=NOW)
+
+    assert "[e4] Jordan Example (patient): I think I've been following the routine." in llm.prompt
+    validate(graded["evaluation"], "evaluation")
+    validate(graded["debrief_result"], "debrief_result")
+    assert graded["grading"]["elicited_fact_ids"] == ["routine", "unknown_lab"]
+
+    result = graded["debrief_result"]
+    assert result["episode_id"] == stored_encounter["id"]
+    assert [t["speaker"] for t in result["transcript"]] == ["patient", "learner"] * 4 + ["patient"]
+    assert result["lies"][0]["patient_claim"] == "I think I've been following the routine."
+    assert result["written_evidence"]["strength"]["evidence"] == [
+        {"turn_id": "e5", "quote": "walk me through yesterday", "turn_index": 5, "speaker": "learner"}
+    ]
+    assert result["encounter"]["duration_seconds"] == 80
+
+
+def test_expired_encounter_is_graded_as_finished(case, encounter):
+    episode = episode_from_encounter({**encounter, "status": "expired"}, case)
+    assert episode["status"] == "completed"
+
+
+def test_cases_without_objectives_are_refused_with_a_reason(case, encounter):
+    from evaluator.app_bridge import grade_app_encounter
+
+    with pytest.raises(ValueError, match="no learning objectives"):
+        record_from_case({**case, "objectives": []}, case_id="demo", version=1, published_at=NOW)
+    with pytest.raises(ValueError, match="Nonclinical conversation demos"):
+        grade_app_encounter(case, {**encounter, "mode": "conversation_demo"}, SchemaLLM())

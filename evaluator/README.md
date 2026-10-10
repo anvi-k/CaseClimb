@@ -67,7 +67,20 @@ result = evaluate_episode(record, episode, BedrockLLM())
 - Objectives keep their `required_fact_ids` as critical facts; their label and guidance become the description the grader reads.
 - The app has no patient sex or fact categories, so the record uses `unknown` and `other`.
 
-`examples/app/` holds the app's demo case and an encounter produced by running the app's engine on it.
+Or in one call, straight from what the app stores:
+
+```python
+from evaluator.app_bridge import grade_app_encounter
+
+graded = grade_app_encounter(version["case"], encounter, BedrockLLM())
+graded["debrief_result"]   # the document the debrief screen renders
+```
+
+- Encounters with status `completed` or `expired` are graded; `active` ones are refused.
+- The app's nonclinical conversation demo (`mode: "conversation_demo"`) has no objectives and is refused with a clear error.
+- The app's `simulated_mood` and per-turn `rapport_change` are not carried over, because the episode schema has no field for them.
+
+`examples/app/` holds the app's demo case and an encounter produced by running the app's engine on it. `api_case.json` and `api_encounter.json` are the full payloads stored by `main`'s FastAPI app (commit 0b42252) after publishing that case and running an encounter through the HTTP API.
 
 ## Setup
 
