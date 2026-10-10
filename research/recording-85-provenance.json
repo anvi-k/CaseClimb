@@ -1,0 +1,13 @@
+{
+  "source_filename": "New Recording 85.m4a",
+  "duration_seconds": 323.477333,
+  "sha256": "ed1655962a81e829c1b24c38806982e460d12ea580d95f6beb6b78d64db8e145",
+  "method": "local/offline mlx-whisper 0.4.3",
+  "model": "mlx-community/whisper-large-v3-turbo",
+  "language": "en",
+  "word_timestamps": true,
+  "speaker_diarization": false,
+  "segments": 63,
+  "word_count": 1146,
+  "review_status": "unverified machine transcription"
+}
