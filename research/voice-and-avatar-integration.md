@@ -1,12 +1,28 @@
 # Voice and avatar integration for a virtual patient
 
-**Sources checked:** 2026-10-10. **Status:** research and proposed acceptance criteria; no provider account, agent, avatar, key, paid resource, or live integration was created or tested.
+**Sources checked:** 2026-10-10. **Status:** current provider research, account-access observation, and proposed acceptance criteria. Actual provider jobs, speech checks, and deployment results belong in the [implementation record](implementation-and-verification-2026-10-10.md).
 
 ## Recommended sequence
 
-Start with a faculty-approved synthetic case, a ten-minute voice encounter, captions, and a simple visible patient illustration. Add a real-time video avatar only after the voice interaction, case consistency, and debrief are acceptable. This keeps the first pilot focused on interview quality while preserving a path to facial expression and lip movement.
+The user now specifically requests ElevenLabs' native video tools. Prioritize an original synthetic patient introduction and reusable, faculty-approved reply clips generated in ElevenLabs, while keeping the ten-minute encounter, captions, and authored case engine usable during video preparation or failure. A visible illustration with voice remains a useful fallback.
 
-ElevenLabs offers conversational voice infrastructure and now documents an avatar video-generation product. A live patient face still requires a deliberate rendering implementation: the conversational React SDK by itself does not establish a real-time video avatar. The official real-time integration described below uses a second provider.
+ElevenLabs offers both voice infrastructure and an asynchronous Image & Video API. Its native generated clips and its documented real-time integration have different contracts. The latter uses HeyGen LiveAvatar and remains optional and disabled for this project; no additional provider setup or paid API-plan upgrade is authorized by the native-video request.
+
+## Native video, Avatar library, and current access
+
+ElevenLabs [announced Image, Video, and Templates APIs on September 26, 2026](https://elevenlabs.io/blog/introducing-the-image-video-and-templates-apis), with the announcement updated October 5. Any earlier blanket statement that ElevenLabs has no video API is superseded by this release.
+
+The [Image & Video overview](https://elevenlabs.io/docs/overview/capabilities/image-video) separates access: free users can generate images only, up to three requests per day; video in the app needs a paid plan. Models with a listed API ID can be called programmatically; others are app-only. Creatify Aurora is listed as `creatify-aurora`, takes an image plus speech audio, and produces audio-driven avatar video at 480p or 720p. Its listed expression/movement capabilities are vendor descriptions, not validated patient affect or empathy measurements.
+
+The [API quickstart](https://elevenlabs.io/docs/eleven-api/guides/cookbooks/image-and-video) requires **Pro or above** and Image & Video or Flows key permissions; lower-tier workspaces receive `402 paid_plan_required`. Jobs are asynchronous and can take minutes. Collect completed MP4s through webhooks or bounded polling at intervals of at least ten seconds. A result's signed URL expires after roughly an hour, so retain a generation ID and retrieve a fresh URL when needed. This is not a documented native real-time face stream.
+
+The [video creation endpoint](https://elevenlabs.io/docs/api-reference/flows/video/create) is `POST /v1/flows/video`. The `creatify-aurora` request requires `image` and `audio`. [Media references](https://elevenlabs.io/docs/eleven-api/guides/how-to/image-and-video/references) can point to an uploaded asset, an earlier generation, or inline base64 content; inline audio accepts MP3 or WAV and is capped at 25 MB after decoding. Validate the authored reply before generating its speech, then supply that audio rather than prompting a video model to invent patient dialogue.
+
+The separate [Avatar library documentation](https://elevenlabs.io/docs/overview/capabilities/image-video/avatars) describes a paid-plan UI workflow: choose a persistent avatar/style and voice, generate and review speech from a script, then generate lip-sync video. It still states its own API was unavailable at launch. That statement does not negate the generic Image & Video API above.
+
+**Observed account state, October 10:** the user activated Creator; the signed-in dashboard showed 131,000 credits and renewal on November 10, 2026. This supports the paid-plan UI route. It does not establish Pro API access, remaining credits after generation, or a completed video/speech check. No API-plan upgrade is authorized. PAYG funds do not remove [subscription API-access restrictions](https://elevenlabs.io/docs/overview/administration/pay-as-you-go).
+
+**Proposed integration:** prepare approved reply clips ahead of encounters and cache by case version, authored answer, portrait, voice, and video settings. Faculty review the finished audio and video before publishing the clip association. Play only a clip matching the current authorized reply; otherwise use its authored audio/text. This recommendation follows the asynchronous processing contract; actual generation latency, cost, quality, and upload/playback support still need measured acceptance evidence. Do not send unreleased clinical facts, student transcripts, or imported source portraits to the video provider by default.
 
 ## Verified voice capabilities
 
@@ -33,8 +49,8 @@ Provider [guardrails](https://elevenlabs.io/docs/eleven-agents/best-practices/gu
 | Option | What it supports | Conditions and limits |
 | --- | --- | --- |
 | Application-rendered illustration or 2-D/3-D character | Visible patient, authored expressions, speaking animation | Lowest initial complexity. Output amplitude can animate a mouth but is not accurate phoneme/viseme lip sync. Requires licensed/consented artwork and expression mapping. |
-| ElevenLabs avatar video generation | Persistent visual identity and lip-synchronized talking-head clips | [Official Avatars documentation](https://elevenlabs.io/docs/overview/capabilities/image-video/avatars) describes pairing an avatar with a voice and script to generate videos, available on paid plans; some models/reference-image uploads are restricted in the United States. This page does not establish interactive low-latency encounter streaming. Useful for prerecorded opening/context clips. |
-| HeyGen LiveAvatar with ElevenAgents | Real-time rendered video and audio-driven lip sync | The [official integration guide](https://elevenlabs.io/docs/eleven-agents/guides/integrations/live-avatar) uses LiveAvatar LITE mode: ElevenLabs orchestrates audio; LiveAvatar renders/streams the face. It requires both providers' API access and PCM 24 kHz input/output settings. The guide requires registering an ElevenLabs key with LiveAvatar, scoped to `convai_read`, `user_read`, and `voices_read`. Treat this as a separate vendor, credential, billing, and privacy decision. No proof of reliable faculty-controlled emotional expressions was established. |
+| ElevenLabs native video generation, current priority | Lip-synchronized talking-head clips; persistent identities in the app | Creator supports the paid-plan UI route. Generic Image & Video API requires Pro+; the Avatar library API is separately documented as unavailable at launch. Generated clips are asynchronous. Some models/reference uploads have US restrictions; check the chosen model. |
+| HeyGen LiveAvatar with ElevenAgents, optional and disabled | Real-time rendered video and audio-driven lip sync | The [official integration guide](https://elevenlabs.io/docs/eleven-agents/guides/integrations/live-avatar) uses LiveAvatar LITE mode: ElevenLabs orchestrates audio; LiveAvatar renders/streams the face. It requires both providers' API access and PCM 24 kHz input/output settings. The guide requires registering an ElevenLabs key with LiveAvatar, scoped to `convai_read`, `user_read`, and `voices_read`. Treat this as a separate vendor, credential, billing, and privacy decision. No proof of reliable faculty-controlled emotional expressions was established. |
 
 Character-level alignment is documented for [client audio events](https://elevenlabs.io/docs/eleven-agents/customization/events/client-events); WebRTC transports audio through LiveKit rather than the WebSocket `audio` event. Alignment alone is not a phoneme-to-face animation system. Verify the chosen transport's actual animation data path before promising lip sync.
 
@@ -55,11 +71,11 @@ Use synthetic patient data. Explain to participants which services receive their
 
 ## Budget and version uncertainty
 
-The [current Agents pricing page](https://elevenlabs.io/pricing/agents) describes included call minutes, plan concurrency limits, additional minutes, higher-cost burst usage, and separate LLM/telephony usage. Avatar rendering adds its own provider/plan costs. No account-specific entitlement or invoice was inspected; do not treat a public price card as the project's negotiated rate or available credit.
+The [current Agents pricing page](https://elevenlabs.io/pricing/agents) describes included call minutes, plan concurrency limits, additional minutes, higher-cost burst usage, and separate LLM/telephony usage. Native video consumes credits according to the selected model/settings; the UI displays cost before generation. The observed Creator allowance above is account evidence at that time, not a current remaining balance, an inspected invoice, or permission to upgrade. A second live-avatar provider would add separate costs.
 
 For planning, calculate `voice_minutes = students × sessions_per_student × actual_session_minutes`. Twenty students with three ten-minute sessions require 600 voice minutes before retakes and setup overhead. Estimate total spend as subscription + excess minutes + LLM usage + avatar usage + application hosting/storage. Test planned simultaneous use separately from total minutes and set a project spending cap before the pilot.
 
-The current docs describe newer SDK hooks and voice products; older examples may differ. At implementation time, record the installed SDK/package lock versions, selected model IDs, voice ID, agent version, transport, audio formats, privacy settings, and date. None of those choices or their compatibility has been validated in this repository by this research.
+The current docs describe newer SDK hooks and voice products; older examples may differ. At implementation time, record the installed SDK/package lock versions, selected model IDs, voice ID, agent version, transport, audio formats, privacy settings, and date. This source research does not validate their compatibility; consult the implementation record for subsequent tests and measured results.
 
 ## Proposed rollout acceptance checks
 
