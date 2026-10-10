@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://caseclimb.app/schemas/debrief_result.schema.json",
+  "$id": "https://poscere.app/schemas/debrief_result.schema.json",
   "title": "DebriefResult",
   "description": "Everything the debrief screen shows for one graded episode, in one self-contained document. Names, fact labels, and turn positions are already resolved, so the front end needs no other file. Built by the evaluator from the patient record, the episode, and the evaluation.",
   "type": "object",

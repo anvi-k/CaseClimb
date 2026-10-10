@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://caseclimb.app/schemas/evaluation.schema.json",
+  "$id": "https://poscere.app/schemas/evaluation.schema.json",
   "title": "Evaluation",
   "description": "The evaluator's assessment of one graded episode: seven-domain rubric scores, optional case checklist, and the material the debrief and teacher dashboard are built from. One per episode, keyed by episode_id. The episode's own `grading` block carries the objective and behavior results; this document carries everything the rubric adds.",
   "type": "object",

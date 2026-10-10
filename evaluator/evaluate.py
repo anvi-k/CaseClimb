@@ -64,13 +64,15 @@ def _normalize(text: str) -> str:
 class _EvidenceChecker:
     """Keeps only evidence that points at something real."""
 
-    def __init__(self, episode: dict):
+    def __init__(self, episode: dict, write_up: list[dict] | None = None):
         self._turns = {t["turn_id"]: _normalize(t["text"]) for t in episode["turns"]}
-        self._handoff = {
+        # Evidence outside the conversation: the SBAR handoff and the written write-up.
+        self._documents = {
             f"handoff.{k}": _normalize(v)
             for k, v in episode.get("handoff", {}).items()
             if isinstance(v, str)
         }
+        self._documents.update({f"write_up.{f['id']}": _normalize(f["text"]) for f in write_up or []})
         self.dropped_items = 0
         self.dropped_quotes = 0
 
@@ -84,8 +86,8 @@ class _EvidenceChecker:
             if turn_id in self._turns:
                 source, out = self._turns[turn_id], {"turn_id": turn_id}
             elif location and not turn_id:
-                # Non-turn evidence can only be checked when it names a handoff field.
-                source, out = self._handoff.get(location), {"location": location}
+                # Non-turn evidence can only be checked when it names a known document field.
+                source, out = self._documents.get(location), {"location": location}
             else:
                 self.dropped_items += 1
                 continue
@@ -197,12 +199,14 @@ def evaluate_episode(
     goals: list[dict] | None = None,
     graded_participant_id: str | None = None,
     encounter_type: str | None = None,
+    write_up: list[dict] | None = None,
     now: datetime | None = None,
 ) -> EvaluationResult:
     """Grade `episode` against `record`.
 
     `goals` are the student's personal goals as `[{"goal_id", "description"}]`.
     `encounter_type` is free text such as "take a history" or "explain or counsel".
+    `write_up` is what the student wrote after the visit, as `[{"id", "label", "text"}]`.
     """
     validate(record, "patient_record")
     validate(episode, "episode")
@@ -221,12 +225,13 @@ def evaluate_episode(
     raw = llm.complete_json(
         prompts.GRADER_SYSTEM,
         prompts.grader_user_prompt(
-            record, episode, graded, objectives, findings, rubric, checklist, goals, encounter_type
+            record, episode, graded, objectives, findings, rubric, checklist, goals, encounter_type,
+            write_up,
         ),
         prompts.grade_schema(rubric, objectives, record.get("discrepancies", []), checklist, goals),
     )
 
-    check = _EvidenceChecker(episode)
+    check = _EvidenceChecker(episode, write_up)
     domain_scores, unscored = _domain_scores(raw["domain_scores"], rubric, check)
     summary = summarize_rubric(domain_scores, rubric)
     if unscored:

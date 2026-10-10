@@ -34,7 +34,7 @@ def _summary(evaluation: dict) -> str:
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="caseclimb-evaluate", description=__doc__)
+    parser = argparse.ArgumentParser(prog="poscere-evaluate", description=__doc__)
     parser.add_argument("--record", required=True, help="patient record JSON")
     parser.add_argument("--episode", required=True, help="finished episode JSON")
     parser.add_argument("--rubric", help="rubric JSON (default: the built-in seven-domain rubric)")
@@ -43,7 +43,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--participant", help="participant_id to grade, if there are several clinicians")
     parser.add_argument("--encounter-type", help='e.g. "take a history" or "explain or counsel"')
     parser.add_argument("--out-dir", default="out", help="where to write results (default: out/)")
-    parser.add_argument("--model", help="Bedrock model id (default: $CASECLIMB_GRADER_MODEL)")
+    parser.add_argument("--model", help="Bedrock model id (default: $POSCERE_GRADER_MODEL)")
     parser.add_argument("--replay", help="use a saved grader response instead of calling Bedrock")
     parser.add_argument("--debrief", action="store_true", help="start the debrief chat after grading")
     args = parser.parse_args(argv)

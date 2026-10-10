@@ -56,9 +56,9 @@ class BedrockLLM:
     """Claude on Amazon Bedrock.
 
     Credentials come from the usual AWS chain (env vars, profile, role).
-    Environment overrides: CASECLIMB_GRADER_MODEL for the model id,
+    Environment overrides: POSCERE_GRADER_MODEL for the model id,
     AWS_REGION or AWS_DEFAULT_REGION for the region, and
-    CASECLIMB_BEDROCK_CLIENT for the endpoint: "runtime" (default), which
+    POSCERE_BEDROCK_CLIENT for the endpoint: "runtime" (default), which
     takes inference-profile ids such as "us.anthropic.claude-sonnet-5", or
     "mantle" for the newer endpoint, which takes ids such as
     "anthropic.claude-opus-5-5". The model must support adaptive thinking
@@ -75,9 +75,9 @@ class BedrockLLM:
     ):
         from anthropic import AnthropicBedrock, AnthropicBedrockMantle
 
-        self.model = model or os.environ.get("CASECLIMB_GRADER_MODEL", DEFAULT_MODEL)
+        self.model = model or os.environ.get("POSCERE_GRADER_MODEL", DEFAULT_MODEL)
         self.effort = effort
-        kind = client or os.environ.get("CASECLIMB_BEDROCK_CLIENT", DEFAULT_CLIENT)
+        kind = client or os.environ.get("POSCERE_BEDROCK_CLIENT", DEFAULT_CLIENT)
         if kind not in ("mantle", "runtime"):
             raise ValueError(f"Unknown Bedrock client {kind!r}; use 'mantle' or 'runtime'")
         make = AnthropicBedrockMantle if kind == "mantle" else AnthropicBedrock

@@ -1,4 +1,4 @@
-# Evaluator
+# Poscere evaluator
 
 Grades a finished encounter against the rubric and runs the debrief (plan section 6, build step 4).
 
@@ -50,7 +50,45 @@ python -m evaluator --record examples/patient_record.json --episode examples/epi
 
 `examples/grader_response.json` contains one misquote, one citation of a turn that does not exist, and one over-generous objective result, so the output shows each correction.
 
-### Grading encounters from the app
+### Grading visits from the Poscere app
+
+The Poscere app (TypeScript, in the `lowhangingfruit26` repository) stores a visit as an encounter row with a case snapshot, a config, a state holding the disclosure ledger, and message rows. `evaluator.poscere` takes those as one JSON bundle and returns feedback in the app's own `Feedback` shape, so its feedback page can render the result unchanged.
+
+```bash
+python -m evaluator.poscere --bundle examples/poscere/visit_bundle.json > result.json
+```
+
+Or pipe the bundle in on standard input. The output is `{"feedback": ..., "debrief_result": ...}`. From Python: `evaluator.poscere.grade_visit(bundle, BedrockLLM())`.
+
+The bundle is built on the app side from `loadEncounter(id)` and `messagesOf(id)`:
+
+```json
+{
+  "encounter": {"id": "", "user_id": "", "case_id": "", "status": "", "started_at": "", "ended_at": ""},
+  "case": "row.case_snapshot (CaseProfile)",
+  "config": "row.config (EncounterConfig)",
+  "state": "row.state (EncounterState)",
+  "messages": [{"id": 1, "turn": 1, "speaker": "student", "text": "", "meta": null, "created_at": ""}],
+  "write_up": "row.wrapup, as {fieldId: text}",
+  "student": {"name": ""},
+  "profession": "profession(config.professionId)",
+  "rubric": "getRubric(case.rubricId); optional"
+}
+```
+
+How the app's data is read:
+
+- **Facts and orders.** Every fact is something the student can earn by asking; exams and orders become chart facts earned by ordering. Anything on record at turn 0 came from an earlier visit and is not credited. Red herrings are left out unless the visit's difficulty turns them on, and approved variant wording is applied.
+- **Findings.** `elicited`, `missed`, `actionsDone`, `actionsMissed` and `unnecessaryOrders` are read from the app's ledger exactly as the app's own scorer reads it.
+- **Mismatches** become discrepancies; `noticed` is true when the student uncovered or challenged the claim.
+- **The answer key, knowledge sources and chart-at-start** are given to the grader as sources. The written write-up is graded too, and quotes from it are checked like transcript quotes.
+- **Patient comfort.** Each patient reply carries the feeling and comfort score the app recorded, so the grader can see when comfort dropped.
+- **Rubric.** A domain rubric passed in the bundle (the app's default or a faculty-written one) is used with its score descriptors. Points-checklist rubrics are not supported and raise an error. With no rubric in the bundle, the stand-in rubric in this package is used.
+- **Extra output.** `feedback.debrief` holds the debrief questions, under-probed topics and behaviour trace, which the app's `Feedback` type does not have. `accuracyIssues`, `wrapUpReview` and `interview.sequencing` are left empty.
+
+`examples/poscere/visit_bundle.json` is one of the app's AI-drafted seed cases with a short hand-written visit.
+
+### Grading encounters from the earlier FastAPI app
 
 The deployed app (`main`, `backend/`) stores cases as `CaseDraft` and sessions as encounter records with an event log. `evaluator.app_bridge` converts both into the evaluator's inputs:
 
@@ -92,10 +130,10 @@ python3 -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/python -m pytest
 ```
 
-Bedrock uses the standard AWS credential chain. `AWS_REGION` or `AWS_DEFAULT_REGION` sets the region (default `us-east-1`) and `CASECLIMB_GRADER_MODEL` sets the model (default `us.anthropic.claude-sonnet-5`, the best model the challenge's workshop accounts allow). Run `python scripts/check_bedrock.py` to see which models an account may call.
+Bedrock uses the standard AWS credential chain. `AWS_REGION` or `AWS_DEFAULT_REGION` sets the region (default `us-east-1`) and `POSCERE_GRADER_MODEL` sets the model (default `us.anthropic.claude-sonnet-5`, the best model the challenge's workshop accounts allow). Run `python scripts/check_bedrock.py` to see which models an account may call.
 
 ## Inputs that have no schema yet
 
-- **Rubric**: `evaluator/rubrics/patient_encounter_performance.json` is a stand-in written from the plan. Replace it with the rubric JSON from the organisers, or pass another with `rubric=`.
+- **Rubric**: `evaluator/rubrics/patient_encounter_performance.json` is a stand-in written from the plan. The organisers' `encounter_evaluation_rubric.json` is read as it is: pass its path with `--rubric`, or the loaded rubric with `rubric=`.
 - **Case checklist**: `{"checklist_id", "title", "items": [{"item_id", "description", "points"}]}`. See `evaluator/rubrics/example_checklist_pediatric_hearing.json`.
 - **Student goals**: `[{"goal_id", "description"}]`.

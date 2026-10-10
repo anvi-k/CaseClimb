@@ -213,6 +213,7 @@ def grader_user_prompt(
     checklist: dict | None,
     goals: list[dict] | None,
     encounter_type: str | None,
+    write_up: list[dict] | None = None,
 ) -> str:
     parts = [
         _block("patient_record", case_context(record, objectives)),
@@ -226,6 +227,8 @@ def grader_user_prompt(
     parts.append(_block("transcript", render_transcript(episode)))
     if "handoff" in episode:
         parts.append(_block("handoff", episode["handoff"]))
+    if write_up:
+        parts.append(_block("student_write_up", write_up))
 
     asks = [
         f"Assess {graded['display_name']} ({graded['role']}), participant "
@@ -233,6 +236,12 @@ def grader_user_prompt(
     ]
     if encounter_type:
         asks.append(f"Encounter type: {encounter_type}.")
+    if write_up:
+        asks.append(
+            "The student_write_up is what the student wrote after the visit; weigh it in clinical "
+            "reasoning and closure. To cite it, leave turn_id empty and set location to "
+            "write_up.<id> with an exact quote."
+        )
     asks.append(
         "Return one domain_scores entry for every rubric domain, one objective_results entry "
         "for every learning objective, and one discrepancy_findings entry for every discrepancy "

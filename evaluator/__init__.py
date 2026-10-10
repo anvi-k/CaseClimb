@@ -1,4 +1,4 @@
-"""CaseClimb evaluator: rubric scoring and debrief for a finished encounter."""
+"""Poscere evaluator: rubric scoring and debrief for a finished encounter."""
 
 from .debrief import DebriefSession
 from .evaluate import EvaluationResult, evaluate_episode
