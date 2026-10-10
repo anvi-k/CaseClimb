@@ -1,0 +1,780 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Review colonoscopy procedure note",
+    "result": "Colonoscopy to cecum, good prep. Single 14 mm pedunculated polyp identified in sigmoid colon, removed intact by snare polypectomy (en bloc). Base/stalk tattooed for localization. No other polyps or masses seen. Retrieved specimen sent whole to pathology.",
+    "importance": "important",
+    "aliases": [
+     "colonoscopy report",
+     "endoscopy note"
+    ],
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "lab",
+    "name": "Review surgical pathology report (final)",
+    "result": "Specimen: sigmoid colon polypectomy, 14 mm, pedunculated, submitted in toto (whole specimen). Diagnosis: Tubular adenoma with focal high-grade dysplasia. Stalk (resection) margin negative for dysplasia. No invasive carcinoma identified. Representative sections examined; entire polyp processed.",
+    "importance": "critical",
+    "aliases": [
+     "pathology report",
+     "biopsy result"
+    ],
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "test",
+    "name": "Confirm complete submission of specimen (gross exam notes)",
+    "result": "Gross description confirms polyp was received intact, measured, inked at stalk margin, and entirely submitted for microscopic sectioning (no residual tissue retained in block for further sampling).",
+    "importance": "important",
+    "aliases": [
+     "gross exam",
+     "specimen handling"
+    ],
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "record",
+    "name": "Review family history documentation in chart",
+    "result": "Problem list and intake note: brother diagnosed with 'colon polyps' at approximately age 43-45; no documented genetic syndrome, no known Lynch syndrome or FAP diagnosis in family.",
+    "importance": "important",
+    "aliases": [
+     "family history record"
+    ],
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review immunohistochemistry / special stains status",
+    "result": "No immunohistochemical or molecular studies were performed or needed; diagnosis made on routine H&E morphology alone. Mismatch repair (MMR) protein stains were not ordered because this adenoma does not meet criteria for universal screening (that applies to colorectal carcinoma, not adenomas).",
+    "importance": "minor",
+    "aliases": [
+     "special stains",
+     "IHC"
+    ],
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review prior biopsy or pathology history",
+    "result": "No prior colonoscopy or pathology specimens on file for this patient; this is her first colonoscopy and first polyp removed.",
+    "importance": "minor",
+    "aliases": [
+     "prior pathology"
+    ],
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "test",
+    "name": "Check polyp size/morphology measurement documentation",
+    "result": "Gross measurement confirms 14 mm greatest dimension, pedunculated (on a stalk) morphology, consistent with endoscopic description.",
+    "importance": "minor",
+    "aliases": [
+     "polyp size documentation"
+    ],
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review complete blood count (unrelated screening)",
+    "result": "Hemoglobin 13.1 g/dL (ref 12.0-15.5), WBC 6.8 x10^9/L (ref 4.0-11.0), platelets 245 x10^9/L (ref 150-400). No anemia.",
+    "importance": "minor",
+    "aliases": [
+     "CBC",
+     "blood count"
+    ],
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review gastroenterology follow-up plan in chart",
+    "result": "GI note indicates follow-up appointment scheduled in 3 weeks to discuss results and plan next surveillance colonoscopy interval; no interim action required.",
+    "importance": "important",
+    "aliases": [
+     "GI follow up plan"
+    ],
+    "artifactIds": [
+     "d3"
+    ]
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Colonoscopy Procedure Note",
+    "author": "Dr. Patel, Gastroenterology",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "body": "PROCEDURE: Colonoscopy with polypectomy\nINDICATION: Positive fecal immunochemical test (FIT), average-risk screening\nFINDINGS: Scope advanced to cecum; good bowel preparation; a single 14 mm pedunculated polyp identified in the sigmoid colon. Polyp removed in one piece using hot snare polypectomy. Base of stalk marked with India ink tattoo for future localization. No other polyps, masses, or abnormal mucosa identified throughout the colon. Specimen retrieved intact and sent to pathology in a single container.\nIMPRESSION: Single sigmoid polyp, completely excised.\nPLAN: Await pathology; routine post-polypectomy follow-up."
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Surgical Pathology Report",
+    "author": "Dept. of Pathology",
+    "date": "10 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Specimen",
+      "Finding",
+      "Detail"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sigmoid colon polyp, 14 mm, pedunculated",
+        "Tubular adenoma with focal high-grade dysplasia",
+        "Dysplasia involves a small focal area within the adenoma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Stalk (resection) margin",
+        "Negative for dysplasia",
+        "Margin clear by several millimeters"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Invasive carcinoma",
+        "Not identified",
+        "No invasion through muscularis mucosae seen in any section"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Specimen submission",
+        "Entire polyp submitted (in toto)",
+        "All tissue examined microscopically, nothing withheld"
+       ],
+       "flag": ""
+      }
+     ]
+    },
+    "body": "FINAL DIAGNOSIS: Sigmoid colon, polypectomy: Tubular adenoma with focal high-grade dysplasia. Stalk margin negative for dysplasia. No invasive carcinoma identified. COMMENT: The entire polyp was processed and examined. The area of high-grade dysplasia is confined to the adenoma and does not extend to or involve the resection margin."
+   },
+   {
+    "id": "d3",
+    "type": "note",
+    "title": "Gastroenterology Clinic Note (prior visit)",
+    "author": "Dr. Patel, Gastroenterology",
+    "date": "1 month ago",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "body": "44-year-old woman referred for colonoscopy after positive FIT screening test. No GI symptoms, no rectal bleeding, no change in bowel habits. Family history notable for a brother with colon polyps diagnosed in his early 40s; no known hereditary colorectal cancer syndrome in the family. Plan: colonoscopy with polypectomy as indicated; follow-up visit scheduled 3 weeks after procedure to review pathology and establish surveillance interval."
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Family History Summary",
+    "author": "Primary Care / Intake",
+    "date": "1 month ago",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "table": {
+     "columns": [
+      "Relative",
+      "Condition",
+      "Age at diagnosis"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Brother",
+        "Colon polyps (adenomatous, per patient report)",
+        "Early-mid 40s"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Mother",
+        "No known GI disease",
+        "N/A"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Father",
+        "No known GI disease",
+        "N/A"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "lab_report",
+    "title": "Complete Blood Count",
+    "author": "Hospital Laboratory",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "13.1",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White blood cell count",
+        "6.8",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelet count",
+        "245",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Patient-requested pathology consultation to explain colon polyp biopsy results before gastroenterology follow-up"
+   },
+   {
+    "label": "Problem list",
+    "value": "Positive fecal immunochemical test (FIT); status post colonoscopy with polypectomy"
+   },
+   {
+    "label": "Medications",
+    "value": "None scheduled; multivitamin OTC"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 118/76, HR 72, Temp 98.4F, documented at outpatient GI visit 1 month ago"
+   },
+   {
+    "label": "Care team",
+    "value": "Gastroenterology (Dr. Patel) - primary proceduralist; Pathology - consulting on specimen report; Primary care physician"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "pathology report explanation (patient-requested consult)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for call",
+    "chart": "Patient requests explanation of colon polyp pathology report before scheduled GI follow-up; concerned the report means she has cancer",
+    "says": "I got my results on the patient portal and it says 'high-grade dysplasia' and I looked it up and I think that means I have cancer. My doctor's appointment isn't for three more weeks and I can't wait that long not knowing.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "how polyp was found",
+    "chart": "Polyp found on first colonoscopy, prompted by positive stool screening test (FIT)",
+    "says": "I'd never had a colonoscopy before. I did one of those at-home stool tests my doctor sent me, and it came back positive, so they said I needed the scope.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "symptoms before test",
+    "chart": "No GI symptoms prior to screening; asymptomatic average-risk screening detection",
+    "says": "I didn't have any symptoms at all. No blood, no pain, nothing. That's part of why this is so scary - I felt completely fine.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "polyp removal procedure",
+    "chart": "Single polyp removed during colonoscopy via snare polypectomy, patient recalls doctor saying it was removed completely",
+    "says": "The doctor told me right after that they got the whole thing out in one piece and it looked like just a growth, not anything scary, but then I read the report and panicked.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "understanding of report wording",
+    "chart": "Patient interprets 'high-grade dysplasia' as synonymous with invasive cancer based on internet search",
+    "says": "I googled it and some website said high-grade dysplasia can turn into cancer, and I just assumed that meant I already have it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "family",
+    "topic": "sibling GI history",
+    "chart": "Brother diagnosed with colon polyps in his early-to-mid 40s; no known hereditary syndrome diagnosed in family",
+    "says": "My brother had polyps too, found when he was like 43 or 44. Nobody in my family's ever been told they have one of those genetic colon cancer syndromes though, if that's what you're asking.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "family",
+    "topic": "other family cancers",
+    "chart": "No other first-degree relatives with colorectal or related cancers reported",
+    "says": "My parents are both healthy, no colon cancer that I know of. No other brothers or sisters.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "bleeding symptoms",
+    "chart": "Denies rectal bleeding, melena, or hematochezia currently or before procedure",
+    "says": "No, I've never seen blood in the toilet or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "bowel habit changes",
+    "chart": "Denies recent change in bowel habits, diarrhea, or constipation",
+    "says": "My bathroom habits have been pretty normal, no changes I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "weight changes",
+    "chart": "Denies unintentional weight loss",
+    "says": "My weight's been steady, nothing unusual there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "abdominal pain",
+    "chart": "Denies abdominal pain",
+    "says": "No stomach pain or cramping, I feel fine physically.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "psychosocial",
+    "topic": "emotional reaction to report",
+    "chart": "Patient reports significant anxiety and difficulty sleeping since reading the pathology report online",
+    "says": "Honestly I haven't slept well the past week. I keep rereading the report at 2am trying to figure out what it means.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "psychosocial",
+    "topic": "source of worry",
+    "chart": "Patient's primary fear is that 'high-grade dysplasia' equals cancer that was missed or left behind",
+    "says": "What I really want to know is - did they get all of it? Is there cancer still in me that they didn't take out?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "other",
+    "topic": "reason for pathology consult request",
+    "chart": "Patient specifically requested to speak with pathology rather than wait for GI, stating she wanted the person who actually looked at the tissue",
+    "says": "I asked specifically to talk to whoever looked at it under the microscope, because I want to hear it straight from the source, not secondhand.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "hpi",
+    "topic": "timeline of events",
+    "chart": "Colonoscopy performed 2 weeks ago; pathology report posted to portal 10 days ago; GI follow-up scheduled 3 weeks from today",
+    "says": "The procedure was two weeks ago, I saw the report pop up on the portal about ten days ago, and my follow-up with the GI doctor isn't for another three weeks.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "other",
+    "topic": "questions about surveillance",
+    "chart": "Patient asks why she would need another colonoscopy in three years if the polyp was already removed",
+    "says": "If they already took it out, why would I need another colonoscopy in three years? Doesn't that seem too soon, or does that mean they think there's more?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "other",
+    "topic": "questions about margin terminology",
+    "chart": "Patient unfamiliar with meaning of 'margin negative' and asks for clarification",
+    "says": "What does 'margin negative' even mean? Is that good news or bad news?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Former smoker, quit 8 years ago, previously 5 pack-years",
+    "says": "I used to smoke in my twenties, maybe half a pack a day for about ten years, but I quit eight years ago.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "nutrition",
+    "topic": "diet habits",
+    "chart": "Reports diet moderate in red meat, tries to eat vegetables most days",
+    "says": "I probably eat red meat a couple times a week, and I try to get vegetables in most days, but I work a desk job so I'm not always great about it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f20",
+    "category": "function",
+    "topic": "work impact",
+    "chart": "Patient works as hospital billing specialist; has taken no time off work due to this issue but reports distraction at work from worry",
+    "says": "I work in medical billing actually, so I know how to read some of this stuff, but this report still threw me. I've been distracted at work worrying about it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "other",
+    "topic": "understanding of adenoma",
+    "chart": "Patient does not know baseline meaning of 'adenoma' versus cancer",
+    "says": "Is an adenoma a type of cancer, or is that something else? I honestly don't know what that word means.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "other",
+    "topic": "concern about recurrence",
+    "chart": "Patient worried the same polyp could grow back in the same spot",
+    "says": "Can this exact same polyp come back where they cut it out, like regrow?",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "other",
+    "topic": "questions about genetic testing",
+    "chart": "Patient asks whether she or her brother should get genetic testing for colon cancer syndromes",
+    "says": "Should my brother and I get some kind of genetic test, since we both had polyps around the same age?",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "psychosocial",
+    "topic": "trust in care team",
+    "chart": "Patient expresses some frustration that GI team did not explain findings in more detail before the scheduled follow-up",
+    "says": "I just feel like someone should have called me sooner to explain this instead of leaving me to google it myself for ten days.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "other",
+    "topic": "question about additional testing",
+    "chart": "Patient asks whether more tissue testing (genetic/molecular) is needed on the polyp itself",
+    "says": "Do they need to run more tests on the piece they took out, like genetic testing on the tissue itself?",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "other",
+    "topic": "insurance/cost concern",
+    "chart": "Patient works in billing and is concerned about cost of additional procedures or tests",
+    "says": "Working in billing, I can't help but think about costs too - is a repeat colonoscopy going to be covered, or is this going to be a fight with insurance?",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f27",
+    "category": "other",
+    "topic": "understanding of pedunculated description",
+    "chart": "Patient does not understand what 'pedunculated' means in the report",
+    "says": "It also says the polyp was 'pedunculated' - what does that mean exactly?",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "other",
+    "topic": "question about why no chemo or further treatment",
+    "chart": "Patient surprised that no additional cancer treatment (chemo, surgery) was recommended and wonders if that was an oversight",
+    "says": "If there's dysplasia, shouldn't I be getting chemotherapy or more surgery? Nobody's mentioned any of that and it's making me more nervous, not less.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "what patient wants from this visit",
+    "chart": "Patient's stated goal for the consult is a clear, plain-language explanation of whether cancer is present and what the follow-up plan means",
+    "says": "I just want someone to tell me plainly - cancer or not, and what happens next - in words I can actually understand.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f30",
+    "category": "pmh",
+    "topic": "other medical history",
+    "chart": "No significant past medical history; no prior cancer diagnosis",
+    "says": "I don't really have any other health problems. This is honestly the first scary medical thing that's happened to me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f4",
+    "artifactId": "d1",
+    "patientClaim": "Patient recalls the endoscopist saying the polyp was removed completely and 'looked like just a growth, not anything scary' right after the procedure",
+    "recordEvidence": "The procedure note documents complete removal in one piece but does not characterize the polyp's appearance as benign-looking; it simply states findings and awaits pathology, since gross appearance alone cannot determine dysplasia grade",
+    "teachingPoint": "Visual impression during endoscopy cannot predict microscopic dysplasia grade; reassurance given at the time of the procedure should be understood as provisional, pending the final pathology report, not a final determination."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Accurately explain the specimen, diagnosis, and terminology (tubular adenoma, high-grade dysplasia, pedunculated, margin status) in plain language appropriate to the patient's health literacy",
+    "factIds": [
+     "f5",
+     "f17",
+     "f21",
+     "f27"
+    ],
+    "actionIds": [
+     "a2",
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Correctly distinguish high-grade dysplasia from invasive carcinoma and clarify that no cancer was found, directly addressing the patient's core fear",
+    "factIds": [
+     "f1",
+     "f13",
+     "f28"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explain what is known (complete excision, clear margin) versus what remains uncertain or outside pathology's determination (future risk, management decisions) and appropriately hand back to gastroenterology for surveillance planning",
+    "factIds": [
+     "f16",
+     "f22"
+    ],
+    "actionIds": [
+     "a9",
+     "a1"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Elicit and appropriately contextualize family history, recognizing that a brother with polyps at a similar age raises surveillance considerations without overstating genetic risk or ordering testing outside scope",
+    "factIds": [
+     "f6",
+     "f7",
+     "f23"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify and gently address the mismatch between the patient's recollection of reassuring verbal comments at the time of procedure and the more neutral/provisional documentation, modeling clear risk communication",
+    "factIds": [
+     "f4"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize the emotional impact of ambiguous pathology terminology and respond with empathy while staying within the pathology consultant's scope (no treatment recommendations, refer management questions to gastroenterology)",
+    "factIds": [
+     "f12",
+     "f24",
+     "f29"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Renee Okafor",
+   "age": 44,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Black British-born American",
+   "occupation": "Hospital billing specialist",
+   "language": "English",
+   "appearance": "A woman in her mid-40s with short natural hair, wearing a cardigan over a blouse, seated at a tidy home desk with a laptop and a notebook open beside her. Her posture is upright and alert, with a furrowed brow and the practiced focus of someone who has clearly reread a document many times before this call."
+  },
+  "persona": {
+   "personality": "Analytical, detail-oriented, and assertive; wants precise information and notices hedging or vague language immediately",
+   "communicationStyle": "Direct, asks pointed follow-up questions, often references specific words from the report, appreciates when answers are concrete",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious but composed; working to control the anxiety through information-seeking rather than panic",
+   "background": "Born in the UK to Nigerian parents, moved to the US in her twenties, now works in hospital billing in Atlanta where she has become familiar with medical terminology and documentation from her job, though not clinical pathology; enjoys gardening on weekends and is close with her brother who lives nearby.",
+   "speechExamples": [
+    "It says right here 'focal high-grade dysplasia' - focal meaning what, exactly, just one spot?",
+    "I work in billing, so I'm used to reading medical documents, but this is a different language entirely.",
+    "Can you point to exactly where it says that in the report, because I don't see it.",
+    "I don't want the version that makes me feel better, I want the version that's true."
+   ],
+   "concerns": [
+    "Whether she currently has cancer",
+    "Whether any cancerous tissue was left behind in her body",
+    "Why a 3-year follow-up colonoscopy would be recommended if the polyp is already gone",
+    "Whether her brother's polyp history means they both need genetic testing",
+    "Why no additional cancer treatment (chemotherapy, surgery) has been recommended"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a pathology resident holding a patient-requested telehealth consultation. Renee Okafor, 44, had her first colonoscopy after a positive stool screening test, during which a 14 mm polyp was removed. She found her pathology report on the patient portal and requested to speak with pathology directly because her gastroenterology follow-up is three weeks away. Your task is to explain the specimen and diagnosis in plain language, clarify what is and is not known, and hand back management decisions to her gastroenterologist.",
+   "chiefComplaint": "Patient-requested explanation of colon polyp pathology report; fears the report means she has cancer",
+   "openingLine": "Thank you for seeing me on such short notice. I got my pathology results on the portal and it says I have 'high-grade dysplasia,' and from what I've read online, I'm worried that means I have cancer. My gastroenterologist appointment isn't for three more weeks and I couldn't just sit with this.",
+   "tasks": [
+    "Explain in plain language what tissue was examined and what the pathology terms in the report mean",
+    "Clearly state what is known from the pathology examination and what remains outside pathology's determination (such as surveillance interval or need for additional procedures)",
+    "Address the patient's concerns and questions about the findings",
+    "Discuss any relevant family history without overstepping into ordering tests or making management recommendations",
+    "Appropriately hand back decisions about surveillance timing and any further referrals to her gastroenterologist"
+   ],
+   "timeLimitMin": 20
+  },
+  "answerKey": {
+   "primaryProblem": "Tubular adenoma with focal high-grade dysplasia, completely excised with negative margin, no invasive carcinoma - a precancerous (not cancerous) lesion that was fully removed",
+   "differential": [
+    "Tubular adenoma with high-grade dysplasia (confirmed diagnosis)",
+    "Invasive adenocarcinoma arising in adenoma (explicitly excluded by pathology)",
+    "Hyperplastic/sessile serrated polyp (not applicable; morphology was adenomatous)",
+    "Hereditary colorectal cancer syndrome (e.g., Lynch syndrome) given brother's early polyp - not diagnosed, warrants discussion with GI/genetics but not determined by this specimen"
+   ],
+   "keyFindings": [
+    "14 mm pedunculated sigmoid polyp removed completely in one piece (en bloc)",
+    "Final diagnosis: tubular adenoma with focal high-grade dysplasia",
+    "Stalk/resection margin negative for dysplasia - clear margin",
+    "No invasive carcinoma identified; dysplasia confined within the adenoma, has not breached into the deeper bowel wall",
+    "Entire polyp was submitted and examined microscopically - no untested tissue remains in the specimen",
+    "Family history: brother with colon polyps in early-to-mid 40s; no known hereditary syndrome diagnosed in family"
+   ],
+   "plan": [
+    "Reassure patient that no cancer was found and the premalignant tissue was completely removed with a clear margin",
+    "Explain that high-grade dysplasia is a severity grade within the adenoma itself, not evidence of invasive cancer, and does not require chemotherapy or additional surgery",
+    "Clarify that pathology's role is limited to describing the specimen; decisions about surveillance colonoscopy timing are made by the gastroenterologist based on the full clinical picture, including society guidelines - this determination is outside the pathology consult's scope and should be deferred to GI",
+    "Note that family history of early-onset polyps is relevant and should be discussed with gastroenterology, who may consider referral to genetic counseling or earlier surveillance for her and her brother; pathology does not order or interpret germline genetic testing",
+    "Document the consult and communicate directly with the gastroenterology team so the discussion is available before the scheduled follow-up visit",
+    "Encourage patient to bring her remaining questions about surveillance interval and genetic testing to the already-scheduled GI follow-up"
+   ],
+   "redFlags": [
+    "Any indication of invasive carcinoma on re-review (not present here - margin clear, no invasion identified)",
+    "Incomplete polyp excision or inability to assess margin (not applicable - polyp was removed intact and entirely submitted)",
+    "Multiple relatives with early-onset colorectal cancer or polyps suggesting hereditary syndrome requiring urgent genetics referral (current history shows one brother with polyps, not yet meeting criteria for urgent syndrome workup, but worth flagging to GI)"
+   ],
+   "educationPoints": [
+    "'High-grade dysplasia' describes the most severe degree of precancerous cellular change within a polyp - it means the cells look very abnormal under the microscope, but it is not the same as invasive cancer, which requires breach of the muscularis mucosae",
+    "'Tubular adenoma' names the growth pattern of this common type of precancerous colon polyp",
+    "'Pedunculated' simply describes the polyp's shape - on a stalk, like a mushroom - which often makes complete snare removal easier",
+    "A negative margin means the plane where the polyp was cut away from the bowel wall shows no dysplastic cells, supporting that the entire abnormal area was removed",
+    "Routine surveillance colonoscopy is a precaution to check for new polyps, not evidence that something was missed or left behind; the specific interval is a gastroenterology management decision outside the pathology consult's scope",
+    "Pathology confirms what was found in the tissue sample; recommendations about future procedures, timing, and genetic counselling referrals belong to the treating gastroenterologist"
+   ]
+  },
+  "title": "Explaining 'High-Grade Dysplasia': A Patient-Requested Pathology Consult After Polypectomy",
+  "summary": "A 44-year-old billing specialist who had her first colonoscopy after a positive stool screening test requests a pathology consultation to understand her polyp report before her gastroenterology follow-up in three weeks. The case teaches learners to translate pathology terminology (tubular adenoma, high-grade dysplasia, margin status) into plain language, distinguish dysplasia from invasive cancer, and appropriately defer management and surveillance-interval decisions to the gastroenterology team.",
+  "specialty": "Pathology",
+  "setting": "Telehealth video visit, patient at home desk in Atlanta, Georgia",
+  "professions": [
+   "pathology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

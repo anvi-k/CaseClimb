@@ -1,0 +1,802 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review vital signs (temperature, HR, BP, RR, SpO2)",
+    "result": "Temp 38.4°C (101.1°F), HR 96 bpm, BP 112/70 mmHg, RR 16, SpO2 99% on room air",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera inspection of throat/oropharynx (patient opens mouth wide under good lighting)",
+    "result": "Bilateral tonsillar enlargement with white-gray exudate, erythematous posterior pharynx, no uvular deviation, no asymmetric bulging",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Guided self-palpation of neck lymph nodes",
+    "result": "Patient reports tender, mobile, enlarged lymph nodes in anterior and posterior cervical chains bilaterally, largest about 2 cm, also tender nodes behind the ears (posterior auricular); no fixed or rock-hard nodes",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Guided self-palpation of abdomen for splenomegaly (left upper quadrant)",
+    "result": "Patient reports mild fullness and tenderness to palpation in the left upper quadrant beneath the ribs, no rebound, no guarding; cannot reliably assess organ edge via self-exam",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Camera inspection of skin for rash",
+    "result": "No rash visible on face, trunk, or arms shown on camera",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Visual assessment of work of breathing and voice",
+    "result": "Speaking in full sentences, no stridor, no drooling, voice slightly muffled but understandable, no visible respiratory distress",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "test",
+    "name": "Review rapid strep (rapid antigen detection) test result from student health visit yesterday",
+    "result": "Rapid strep antigen test: Negative (performed at student health center yesterday)",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Order/review heterophile antibody (Monospot) test",
+    "result": "Heterophile antibody (Monospot): Positive",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Order/review complete blood count with differential",
+    "result": "WBC 12.8 x10^3/uL (H), with 68% lymphocytes (H) including 22% atypical lymphocytes (H); Hemoglobin 14.2 g/dL, Platelets 210 x10^3/uL",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Order/review liver function tests (ALT, AST, bilirubin)",
+    "result": "ALT 86 U/L (H), AST 72 U/L (H), Total bilirubin 0.9 mg/dL (normal)",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "lab",
+    "name": "Order/review throat culture (bacterial)",
+    "result": "Throat culture pending at time of visit; no growth of Group A Streptococcus reported after 48 hours (reported in follow-up note)",
+    "importance": "minor",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review student health center visit note from yesterday",
+    "result": "Visit note: sore throat x5 days, fever, fatigue; rapid strep negative; advised to rest and follow up if worsening; no antibiotics given",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "No prescription medications; occasional ibuprofen 400 mg PRN for pain/fever",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "imaging",
+    "name": "Order abdominal ultrasound to assess spleen size",
+    "result": "Not performed at this visit; would require in-person imaging order and is not indicated urgently given reassuring exam and absence of trauma or severe pain",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "lab_report",
+    "title": "Heterophile Antibody (Monospot) Test",
+    "date": "Today",
+    "author": "University Health Laboratory",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Heterophile antibody (Monospot)",
+        "Positive",
+        "qualitative",
+        "Negative"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "CBC with Differential and Liver Function Panel",
+    "date": "Today",
+    "author": "University Health Laboratory",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "12.8",
+        "x10^3/uL",
+        "4.5-11.0"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Lymphocytes",
+        "68",
+        "%",
+        "20-40"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Atypical lymphocytes",
+        "22",
+        "%",
+        "0-5"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "14.2",
+        "g/dL",
+        "13.5-17.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "210",
+        "x10^3/uL",
+        "150-400"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "ALT",
+        "86",
+        "U/L",
+        "7-56"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "AST",
+        "72",
+        "U/L",
+        "8-48"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Total bilirubin",
+        "0.9",
+        "mg/dL",
+        "0.1-1.2"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "date": "Today",
+    "author": "University Health Clinic",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ibuprofen",
+        "400 mg",
+        "Oral",
+        "PRN for pain/fever, as needed"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Student Health Center Visit Note - Yesterday",
+    "date": "Yesterday",
+    "author": "Student Health Center, NP Visit",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "body": "CC: Sore throat, fever x5 days.\nHPI: 20 yo male with 5 days sore throat, fever to 101F, fatigue, neck swelling. Roommate had 'strep throat' approximately 4 weeks ago.\nExam: Tonsillar erythema and exudate, tender bilateral cervical lymphadenopathy. No respiratory distress.\nRapid strep antigen test: Negative.\nThroat culture sent, pending.\nPlan: Supportive care - fluids, rest, acetaminophen/ibuprofen for fever and pain. Return precautions given for worsening symptoms, difficulty breathing/swallowing, or inability to tolerate fluids. Follow up in 2-3 days or sooner if worse.\n\n[Addendum, +48h]: Throat culture: No growth of Group A Streptococcus."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Sore throat, fever, and fatigue for 6 days"
+   },
+   {
+    "label": "Problem list",
+    "value": "None on file"
+   },
+   {
+    "label": "Medications",
+    "value": "Ibuprofen 400 mg PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Temp 38.4°C (101.1°F) measured today, HR 96, BP 112/70, RR 16, SpO2 99%"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per college entry requirements"
+   },
+   {
+    "label": "Care team",
+    "value": "University Student Health Center"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable, outpatient)"
+   }
+  ],
+  "difficulty": 1,
+  "encounterType": "diagnostic interview",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "6 days of sore throat, fever, swollen neck glands, and fatigue",
+    "says": "I've had a really sore throat and fever for about six days now, and I'm just exhausted all the time. My neck glands feel swollen too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "fever pattern",
+    "chart": "Fever history up to 38.6°C (101.5°F) by patient report, intermittent, responds partially to ibuprofen; today's measured temperature on vitals is 38.4°C (101.1°F)",
+    "says": "My temperature's been going up to like 101.5 off and on at its worst. The ibuprofen helps a little but it comes back.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "sore throat severity",
+    "chart": "Severe throat pain, worse with swallowing, mild difficulty swallowing solids",
+    "says": "My throat is so sore, especially when I swallow. I've been sticking to soup and smoothies the last couple days.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "fatigue level",
+    "chart": "Profound fatigue, missing classes, sleeping 12+ hours",
+    "says": "I'm so tired. I slept like 12 hours yesterday and still felt wiped out. I've missed three classes this week.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "recent exposure",
+    "chart": "Roommate diagnosed with 'strep throat' about 4 weeks ago",
+    "says": "My roommate had strep about a month ago, so I figured I probably caught something similar from him.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "prior testing",
+    "chart": "Rapid strep test negative at student health yesterday",
+    "says": "I went to student health yesterday and they did a quick throat swab test and it came back negative for strep.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "airway symptoms",
+    "chart": "Denies difficulty breathing, stridor, or drooling",
+    "says": "No, I can breathe fine, no trouble like that.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "abdominal pain",
+    "chart": "Reports mild fullness/discomfort in left upper abdomen, no severe pain",
+    "says": "My left side under my ribs feels a little full and tender, but it's not like sharp pain or anything.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "rash",
+    "chart": "Denies rash",
+    "says": "No rash that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "skin and eye changes",
+    "chart": "Denies jaundice or scleral icterus",
+    "says": "My eyes don't look yellow or anything, I checked.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "night sweats",
+    "chart": "Reports mild night sweats, no significant weight loss",
+    "says": "I've woken up a bit sweaty a couple nights, but I haven't really lost weight or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "cough and congestion",
+    "chart": "Denies significant cough or nasal congestion",
+    "says": "Not really coughing or congested, it's mostly my throat and feeling drained.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "headache",
+    "chart": "Reports mild headache, no neck stiffness or photophobia",
+    "says": "I've had a dull headache but nothing severe, and no sensitivity to light.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "pmh",
+    "topic": "past medical history",
+    "chart": "No significant past medical history",
+    "says": "I've been pretty healthy, no real medical problems before this.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "current medications",
+    "chart": "Takes ibuprofen 400 mg as needed for fever/pain, no other medications",
+    "says": "Just ibuprofen when I need it for the fever and throat pain.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "No allergies to any medicines that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives in dormitory with one roommate, second-year engineering student",
+    "says": "I live in the dorms with my roommate, I'm in my second year studying engineering.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "sports participation",
+    "chart": "Plays intramural rugby, has a match scheduled next week",
+    "says": "I play on the intramural rugby team and we actually have a game coming up next week. I was hoping to be back for it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f19",
+    "category": "social",
+    "topic": "academic stress",
+    "chart": "Reports moderate stress from missed coursework but no acute mental health crisis",
+    "says": "I'm a bit stressed about falling behind in my classes, but otherwise I'm managing okay.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f20",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol socially on weekends, 2-3 drinks, denies heavy use",
+    "says": "I'll have a couple beers at parties on weekends, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f21",
+    "category": "substance",
+    "topic": "tobacco and drug use",
+    "chart": "Denies tobacco, vaping, or recreational drug use",
+    "says": "I don't smoke or vape or do any drugs.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "sexual",
+    "topic": "intimate contact",
+    "chart": "Reports a new girlfriend over the past 2 months, denies other partners",
+    "says": "I've been seeing someone for about two months now, nobody else though.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "family",
+    "topic": "family history",
+    "chart": "No family history of blood disorders or immune conditions; father has hypertension",
+    "says": "My dad has high blood pressure, but nothing else runs in my family that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "nutrition",
+    "topic": "appetite and intake",
+    "chart": "Decreased appetite, maintaining fluid intake, soft diet due to throat pain",
+    "says": "I'm not eating much solid food because of my throat, but I'm drinking plenty of fluids.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "ear symptoms",
+    "chart": "Reports tenderness behind the ears bilaterally, denies ear pain or hearing changes",
+    "says": "The area behind my ears feels tender too, like swollen glands there, but my hearing's fine and no ear pain.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "hpi",
+    "topic": "symptom trajectory",
+    "chart": "Symptoms gradually worsening over 6 days, fatigue most prominent in last 2-3 days",
+    "says": "It's actually gotten a little worse each day, especially the tiredness the last couple of days.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "health concerns",
+    "chart": "Worried about missing the rugby match and whether he can safely play",
+    "says": "I really want to know if I'll be okay to play rugby next week, that's kind of my main worry.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "antibiotic history",
+    "chart": "Denies recent antibiotic use prior to this illness",
+    "says": "No, I haven't taken any antibiotics recently, this is the first time I've been this sick in a while.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "function",
+    "topic": "functional impact",
+    "chart": "Unable to attend classes or practice for past 3 days due to fatigue and throat pain",
+    "says": "I haven't been able to go to class or practice the last three days, I just don't have the energy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "prior similar illness",
+    "chart": "Denies prior episode of similar illness or known prior mono infection",
+    "says": "I don't think I've ever had anything like this before.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "psychosocial",
+    "topic": "expectations about antibiotics",
+    "chart": "Patient initially wondered if he needs antibiotics since roommate was treated for strep",
+    "says": "My roommate got antibiotics for his strep, so I was wondering if I need something like that too.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f6",
+    "artifactId": "d4",
+    "patientClaim": "Patient reports the rapid strep test done at student health yesterday was negative, and believes this means he does not have strep and is looking for another explanation",
+    "recordEvidence": "Student health note confirms rapid strep negative, but also shows throat culture was sent and addendum shows it later confirmed negative too (no growth of Group A Streptococcus) - consistent with patient's report, but the mismatch for teaching is that despite negative strep testing, the roommate's antibiotic treatment makes the patient expect he too needs antibiotics (see f31), when the actual diagnosis is viral (mono) and antibiotics are not indicated and amoxicillin specifically should be avoided",
+    "teachingPoint": "A negative strep test with compatible symptoms (exudative pharyngitis, tender lymphadenopathy, profound fatigue, splenic tenderness) in a young adult should prompt testing for mononucleosis rather than empiric antibiotics; amoxicillin/ampicillin can cause a non-allergic rash in mono and should be avoided."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused history that distinguishes infectious mononucleosis from streptococcal pharyngitis, including exposure history, fever pattern, lymphadenopathy distribution, and fatigue severity.",
+    "factIds": [
+     "f1",
+     "f5",
+     "f6",
+     "f26"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize posterior cervical and posterior auricular lymphadenopathy and splenic tenderness as findings supportive of mononucleosis over bacterial pharyngitis.",
+    "factIds": [
+     "f8",
+     "f25"
+    ],
+    "actionIds": [
+     "a3",
+     "a4"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Order and correctly interpret confirmatory testing (heterophile antibody, CBC with differential, liver enzymes) to support the diagnosis of infectious mononucleosis.",
+    "factIds": [
+     "f6"
+    ],
+    "actionIds": [
+     "a7",
+     "a8",
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Counsel the patient on activity restriction, specifically avoiding contact sports such as rugby for 3-4 weeks due to splenic rupture risk, balancing the patient's goals with safety.",
+    "factIds": [
+     "f18",
+     "f27"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Explain why antibiotics, especially amoxicillin/ampicillin, are not indicated and may cause a rash, addressing the patient's expectation based on his roommate's treatment.",
+    "factIds": [
+     "f31",
+     "f6"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify red-flag symptoms requiring urgent escalation, including airway compromise and severe abdominal pain suggestive of splenic rupture.",
+    "factIds": [
+     "f7",
+     "f8"
+    ],
+    "actionIds": [
+     "a6",
+     "a4"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Arjun Mehta",
+   "age": 20,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Indian-American",
+   "occupation": "Second-year engineering student",
+   "language": "English",
+   "appearance": "A young man with short dark hair, appearing tired with mild facial puffiness, sitting up in bed in a dimly lit dorm room with a water bottle and tissues visible on the nightstand. He is wearing a hoodie, speaks with a slightly hoarse and muffled voice, and has a flat but cooperative affect consistent with fatigue.",
+   "portrait": "/portraits/medicine-arjun-mehta-sore-throat.jpg"
+  },
+  "persona": {
+   "personality": "Easygoing, cooperative, and a bit of a planner who likes to understand the 'why' behind medical advice",
+   "communicationStyle": "Clear and direct, asks practical questions, comfortable giving detailed answers once asked",
+   "healthLiteracy": "high",
+   "emotionalState": "Mildly anxious about missing his rugby match and falling behind in classes, but not panicked",
+   "background": "Arjun grew up in a suburb of Chicago and is now in his second year studying mechanical engineering at a state university. He lives in a dorm with one roommate, enjoys playing intramural rugby on weekends, and is generally health-conscious, going to the gym regularly before getting sick.",
+   "speechExamples": [
+    "I looked it up online but wanted to ask you directly instead of just guessing.",
+    "Is this going to turn into something worse, like actual strep?",
+    "I really don't want to miss my rugby match next week if I can help it.",
+    "Should I be worried about my spleen? I read something about that online."
+   ],
+   "concerns": [
+    "Whether he needs antibiotics given his roommate had strep",
+    "Whether he can safely play in his rugby match next week",
+    "Whether his fatigue and symptoms will get worse before they get better",
+    "Whether the fullness under his ribs is something serious"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are seeing Arjun Mehta, a 20-year-old college student, via telehealth video visit for 6 days of sore throat, fever, and fatigue. He was seen at student health yesterday where a rapid strep test was negative. Take a focused history, perform feasible remote examination maneuvers, order appropriate testing, and develop a management plan.",
+   "chiefComplaint": "Sore throat, fever, swollen neck glands, and fatigue for 6 days",
+   "openingLine": "Hi, thanks for seeing me. I've had this awful sore throat and fever for about six days now, and I'm just exhausted all the time. My neck glands feel swollen too.",
+   "tasks": [
+    "Obtain a focused history of present illness including exposure history and associated symptoms",
+    "Guide the patient through feasible remote examination maneuvers (throat inspection, lymph node and abdominal self-palpation)",
+    "Order and interpret appropriate laboratory testing",
+    "Formulate a working diagnosis and differential, and counsel the patient on management",
+    "Address the patient's concerns and agree on a plan with safety-netting"
+   ],
+   "timeLimitMin": 20
+  },
+  "answerKey": {
+   "primaryProblem": "Infectious mononucleosis (Epstein-Barr virus infection)",
+   "differential": [
+    "Infectious mononucleosis (EBV)",
+    "Streptococcal pharyngitis (less likely given negative rapid antigen and culture)",
+    "Cytomegalovirus (CMV) mononucleosis-like syndrome",
+    "Acute HIV infection (consider if risk factors present)",
+    "Viral pharyngitis (non-EBV)"
+   ],
+   "keyFindings": [
+    "6 days of sore throat, fever to 38.6°C, profound fatigue",
+    "Negative rapid strep antigen test and negative throat culture",
+    "Bilateral tender cervical and posterior auricular lymphadenopathy",
+    "Exudative tonsillar pharyngitis on camera exam",
+    "Left upper quadrant fullness/tenderness suggestive of splenomegaly",
+    "Positive heterophile antibody (Monospot)",
+    "Atypical lymphocytosis on CBC with mild transaminitis"
+   ],
+   "plan": [
+    "Confirm diagnosis with heterophile antibody test and CBC with differential (completed, both support mononucleosis)",
+    "Check liver enzymes given hepatic involvement is common in mono (completed, mildly elevated)",
+    "Supportive care: rest, hydration, acetaminophen or ibuprofen for fever/pain, avoid amoxicillin/ampicillin given risk of non-allergic rash in mono",
+    "Advise strict avoidance of contact sports and rugby for at least 3-4 weeks due to risk of splenic rupture; reassess before clearing return to play, possibly with splenic size assessment if symptoms persist",
+    "Educate on warning signs requiring urgent/emergency care: difficulty breathing or swallowing, severe or worsening left upper quadrant or abdominal pain, lightheadedness, or signs of bleeding",
+    "Arrange follow-up in 1-2 weeks to reassess symptoms, fatigue, and readiness to resume activity; consider repeat exam before any contact sport clearance",
+    "No antibiotics indicated as this is a viral illness"
+   ],
+   "redFlags": [
+    "Difficulty breathing, stridor, or drooling suggesting airway compromise from tonsillar swelling",
+    "Severe or worsening left upper quadrant abdominal pain or lightheadedness suggesting splenic rupture - requires emergency evaluation",
+    "Inability to tolerate oral fluids leading to dehydration",
+    "Persistent high fever beyond 10-14 days or signs of secondary bacterial infection"
+   ],
+   "educationPoints": [
+    "Mononucleosis is caused by Epstein-Barr virus and commonly presents with the triad of fever, pharyngitis, and lymphadenopathy, often with marked fatigue",
+    "A negative rapid strep test and throat culture, combined with posterior cervical/auricular adenopathy and profound fatigue, should prompt testing for mono rather than empiric antibiotics",
+    "Amoxicillin and ampicillin should be avoided in mononucleosis due to the well-described non-allergic morbilliform rash that can occur",
+    "Contact and collision sports should be avoided for at least 3-4 weeks from symptom onset due to the risk of splenic rupture, even without a palpable spleen on exam",
+    "Mild transaminitis and atypical lymphocytosis are common and expected laboratory findings in acute mono and do not require specific treatment",
+    "Fatigue in mono can persist for weeks and patients should be counseled about gradual return to activity"
+   ]
+  },
+  "summary": "A healthy 20-year-old college student presents via telehealth with 6 days of sore throat, fever, fatigue, and cervical lymphadenopathy following a negative rapid strep test, teaching learners to recognize infectious mononucleosis through history, remote exam maneuvers, and confirmatory labs. The case emphasizes avoiding amoxicillin, counseling on contact sport restriction for splenic rupture risk, and addressing a patient's expectation of needing antibiotics.",
+  "title": "Sore Throat and Fatigue in a College Rugby Player: Infectious Mononucleosis",
+  "specialty": "Internal Medicine / Primary Care",
+  "setting": "Telehealth video visit, patient at home in his dormitory room",
+  "professions": [
+   "medicine"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

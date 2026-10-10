@@ -1,0 +1,954 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Primary survey (ABC) via camera",
+    "result": "Airway patent, speaking in full sentences but pausing after 5-6 words. Visible accessory muscle use at rest. Skin pale, slightly diaphoretic on forehead. No cyanosis of lips visible on camera. Alert and oriented x4.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Blood pressure (home cuff)",
+    "result": "148/86 mmHg, seated (elevated compared to discharge BP of 126/78)",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Heart rate and rhythm (manual radial pulse check)",
+    "result": "Pulse 92/min, irregularly irregular on manual radial palpation; patient reports known atrial fibrillation",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "vitals",
+    "name": "Pulse oximetry (home device)",
+    "result": "SpO2 92% on room air",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "vitals",
+    "name": "Respiratory rate (visual count on camera)",
+    "result": "22 breaths/min, mildly labored, no accessory muscle use at rest but worsens with talking",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "vitals",
+    "name": "Temperature (home thermometer)",
+    "result": "97.8°F (36.6°C)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "test",
+    "name": "Point-of-care glucose (home glucometer)",
+    "result": "104 mg/dL",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Guided lung auscultation (caregiver/patient-assisted stethoscope or breath-sound description)",
+    "result": "No stethoscope available to confirm breath sounds; patient reports (symptom report, not an objective exam finding) a crackling/wet sound sensation when taking a deep breath, worse at bases. Visible increased work of breathing with exertion on camera (asked to walk to kitchen and back).",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "exam",
+    "name": "Camera inspection of lower extremities for edema",
+    "result": "Bilateral pitting edema to mid-shin, 2+, pitting above sock line, skin shiny and taut",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "exam",
+    "name": "Camera inspection of neck veins (patient reclined on request)",
+    "result": "Jugular venous distension appears present at 45 degrees, though lighting and camera angle limit certainty",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "test",
+    "name": "Weight trend review (bathroom scale log)",
+    "result": "Discharge weight 71.2 kg; today 74.6 kg; +3.4 kg over 8 days, with steady daily gains documented in log",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review discharge summary and medication list",
+    "result": "Discharged 8 days ago for acute decompensated heart failure, EF 35%, on furosemide 40 mg daily, metoprolol succinate 50 mg daily, apixaban 5 mg twice daily for atrial fibrillation, lisinopril 10 mg daily",
+    "importance": "important",
+    "artifactIds": [
+     "d1",
+     "d2"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review pill box / medication adherence",
+    "result": "Pillbox photo shows Wednesday and Friday AM furosemide slots still contain tablets; all other furosemide slots empty. Metoprolol, apixaban, and lisinopril slots all empty/taken as scheduled for the full week.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Orthopnea / recent sleep position screen",
+    "result": "Patient reports sleeping upright in recliner for the last 2 nights due to breathlessness lying flat",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "exam",
+    "name": "Skin and perfusion check on camera (hands, lips, nail beds)",
+    "result": "Nail beds pink, capillary refill under 2 seconds on self-check; no peripheral cyanosis seen",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "procedure",
+    "name": "Position patient upright / reposition for comfort and reassess breathing",
+    "result": "Mild improvement in reported breathlessness with upright positioning; respiratory rate unchanged at 22/min after 2 minutes",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Online physician consult under treat-in-place protocol",
+    "result": "Physician reviewing findings advises this presentation (hypoxia, 3.4 kg weight gain, orthopnea, bibasilar crackles reported, JVD, peripheral edema, missed diuretic doses) meets criteria for ground transport to emergency department for IV diuresis and reassessment; direct refusal-of-transport discussion with EMS and physician recommended if patient declines",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "record",
+    "name": "Document patient care report and radio handover (IMIST-AMBO)",
+    "result": "PCR and handover completed per protocol, documenting findings, physician consult, and patient's initial reluctance to transport",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Hospital Discharge Summary",
+    "date": "8 days ago",
+    "author": "Dr. Patel, Hospitalist, Eastern Kentucky Regional Medical Center",
+    "release": {
+     "when": "start"
+    },
+    "body": "83-year-old woman admitted for acute decompensated heart failure with reduced ejection fraction (EF 35% on echocardiogram during admission). Treated with IV diuresis, transitioned to oral furosemide 40 mg daily. Discharge weight 71.2 kg. Known atrial fibrillation on apixaban. Discharged home with community paramedicine follow-up given rural location and limited transportation. Instructed to weigh daily, follow 2 g sodium diet, and call if weight increases more than 2-3 lb (0.9-1.4 kg) in a day or more than 5 lb (2.3 kg) in a week, or if breathing worsens."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Today",
+    "author": "Community Paramedicine Program EHR",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Furosemide",
+        "40 mg",
+        "Oral",
+        "Once daily",
+        "Heart failure / fluid management"
+       ]
+      },
+      {
+       "cells": [
+        "Metoprolol succinate",
+        "50 mg",
+        "Oral",
+        "Once daily",
+        "Heart failure / rate control"
+       ]
+      },
+      {
+       "cells": [
+        "Apixaban",
+        "5 mg",
+        "Oral",
+        "Twice daily",
+        "Atrial fibrillation - stroke prevention"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Once daily",
+        "Heart failure / afterload reduction"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "other",
+    "title": "Medication Pillbox Photo Log (camera inspection by paramedic)",
+    "date": "Today",
+    "author": "Camera inspection of pillbox during visit",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "body": "Weekly pillbox labeled Sun-Sat, AM slot. Furosemide tablet still present in Wednesday and Friday AM compartments. All other furosemide compartments empty. Metoprolol, apixaban (AM and PM), and lisinopril compartments all empty/taken as scheduled for the full week."
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Home Weight Log Trend",
+    "date": "Last 8 days",
+    "author": "Patient home bathroom scale, recorded in paramedicine app",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day since discharge",
+     "yLabel": "Weight (kg)",
+     "refLow": 69,
+     "refHigh": 72,
+     "series": [
+      {
+       "name": "Weight (kg)",
+       "points": [
+        {
+         "x": "Day 0 (discharge)",
+         "y": 71.2
+        },
+        {
+         "x": "Day 1",
+         "y": 71.5
+        },
+        {
+         "x": "Day 2",
+         "y": 71.9
+        },
+        {
+         "x": "Day 3",
+         "y": 72.3
+        },
+        {
+         "x": "Day 4",
+         "y": 72.8
+        },
+        {
+         "x": "Day 5",
+         "y": 73.4
+        },
+        {
+         "x": "Day 6",
+         "y": 73.9
+        },
+        {
+         "x": "Day 7",
+         "y": 74.2
+        },
+        {
+         "x": "Day 8 (today)",
+         "y": 74.6
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Home Vitals Flowsheet - Today's Visit",
+    "date": "Today",
+    "author": "Community Paramedicine Program",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "BP (mmHg)",
+      "Pulse (bpm)",
+      "Rhythm",
+      "SpO2 (%)",
+      "Resp Rate (/min)",
+      "Temp (°F)",
+      "Glucose (mg/dL)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "14:05",
+        "148/86",
+        "92",
+        "Irregular",
+        "92",
+        "22",
+        "97.8",
+        "104"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "lab_report",
+    "title": "Last Basic Metabolic Panel (Inpatient, Day of Discharge)",
+    "date": "8 days ago",
+    "author": "Eastern Kentucky Regional Medical Center Lab",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "138",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mmol/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Chloride",
+        "101",
+        "mmol/L",
+        "98-107"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "CO2",
+        "24",
+        "mmol/L",
+        "23-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "BUN",
+        "22",
+        "mg/dL",
+        "7-20"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.1",
+        "mg/dL",
+        "0.6-1.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "BNP",
+        "680",
+        "pg/mL",
+        "<100"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Community paramedicine post-discharge check, day 8 after heart failure admission"
+   },
+   {
+    "label": "Problem list",
+    "value": "Heart failure with reduced ejection fraction (EF 35%); Atrial fibrillation; Hypertension"
+   },
+   {
+    "label": "Medications",
+    "value": "Furosemide 40 mg daily; Metoprolol succinate 50 mg daily; Apixaban 5 mg twice daily; Lisinopril 10 mg daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals (discharge)",
+    "value": "BP 126/78, HR 84 irregular, SpO2 97% RA, RR 16, Weight 71.2 kg"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Influenza and pneumococcal vaccines up to date per hospital record"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Patel (Hospitalist), Community Paramedicine Program, Online Supervising Physician (telehealth)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (per discharge paperwork; not reassessed today)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "community paramedicine post-discharge check (video visit)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "breathing and swelling",
+    "chart": "Patient reports increased breathlessness with exertion and leg swelling since discharge 8 days ago",
+    "says": "I'm just more winded than I was, and my ankles have gotten puffy again. I figured you ought to see for yourself.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "breathlessness onset",
+    "chart": "Dyspnea on exertion worsened over the past 3-4 days, now present with minimal activity such as porch steps",
+    "says": "It started a few days ago, maybe Tuesday. Now even going up my porch steps leaves me gasping.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "sleep position",
+    "chart": "Sleeping upright in recliner for 2 nights due to inability to breathe lying flat (orthopnea)",
+    "says": "I've slept in my recliner the last two nights. Lying flat makes me feel like I can't get a breath.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "swelling pattern",
+    "chart": "Bilateral lower extremity swelling, worse than at discharge, patient notes shoes feel tight",
+    "says": "My ankles are tight against my shoes now. They weren't like this when I left the hospital.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "weight checks",
+    "chart": "Patient has been weighing herself daily on bathroom scale as instructed",
+    "says": "I weigh myself every morning on my own scale, just like they told me to in the hospital.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "chest discomfort",
+    "chart": "Denies chest pain, pressure, or tightness",
+    "says": "No, nothing like chest pain. Just the breathing and the puffiness.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "cough",
+    "chart": "Reports occasional dry cough, worse when lying down, no hemoptysis",
+    "says": "I've had a little dry cough, mostly at night. Nothing coming up with it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "fever or infection symptoms",
+    "chart": "Denies fever, chills, sore throat, or recent illness symptoms",
+    "says": "No fever or chills, nothing like that. I don't feel sick, just short of breath.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "medications",
+    "topic": "water pill use",
+    "chart": "Patient states she takes her furosemide every day without missing doses",
+    "says": "Oh, I take my water pill every single day, I don't miss it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "medications",
+    "topic": "diuretic timing concerns",
+    "chart": "On further questioning, admits skipping furosemide on days she leaves the house (church, errands) because it makes her need the bathroom too often",
+    "says": "Well... on the days I go to church, or into town, I'll skip it. It has me running to the bathroom and there's nowhere to go out there.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "other medications",
+    "chart": "Reports taking metoprolol, apixaban, and lisinopril as prescribed without missed doses",
+    "says": "My heart pill, the blood thinner, and the blood pressure one, I take those regular. It's just the water pill I sometimes skip.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "medications",
+    "topic": "side effects",
+    "chart": "Denies dizziness, lightheadedness, or falls related to medications",
+    "says": "I haven't gotten dizzy or fallen or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "nutrition",
+    "topic": "recent meals",
+    "chart": "Diet has included canned soup and country ham brought by neighbors over the past week",
+    "says": "The neighbors have been so kind, bringing over canned soup and some country ham. I haven't wanted to turn down their generosity.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "nutrition",
+    "topic": "sodium awareness",
+    "chart": "Patient is aware she was told to limit salt but finds it difficult given food brought by others and her own cooking habits",
+    "says": "They told me low salt, but when someone brings you a casserole, you don't send it back. I know I probably should have.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "nutrition",
+    "topic": "fluid intake",
+    "chart": "Reports no specific fluid restriction given and has not changed water intake",
+    "says": "Nobody told me to watch how much I drink, so I've just been drinking like normal.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "function",
+    "topic": "daily activity",
+    "chart": "Normally independent with all activities of daily living; now limited by breathlessness to short distances inside the house",
+    "says": "I used to get around my whole place just fine. Now I can barely make it to the mailbox without stopping to catch my breath.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "function",
+    "topic": "living situation",
+    "chart": "Lives alone on a hillside farm, 50 minutes from the nearest hospital by car",
+    "says": "I live by myself out here. It's a good 50 minutes to the hospital if something happens.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "support system",
+    "chart": "Has a neighbor who checks in most days and a niece who calls but lives out of state",
+    "says": "My neighbor Dot looks in on me most days. My niece calls but she's three states away.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "social",
+    "topic": "transportation barriers",
+    "chart": "No personal vehicle; relies on neighbors or the volunteer fire department for rides when needed",
+    "says": "I don't drive anymore. If I need to go somewhere, Dot takes me, or sometimes the fire department helps.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "psychosocial",
+    "topic": "hospital attitude",
+    "chart": "Expresses strong reluctance to return to hospital, citing a prior difficult admission experience and desire for independence",
+    "says": "I do not want to go back to that hospital. Last time I was there a week and came home weaker than when I went in. I'd rather manage here if I possibly can.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f21",
+    "category": "psychosocial",
+    "topic": "independence concerns",
+    "chart": "Fears losing independence or being placed in a nursing facility if hospitalized again",
+    "says": "I'm afraid if I go back in, they'll start talking about putting me in a home. I taught school for forty years. I can manage my own house.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "pmh",
+    "topic": "heart history",
+    "chart": "History of heart failure with reduced ejection fraction (EF 35%) diagnosed on recent admission, atrial fibrillation diagnosed approximately 2 years ago, hypertension",
+    "says": "They told me my heart's not pumping as strong as it should, something like 35 percent. And I've had the irregular heartbeat for a couple years now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "pmh",
+    "topic": "other medical history",
+    "chart": "History of osteoarthritis in both knees, no history of diabetes, no history of kidney disease prior to this admission",
+    "says": "My knees give me trouble from the arthritis, but no sugar diabetes or kidney trouble before all this.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "I'm not allergic to any medicines that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "family",
+    "topic": "family heart history",
+    "chart": "Mother had heart failure in her 70s; father had hypertension",
+    "says": "My mother had heart failure too, in her seventies. My father had high blood pressure.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "substance",
+    "topic": "alcohol and tobacco use",
+    "chart": "Denies current or past tobacco use; drinks one small glass of wine on special occasions only",
+    "says": "I never smoked a day in my life. I'll have a little wine at Christmas, that's about it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "abdominal symptoms",
+    "chart": "Denies nausea, vomiting, or abdominal pain; reports some bloating/fullness sensation",
+    "says": "My stomach feels a bit full and tight, but no pain, no sick feeling.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "urination pattern",
+    "chart": "Reports urinating less frequently than usual over the past several days despite feeling fluid-overloaded",
+    "says": "Funny thing, I haven't been going to the bathroom near as much the last few days, even though I feel so puffy.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "hpi",
+    "topic": "recent falls",
+    "chart": "Denies any falls or near-falls recently",
+    "says": "No, I haven't fallen or come close to it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "goals",
+    "topic": "care preferences",
+    "chart": "Wishes to remain at home if at all safely possible and understand what warning signs would change that",
+    "says": "I just want to know what it would take for you to tell me I really do have to go in, instead of just being told I have to.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "hpi",
+    "topic": "symptom trajectory this week",
+    "chart": "Reports symptoms have been gradually worsening each day rather than sudden onset overnight",
+    "says": "It's crept up on me day by day, not like it hit me all at once.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "adherence",
+    "topic": "understanding of discharge instructions",
+    "chart": "Recalls being told to call if weight increased but did not realize cumulative small gains added up to a concerning total",
+    "says": "They said call if I gained two or three pounds in a day. I didn't think a little bit each day added up to as much as it has.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f9",
+    "artifactId": "d3",
+    "patientClaim": "Patient states she takes her furosemide every single day without missing doses",
+    "recordEvidence": "Pillbox photo log shows furosemide tablets still present (unused) in the Wednesday and Friday compartments, corresponding to days she left the house",
+    "teachingPoint": "Patients may sincerely believe they are adherent while unintentionally skipping doses on specific triggering days; always verify adherence with objective evidence (pillbox, refill history) rather than self-report alone, especially when a clear symptom-driven pattern (bathroom access anxiety) explains the gap."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Perform a structured remote assessment of a patient with suspected heart failure decompensation, integrating camera-based exam findings with home device vitals.",
+    "factIds": [
+     "f1",
+     "f2",
+     "f4"
+    ],
+    "actionIds": [
+     "a1",
+     "a4",
+     "a8",
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify objective evidence of fluid overload and decompensation (weight trend, edema, orthopnea, hypoxia) distinguishing it from a simple post-discharge fatigue presentation.",
+    "factIds": [
+     "f3",
+     "f28"
+    ],
+    "actionIds": [
+     "a11",
+     "a9",
+     "a14",
+     "a4"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Elicit and reconcile a medication adherence mismatch between patient self-report and objective pillbox evidence, exploring the underlying barrier with sensitivity.",
+    "factIds": [
+     "f9",
+     "f10"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify dietary and social contributors to decompensation (high-sodium foods from neighbors, rural isolation, transportation barriers) relevant to a treat-in-place versus transport decision.",
+    "factIds": [
+     "f13",
+     "f14",
+     "f17",
+     "f19"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Apply treat-in-place protocol correctly by consulting online physician with a complete, structured handover and arriving at an appropriate transport recommendation within paramedic scope of practice.",
+    "factIds": [
+     "f20",
+     "f30"
+    ],
+    "actionIds": [
+     "a17",
+     "a18"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Address patient autonomy and fear of hospitalization/loss of independence with respectful, clear communication while still conveying red flags that necessitate escalation.",
+    "factIds": [
+     "f20",
+     "f21",
+     "f30"
+    ],
+    "actionIds": [
+     "a17"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Mabel Turner",
+   "age": 83,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "White",
+   "occupation": "Retired schoolteacher",
+   "language": "English",
+   "appearance": "An older woman with white hair pulled back in a neat bun, wearing a cardigan over a housedress, seated in a recliner in a modestly furnished living room with a wood stove visible behind her. She appears alert and composed but pauses to catch her breath between sentences, and a tablet propped on a side table shows her from the chest up with reasonable lighting from a nearby window.",
+   "portrait": "/portraits/paramedic-mabel-turner-community-paramedic.jpg"
+  },
+  "persona": {
+   "personality": "Sharp-witted, independent, and plainspoken; takes pride in having been a schoolteacher for four decades and occasionally corrects the learner's grammar or terminology with dry humor.",
+   "communicationStyle": "Direct and economical with words, answers questions fully once trust is established, but downplays symptoms initially out of a desire to appear capable of managing on her own.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about her breathing but masking it with brisk humor; becomes more guarded when asked about hospital return or medication skipping.",
+   "background": "Taught elementary school in the same county for 40 years before retiring. Widowed 6 years ago. Lives alone on the family farm on a hillside, raised there, refuses to leave despite the distance from town. Enjoys her garden, a small flock of chickens, and reading mystery novels.",
+   "speechExamples": [
+    "I may be eighty-three, but my grammar is still better than half my former students'.",
+    "I'll have you know I was climbing that hill with two bags of chicken feed last month.",
+    "Don't fuss over me like I'm made of glass, young man.",
+    "If I wanted to sit in a hospital bed, I'd have stayed there the first time."
+   ],
+   "concerns": [
+    "Does not want to be re-hospitalized or lose her independence",
+    "Worried about being a burden on neighbors who already help her",
+    "Wants to understand exactly what symptoms mean she truly must go to the hospital versus when she can manage at home"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a paramedic student conducting a community paramedicine video visit with Mabel Turner, 83, who was discharged 8 days ago after a heart failure admission. The program tablet is in her home. Your job is to perform a structured assessment and follow the treat-in-place protocol, including consulting the online supervising physician if indicated.",
+   "chiefComplaint": "Increased breathlessness and leg swelling 8 days after heart failure hospitalization",
+   "openingLine": "I'm just more winded than I was, and my ankles have gotten puffy again. I figured you ought to see for yourself.",
+   "tasks": [
+    "Conduct a structured history (SAMPLE/OPQRST) and camera-based physical assessment",
+    "Review home vitals, weight trend, and medication adherence records",
+    "Explore medication use and recent dietary intake with the patient",
+    "Consult the online supervising physician under the treat-in-place protocol and determine the appropriate care pathway",
+    "Deliver a clear, structured handover (IMIST-AMBO) and document the patient care report"
+   ],
+   "timeLimitMin": 25
+  },
+  "answerKey": {
+   "primaryProblem": "Acute decompensated heart failure (fluid overload) in a patient with known HFrEF (EF 35%), 8 days post-discharge, precipitated by inconsistent diuretic adherence and high-sodium dietary intake",
+   "differential": [
+    "Acute decompensated heart failure (fluid overload) - most consistent with findings",
+    "Pulmonary embolism (less likely given gradual symptom onset over days and absence of pleuritic chest pain, though atrial fibrillation on anticoagulation lowers but does not eliminate risk)",
+    "Pneumonia or lower respiratory infection (less likely given afebrile status and absence of productive cough, chills, or systemic infection symptoms)",
+    "Worsening renal function/fluid retention from medication nonadherence as a contributing rather than primary driver",
+    "Chronic venous insufficiency alone (does not explain hypoxia, orthopnea, or weight gain pattern)"
+   ],
+   "keyFindings": [
+    "Weight gain of 3.4 kg over 8 days (71.2 kg to 74.6 kg), exceeding discharge threshold for concern",
+    "SpO2 92% on room air (down from 97% at discharge)",
+    "Respiratory rate 22/min with increased work of breathing on exertion",
+    "Blood pressure 148/86 mmHg today, up from 126/78 mmHg at discharge, consistent with volume overload rather than a primary hypertensive problem",
+    "New orthopnea - sleeping upright in recliner x2 nights",
+    "Bilateral pitting edema to mid-shin, worse than at discharge",
+    "Possible jugular venous distension on camera exam",
+    "Patient-reported crackling/wet breath sensation on deep breath (symptom report; no stethoscope available to objectively confirm crackles)",
+    "Pillbox evidence showing missed furosemide doses on 2 days in the past week, pattern tied to bathroom access anxiety when leaving home",
+    "Decreased urine output despite fluid overload, consistent with worsening heart failure physiology",
+    "High-sodium dietary intake (canned soup, country ham) likely contributing to fluid retention",
+    "Known atrial fibrillation with irregular pulse, rate controlled at 92/min"
+   ],
+   "plan": [
+    "Complete structured remote assessment including vitals, camera-based exam, and review of home weight log and medication adherence records",
+    "Recognize constellation of findings as decompensated heart failure requiring escalation beyond treat-in-place home management alone",
+    "Contact online supervising physician under treat-in-place protocol with full IMIST-AMBO handover of findings",
+    "Follow physician recommendation for ground transport to emergency department for IV diuresis, given hypoxia, significant weight gain, and inability to safely manage oral diuretic adjustment alone in the field",
+    "If patient continues to decline transport, conduct a structured refusal-of-transport discussion per protocol, document decision-making capacity, risks explained, and involve physician and any available support person per local policy",
+    "Address medication adherence barrier non-judgmentally; coordinate with care team (not independently adjust diuretic dosing, which is outside paramedic scope) on strategies such as timing doses around outings",
+    "Communicate dietary sodium contributors to care team for dietitian or nursing follow-up; this role should not independently prescribe a diet plan but can reinforce prior discharge teaching",
+    "Arrange follow-up community paramedicine or nursing contact if patient ultimately remains at home, with clear safety-net instructions on when to call 911"
+   ],
+   "redFlags": [
+    "SpO2 92% on room air in a patient with known heart failure",
+    "New orthopnea requiring upright sleeping",
+    "Rapid weight gain (3.4 kg in 8 days) indicating significant fluid retention",
+    "Blood pressure rise from 126/78 at discharge to 148/86 today, a change concerning for fluid overload in this context",
+    "Reported crackling breath sensation and increased work of breathing suggestive of possible pulmonary edema, though not confirmed by auscultation",
+    "Decreased urine output in the setting of worsening fluid overload, suggesting progressing cardiorenal physiology",
+    "Patient's reluctance to transport despite objective decompensation - requires physician involvement and careful informed refusal process if she persists in declining"
+   ],
+   "educationPoints": [
+    "Daily weight trends are a sensitive early indicator of fluid retention in heart failure and should be tracked cumulatively, not just as single-day changes",
+    "Patient self-report of medication adherence should be corroborated with objective evidence (pillbox checks, refill records) when possible, especially when a plausible behavioral driver (bathroom access, social embarrassment) exists",
+    "Treat-in-place protocols require honoring patient autonomy while still identifying objective red flags that mandate physician consultation and likely escalation to transport",
+    "Rural patients face unique barriers (distance to hospital, limited transportation, fear of losing independence) that should be acknowledged and incorporated into shared decision-making without compromising safety",
+    "Community-brought food, while well-intentioned, can undermine sodium restriction in heart failure patients and is a common, under-recognized contributor to decompensation",
+    "Decreasing urine output despite clinical fluid overload reflects worsening renal perfusion in cardiorenal syndrome and is a marker of more significant decompensation, not improvement",
+    "A symptom a patient describes (e.g., a sensation of crackling breath sounds) is not equivalent to a clinician-confirmed exam finding; without a stethoscope or auscultation, this should be documented and weighted as a reported symptom, not a verified sign"
+   ]
+  },
+  "summary": "An 83-year-old woman with HFrEF (EF 35%) and atrial fibrillation presents 8 days after heart failure hospitalization with progressive dyspnea, orthopnea, and leg swelling during a community paramedicine video visit. The case teaches structured remote assessment of decompensation, reconciling a medication adherence mismatch (patient-reported versus pillbox evidence), and appropriate use of a treat-in-place protocol with physician consultation when transport is clinically indicated despite patient reluctance.",
+  "title": "Post-Discharge Heart Failure Decompensation in a Rural Older Adult: Treat-in-Place vs. Transport Decision",
+  "specialty": "Paramedicine / EMS - Community Paramedicine",
+  "setting": "Telehealth video visit; patient at home on a hillside farm in eastern Kentucky, using a tablet provided by the community paramedicine program",
+  "professions": [
+   "paramedic"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

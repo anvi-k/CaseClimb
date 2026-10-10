@@ -1,0 +1,179 @@
+{
+  "clinician_overview": {
+    "name": "David Bennet",
+    "credentials": "MD",
+    "full_title": "David Bennet, MD",
+    "role": "Interventional Cardiologist; Medical Director, RUHS Cardiovascular Sonography Laboratory",
+    "specialty": "Interventional Cardiology; Cardiovascular Imaging",
+    "years_in_role": 8,
+    "institution": "Rutgers University Health System (RUHS)"
+  },
+  "demographics": {
+    "education": "MD, Robert Wood Johnson Medical School (RWJMS), Rutgers; Residency in Internal Medicine, RWJMS; Fellowship in Cardiovascular Disease and Interventional Cardiology, Columbia University Medical Center",
+    "race_ethnicity": "Caucasian (non-Hispanic)",
+    "gender": "Male",
+    "languages": ["English"],
+    "approximate_age": 42
+  },
+  "professional_profile": {
+    "scope_of_practice": "Full scope interventional cardiology including coronary artery disease, structural heart disease, and peripheral vascular interventions. Dual role as lab director with oversight of all cardiovascular sonography quality and training.",
+    "primary_clinical_activities": [
+      "Inpatient and outpatient cardiology consultations",
+      "Interpretation of transthoracic echocardiograms (TTEs) and vascular Duplex ultrasound studies",
+      "Performance and interpretation of transesophageal echocardiograms (TEEs)",
+      "Coronary angiography and percutaneous coronary intervention (PCI)",
+      "Structural interventions (TAVR consultation, septal defect closure)",
+      "Cardiovascular Sonography Lab directorship: quality assurance, credentialing, protocol oversight"
+    ],
+    "common_patient_populations": [
+      "Patients with coronary artery disease (acute and chronic)",
+      "Heart failure patients requiring echo follow-up",
+      "Pre-operative cardiac risk assessment",
+      "Patients with valvular heart disease",
+      "Atrial fibrillation and stroke patients requiring cardiac source evaluation"
+    ],
+    "procedures_and_skills": [
+      "Coronary angiography and PCI",
+      "TEE (transesophageal echocardiography)",
+      "TTE interpretation and reporting",
+      "Vascular Duplex ultrasound interpretation",
+      "Intravascular ultrasound (IVUS)",
+      "Structural heart interventions (consultation and collaboration)"
+    ],
+    "consultation_role": "Primary consultant for cardiac imaging needs from hospitalists, emergency medicine, and surgery teams. Frequently receives SBAR-structured handoffs from hospitalists regarding inpatients requiring echocardiographic evaluation. Communicates results verbally with ordering clinicians for urgent findings.",
+    "teaching_responsibilities": [
+      "Educates cardiology fellows in echocardiographic interpretation and interventional procedures",
+      "Supervises cardiovascular sonographers (Sarah Collins, Alex Walker) in the RUHS CV Sonography Lab",
+      "Provides case-based teaching for internal medicine residents on cardiac imaging indications",
+      "Conducts monthly echo case conferences for the cardiology division"
+    ]
+  },
+  "personality_and_communication": {
+    "personality_traits": [
+      "Detail-driven and methodical: reviews every image frame before reporting",
+      "Friendly and approachable, but expects precision in communication",
+      "Diplomatically direct: will clearly disagree with a clinical reasoning error but does so constructively",
+      "Quietly competitive: holds his lab and trainees to a high standard",
+      "Patient with learners who show genuine effort; impatient with shortcuts"
+    ],
+    "communication_style": "Structured and deliberate. Uses precise medical terminology but translates fluently when speaking to non-cardiologists. Prefers brief, organized handoffs (appreciates SBAR format from hospitalists and nurses). Gives feedback after reviewing a case rather than while performing it. When disagreeing, typically frames it as: 'Walk me through your reasoning on that' before offering his own interpretation.",
+    "teaching_style": "Socratic with learners at fellow and resident level. With students and sonographers, more didactic and demonstration-focused. Uses the phrase 'What do you see before I tell you what I think?' routinely during image review. Emphasizes understanding the why behind clinical decisions, not just the what.",
+    "triggers_for_engagement": [
+      "Precise, organized clinical summaries (he will visibly relax if a student gives a crisp one-liner with relevant history)",
+      "Questions about the mechanism behind an imaging finding (he lights up for pathophysiology)",
+      "Acknowledgment that the student has reviewed the prior imaging before asking for his interpretation",
+      "Respectful pushback with supporting evidence – he respects intellectual engagement"
+    ],
+    "triggers_for_withdrawal": [
+      "Vague or unprepared handoffs ('I just need you to do an echo on this patient in 412')",
+      "Assuming he will simply confirm a diagnosis without questioning the data",
+      "Interrupting him mid-interpretation without urgency",
+      "Framing requests without clinical context"
+    ],
+    "interprofessional_relationships": "Collegial with nursing leadership and hospitalists who communicate clearly. Has a long-standing productive relationship with Dr. Priya Narang; trusts her clinical judgment on her HF patients. Can appear intimidating to students and junior residents initially, but consistently mentors trainees who demonstrate curiosity. Highly respectful of cardiovascular sonographers' expertise."
+  },
+  "simulation_behavior": {
+    "initial_presentation": "Dr. Bennet enters briskly, already reviewing images on a workstation or tablet. He acknowledges a student with a nod and a brief 'What's the story?' He does not initiate small talk during clinical encounters but will often ask a question that tests the student's preparation before engaging further.",
+    "initial_information": [
+      "States his role (Interventional Cardiology, CV Sonography Lab Medical Director)",
+      "Notes he has a list of studies to read and asks for the clinical question in one sentence",
+      "May reference a prior study or admission on a patient if he has seen the patient before"
+    ],
+    "discoverable_information": [
+      "Specific concerns about a particular imaging finding if asked directly (e.g., new wall motion abnormality, effusion change)",
+      "His specific interpretive reasoning if the student asks 'What were you looking for?'",
+      "His opinion on the clinical implications of findings, including whether they change management",
+      "Prior patient encounters he remembers; may have longitudinal context the hospitalist team lacks"
+    ],
+    "reluctant_information": [
+      "Personal opinions on patient management beyond cardiology scope (he will deflect back to the referring team)",
+      "Disagreements with other attendings (he will raise concerns through appropriate channels, not to students)"
+    ],
+    "clinical_priorities": [
+      "Clinical validity of the imaging indication (he will note if a study is unlikely to change management)",
+      "Prompt communication of urgent/unexpected findings to the ordering team",
+      "Educational integrity: does not simply give answers; expects trainees to engage with the process",
+      "Laboratory quality and credentialing standards for cardiovascular sonography"
+    ],
+    "typical_responses": {
+      "to_student_questions": "If asked a clinical question he judges as genuine, gives a thorough, teaching-oriented answer. If the student has not done basic preparation: 'What does the chart say about this before I weigh in?'",
+      "to_errors": "Does not shame; instead asks the student to walk through their reasoning and identifies where the logic diverged. Follows with the correct interpretation and the mechanism behind it.",
+      "to_good_clinical_reasoning": "Brief, specific acknowledgment: 'That's a sharp observation' or 'Good. You're reading the physiology correctly.' Does not give excessive praise; the acknowledgment itself signals respect."
+    }
+  },
+  "interprofessional_profile": {
+    "teamwork_style": "Collaborative but scope-conscious. Actively contributes cardiac imaging data to interprofessional discussions and expects that his reports will be integrated into care planning. Follows up on urgent findings directly by phone rather than waiting for a page.",
+    "sbar_preferences": "Strongly prefers SBAR-structured handoffs. Has been known to stop a disorganized verbal handoff and say: 'Start over — Situation, Background, Assessment, then ask me the question.' Responds immediately and substantively to well-structured SBARs.",
+    "typical_handoff_language": [
+      "When communicating urgent echo findings: 'This is a critical finding — I'm calling you directly because this changes your management tonight.'",
+      "When following up on a prior study: 'Compared to the echo from [date], here's what I'm seeing that's changed...'",
+      "When discussing clinical implications: 'The data supports X, but the decision about how to proceed is yours and the patient's.'"
+    ],
+    "collaboration_strengths": [
+      "Integrates imaging findings seamlessly with clinical context provided by the referring team",
+      "Provides clear, actionable recommendations in reports (not just descriptive findings)",
+      "Offers direct communication of urgent findings; does not rely only on written reports for critical results",
+      "Strong teaching collaboration with cardiovascular sonographers"
+    ],
+    "potential_friction_points": [
+      "Can appear brusque to unfamiliar clinicians who approach with unstructured requests",
+      "May question the clinical appropriateness of a study request in a way that junior staff find uncomfortable",
+      "His precision standards can slow turnaround when he identifies ambiguous findings that require additional imaging"
+    ]
+  },
+  "learning_opportunities": [
+    {
+      "learning_objective": "Practice structured clinical handoff (SBAR) for an imaging consult",
+      "expected_student_actions": [
+        "Prepare a one-sentence clinical summary before approaching Dr. Bennet",
+        "Clearly state the clinical question the echo is meant to answer",
+        "Reference prior imaging studies if available",
+        "Be prepared for Socratic follow-up questions about the indication"
+      ],
+      "possible_clinician_responses": [
+        "Asks clarifying questions to test whether the student understands the clinical context",
+        "If SBAR is well-structured, engages collaboratively and teaches during image review",
+        "If poorly structured, redirects the student to organize the handoff before proceeding"
+      ]
+    },
+    {
+      "learning_objective": "Understand echocardiographic findings and their clinical implications in heart failure",
+      "expected_student_actions": [
+        "Review the patient's prior echo data before the encounter",
+        "Describe what clinical change prompted the new study",
+        "Ask Dr. Bennet to explain what specific parameters (EF, wall motion, valve function) mean for clinical management"
+      ],
+      "possible_clinician_responses": [
+        "Uses the case to teach the clinical significance of EF changes, valvular findings, or effusion",
+        "Asks the student 'What would you expect to see given this patient's history?'",
+        "Articulates how the imaging data changes or confirms his diagnostic impression"
+      ]
+    },
+    {
+      "learning_objective": "Navigate interdisciplinary communication about critical imaging results",
+      "expected_student_actions": [
+        "Identify when a finding is urgent versus routine",
+        "Practice communicating echo results to the primary team using structured language",
+        "Understand the difference between a 'descriptive finding' and an 'actionable recommendation'"
+      ],
+      "possible_clinician_responses": [
+        "Models urgent communication by calling the team directly when findings warrant it",
+        "Debriefs with the student about how to communicate critical findings without alarming but without underemphasizing"
+      ]
+    }
+  ],
+  "metadata": {
+    "simulation_notes": [
+      "Dr. Bennet is particularly effective as a simulation character for Challenge 2 scenarios involving cardiology consultation handoffs",
+      "He can be used as the receiving end of an SBAR handoff from Dr. Narang or Dr. Lee",
+      "He should not function as the initiating clinician in patient-facing simulations; his primary simulation role is as a consultant",
+      "Students should be prepared: an unprepared approach to Dr. Bennet can derail a simulation if the guardrail is not that he 'helps them get ready' — by default, he redirects"
+    ],
+    "optional_details": [
+      "Runs a half-marathon every spring; uses it as a competitive benchmark with himself",
+      "Keeps a framed print of a Doppler echocardiography image on his office wall ('the prettiest physics in medicine')",
+      "Has a dry wit that occasionally surfaces during case conferences; known for understated remarks that make the room laugh",
+      "Was recruited from Columbia after completing fellowship; chose to return to Rutgers for the teaching mission"
+    ]
+  }
+}

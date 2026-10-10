@@ -1,0 +1,976 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Visual inspection of right foot wound via camera",
+    "result": "Dressing soaked through with greenish-yellow drainage with foul odor. Periwound erythema extends from forefoot across mid-foot to approximately 2 cm below the ankle, margin not sharply demarcated. Surgical site at great toe has partially separated edges. No visible bone or black necrotic tissue.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Current temperature (home thermometer)",
+    "result": "38.1 C (100.6 F) oral, reported by patient",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Current heart rate (home pulse oximeter)",
+    "result": "102 bpm, regular",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "vitals",
+    "name": "Current blood pressure (home cuff)",
+    "result": "128/78 mmHg",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "vitals",
+    "name": "Current oxygen saturation (home pulse oximeter)",
+    "result": "96% on room air",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "vitals",
+    "name": "Respiratory rate (counted on camera)",
+    "result": "20 breaths/min",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Measure extent of erythema (patient marks border with pen, measures with tape)",
+    "result": "Erythema border now 11 cm proximal to original surgical margin, measured by patient self-marking with pen and tape via camera guidance; was 4 cm at discharge per clinician measurement from wound margin using photo documentation (home log photo). Note: the two measurements were taken by different observers using different techniques, so the comparison should be treated as an approximate trend rather than a precise, directly comparable measurement.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Monofilament/light touch sensation check, bilateral feet (patient self-test with cotton ball per instruction)",
+    "result": "Patient reports markedly reduced sensation to light touch on both feet, worse at the toes, with difficulty feeling the cotton ball at the distal aspects bilaterally.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Capillary refill, toes bilaterally (camera-guided)",
+    "result": "Right great toe refill 4 seconds (delayed); other toes and left foot refill under 2 seconds",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review hospital discharge summary",
+    "result": "Discharged after 6 days IV antibiotics and surgical debridement for right first-toe diabetic foot infection with surrounding cellulitis; osteomyelitis not evident on plain films at that time (plain films have limited sensitivity and do not definitively exclude bone infection). Cultures grew methicillin-susceptible Staphylococcus aureus (MSSA) and group B Streptococcus; discharged on amoxicillin-clavulanate 875/125 mg PO BID x14 days, new insulin glargine 14 units subcutaneous nightly, home dressing changes BID with wife as caregiver, follow-up in clinic in 9 days.",
+    "abnormal": false,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review home glucose log",
+    "result": "Readings over past 2 days range 260-340 mg/dL; no readings below 150 mg/dL recorded.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Amoxicillin-clavulanate 875/125 mg PO BID, insulin glargine 14 units SC nightly, metformin 1000 mg PO BID (home medication, continued), lisinopril 10 mg PO daily (home medication, continued).",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Ask patient to demonstrate insulin pen technique on camera",
+    "result": "Patient dials pen to 14 units correctly but hesitates on injection site rotation and is unsure whether air bubble must be cleared each time; does not prime the pen before the demonstrated dose.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Foot and lower-leg skin survey, bilateral, via camera",
+    "result": "Right foot: described erythema/edema as above. Left foot: skin intact, no ulceration, mild dryness, no erythema. Both feet: distal pulses not directly visualized by camera; patient reports no numbness changes other than longstanding neuropathy.",
+    "abnormal": true,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Pain assessment (0-10 scale)",
+    "result": "Right foot pain rated 3/10 at rest, patient notes this is similar to or less than pain at discharge despite worsening appearance; attributes to 'numbness.'",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Mental status and orientation check",
+    "result": "Alert and oriented x4, answers appropriately, no acute confusion.",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review footwear and offloading instructions from discharge",
+    "result": "Discharge instructions specify non-weight-bearing/offloading of right foot with wound boot provided; patient instructed to avoid prolonged standing or walking.",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "record",
+    "name": "Review antibiotic adherence against pharmacy refill/dosing record",
+    "result": "Pharmacy fill record shows a 14-day supply of amoxicillin-clavulanate dispensed at discharge with no early refill requested; pill count/dosing pattern consistent with twice-daily use, no gaps identified in the dispensing record.",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": [
+     "d8"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Worsening right foot surgical/diabetic infection with signs of ascending cellulitis and possible systemic sepsis response (fever, tachycardia, spreading erythema, purulent drainage) in a patient with poorly controlled diabetes two days after hospital discharge.",
+   "differential": [
+    "Progressing cellulitis/surgical site infection without systemic sepsis",
+    "Early sepsis secondary to diabetic foot infection",
+    "Osteomyelitis recurrence/extension",
+    "Deep vein thrombosis of the leg (less likely, no calf swelling/pain described)",
+    "Contact dermatitis or dressing irritation (does not explain fever/drainage)"
+   ],
+   "keyFindings": [
+    "Spreading erythema (approximately 4 cm at discharge, clinician-measured from wound margin via photo, to approximately 11 cm now, patient self-marked and tape-measured) with foul-smelling greenish drainage; note the two measurements used different observers and techniques, so the magnitude of change should be interpreted as an approximate trend, not an exact comparison",
+    "Subjective fever 38.1C and tachycardia 102 bpm with chills overnight",
+    "Delayed capillary refill in the affected toe",
+    "Hyperglycemia 260-340 mg/dL with inconsistent insulin administration",
+    "Patient has been weight-bearing on the foot against offloading instructions",
+    "Pain reported as mild due to underlying neuropathy, which may mask severity of worsening infection",
+    "Insulin pen technique has gaps (no priming, uncertain site rotation) contributing to erratic glucose control"
+   ],
+   "plan": [
+    "Escalate immediately to the discharging provider/surgical team via SBAR: new fever, tachycardia, markedly increased erythema, purulent malodorous drainage, and hyperglycemia in a patient 2 days post-op for diabetic foot infection with known MSSA/group B Streptococcus culture — recommend urgent in-person evaluation today, not wait for the 9-day follow-up",
+    "Do not independently diagnose sepsis or change antibiotic/insulin orders; this is outside RN scope — communicate findings and let the provider determine disposition (ED vs urgent clinic vs home health escalation)",
+    "Reinforce strict non-weight-bearing/offloading of the right foot until seen; discuss safe alternatives for getting to the corral (cane, wheelchair, asking spouse/family for help, deferring non-essential tasks)",
+    "Provide focused teaching on insulin pen priming and injection site rotation; arrange follow-up teaching or home health nursing visit if available",
+    "Educate on glucose log reporting and the importance of taking insulin at the prescribed time (nightly) rather than variable administration",
+    "Document objective wound measurements, photos if system allows, and vital signs trend to support the SBAR handoff, noting that discharge and current erythema measurements were taken by different observers using different techniques and should be framed as a trend rather than a precise delta",
+    "Arrange transportation given 70-mile distance from hospital; ask about resources (family, community health transport) to get to care today",
+    "Advise patient and wife on signs of worsening sepsis to seek emergency care immediately (confusion, worsening fever, rapid heart rate, inability to keep fluids down) while awaiting provider callback"
+   ],
+   "redFlags": [
+    "Fever and tachycardia in a post-surgical diabetic foot infection patient",
+    "Markedly increased erythema extent over 2 days (clinician-measured 4 cm at discharge vs. patient self-measured 11 cm now, measured differently but still concerning for rapid spread)",
+    "Purulent, foul-smelling drainage suggesting uncontrolled or recurrent infection",
+    "Delayed capillary refill in the affected digit",
+    "Persistent hyperglycemia with inconsistent insulin dosing increasing infection risk and impairing healing",
+    "Continued weight-bearing on an infected, neuropathic foot risking further tissue damage"
+   ],
+   "educationPoints": [
+    "Diabetic foot infections can worsen quickly after discharge; new fever, spreading redness, or increasing drainage are urgent, not wait-and-see, findings",
+    "Peripheral neuropathy can blunt pain perception, so pain level alone should not be used to judge how serious a foot infection is",
+    "Insulin pens must be primed before each use to ensure accurate dosing, and injection sites should be rotated to avoid lipohypertrophy and absorption problems",
+    "Consistent nightly basal insulin dosing is important for glucose control and wound healing; skipping or shifting timing increases risk of hyperglycemia",
+    "Offloading (not walking on the healing foot) is as important as antibiotics and dressing changes for wound healing",
+    "Patients living in rural/remote areas need an explicit, realistic transportation plan built into any urgent referral",
+    "When comparing wound measurements over time, note whether the same observer and technique were used; mixing clinician-measured and patient self-measured values introduces imprecision and should be acknowledged when reporting trends"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Hospital Discharge Summary",
+    "author": "Dr. A. Benally, General Surgery",
+    "date": "2 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "68-year-old male with type 2 diabetes mellitus admitted for right first-toe diabetic foot infection with surrounding cellulitis. Underwent surgical debridement of right great toe. Wound cultures grew methicillin-susceptible Staphylococcus aureus and group B Streptococcus, both susceptible to the discharge antibiotic. Plain films at admission did not show osteomyelitis; given the known low sensitivity of plain radiographs for early bone infection, this does not definitively rule it out. Treated with 6 days IV ampicillin-sulbactam, transitioned to oral amoxicillin-clavulanate 875/125 mg PO BID to complete a 14-day course. Started on insulin glargine 14 units SC nightly for persistently elevated inpatient glucose (metformin to be continued). Discharged home with wife performing BID dressing changes using provided supplies. Wound boot provided; patient instructed on strict non-weight-bearing/offloading of right foot. Follow-up in surgical clinic in 9 days or sooner if concerns. At discharge, erythema margin marked and measured at 4 cm from incision edge, photo on file."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "Discharge pharmacy reconciliation",
+    "date": "2 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Amoxicillin-clavulanate",
+        "875/125 mg",
+        "Oral",
+        "Twice daily",
+        "Foot infection, 14-day course"
+       ]
+      },
+      {
+       "cells": [
+        "Insulin glargine",
+        "14 units",
+        "Subcutaneous",
+        "Nightly",
+        "New diagnosis diabetes management, started this admission"
+       ]
+      },
+      {
+       "cells": [
+        "Metformin",
+        "1000 mg",
+        "Oral",
+        "Twice daily",
+        "Type 2 diabetes (home medication, continued)"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Daily",
+        "Hypertension (home medication, continued)"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Inpatient Labs at Discharge (2 days ago)",
+    "author": "Hospital Laboratory",
+    "date": "2 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "White blood cell count",
+        "11.8",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "9.4",
+        "%",
+        "4.0-5.6"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.0",
+        "mg/dL",
+        "0.6-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose, random",
+        "228",
+        "mg/dL",
+        "70-140"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "C-reactive protein",
+        "42",
+        "mg/L",
+        "0-10"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Home Glucose Log, Past 48 Hours",
+    "author": "Patient-reported home glucometer readings",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time",
+     "yLabel": "Blood glucose (mg/dL)",
+     "series": [
+      {
+       "name": "Fingerstick glucose",
+       "points": [
+        {
+         "x": "Day 1 AM",
+         "y": 260
+        },
+        {
+         "x": "Day 1 PM",
+         "y": 310
+        },
+        {
+         "x": "Day 2 AM",
+         "y": 340
+        },
+        {
+         "x": "Day 2 PM",
+         "y": 290
+        },
+        {
+         "x": "Today AM",
+         "y": 320
+        }
+       ]
+      }
+     ],
+     "refLow": 70,
+     "refHigh": 180
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Vital Signs Flowsheet, This Visit",
+    "author": "Patient-reported, charted by RN",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "Temp (C)",
+      "Pulse (bpm)",
+      "BP (mmHg)",
+      "SpO2 (%)",
+      "RR (breaths/min)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Today, start of visit",
+        "38.1",
+        "102",
+        "128/78",
+        "96",
+        "20"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Discharge Wound Photo Description and Measurement",
+    "author": "Discharge nursing note",
+    "date": "2 days ago",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "body": "At discharge, right great toe surgical site with mild surrounding erythema measured 4 cm from wound margin by clinician using photo documentation, no purulent drainage noted, dressing dry and intact. Photo documented in record for comparison at next visit. Note: this clinician-measured discharge value and the patient's self-marked, tape-measured value today use different observers and techniques, so the comparison should be interpreted as an approximate trend rather than a precise measurement."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Prior Clinic Note - Diabetic Peripheral Neuropathy (6 months ago)",
+    "author": "Dr. L. Yazzie, Primary Care",
+    "date": "6 months ago",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "body": "Patient with longstanding type 2 diabetes, poorly controlled, reports bilateral foot numbness and tingling for several years, consistent with diabetic peripheral neuropathy. Monofilament testing at that visit showed absent sensation at multiple sites bilaterally. Counseled extensively on daily foot checks and protective footwear given high risk for unnoticed injury."
+   },
+   {
+    "id": "d8",
+    "type": "medication_list",
+    "title": "Pharmacy Dispensing/Refill Record - Amoxicillin-Clavulanate",
+    "author": "Outpatient pharmacy",
+    "date": "2 days ago to today",
+    "release": {
+     "when": "action",
+     "ref": "a18"
+    },
+    "table": {
+     "columns": [
+      "Date dispensed",
+      "Medication",
+      "Quantity",
+      "Days supply",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "2 days ago (discharge)",
+        "Amoxicillin-clavulanate 875/125 mg",
+        "28 tablets",
+        "14 days",
+        "No early refill or replacement request logged to date"
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Post-discharge nursing follow-up, day 2 after hospitalization for right diabetic foot infection"
+   },
+   {
+    "label": "Problem list",
+    "value": "Type 2 diabetes mellitus (newly started on insulin), right great toe surgical site infection post-debridement (MSSA/group B Streptococcus), diabetic peripheral neuropathy, hypertension"
+   },
+   {
+    "label": "Medications",
+    "value": "Amoxicillin-clavulanate 875/125 mg PO BID, insulin glargine 14 units SC nightly, metformin 1000 mg PO BID, lisinopril 10 mg PO daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "At discharge 2 days ago: Temp 37.0 C, Pulse 84, BP 134/80, SpO2 98%"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Influenza vaccine this season, Tdap up to date, pneumococcal vaccine up to date"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. L. Yazzie; Surgery: Dr. A. Benally; RN telehealth follow-up today"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "follow-up / focused assessment with escalation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for call",
+    "chart": "Patient reports foot 'looks about the same' two days after hospital discharge for foot infection.",
+    "says": "They told me to call if anything changed, but honestly my foot looks about the same as when I left.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "overnight symptoms",
+    "chart": "Patient reports chills overnight.",
+    "says": "I was pretty cold last night, shivering under two blankets even though it wasn't cold in the house.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "dressing appearance",
+    "chart": "Wife changes dressing twice daily; noted new drainage this morning.",
+    "says": "My wife said there was some green stuff on the bandage this morning when she changed it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "foot pain level",
+    "chart": "Pain rated 3/10, similar to pain at discharge.",
+    "says": "It doesn't hurt much more than it did before, maybe a 3 out of 10.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "redness spread",
+    "chart": "Patient has not specifically measured redness himself but notices it seems larger.",
+    "says": "The red part does seem bigger than before, going further up my foot now.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "activity since discharge",
+    "chart": "Patient has been walking to the corral daily in an old boot instead of resting the foot.",
+    "says": "I've been putting on my old work boot and walking out to feed the horses, maybe twenty, thirty yards each way.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "weight-bearing instructions",
+    "chart": "Patient recalls being told to stay off the foot but found it hard to avoid entirely.",
+    "says": "They did say something about staying off it, but somebody's got to feed the animals.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "medications",
+    "topic": "insulin timing",
+    "chart": "Patient has been taking insulin glargine in the morning on some days instead of at night as prescribed, and skipped it twice.",
+    "says": "I've been doing the shot in the morning most days, it's easier to remember with my coffee. A couple times I just wasn't sure about the pen so I skipped it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "medications",
+    "topic": "insulin pen confidence",
+    "chart": "Patient reports uncertainty about proper pen technique, specifically priming and site rotation.",
+    "says": "Nobody really showed me if I'm supposed to squirt a little out first or how to pick a different spot each time.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "medications",
+    "topic": "antibiotic adherence",
+    "chart": "Patient reports taking antibiotic as prescribed twice daily, no missed doses.",
+    "says": "I've been real careful with the antibiotic pills, taking them morning and night like they said.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "home diabetes pills",
+    "chart": "Patient continues metformin twice daily as before, no changes noted.",
+    "says": "The metformin I've taken for years, no trouble with that one.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "medications",
+    "topic": "blood pressure pill",
+    "chart": "Patient continues lisinopril daily without issues.",
+    "says": "My blood pressure pill, I just take that every morning, no problem there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "hpi",
+    "topic": "glucose readings",
+    "chart": "Home glucose readings have ranged 260-340 mg/dL over the past two days.",
+    "says": "The numbers on my little machine have been pretty high, like in the 200s and 300s.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "fever feeling",
+    "chart": "Patient reports feeling warm and sweaty along with the chills, took temperature this morning showing 38.1C.",
+    "says": "I felt kind of hot and sweaty too, so I took my temperature this morning and it said 100.6.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "appetite and intake",
+    "chart": "Appetite slightly reduced over past day, drinking fluids normally.",
+    "says": "I haven't felt much like eating today, but I'm still drinking water fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "confusion or dizziness",
+    "chart": "No confusion, no dizziness, no lightheadedness reported.",
+    "says": "No, my head feels clear, no dizziness or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "nausea or vomiting",
+    "chart": "Denies nausea or vomiting.",
+    "says": "No, nothing like that, my stomach's fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies burning with urination or urinary frequency changes.",
+    "says": "No trouble going to the bathroom, nothing unusual there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "calf swelling or pain",
+    "chart": "Denies calf swelling, redness, or pain in either leg.",
+    "says": "My legs feel the same as always, no swelling or soreness in my calves.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "foot numbness history",
+    "chart": "Known longstanding diabetic peripheral neuropathy with reduced sensation in both feet for several years.",
+    "says": "My feet have been numb for a long time now, mostly the toes, both sides.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "Diagnosed with type 2 diabetes approximately 10 years ago, previously managed with metformin alone until this hospitalization.",
+    "says": "I've had the sugar diabetes for about ten years, just took the metformin pills until this last time in the hospital.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with wife 70 miles from the hospital in a rural area of northern Arizona; wife is primary caregiver and dressing-change assistant.",
+    "says": "My wife and I live out on our place, it's about seventy miles to the hospital from here.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "transportation",
+    "chart": "Transportation to hospital or clinic requires arranging a vehicle and takes over an hour each way; no public transit available.",
+    "says": "Getting to the hospital means somebody's got to drive us, it's over an hour on the highway.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "occupation history",
+    "chart": "Retired heavy-equipment operator, now keeps horses and does light ranch work.",
+    "says": "I drove heavy equipment for thirty-some years before I retired, now I just keep a few horses.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "worry about hospital return",
+    "chart": "Patient expresses reluctance to return to hospital so soon, worried about cost and being away from wife and animals again.",
+    "says": "I really don't want to go back in there again so soon, between the cost and leaving my wife alone with the animals.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "trust in care team",
+    "chart": "Patient expresses some hesitation about being a bother by calling with concerns.",
+    "says": "I didn't want to bother anybody, figured I'd just wait and see how it looks at the next appointment.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "nutrition",
+    "topic": "diet pattern",
+    "chart": "Diet has included more starchy foods than usual this week due to being home-bound and wife cooking simple meals.",
+    "says": "We've been eating a lot of beans and bread this week, easier to make while I'm resting.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "other foot condition",
+    "chart": "Left foot has had an intact, unremarkable appearance; patient reports no new issues with it.",
+    "says": "My other foot, the left one, seems fine, no new problems there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "family",
+    "topic": "family history of diabetes",
+    "chart": "Mother and one sibling also had type 2 diabetes.",
+    "says": "My mother had the sugar too, and one of my brothers.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "adherence",
+    "topic": "next appointment timing",
+    "chart": "Scheduled follow-up with surgery clinic in 9 days from discharge.",
+    "says": "They set me up to go back in nine days to get it checked.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "substance",
+    "topic": "alcohol and tobacco use",
+    "chart": "Denies tobacco use; drinks alcohol rarely, less than once a month.",
+    "says": "I don't smoke, and I maybe have a beer once a month if that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No, I've never had a bad reaction to any medicine that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f1",
+    "artifactId": "d6",
+    "patientClaim": "Patient says the foot 'looks about the same' as when he left hospital.",
+    "recordEvidence": "The discharge wound note records mild erythema about 4 cm from the wound margin with a dry, intact dressing and no purulent drainage. Today the dressing is soaked with foul-smelling greenish drainage and the redness reaches the mid-foot and beyond.",
+    "teachingPoint": "A stoic patient with neuropathy may sincerely report no change. Compare what you see with the documented baseline rather than relying on the patient's summary, and name the difference to him plainly and without blame."
+   },
+   {
+    "id": "m2",
+    "factId": "f8",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports taking insulin glargine in the morning on some days and skipping it twice, rather than nightly as prescribed.",
+    "recordEvidence": "Medication list and discharge summary specify insulin glargine 14 units subcutaneous nightly; the home glucose log shows persistently elevated readings 260-340 mg/dL consistent with the reported inconsistent/mistimed dosing.",
+    "teachingPoint": "Mismatched insulin timing and missed doses directly explain the hyperglycemia seen in the glucose log; reconciling the medication list against actual patient behavior is essential to identify correctable causes of poor glucose control, especially during active infection when glycemic control affects healing."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize signs of worsening infection and possible systemic sepsis response in a post-surgical diabetic foot patient and escalate urgently via SBAR rather than deferring to the scheduled follow-up.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f5",
+     "f14"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify barriers to insulin adherence (timing errors, missed doses, pen technique gaps) and provide appropriate patient education within RN scope.",
+    "factIds": [
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a13",
+     "a12"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Correlate hyperglycemia with insulin administration errors and infection severity, using the home glucose log and medication list.",
+    "factIds": [
+     "f8",
+     "f13"
+    ],
+    "actionIds": [
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Assess for diabetic peripheral neuropathy and its effect on symptom reporting (reduced pain despite worsening infection) and reinforce offloading/foot protection education.",
+    "factIds": [
+     "f4",
+     "f20",
+     "f6",
+     "f7"
+    ],
+    "actionIds": [
+     "a8",
+     "a15",
+     "a17"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Elicit psychosocial and logistical barriers (distance, transportation, reluctance to return to hospital) that affect the escalation plan, and problem-solve around them.",
+    "factIds": [
+     "f22",
+     "f23",
+     "f25",
+     "f26"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o6",
+    "text": "Identify a mismatch between patient-reported medication adherence and objective record evidence, and respond by exploring further rather than taking the history at face value.",
+    "factIds": [
+     "f10",
+     "f8"
+    ],
+    "actionIds": [
+     "a18",
+     "a11"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Raymond Tso",
+   "age": 68,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Navajo (Diné)",
+   "occupation": "Retired heavy-equipment operator",
+   "language": "English",
+   "appearance": "An older man with a weathered, sun-worn face and short gray hair, wearing a plain flannel shirt. He is seated in a modestly furnished living room with wood paneling, leaning forward slightly with his right foot propped on a stool wrapped in a bulky dressing. His expression is calm but tired, and he pauses to think before answering each question."
+  },
+  "persona": {
+   "personality": "Quiet, thoughtful, stoic; does not volunteer complaints readily and tends to downplay symptoms.",
+   "communicationStyle": "Speaks slowly and deliberately, pauses before answering, gives brief factual answers unless gently drawn out further.",
+   "healthLiteracy": "low",
+   "emotionalState": "Calm on the surface but privately worried about returning to the hospital and burdening his wife or finances.",
+   "background": "Worked thirty-some years operating heavy equipment for a regional construction company before retiring to a small property with his wife, where they keep a few horses. They live about seventy miles from the nearest hospital in a rural part of northern Arizona. His wife has taken on most of the caregiving tasks since his surgery.",
+   "speechExamples": [
+    "It looks about the same to me, I guess.",
+    "I don't want to make a big fuss over nothing.",
+    "My wife handles the bandage, she'd know better than me what it looks like.",
+    "I figured I'd just wait for the appointment in nine days.",
+    "I don't want to go back in there again so soon if I can help it."
+   ],
+   "concerns": [
+    "Having to return to the hospital so soon after just getting home",
+    "The cost and logistics of another hospital visit, including the long drive",
+    "Being a burden to his wife who is already doing a lot of the caregiving",
+    "Whether the horses and ranch chores will get done if he can't do them"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the home health/telehealth RN conducting a scheduled post-discharge follow-up call with Raymond Tso, 68, who was discharged 2 days ago after surgical debridement and IV antibiotics for a right great toe diabetic foot infection. He was started on new insulin glargine at discharge. Your task is to assess his wound, vital signs, glucose control, and medication adherence, and determine whether this can wait for his scheduled follow-up in 9 days or needs urgent escalation.",
+   "chiefComplaint": "Post-discharge follow-up after diabetic foot infection with surgical debridement; patient reports foot 'looks about the same.'",
+   "openingLine": "Hello, yes, this is Raymond. I guess you're calling about my foot. It looks about the same to me, nothing too different.",
+   "tasks": [
+    "Perform a focused remote assessment of the surgical wound, vital signs, and glucose control",
+    "Take a medication history and review adherence to the discharge plan",
+    "Assess safety risks related to weight-bearing and foot care",
+    "Determine urgency and formulate an SBAR escalation to the provider if indicated",
+    "Provide patient-centered education on wound care and insulin administration"
+   ],
+   "timeLimitMin": 20
+  },
+  "setting": "Telehealth video visit; patient at home in a rural property in northern Arizona, approximately 70 miles from the hospital.",
+  "specialty": "Medical-Surgical / Home Health Nursing",
+  "summary": "A 68-year-old man two days post-discharge from surgical debridement and IV antibiotics for a diabetic foot infection presents for a routine telehealth nursing follow-up but shows new fever, tachycardia, spreading wound erythema, and purulent drainage alongside poorly controlled glucose and inconsistent insulin administration. The case trains learners to recognize escalating infection risk despite a stoic patient's minimization, reconcile medication adherence claims against objective evidence, and formulate an urgent SBAR handoff while addressing real rural logistical barriers to care.",
+  "title": "Post-Discharge Nursing Follow-Up: Worsening Diabetic Foot Infection After Debridement",
+  "professions": [
+   "nursing"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

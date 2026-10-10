@@ -1,0 +1,823 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Verify patient identity (two identifiers)",
+    "result": "Patient confirms full name Joyce Mensah and date of birth 03/14/1970; matches registration record. Identity verified per two-identifier policy.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review original specimen collection details from courier/collection log",
+    "result": "Collection site log: specimen collected 2:10 PM, picked up by courier 4:45 PM, received in lab 7:05 PM (~5 hours post-collection), transported unrefrigerated in delivery van on an 89°F day. Specimen was never centrifuged/separated prior to transport. Log notes draw was described by site staff as 'difficult' but does not detail number of attempts, tourniquet time, or technique used — recommend confirming collection details directly with patient.",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "lab",
+    "name": "Review yesterday's critical potassium result and sample flags",
+    "result": "Potassium 6.3 mmol/L (H, critical; ref 3.5-5.1 mmol/L). Hemolysis index 2+ flagged by analyzer. LDH elevated. Sodium 139 mmol/L (normal), creatinine 1.1 mg/dL (normal), glucose 104 mg/dL (normal).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Compare to prior potassium result 3 months ago",
+    "result": "Potassium 3 months ago: 4.6 mmol/L (normal, no hemolysis flag, routine venous draw, same medication regimen reported at that visit).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Assess probability that result reflects true hyperkalemia vs. pre-analytical hemolysis artifact",
+    "result": "Documented assessment: markedly discordant from baseline, hemolysis index 2+, prolonged tourniquet time with fist pumping, delayed unspun transport in heat, and normal creatinine/sodium together strongly suggest spurious elevation from hemolysis and specimen handling; however patient is on an ACE inhibitor, a potassium-sparing diuretic, and a potassium-based salt substitute, so true hyperkalemia cannot be excluded without a clean recollection.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Arrange urgent same-day recollection with special handling instructions",
+    "result": "Same-day STAT recollection ordered: free-flowing draw, tourniquet released within 1 minute, no fist pumping, immediate gentle inversion, prompt delivery to lab (or walk-in collection site) for processing within 60 minutes, specimen to be centrifuged and separated promptly on arrival; patient scheduled for 2:00 PM today at nearby walk-in draw station.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Report critical potassium value to ordering provider per critical-value protocol",
+    "result": "Critical value 6.3 mmol/L called to ordering provider's office at 9:40 AM; read-back confirmed with on-call nurse; documented time, name of recipient, and that recollection is already arranged. Provider will determine any clinical action pending repeat result.",
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "test",
+    "name": "Point-of-care style symptom screen for hyperkalemia (ask patient to report any fatigue, palpitations, weakness, nausea)",
+    "result": "Patient reports feeling well overall; denies palpitations, muscle weakness, numbness/tingling, nausea, or shortness of breath.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Ask about diet and salt substitute use, and check patient's understanding of its contents",
+    "result": "Patient mentions trying to eat healthier and cut back on salt per her doctor's advice; when asked more specifically about any salt substitutes or seasonings used regularly, she becomes a little hesitant before confirming she uses a 'no-salt' seasoning at most meals. When the learner explains that this type of substitute is typically potassium chloride-based and checks her understanding, she expresses surprise, saying she thought it was just a 'healthier salt' and did not know it contained potassium.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review medication list for other potassium-affecting drugs",
+    "result": "Current medication list reviewed: lisinopril 20 mg daily, spironolactone 25 mg daily; no NSAIDs, no potassium supplements beyond salt substitute, no trimethoprim-sulfamethoxazole or other high-risk interacting drugs listed.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Instruct patient on fist-clenching avoidance and arm positioning for recollection",
+    "result": "Patient coached: keep arm relaxed and straight during draw, avoid making a fist or pumping hand, let phlebotomist know if tourniquet feels tight or prolonged, request release of tourniquet as soon as blood flow starts.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Confirm patient's current location and ability to reach a draw site same day",
+    "result": "Patient confirms she is near end of a home-care shift in Worcester and can reach the affiliated walk-in draw site within 2 hours; transportation available via her own car.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Determine whether this role should advise changing or holding medications",
+    "result": "Outside laboratory scope: no instruction given to stop or adjust lisinopril, spironolactone, or salt substitute; patient advised that any medication decisions will come from her prescribing provider after reviewing the repeat result.",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "lab_report",
+    "title": "Chemistry Panel - Yesterday (Critical Result)",
+    "date": "Yesterday, 7:45 PM",
+    "author": "Central Lab, Worcester Regional Laboratory",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Potassium",
+        "6.3",
+        "mmol/L",
+        "3.5-5.1"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.1",
+        "mg/dL",
+        "0.6-1.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "104",
+        "mg/dL",
+        "70-110"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDH",
+        "310",
+        "U/L",
+        "100-220"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "other",
+    "title": "Specimen Handling & Hemolysis Flag Report",
+    "date": "Yesterday, 7:05 PM (receipt)",
+    "author": "Central Lab Pre-Analytical QA",
+    "release": {
+     "when": "start"
+    },
+    "body": "Hemolysis index: 2+ (moderate-to-marked hemolysis, visible pink/red tinge in serum). LDH disproportionately elevated relative to other analytes, consistent with in vitro hemolysis (see chemistry panel for value). Specimen type: serum separator tube, received NOT centrifuged. Time from collection to receipt: 5 hours 0 minutes (collected 2:10 PM, received 7:05 PM). Transport condition: ambient temperature, non-refrigerated courier van; outdoor ambient temperature recorded at 89°F at time of transport. Collection site notes: 'Draw described as difficult by collecting staff; patient reported discomfort during procedure.' Specific details of number of attempts, tourniquet duration, and technique were not recorded in this QA report. QA comment: Result flagged for pre-analytical review prior to release; critical value called per protocol pending recollection recommendation."
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Chemistry Panel - 3 Months Ago (Baseline)",
+    "date": "3 months ago",
+    "author": "Central Lab, Worcester Regional Laboratory",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Potassium",
+        "4.6",
+        "mmol/L",
+        "3.5-5.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.0",
+        "mg/dL",
+        "0.6-1.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "98",
+        "mg/dL",
+        "70-110"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Active as of this visit",
+    "author": "Primary Care Clinic EHR",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lisinopril",
+        "20 mg",
+        "Once daily",
+        "Hypertension"
+       ]
+      },
+      {
+       "cells": [
+        "Spironolactone",
+        "25 mg",
+        "Once daily",
+        "Hypertension"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "chart",
+    "title": "Potassium Trend - Last 3 Months vs. Today",
+    "date": "Today",
+    "author": "Laboratory Information System",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Date",
+     "yLabel": "Potassium (mmol/L)",
+     "refLow": 3.5,
+     "refHigh": 5.1,
+     "series": [
+      {
+       "name": "Potassium",
+       "points": [
+        {
+         "x": "3 months ago",
+         "y": 4.6
+        },
+        {
+         "x": "Yesterday (unspun, delayed, hemolyzed)",
+         "y": 6.3
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Critical Value Call Documentation",
+    "date": "Today, 9:40 AM",
+    "author": "MLS Student / Laboratory Communication Record",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "body": "Critical value potassium 6.3 mmol/L called to Dr. ordering provider's office. Received by on-call nurse, read-back confirmed accurate. Informed that specimen showed 2+ hemolysis and >4 hour delay in unspun transport, raising strong suspicion of pre-analytical artifact; same-day recollection already arranged for 2:00 PM today at affiliated walk-in draw site. Provider's office acknowledged and will await repeat result before any clinical decision."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Critical potassium result (6.3 mmol/L) on routine bloods drawn yesterday; laboratory callback for recollection and pre-analytical investigation"
+   },
+   {
+    "label": "Problem list",
+    "value": "Hypertension"
+   },
+   {
+    "label": "Medications",
+    "value": "Lisinopril 20 mg daily; Spironolactone 25 mg daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 132/78, HR 76, documented at primary care visit 3 months ago"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider (ordering clinician); Central Laboratory, Worcester Regional Laboratory"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "Recollection / pre-analytical investigation telehealth visit",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "callback about blood test",
+    "chart": "Patient called back regarding a critical potassium result from yesterday's routine blood draw; reports feeling well, no symptoms.",
+    "says": "They called and said my potassium came back really high and I need to come back in? I feel totally fine though.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "draw difficulty yesterday",
+    "chart": "Patient reports a difficult venipuncture yesterday requiring multiple attempts.",
+    "says": "Yesterday was rough, the girl had to poke me like three times before she got the vein.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "tourniquet duration",
+    "chart": "Patient recalls tourniquet left on for an extended period during the draw.",
+    "says": "That rubber band thing was on my arm for a good while, it started to hurt a little.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "fist pumping during draw",
+    "chart": "Patient was instructed to pump her fist during the collection to help find the vein.",
+    "says": "She kept telling me to make a fist and pump it, like squeeze, let go, squeeze, let go.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "timing of yesterday's visit",
+    "chart": "Blood draw occurred around 2:00 PM yesterday afternoon at a satellite collection site.",
+    "says": "That was early afternoon, maybe around two o'clock, right after my lunch break.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f6",
+    "category": "ros",
+    "topic": "muscle weakness",
+    "chart": "Denies muscle weakness.",
+    "says": "No, my arms and legs feel normal, no weakness at all.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Denies palpitations or irregular heartbeat.",
+    "says": "My heart feels fine, no racing or skipping that I noticed.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness or tingling in extremities.",
+    "says": "No tingling or numbness anywhere, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "nausea or GI symptoms",
+    "chart": "Denies nausea, vomiting, or diarrhea.",
+    "says": "Stomach's been fine, no nausea or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "shortness of breath",
+    "chart": "Denies shortness of breath or chest tightness.",
+    "says": "Breathing's normal, no tightness in my chest.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "blood pressure medications",
+    "chart": "Takes lisinopril 20 mg daily and spironolactone 25 mg daily for hypertension, both taken as usual yesterday morning.",
+    "says": "I take my two pressure pills every morning, took them yesterday same as always.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "nutrition",
+    "topic": "salt substitute use",
+    "chart": "Uses a potassium chloride-based salt substitute at most meals for approximately one year; initially hesitant to mention it, discloses when asked specifically and directly about any salt substitutes or seasonings.",
+    "says": "Oh... I use that no-salt seasoning, the one with potassium in it, almost every meal. Been doing that about a year now since my doctor said to cut back on salt.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "nutrition",
+    "topic": "diet pattern",
+    "chart": "Reports typical diet includes bananas, leafy greens, and home-cooked West African stews; no unusual recent dietary changes.",
+    "says": "I eat pretty normal, some bananas, greens, my soups and stews, nothing different lately.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "pmh",
+    "topic": "kidney history",
+    "chart": "No known history of kidney disease.",
+    "says": "Nobody's ever told me anything's wrong with my kidneys.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "No history of diabetes.",
+    "says": "I don't have sugar problems, no diabetes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "hpi",
+    "topic": "arm used for draw",
+    "chart": "Blood was drawn from the right antecubital area; no bruising reported today.",
+    "says": "They used my right arm, inside the elbow. It's a little sore but no big bruise.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "occupation and schedule",
+    "chart": "Works as a home health aide; was on a work break at the time of the draw and had limited time for the appointment.",
+    "says": "I'm a home health aide, I only had a quick break to go get that blood work done.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "psychosocial",
+    "topic": "needle anxiety",
+    "chart": "Expresses reluctance about another needle stick given yesterday's difficult experience.",
+    "says": "Honestly I'm not thrilled about going through that again, my arm's still a little tender.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "social",
+    "topic": "transportation and time constraints",
+    "chart": "Reports being busy with work shifts and limited free time today but can arrange to go to a draw site.",
+    "says": "I'm in the middle of my shift practically, but I guess I can swing by somewhere if it's quick.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "adherence",
+    "topic": "medication adherence",
+    "chart": "Reports taking both blood pressure medications daily without missed doses, including yesterday.",
+    "says": "I don't miss my pills, I take them every single morning like clockwork.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "hpi",
+    "topic": "recent exercise of draw arm",
+    "chart": "Denies recent heavy lifting or exercise involving the arm used for the draw.",
+    "says": "No, I haven't been lifting anything heavy with that arm or working out.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "hpi",
+    "topic": "recent injury or injections",
+    "chart": "Denies recent injury, injection, or IV line placement in either arm.",
+    "says": "No shots or IVs or anything like that recently.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "other",
+    "topic": "fasting status for draw",
+    "chart": "Was not required to fast for this panel; ate breakfast about 3 hours before the draw.",
+    "says": "I didn't have to fast, I had my breakfast before I went, maybe three hours before.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f24",
+    "category": "family",
+    "topic": "family history of kidney disease",
+    "chart": "No known family history of kidney disease; mother had hypertension.",
+    "says": "My mother had high blood pressure too, but no kidney trouble that I know of in the family.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "prior lab result comparison",
+    "chart": "Patient recalls her last blood test a few months ago was 'normal' per her doctor.",
+    "says": "Last time I had blood work, a few months back, the doctor said everything looked fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "understanding of today's call",
+    "chart": "Initially unsure why a repeat draw is needed since she feels well; open to explanation.",
+    "says": "I don't really get why I need to come back in if nothing feels wrong with me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "other",
+    "topic": "collection site identity",
+    "chart": "Confirms the draw was done at a satellite collection site, not her usual primary care office.",
+    "says": "It wasn't at my regular doctor's office, it was that other little lab place across town.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "adherence",
+    "topic": "willingness to follow new draw instructions",
+    "chart": "Willing to follow instructions for a gentler recollection if it reduces difficulty.",
+    "says": "If there's a way to make it go easier this time, I'm all for it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "ros",
+    "topic": "recent illness or vomiting/diarrhea causing dehydration",
+    "chart": "Denies recent vomiting, diarrhea, or illness that could cause dehydration.",
+    "says": "I haven't been sick, no stomach bug or anything like that recently.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "understanding of salt substitute ingredients",
+    "chart": "Was unaware that the salt substitute contains potassium chloride until it is explained further; thought it was just a 'healthier salt.' This surfaces only once the learner specifically explains what the substitute contains and checks her understanding.",
+    "says": "Wait, that stuff has potassium in it? I just thought it was the heart-healthy salt, I didn't know it had potassium in it.",
+    "tier": "hidden",
+    "importance": "critical"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Verify patient identity using two identifiers before discussing results or arranging recollection.",
+    "factIds": [],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify multiple pre-analytical factors (prolonged tourniquet time, fist pumping, difficult multi-attempt draw, delayed unspun transport in heat, hemolysis index 2+) that can spuriously elevate potassium, and distinguish these from true hyperkalemia risk factors.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4"
+    ],
+    "actionIds": [
+     "a2",
+     "a3",
+     "a5"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Recognize that medications (ACE inhibitor, potassium-sparing diuretic) and potassium-containing salt substitute use raise genuine concern for hyperkalemia, so the abnormal result cannot be dismissed as artifact alone despite strong pre-analytical evidence.",
+    "factIds": [
+     "f11",
+     "f12",
+     "f30"
+    ],
+    "actionIds": [
+     "a10",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explain the need for urgent recollection to the patient in plain, reassuring language and arrange a same-day draw with corrected technique.",
+    "factIds": [
+     "f18",
+     "f19",
+     "f26",
+     "f28"
+    ],
+    "actionIds": [
+     "a7",
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Report the critical potassium value to the ordering provider per protocol, documenting the call and read-back, while staying within laboratory scope by not advising on medication changes.",
+    "factIds": [],
+    "actionIds": [
+     "a8",
+     "a16"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Use the three-month-prior potassium trend and today's normal creatinine/sodium to support clinical reasoning about artifact versus true elevation.",
+    "factIds": [
+     "f25"
+    ],
+    "actionIds": [
+     "a4",
+     "a5"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Spuriously elevated potassium (pseudohyperkalemia) most likely due to pre-analytical hemolysis and specimen mishandling (prolonged tourniquet time with fist pumping during a difficult multi-attempt draw, plus 5-hour delayed unspun transport in hot conditions), superimposed on a patient with genuine risk factors for true hyperkalemia (ACE inhibitor, potassium-sparing diuretic, potassium chloride salt substitute) that cannot be fully excluded without a clean recollection.",
+   "differential": [
+    "Pre-analytical hemolysis/pseudohyperkalemia from traumatic draw and delayed/unrefrigerated transport",
+    "True mild-to-moderate hyperkalemia from combined ACE inhibitor + spironolactone + potassium-based salt substitute",
+    "Combination of both: baseline mild true elevation further exaggerated by hemolysis artifact",
+    "Laboratory analyzer or specimen labeling error (less likely given clear chain-of-custody and QA documentation)"
+   ],
+   "keyFindings": [
+    "Potassium 6.3 mmol/L critical, up from 4.6 mmol/L three months ago",
+    "Hemolysis index 2+ and elevated LDH flagged on the analyzer",
+    "Specimen received 5 hours post-collection, unspun, transported unrefrigerated on an 89°F day",
+    "Documented difficult draw: 3 attempts, ~4 minute tourniquet time, instructed fist pumping",
+    "Sodium, creatinine, and glucose all normal, arguing against renal failure or severe systemic illness as the cause",
+    "Patient on lisinopril and spironolactone, plus regular use of a potassium chloride salt substitute she did not realize contained potassium",
+    "Patient asymptomatic: no weakness, palpitations, numbness, nausea, or dyspnea"
+   ],
+   "plan": [
+    "Arrange urgent same-day recollection using a free-flowing draw technique: minimal tourniquet time (<1 minute), no fist pumping, gentle handling, and rapid transport with prompt centrifugation/separation (within 60 minutes)",
+    "Report the critical potassium value to the ordering provider with read-back confirmation, including pre-analytical concerns and recollection plan already in motion",
+    "Document pre-analytical investigation findings (collection log, hemolysis index, transport delay) in the laboratory communication record",
+    "Do not advise the patient to stop, hold, or adjust lisinopril, spironolactone, or the salt substitute; defer all medication decisions to the ordering provider pending the repeat result",
+    "Educate the patient in plain language about why a repeat draw is needed and about the potassium content of her salt substitute, while clarifying that the laboratory cannot provide dietary or medication instructions beyond general education",
+    "Flag for follow-up: ensure repeat result reaches the ordering provider promptly and confirm it is reviewed before the end of the day"
+   ],
+   "redFlags": [
+    "If recollected potassium remains critically elevated, this needs immediate provider notification given patient's ACE inhibitor/spironolactone/salt substitute combination",
+    "Any emergence of symptoms (palpitations, weakness, numbness) before recollection should prompt immediate escalation to the ordering provider or emergency care rather than waiting for the scheduled draw",
+    "Persistent hemolysis or pre-analytical problems on repeat draw warrant escalation to collection site supervisor for technique review"
+   ],
+   "educationPoints": [
+    "Prolonged tourniquet application and fist pumping during venipuncture can falsely elevate potassium by promoting local efflux of potassium from muscle and red cells",
+    "Hemolysis releases intracellular potassium into serum, and even non-visible hemolysis can be detected by the analyzer's hemolysis index",
+    "Delayed, unrefrigerated, unspun transport allows continued cellular metabolism and potassium leakage from blood cells, further elevating measured potassium",
+    "Salt substitutes are commonly potassium chloride-based and are an under-recognized contributor to hyperkalemia risk, especially combined with ACE inhibitors and potassium-sparing diuretics",
+    "Normal sodium, creatinine, and glucose alongside a markedly abnormal potassium and hemolysis flag should raise suspicion for a pre-analytical artifact rather than acute renal or metabolic failure",
+    "Laboratory professionals report critical values to providers and investigate pre-analytical causes, but medication and treatment decisions remain outside their scope and must be deferred to the ordering clinician"
+   ]
+  },
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f25",
+    "artifactId": "d1",
+    "patientClaim": "Patient recalls her last blood test a few months ago was 'normal' and does not initially recognize how different today's critical value is from that baseline.",
+    "recordEvidence": "Chemistry panel from 3 months ago (d3) shows potassium 4.6 mmol/L, clearly normal, while yesterday's result (d1) shows 6.3 mmol/L flagged critical with 2+ hemolysis - a dramatic and inconsistent jump that the patient does not initially appreciate as significant.",
+    "teachingPoint": "Patients may not recognize the clinical significance of a dramatic change between two 'normal-feeling' visits; the learner must use the trend data to explain why this result cannot simply be dismissed as a lab mistake or ignored, while also recognizing the hemolysis evidence as the most likely explanation."
+   },
+   {
+    "id": "m2",
+    "factId": "f30",
+    "artifactId": "d4",
+    "patientClaim": "Patient did not realize her salt substitute contained potassium and considers it just a 'healthier salt' unrelated to her blood test.",
+    "recordEvidence": "Medication list (d4) and clinical reasoning show she is on lisinopril (ACE inhibitor) and spironolactone (potassium-sparing diuretic) with no documented potassium supplement, yet her regular use of a potassium chloride-based salt substitute is a significant unlisted source of dietary potassium intake not captured anywhere in the formal medication list.",
+    "teachingPoint": "Salt substitutes are frequently omitted from medication reconciliation because patients view them as food, not medicine; the learner should recognize this gap and understand why dietary potassium sources must be explored directly rather than relying on the medication list alone."
+   },
+   {
+    "id": "m3",
+    "factId": "f2",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports a difficult venipuncture yesterday requiring multiple attempts, with the tourniquet left on a long time and being told to pump her fist.",
+    "recordEvidence": "The pre-analytical QA report (d2) only documents that the draw was 'difficult' per collecting staff, without recording number of attempts, tourniquet duration, or fist-pumping instruction - the specific technique details are missing from the formal log and must be obtained directly from the patient.",
+    "teachingPoint": "Collection logs and QA reports do not always capture granular technique details; interviewing the patient directly about her experience of the draw can reveal pre-analytical error sources that are not documented anywhere in the formal record."
+   }
+  ],
+  "patient": {
+   "name": "Joyce Mensah",
+   "age": 55,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Ghanaian-American",
+   "occupation": "Home health aide",
+   "language": "English (fluent, Ghanaian-accented)",
+   "appearance": "A woman in her mid-fifties with a sturdy build, short natural hair pulled back under a patterned headwrap, wearing light blue scrubs from her job. She is seated in what looks like a car parked outside a client's house, late-morning light coming through the windshield, phone propped on the dashboard, occasionally glancing at the time.",
+   "portrait": "/portraits/medical-laboratory-science-joyce-mensah-potassium-recollect.jpg"
+  },
+  "persona": {
+   "personality": "Practical, plain-spoken, a little guarded about admitting she skipped details, but warms up with respectful, clear explanation.",
+   "communicationStyle": "Direct and brief, tends to answer the question asked without elaborating unless prompted; uses everyday language, not medical terms.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about the word 'critical' but mostly impatient and skeptical since she feels physically fine; softens once she understands the reasoning.",
+   "background": "Joyce immigrated from Ghana over 20 years ago and has worked as a home health aide in Worcester for the past 12 years, often working back-to-back client shifts with little downtime. She manages her hypertension with medication and tries to eat healthier, including switching to a salt substitute on her doctor's advice about a year ago. She values punctuality and is proud of rarely missing work.",
+   "speechExamples": [
+    "I feel fine, so I don't really understand why I have to come back.",
+    "That arm's still a little sore from yesterday, three pokes is a lot.",
+    "Wait, that seasoning has potassium in it? Nobody told me that.",
+    "If it's quick I can go, but I'm on the clock here.",
+    "I take my pills every morning, I don't play around with that."
+   ],
+   "concerns": [
+    "Why does she need another needle stick so soon after a difficult draw",
+    "Whether something is seriously wrong with her even though she feels well",
+    "Fitting a same-day recollection into her tight work schedule",
+    "Confusion about why a 'healthy' salt substitute could be a problem"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a medical laboratory science student staffing a telehealth laboratory callback line. Joyce Mensah, 55, had routine bloodwork yesterday at a satellite collection site; the lab reported a critical potassium result. You are calling her to verify her identity, investigate possible causes of this result, explain why a repeat draw is needed, arrange urgent same-day recollection, and report the critical value to her ordering provider. Stay within your scope: do not advise on medications or treatment.",
+   "chiefComplaint": "Critical potassium result on routine bloodwork, patient feels well and is unsure why a repeat draw is needed.",
+   "openingLine": "Hi, yes, this is Joyce. They told me my potassium came back high and I need to come back in? I feel completely fine though, so I'm a little confused.",
+   "tasks": [
+    "Verify the patient's identity using two identifiers before discussing results.",
+    "Take a focused history of the blood collection experience and any symptoms.",
+    "Review medications and dietary habits with the patient.",
+    "Explain in plain language why an urgent same-day recollection is necessary and arrange it with corrected technique instructions.",
+    "Report the critical value to the ordering provider per protocol and document the call, while staying within laboratory scope (no medication advice)."
+   ],
+   "timeLimitMin": 20
+  },
+  "setting": "Telehealth video visit, patient seated in her parked car outside a client's home during a work break, Worcester, Massachusetts",
+  "specialty": "Medical Laboratory Science",
+  "summary": "A 55-year-old home health aide is called back after a critical potassium of 6.3 mmol/L with a 2+ hemolysis flag following a traumatic, delayed blood draw, prompting investigation of pre-analytical causes versus true hyperkalemia risk from her antihypertensive regimen and potassium-based salt substitute. The case teaches MLS students to identify collection and transport errors, weigh them against genuine clinical risk factors, arrange a same-day recollection, and report a critical value to the ordering provider while staying within laboratory scope.",
+  "title": "Critical Potassium Callback: Hemolyzed, Delayed Specimen in a Patient on ACE Inhibitor, Spironolactone, and a Potassium-Based Salt Substitute",
+  "professions": [
+   "medical-laboratory-science"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

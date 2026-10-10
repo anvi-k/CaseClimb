@@ -1,0 +1,928 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Review PSA trend history",
+    "result": "PSA 3.1 ng/mL (2 years ago) → 4.4 ng/mL (1 year ago) → 6.8 ng/mL (3 months ago) → repeat 6.5 ng/mL (6 weeks ago). Free PSA % pending.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Perform/review digital rectal exam",
+    "result": "Prostate moderately enlarged, smooth contour, no nodules, no asymmetry, non-tender.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "lab",
+    "name": "Review urinalysis",
+    "result": "Urinalysis: no blood, no leukocytes, no nitrites, specific gravity normal. No evidence of infection or hematuria.",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Administer/review IPSS (International Prostate Symptom Score)",
+    "result": "IPSS total 18/35 (moderate), bothersome item score 3/6 (quality of life moderately affected). Dominant symptoms: nocturia x3, weak stream.",
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Administer/review IIEF-5 erectile function screen",
+    "result": "IIEF-5 score 15/25, consistent with mild-to-moderate erectile dysfunction. Patient completes screen without further elaboration.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "vitals",
+    "name": "Review home vitals/weight log",
+    "result": "BP 134/82 mmHg, HR 76 bpm, weight 198 lb. No fevers reported.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review family history documentation",
+    "result": "Father: prostate cancer, died age 74. Brother: prostate cancer treated at age 60, currently in remission.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review current medication/supplement list",
+    "result": "No prescription medications. Saw palmetto 320 mg daily (self-started, OTC, start date not documented on medication list). No alpha-blocker or 5-ARI on record.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "imaging",
+    "name": "Order/review prostate MRI (multiparametric, pre-biopsy)",
+    "result": "Not yet performed; to be scheduled per plan. (If reviewed after order placed, report will show PI-RADS scoring once completed.)",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Review free PSA percentage / PSA density if available",
+    "result": "Free PSA percentage pending at outside lab; not yet drawn with total PSA. Can be ordered this visit.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "exam",
+    "name": "Guide patient through camera inspection of abdomen/suprapubic region",
+    "result": "No visible suprapubic distension, no flank masses, no scars from prior surgery.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Review post-void residual / bladder scan if available",
+    "result": "No bladder ultrasound or post-void residual on file; not yet obtained.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review prior biopsy history",
+    "result": "No prior prostate biopsy on record. This would be a first biopsy if pursued.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Review home uroflow/voiding diary (if kept)",
+    "result": "Patient has not kept a voiding diary; none on file.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "lab_report",
+    "title": "PSA Trend - Outside Lab Results",
+    "date": "Compiled over 2 years",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "PSA, total (2 years ago)",
+        "3.1",
+        "ng/mL",
+        "0.0 - 4.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "PSA, total (1 year ago)",
+        "4.4",
+        "ng/mL",
+        "0.0 - 4.0"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "PSA, total (3 months ago)",
+        "6.8",
+        "ng/mL",
+        "0.0 - 4.0"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "PSA, total (repeat, 6 weeks ago)",
+        "6.5",
+        "ng/mL",
+        "0.0 - 4.0"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "chart",
+    "title": "PSA Over Time",
+    "date": "2-year trend",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time",
+     "yLabel": "PSA (ng/mL)",
+     "refHigh": 4,
+     "series": [
+      {
+       "name": "Total PSA",
+       "points": [
+        {
+         "x": "2 yrs ago",
+         "y": 3.1
+        },
+        {
+         "x": "1 yr ago",
+         "y": 4.4
+        },
+        {
+         "x": "3 mo ago",
+         "y": 6.8
+        },
+        {
+         "x": "6 wks ago",
+         "y": 6.5
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Urinalysis - Outside Lab",
+    "date": "6 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Color",
+        "Yellow",
+        "",
+        "Yellow"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Specific gravity",
+        "1.018",
+        "",
+        "1.005 - 1.030"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Blood",
+        "Negative",
+        "",
+        "Negative"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Leukocyte esterase",
+        "Negative",
+        "",
+        "Negative"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitrite",
+        "Negative",
+        "",
+        "Negative"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Protein",
+        "Negative",
+        "",
+        "Negative"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "Negative",
+        "",
+        "Negative"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Referral Note from Family Physician",
+    "date": "6 weeks ago",
+    "author": "Dr. S. Nguyen, Family Medicine",
+    "release": {
+     "when": "start"
+    },
+    "body": "Mr. Moretti is a 62-year-old male referred for evaluation of rising PSA. Two years of PSA tracking show an increase from 3.1 to 6.8 ng/mL, with a repeat value of 6.5 ng/mL six weeks later. Digital rectal exam deferred in office; recommend urology perform DRE as part of workup. No gross hematuria, dysuria, or fever reported. Patient endorses nocturia and weak urinary stream for approximately 18 months. Family history significant for paternal prostate cancer (deceased age 74) and a brother treated for prostate cancer at age 60. Referred to Urology for further workup including consideration of prostate MRI and possible biopsy."
+   },
+   {
+    "id": "d5",
+    "type": "medication_list",
+    "title": "Current Medications and Supplements",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Saw palmetto (OTC supplement)",
+        "320 mg",
+        "Once daily",
+        "Self-initiated for urinary symptoms"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "form",
+    "title": "IPSS (International Prostate Symptom Score) Questionnaire - Completed Today",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "body": "Incomplete emptying: 3. Frequency: 3. Intermittency: 2. Urgency: 2. Weak stream: 4. Straining: 1. Nocturia: 3 (gets up 3x per night). Total IPSS = 18 (moderate range: 8-19). Bother score (quality of life question): 3 - 'mostly dissatisfied.'"
+   },
+   {
+    "id": "d7",
+    "type": "form",
+    "title": "IIEF-5 Erectile Function Questionnaire - Completed Today",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "body": "Confidence in achieving/maintaining erection: 3. Erection hardness sufficient for penetration: 3. Ability to maintain erection after penetration: 3. Difficulty maintaining erection to completion: 3. Overall satisfaction with sexual intercourse attempts: 3. Total score = 15/25, indicating mild-to-moderate erectile dysfunction."
+   },
+   {
+    "id": "d8",
+    "type": "flowsheet",
+    "title": "Home Vitals Log",
+    "date": "Last 2 weeks",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "BP (mmHg)",
+      "HR (bpm)",
+      "Weight (lb)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "12 days ago",
+        "136/84",
+        "78",
+        "199"
+       ]
+      },
+      {
+       "cells": [
+        "5 days ago",
+        "132/80",
+        "74",
+        "197"
+       ]
+      },
+      {
+       "cells": [
+        "Today",
+        "134/82",
+        "76",
+        "198"
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for discussion of elevated and rising PSA, referred by family physician.",
+    "says": "Doc sent me here because my PSA number keeps going up. I guess we gotta talk about my prostate.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "urinary frequency at night",
+    "chart": "Reports nocturia, waking approximately 3 times nightly to urinate for about 18 months.",
+    "says": "I'm up three times a night like clockwork. My wife says I should just sleep in the bathroom.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "stream strength",
+    "chart": "Reports weak urinary stream, gradual onset, duration similar to nocturia (~18 months).",
+    "says": "The stream's not what it used to be. Takes me longer than it should, if you know what I mean.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "PSA testing circumstances",
+    "chart": "Reports vigorous stationary cycling the morning of the first elevated PSA draw (6.8 ng/mL).",
+    "says": "Oh yeah, that day I rode my bike real hard that morning before the blood draw. Nobody told me not to.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "family",
+    "topic": "father's prostate history",
+    "chart": "Father died of prostate cancer at age 74.",
+    "says": "My dad died from prostate cancer when he was 74. That's part of why I'm nervous about all this.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "family",
+    "topic": "brother's prostate history",
+    "chart": "Brother treated for prostate cancer at age 60, currently in remission.",
+    "says": "My brother Tony had it too, got treated a couple years back when he was 60. He's doing okay now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Takes saw palmetto 320 mg daily, self-initiated for urinary symptoms, no prescription medications.",
+    "says": "I started taking saw palmetto, you know, the stuff for the prostate. Figured it couldn't hurt.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "blood in urine",
+    "chart": "Denies hematuria, gross or microscopic by history.",
+    "says": "No, never seen blood in there, thank God.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "pain with urination",
+    "chart": "Denies dysuria or burning with urination.",
+    "says": "No burning or anything like that, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "fever or chills",
+    "chart": "Denies fever, chills, or systemic symptoms.",
+    "says": "No fevers, I feel fine otherwise, just the bathroom stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "bone pain",
+    "chart": "Denies back pain, bone pain, or unexplained weight loss.",
+    "says": "No pain in my back or bones, and I haven't lost weight that I didn't mean to lose.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "sexual",
+    "topic": "erection changes",
+    "chart": "Reports erections less reliable over the past year, difficulty maintaining firmness.",
+    "says": "Things downstairs haven't been as... reliable, I guess you'd say. It's been going on about a year.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "sexual",
+    "topic": "fear about treatment effects",
+    "chart": "Expresses fear that prostate procedures (biopsy, surgery) will worsen or cause permanent erectile dysfunction; has not raised this with prior providers.",
+    "says": "I haven't told anybody this, but I'm scared that whatever you do down there is gonna finish the job on me, if you catch my drift.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "psychosocial",
+    "topic": "anxiety about cancer",
+    "chart": "Reports significant anxiety related to family history and fear of cancer diagnosis.",
+    "says": "I joke around because otherwise I'd be a wreck. Watching my dad go through this... it's on my mind a lot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works as a building contractor, physically active job.",
+    "says": "I run a construction crew, so I'm on my feet and lifting stuff all day.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "social",
+    "topic": "exercise habits",
+    "chart": "Regularly uses stationary bike for exercise, several times weekly.",
+    "says": "I ride the stationary bike most mornings, keeps me in shape for the job.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f17",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks wine with dinner most nights, 1-2 glasses, no history of heavy use.",
+    "says": "I have a glass or two of wine with dinner, Italian thing, you know.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Former smoker, quit 15 years ago, previously half pack per day for 10 years.",
+    "says": "I used to smoke but quit way back, 15 years now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "other medical conditions",
+    "chart": "No history of diabetes, hypertension diagnosis, or prior cancer. Mild hyperlipidemia, diet-controlled.",
+    "says": "I'm pretty healthy otherwise, doc says my cholesterol's a touch high but nothing serious.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "psh",
+    "topic": "prior surgeries",
+    "chart": "No prior urologic or abdominal surgeries.",
+    "says": "Never had any surgeries down there or anywhere really, knock on wood.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "hpi",
+    "topic": "understanding of PSA test",
+    "chart": "Patient has limited understanding of what PSA measures and what causes it to rise; believes a high number automatically means cancer.",
+    "says": "So this number going up, that means I got cancer, right? Just tell me straight.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f23",
+    "category": "goals",
+    "topic": "what patient wants from visit",
+    "chart": "Wants clear explanation of PSA results and next steps; wants to avoid unnecessary procedures if possible.",
+    "says": "I just want to know what's really going on and what we gotta do about it. I don't want surgery for no reason.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "hpi",
+    "topic": "straining to urinate",
+    "chart": "Reports mild straining to initiate urination at times, not severe.",
+    "says": "Sometimes I gotta push a little to get it started, but it's not terrible.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "incomplete emptying sensation",
+    "chart": "Reports sensation of incomplete bladder emptying after voiding.",
+    "says": "Feels like I never really finish, like there's more in there.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "sexual",
+    "topic": "libido",
+    "chart": "Reports libido relatively unchanged despite erectile difficulty.",
+    "says": "I still want to, you know, be intimate with my wife, it's just not working as well.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "family",
+    "topic": "other cancers in family",
+    "chart": "No known family history of breast, ovarian, or colon cancer.",
+    "says": "No other cancers that I know of in the family, just the prostate stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "nutrition",
+    "topic": "diet habits",
+    "chart": "Diet includes regular red meat and pasta, typical of family heritage; no recent major changes.",
+    "says": "I eat the way my family always has, lots of pasta, meat on Sundays. Nothing's changed lately.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f29",
+    "category": "psychosocial",
+    "topic": "support system",
+    "chart": "Married, wife is supportive and aware of urinary symptoms; has not disclosed erectile concerns to her.",
+    "says": "My wife knows about the bathroom trips, she's been great. The other thing, I haven't really talked to her about it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "adherence",
+    "topic": "supplement timing relative to PSA draw",
+    "chart": "Started saw palmetto approximately 4 months ago, after the first elevated PSA result, not before.",
+    "says": "I only started that saw palmetto stuff after the doctor told me the number was high. So it's new.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "hpi",
+    "topic": "ejaculation changes",
+    "chart": "Denies hematospermia or pain with ejaculation.",
+    "says": "No blood or pain when I... finish, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "goals",
+    "topic": "timeline expectations",
+    "chart": "Hopes to have a clear plan before an upcoming out-of-town work trip in 6 weeks.",
+    "says": "I got a big job out of state in six weeks, I'd like to know what we're doing before I go.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Correctly interpret a rising PSA trend in context of a confounder (recent vigorous cycling) and recommend appropriate repeat testing conditions rather than reacting to a single value.",
+    "factIds": [
+     "f4",
+     "f16",
+     "f30"
+    ],
+    "actionIds": [
+     "a1",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Elicit and synthesize prostate cancer risk factors (family history in father and brother, DRE findings obtained via urology's own exam) to risk-stratify and justify imaging before biopsy.",
+    "factIds": [
+     "f5",
+     "f6"
+    ],
+    "actionIds": [
+     "a2",
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Recommend multiparametric prostate MRI prior to biopsy per current guideline-concordant shared decision-making, explaining what MRI adds (PI-RADS risk stratification) before proceeding to biopsy.",
+    "factIds": [
+     "f22",
+     "f23"
+    ],
+    "actionIds": [
+     "a9",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Screen for erectile dysfunction using IIEF-5, and through sensitive, rapport-based direct questioning, uncover the patient's hidden fear that treatment will worsen sexual function, incorporating this into counseling and shared decision-making.",
+    "factIds": [
+     "f12",
+     "f13",
+     "f29"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess lower urinary tract symptoms using a validated tool (IPSS) and distinguish benign prostatic hyperplasia symptoms from cancer risk indicators.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f24",
+     "f25"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Correct patient misconceptions about PSA (that any elevation equals cancer) using clear, non-technical language appropriate to health literacy.",
+    "factIds": [
+     "f22",
+     "f14"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Rising PSA (3.1→6.8, repeat 6.5 ng/mL) with moderate LUTS (IPSS 18/35) in a 62-year-old man with strong family history of prostate cancer (father, brother) and benign-feeling prostate on DRE — findings warrant risk-stratified workup with prostate MRI before biopsy decision, in the context of coexisting mild-moderate erectile dysfunction that must be addressed in counseling.",
+   "differential": [
+    "Clinically significant prostate cancer",
+    "Benign prostatic hyperplasia (BPH) causing LUTS, independent contributor to or coincidental with PSA elevation",
+    "PSA elevation partly confounded by vigorous exercise (stationary cycling) prior to first draw",
+    "Prostatitis (less likely given normal UA, no fever/dysuria, non-tender prostate)",
+    "Age-related erectile dysfunction, possibly vascular or related to anxiety, independent of prostate pathology"
+   ],
+   "keyFindings": [
+    "PSA rose from 3.1 to 6.8 ng/mL over 2 years, repeat 6.5 ng/mL confirming elevation after excluding acute exercise effect",
+    "DRE (performed by urology): moderately enlarged, smooth prostate, no nodule/asymmetry",
+    "Normal urinalysis excluding infection/hematuria as cause",
+    "IPSS 18/35 (moderate), dominant symptoms nocturia x3 and weak stream, consistent with BPH component",
+    "First-degree family history: father died of prostate cancer age 74, brother treated age 60 — qualifies for higher-risk category justifying earlier/more aggressive workup",
+    "IIEF-5 score 15/25: mild-to-moderate erectile dysfunction; patient's underlying fear that procedures will worsen this is uncovered only through direct, sensitive questioning, not the questionnaire itself",
+    "No red-flag symptoms: no hematuria, dysuria, fever, bone pain, or weight loss"
+   ],
+   "plan": [
+    "Explain to patient that PSA is a screening marker, not diagnostic for cancer; elevation can result from BPH, prostate size, age, and transient factors like vigorous exercise, but a persistently elevated repeat value after accounting for exercise still warrants further workup given family history",
+    "Perform digital rectal exam as part of urology's own evaluation rather than relying solely on the referring note",
+    "Order multiparametric prostate MRI (PI-RADS scoring) prior to any biopsy decision to risk-stratify and guide targeted biopsy if indicated",
+    "If MRI shows a suspicious lesion (PI-RADS 3-5) or risk remains elevated by calculator, proceed to MRI-targeted (+/- systematic) prostate biopsy, performed by urology; discuss biopsy risks (bleeding, infection, transient worsening of urinary/erectile symptoms) explicitly",
+    "Address LUTS: discuss BPH management options (watchful waiting, alpha-blocker, 5-alpha-reductase inhibitor) separate from cancer workup; advise discontinuing or disclosing saw palmetto use since it is unregulated, has no established effect on PSA, and is not a periprocedural bleeding risk requiring special guidance before MRI or biopsy, but its use should still be documented and discussed as part of a complete medication history",
+    "Directly and sensitively ask about erectile function and any fears about how treatment might affect it; validate the patient's fear once uncovered, explain that pre-existing mild-moderate ED exists independent of any procedure, discuss that treatment approaches (active surveillance, surgery, radiation if cancer found) carry different sexual side-effect profiles, and that this will be part of shared decision-making if cancer is diagnosed",
+    "Encourage open conversation with spouse about sexual health concerns if patient is comfortable; offer referral to sexual health counseling or further ED workup as appropriate within urology scope",
+    "Advise against repeating PSA immediately after vigorous exercise or ejaculation in the future to avoid false elevation on surveillance labs",
+    "Set a realistic timeline for MRI scheduling and follow-up discussion of results before the patient's work travel in 6 weeks, with contingency plan if results are not back in time",
+    "Document family history clearly as it affects future screening recommendations for other male relatives"
+   ],
+   "redFlags": [
+    "Any new bone pain, unexplained weight loss, or gross hematuria would warrant urgent re-evaluation for possible locally advanced or metastatic disease",
+    "Palpable nodule or asymmetry on DRE (not present here) would increase urgency and likelihood of biopsy regardless of MRI timing",
+    "Rapidly rising PSA velocity could suggest aggressive disease and should prompt expedited rather than routine-interval workup"
+   ],
+   "educationPoints": [
+    "PSA is organ-specific but not cancer-specific; BPH, prostatitis, recent ejaculation, vigorous exercise, and even recent catheterization can transiently or chronically raise PSA",
+    "Multiparametric MRI with PI-RADS scoring before biopsy improves detection of clinically significant cancer and can reduce unnecessary biopsies of low-risk disease",
+    "First-degree relatives with prostate cancer, especially diagnosed at younger age (brother at 60), meaningfully raise lifetime risk and lower the threshold for earlier, more thorough workup",
+    "Shared decision-making requires explicitly asking about sexual function and underlying fears, since a questionnaire alone will not surface emotionally sensitive concerns that many men will not volunteer due to embarrassment or stoicism",
+    "All major treatment options for localized prostate cancer (surgery, radiation, active surveillance) carry different but real risks to erectile and urinary function, and this should be discussed before, not after, a biopsy result changes the conversation"
+   ]
+  },
+  "patient": {
+   "name": "Frank Moretti",
+   "age": 62,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Italian-American",
+   "occupation": "Building contractor",
+   "language": "English",
+   "appearance": "A sturdy, broad-shouldered man with a weathered tan and close-cropped gray hair, wearing a flannel shirt and seated in what looks like a home office with tool catalogs stacked on a desk behind him. He has an easy, joking demeanor but his eyes look tired and his smile sometimes doesn't quite reach them.",
+   "portrait": "/portraits/urology-frank-moretti-psa.jpg"
+  },
+  "persona": {
+   "personality": "Blunt, warm, uses humor to deflect anxiety, proud of his work and family, somewhat old-school about discussing personal/sexual topics",
+   "communicationStyle": "Direct and informal, cracks jokes especially when nervous, responds well to straight talk but needs permission and rapport before discussing sexual health",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious beneath a joking exterior, particularly fearful given his father's death from prostate cancer; worried about losing sexual function",
+   "background": "Runs a small construction company in Philadelphia with a crew of six, has been married 34 years, two grown children. Grew up in a large Italian-American family where health problems, especially 'men's issues,' were rarely discussed openly. Enjoys watching his grandkids' baseball games and cooking Sunday dinner.",
+   "speechExamples": [
+    "Doc, just give it to me straight, no fancy words.",
+    "I've been peeing more than my dog waters the lawn.",
+    "My dad went through this, and it wasn't pretty. That's got me spooked.",
+    "You're not gonna tell me I need surgery and I can't, uh, perform anymore, right?",
+    "I ride my bike every morning, rain or shine, keeps the gut down."
+   ],
+   "concerns": [
+    "Whether the rising PSA definitely means he has cancer like his father",
+    "Whether he will need a biopsy and what that involves",
+    "Whether treatment will affect his ability to have erections (unspoken until trust is built)",
+    "Timing of workup before his upcoming out-of-town job in six weeks",
+    "Whether the saw palmetto he started taking helped, hurt, or affected his results"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a urology resident conducting a telehealth results-discussion visit with Frank Moretti, a 62-year-old man referred by his family physician for a rising PSA. His DRE was reported as a moderately enlarged, smooth prostate. Review his history, labs, and family history; discuss the PSA findings; and engage in shared decision-making about next steps.",
+   "chiefComplaint": "Rising PSA referred for urology evaluation",
+   "openingLine": "Hey doc, nice to meet you. So my regular doctor sent me here because my PSA number keeps climbing and he said I oughta talk to a specialist about it.",
+   "tasks": [
+    "Explain in plain language what PSA measures and what can cause it to rise",
+    "Take a focused history including family history and urinary symptoms",
+    "Review the laboratory results with the patient",
+    "Discuss investigation options and their purpose in guiding further workup",
+    "Engage the patient in shared decision-making about next steps and agree a plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Urology consultation for elevated and rising PSA, referred by family physician"
+   },
+   {
+    "label": "Problem list",
+    "value": "Elevated PSA (trend 3.1 → 6.8 → 6.5 ng/mL); Lower urinary tract symptoms; Mild hyperlipidemia"
+   },
+   {
+    "label": "Medications",
+    "value": "None prescribed. Saw palmetto 320 mg daily (OTC, self-initiated)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 134/82 mmHg, HR 76 bpm, Weight 198 lb (home log, today)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per primary care record"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. S. Nguyen (Family Medicine, referring); Urology (new consult)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f16",
+    "patientClaim": "Frank reports he rides the stationary bike most mornings as a regular habit, and specifically rode vigorously the morning of his first elevated PSA draw (6.8 ng/mL) — a detail he volunteers only when asked directly about exercise around the time of testing.",
+    "recordEvidence": "The PSA trend table (d1/a1) shows only bare values and draw dates: 6.8 ng/mL three months ago and a repeat 6.5 ng/mL six weeks later with no exercise history recorded. The repeat draw, obtained without any noted pre-draw exertion, remained elevated at 6.5, showing that exercise only partially explains the picture and a true PSA elevation persists.",
+    "teachingPoint": "Learners should recognize that while vigorous exercise can transiently elevate PSA, this history must be actively elicited from the patient rather than read off a lab report; a repeat value drawn without that confounder remaining significantly elevated confirms a true abnormality requiring further workup, not dismissal of the result."
+   },
+   {
+    "id": "m2",
+    "factId": "f30",
+    "artifactId": "d5",
+    "patientClaim": "Frank says he started saw palmetto about 4 months ago, after being told his PSA was high, implying it could not have caused the initial elevation but might be an attempt to self-treat.",
+    "recordEvidence": "Medication list (d5) lists saw palmetto as a current supplement but has no column or entry for when it was started. The PSA trend (d1) shows PSA was already elevated at 4.4 ng/mL one year ago, well before the patient's reported 4-month supplement start, so the trend predates and is independent of the supplement regardless of its exact start date.",
+    "teachingPoint": "Medication lists often capture only current status, not start dates; clarifying the timeline of supplement use relative to lab draws by direct questioning prevents incorrectly attributing or dismissing PSA changes to unregulated OTC products."
+   }
+  ],
+  "professions": [
+   "urology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "difficulty": 3,
+  "variants": [],
+  "title": "Rising PSA with strong family history in a 62-year-old man with erectile concerns",
+  "summary": "A 62-year-old building contractor with PSA rising from 3.1 to 6.8 ng/mL over two years presents for results discussion. He has moderate LUTS, strong family history (father died of prostate cancer at 74, brother treated at 60), and unspoken erectile dysfunction fears. The case teaches risk-stratified workup with MRI before biopsy, interpreting PSA trends with confounders (cycling), distinguishing BPH symptoms from cancer risk, and sensitively eliciting hidden concerns about sexual function in shared decision-making.",
+  "specialty": "Urology",
+  "setting": "Telehealth video visit; patient's home office in Philadelphia",
+  "encounterType": "Results discussion and shared decision-making"
+ }
+}

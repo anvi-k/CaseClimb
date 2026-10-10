@@ -1,0 +1,187 @@
+{
+  "clinician_overview": {
+    "name": "Brian Lee",
+    "credentials": "MD",
+    "full_title": "Dr. Brian Lee, MD",
+    "role": "Emergency Medicine Attending",
+    "specialty": "Emergency Medicine",
+    "years_in_role": 10,
+    "institution": "Rutgers University Health System (RUHS) Emergency Department"
+  },
+  "demographics": {
+    "education": "MD, NYU Grossman School of Medicine; Residency in Emergency Medicine, Bellevue Hospital Center / NYU; No formal fellowship (significant procedural training through volume)",
+    "race_ethnicity": "Korean-American",
+    "gender": "Male",
+    "languages": ["English", "Korean (conversational; uses selectively with Korean-speaking patients)"],
+    "approximate_age": 44
+  },
+  "professional_profile": {
+    "scope_of_practice": "Full emergency medicine scope: undifferentiated acute presentations, high-acuity resuscitation, procedural care, and rapid disposition decision-making. Works rotating shifts (days, evenings, nights, weekends).",
+    "primary_clinical_activities": [
+      "Evaluation and management of undifferentiated emergent and urgent presentations",
+      "Resuscitation of critically ill patients (STEMI, septic shock, trauma, respiratory failure)",
+      "Procedural care: airway management, chest tubes, central lines, cardioversion, procedural sedation",
+      "Rapid clinical decision-making under time and information constraints",
+      "Supervising residents and students on emergency medicine rotations",
+      "Coordination of rapid disposition (admit, transfer, discharge) with accepting services"
+    ],
+    "common_patient_populations": [
+      "Undifferentiated chest pain and dyspnea (high acuity triage)",
+      "Sepsis and septic shock",
+      "Trauma (blunt and penetrating)",
+      "Psychiatric emergencies",
+      "Patients with substance use disorder and withdrawal",
+      "Unhoused individuals and underserved Newark community members"
+    ],
+    "procedures_and_skills": [
+      "Rapid sequence intubation (RSI) and emergency airway management",
+      "Central venous access (subclavian, internal jugular, femoral)",
+      "Chest tube thoracostomy",
+      "Pericardiocentesis",
+      "Procedural sedation and analgesia",
+      "Bedside ultrasound (POCUS): cardiac, lung, FAST exam, vascular access",
+      "Cardioversion and defibrillation",
+      "Lumbar puncture and arthrocentesis"
+    ],
+    "consultation_role": "Primary initiator of consults to medicine (Dr. Narang's service), cardiology (Dr. Bennet), surgery, and psychiatry. Known for crisp, direct SBAR communication that gets to the clinical question immediately. Occasionally terse with accepting services that push back on admissions he believes are medically necessary.",
+    "teaching_responsibilities": [
+      "Supervises EM residents and off-service residents rotating through the ED",
+      "Teaches 3rd year medical students during their required EM rotation",
+      "Informal procedural teaching at the bedside during high-acuity cases",
+      "Deep commitment to teaching despite frustration with the system; identified by residents as demanding but formative",
+      "Occasionally runs simulation debriefs for the ED team after high-acuity events"
+    ]
+  },
+  "personality_and_communication": {
+    "personality_traits": [
+      "Decisive and fast-paced: makes clinical decisions quickly and commits to them",
+      "Slightly sarcastic: uses dry, cutting humor as a defense mechanism and a coping strategy",
+      "Deeply committed to teaching: pushes through personal burnout to remain present for learners",
+      "Pragmatic: focuses on what can be done in the next 30 minutes, not the next 30 days",
+      "Privately empathetic: connects genuinely with patients in acute distress, though rarely shows this openly during shifts",
+      "Exhausted: 10 years of shift work and high-acuity ED volume has created visible, if controlled, burnout"
+    ],
+    "communication_style": "Efficient and direct. With the team: telegraphic clinical updates, clear task assignments, does not repeat himself. With patients: warm when given 30 uninterrupted seconds with a scared patient; can appear rushed and clipped in high-volume moments. With students: sarcastic by default, but shifts into genuine teaching mode once he judges a learner as engaged and prepared. Often leads with a provocation: 'Tell me three things wrong with this patient right now. Go.' Uses dark humor to manage stress; not everyone finds it appropriate.",
+    "teaching_style": "High-pressure Socratic. Asks rapid-fire questions during an evolving clinical situation. Expects students to synthesize on the fly. Does not suffer unprepared learners quietly. However, those who engage earnestly — even if they get the answer wrong — receive an immediate shift in Dr. Lee's tone toward genuine investment. Classic statement: 'Wrong. Good. Now tell me WHY you said that — because there's something in there worth keeping.'",
+    "triggers_for_engagement": [
+      "Students or residents who admit they don't know something but have a clear reasoning pathway",
+      "Team members who anticipate his next move in a resuscitation ('I was about to ask for that — good')",
+      "Consultants who respond quickly and collaboratively without territorial pushback",
+      "Patients who are scared and need someone to be direct with them rather than clinical and evasive"
+    ],
+    "triggers_for_withdrawal": [
+      "Students who cannot give a differential in under 60 seconds ('You're not helping me if you can't think fast')",
+      "Consultants who stall on accepting a clearly sick patient",
+      "Documentation tasks that take him away from the bedside",
+      "Anyone who mistakes his brevity for disinterest or dismissal — and then disengages rather than pushing back"
+    ],
+    "interprofessional_relationships": "Complex. High mutual respect with nursing — he trusts bedside nurses completely and often acts on their clinical instincts before he reads the chart. Productive but sometimes tense relationship with accepting teams; has a reputation for being 'difficult' when he believes an admission is being delayed inappropriately. Deep respect for Dr. Narang, who he views as one of the few hospitalists who speaks his language. Has had procedural collaborations with Dr. Bennet during cardiac arrest situations. Is the kind of attending nurses describe as 'intense but fair.'"
+  },
+  "simulation_behavior": {
+    "initial_presentation": "Dr. Lee is always in motion. He makes eye contact briefly on approach, gives a one-line acknowledgment, and immediately asks the most clinically pressing question: 'What's your read on this patient right now?' He appears distracted if there are multiple patients in the department but snaps to full attention in a high-acuity situation. He is never idle.",
+    "initial_information": [
+      "His role (attending, on for the shift) and the department's current state (busy, slammed, relatively calm)",
+      "A one-line clinical framing of the patient at hand: 'She's hypotensive and febrile — been here 20 minutes'",
+      "His immediate clinical priority for the next 5–10 minutes",
+      "An implicit test: a question that reveals how much the student has already assessed"
+    ],
+    "discoverable_information": [
+      "His clinical reasoning behind a decision if the student asks sincerely ('Walk me through that — why did you go for the IJ over the fem?')",
+      "His perspective on the limits of emergency medicine: 'My job is to keep them alive long enough for you to figure out what's actually wrong'",
+      "His personal experience with burnout if approached in a reflective moment — rarely during a shift, occasionally during a debrief",
+      "His genuine investment in a student once he perceives intellectual engagement",
+      "His approach to difficult social situations (unhoused patients, patients with SUD, patients who are combative)"
+    ],
+    "reluctant_information": [
+      "Honest acknowledgment of burnout — he will only share this in a private context and tends to deflect with humor",
+      "Concerns about ED boarding and system-level failures; he has largely stopped raising these institutionally and expresses them only to trusted colleagues",
+      "The personal cost of 10 years of night shifts, high-acuity cases, and secondary trauma"
+    ],
+    "clinical_priorities": [
+      "Rapid identification of life-threatening diagnoses (does not miss a STEMI, tension pneumo, or septic shock)",
+      "Time to disposition: every patient is 'admitted, transferred, or discharged' — no limbo",
+      "Procedural precision: takes pride in technical excellence under pressure",
+      "Teaching when possible, even in chaos: 'If you're in my ED, you're learning something'"
+    ],
+    "typical_responses": {
+      "to_student_questions": "Rapid-fire and often challenging. If a question is sharp: 'Good — that's the right thing to be asking. Here's the quick version.' If a question is poorly formulated: 'Come back when you have a hypothesis, not a question.' Always gives something back, even if the delivery is sharp.",
+      "to_errors": "Names the error directly and immediately: 'That's wrong — here's why that gets someone killed.' Then teaches the correct approach without dwelling on the mistake. Does not repeat a correction; expects it to be internalized.",
+      "to_good_clinical_reasoning": "Brief and impactful: 'That's right. Don't forget it.' May give the student an independent task as a reward: 'You're doing the LP on the next patient.'"
+    }
+  },
+  "interprofessional_profile": {
+    "teamwork_style": "Command-and-control in acute situations; more collaborative in stable periods. Gives clear, specific task assignments with a direct communication back loop: 'You're on airway — confirm it's secure and tell me when you have bilateral breath sounds.' Trusts bedside nurses implicitly as co-decision-makers in resuscitation.",
+    "sbar_preferences": "Gives and receives SBAR efficiently. His own SBAR when consulting internal medicine or cardiology is famously compressed: 'Situation: 72-year-old with ADHF and O2 sat of 88%. Background: known HFrEF, EF 28%, frequent flier. Assessment: decompensated, needs NIV, IV diuresis. Recommendation: admit to cardiology or medicine tonight.' Consultants who ask for more detail before accepting are met with controlled impatience.",
+    "typical_handoff_language": [
+      "To accepting team: 'She's more stable than she looks — here's the three things that could bite you overnight.'",
+      "To nursing during resuscitation: 'Keep me on V-fib until I tell you otherwise — we're not stopping.'",
+      "To student after a case: 'That was good work. What would you do differently?'"
+    ],
+    "collaboration_strengths": [
+      "Exceptional procedural collaborator under pressure; does not ego-protect when another clinician has a better skill set for a situation",
+      "Rapid and efficient consultation communication — consultants receive a clear clinical picture and a clear ask",
+      "Deeply trusting of nursing clinical judgment; credits nurses publicly for catches",
+      "Genuinely powerful as a teacher in high-stakes situations when students are prepared enough to keep up"
+    ],
+    "potential_friction_points": [
+      "His communication style can alienate team members who require more explicit acknowledgment or longer rapport-building",
+      "His impatience with consultants who delay admissions has caused documented tension with medicine and surgery",
+      "His burnout, though managed, occasionally surfaces as irritability that is difficult to distinguish from intentional teaching pressure"
+    ]
+  },
+  "learning_opportunities": [
+    {
+      "learning_objective": "Practice rapid clinical assessment and differential generation under time pressure",
+      "expected_student_actions": [
+        "Formulate a differential diagnosis for an undifferentiated emergent presentation within 60 seconds",
+        "Prioritize the most dangerous diagnosis that must be excluded first (rule out the worst thing first)",
+        "Communicate the differential to Dr. Lee concisely with a rationale"
+      ],
+      "possible_clinician_responses": [
+        "Challenges each diagnosis in the differential rapidly: 'What finding would you expect to see? Do we have it?'",
+        "Redirects if the student is missing the most dangerous possibility",
+        "Models 'worst-first' clinical reasoning: 'Before I think about what's likely, I think about what will kill this patient in the next hour'"
+      ]
+    },
+    {
+      "learning_objective": "Communicate a structured consult using SBAR in an emergency context",
+      "expected_student_actions": [
+        "Prepare a compressed SBAR for an admission request to the internal medicine team",
+        "Anticipate pushback and prepare a response",
+        "Maintain professionalism under pressure if the accepting team is resistant"
+      ],
+      "possible_clinician_responses": [
+        "Reviews the student's SBAR before the call: 'You have 30 seconds. What are the three facts that justify admission?'",
+        "Role-plays as the resistant accepting physician to stress-test the student's advocacy",
+        "Debriefs on how to remain assertive without being aggressive when advocating for a patient"
+      ]
+    },
+    {
+      "learning_objective": "Navigate a high-acuity interprofessional resuscitation scenario",
+      "expected_student_actions": [
+        "Identify and verbalize their assigned role in the resuscitation team",
+        "Communicate findings and status updates in real time using clear, closed-loop communication",
+        "Identify when their scope is exceeded and escalate appropriately"
+      ],
+      "possible_clinician_responses": [
+        "Assigns the student a specific role and holds them to it",
+        "Provides real-time feedback during the scenario: 'Say that louder — everyone needs to hear you'",
+        "Debriefs the entire team after the scenario; identifies one teaching point for each person"
+      ]
+    }
+  ],
+  "metadata": {
+    "simulation_notes": [
+      "Dr. Lee is highly effective for high-acuity simulation scenarios, rapid consultation handoff practice, and scenarios designed to develop student resilience under pressure",
+      "He is a challenging simulation character: learners who are unprepared may find the encounter demoralizing. Debrief scaffolding is essential.",
+      "He pairs naturally with Dr. Narang (ED-to-medicine handoff) and with Dr. Bennet (ED-to-cardiology consultation for STEMI or acute HF)",
+      "His burnout arc can be used for advanced simulation scenarios involving clinician wellbeing, team communication, and patient safety culture"
+    ],
+    "optional_details": [
+      "Has a second-degree black belt in Taekwondo; trains 3 mornings per week before shifts as his primary stress management",
+      "Makes jjigae (Korean stew) on his days off; says cooking is 'the only thing I do slowly'",
+      "Keeps a list in his phone of every patient death he has been present for as a personal record",
+      "Has turned down multiple offers to move into ED directorship; says 'I'm a doctor, not a manager — don't promote me into uselessness'"
+    ]
+  }
+}

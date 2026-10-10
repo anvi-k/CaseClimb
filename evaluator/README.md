@@ -50,6 +50,23 @@ python -m evaluator --record examples/patient_record.json --episode examples/epi
 
 `examples/grader_response.json` contains one misquote, one citation of a turn that does not exist, and one over-generous objective result, so the output shows each correction.
 
+## Running inside the Poscere app
+
+The app in `../app` (copied from the `lowhangingfruit26` repository at commit `a14043b`) scores every submitted visit with this evaluator. `app/src/lib/engine/evaluator.ts` builds the visit bundle, runs `python -m evaluator.poscere`, and stores what comes back as the visit's feedback. The feedback page shows the debrief questions and under-probed topics in two extra cards.
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install -e .
+```
+
+```bash
+cd app && npm install && cp .env.example .env.local && npm run dev
+```
+
+- The app looks for the evaluator one folder up and for Python at `../.venv/bin/python`. Override with `EVALUATOR_ROOT` and `EVALUATOR_PYTHON`.
+- The evaluator uses the same AWS credentials and region as the app.
+- Points-checklist rubrics are still scored by the app's original scorer; only domain rubrics go to the evaluator.
+- `EVALUATOR_REPLAY=/path/to/grader_response.json` scores with a saved grader reply and no Bedrock call, for testing.
+
 ### Grading visits from the Poscere app
 
 The Poscere app (TypeScript, in the `lowhangingfruit26` repository) stores a visit as an encounter row with a case snapshot, a config, a state holding the disclosure ledger, and message rows. `evaluator.poscere` takes those as one JSON bundle and returns feedback in the app's own `Feedback` shape, so its feedback page can render the result unchanged.

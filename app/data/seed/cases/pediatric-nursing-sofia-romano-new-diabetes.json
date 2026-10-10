@@ -1,0 +1,937 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Review discharge summary from DKA admission",
+    "result": "Sofia Romano, 7F, admitted 3 days ago x3 days for new-onset T1DM presenting in DKA (pH 7.12, glucose 512 mg/dL). Treated with IV fluids/insulin drip, transitioned to subcutaneous insulin. Discharged on glargine 6 units qHS and lispro 1 unit/20g carb + correction scale. Diabetes education started inpatient (carb counting, injection technique, hypoglycemia recognition). Follow-up with pediatric endocrinology in 1 week.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Insulin glargine (Lantus) 6 units subQ at bedtime; Insulin lispro (Humalog) subQ with meals, dose = 1 unit per 20g carbohydrate + correction scale per sliding scale sheet; Glucagon emergency kit (nasal) - prescribed, not yet used.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review home glucose log uploaded by caregiver",
+    "result": "See artifact 'Home Glucose Log' - morning fasting readings 250-310 mg/dL daily x3 days; one reading of 58 mg/dL at school (2:15pm) treated approximately 20-25 minutes after symptoms noted per caregiver report.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Ask caregiver to walk through actual insulin administration steps (teach-back)",
+    "result": "Caregiver reports: draws up lispro AFTER Sofia finishes eating 'to see how much she ate,' estimates carbs by eye rather than measuring, injects lispro and glargine both in the same spot on left upper arm because 'that's the only place she lets me,' does not rotate sites. Reports washing hands and using new needle each time (one correct step).",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Ask caregiver to demonstrate how she identifies a low blood sugar",
+    "result": "Caregiver describes shakiness and sweating as warning signs but says she 'waited to see if it would come back up on its own' before treating the 58 mg/dL reading at school because she didn't want to overtreat.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Ask caregiver to show the glucagon kit on camera and describe when/how she would use it",
+    "result": "Caregiver retrieves kit, box is unopened/sealed, expiration date 14 months out. Caregiver states she has never read the instructions and is 'too scared to think about using it.'",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Visual inspection of injection sites via camera",
+    "result": "Small area of firm, slightly raised tissue (lipohypertrophy) visible on left upper outer arm; no redness, warmth, or drainage. No other injection sites visible on abdomen or thighs.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess Sofia's hydration and general appearance via camera/caregiver report",
+    "result": "Sofia appears alert, playful, coloring at the table; caregiver reports normal urine output, no vomiting, drinking fluids normally, no abdominal pain.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Screen for symptoms of recurrent DKA (nausea, vomiting, abdominal pain, rapid breathing, fruity breath)",
+    "result": "Caregiver denies vomiting, abdominal pain, rapid/labored breathing, or unusual breath odor since discharge.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review pediatric endocrinology follow-up scheduling status",
+    "result": "Endocrinology follow-up appointment scheduled for 4 days from today; no interim dose-adjustment orders on file.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Ask caregiver to describe correction dose calculation she is currently using",
+    "result": "Caregiver says she 'just adds a couple extra units if the number looks really high' rather than using the written correction scale provided at discharge.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "New-onset type 1 diabetes mellitus, 3 days post-DKA discharge, with caregiver insulin administration errors (postprandial dosing, carb estimation, no site rotation, correction scale not used as written), delayed/inadequate hypoglycemia treatment, unused glucagon kit, and absent school/co-parent diabetes plan.",
+   "differential": [
+    "Insulin administration/technique error causing erratic glucose control (confirmed)",
+    "Lipohypertrophy from site reuse contributing to unpredictable insulin absorption",
+    "Caregiver knowledge/confidence gap requiring re-education rather than a device or regimen failure",
+    "Early recurrent DKA (ruled out by absence of GI/respiratory symptoms today)"
+   ],
+   "keyFindings": [
+    "Morning glucose logs consistently 250-310 mg/dL suggesting possible under-dosing or absorption issues",
+    "One treated hypoglycemic episode (58 mg/dL) at school with delayed treatment",
+    "Lispro given after meals rather than before, undermining matching of insulin action to carbohydrate load",
+    "Carbohydrate counting done by estimation, not measurement",
+    "Insulin injected in a single site causing lipohypertrophy, which can cause erratic absorption",
+    "Glucagon kit unopened; caregiver has never reviewed instructions and expresses fear of using it",
+    "No completed school Diabetes Medical Management Plan (DMMP); school nurse untrained",
+    "Co-parent (father) has had no diabetes education and lacks supplies at his home",
+    "Caregiver using an ad hoc correction dose instead of the prescribed written correction scale",
+    "Caregiver sleep deprivation and limited support signal risk for caregiver burnout and care errors"
+   ],
+   "plan": [
+    "Re-teach injection technique: give lispro immediately before meals (or per prescriber timing) based on counted/measured carbohydrates, not after eating",
+    "Teach practical carbohydrate counting using food labels/measuring, consider referral to diabetes educator or dietitian for hands-on practice",
+    "Teach site rotation (abdomen, thighs, arms, buttocks) and show caregiver how to check for and avoid lipohypertrophic areas",
+    "Review and reinforce written correction insulin scale as prescribed; do NOT independently adjust glargine or lispro doses - escalate dosing concerns to the pediatric endocrinology/diabetes team today given the pattern of highs and the hypoglycemic event",
+    "Review hypoglycemia action plan in detail: recognize symptoms, treat promptly with fast-acting carbohydrate (do not wait to see if it resolves on its own), recheck in 15 minutes",
+    "Open and review glucagon kit together on the call; walk through step-by-step instructions; confirm expiration date; make a plan for when/how to use it; consider having caregiver do a practice run with a trainer kit if available",
+    "Coordinate with school: ensure a completed Diabetes Medical Management Plan (DMMP)/504 plan is in place, and that school nurse receives formal training on insulin administration, glucose monitoring, and glucagon use before Sofia returns if not already trained",
+    "Arrange diabetes education and supply access for Sofia's father so both households are prepared, including glucagon and insulin storage at his home",
+    "Assess and address caregiver fatigue/support; discuss realistic overnight monitoring strategies (e.g., continuous glucose monitor discussion with endocrinology team) and connect to social work or support resources as needed",
+    "Document findings and escalate the glucose pattern (morning highs, one low, administration errors) to the pediatric endocrinology team via SBAR for same-day guidance on interim dose adjustment; this is outside nursing scope to adjust independently"
+   ],
+   "redFlags": [
+    "Pattern of significant hyperglycemia (250-310 mg/dL) could predispose to recurrent DKA if uncorrected",
+    "Delayed treatment of a documented 58 mg/dL hypoglycemic episode is a safety risk, especially unsupervised at school",
+    "Unopened/unfamiliar glucagon kit means caregiver is unprepared for a severe low",
+    "No trained adult at school able to manage insulin, hypoglycemia, or glucagon in Sofia's current environment",
+    "Second household (father's) has no insulin, glucagon, or trained caregiver, creating a gap in coverage during custody time",
+    "Caregiver reporting 3-4 hours of sleep nightly raises concern for exhaustion-related errors and need for support"
+   ],
+   "educationPoints": [
+    "Rapid-acting insulin (lispro) is generally most effective when given shortly before meals so its action matches the rise in blood glucose from food, not after the meal is finished",
+    "Accurate carbohydrate counting (measuring/weighing or using nutrition labels) improves dosing accuracy more than visual estimation",
+    "Rotating injection sites prevents lipohypertrophy, which can cause unpredictable insulin absorption and contribute to unexplained high or low readings",
+    "Hypoglycemia should be treated promptly with fast-acting carbohydrate as soon as it is suspected or confirmed, followed by a recheck - waiting to see if it self-resolves increases risk",
+    "Caregivers should feel confident opening, inspecting, and understanding how to administer glucagon before an emergency occurs, not during one",
+    "All caregivers across households, and school staff, need standardized hands-on training and a written care plan (DMMP) to ensure consistent, safe care",
+    "Nursing's role in dose pattern concerns is to escalate to the prescribing diabetes team, not to independently change insulin doses"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Discharge Summary - Pediatric Inpatient Unit",
+    "author": "Pediatric Hospitalist Service",
+    "date": "3 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "PATIENT: Sofia Romano, 7-year-old female.\nADMITTING DIAGNOSIS: Diabetic ketoacidosis, new-onset type 1 diabetes mellitus.\nHOSPITAL COURSE: Presented to ED with 2-day history of polyuria, polydipsia, and vomiting. Labs showed glucose 512 mg/dL, venous pH 7.12, bicarbonate 9 mEq/L, positive serum ketones. Admitted to pediatric unit, treated with IV fluids and insulin infusion per DKA protocol with resolution of acidosis over 18 hours. Transitioned to subcutaneous insulin (glargine + lispro) on hospital day 2. Diabetes education provided by inpatient diabetes educator to mother (primary caregiver) including injection technique, carbohydrate counting basics, hypoglycemia recognition/treatment, and sick day management. Father not present for teaching sessions during admission.\nDISCHARGE REGIMEN: Insulin glargine 6 units subcutaneous at bedtime. Insulin lispro subcutaneous with meals, dosed 1 unit per 20 grams carbohydrate plus correction scale (see attached sliding scale). Glucagon emergency kit (nasal) prescribed, pharmacy counseling provided at discharge.\nFOLLOW-UP: Pediatric endocrinology clinic in 1 week. Primary care in 2 weeks. School to be provided with Diabetes Medical Management Plan (DMMP) - family advised to schedule meeting with school nurse.\nCONDITION AT DISCHARGE: Stable, tolerating oral intake, ambulatory, blood glucose 162 mg/dL at discharge."
+   },
+   {
+    "id": "d2",
+    "type": "chart",
+    "title": "Home Glucose Log (Caregiver-Reported)",
+    "author": "Caregiver entry via home log",
+    "date": "Past 3 days",
+    "release": {
+     "when": "fact",
+     "ref": "f5"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day/Time",
+     "yLabel": "Blood Glucose (mg/dL)",
+     "refLow": 70,
+     "refHigh": 180,
+     "series": [
+      {
+       "name": "Fingerstick glucose",
+       "points": [
+        {
+         "x": "Day1 AM",
+         "y": 260
+        },
+        {
+         "x": "Day1 PM pre-dinner",
+         "y": 210
+        },
+        {
+         "x": "Day2 AM",
+         "y": 280
+        },
+        {
+         "x": "Day2 2:15pm (school, treated late)",
+         "y": 58
+        },
+        {
+         "x": "Day2 PM pre-dinner",
+         "y": 230
+        },
+        {
+         "x": "Day3 AM",
+         "y": 310
+        },
+        {
+         "x": "Today AM",
+         "y": 268
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "Discharge Pharmacy / EHR",
+    "date": "3 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Insulin glargine (Lantus)",
+        "6 units",
+        "Subcutaneous",
+        "Once nightly at bedtime"
+       ]
+      },
+      {
+       "cells": [
+        "Insulin lispro (Humalog)",
+        "1 unit per 20g carbohydrate + correction scale (see scale)",
+        "Subcutaneous",
+        "With each meal"
+       ]
+      },
+      {
+       "cells": [
+        "Glucagon emergency kit (nasal)",
+        "3 mg",
+        "Intranasal",
+        "As needed for severe hypoglycemia - not yet used"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "form",
+    "title": "Insulin Lispro Correction Scale (Discharge Instructions)",
+    "author": "Pediatric Endocrinology",
+    "date": "3 days ago",
+    "release": {
+     "when": "action",
+     "ref": "a16"
+    },
+    "table": {
+     "columns": [
+      "Blood Glucose (mg/dL)",
+      "Correction Dose (additional units of lispro)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Less than 150",
+        "0 units (no correction)"
+       ]
+      },
+      {
+       "cells": [
+        "150-199",
+        "1 unit"
+       ]
+      },
+      {
+       "cells": [
+        "200-249",
+        "2 units"
+       ]
+      },
+      {
+       "cells": [
+        "250-299",
+        "3 units"
+       ]
+      },
+      {
+       "cells": [
+        "300 or greater",
+        "4 units and call diabetes team"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Vitals and Weight at Discharge",
+    "author": "Pediatric Inpatient Unit",
+    "date": "3 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Parameter",
+      "Value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Weight",
+        "23 kg (50th percentile)"
+       ]
+      },
+      {
+       "cells": [
+        "Height",
+        "121 cm (55th percentile)"
+       ]
+      },
+      {
+       "cells": [
+        "Heart rate",
+        "92 bpm"
+       ]
+      },
+      {
+       "cells": [
+        "Blood pressure",
+        "102/64 mmHg"
+       ]
+      },
+      {
+       "cells": [
+        "Respiratory rate",
+        "20/min"
+       ]
+      },
+      {
+       "cells": [
+        "Temperature",
+        "37.0°C"
+       ]
+      },
+      {
+       "cells": [
+        "Discharge glucose",
+        "162 mg/dL"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "lab_report",
+    "title": "Admission Labs (DKA presentation)",
+    "author": "Hospital Laboratory",
+    "date": "3 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Glucose",
+        "512",
+        "mg/dL",
+        "70-100"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Venous pH",
+        "7.12",
+        "",
+        "7.35-7.45"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Bicarbonate",
+        "9",
+        "mEq/L",
+        "22-28"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Serum ketones",
+        "Positive (large)",
+        "",
+        "Negative"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "11.8",
+        "%",
+        "<5.7"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Potassium",
+        "3.9",
+        "mEq/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "136",
+        "mEq/L",
+        "135-145"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Post-discharge follow-up: new-onset type 1 diabetes mellitus education and glucose log review, 3 days after DKA admission"
+   },
+   {
+    "label": "Problem list",
+    "value": "Type 1 diabetes mellitus, new diagnosis; recent diabetic ketoacidosis (resolved)"
+   },
+   {
+    "label": "Medications",
+    "value": "Insulin glargine 6 units subQ qHS; Insulin lispro subQ with meals (1 unit/20g carb + correction scale); Glucagon nasal emergency kit (unused)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "HR 92, BP 102/64, RR 20, Temp 37.0°C, Glucose 162 mg/dL (at discharge 3 days ago)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per state school requirements"
+   },
+   {
+    "label": "Care team",
+    "value": "Pediatric Endocrinology (diabetes team), Primary Care Pediatrician, Pediatric Nursing (telehealth follow-up)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable - outpatient pediatric)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "discharge teaching follow-up / chronic condition education",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for follow-up call",
+    "chart": "Caregiver states she is overwhelmed managing new insulin regimen at home since discharge and glucose numbers have been 'all over the place.'",
+    "says": "Hi, thank you for calling. Honestly, it's been a rough few days since we got home from the hospital with Sofia's diabetes. I'm just trying to keep up with the shots and I feel like her numbers are all over the place.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "timing since discharge",
+    "chart": "Discharged 3 days ago after DKA/new T1DM diagnosis.",
+    "says": "We came home on Tuesday, so it's been three days now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "general feeling since discharge",
+    "chart": "Caregiver reports Sofia seems otherwise well, playing and eating, no acute distress today.",
+    "says": "She seems fine honestly, she's right here coloring, eating okay, playing like normal.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "glucose number concerns",
+    "chart": "Caregiver reports morning blood sugars have consistently been in the 250-310 range.",
+    "says": "Every morning when I check her before breakfast, it's like 250, 280, one day it was over 300. I thought it was supposed to go down after we left the hospital.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "low blood sugar event",
+    "chart": "One hypoglycemic episode of 58 mg/dL at school yesterday afternoon, treated after a delay.",
+    "says": "Yesterday the school called me, they said her number was 58. I was so scared. They said she looked shaky.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "timing of low treatment",
+    "chart": "Caregiver instructed school by phone to wait a few minutes before giving juice to 'see if she bounces back' before treating the low.",
+    "says": "I told them to wait like 20 minutes and see if the number came back up on its own before giving her juice, because I didn't want to overdo it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "medications",
+    "topic": "insulin timing with meals",
+    "chart": "Caregiver gives lispro after Sofia finishes eating rather than before.",
+    "says": "I always wait until she's done eating to give her the fast insulin, that way I know exactly how much she ate.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "medications",
+    "topic": "carbohydrate counting method",
+    "chart": "Caregiver estimates carbohydrate grams visually rather than measuring or using labels.",
+    "says": "I don't really measure it out, I just kind of look at her plate and guess how many carbs are there.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "medications",
+    "topic": "injection site rotation",
+    "chart": "Caregiver injects both insulins in the same spot on the left upper arm; Sofia resists other sites.",
+    "says": "She only lets me do it in the one spot on her arm. If I try anywhere else she screams and fights me.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "medications",
+    "topic": "correction dosing approach",
+    "chart": "Caregiver adds extra lispro units based on how high the number 'looks' rather than following the written correction scale.",
+    "says": "If the number looks really high I just add a couple extra units myself, I don't really look at that paper they gave us.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "glucagon kit status",
+    "chart": "Glucagon kit remains unopened; caregiver has not reviewed instructions.",
+    "says": "That glucagon kit is still in the box. I haven't even opened it, honestly I'm scared to even look at it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "hpi",
+    "topic": "nighttime insulin fear",
+    "chart": "Caregiver reports fear of giving glargine at night due to concern it will cause a low while Sofia sleeps.",
+    "says": "Some nights I almost don't want to give the nighttime shot because I'm scared she'll go low while she's sleeping and I won't know.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "hpi",
+    "topic": "caregiver confidence level",
+    "chart": "Caregiver states she does not feel confident she is doing the injections or dosing correctly.",
+    "says": "I don't think I'm doing this right. I feel like I'm just guessing every single day.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "family",
+    "topic": "co-parent involvement",
+    "chart": "Sofia's father has shared custody, alternating weekends, but has received no diabetes teaching.",
+    "says": "Her dad has her every other weekend, but he hasn't learned any of this yet. He wasn't able to be at the hospital much.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "family",
+    "topic": "supplies at father's home",
+    "chart": "No insulin, glucagon, or glucose monitoring supplies currently kept at father's residence.",
+    "says": "We haven't figured out getting a second set of the insulin and everything over to his place yet.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Caregiver works as a hairdresser with variable daytime hours, which affects her availability during school hours.",
+    "says": "I do hair, so my schedule changes a lot depending on my clients, it's hard to always be free during school.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "sleep and exhaustion",
+    "chart": "Caregiver reports sleeping only 3-4 hours nightly due to checking Sofia's glucose overnight.",
+    "says": "I've barely slept, maybe 3 or 4 hours a night, because I keep getting up to check on her.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "psychosocial",
+    "topic": "emotional state about diagnosis",
+    "chart": "Caregiver expresses fear and guilt about the diagnosis and feeling responsible for her daughter's safety.",
+    "says": "I keep thinking, what if I mess up and something happens to her. It's just so much all at once.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "other",
+    "topic": "school nurse communication",
+    "chart": "School nurse has discharge paperwork on file but has not received hands-on insulin or glucagon training; no DMMP completed yet.",
+    "says": "I gave the school nurse the papers from the hospital but I don't think anyone's actually shown her how to do the shots or anything.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "vomiting or abdominal pain",
+    "chart": "No vomiting or abdominal pain since discharge.",
+    "says": "No throwing up or belly pain, nothing like that since we got home.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "ros",
+    "topic": "breathing pattern",
+    "chart": "No rapid or labored breathing noted since discharge.",
+    "says": "Her breathing seems totally normal to me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "unusual breath smell",
+    "chart": "No fruity or unusual breath odor noted.",
+    "says": "I haven't noticed any weird smell on her breath.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "nutrition",
+    "topic": "appetite since discharge",
+    "chart": "Appetite reportedly normal, eating most meals, snack timing inconsistent.",
+    "says": "She's eating pretty normal, maybe not finishing every snack on time though.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "function",
+    "topic": "urine output and thirst",
+    "chart": "No excessive thirst or urination reported since discharge, resolved from pre-admission symptoms.",
+    "says": "She's not drinking a ton of water like before, and going to the bathroom seems normal now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "pmh",
+    "topic": "past medical history before diagnosis",
+    "chart": "No prior chronic illnesses; previously healthy before this presentation.",
+    "says": "She's never had any health problems before this, she was always a healthy kid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "family",
+    "topic": "family history of diabetes",
+    "chart": "Maternal grandmother has type 2 diabetes; no known family history of type 1 diabetes.",
+    "says": "My mom has the type 2 kind of diabetes, but nobody in the family has had this type before, as far as I know.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f27",
+    "category": "other",
+    "topic": "recent illness before diagnosis",
+    "chart": "Caregiver recalls Sofia had a mild cold about three weeks before the DKA presentation.",
+    "says": "She did have like a little cold, a stuffy nose, maybe three weeks before all this happened.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "adherence",
+    "topic": "glucose log documentation habit",
+    "chart": "Caregiver has been writing down glucose readings consistently in a log provided at discharge.",
+    "says": "I've been writing every number down like they told me to, even the scary ones.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "caregiver's hopes for the call",
+    "chart": "Caregiver hopes to learn whether she is 'doing something wrong' and wants a clearer plan for lows.",
+    "says": "I just want to know if I'm messing something up, and what I'm actually supposed to do if her number drops again.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "sexual",
+    "topic": "not applicable",
+    "chart": "Not applicable for this pediatric case; no sexual health concerns relevant.",
+    "says": "N/A",
+    "tier": "hidden",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "substance",
+    "topic": "household substance exposure",
+    "chart": "No tobacco, alcohol, or substance use in the home reported.",
+    "says": "Nobody smokes or drinks around her, nothing like that in our house.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "needle fear reaction",
+    "chart": "Caregiver herself feels anxious each time she has to give an injection, sometimes delaying doses by a few minutes to calm herself.",
+    "says": "Every time I have to give her the shot my hands kind of shake, I have to take a breath before I can do it.",
+    "tier": "reluctant",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f6",
+    "artifactId": "d2",
+    "patientClaim": "Caregiver states she told the school to wait about 20 minutes to see if the 58 mg/dL reading would come back up on its own before treating it.",
+    "recordEvidence": "The home glucose log shows the 58 mg/dL reading at school was 'treated late' with the delay documented as part of the pattern of delayed hypoglycemia treatment, consistent with current guidance that lows should be treated immediately rather than observed.",
+    "teachingPoint": "Delaying treatment of a confirmed low out of fear of overtreating is a common caregiver error; nursing education should reinforce immediate treatment of hypoglycemia with recheck in 15 minutes rather than a 'wait and see' approach."
+   },
+   {
+    "id": "m2",
+    "factId": "f10",
+    "artifactId": "d4",
+    "patientClaim": "Caregiver states she adds extra lispro units based on how high the number looks rather than using a specific scale.",
+    "recordEvidence": "The discharge correction scale (artifact d4) specifies exact additional units for each glucose range (e.g., 3 units for 250-299, 4 units and call the team for 300+), which caregiver has not been following as written.",
+    "teachingPoint": "Ad hoc dose adjustments without using the prescribed correction scale increase risk of over- or under-correction; caregiver needs re-teaching on the written scale and clear escalation criteria (e.g., calling the diabetes team at the 300+ threshold) rather than estimating independently."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Identify and correct unsafe insulin administration technique, including postprandial dosing timing, inaccurate carbohydrate estimation, lack of site rotation, and deviation from the prescribed correction scale.",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9",
+     "f10"
+    ],
+    "actionIds": [
+     "a4",
+     "a7",
+     "a16"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess the caregiver's hypoglycemia recognition and treatment practices and reinforce a safe, prompt hypoglycemia action plan including glucagon preparedness.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f11"
+    ],
+    "actionIds": [
+     "a5",
+     "a6"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Evaluate glucose log trends to identify patterns requiring escalation to the diabetes team rather than independent nursing dose adjustment.",
+    "factIds": [
+     "f4",
+     "f10"
+    ],
+    "actionIds": [
+     "a3",
+     "a15"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify gaps in the broader care network, including school nurse training/DMMP status and co-parent education and supply access, and plan appropriate referrals/coordination.",
+    "factIds": [
+     "f14",
+     "f15",
+     "f19"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o5",
+    "text": "Recognize caregiver exhaustion, fear, and low confidence as factors affecting care safety, and respond with supportive, non-judgmental teaching and appropriate referral to support resources.",
+    "factIds": [
+     "f13",
+     "f17",
+     "f18",
+     "f32"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o6",
+    "text": "Rule out signs of recurrent DKA via remote assessment and determine that the child's current presentation does not require emergent escalation beyond diabetes team notification.",
+    "factIds": [
+     "f20",
+     "f21",
+     "f22",
+     "f24"
+    ],
+    "actionIds": [
+     "a9",
+     "a11"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Sofia Romano",
+   "age": 7,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Italian-American",
+   "occupation": "Second grade student",
+   "language": "English",
+   "appearance": "On camera, Sofia is a slim, energetic 7-year-old with dark curly hair in a ponytail, seated at a kitchen table coloring with markers, occasionally looking up at the screen. Her mother Giulia, a woman in her mid-30s with tired eyes and her hair pulled back, sits close beside her at the table in a modest kitchen with a coffee mug and glucose meter visible nearby; the lighting is warm but the room looks a bit cluttered, and Giulia's posture is tense, shoulders hunched, occasionally rubbing her face."
+  },
+  "persona": {
+   "personality": "Warm, hardworking, devoted to her daughter, but visibly anxious and self-critical; tends to apologize frequently and worries she is failing as a parent.",
+   "communicationStyle": "Talks quickly when nervous, uses everyday language rather than medical terms, sometimes goes on tangents about her schedule or guilt before circling back to the question asked.",
+   "healthLiteracy": "low",
+   "emotionalState": "Exhausted, frightened, and overwhelmed, with underlying guilt about the diagnosis and fear of making a dangerous mistake with the insulin.",
+   "background": "Giulia Romano is 35, works as a hairdresser at a local salon in Providence, and is raising Sofia with a shared custody arrangement with Sofia's father. She grew up in a large Italian-American family in the area, learned hairstyling from her aunt, and prides herself on being hands-on with Sofia despite a demanding, irregular work schedule. She has no extended family living nearby to help overnight.",
+   "speechExamples": [
+    "I swear I've read that discharge paper like ten times and I still feel lost.",
+    "She's such a good girl, she didn't even cry much at the hospital, but I cry about it when she's asleep.",
+    "I just don't want to mess up her shots, you know? It's a lot of pressure.",
+    "Can you just tell me plain and simple what I'm supposed to do if her number drops like that again?",
+    "I know I probably sound like I don't know what I'm doing, I'm sorry, I'm just really scared."
+   ],
+   "concerns": [
+    "Fear of causing a dangerous low blood sugar by giving too much insulin",
+    "Fear of using the glucagon kit incorrectly in an emergency",
+    "Worry that she is 'doing it all wrong' and will be blamed for a mistake",
+    "Concern about managing everything alone without family support nearby",
+    "Worry about Sofia's safety at school without trained staff"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a pediatric nursing student conducting a telehealth follow-up visit three days after Sofia Romano, age 7, was discharged following a recent hospitalization for new-onset type 1 diabetes. The history will be provided by her mother, Giulia Romano, who is on camera with Sofia nearby. Your goals are to assess how the home insulin regimen and glucose monitoring are going, re-teach key safety points using teach-back, develop a clear hypoglycemia plan, address school and co-parent care coordination, and identify anything that needs to be escalated to the pediatric diabetes team.",
+   "chiefComplaint": "Caregiver follow-up for new-onset type 1 diabetes management after recent DKA hospitalization; glucose readings fluctuating with one hypoglycemic episode.",
+   "openingLine": "Hi, thank you for calling. Honestly, it's been a rough few days since we got home from the hospital with Sofia's diabetes. I'm just trying to keep up with the shots and I feel like her numbers are all over the place.",
+   "tasks": [
+    "Assess current insulin administration technique, carbohydrate counting approach, and glucose monitoring pattern using teach-back.",
+    "Review the home glucose log and identify any concerning patterns that require escalation to the diabetes team.",
+    "Reinforce a clear hypoglycemia action plan and review the glucagon kit with the caregiver.",
+    "Identify and address gaps in school nurse coordination and co-parent diabetes education and supply access.",
+    "Assess caregiver coping, confidence, and support needs, and respond with supportive, non-judgmental teaching."
+   ],
+   "timeLimitMin": 25
+  },
+  "setting": "Telehealth video visit; caregiver and child at home in their kitchen in Providence, Rhode Island, three days after hospital discharge",
+  "specialty": "Pediatric Nursing",
+  "summary": "A 7-year-old girl three days post-discharge from DKA with new type 1 diabetes presents via telehealth with her exhausted, frightened mother reporting erratic glucose readings and a delayed-treated hypoglycemic episode. The case teaches learners to identify unsafe insulin administration practices (postprandial dosing, carb estimation, lack of site rotation, ad hoc correction dosing), reinforce hypoglycemia and glucagon preparedness, close school and co-parent care gaps, and recognize when findings must be escalated to the pediatric diabetes team rather than managed independently.",
+  "title": "Post-DKA Discharge Teaching Follow-Up: New Type 1 Diabetes in a 7-Year-Old",
+  "professions": [
+   "pediatric-nursing"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

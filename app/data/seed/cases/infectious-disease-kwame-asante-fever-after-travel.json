@@ -1,0 +1,820 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review current vital signs",
+    "result": "Temp 39.3°C (102.7°F), HR 112 bpm, BP 108/66 mmHg, RR 20/min, SpO2 97% on room air. Patient appears flushed and diaphoretic on camera.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera inspection of skin for rash or petechiae",
+    "result": "No rash, petechiae, or jaundice of skin visible on camera inspection of arms, chest, and legs under good lighting.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection of sclerae for jaundice",
+    "result": "Mild scleral icterus noted bilaterally on close camera view.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Guided abdominal self-palpation (patient presses below left and right ribs)",
+    "result": "Patient reports mild fullness and tenderness to palpation in the left upper quadrant; no rebound or guarding reported. This is a patient-performed self-exam only, not a clinician-verified finding, and must be confirmed by formal abdominal exam in person.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Visual inspection of urine sample held to camera",
+    "result": "Urine appears dark tea-colored/cola-colored in a clear cup under room lighting.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Neck stiffness self-check (chin-to-chest maneuver guided by clinician)",
+    "result": "Patient able to touch chin to chest without pain or resistance; no neck stiffness reported.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review travel and immunization history in chart",
+    "result": "No pre-travel consultation or chemoprophylaxis prescription documented in the chart prior to this trip. Routine immunizations up to date per last primary care visit 1 year ago.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Calculate malaria pretest probability / risk stratification",
+    "result": "High pretest probability of malaria given endemic travel without chemoprophylaxis, fever pattern, and exam findings (splenomegaly, scleral icterus, dark urine) — meets criteria for emergency same-day evaluation.",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Order STAT thick and thin blood smears for malaria parasites",
+    "result": "Order placed and transmitted to emergency department; patient instructed to go in person for same-day collection — result pending at close of this telehealth visit.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "test",
+    "name": "Order STAT rapid malaria antigen test (RDT)",
+    "result": "Order placed and transmitted to emergency department as adjunct to blood smear; result pending at close of this telehealth visit.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "lab",
+    "name": "Order STAT CBC with differential",
+    "result": "Order placed; to be drawn same-day in emergency department. Result pending at close of this telehealth visit.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "lab",
+    "name": "Order STAT basic metabolic panel and hepatic function panel (creatinine, glucose, electrolytes, total/direct bilirubin, AST/ALT)",
+    "result": "Combined order placed for basic metabolic panel and hepatic function panel; to be drawn same-day in emergency department. Result pending at close of this telehealth visit.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review prior lab results in chart",
+    "result": "No labs on file from this illness; last CBC and chemistry panel 14 months ago were within normal limits.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review medication list for interactions/contraindications",
+    "result": "Medication list shows no chronic prescriptions; patient reports using leftover amoxicillin 500 mg from a prior unrelated prescription, taken for 2 days without clinician guidance.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Determine disposition and urgency of referral",
+    "result": "Disposition: emergency department referral today for STAT malaria testing and supportive labs given possibility of severe/complicated malaria (jaundice, possible splenomegaly, dark urine suggesting hemolysis); not appropriate to manage as outpatient pending results.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "test",
+    "name": "Point-of-care capillary glucose check if home glucometer available",
+    "result": "Patient does not own a glucometer; home glucose check unavailable.",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Primary Care Visit Note (14 months ago)",
+    "author": "Dr. Linda Okafor, Internal Medicine",
+    "date": "14 months ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "45-year-old male presenting for annual physical. No acute complaints. Review of systems negative. Exam unremarkable, no hepatosplenomegaly, no icterus. Labs within normal limits (CBC, BMP, lipid panel). Discussed travel to Ghana planned for following year; brief counseling given regarding malaria risk, prophylaxis, and vaccination, but patient did not return for travel consultation prior to departure. Immunizations reviewed and updated (Tdap, influenza). Plan: routine follow-up in 1 year."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "EHR Medication Reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Amoxicillin (leftover, self-directed)",
+        "500 mg",
+        "Oral",
+        "Twice daily x2 days, self-stopped",
+        "Fever, self-treated, no clinician order"
+       ]
+      },
+      {
+       "cells": [
+        "Acetaminophen",
+        "650 mg",
+        "Oral",
+        "As needed for fever",
+        "Fever/myalgia"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "flowsheet",
+    "title": "Vital Signs - Today's Telehealth Visit",
+    "author": "ID Fellow Clinic",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "Temp (°C)",
+      "HR (bpm)",
+      "BP (mmHg)",
+      "RR (/min)",
+      "SpO2 (%)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Visit start",
+        "39.3",
+        "112",
+        "108/66",
+        "20",
+        "97"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "other",
+    "title": "Reported Fever Pattern Over Past 4 Days (Patient Log)",
+    "author": "Patient self-report",
+    "date": "Today",
+    "release": {
+     "when": "fact",
+     "ref": "f3"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day",
+     "yLabel": "Max Temperature (°C)",
+     "refHigh": 38,
+     "series": [
+      {
+       "name": "Max Temp",
+       "points": [
+        {
+         "x": "Day 1",
+         "y": 39
+        },
+        {
+         "x": "Day 2",
+         "y": 38.6
+        },
+        {
+         "x": "Day 3",
+         "y": 39.4
+        },
+        {
+         "x": "Day 4 (today)",
+         "y": 39.3
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "ID Fellow Telehealth Consult Note - In Progress",
+    "author": "ID Fellow (learner)",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "body": "S: 45-year-old male, 9 days post-return from 3-week trip to Kumasi, Ghana, presents with 4 days of high fever (Tmax 39.4°C), drenching sweats, headache, myalgias, one episode of vomiting, mild diarrhea, and new dark urine today. No malaria chemoprophylaxis taken. Took leftover amoxicillin x2 days without improvement. No rash, no bleeding. Son (age 12) traveled with patient and remains well.\n\nO: Vitals as above (febrile, tachycardic, borderline hypotensive). Mild scleral icterus. Patient-reported LUQ fullness/tenderness on self-palpation (not clinician-verified, requires in-person confirmation). Urine visually dark on camera. No rash or petechiae. No neck stiffness.\n\nA: High pretest probability malaria, potentially severe given jaundice and possible splenomegaly/hemolysis (splenomegaly unconfirmed pending formal exam). Treat as medical emergency.\n\nP: STAT ED referral for thick/thin smear, RDT, CBC, combined BMP/hepatic panel (bilirubin/LFTs, renal function, glucose). Counsel patient on urgency, arrange transport, do not delay for outpatient labs."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Fever after travel to Ghana"
+   },
+   {
+    "label": "Problem list",
+    "value": "None documented"
+   },
+   {
+    "label": "Medications",
+    "value": "None on file prior to this visit (patient reports self-use of leftover amoxicillin, see note)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 118/76, HR 72, Temp 36.8°C — recorded 14 months ago at annual physical"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Tdap and influenza up to date per last visit; no travel vaccines on file"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. Linda Okafor, Internal Medicine"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "new consultation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for call",
+    "chart": "Patient reports 4 days of fever up to 39.4°C with sweats, headache, and muscle aches after returning from Ghana 9 days ago.",
+    "says": "I've had this fever for about four days now, really high, with drenching sweats, and my head and whole body ache. I just got back from Ghana about a week and a half ago.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "travel details",
+    "chart": "Returned 9 days ago from a 3-week trip to Kumasi, Ghana, visiting family.",
+    "says": "I was in Kumasi for three weeks visiting my family. Got back nine days ago.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "fever pattern",
+    "chart": "Fevers occurring daily, Tmax 39.4°C, with associated drenching sweats and chills.",
+    "says": "The fever comes and goes but it keeps spiking really high, and then I just soak through my shirt with sweat.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "malaria prevention",
+    "chart": "Did not take malaria chemoprophylaxis before or during travel; reports growing up in Ghana and assumed he had immunity.",
+    "says": "I didn't take any malaria pills. I grew up there, so I figured I'd still have some immunity from when I was a kid.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "self-treatment",
+    "chart": "Took leftover amoxicillin 500 mg twice daily for 2 days without improvement before stopping.",
+    "says": "I had some old amoxicillin from a dental thing a while back, so I took that for two days hoping it would help, but it didn't do much.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "urine color",
+    "chart": "Reports new onset of dark/tea-colored urine today.",
+    "says": "Today I noticed my urine looks really dark, almost like tea or cola. That's new.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "vomiting episode",
+    "chart": "One episode of vomiting two days ago.",
+    "says": "I threw up once, maybe two days ago. Just the one time.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "diarrhea",
+    "chart": "Reports mild, non-bloody diarrhea for the past 2 days.",
+    "says": "My stomach's been a little loose the last couple days, nothing crazy, no blood or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "rash",
+    "chart": "Denies rash.",
+    "says": "No, I haven't noticed any rash anywhere.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "bleeding symptoms",
+    "chart": "Denies bleeding gums, nosebleeds, blood in stool or urine, or easy bruising.",
+    "says": "No bleeding anywhere that I've noticed - no nosebleeds, no blood when I go to the bathroom.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "headache severity",
+    "chart": "Describes headache as moderate-severe, frontal, no visual changes.",
+    "says": "The headache is pretty bad, mostly in the front of my head, but my vision's fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "neck or light symptoms",
+    "chart": "Denies neck stiffness or photophobia.",
+    "says": "No stiff neck, and light doesn't really bother my eyes any more than usual.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "cough or breathing",
+    "chart": "Denies cough, shortness of breath, or chest pain.",
+    "says": "No cough, no trouble breathing, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies dysuria or urinary frequency changes aside from color.",
+    "says": "It doesn't burn or anything when I go, it's just the color that changed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "hpi",
+    "topic": "appetite and oral intake",
+    "chart": "Decreased appetite over past 4 days; tolerating fluids reasonably well.",
+    "says": "I haven't really felt like eating much, but I've been able to keep drinking water okay.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "social",
+    "topic": "travel companions",
+    "chart": "12-year-old son traveled with patient to Ghana and remains asymptomatic.",
+    "says": "My son came with me, he's twelve, and he's totally fine, no symptoms at all.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "hpi",
+    "topic": "mosquito exposure",
+    "chart": "Reports frequent evening outdoor activity in Kumasi with inconsistent bed net use and no insect repellent use.",
+    "says": "I was outside a lot in the evenings visiting people, and I didn't really use a mosquito net every night or any bug spray.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "hpi",
+    "topic": "food and water exposure",
+    "chart": "Ate street food and local tap water occasionally while traveling; no known sick contacts with GI illness.",
+    "says": "I ate some street food here and there, and probably drank tap water a couple times without thinking about it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "hpi",
+    "topic": "animal or insect bites",
+    "chart": "Denies any animal bites, tick bites, or freshwater swimming during trip.",
+    "says": "No animal bites, no ticks that I noticed, and I didn't go swimming in any rivers or lakes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "past malaria history",
+    "chart": "Reports having had malaria multiple times as a child growing up in Ghana, last episode over 20 years ago, none since emigrating.",
+    "says": "I had malaria a bunch of times as a kid back home, but that was over twenty years ago. Nothing since I moved to the US.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "pmh",
+    "topic": "chronic conditions",
+    "chart": "No chronic medical conditions; no history of liver or kidney disease.",
+    "says": "I don't have any ongoing health problems, no liver or kidney issues or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries.",
+    "says": "Never had any surgeries.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "medications",
+    "topic": "regular medications",
+    "chart": "Takes no prescription medications regularly; occasional over-the-counter acetaminophen for fever during this illness.",
+    "says": "I don't take any regular medicine, just some Tylenol the last few days for the fever.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No allergies to any medications that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "family",
+    "topic": "family health in Ghana",
+    "chart": "Family members in Kumasi are generally healthy; no reports of malaria or similar illness among household contacts there currently.",
+    "says": "Everybody back home seemed fine while I was there, nobody else was sick.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "social",
+    "topic": "occupation and work pressure",
+    "chart": "Works as a high school mathematics teacher; concerned about missing work and wants to return tomorrow.",
+    "says": "I teach high school math, and I've got a big test to proctor tomorrow, so I'm hoping I can just get some antibiotics and go in.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "understanding of malaria risk",
+    "chart": "Patient initially skeptical that he could have malaria given childhood exposure; open to education once risk explained.",
+    "says": "Honestly I didn't think I could even get malaria anymore since I grew up with it. Is that really what's going on?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "sexual",
+    "topic": "sexual activity during travel",
+    "chart": "Denies any new sexual partners or unprotected sexual activity during travel.",
+    "says": "No, nothing like that while I was there, I was just with family the whole time.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "substance",
+    "topic": "alcohol and recreational drug use",
+    "chart": "Drinks alcohol occasionally (1-2 beers per week), denies recreational drug use.",
+    "says": "I'll have a beer or two on a weekend sometimes, but that's about it. No drugs or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "severity trend",
+    "chart": "Reports feeling progressively more fatigued and weak over the past 2 days despite fever cycling.",
+    "says": "I've been feeling more worn out and weak the last two days, even between the fever spikes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "insurance and cost concern",
+    "chart": "Expresses concern about cost of emergency department visit and potential missed work pay.",
+    "says": "I'm a little worried about the ER bill and missing a day of pay if I have to go in today.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "hpi",
+    "topic": "confusion or mental status change",
+    "chart": "Denies confusion, unusual drowsiness, or difficulty staying awake.",
+    "says": "My head hurts but I've been thinking clearly, no confusion or anything, I've stayed awake fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f33",
+    "category": "ros",
+    "topic": "joint swelling",
+    "chart": "Denies joint swelling or redness; muscle aches are diffuse without focal joint involvement.",
+    "says": "It's more all-over muscle soreness, no actual joint swelling or redness.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f20",
+    "artifactId": "d1",
+    "patientClaim": "Patient believes childhood malaria exposure in Ghana gives him lasting immunity, so he skipped prophylaxis.",
+    "recordEvidence": "Primary care note from 14 months ago documents that malaria prophylaxis and travel counseling were offered and discussed, but the patient did not return for a dedicated travel consultation before departure, and no prophylaxis was prescribed or taken.",
+    "teachingPoint": "Childhood exposure to malaria does not confer durable immunity in adulthood, especially after years away from an endemic area; this is a common and dangerous misconception that clinicians must proactively address, as missed opportunity for travel counseling contributed to this presentation."
+   },
+   {
+    "id": "m2",
+    "factId": "f5",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports taking leftover amoxicillin for 2 days hoping it would treat his fever.",
+    "recordEvidence": "Medication list confirms amoxicillin was self-directed, not clinician-ordered, and is not an appropriate or effective empiric therapy for malaria, which likely explains why his symptoms did not improve and in fact worsened with new jaundice and dark urine.",
+    "teachingPoint": "Self-treatment with leftover or mismatched antibiotics can delay appropriate diagnosis and treatment of malaria and may mask or complicate the clinical picture; empiric antibacterial therapy has no role in suspected malaria."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete travel, exposure, and chemoprophylaxis history to establish malaria as the leading diagnosis in a febrile returning traveler.",
+    "factIds": [
+     "f2",
+     "f4",
+     "f17",
+     "f20"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize and correct the common misconception that childhood exposure to malaria confers lasting immunity in adulthood.",
+    "factIds": [
+     "f4",
+     "f20",
+     "f27"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify clinical features suggestive of potentially severe or complicated malaria (jaundice, dark urine suggesting hemolysis, splenomegaly, tachycardia) that mandate emergency-level urgency.",
+    "factIds": [
+     "f6",
+     "f30"
+    ],
+    "actionIds": [
+     "a1",
+     "a3",
+     "a4",
+     "a5"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Correctly order the appropriate same-day diagnostic workup for suspected malaria (thick/thin smear, rapid antigen test, CBC, combined metabolic/hepatic panel for renal function, bilirubin/LFTs, and glucose) and recognize this cannot be deferred to routine outpatient labs.",
+    "factIds": [
+     "f6"
+    ],
+    "actionIds": [
+     "a9",
+     "a10",
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize that leftover or inappropriate self-treatment with antibiotics does not address malaria and may contribute to diagnostic delay, and counsel accordingly.",
+    "factIds": [
+     "f5"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Communicate the urgency of same-day emergency department referral effectively to a patient who is reluctant due to work and cost concerns, while respecting his autonomy and circumstances.",
+    "factIds": [
+     "f26",
+     "f31",
+     "f27"
+    ],
+    "actionIds": [
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Suspected malaria (clinical features raising concern for possible severe/complicated disease, pending confirmatory testing) in a febrile returning traveler from a malaria-endemic region, without chemoprophylaxis",
+   "differential": [
+    "Plasmodium falciparum or other species malaria (leading diagnosis)",
+    "Typhoid (enteric) fever",
+    "Dengue fever",
+    "Viral hepatitis",
+    "Leptospirosis",
+    "Bacterial sepsis/other travel-related bacteremia",
+    "Amoebic liver abscess"
+   ],
+   "keyFindings": [
+    "9 days post-return from 3-week stay in malaria-endemic Kumasi, Ghana",
+    "No malaria chemoprophylaxis taken due to false belief in childhood-acquired immunity",
+    "4 days of high fever (Tmax 39.4°C) with drenching sweats, headache, myalgias",
+    "New dark/tea-colored urine today, raising concern for possible hemolysis (unconfirmed, labs pending)",
+    "Mild scleral icterus on camera exam",
+    "Patient-reported left upper quadrant fullness/tenderness on self-palpation (not a clinician-verified exam finding), raising concern for possible splenomegaly that requires in-person confirmation",
+    "Tachycardia (HR 112) and borderline hypotension on vitals",
+    "Progressive fatigue/weakness over 2 days",
+    "No rash, no bleeding, no neck stiffness, no confusion — helps narrow differential and assess for severity",
+    "No parasitemia, hemolysis, or organ function labs available yet; findings are suggestive but not yet diagnostic of severe malaria"
+   ],
+   "plan": [
+    "Counsel patient that this is a medical emergency requiring same-day in-person evaluation, not manageable via telehealth alone",
+    "Arrange immediate referral to emergency department for STAT thick and thin blood smears for malaria parasites and species identification",
+    "Order STAT rapid malaria antigen test as an adjunct, understanding smear remains gold standard",
+    "Order STAT CBC with differential to assess for anemia, thrombocytopenia, parasitemia clues",
+    "Order STAT combined basic metabolic panel and hepatic function panel (renal function, glucose, total/direct bilirubin, AST/ALT) given scleral icterus, dark urine, and need to assess for hypoglycemia (no home glucometer available)",
+    "Advise discontinuing further self-directed antibiotic use; amoxicillin has no role in treating malaria",
+    "Address patient's cost and work concerns empathetically while reinforcing non-negotiable urgency of same-day evaluation, explaining that current findings are concerning but require labs and formal exam to confirm severity",
+    "Coordinate with emergency department / inpatient team for admission and initiation of appropriate antimalarial therapy once species and severity are confirmed, as this is beyond the scope of this telehealth visit to prescribe before results",
+    "Provide travel health education for future trips, including need for chemoprophylaxis regardless of childhood history or perceived immunity",
+    "Document mismatch between patient's belief in lasting immunity and documented missed travel counseling opportunity for future quality improvement"
+   ],
+   "redFlags": [
+    "Fever in a returning traveler from a malaria-endemic area is a medical emergency until proven otherwise",
+    "Jaundice/scleral icterus combined with dark urine raises concern for hemolysis, though this requires lab confirmation",
+    "Patient-reported LUQ fullness (unverified by formal exam), tachycardia, and borderline hypotension warrant urgent in-person assessment and formal exam, not deferred outpatient testing",
+    "Risk of rapid clinical deterioration, including cerebral malaria, severe anemia, acute kidney injury, or hypoglycemia, can occur within hours in falciparum malaria if confirmed",
+    "Delay in diagnosis and treatment due to patient reluctance (work, cost) must be addressed directly given life-threatening potential"
+   ],
+   "educationPoints": [
+    "Childhood immunity to malaria wanes significantly after years of non-exposure living outside endemic areas and should never be relied upon to skip prophylaxis",
+    "All travelers to malaria-endemic regions, including those originally from or visiting family in such regions (VFR travelers), are at risk and should receive pre-travel counseling and chemoprophylaxis",
+    "Fever in a returning traveler always warrants a travel and exposure history as part of the initial assessment, and malaria must be excluded urgently given its potential lethality",
+    "Thick and thin blood smears remain the diagnostic gold standard for malaria and must be obtained urgently, often requiring repeat smears if initial testing is negative but suspicion remains high",
+    "Self-treatment with leftover antibiotics is a common but potentially harmful practice that can mask symptoms or delay appropriate care without providing any benefit against malaria",
+    "Clear, empathetic communication about the seriousness of a diagnosis can help patients overcome barriers related to work and financial concerns and accept urgent care recommendations",
+    "Remote self-reported findings (e.g., self-palpation tenderness) are suggestive but not equivalent to a formal clinical exam, and should be framed as findings to be confirmed in person rather than definitive diagnoses"
+   ]
+  },
+  "patient": {
+   "name": "Kwame Asante",
+   "age": 45,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Ghanaian-American",
+   "occupation": "High school mathematics teacher",
+   "language": "English",
+   "appearance": "A well-built man with short greying hair, appearing fatigued and flushed, wearing a plain grey t-shirt. He is seated on a couch in a dimly lit living room, occasionally wiping his forehead, with a blanket nearby and a glass of water visible on a side table.",
+   "portrait": "/portraits/infectious-disease-kwame-asante-fever-after-travel.jpg"
+  },
+  "persona": {
+   "personality": "Articulate, practical, and somewhat stoic; tends to downplay symptoms initially but answers directly once asked.",
+   "communicationStyle": "Speaks in clear, organized sentences, asks clarifying questions, appreciates straightforward explanations without excessive jargon.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious but trying to stay composed; frustrated at the inconvenience of being sick and worried about missing work obligations.",
+   "background": "Kwame immigrated to the United States from Ghana in his twenties for graduate school and has taught high school mathematics in Columbus for the past 15 years. He is married with two children, including the 12-year-old son who traveled with him. He visits family in Kumasi roughly every two to three years and takes pride in staying connected to his roots.",
+   "speechExamples": [
+    "I know my body pretty well, and this doesn't feel like a regular flu.",
+    "I really can't afford to miss a day of school tomorrow, I have a big exam to proctor.",
+    "Growing up, I had malaria so many times I just figured I'd built up some resistance to it.",
+    "Is this something a round of antibiotics can clear up quickly?",
+    "I appreciate you being straightforward with me about how serious this might be."
+   ],
+   "concerns": [
+    "Wants to know if he can still go to work tomorrow",
+    "Worried about the cost of an emergency department visit",
+    "Confused about why he might have malaria despite childhood exposure",
+    "Concerned about what the dark urine means"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the infectious disease fellow conducting a telehealth consultation. Kwame Asante, a 45-year-old man, is calling 9 days after returning from a 3-week trip to Kumasi, Ghana, with several days of fever. Review his history and current status, and determine next steps.",
+   "chiefComplaint": "Fever and body aches for 4 days after returning from travel to Ghana",
+   "openingLine": "I've had this fever for about four days now, really high, with drenching sweats, and my head and whole body ache. I just got back from Ghana about a week and a half ago.",
+   "tasks": [
+    "Obtain a focused travel, exposure, and fever history",
+    "Assess for clinical findings via remote exam techniques (skin, sclerae, abdomen, urine inspection)",
+    "Determine appropriate same-day diagnostic workup and explain the urgency",
+    "Address the patient's questions and concerns about work and cost",
+    "Formulate and clearly communicate an urgent disposition plan"
+   ],
+   "timeLimitMin": 20
+  },
+  "setting": "Telehealth video visit, patient at home in Columbus, Ohio, seated in his living room",
+  "specialty": "Infectious Disease",
+  "summary": "A 45-year-old Ghanaian-American teacher presents via telehealth with 4 days of high fever, sweats, and new dark urine 9 days after returning from unprotected travel to Kumasi, Ghana, without malaria chemoprophylaxis. The case teaches recognition of malaria as a medical emergency in a returning traveler, remote assessment for signs of severity (jaundice, splenomegaly, hemolysis), and urgent same-day escalation to emergency care despite patient reluctance tied to work and cost concerns.",
+  "title": "Travel-Related Fever in a Returning Traveler from Ghana: Malaria Until Proven Otherwise",
+  "professions": [
+   "infectious-disease"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

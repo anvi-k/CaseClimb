@@ -1,0 +1,1023 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home blood pressure/pulse log",
+    "result": "Home readings over past 2 weeks: BP ranges 128-148/78-90 mmHg, resting pulse 62-96/min, irregular pulse noted on several mornings per patient log.",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Guided pulse palpation (patient self-check)",
+    "result": "Patient palpates radial pulse on camera: describes irregular, 'skipping' pattern lasting ~2 minutes during the call, rate approximately 90/min by count.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection for volume overload (JVD, ankle edema)",
+    "result": "No visible neck vein distension at 45 degrees; no ankle or pretibial edema seen on camera; no digital clubbing.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Camera inspection of thyroid/neck",
+    "result": "No visible goiter or neck masses; no tremor of outstretched hands observed.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review 14-day patch monitor report",
+    "result": "Paroxysmal atrial fibrillation, AF burden 9%, longest episode 6 hours 40 minutes, ventricular rates during AF up to 148/min, sinus rhythm the remainder of the time; no sustained VT.",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "imaging",
+    "name": "Review transthoracic echocardiogram report",
+    "result": "Left atrium mildly dilated (volume index 32 mL/m2), left ventricular ejection fraction 55%, no significant valvular disease, no LV hypertrophy, no intracardiac thrombus visualized.",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "lab",
+    "name": "Review thyroid function tests",
+    "result": "TSH 2.1 mIU/L (normal), Free T4 1.1 ng/dL (normal).",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review renal function and electrolytes",
+    "result": "Sodium 139 mmol/L, Potassium 4.3 mmol/L, Creatinine 1.0 mg/dL, eGFR 82 mL/min/1.73m2 - all within normal limits.",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Review hemoglobin A1c",
+    "result": "Hemoglobin A1c 7.2% (goal <7.0-7.5% individualized) - mildly above target.",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Review liver function tests",
+    "result": "AST 24 U/L, ALT 28 U/L, both within normal limits.",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Calculate CHA2DS2-VASc score",
+    "result": "CHA2DS2-VASc = 2 (hypertension 1 point + diabetes 1 point + age 61 [0, below 65 threshold] + male sex [0 points]); estimated annual stroke risk approximately 2.2%.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Administer STOP-BANG obstructive sleep apnea screening questionnaire",
+    "result": "Patient endorses loud snoring, witnessed apneas (per wife), daytime sleepiness, and hypertension on direct questioning; BMI 29.7 (not >35), age 61 (not >50 threshold not met for this component per standard cutoff... ) - components should be tallied from the interview; no validated composite score has been calculated or recorded in the chart.",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Losartan 50 mg daily, Metformin 1000 mg twice daily; no current anticoagulant or antiarrhythmic prescribed.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a15",
+    "kind": "vitals",
+    "name": "Review in-office vitals from referring PCP visit",
+    "result": "BP 138/86 mmHg, HR 78/min irregular, weight 94 kg, height 178 cm, BMI 29.7.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review prior PCP referral note",
+    "result": "Referral note documents smartwatch alert for irregular rhythm, two months of palpitation episodes, and request for cardiology evaluation and anticoagulation discussion requested.",
+    "importance": "minor",
+    "artifactIds": [
+     "d6"
+    ]
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "other",
+    "title": "14-Day Ambulatory Patch Monitor Report",
+    "author": "Cardiac Monitoring Service",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "PATIENT: Samuel Adeyemi, 61M. Monitoring duration: 14 days 2 hours.\n\nFINDINGS:\n- Predominant rhythm: Sinus rhythm with normal AV conduction.\n- Paroxysmal atrial fibrillation detected: total AF burden 9% of monitored time.\n- Number of AF episodes: 11. Longest episode duration: 6 hours 40 minutes.\n- Ventricular rate during AF: average 112/min, maximum 148/min.\n- No sustained ventricular tachycardia. Rare isolated PVCs (<1% burden).\n- No significant bradycardia or pauses >2.5 seconds.\n\nIMPRESSION: Paroxysmal atrial fibrillation, burden 9%, with episodes of rapid ventricular response."
+   },
+   {
+    "id": "d2",
+    "type": "imaging",
+    "title": "Transthoracic Echocardiogram Report",
+    "author": "Echocardiography Lab",
+    "date": "10 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "STUDY: Transthoracic echocardiogram, resting.\n\nLEFT VENTRICLE: Normal size and wall thickness. Ejection fraction 55% (normal), estimated by biplane Simpson's method. No regional wall motion abnormality.\n\nLEFT ATRIUM: Mildly dilated, volume index 32 mL/m2 (normal <34 mL/m2 borderline-mild dilation).\n\nVALVES: Mild mitral annular calcification, no significant stenosis or regurgitation. Aortic and tricuspid valves structurally normal.\n\nRIGHT HEART: Normal RV size and function. Estimated PA systolic pressure 28 mmHg (normal).\n\nPERICARDIUM: No effusion.\n\nINTRACARDIAC: No thrombus visualized (transthoracic study, limited sensitivity for LAA thrombus).\n\nIMPRESSION: Mildly dilated left atrium. Preserved left ventricular ejection fraction (55%). No significant valvular disease."
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Comprehensive Metabolic and Thyroid Panel",
+    "author": "Quest Diagnostics",
+    "date": "1 week ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "135-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.3",
+        "mmol/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.0",
+        "mg/dL",
+        "0.7-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "82",
+        "mL/min/1.73m2",
+        ">60"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "TSH",
+        "2.1",
+        "mIU/L",
+        "0.4-4.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Free T4",
+        "1.1",
+        "ng/dL",
+        "0.8-1.8"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "7.2",
+        "%",
+        "<5.7 normal; <7.0-7.5 goal on treatment"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "AST",
+        "24",
+        "U/L",
+        "10-40"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "ALT",
+        "28",
+        "U/L",
+        "7-56"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "EHR Medication Reconciliation",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Losartan",
+        "50 mg",
+        "Oral",
+        "Once daily"
+       ]
+      },
+      {
+       "cells": [
+        "Metformin",
+        "1000 mg",
+        "Oral",
+        "Twice daily"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Referring PCP Visit Vitals",
+    "author": "Dr. Patel, Internal Medicine",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Parameter",
+      "Value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Blood pressure",
+        "138/86 mmHg"
+       ]
+      },
+      {
+       "cells": [
+        "Heart rate",
+        "78/min, irregular"
+       ]
+      },
+      {
+       "cells": [
+        "Weight",
+        "94 kg"
+       ]
+      },
+      {
+       "cells": [
+        "Height",
+        "178 cm"
+       ]
+      },
+      {
+       "cells": [
+        "BMI",
+        "29.7"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Referral Note from Primary Care",
+    "author": "Dr. Patel, Internal Medicine",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Mr. Adeyemi is a 61-year-old man with hypertension and type 2 diabetes who presents after his smartwatch flagged an irregular rhythm notification. He reports approximately 2 months of intermittent palpitations described as 'fluttering,' lasting hours, associated with fatigue. No syncope. Referred for cardiology evaluation and discussion of anticoagulation given his risk factors, pending confirmatory ambulatory monitoring. Anticoagulation discussion requested; would appreciate counseling on options if appropriate."
+   },
+   {
+    "id": "d7",
+    "type": "chart",
+    "title": "Home Pulse and Blood Pressure Log Trend",
+    "author": "Patient-reported, patient's home BP/pulse monitor",
+    "date": "last 14 days",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day",
+     "yLabel": "Heart rate (bpm) and Systolic BP (mmHg)",
+     "series": [
+      {
+       "name": "Resting pulse (bpm)",
+       "points": [
+        {
+         "x": "Day1",
+         "y": 68
+        },
+        {
+         "x": "Day2",
+         "y": 96
+        },
+        {
+         "x": "Day3",
+         "y": 64
+        },
+        {
+         "x": "Day4",
+         "y": 62
+        },
+        {
+         "x": "Day5",
+         "y": 90
+        },
+        {
+         "x": "Day6",
+         "y": 66
+        },
+        {
+         "x": "Day7",
+         "y": 70
+        },
+        {
+         "x": "Day8",
+         "y": 94
+        },
+        {
+         "x": "Day9",
+         "y": 65
+        },
+        {
+         "x": "Day10",
+         "y": 63
+        },
+        {
+         "x": "Day11",
+         "y": 88
+        },
+        {
+         "x": "Day12",
+         "y": 67
+        },
+        {
+         "x": "Day13",
+         "y": 64
+        },
+        {
+         "x": "Day14",
+         "y": 92
+        }
+       ]
+      },
+      {
+       "name": "Systolic BP (mmHg)",
+       "points": [
+        {
+         "x": "Day1",
+         "y": 132
+        },
+        {
+         "x": "Day2",
+         "y": 144
+        },
+        {
+         "x": "Day3",
+         "y": 128
+        },
+        {
+         "x": "Day4",
+         "y": 130
+        },
+        {
+         "x": "Day5",
+         "y": 140
+        },
+        {
+         "x": "Day6",
+         "y": 134
+        },
+        {
+         "x": "Day7",
+         "y": 136
+        },
+        {
+         "x": "Day8",
+         "y": 148
+        },
+        {
+         "x": "Day9",
+         "y": 129
+        },
+        {
+         "x": "Day10",
+         "y": 128
+        },
+        {
+         "x": "Day11",
+         "y": 138
+        },
+        {
+         "x": "Day12",
+         "y": 131
+        },
+        {
+         "x": "Day13",
+         "y": 127
+        },
+        {
+         "x": "Day14",
+         "y": 142
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "New cardiology consultation for irregular heart rhythm detected by smartwatch, referred by primary care"
+   },
+   {
+    "label": "Problem list",
+    "value": "Hypertension; Type 2 diabetes mellitus; Paroxysmal atrial fibrillation, confirmed on 14-day patch monitor (9% burden), CHA2DS2-VASc 2, pending cardiology management plan"
+   },
+   {
+    "label": "Medications",
+    "value": "Losartan 50 mg daily; Metformin 1000 mg twice daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 138/86 mmHg, HR 78/min irregular, Weight 94 kg, BMI 29.7 (recorded at PCP visit 3 weeks ago)"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Patel (Primary Care, referring); Cardiology (new consult)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "new consultation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Referred after smartwatch detected irregular rhythm; reports 2 months of intermittent chest fluttering and fatigue",
+    "says": "My smartwatch kept telling me my heart rhythm looked irregular, and I've been having these spells where my chest flutters and I feel wiped out afterward.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "episode duration and frequency",
+    "chart": "Episodes of palpitations occur roughly 2-3 times per week, lasting 1 to several hours, over the past 2 months",
+    "says": "It happens maybe two or three times a week. Sometimes it only lasts an hour, but a couple times it went on most of the afternoon.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "associated symptoms during episodes",
+    "chart": "Describes fatigue and mild breathlessness during episodes; denies chest pain or syncope",
+    "says": "During the episodes I feel tired, maybe a little short of breath, but no real pain and I've never passed out.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "triggers",
+    "chart": "No clear identified trigger; occurs with activity and at rest, including after wine on weekends",
+    "says": "I can't really pin down what sets it off. Sometimes I'm just sitting at my desk, sometimes after a glass of wine on a Saturday.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "ros",
+    "topic": "syncope and dizziness",
+    "chart": "Denies syncope; occasional mild lightheadedness during rapid episodes",
+    "says": "I've gotten a little dizzy once or twice when my heart was racing, but I never actually fainted.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "ros",
+    "topic": "chest pain character",
+    "chart": "Denies exertional chest pain or pressure; no anginal symptoms",
+    "says": "No chest pain, no pressure, nothing like that. Just the fluttering feeling.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "swelling and weight gain",
+    "chart": "Denies leg swelling or recent weight gain",
+    "says": "My ankles aren't swollen and my weight's been pretty steady.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f8",
+    "category": "pmh",
+    "topic": "hypertension history",
+    "chart": "Hypertension diagnosed approximately 8 years ago, on losartan 50 mg daily",
+    "says": "I've had high blood pressure for about eight years now, I take the losartan pill every morning.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "Type 2 diabetes diagnosed approximately 5 years ago, on metformin, last A1c 7.2%",
+    "says": "I've got type 2 diabetes too, been about five years, I'm on the metformin twice a day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "pmh",
+    "topic": "prior cardiac history",
+    "chart": "No prior history of heart attack, heart failure, or stroke",
+    "says": "Never had a heart attack or anything like that before, no strokes either.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "pmh",
+    "topic": "thyroid history",
+    "chart": "No known thyroid disease",
+    "says": "No thyroid problems that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "family",
+    "topic": "family bleeding history",
+    "chart": "Brother had an intracranial hemorrhage while on warfarin approximately 10 years ago",
+    "says": "My older brother had a brain bleed years back when he was on warfarin, that's actually one reason I'm really nervous about blood thinners.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "family",
+    "topic": "family cardiac history",
+    "chart": "Father had hypertension; no known family history of early coronary disease or sudden cardiac death",
+    "says": "My dad had high blood pressure too, but nobody in the family dropped dead young or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "social",
+    "topic": "alcohol use pattern",
+    "chart": "Drinks 3-4 glasses of wine on weekend evenings, denies daily drinking",
+    "says": "I'll have maybe three or four glasses of wine on a Friday or Saturday night with my wife, nothing during the week though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "social",
+    "topic": "snoring and witnessed apneas",
+    "chart": "Wife reports loud snoring and witnessed pauses in breathing during sleep",
+    "says": "My wife says I snore like a freight train and sometimes she pokes me because it sounds like I stopped breathing.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "daytime sleepiness",
+    "chart": "Reports mild daytime fatigue and occasional dozing during afternoon meetings",
+    "says": "Honestly I've caught myself nodding off in a couple of afternoon work calls lately, which never used to happen.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "occupation and work demands",
+    "chart": "Works as an accountant, currently in tax season with long hours",
+    "says": "It's tax season, so I'm putting in long hours at my desk, which honestly might be part of why I'm so tired.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "caffeine intake",
+    "chart": "Drinks 2-3 cups of coffee daily, no recent increase",
+    "says": "I drink my two or three cups of coffee a day, same as I always have.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Never smoker",
+    "says": "I've never smoked, not once in my life.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "substance",
+    "topic": "recreational drug or stimulant use",
+    "chart": "Denies recreational drug use or stimulant supplements",
+    "says": "No, nothing like that, I don't take any supplements or anything for energy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "medications",
+    "topic": "anticoagulant history",
+    "chart": "Not currently on any anticoagulant or antiplatelet medication",
+    "says": "I'm not on any blood thinner right now, no.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "medications",
+    "topic": "losartan adherence",
+    "chart": "Reports taking losartan every morning without missed doses",
+    "says": "I take that losartan every single morning without fail, I'm pretty disciplined about my pills.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "adherence",
+    "topic": "home blood pressure monitoring habits",
+    "chart": "Checks home BP and pulse most mornings using a validated wrist device; occasionally skips weekends",
+    "says": "I check my blood pressure most mornings with my wrist cuff, though I'll admit I sometimes skip it on weekends.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "psychosocial",
+    "topic": "concerns about blood thinners",
+    "chart": "Expresses significant anxiety about anticoagulation given family history of hemorrhage, has researched alternatives online",
+    "says": "I've read a lot online about this, and honestly the idea of being on a blood thinner for the rest of my life scares me, especially after what happened to my brother.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "health information seeking",
+    "chart": "Highly numerate, has researched AF ablation and left atrial appendage closure devices online",
+    "says": "I've looked into things like the ablation procedure and that little device that closes off part of the heart, I want to understand all my options before we decide anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "nutrition",
+    "topic": "diet pattern",
+    "chart": "Follows a moderately low-sodium diet per diabetes education, occasional fast food on work days",
+    "says": "I try to watch my salt because of my blood pressure, but during tax season I'll grab fast food more than I should.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "function",
+    "topic": "exercise capacity",
+    "chart": "Walks 30 minutes most days, denies exertional limitation outside of palpitation episodes",
+    "says": "I walk about half an hour most days, and other than when the fluttering hits I don't feel limited.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "nocturnal symptoms other than snoring",
+    "chart": "Denies orthopnea or paroxysmal nocturnal dyspnea",
+    "says": "I sleep fine on one pillow, no waking up gasping or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "treatment goals",
+    "chart": "Primary goals are to understand stroke risk, avoid long-term warfarin if possible, and explore whether rhythm control or procedures could reduce episodes",
+    "says": "What I really want to know is: how worried should I be about stroke, is there anything besides warfarin, and can we actually fix this rhythm problem instead of just living with it?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f30",
+    "category": "psychosocial",
+    "topic": "work stress",
+    "chart": "Reports high stress during tax season but denies this as sole cause of palpitations given objective monitor findings",
+    "says": "Work stress is through the roof right now, but I don't think stress alone explains the fluttering since the monitor actually caught something.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "sexual",
+    "topic": "erectile function",
+    "chart": "Denies erectile dysfunction symptoms",
+    "says": "No issues in that department, no.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "hpi",
+    "topic": "wine and palpitation timing",
+    "chart": "Notes some palpitation episodes have occurred the morning after weekend wine consumption",
+    "says": "Now that you mention it, a couple of the worst flutter episodes were the morning after we'd had wine the night before.",
+    "tier": "reluctant",
+    "importance": "important"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Confirm and characterize paroxysmal atrial fibrillation using home monitor data, patch monitor report, and guided pulse self-examination.",
+    "factIds": [
+     "f1",
+     "f2",
+     "f4"
+    ],
+    "actionIds": [
+     "a2",
+     "a5"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Calculate stroke risk (CHA2DS2-VASc) and formulate an evidence-based anticoagulation recommendation despite patient reluctance rooted in family history.",
+    "factIds": [
+     "f12",
+     "f24",
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a11"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Screen for and address reversible/contributing factors: obstructive sleep apnea, alcohol use ('holiday heart'), and thyroid dysfunction, by directly interviewing the patient about snoring, witnessed apneas, daytime sleepiness, and nocturnal symptoms.",
+    "factIds": [
+     "f15",
+     "f16",
+     "f14",
+     "f32"
+    ],
+    "actionIds": [
+     "a7",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Integrate echocardiogram findings (preserved EF, mildly dilated LA) into overall risk stratification and rule out structural causes requiring escalation.",
+    "factIds": [
+     "f10"
+    ],
+    "actionIds": [
+     "a6"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Counsel the patient on anticoagulation options beyond warfarin (e.g., direct oral anticoagulants) and discuss rhythm-control strategies within cardiology scope, including when to refer for electrophysiology evaluation (ablation, left atrial appendage closure).",
+    "factIds": [
+     "f24",
+     "f25",
+     "f29"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify the mismatch between patient's reported strict medication adherence and home monitoring data suggesting undertreated blood pressure variability, and between reported wine-only-on-weekends and the temporal link to palpitation episodes.",
+    "factIds": [
+     "f22",
+     "f32"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Paroxysmal atrial fibrillation (9% burden on 14-day monitor, rates to 148/min) with preserved ejection fraction, in a patient with hypertension and diabetes (CHA2DS2-VASc 2), with possible contributing undiagnosed obstructive sleep apnea and alcohol-related triggering.",
+   "differential": [
+    "Paroxysmal atrial fibrillation (confirmed)",
+    "Alcohol-triggered atrial fibrillation ('holiday heart' pattern) contributing to episodes",
+    "Obstructive sleep apnea as a possible reversible contributor/trigger to AF, warranting screening and sleep study referral",
+    "Thyrotoxicosis-related atrial fibrillation (excluded by normal TSH/T4)",
+    "Anxiety or stimulant-related palpitations (excluded given objective monitor-documented AF)"
+   ],
+   "keyFindings": [
+    "14-day patch monitor: paroxysmal AF, 9% burden, longest episode 6h40m, max ventricular rate 148/min",
+    "Echocardiogram: EF 55%, mildly dilated LA, no valvular disease, no thrombus seen",
+    "CHA2DS2-VASc score = 2 (hypertension, diabetes)",
+    "TSH and renal/liver labs normal; A1c 7.2% (mildly above goal)",
+    "History of witnessed apneas/loud snoring per wife and reluctantly-disclosed daytime sleepiness raises suspicion for OSA, but no validated STOP-BANG score or objective oximetry data has been obtained in this case - formal sleep evaluation is needed",
+    "Several worst palpitation episodes occurred the morning after weekend wine intake",
+    "Home log shows intermittent irregular/elevated resting pulse and BP spikes despite reported perfect losartan adherence"
+   ],
+   "plan": [
+    "Discuss CHA2DS2-VASc score of 2 and recommend oral anticoagulation per guidelines; explore patient's specific fears about warfarin and offer a direct oral anticoagulant (e.g., apixaban or rivaroxaban) as an alternative with lower intracranial hemorrhage risk; renal function (eGFR 82, creatinine 1.0) does not require dose reduction, noting that apixaban dose reduction criteria are based on age ≥80, weight ≤60kg, and creatinine ≥1.5 mg/dL (none met) rather than eGFR alone, and rivaroxaban dosing is adjusted only at eGFR <50",
+    "Refer for formal in-lab or home polysomnography given reported snoring, witnessed apneas, and daytime sleepiness suggestive of OSA; treating OSA may reduce AF burden",
+    "Counsel on reducing/eliminating weekend alcohol intake given temporal association with episodes",
+    "Continue losartan for hypertension; coordinate with primary care on optimizing blood pressure control given variable home readings",
+    "Discuss rate vs rhythm control strategy; given symptomatic episodes and patient interest, consider referral to electrophysiology for discussion of catheter ablation; AF burden and LA size do not currently suggest urgent need for left atrial appendage closure device, which is typically reserved for anticoagulation-ineligible patients",
+    "Reinforce diabetes management; recommend primary care follow-up on A1c given mild elevation above individualized goal",
+    "No echocardiographic finding (preserved EF, no severe structural disease) requires escalation to heart failure or surgical referral at this time",
+    "Schedule follow-up after sleep study and initiation of anticoagulation to reassess symptoms and burden"
+   ],
+   "redFlags": [
+    "Any report of syncope, chest pain at rest, or signs of heart failure would warrant urgent escalation (not currently present)",
+    "Untreated OSA and continued alcohol use may increase AF burden and undermine rhythm control efforts",
+    "Declining anticoagulation entirely despite CHA2DS2-VASc 2 carries meaningful stroke risk (~2.2%/year) that must be clearly communicated"
+   ],
+   "educationPoints": [
+    "CHA2DS2-VASc score of 2 in a male patient meets threshold for guideline-recommended anticoagulation regardless of AF burden percentage",
+    "Direct oral anticoagulants have significantly lower rates of intracranial hemorrhage compared to warfarin, which is important when counseling patients with a family history of warfarin-associated bleeding",
+    "DOAC dose-reduction criteria are drug-specific and based on age, weight, and creatinine (apixaban) or creatinine clearance (rivaroxaban) rather than eGFR alone; eGFR is used mainly to confirm adequate renal function and screen for contraindication",
+    "Obstructive sleep apnea is a major modifiable risk factor for atrial fibrillation recurrence and burden; screening (e.g., STOP-BANG) and treatment should be part of comprehensive AF management, though a formal diagnosis requires sleep study referral rather than interview alone",
+    "Alcohol, even in a weekend-only 'binge' pattern, can precipitate atrial fibrillation episodes ('holiday heart') and should be addressed in lifestyle counseling",
+    "Patient-reported medication adherence should be corroborated with objective home monitoring data when available, as perceived adherence does not always correlate with consistent physiologic control"
+   ]
+  },
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f22",
+    "artifactId": "d7",
+    "patientClaim": "Patient states he takes losartan every single morning without ever missing a dose",
+    "recordEvidence": "Home BP/pulse trend log (d7) shows recurring days with systolic BP spikes to 140-148 mmHg and pulse surges to 88-96 bpm roughly every 4th day despite reported perfect adherence",
+    "teachingPoint": "Perceived adherence does not guarantee consistent pharmacodynamic control; cyclical BP/pulse spikes may reflect missed doses, timing issues, or AF episodes themselves rather than true medication failure, and warrant exploration rather than acceptance at face value."
+   },
+   {
+    "id": "m2",
+    "factId": "f32",
+    "artifactId": "d1",
+    "patientClaim": "Patient initially frames his wine drinking as weekend-only and separate from his symptoms, only later connecting worst episodes to the morning after drinking",
+    "recordEvidence": "14-day patch monitor report (d1) documents 11 AF episodes with the longest lasting 6 hours 40 minutes, a pattern consistent with alcohol-triggered paroxysmal AF when cross-referenced with the home log's weekend timing",
+    "teachingPoint": "Patients may not spontaneously connect lifestyle triggers to objective arrhythmia data; direct, specific questioning about timing of alcohol intake relative to symptom onset can reveal clinically actionable triggers like alcohol-induced AF."
+   }
+  ],
+  "patient": {
+   "name": "Samuel Adeyemi",
+   "age": 61,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Nigerian-American",
+   "occupation": "Accountant",
+   "language": "English",
+   "appearance": "A trim, neatly dressed man in his early sixties with short greying hair, wearing a collared shirt, seated at a home office desk with a laptop and stacks of tax documents visible in the background. He appears alert and articulate, with an attentive but slightly tense expression, occasionally glancing at notes he has prepared for the visit.",
+   "portrait": "/portraits/cardiology-samuel-adeyemi-palpitations.jpg"
+  },
+  "persona": {
+   "personality": "Analytical, detail-oriented, and somewhat anxious; takes a methodical approach to his health the same way he approaches his accounting work.",
+   "communicationStyle": "Speaks in organized, precise sentences, often referencing what he has read online; asks clarifying follow-up questions and wants numbers and probabilities rather than vague reassurance.",
+   "healthLiteracy": "high",
+   "emotionalState": "Underlying anxiety about stroke risk and about anticoagulation, partially masked by an intellectualized, information-seeking demeanor.",
+   "background": "Born in Lagos, Nigeria, moved to the United States for graduate school in his twenties and has worked as an accountant in New Jersey for over 30 years. Married with two adult children; enjoys gardening and watching soccer on weekends. Currently in the busiest stretch of tax season at his firm.",
+   "speechExamples": [
+    "I looked at the numbers on my smartwatch app and the irregular readings seem to cluster on certain days.",
+    "I want to understand the actual percentage risk here, not just 'you should be fine.'",
+    "My brother's brain bleed really shook our whole family, so forgive me if I push back on the warfarin idea.",
+    "Is there a less invasive option before we jump to a lifelong medication?"
+   ],
+   "concerns": [
+    "How much is my stroke risk, in real numbers?",
+    "Are there alternatives to blood thinners given what happened to my brother?",
+    "Can a procedure like ablation actually fix this instead of just managing it?",
+    "Is my diabetes or blood pressure making this worse?"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the cardiology fellow seeing Samuel Adeyemi, a 61-year-old man, for a new telehealth consultation after his primary care physician referred him for an irregular rhythm flagged by his smartwatch. He has had 2 months of intermittent palpitations and fatigue. A 14-day patch monitor and echocardiogram have already been completed and are in the chart. Review the available history, records, and guided exam findings; counsel him on diagnosis, stroke risk, and management options within cardiology's scope.",
+   "chiefComplaint": "Intermittent chest fluttering and fatigue for 2 months, with smartwatch-detected irregular rhythm",
+   "openingLine": "My smartwatch kept telling me my heart rhythm looked irregular, and I've been having these spells where my chest flutters and I feel wiped out afterward.",
+   "tasks": [
+    "Take a focused history of the presenting concern and relevant cardiovascular risk factors",
+    "Review the available investigations with the patient and discuss the findings",
+    "Assess stroke risk and discuss management options",
+    "Screen for potential contributing factors and review the home monitoring data with the patient",
+    "Agree a management plan including any referrals and safety-net"
+   ],
+   "timeLimitMin": 25
+  },
+  "title": "New-Onset Paroxysmal Atrial Fibrillation Detected by Smartwatch in a 61-Year-Old with Hypertension and Diabetes",
+  "summary": "A 61-year-old accountant with hypertension and type 2 diabetes is referred to cardiology after his smartwatch flagged an irregular rhythm, confirmed as paroxysmal atrial fibrillation (9% burden) on a 14-day patch monitor with preserved ejection fraction on echocardiogram. The case teaches CHA2DS2-VASc-based anticoagulation decision-making in a patient fearful of 'blood thinners' due to a family bleeding history, while screening for reversible contributors (obstructive sleep apnea, alcohol) and reconciling a patient-reported adherence versus home-monitoring mismatch.",
+  "specialty": "Cardiology",
+  "setting": "Telehealth video visit, patient at home office in New Jersey",
+  "professions": [
+   "cardiology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

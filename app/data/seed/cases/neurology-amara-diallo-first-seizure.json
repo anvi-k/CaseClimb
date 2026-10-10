@@ -1,0 +1,833 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review ED vitals at time of seizure event",
+    "result": "ED triage vitals (2 weeks ago): BP 118/74 mmHg, HR 88 bpm, RR 16, Temp 37.0°C, SpO2 99% on room air. No fever, no hemodynamic instability.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review ED CT head report",
+    "result": "Non-contrast CT head (2 weeks ago): No acute intracranial hemorrhage, mass, or midline shift. Normal study.",
+    "importance": "important",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "lab",
+    "name": "Review ED basic metabolic panel and CBC",
+    "result": "Sodium 139 mmol/L, glucose 94 mg/dL, calcium 9.4 mg/dL, WBC 7.2 x10^9/L, Hgb 13.1 g/dL - all within normal limits. No metabolic trigger identified.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "test",
+    "name": "Review EEG report",
+    "result": "Routine EEG (1 week ago): Generalized 4-6 Hz polyspike-and-wave discharges, activated by photic stimulation and hyperventilation. No focal slowing.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "imaging",
+    "name": "Review MRI brain report",
+    "result": "MRI brain with and without contrast (1 week ago): No structural lesion, no mesial temporal sclerosis, no mass or malformation. Normal study.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera-guided cranial nerve screening exam",
+    "result": "Pupils equal and reactive, extraocular movements full, facial symmetry intact, no dysarthria on conversational speech. Grossly normal cranial nerve screen by video.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Camera-guided limb coordination exam (finger-to-nose, rapid alternating movements)",
+    "result": "Finger-to-nose accurate bilaterally, rapid alternating hand movements performed smoothly without dysdiadochokinesia. No ataxia observed on camera.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Patient self-demonstration of morning jerking movements",
+    "result": "On request, patient demonstrates brief, bilateral, arrhythmic upward jerks of both arms, lasting under a second each, without loss of consciousness or awareness change observed on camera.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "exam",
+    "name": "Camera inspection for skin stigmata of neurocutaneous disease",
+    "result": "No café-au-lait macules, adenoma sebaceum, or ash-leaf spots visible on face, neck, or forearms on camera.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Sleep deprivation and precipitant screening",
+    "result": "Patient reports two nights of under 4 hours of sleep before the seizure due to thesis deadline; also reports increased coffee intake (2-3 cups daily) during the thesis writing period; no alcohol binge or withdrawal reported; no recreational drug use reported.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Mood and cognitive screening (brief video-administered)",
+    "result": "PHQ-2 negative for depression. No subjective memory complaints. Oriented, engaged, appropriate affect on interview.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Combined oral contraceptive pill (ethinylestradiol/levonorgestrel), no antiseizure medication currently prescribed.",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Driving safety and legal reporting assessment",
+    "result": "Patient reports she has continued driving to campus daily since the seizure and was unaware of state DMV reporting requirements or restrictions on driving after a seizure.",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "CT Head Without Contrast - Emergency Department",
+    "author": "Dr. R. Patel, Radiology",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "body": "CLINICAL HISTORY: First-time generalized tonic-clonic seizure, witnessed.\n\nFINDINGS: No acute intracranial hemorrhage. No mass effect, midline shift, or hydrocephalus. Gray-white differentiation preserved. No calvarial fracture.\n\nIMPRESSION: Normal non-contrast CT head. No acute intracranial abnormality."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Emergency Department Labs",
+    "author": "Boston Metro ED Lab",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "135-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mmol/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "94",
+        "mg/dL",
+        "70-99"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Calcium",
+        "9.4",
+        "mg/dL",
+        "8.5-10.2"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "WBC",
+        "7.2",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "13.1",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "245",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Ethanol",
+        "0",
+        "mg/dL",
+        "0 (negative)"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "other",
+    "title": "EEG Report - Routine 30-Minute Study",
+    "author": "Dr. S. Nguyen, Clinical Neurophysiology",
+    "date": "1 week ago",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "body": "HISTORY: 27-year-old woman, first witnessed generalized tonic-clonic seizure.\n\nBACKGROUND: Normal 9 Hz posterior dominant rhythm, reactive.\n\nACTIVATION: Photic stimulation and hyperventilation both provoked generalized bursts of 4-6 Hz polyspike-and-wave discharges lasting 1-3 seconds, bilaterally synchronous and symmetric, without clear focal onset. No electrographic seizure captured. No focal slowing or epileptiform discharges of focal onset.\n\nIMPRESSION: Generalized polyspike-and-wave discharges activated by photic stimulation and hyperventilation. No focal features. Correlate clinically."
+   },
+   {
+    "id": "d4",
+    "type": "imaging",
+    "title": "MRI Brain With and Without Contrast",
+    "author": "Dr. L. Chen, Radiology",
+    "date": "1 week ago",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "body": "CLINICAL HISTORY: New-onset generalized seizure, EEG with generalized epileptiform discharges.\n\nFINDINGS: No mesial temporal sclerosis. No cortical malformation, heterotopia, or dysplasia. No mass, hemorrhage, or abnormal enhancement. Normal flow voids. Normal pituitary gland.\n\nIMPRESSION: Normal MRI brain. No structural correlate for seizure identified."
+   },
+   {
+    "id": "d5",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "author": "EHR Medication Reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ethinylestradiol/levonorgestrel",
+        "0.03 mg/0.15 mg",
+        "Oral",
+        "Once daily",
+        "Contraception"
+       ]
+      },
+      {
+       "cells": [
+        "Multivitamin",
+        "1 tablet",
+        "Oral",
+        "Once daily",
+        "Supplement"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Emergency Department Discharge Summary",
+    "author": "Dr. M. Okafor, Emergency Medicine",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "27-year-old woman brought in by roommate after witnessed generalized tonic-clonic convulsion lasting approximately 2 minutes with post-ictal confusion for about 20 minutes. Tongue bite noted on lateral tongue. No incontinence. Preceding sleep deprivation reported (thesis deadline). CT head and labs unremarkable. Discharged home with roommate, outpatient neurology follow-up and EEG/MRI arranged. Advised to avoid driving pending neurology evaluation, patient verbalized understanding at discharge."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "New consult: first unprovoked generalized tonic-clonic seizure, 2 weeks ago"
+   },
+   {
+    "label": "Problem list",
+    "value": "Seizure, unspecified (new)"
+   },
+   {
+    "label": "Medications",
+    "value": "Ethinylestradiol/levonorgestrel 0.03mg/0.15mg daily; Multivitamin daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 118/74, HR 88, Temp 37.0°C, SpO2 99% (ED, 2 weeks ago)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per college health records"
+   },
+   {
+    "label": "Care team",
+    "value": "PCP: Dr. A. Rivera (Student Health Services); Neurology: new consult"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "new consultation (diagnostic interview and camera-guided exam)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for neurology follow-up after first witnessed generalized tonic-clonic seizure 2 weeks ago.",
+    "says": "I had some kind of seizure two weeks ago and I'm here to find out what happened and what I do now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "seizure event description",
+    "chart": "Witnessed by roommate: whole-body stiffening followed by rhythmic jerking lasting ~2 minutes, with post-ictal confusion ~20 minutes.",
+    "says": "My roommate said I went stiff and then started shaking all over, and apparently it lasted a couple minutes. I don't remember any of it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "sleep before event",
+    "chart": "Reports two consecutive nights of under 4 hours sleep before the seizure due to a thesis deadline.",
+    "says": "I'd been pulling all-nighters for my thesis chapter, maybe three or four hours of sleep for two nights in a row before it happened.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "tongue or injury",
+    "chart": "Lateral tongue bite noted at ED; no incontinence.",
+    "says": "They said I bit my tongue, it was sore for a few days. I didn't wet myself or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "post-ictal recovery",
+    "chart": "Post-ictal confusion lasting approximately 20 minutes, with gradual return to baseline, no focal weakness afterward.",
+    "says": "After I came to, I was really out of it, confused, for maybe 20 minutes. My roommate said I didn't know where I was. But I didn't feel weak on one side or anything after.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "warning before seizure",
+    "chart": "No aura or focal warning symptoms reported before the convulsion.",
+    "says": "I don't remember any weird smell or feeling like it was coming. One second I was at my desk, next thing I know I'm in the ambulance.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "morning jerking movements",
+    "chart": "Reports brief bilateral myoclonic jerks of the arms, present since teenage years, occurring mainly in the mornings, causing her to drop objects.",
+    "says": "Okay, since you ask... since I was a teenager I get these quick little jumps in my arms, mostly right after I wake up. I've dropped my toothbrush, spilled coffee. I never thought it was a big deal.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "morning jerking frequency and triggers",
+    "chart": "Myoclonic jerks are more frequent with sleep deprivation and in the morning; no associated loss of awareness during these jerks.",
+    "says": "They happen more when I haven't slept well. I stay totally aware when it happens, it's just my arms that jump.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "family",
+    "topic": "family history of seizures",
+    "chart": "Cousin on maternal side has a diagnosis of epilepsy.",
+    "says": "My cousin back in Senegal has epilepsy, actually. I never really connected that to my arm jerks until just now.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "family",
+    "topic": "other neurologic family history",
+    "chart": "No family history of migraine, stroke, or neurodegenerative disease reported.",
+    "says": "No one else in the family has had strokes or memory problems that I know of, just my cousin's epilepsy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "psychosocial",
+    "topic": "driving since the event",
+    "chart": "Has continued driving to campus daily since the seizure; was unaware of state licensing restrictions.",
+    "says": "I've still been driving to campus every day, I didn't realize there was some rule I was breaking. Nobody at the ER really explained that part to me.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "psychosocial",
+    "topic": "family perception of diagnosis",
+    "chart": "Expresses fear that family will view a seizure disorder as shameful or stigmatizing.",
+    "says": "I haven't told my parents yet. In our community, people sometimes think seizures mean something is wrong with you spiritually, or they just don't talk about it. I'm scared of how they'll react.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "goals",
+    "topic": "future pregnancy plans",
+    "chart": "Reports possible interest in pregnancy within the next few years; wants to understand medication implications.",
+    "says": "I'm not trying to get pregnant right now, but I might want kids in a few years. Does that change what medicine I can take?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "contraceptive use",
+    "chart": "Takes combined oral contraceptive pill daily (ethinylestradiol/levonorgestrel).",
+    "says": "I'm on the birth control pill, I take it every day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "current antiseizure treatment",
+    "chart": "Not currently taking any antiseizure medication.",
+    "says": "No, nobody's started me on any seizure medicine yet. I'm waiting to hear what you think.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports rare alcohol use, no recent binge or withdrawal pattern.",
+    "says": "I maybe have a glass of wine once a month at most. Nothing before the seizure.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "substance",
+    "topic": "recreational drug use",
+    "chart": "Denies recreational drug or stimulant use.",
+    "says": "No, I don't use any recreational drugs, not even marijuana.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "caffeine intake",
+    "chart": "Drinks 2-3 cups of coffee daily, increased during thesis writing period.",
+    "says": "I was drinking a lot more coffee than usual that week, trying to stay awake to write.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "headache history",
+    "chart": "No significant headache history; occasional mild tension headache unrelated to seizure.",
+    "says": "I get a mild headache maybe once a month from staring at my laptop too long, nothing major.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "visual symptoms with flashing lights",
+    "chart": "Reports feeling 'funny' or briefly disoriented when exposed to strobe lights or video game flicker, though has not had a seizure in that context.",
+    "says": "Actually, flashing lights at parties sometimes make me feel a little off, kind of spacey for a second, but nothing like what happened two weeks ago.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "ros",
+    "topic": "weakness or numbness",
+    "chart": "Denies focal limb weakness, numbness, or sensory change outside of seizure episode.",
+    "says": "No, I haven't had any numbness or weakness in my arms or legs, other than feeling wiped out after the seizure itself.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies double vision, visual field loss, or blurred vision.",
+    "says": "My eyesight's been fine, no double vision or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "memory concerns",
+    "chart": "Denies memory lapses or cognitive decline aside from post-ictal confusion.",
+    "says": "My memory's been normal, aside from obviously not remembering the seizure itself.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "pmh",
+    "topic": "past seizures or blackouts",
+    "chart": "Denies prior convulsive seizures; this was the first.",
+    "says": "This is the first time anything like this has ever happened to me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "pmh",
+    "topic": "febrile seizures in childhood",
+    "chart": "No history of febrile seizures in childhood.",
+    "says": "No, I never had seizures with fevers as a kid.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "psh",
+    "topic": "head trauma history",
+    "chart": "Denies significant head trauma or loss of consciousness prior to this event.",
+    "says": "I've never hit my head badly or been knocked out before this.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "social",
+    "topic": "occupation and stress",
+    "chart": "PhD student in public health; reports high academic stress and irregular sleep schedule during deadlines.",
+    "says": "I'm in my third year of my doctorate, it's intense, and deadlines mean my sleep schedule gets pretty wrecked sometimes.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with a roommate who witnessed the seizure; family lives out of state/abroad.",
+    "says": "I live with my roommate here in Boston, she's the one who called the ambulance. My family's is mostly back in Senegal, or in New York.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "adherence",
+    "topic": "contraceptive consistency",
+    "chart": "Reports taking the oral contraceptive pill consistently without missed doses.",
+    "says": "I'm pretty good about my pill, I take it the same time every night, I don't miss doses.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "goals",
+    "topic": "understanding of diagnosis so far",
+    "chart": "Has not yet been told a specific epilepsy syndrome diagnosis; wants clear explanation.",
+    "says": "Nobody's really explained to me what this means long term. Is this going to happen again? Do I have epilepsy now?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "psychosocial",
+    "topic": "emotional response to event",
+    "chart": "Reports anxiety and embarrassment about the seizure happening in a public academic setting.",
+    "says": "It happened in the library, in front of other students. I'm still kind of embarrassed and shaken up about it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "ros",
+    "topic": "chest pain or palpitations",
+    "chart": "Denies chest pain, palpitations, or syncope unrelated to the seizure event.",
+    "says": "No chest pain or my heart racing or anything like that before it happened.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f33",
+    "category": "nutrition",
+    "topic": "general diet and hydration",
+    "chart": "Reports adequate oral intake and hydration; no recent fasting or extreme dieting.",
+    "says": "I eat pretty normally, maybe skip a meal here and there when I'm busy, but nothing extreme.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f29",
+    "patientClaim": "Patient states she takes her oral contraceptive pill consistently every night without missing doses.",
+    "recordEvidence": "Medication list confirms current contraceptive use, but no interaction warning or counseling note yet exists in the chart regarding enzyme-inducing antiseizure medications reducing contraceptive efficacy - the gap the resident must proactively address before prescribing.",
+    "artifactId": "d5",
+    "teachingPoint": "Even with perfect contraceptive adherence, enzyme-inducing ASMs (e.g., carbamazepine, phenytoin, topiramate at higher doses) can reduce hormonal contraceptive efficacy; this must be discussed proactively when choosing a first-line agent for JME, favoring non-enzyme-inducing options like lamotrigine or levetiracetam."
+   },
+   {
+    "id": "m2",
+    "factId": "f11",
+    "patientClaim": "Patient says nobody at the ED explained that she should not be driving, and she was unaware of any restriction.",
+    "recordEvidence": "ED discharge summary documents that the patient was advised to avoid driving pending neurology evaluation and verbalized understanding at discharge.",
+    "teachingPoint": "Discrepancies between documented discharge counseling and patient recall are common, especially amid post-ictal confusion or stress; the clinician should address driving safety again directly rather than assuming prior counseling was retained, and document the conversation clearly this visit, rather than assuming the ED discussion resolved the safety issue."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a history that distinguishes a provoked (sleep-deprivation-triggered) isolated seizure from an underlying generalized epilepsy syndrome by identifying longstanding myoclonic jerks and family history.",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Synthesize EEG, MRI, and history to localize the process as a generalized (not focal) epilepsy and arrive at a working diagnosis of juvenile myoclonic epilepsy.",
+    "factIds": [
+     "f2",
+     "f6",
+     "f7"
+    ],
+    "actionIds": [
+     "a4",
+     "a5",
+     "a8"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Select an antiseizure medication appropriate for a woman of reproductive potential with JME, explicitly avoiding valproate and considering interactions with hormonal contraception.",
+    "factIds": [
+     "f13",
+     "f14",
+     "f29"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Counsel on driving safety and state reporting obligations after a first seizure, recognizing and addressing the gap between documented ED counseling and patient recall.",
+    "factIds": [
+     "f11"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Explore psychosocial and cultural context around epilepsy stigma with sensitivity, without pathologizing the patient's background.",
+    "factIds": [
+     "f12",
+     "f28",
+     "f31"
+    ],
+    "actionIds": [
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify pertinent negatives and distractors (caffeine intake, isolated tension headache, palpitations) that do not change the diagnosis, demonstrating focused clinical reasoning.",
+    "factIds": [
+     "f18",
+     "f19",
+     "f32"
+    ],
+    "actionIds": [
+     "a3",
+     "a10"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Amara Diallo",
+   "age": 27,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Senegalese-American",
+   "occupation": "Doctoral student in public health",
+   "language": "English (also speaks Wolof and French at home)",
+   "appearance": "A young woman with short natural hair pulled back, wearing a gray university hoodie, seated at a desk in a small studio apartment with bookshelves visible behind her. She appears alert and articulate but shifts in her seat and glances away when discussing family reactions, otherwise maintaining steady eye contact with the camera.",
+   "portrait": "/portraits/neurology-amara-diallo-first-seizure.jpg"
+  },
+  "persona": {
+   "personality": "Thoughtful, articulate, and somewhat guarded about family and emotional topics, but direct and detail-oriented when discussing facts and research-mode problem solving.",
+   "communicationStyle": "Speaks in organized, complete sentences, asks clarifying questions, occasionally uses academic phrasing from her research background but no medical jargon.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious beneath a composed exterior; worried about recurrence, driving, and family stigma, but trying to stay rational and gather information.",
+   "background": "Third-year PhD student in public health at a Boston university, originally from a Senegalese immigrant family now split between New York and Dakar. Enjoys long-distance running and volunteers at a community health clinic on weekends when her schedule allows.",
+   "speechExamples": [
+    "Okay, so walk me through what this actually means for me long-term.",
+    "I guess I never thought the arm thing was related to any of this until just now.",
+    "I haven't told my parents yet - I don't really know how to bring it up.",
+    "Is there a version of this where I don't have to give up driving completely?",
+    "I want to be careful about any medication because I might want to have kids eventually."
+   ],
+   "concerns": [
+    "Will this happen again?",
+    "Can I keep driving?",
+    "What does this mean for having children someday?",
+    "How do I tell my family without them thinking something is wrong with me?",
+    "Will I need to be on medication forever?"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a neurology resident conducting a telehealth new-consult video visit with Amara Diallo, a 27-year-old graduate student referred after a first witnessed generalized tonic-clonic seizure two weeks ago. ED workup (CT, labs) was normal; outpatient EEG and MRI have since been completed. Your task is to take a focused history, perform a camera-guided neurological screening exam, review available results, and develop a diagnosis and management plan.",
+   "chiefComplaint": "First witnessed generalized tonic-clonic seizure two weeks ago, referred for neurology follow-up after ED workup.",
+   "openingLine": "Hi, thanks for seeing me. I had some kind of seizure two weeks ago and I'm here to figure out what happened and what I'm supposed to do now.",
+   "tasks": [
+    "Take a focused history of the presenting concern including precipitants and post-ictal course",
+    "Perform a camera-guided neurological screening exam",
+    "Review and interpret the EEG and MRI reports",
+    "Discuss antiseizure medication options appropriate for a woman of reproductive potential and counsel on driving safety and seizure precautions",
+    "Address the patient's concerns with sensitivity"
+   ],
+   "timeLimitMin": 25
+  },
+  "summary": "A 27-year-old graduate student presents for neurology follow-up after a first generalized tonic-clonic seizure, with history-taking revealing longstanding unrecognized myoclonic jerks and a family history of epilepsy that, combined with EEG showing generalized polyspike-and-wave discharges, point to juvenile myoclonic epilepsy. The case teaches history-driven syndrome recognition, reproductive-safe antiseizure drug selection, driving safety counseling, and culturally sensitive communication about epilepsy stigma.",
+  "answerKey": {
+   "primaryProblem": "Juvenile myoclonic epilepsy (JME), newly diagnosed, presenting with a first generalized tonic-clonic seizure precipitated by sleep deprivation",
+   "differential": [
+    "Juvenile myoclonic epilepsy (generalized epilepsy syndrome)",
+    "Isolated provoked seizure due to sleep deprivation without underlying epilepsy",
+    "Other idiopathic generalized epilepsy (e.g., generalized epilepsy with tonic-clonic seizures alone)",
+    "Focal epilepsy with secondary generalization (less likely given generalized, symmetric EEG findings and no focal features)",
+    "Photosensitive epilepsy component (given reported sensitivity to flashing lights)"
+   ],
+   "keyFindings": [
+    "First witnessed generalized tonic-clonic seizure after two nights of severe sleep deprivation",
+    "Longstanding morning myoclonic jerks of the arms since adolescence, previously unrecognized as seizures",
+    "Family history of epilepsy in a cousin",
+    "EEG showing generalized 4-6 Hz polyspike-and-wave discharges activated by photic stimulation and hyperventivation",
+    "Normal MRI brain and normal ED CT/labs, excluding structural or acute metabolic cause",
+    "Reported sensitivity to flashing lights suggesting photosensitivity",
+    "Currently on combined oral contraceptive and continued driving despite advice to stop"
+   ],
+   "plan": [
+    "Communicate working diagnosis of juvenile myoclonic epilepsy based on history and EEG; explain this is a lifelong but highly treatable generalized epilepsy syndrome",
+    "Initiate first-line antiseizure medication appropriate for a woman of reproductive potential with JME, favoring levetiracetam or lamotrigine; explicitly avoid valproate given teratogenicity and the patient's future pregnancy plans",
+    "Counsel that enzyme-inducing antiseizure medications can reduce hormonal contraceptive efficacy and discuss contraceptive planning with the patient and, as appropriate, her primary care/gynecology team",
+    "Reinforce driving cessation per state Department of Motor Vehicles seizure reporting requirements until a mandated seizure-free interval is met; document this counseling explicitly given the discrepancy with ED documentation",
+    "Counsel on seizure precautions: sleep hygiene, avoidance of sleep deprivation, caution with flashing lights/strobe exposure, alcohol moderation",
+    "Arrange follow-up neurology visit to assess medication tolerance and seizure control; provide seizure diary tool",
+    "Offer counseling or social work/psychology referral resources to help the patient navigate disclosure to family and cultural concerns about stigma, without pressuring disclosure on a specific timeline",
+    "Provide patient education materials on JME and reproductive planning; involve PCP for contraceptive co-management as needed"
+   ],
+   "redFlags": [
+    "Continued unrestricted driving despite seizure risk - safety issue requiring explicit, documented counseling this visit",
+    "Potential for enzyme-inducing antiseizure medication to compromise contraceptive efficacy if an inappropriate agent is chosen",
+    "Risk of medication nonadherence or treatment avoidance if the patient feels judged or unsupported regarding family stigma concerns",
+    "Any future absence seizures, worsening myoclonus, or breakthrough tonic-clonic seizures would warrant prompt reassessment of medication regimen"
+   ],
+   "educationPoints": [
+    "Juvenile myoclonic epilepsy often presents years after onset of subtle, unrecognized myoclonic jerks, frequently misattributed to clumsiness; targeted history-taking is essential for diagnosis.",
+    "Generalized epilepsies classically show symmetric, bilaterally synchronous epileptiform discharges on EEG without focal onset, distinguishing them from focal epilepsies.",
+    "Valproate is highly effective for JME but is teratogenic and should generally be avoided in women of reproductive potential when alternatives exist; lamotrigine and levetiracetam are preferred first-line options.",
+    "Enzyme-inducing antiseizure medications can reduce the efficacy of hormonal contraception, requiring proactive counseling and contraceptive planning.",
+    "Driving restrictions after a first seizure are legally mandated and vary by jurisdiction; clinicians should not assume prior counseling was retained, particularly in the setting of post-ictal confusion or patient stress.",
+    "Discussions of epilepsy and stigma should be approached with cultural humility, avoiding assumptions while creating space for the patient's concerns about family and community perception."
+   ]
+  },
+  "professions": [
+   "neurology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "title": "First generalized tonic-clonic seizure in a 27-year-old woman with longstanding morning myoclonus",
+  "specialty": "Neurology",
+  "setting": "Telehealth video visit; patient's studio apartment near university campus in Boston"
+ }
+}

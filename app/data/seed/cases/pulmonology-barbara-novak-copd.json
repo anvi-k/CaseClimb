@@ -1,0 +1,940 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home pulse oximetry log",
+    "result": "Resting SpO2 on room air at home: 91% (recorded this morning before visit). Patient denies supplemental oxygen use. Values over the past 2 weeks range 90-92%, mildly low but above the ≤88% threshold typically used for long-term oxygen therapy qualification.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "test",
+    "name": "Observe inhaler technique on camera",
+    "result": "Patient demonstrates tiotropium (Spiriva HandiHaler): fails to exhale fully before dose, bites down on mouthpiece, inhales rapidly rather than slow/deep, no breath-hold afterward. Albuterol MDI: no spacer used, poor hand-breath coordination, actuates after starting to inhale.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review most recent spirometry report",
+    "result": "FEV1/FVC 0.52 (reduced), FEV1 48% predicted (GOLD 3, severe airflow obstruction), minimal bronchodilator response. Consistent with COPD.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review blood eosinophil count from last visit",
+    "result": "Blood eosinophils 380 cells/microliter (H) — elevated, supports consideration of inhaled corticosteroid add-on given exacerbation history.",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review serum cotinine from last visit",
+    "result": "Serum cotinine, drawn at last visit 2 months ago: Positive, quantitative 220 ng/mL (reference: <10 ng/mL nonsmoker; >50 ng/mL consistent with active smoking).",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera inspection - work of breathing and posture at rest",
+    "result": "Patient appears comfortable at rest in the chair, speaks in full sentences, no accessory muscle use or pursed-lip breathing observed at rest on camera.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Request patient check pulse rate via home device/wrist check",
+    "result": "Pulse 92 beats/min, regular, self-counted at wrist. (Patient-reported, not a clinician-measured vital sign; not independently verifiable.)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review exacerbation history in chart",
+    "result": "Two exacerbations in past 8 months, both treated with oral corticosteroids and antibiotics as outpatient; no hospitalizations documented.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Albuterol HFA MDI 90mcg, 2 puffs as needed (patient reports using 6-8 times/day); Tiotropium 18mcg HandiHaler, 1 capsule inhaled daily. No inhaled corticosteroid on list. No maintenance combination inhaler on list.",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review immunization record",
+    "result": "Influenza vaccine documented 7 months ago. Pneumococcal vaccine (PCV20 or PPSV23): no record found in chart. COVID-19 vaccine: up to date per last note.",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Calculate/confirm mMRC dyspnea scale with patient",
+    "result": "Patient reports breathlessness when dressing or walking short distances on flat ground; stops to rest after about 100 yards. Consistent with mMRC grade 3.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen for orthopnea / sleep positioning",
+    "result": "Patient reports sleeping propped on 3 pillows nightly due to breathlessness lying flat; denies leg swelling or weight gain to suggest heart failure.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "imaging",
+    "name": "Review most recent chest X-ray report",
+    "result": "Chest X-ray (4 months ago): Hyperinflated lungs with flattened diaphragms, no focal consolidation or effusion, no mass. Findings consistent with COPD.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review pulmonary rehabilitation referral history",
+    "result": "No prior referral to pulmonary rehabilitation found in chart.",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Prior Pulmonology Visit Note (2 months ago)",
+    "date": "2 months ago",
+    "author": "Dr. R. Okafor, Pulmonology",
+    "release": {
+     "when": "start"
+    },
+    "body": "CC: COPD follow-up after second exacerbation in 6 months.\nHPI: Ms. Novak reports increasing breathlessness and sputum production. States she 'cut back a lot' on smoking after her flare last month. Discussed smoking cessation resources; declined nicotine replacement at that time.\nExam: Diffuse expiratory wheeze, prolonged expiratory phase. No edema.\nLabs ordered: CBC with differential, serum cotinine.\nAssessment: COPD GOLD 3, group E (frequent exacerbator). Continue tiotropium, albuterol PRN. Consider ICS add-on pending eosinophil result. Discussed pulmonary rehab, pneumococcal vaccination - deferred to PCP for records check.\nPlan: Spirometry today, labs pending, follow up in 2 months with results."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Laboratory Results - 2 months ago",
+    "date": "2 months ago",
+    "author": "Rural Regional Lab Services",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "9.1",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Eosinophils, absolute",
+        "380",
+        "cells/microliter",
+        "0-500"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "13.8",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Cotinine, serum",
+        "Positive (quantitative 220)",
+        "ng/mL",
+        "<10 (nonsmoker); >50 consistent with active smoking"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "other",
+    "title": "Spirometry Report",
+    "date": "2 months ago",
+    "author": "Pulmonary Function Lab",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "body": "Pre-bronchodilator: FEV1 1.02 L (48% predicted), FVC 1.96 L (62% predicted), FEV1/FVC 0.52.\nPost-bronchodilator: FEV1 1.07 L (50% predicted), change +5%/+50mL (not significant).\nInterpretation: Severe airflow obstruction, GOLD stage 3, no significant acute bronchodilator response. Flow-volume loop shows scalloped expiratory limb consistent with obstructive disease."
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Home Pulse Oximetry Log",
+    "date": "Last 2 weeks",
+    "author": "Patient-reported, home device",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Time",
+      "SpO2 (%)",
+      "Heart rate (bpm)",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "14 days ago",
+        "Morning, resting",
+        "92",
+        "88",
+        "Felt fine"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "10 days ago",
+        "Morning, resting",
+        "90",
+        "94",
+        "Mild cough"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "5 days ago",
+        "Morning, resting",
+        "91",
+        "90",
+        "—"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Today",
+        "Morning, resting",
+        "91",
+        "92",
+        "Before visit"
+       ],
+       "flag": ""
+      }
+     ]
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Date",
+     "yLabel": "SpO2 (%)",
+     "refLow": 92,
+     "series": [
+      {
+       "name": "Resting SpO2",
+       "points": [
+        {
+         "x": "14 days ago",
+         "y": 92
+        },
+        {
+         "x": "10 days ago",
+         "y": 90
+        },
+        {
+         "x": "5 days ago",
+         "y": 91
+        },
+        {
+         "x": "Today",
+         "y": 91
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Current",
+    "author": "EHR Medication Reconciliation",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Albuterol HFA",
+        "90 mcg/puff, 2 puffs",
+        "Inhaled",
+        "As needed (patient reports 6-8x/day)"
+       ]
+      },
+      {
+       "cells": [
+        "Tiotropium (HandiHaler)",
+        "18 mcg/capsule, 1 capsule",
+        "Inhaled",
+        "Once daily"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Once daily"
+       ]
+      },
+      {
+       "cells": [
+        "Atorvastatin",
+        "20 mg",
+        "Oral",
+        "Once daily nightly"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "imaging",
+    "title": "Chest X-ray Report",
+    "date": "4 months ago",
+    "author": "Rural Regional Radiology",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "body": "FINDINGS: Lungs are hyperinflated with flattened hemidiaphragms. Increased retrosternal airspace on lateral view. No focal consolidation, mass, or pleural effusion. Cardiac silhouette within normal limits, not enlarged. No pulmonary edema.\nIMPRESSION: Findings consistent with chronic obstructive pulmonary disease. No acute process."
+   },
+   {
+    "id": "d7",
+    "type": "form",
+    "title": "Immunization Record Summary",
+    "date": "Current",
+    "author": "EHR Immunization Registry",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "table": {
+     "columns": [
+      "Vaccine",
+      "Date given",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Influenza (annual)",
+        "7 months ago",
+        "Documented in chart"
+       ]
+      },
+      {
+       "cells": [
+        "COVID-19 (updated)",
+        "9 months ago",
+        "Documented in chart"
+       ]
+      },
+      {
+       "cells": [
+        "Pneumococcal (PCV20 or PPSV23)",
+        "Not found",
+        "No record in this or outside chart; status unknown"
+       ]
+      },
+      {
+       "cells": [
+        "Tdap",
+        "4 years ago",
+        "Documented in chart"
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "COPD follow-up - review spirometry and labs from last visit, assess exacerbation frequency"
+   },
+   {
+    "label": "Problem list",
+    "value": "COPD, GOLD 3 (severe), group E; Hypertension; Hyperlipidemia; Tobacco use disorder"
+   },
+   {
+    "label": "Medications",
+    "value": "Albuterol HFA MDI PRN; Tiotropium HandiHaler daily; Lisinopril 10mg daily; Atorvastatin 20mg nightly"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 134/82, HR 88, RR 20, SpO2 93% (in-clinic, 2 months ago), BMI 27"
+   },
+   {
+    "label": "Immunizations",
+    "value": "See immunization record summary"
+   },
+   {
+    "label": "Care team",
+    "value": "PCP: Dr. L. Hartwell (outside rural clinic); Pulmonology: Dr. R. Okafor (fellow continuity clinic)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "follow-up",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for COPD follow-up to review recent spirometry and labs.",
+    "says": "I'm here to go over my breathing test results, doctor.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "recent flares",
+    "chart": "Two exacerbations treated with oral steroids and antibiotics in past 8 months.",
+    "says": "I've had two bad flare-ups this year where I needed the steroid pills and antibiotics.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "rescue inhaler use",
+    "chart": "Uses albuterol 6-8 times per day.",
+    "says": "I'm puffing on my rescue inhaler probably six, seven, maybe eight times a day now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "breathlessness with activity",
+    "chart": "Breathless when dressing; mMRC grade 3.",
+    "says": "Just getting dressed in the morning, buttoning my shirt, I have to stop and catch my breath.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "sleep position",
+    "chart": "Sleeps propped on 3 pillows due to breathlessness lying flat.",
+    "says": "I can't lay flat anymore, I need three pillows stacked up or I feel like I can't breathe.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "substance",
+    "topic": "smoking status",
+    "chart": "Patient reports having quit smoking after last exacerbation; actually continues to smoke about half a pack per day on back porch, confirmed by positive cotinine at last visit.",
+    "says": "Oh, I quit after that last flare landed me on the steroids, I haven't touched a cigarette since.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "substance",
+    "topic": "smoking amount",
+    "chart": "When pressed, admits to smoking about half a pack a day on the back porch, ongoing.",
+    "says": "Well... I guess I still have a few out on the porch most days. Maybe half a pack. I didn't want to disappoint you.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "substance",
+    "topic": "smoking history pack-years",
+    "chart": "40 pack-year smoking history, started at age 18.",
+    "says": "I started smoking young, maybe 18, and been at it near 40 years before I started cutting down.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "adherence",
+    "topic": "inhaler technique confidence",
+    "chart": "Patient believes she is using inhalers correctly; has never been shown technique by a pharmacist or clinician on camera.",
+    "says": "I think I'm doing it right, I just breathe in and puff it, like it says on the box.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "adherence",
+    "topic": "spacer use",
+    "chart": "Does not use a spacer device with albuterol MDI.",
+    "says": "A spacer? No, nobody ever gave me one of those, I just use the inhaler by itself.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "function",
+    "topic": "daily activity limitation",
+    "chart": "Avoids grocery shopping and housework due to breathlessness; relies on daughter for errands.",
+    "says": "I don't do the grocery shopping anymore, my daughter does it, I just can't manage the walking around the store.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "function",
+    "topic": "pulmonary rehab history",
+    "chart": "Never referred to or attended pulmonary rehabilitation.",
+    "says": "Pulmonary what now? No, nobody's ever sent me to anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "other",
+    "topic": "vaccine history recall",
+    "chart": "Patient unsure if she has ever received a pneumonia vaccine.",
+    "says": "Pneumonia shot? I honestly don't remember if I ever got one of those.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "family",
+    "topic": "family lung disease",
+    "chart": "Older sister has severe COPD requiring home oxygen; patient fears the same outcome.",
+    "says": "My sister's on oxygen all the time now, tubes and tanks everywhere. I'm scared I'm heading that way.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "psychosocial",
+    "topic": "emotional response to diagnosis",
+    "chart": "Expresses fear and some embarrassment about continued smoking despite advice.",
+    "says": "I feel kind of foolish telling you I quit when I really didn't. I just didn't want you to be disappointed in me.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "chest pain",
+    "chart": "Denies chest pain.",
+    "says": "No, I don't get any chest pain.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "leg swelling",
+    "chart": "Denies ankle or leg swelling.",
+    "says": "No swelling in my legs or ankles that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "weight change",
+    "chart": "Denies unintentional weight loss or gain.",
+    "says": "My weight's been about the same, nothing unusual.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "fever or chills currently",
+    "chart": "Denies current fever, chills, or change in sputum color.",
+    "says": "No fever right now, and my phlegm looks the same as usual, not green or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "hemoptysis",
+    "chart": "Denies coughing up blood.",
+    "says": "I've never coughed up blood, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "sexual",
+    "topic": "not applicable",
+    "chart": "No sexual health concerns reported; not relevant to visit.",
+    "says": "I don't think that's really something we need to talk about today.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f22",
+    "category": "nutrition",
+    "topic": "appetite",
+    "chart": "Reports good appetite, denies difficulty eating due to breathlessness.",
+    "says": "I still eat fine, my appetite's good, no trouble there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives alone in a single-story home; daughter lives nearby and checks in several times a week.",
+    "says": "I live by myself but my daughter's just down the road, she checks on me a few times a week.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "occupation history",
+    "chart": "Retired textile mill worker for over 30 years; reports some workplace dust and fiber exposure.",
+    "says": "I worked in the textile mill for over thirty years, there was always lint and dust in the air.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "pmh",
+    "topic": "other chronic conditions",
+    "chart": "History of hypertension and hyperlipidemia, both stable on current medications.",
+    "says": "I've got high blood pressure and my cholesterol's a bit high too, but those seem under control.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "medications",
+    "topic": "albuterol refill pattern",
+    "chart": "Albuterol MDI prescribed as 1 inhaler per month but patient has required early refills twice in past 3 months, consistent with reported overuse.",
+    "says": "I've had to call in for my rescue inhaler early a couple times because I run out before the month's up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "adherence",
+    "topic": "tiotropium adherence",
+    "chart": "Reports taking tiotropium daily, rarely misses a dose.",
+    "says": "I take that once-a-day one every morning, I don't skip it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "psychosocial",
+    "topic": "financial concerns",
+    "chart": "Worried about cost of additional inhaler if a new maintenance medication is prescribed, lives on fixed retirement income.",
+    "says": "I'm on a fixed income now, if you add another inhaler I'm not sure how I'll pay for it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "hpi",
+    "topic": "cough and sputum pattern",
+    "chart": "Chronic productive cough most mornings, whitish sputum, no recent change.",
+    "says": "I cough most mornings and bring up some whitish phlegm, that's been going on for years.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "ros",
+    "topic": "orthopnea vs cardiac symptoms",
+    "chart": "Denies palpitations or exertional chest tightness suggestive of cardiac cause for breathlessness.",
+    "says": "My heart doesn't flutter or anything, and I don't get any tightness, just short of breath.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "home environment air quality",
+    "chart": "No wood stove or significant indoor pollutant exposure beyond her own smoking; no pets with heavy shedding.",
+    "says": "We don't have a wood stove or anything like that, and my dog's a short-haired little thing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f32",
+    "category": "goals",
+    "topic": "patient goals",
+    "chart": "Patient's main goal is to avoid needing home oxygen and to be able to keep gardening in the spring.",
+    "says": "I just want to stay off oxygen if I can, and still be able to get out and garden come springtime.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f6",
+    "artifactId": "d2",
+    "patientClaim": "Patient states she quit smoking entirely after her last exacerbation and has not smoked since.",
+    "recordEvidence": "Serum cotinine from 2 months ago (after the exacerbation she references) returned positive at a quantitative level of 220 ng/mL, far above the <10 ng/mL nonsmoker threshold and well into the range consistent with active smoking.",
+    "teachingPoint": "Self-reported smoking cessation is often inaccurate; biochemical confirmation (cotinine) should guide counseling intensity and should be revisited non-judgmentally rather than simply accepted or confronted punitively."
+   },
+   {
+    "id": "m2",
+    "factId": "f27",
+    "artifactId": "d1",
+    "patientClaim": "Patient states she takes her once-daily tiotropium every morning without skipping doses.",
+    "recordEvidence": "Prior visit note documents poor inhaler technique was never formally assessed before this visit, and camera observation during this visit reveals technique errors (incomplete exhale before dose, no breath-hold) that would significantly reduce effective drug delivery even with daily use.",
+    "teachingPoint": "Adherence to a dosing schedule does not guarantee therapeutic benefit; technique must be observed directly, since self-report of 'taking it every day' can mask ineffective inhaler use."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and reconcile a discrepancy between self-reported smoking cessation and objective biochemical evidence, using a non-judgmental motivational approach.",
+    "factIds": [
+     "f6",
+     "f7",
+     "f15"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Directly observe and critique inhaler technique via camera for both tiotropium HandiHaler and albuterol MDI, identifying specific correctable errors.",
+    "factIds": [
+     "f9",
+     "f10"
+    ],
+    "actionIds": [
+     "a2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate spirometry severity (GOLD 3), exacerbation frequency, elevated blood eosinophils, and mMRC grade to justify escalation of inhaled therapy (e.g., addition of inhaled corticosteroid to a dual or triple regimen) within GOLD group E criteria.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4"
+    ],
+    "actionIds": [
+     "a3",
+     "a4",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify gaps in preventive care (pulmonary rehabilitation referral, pneumococcal vaccination status) and address them as part of comprehensive COPD management.",
+    "factIds": [
+     "f12",
+     "f13"
+    ],
+    "actionIds": [
+     "a11",
+     "a15"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize mildly low resting SpO2 on home oximetry (90-92%, not meeting the ≤88% standard oxygen qualification threshold) as a prompt for continued monitoring and objective testing (e.g., 6-minute walk test, overnight oximetry) rather than over-interpreting it as an urgent indication for home oxygen.",
+    "factIds": [
+     "f4",
+     "f14"
+    ],
+    "actionIds": [
+     "a1",
+     "a6"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Explore the patient's emotional and financial concerns (fear of needing home oxygen, cost of additional inhalers) with empathy, incorporating her stated goals into a shared care plan.",
+    "factIds": [
+     "f14",
+     "f28",
+     "f32"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Severe COPD (GOLD 3, group E) with frequent exacerbations, inadequate inhaler technique, continued active smoking despite reported cessation, and mildly low resting SpO2 on home oximetry warranting further monitoring/assessment (not yet meeting standard oxygen qualification criteria).",
+   "differential": [
+    "COPD exacerbation risk driven by poor inhaler technique and ongoing active smoking (most likely explanation for frequent flares and high rescue inhaler use)",
+    "Underlying cardiac contribution to dyspnea (e.g., early heart failure) - less likely given normal cardiac silhouette on chest X-ray, no edema, no orthopnea-associated weight gain, but orthopnea symptom warrants continued monitoring",
+    "Obstructive sleep apnea or overlap syndrome contributing to pillow orthopnea and daytime symptoms - consider if symptoms persist after COPD optimization",
+    "Bronchiectasis or other structural lung disease - less likely given chest X-ray findings but could be considered if CT indicated"
+   ],
+   "keyFindings": [
+    "FEV1/FVC 0.52 and FEV1 48% predicted on spirometry: severe (GOLD 3) obstruction",
+    "Two exacerbations requiring steroids/antibiotics in 8 months: GOLD group E (frequent exacerbator)",
+    "Blood eosinophils 380 cells/microliter: elevated, supports ICS add-on consideration per GOLD guidance for exacerbation reduction",
+    "Resting home SpO2 91% with HR log showing values in 90-92% range: mildly low but does not meet standard ≤88% threshold for long-term oxygen therapy qualification; warrants continued monitoring and formal testing (e.g., 6-minute walk, overnight oximetry) rather than urgent oxygen initiation",
+    "Positive serum cotinine despite patient's report of smoking cessation: ongoing active tobacco use is a major modifiable driver of exacerbations",
+    "Observed inhaler technique errors on camera for both tiotropium and albuterol: likely reducing effective drug delivery despite reported adherence to dosing schedule",
+    "mMRC grade 3 dyspnea and never referred to pulmonary rehabilitation: significant unaddressed opportunity for symptom and functional improvement",
+    "Pneumococcal vaccination status unknown/not on record: preventive care gap"
+   ],
+   "plan": [
+    "Address inhaler technique errors directly: reinforce HandiHaler technique (full exhale before inhaling, slow deep inhale, 4-second breath-hold) and recommend spacer with albuterol MDI; consider teach-back at next visit or pharmacist referral",
+    "Have an empathetic, non-judgmental conversation about the cotinine-smoking discrepancy; reassess readiness to quit, offer pharmacologic cessation aids (varenicline or combination NRT) and counseling/quitline referral without shaming",
+    "Discuss escalation of maintenance therapy per GOLD group E with elevated eosinophils: consider adding inhaled corticosteroid to a LAMA/LABA combination (e.g., transition to triple therapy) to reduce exacerbation risk, factoring in her stated cost concerns and exploring patient assistance programs",
+    "Refer to pulmonary rehabilitation given mMRC 3 dyspnea and functional limitation",
+    "Address pneumococcal vaccination gap: coordinate with primary care or administer per current ACIP recommendations (PCV20 or PCV15+PPSV23)",
+    "Given resting SpO2 90-92% on repeated home readings (mildly low but above the ≤88% formal LTOT qualification threshold), arrange objective follow-up testing (e.g., 6-minute walk test with oximetry, overnight oximetry, or arterial blood gas if clinically indicated) to monitor trend and determine whether formal oxygen qualification criteria are eventually met, rather than diagnosing or prescribing home oxygen from these readings alone",
+    "Screen more formally for sleep-disordered breathing/orthopnea contribution given 3-pillow orthopnea; consider overnight oximetry or sleep study referral if symptoms persist after optimizing COPD therapy",
+    "Schedule close follow-up (4-6 weeks) to reassess technique, oxygen saturation trend, and smoking status after initiating these changes"
+   ],
+   "redFlags": [
+    "Resting SpO2 90-92% on repeated home readings - mildly low but does not meet standard ≤88% oxygen qualification threshold; should be trended and formally assessed, not ignored, but does not represent an urgent oxygenation emergency",
+    "mMRC grade 3 dyspnea with significant functional limitation (unable to grocery shop)",
+    "Two exacerbations in 8 months indicating high future exacerbation risk per GOLD classification",
+    "Continued active smoking as an ongoing driver of lung function decline and exacerbation risk despite patient's belief she has quit"
+   ],
+   "educationPoints": [
+    "Self-reported smoking status should be corroborated with biochemical markers (cotinine) when available, and discrepancies explored with empathy rather than confrontation to preserve therapeutic alliance",
+    "Inhaler technique must be directly observed, as correct dosing frequency does not guarantee effective drug delivery",
+    "GOLD group E classification (frequent exacerbations) combined with elevated blood eosinophils supports consideration of inhaled corticosteroid-containing regimens to reduce future exacerbation risk",
+    "Standard long-term oxygen therapy qualification requires resting SpO2 ≤88% (or ≤89% with evidence of end-organ effects); readings of 90-92% are mildly low and warrant monitoring and objective exertional/overnight testing but do not by themselves meet qualification criteria, and clinicians should avoid overstating urgency based on a single or mildly low home reading",
+    "Pulmonary rehabilitation and vaccination status (pneumococcal, influenza) are frequently overlooked components of comprehensive COPD care that should be reviewed at every follow-up",
+    "Patient fears (e.g., fear of 'ending up on oxygen') and financial barriers to therapy should be explicitly elicited and incorporated into a shared, realistic care plan"
+   ]
+  },
+  "patient": {
+   "name": "Barbara Novak",
+   "age": 66,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "White",
+   "occupation": "Retired textile mill worker",
+   "language": "English",
+   "appearance": "A woman of apparent late sixties with a stocky build and short gray hair, wearing a loose button-down flannel shirt. She is seated in a modestly furnished living room with floral curtains visible behind her, lit by a lamp, and keeps a tissue in hand, occasionally shifting to catch her breath between sentences.",
+   "portrait": "/portraits/pulmonology-barbara-novak-copd.jpg"
+  },
+  "persona": {
+   "personality": "Warm, self-deprecating, and a bit anxious about disappointing her care team; uses humor to deflect discomfort but is fundamentally honest once trust is built.",
+   "communicationStyle": "Talks in a folksy, conversational way, sometimes downplays her symptoms with jokes, needs gentle encouragement to open up about sensitive topics like smoking.",
+   "healthLiteracy": "low",
+   "emotionalState": "Anxious about her future, particularly fear of needing home oxygen like her sister; mildly embarrassed about ongoing smoking despite having said she quit.",
+   "background": "Worked over 30 years in a textile mill before retiring; raised two children, now widowed, lives alone in a small single-story house in rural North Carolina with her short-haired dog; her daughter lives nearby and helps with errands; enjoys gardening and used to can vegetables from her backyard plot.",
+   "speechExamples": [
+    "Well, I quit after that last flare-up, cross my heart... mostly.",
+    "I don't want to be a bother, but I just can't catch my breath some days.",
+    "My sister's on that oxygen tank all the time now, and Lord, I do not want to end up like that.",
+    "I'm sorry, I know I should've called sooner about the inhaler running out early.",
+    "I take my pills, I really do try, I just get confused sometimes with all the different ones."
+   ],
+   "concerns": [
+    "Fear of ending up on home oxygen like her sister",
+    "Worry about the cost of additional inhalers on a fixed retirement income",
+    "Embarrassment about not having fully quit smoking",
+    "Wanting to stay active enough to garden in spring"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a pulmonary and critical care fellow conducting a telehealth follow-up visit with Barbara Novak, a 66-year-old woman with COPD, who is calling in to review recent spirometry and lab results after recurrent exacerbations. Review her chart before the visit.",
+   "chiefComplaint": "COPD follow-up to review spirometry and lab results after recurrent exacerbations",
+   "openingLine": "Hi doctor, I'm here to go over my breathing test results, like we planned.",
+   "tasks": [
+    "Take a focused history of her exacerbation pattern, inhaler use, and functional limitation",
+    "Observe and assess her inhaler technique on camera",
+    "Review and interpret her spirometry, laboratory results, chest X-ray, and home oximetry log",
+    "Explore smoking status and cessation support",
+    "Formulate and discuss a COPD management plan, incorporating her goals and concerns"
+   ],
+   "timeLimitMin": 25
+  },
+  "summary": "\"This case portrays a 66-year-old retired textile mill worker with severe (GOLD 3, group E) COPD presenting for a telehealth follow-up after two exacerbations in 8 months. It teaches fellows to reconcile self-reported smoking cessation against biochemical evidence, directly observe inhaler technique via camera, integrate spirometry/eosinophil/exacerbation data to guide therapy escalation, and recognize when resting hypoxemia warrants formal oxygen assessment rather than immediate prescription.\"",
+  "title": "\"Severe COPD Follow-up with Discordant Smoking History and Poor Inhaler Technique\"",
+  "specialty": "\"Pulmonology and Critical Care Medicine\"",
+  "setting": "\"Telehealth video visit, patient at home in rural North Carolina\"",
+  "professions": [
+   "pulmonology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

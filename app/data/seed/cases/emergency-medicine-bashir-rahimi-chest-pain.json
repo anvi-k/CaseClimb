@@ -1,0 +1,818 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home pulse oximeter reading",
+    "result": "Home pulse oximeter: SpO2 93% on room air, pulse 112 bpm, measured twice over past hour with consistent results",
+    "importance": "critical",
+    "abnormal": true,
+    "aliases": [
+     "pulse ox",
+     "oxygen saturation"
+    ],
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Guided heart rate check (patient counts pulse at wrist for 30 sec)",
+    "result": "Radial pulse 108 bpm, regular rhythm, patient reports feeling 'heart racing' with exertion",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Guided respiratory rate count (patient counts own breaths for 30 sec)",
+    "result": "Respiratory rate 24 breaths/min, mildly labored, no accessory muscle use visible on camera",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "vitals",
+    "name": "Home blood pressure cuff reading",
+    "result": "BP 128/82 mmHg, seated, left arm",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "vitals",
+    "name": "Home thermometer temperature check",
+    "result": "Temperature 98.4°F (36.9°C) oral",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera inspection of general appearance and work of breathing",
+    "result": "Patient appears anxious, mildly diaphoretic, speaking in full sentences but pausing to catch breath; no cyanosis of lips visible on camera; sitting upright on couch",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Guided calf inspection and self-palpation (patient exposes both lower legs on camera, presses along calf)",
+    "result": "Left calf visibly larger than right by patient's own comparison, mild redness noted on camera, patient reports tenderness to palpation over left posterior calf; right leg unremarkable",
+    "importance": "critical",
+    "abnormal": true,
+    "aliases": [
+     "calf swelling"
+    ],
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Guided calf circumference measurement (patient measures with tape measure at a marked point below knee)",
+    "result": "Left calf circumference 39 cm vs right calf 34.5 cm, measured 10 cm below tibial tuberosity (5 cm difference)",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "exam",
+    "name": "Camera inspection of skin color/cyanosis at lips and nail beds",
+    "result": "No visible cyanosis of lips or nail beds under available lighting, though image quality limits assessment",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "test",
+    "name": "Ask patient to walk across the room on camera (brief exertional observation)",
+    "result": "Patient becomes visibly short of breath and has to pause after walking approximately 20 feet; reports this is new for him",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review problem list and past medical history in chart",
+    "result": "Problem list: none documented. No prior history of blood clots, cancer, or recent surgery on file",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review medication list in chart",
+    "result": "Medication list: none on file (patient reports no regular medications)",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Calculate Wells score for pulmonary embolism based on history and exam",
+    "result": "Wells score 7.5, calculated only after clinical signs of DVT are established on exam (left calf swelling/tenderness/redness from a7, confirmed by circumference asymmetry on a8): clinical signs of DVT +3, PE more likely than alternative diagnosis +3, HR>100 +1.5 = high probability of PE. If calf exam (a7) has not yet been performed, DVT-signs points cannot be scored and this item should be run after a7/a8.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review prior ED/urgent care visit history",
+    "result": "No prior ED or urgent care visits on file for this patient",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "test",
+    "name": "Ask patient to perform peak flow with home device if available",
+    "result": "Patient does not own a peak flow meter or spirometer; test not performed",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Suspected pulmonary embolism with concurrent left lower extremity DVT, high clinical probability (Wells score ~7.5)",
+   "differential": [
+    "Pulmonary embolism (most likely given DVT signs, pleuritic pain, hypoxia, tachycardia, hemoptysis)",
+    "Deep vein thrombosis with reactive pleurisy (less likely given hypoxia and tachycardia severity)",
+    "Musculoskeletal chest pain from prolonged driving posture (does not explain hypoxia or leg findings)",
+    "Pneumonia (less likely, no fever/cough, but cannot fully exclude without imaging)",
+    "Pneumothorax (less likely given no trauma history, but pleuritic pain and dyspnea warrant consideration until imaging excludes)"
+   ],
+   "keyFindings": [
+    "Pleuritic right-sided chest pain since this morning",
+    "Dyspnea on exertion, winded climbing one flight of stairs",
+    "Home SpO2 93% on room air, pulse 112",
+    "Left calf swelling, tenderness, and redness x5 days after prolonged car travel",
+    "Calf circumference asymmetry (39 cm vs 34.5 cm)",
+    "One episode of hemoptysis (blood-streaked sputum)",
+    "Wells score high probability for PE",
+    "No fever, no documented prior VTE or malignancy"
+   ],
+   "plan": [
+    "Do NOT prescribe outpatient antibiotics; this is not a presentation consistent with bacterial pneumonia and antibiotics will not address the suspected PE/DVT",
+    "Advise patient this requires emergency in-person evaluation today, not a routine outpatient visit",
+    "Instruct patient to call 911 or have someone drive him immediately to the nearest emergency department given hypoxia, tachycardia, and high pretest probability of PE",
+    "Communicate urgency clearly: hemoptysis plus hypoxia plus leg swelling after prolonged immobility is a medical emergency",
+    "Address insurance/cost concern directly: emergency departments cannot refuse emergency care regardless of insurance status (EMTALA); do not let cost concerns delay care for a life-threatening condition",
+    "Do not discharge home or arrange routine follow-up; this is outside the scope of a telehealth disposition decision",
+    "Document Wells score and reasoning in ED-style note to communicate urgency to receiving facility",
+    "Advise against further long-distance driving until evaluated",
+    "If patient refuses to go, document informed refusal discussion and strongly re-emphasize risk, offer to call ambulance on his behalf"
+   ],
+   "redFlags": [
+    "SpO2 93% at rest",
+    "Heart rate 108-112",
+    "Hemoptysis",
+    "Unilateral leg swelling/tenderness after prolonged immobility",
+    "High Wells score",
+    "Dyspnea with minimal exertion"
+   ],
+   "educationPoints": [
+    "Pleuritic chest pain plus unilateral leg swelling after prolonged travel should always trigger PE/DVT screening even without fever or cough",
+    "Home pulse oximetry and patient-performed exertional walk tests are valid, feasible teletriage tools to detect occult hypoxia",
+    "Hemoptysis is often minimized or withheld by patients out of fear; direct, nonjudgmental questioning increases disclosure",
+    "A request for 'just an antibiotic' should prompt the clinician to clarify the actual diagnosis being treated rather than acquiescing to patient preference",
+    "EMTALA guarantees emergency department screening and stabilization regardless of insurance or ability to pay; this should be explicitly communicated to allay cost-related reluctance to seek care",
+    "Telehealth disposition for suspected PE is virtual triage leading to immediate escalation (911/ED), not an outpatient diagnostic pathway, since CTPA cannot be obtained remotely"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "flowsheet",
+    "title": "Home Vitals Log - Today's Visit",
+    "author": "Patient-reported, telehealth nursing intake",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "HR (bpm)",
+      "SpO2 (%)",
+      "RR (breaths/min)",
+      "BP (mmHg)",
+      "Temp (°F)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "08:30 AM (this morning, onset of pain)",
+        "—",
+        "—",
+        "—",
+        "—",
+        "—"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Just before visit",
+        "112",
+        "93",
+        "24",
+        "128/82",
+        "98.4"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Prior Telehealth Intake Note (6 months ago, unrelated visit for seasonal allergies)",
+    "author": "Dr. A. Patel, Family Medicine",
+    "date": "6 months ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "41-year-old male presenting with nasal congestion and sneezing during spring pollen season. No chronic medical conditions reported. No tobacco use. Works long hours as a rideshare driver. Denies prior surgeries, hospitalizations, or blood clots. Advised OTC antihistamine. Plan: follow up as needed."
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "EHR medication reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Status"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "None on file",
+        "—",
+        "—",
+        "—",
+        "Active"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Calf Circumference Comparison (measured this visit)",
+    "author": "Patient self-measurement, guided by clinician",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "chart": {
+     "kind": "bar",
+     "xLabel": "Leg",
+     "yLabel": "Circumference (cm)",
+     "series": [
+      {
+       "name": "Calf circumference",
+       "points": [
+        {
+         "x": "Right calf",
+         "y": 34.5
+        },
+        {
+         "x": "Left calf",
+         "y": 39
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "other",
+    "title": "Wells Criteria Scoring Worksheet",
+    "author": "ED Resident, telehealth visit",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "body": "Prerequisite: clinical signs/symptoms of DVT must be confirmed on exam (see guided calf inspection/palpation) before this item can be scored.\nClinical signs/symptoms of DVT (leg swelling + pain on palpation of deep veins), confirmed on exam: +3\nPE is #1 diagnosis OR no alternative diagnosis as likely: +3\nHeart rate >100: +1.5\nImmobilization ≥3 days or surgery in previous 4 weeks: 0 — note: standard Wells wording requires bed rest/immobilization ≥3 days or surgery within 4 weeks; two days of prolonged car travel (9 hours each way) does not meet this threshold and is not equivalent to the ≥3 day immobilization criterion, so it is not scored, though it remains a relevant VTE risk factor clinically\nPrevious objectively diagnosed PE or DVT: 0\nMalignancy: 0\nHemoptysis: +1\nTotal (Wells, classic): 7.5 → High probability of PE (score >6)"
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Patient-Reported Symptom Timeline",
+    "author": "Telehealth visit documentation",
+    "date": "Today",
+    "release": {
+     "when": "fact",
+     "ref": "f8"
+    },
+    "body": "Day 1 (5 days ago): Drove round-trip Sacramento to Las Vegas, approximately 9 hours each way with minimal stops, over 2 consecutive days.\nDay 3-4: Reports increasing fatigue from the trip, continued working his usual driving shifts.\nToday, morning: Acute onset sharp right-sided chest pain, worse with deep inspiration. Noted winded climbing a single flight of stairs at home."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Sharp right-sided chest pain and shortness of breath, onset this morning"
+   },
+   {
+    "label": "Problem list",
+    "value": "No active problems documented"
+   },
+   {
+    "label": "Medications",
+    "value": "None on file"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "6 months ago: BP 122/78, HR 76, Temp 98.2°F (routine allergy visit)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per self-report; no vaccine records on file"
+   },
+   {
+    "label": "Care team",
+    "value": "No assigned primary care physician on file; uses urgent care/telehealth episodically"
+   },
+   {
+    "label": "Code status",
+    "value": "Not applicable (outpatient telehealth)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "tele-triage / virtual urgent care visit",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "chest pain and breathing",
+    "chart": "Sharp right-sided chest pain, worse with deep breaths, since this morning; feels winded climbing one flight of stairs",
+    "says": "My chest has been hurting since this morning, sharp, right here, and it gets worse when I breathe in deep. And I got winded just going up one flight of stairs at home, which never happens to me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "chest pain quality",
+    "chart": "Pain described as sharp, stabbing, localized to right lateral chest, worsens with inspiration and coughing",
+    "says": "It's a sharp, stabbing kind of pain. Right on this side. Breathing in deep makes it worse, almost makes me catch my breath.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "pain onset timing",
+    "chart": "Pain onset this morning upon waking, no clear precipitating trauma or activity",
+    "says": "I woke up this morning and it was already there. I didn't fall or hurt myself or anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "breathing difficulty",
+    "chart": "Reports progressive dyspnea on exertion over the course of the day, now present with minimal exertion",
+    "says": "At first it was just a little tightness, but now even walking to the kitchen makes me breathe fast.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "recent travel",
+    "chart": "Drove round-trip Sacramento to Las Vegas 5 days ago, approximately 9 hours each way over two consecutive days with minimal stops",
+    "says": "About five days ago I did a long drive, Sacramento to Vegas and back, picked up a fare out there. Must have been nine hours each way, barely stopped.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "leg symptoms",
+    "chart": "Left calf swelling and soreness for 5 days, attributed by patient to prolonged sitting during long drive",
+    "says": "My left calf has been sore and kind of swollen for about five days now. I figured it was just from sitting so long on that drive.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "leg symptoms detail",
+    "chart": "Denies trauma to leg; soreness worsened gradually, not improved with rest",
+    "says": "I didn't hit it on anything. It just started feeling heavy and sore, and it hasn't gotten better even resting.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "coughing blood",
+    "chart": "One episode of coughing up blood-streaked sputum this afternoon, frightened patient, has not recurred",
+    "says": "This afternoon I coughed and there was... some blood in it, just a little streak. It scared me, I didn't want to say anything at first.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "fever and chills",
+    "chart": "Denies fever, chills, or night sweats",
+    "says": "No fever, no chills, nothing like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "cough history",
+    "chart": "Denies chronic cough or recent respiratory infection symptoms prior to today",
+    "says": "I wasn't coughing before today, no cold or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "lightheadedness",
+    "chart": "Denies syncope or near-syncope; reports mild lightheadedness when standing quickly",
+    "says": "I haven't passed out, but I did feel a little dizzy when I stood up fast earlier.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "leg pain character",
+    "chart": "Denies leg pain at rest being severe; describes it as dull ache and tightness, worse with standing",
+    "says": "It's not like a sharp pain, more like a dull ache and tightness, worse when I'm on my feet a lot driving.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "pmh",
+    "topic": "blood clot history",
+    "chart": "Denies personal history of blood clots, DVT, or pulmonary embolism",
+    "says": "No, I've never had a blood clot before, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "pmh",
+    "topic": "cancer history",
+    "chart": "Denies history of cancer or current cancer treatment",
+    "says": "No cancer, never had anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "chronic conditions",
+    "chart": "Denies diabetes, hypertension, or heart disease",
+    "says": "I don't have diabetes or high blood pressure or heart problems, far as I know.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "Denies any prior surgeries or hospitalizations",
+    "says": "Never had surgery, never been in the hospital.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "medications",
+    "topic": "current medications",
+    "chart": "Takes no prescription medications; occasionally uses over-the-counter ibuprofen for back pain",
+    "says": "I don't take any regular medicine. Sometimes ibuprofen for my back after a long shift.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "No allergies to medicine that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "family",
+    "topic": "family clotting history",
+    "chart": "Reports uncertain family history; unsure if any relatives had blood clots",
+    "says": "I'm not sure, honestly. Nobody ever told me about blood clots in the family, but I don't know everything about my relatives' health.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "social",
+    "topic": "occupation and driving",
+    "chart": "Works as rideshare driver, typically 10-12 hour shifts, 6 days per week, sits for most of shift",
+    "says": "I drive for Uber and Lyft, ten, twelve hours a day most days. Lot of sitting, not much time to stretch.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "social",
+    "topic": "insurance status",
+    "chart": "Uninsured; expresses concern about cost of emergency care",
+    "says": "I don't have insurance right now, it's been hard to afford it. I was hoping maybe you could just give me an antibiotic for this.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f22",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Denies current or past tobacco use",
+    "says": "I don't smoke, never have.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol rarely, about once a month socially",
+    "says": "I barely drink, maybe once a month if that.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "recent injury",
+    "chart": "Reports minor bruise on forearm from bumping into car door one week ago, unrelated to current symptoms",
+    "says": "I did bump my arm pretty hard on the car door last week, got a bruise, but that's healed up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "nutrition",
+    "topic": "diet and hydration",
+    "chart": "Reports limited fluid intake during long driving shifts to avoid frequent bathroom stops",
+    "says": "I try not to drink too much water when I'm driving long hours, because then I have to find a bathroom.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "function",
+    "topic": "baseline exercise tolerance",
+    "chart": "Previously able to climb multiple flights of stairs and walk long distances without breathlessness",
+    "says": "Normally I can walk, climb stairs, no problem. This is new, something's really off today.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "worry about missing work",
+    "chart": "Expresses anxiety about lost income if unable to drive and concern about going to ED due to cost",
+    "says": "If I can't drive, I don't get paid. And going to the ER, that's going to cost me a lot of money I don't have.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "swelling other areas",
+    "chart": "Denies swelling in right leg, arms, or face",
+    "says": "My right leg looks normal, no swelling anywhere else that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Reports sensation of heart racing, especially with exertion, no prior history of arrhythmia",
+    "says": "My heart's been racing, especially when I try to move around. Never had that before.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "pain with movement",
+    "chart": "Pain not significantly reproducible with chest wall palpation per patient report (self-palpation at clinician's direction)",
+    "says": "When I press on my chest where it hurts, it doesn't really feel worse, it's more when I breathe.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "goals",
+    "topic": "treatment expectations",
+    "chart": "Patient hopes for an antibiotic prescription and to avoid in-person or emergency care if possible",
+    "says": "I was really hoping you could just prescribe something, an antibiotic maybe, so I don't have to go sit in an ER all day and pay a fortune.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "immigration and language",
+    "chart": "English is second language; patient is fluent but occasionally pauses to find words; no interpreter requested",
+    "says": "My English is okay, I've been here a long time, but sometimes I take a second to find the right word.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f23",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports drinking alcohol rarely, about once a month",
+    "recordEvidence": "Prior telehealth note from 6 months ago makes no mention of alcohol use being screened or documented either way",
+    "teachingPoint": "Absence of documentation is not evidence of absence; this is a distractor to test whether the learner inappropriately anchors on alcohol use as relevant to the current presentation rather than pursuing the DVT/PE history"
+   },
+   {
+    "id": "m2",
+    "factId": "f31",
+    "artifactId": "d5",
+    "patientClaim": "Patient requests an antibiotic and hopes to avoid in-person or emergency evaluation",
+    "recordEvidence": "Wells Criteria Scoring Worksheet documents a score of 7.5, indicating high probability of PE requiring emergent CT pulmonary angiogram, not an antibiotic or outpatient management",
+    "teachingPoint": "Patient treatment preferences and cost concerns, while important to acknowledge empathetically, cannot override objective clinical risk stratification indicating a life-threatening diagnosis requiring emergency care"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused history that uncovers both the pulmonary (pleuritic chest pain, dyspnea, hemoptysis) and vascular (unilateral leg swelling after prolonged travel) components of the presentation despite the patient's initial reluctance to volunteer the leg symptoms and hemoptysis",
+    "factIds": [
+     "f1",
+     "f6",
+     "f8",
+     "f5"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Use remote-appropriate assessment tools (home pulse oximeter, guided pulse/respiratory rate counts, exertional walk observation, guided calf measurement) to objectively characterize severity when in-person vitals and exam are unavailable",
+    "factIds": [
+     "f4",
+     "f29"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a10"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Correctly calculate and interpret a Wells score to risk-stratify for pulmonary embolism and recognize that a high-probability score mandates same-day CT pulmonary angiogram, which cannot be obtained via telehealth",
+    "factIds": [
+     "f6",
+     "f8",
+     "f29"
+    ],
+    "actionIds": [
+     "a7",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Recognize and name the mismatch between the patient's framing of the problem (wants an antibiotic, hopes to avoid the ED) and the objective clinical picture (hypoxia, tachycardia, high Wells score) documented in the chart",
+    "factIds": [
+     "f21",
+     "f31"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Formulate an emergency disposition plan appropriate to this role's scope: direct the patient to activate emergency services or go immediately to an in-person ED for CT pulmonary angiogram, rather than prescribing antibiotics or arranging routine outpatient follow-up",
+    "factIds": [
+     "f21",
+     "f27"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Address the patient's financial and logistic concerns about emergency care (uninsured status, fear of losing driving income) with accurate information about emergency care access (EMTALA) while maintaining urgency of the recommendation",
+    "factIds": [
+     "f21",
+     "f27"
+    ],
+    "actionIds": []
+   }
+  ],
+  "patient": {
+   "name": "Bashir Rahimi",
+   "age": 41,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Afghan-American",
+   "occupation": "Rideshare driver",
+   "language": "English (fluent, second language)",
+   "appearance": "A man of average build in his early forties with short dark hair and a trimmed beard, wearing a plain gray t-shirt, seated on a couch in a modestly furnished living room with a ceiling fan visible overhead. He appears anxious and mildly short of breath, occasionally shifting position and glancing away from the camera, with a phone propped against a stack of books.",
+   "portrait": "/portraits/emergency-medicine-bashir-rahimi-chest-pain.jpg"
+  },
+  "persona": {
+   "personality": "Hardworking, stoic, and somewhat guarded about health concerns, tends to minimize symptoms until directly reassured it's safe to share them",
+   "communicationStyle": "Polite and cooperative but gives brief initial answers; opens up with gentle, specific follow-up questions and reassurance; occasionally deflects to practical concerns about work and money",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious beneath a calm exterior, worried about both his health and the financial impact of missing work or incurring medical bills",
+   "background": "Bashir immigrated to the US as a young adult and has worked various jobs before settling into rideshare driving eight years ago. He supports himself and sends money to family periodically, works long hours by choice to maximize earnings, and has avoided routine healthcare due to lack of insurance and tight finances.",
+   "speechExamples": [
+    "It's not that bad, I can handle it, I just wanted to check before it gets worse.",
+    "Honestly, I was hoping to avoid going anywhere today if I could help it.",
+    "I didn't want to make a big deal out of the leg thing, I figured it would go away.",
+    "If I can't work tonight, that's a problem, but I guess health comes first... I hope this isn't serious."
+   ],
+   "concerns": [
+    "Worried about the cost of going to an emergency room without insurance",
+    "Concerned about losing income if he cannot drive",
+    "Hoping for a quick fix like antibiotics rather than a more involved workup",
+    "Underlying fear that this could be something serious given the blood in his cough"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are an emergency medicine resident conducting a virtual urgent care visit. Bashir Rahimi, a 41-year-old rideshare driver, has requested a telehealth visit for sharp right-sided chest pain worse with deep breathing, and shortness of breath climbing stairs, since this morning. Gather a focused history, use remote assessment tools available to you, and determine the appropriate disposition.",
+   "chiefComplaint": "Sharp right-sided chest pain worse with deep breathing, and shortness of breath climbing stairs, since this morning",
+   "openingLine": "Hi doctor, thanks for seeing me. My chest has been hurting since this morning, kind of sharp, and I got winded just going up one flight of stairs at home, which isn't normal for me.",
+   "tasks": [
+    "Take a focused history of the presenting concern",
+    "Use remote-appropriate tools to assess vital signs and functional status",
+    "Apply an appropriate clinical decision tool to guide your assessment",
+    "Communicate a clear disposition recommendation and address the patient's concerns",
+    "Document a focused note including history, examination findings, clinical reasoning, and disposition"
+   ],
+   "timeLimitMin": 20
+  },
+  "specialty": "Emergency Medicine",
+  "summary": "A 41-year-old uninsured rideshare driver presents via telehealth with pleuritic chest pain and exertional dyspnea the morning after a long-distance drive, with reluctantly disclosed unilateral leg swelling and a single episode of hemoptysis. The case tests the resident's ability to elicit sensitive history, use remote assessment tools to risk-stratify for pulmonary embolism via Wells criteria, and deliver an urgent escalation-to-ED disposition despite the patient's preference for an antibiotic and reluctance to incur emergency care costs.",
+  "setting": "Telehealth video visit, patient at home in Sacramento, California, seated in his living room",
+  "title": "Pleuritic Chest Pain and Leg Swelling After a Long Drive: Tele-triage for Suspected Pulmonary Embolism",
+  "professions": [
+   "emergency-medicine"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "seed_journey-walter-greene",
+  "title": "Walter Greene: uncontrolled diabetes, heart failure and kidney disease across three professions",
+  "caseId": "seed_sample-walter-greene",
+  "spec": {
+    "summary": "Walter Greene, 72, has long-standing diabetes, heart failure and stage 3 kidney disease. He is seen by emergency medicine, hospital medicine and dietetics. What one professional learns about his medicines, his eating and his fears changes what the next one asks. Join as any one of them; the AI plays the rest.",
+    "stages": [
+      {
+        "id": "s1",
+        "order": 1,
+        "professionId": "emergency-medicine",
+        "roleTitle": "Emergency medicine attending",
+        "clinicianId": "brian_lee",
+        "focus": "First contact for the team. Find out how he is right now and what is troubling him most, review his vital signs, check for anything that needs urgent attention, and identify what hospital medicine and nutrition need to pick up.",
+        "simTime": "Week 1, Tue 08:40",
+        "visitLabel": "urgent video triage"
+      },
+      {
+        "id": "s2",
+        "order": 2,
+        "professionId": "internal-medicine",
+        "roleTitle": "Hospitalist (internal medicine)",
+        "clinicianId": "priya_narang",
+        "focus": "Medical review across his diabetes, heart failure and kidney disease: current symptoms, the medicines he actually takes including over-the-counter ones, what he understands about his conditions, and what worries him. Coordinate what the team does next.",
+        "simTime": "Week 1, Thu 13:30",
+        "visitLabel": "internal medicine video review"
+      },
+      {
+        "id": "s3",
+        "order": 3,
+        "professionId": "dietetics",
+        "roleTitle": "Registered dietitian",
+        "clinicianId": "tasha_dunbar",
+        "focus": "Nutrition assessment. Explore what and where he eats and drinks, cooking and shopping, what he believes about food and his conditions, and his readiness to change, and agree realistic steps that respect his independence.",
+        "simTime": "Week 2, Mon 10:00",
+        "visitLabel": "telehealth nutrition visit"
+      }
+    ]
+  }
+}

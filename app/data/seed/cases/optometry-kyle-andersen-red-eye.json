@@ -1,0 +1,745 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "exam",
+    "name": "External inspection of right eye via camera",
+    "result": "Diffuse conjunctival injection, right eye greater than left. Mild lid swelling. Watery discharge noted. No obvious foreign body visible on gross external view.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "imaging",
+    "name": "Close-up photo of right cornea (patient-submitted)",
+    "result": "Photo shows a focal round white-grey opacity approximately 1-2mm on the central-paracentral cornea with surrounding haze and overlying injected conjunctiva, consistent with a corneal infiltrate/ulcer.",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "test",
+    "name": "Distance visual acuity, right eye (patient uses printed home eye chart at 10 feet)",
+    "result": "Right eye: counts fingers only / unable to read largest line on home chart. Patient reports this is markedly worse than his usual vision.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "test",
+    "name": "Distance visual acuity, left eye (patient uses printed home eye chart at 10 feet)",
+    "result": "Left eye: 20/20, reads smallest line correctly without difficulty.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "test",
+    "name": "Pupil check via camera (penlight/phone flashlight, patient-assisted)",
+    "result": "Pupils appear round and reactive to light bilaterally on camera; no obvious anisocoria noted, though fine assessment limited by video quality.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Light sensitivity / photophobia screen (ask patient to look toward phone flashlight briefly)",
+    "result": "Patient reports significant discomfort and squinting with light directed at right eye; left eye tolerates light normally.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Ask patient to evert/inspect eyelid margins and lashes on camera",
+    "result": "No visible foreign body, no lash matting beyond mild watery crusting. Lid margins appear unremarkable aside from mild swelling.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review contact lens type and replacement schedule in chart",
+    "result": "Record shows patient fitted with monthly disposable soft contact lenses per prescribed schedule; chart contains no documentation of extended/overnight wear or water exposure as of today's visit.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review medication list for any prescribed ocular medications",
+    "result": "No ocular medications currently prescribed to this patient in the record. No steroid or antibiotic eye drops on file.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Triage severity assessment for red eye with corneal lesion",
+    "result": "Documented as a vision- and sight-threatening presentation with high-risk features for microbial keratitis (acute vision loss, corneal infiltrate, marked photophobia and pain in a contact lens wearer), requiring same-day in-person ophthalmic/optometric slit lamp evaluation; contact lens wear and steroid use are not appropriate pending that evaluation.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "exam",
+    "name": "Ask patient to inspect and photograph contact lens case and remaining lens on camera",
+    "result": "Patient shows an open lens case with visibly discolored, cloudy soaking solution and a lens case that appears old and overdue for replacement.",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "other",
+    "title": "Patient-submitted photo: right eye close-up",
+    "date": "Today",
+    "author": "Patient (self-taken)",
+    "body": "Close-up smartphone photo of the right eye showing diffuse conjunctival injection and a focal 1-2mm round white-grey corneal opacity with surrounding stromal haze, located just off-center on the cornea. Watery discharge visible at the lower lid margin. No photo available of left eye (asymptomatic).",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    }
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medications and Ocular History",
+    "date": "Today",
+    "author": "EHR problem/medication list",
+    "table": {
+     "columns": [
+      "Medication/Device",
+      "Dose/Type",
+      "Indication",
+      "Status"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Soft contact lenses",
+        "Monthly disposable, both eyes",
+        "Myopia correction",
+        "Active - prescribed monthly replacement schedule"
+       ]
+      },
+      {
+       "cells": [
+        "Multipurpose contact lens solution",
+        "N/A",
+        "Lens disinfection",
+        "Active"
+       ]
+      },
+      {
+       "cells": [
+        "No ocular prescription medications on file",
+        "-",
+        "-",
+        "N/A"
+       ]
+      }
+     ]
+    },
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    }
+   },
+   {
+    "id": "d3",
+    "type": "note",
+    "title": "Optometric Visit Note - 14 months ago (routine contact lens fitting)",
+    "date": "14 months ago",
+    "author": "Dr. R. Olsen, OD",
+    "body": "Patient presented for annual soft contact lens fitting and exam. Best corrected visual acuity 20/20 both eyes with -2.75 D myopic correction. Anterior segment exam unremarkable, no corneal staining, healthy ocular surface both eyes. Fit with monthly disposable soft lenses, counseled on proper lens hygiene including nightly removal, avoiding water exposure, replacing lens case every 3 months, and monthly lens replacement schedule. Patient verbalized understanding of wear schedule and water precautions at that visit.",
+    "release": {
+     "when": "start"
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Vision and Vitals Flowsheet - Today's Visit",
+    "date": "Today",
+    "author": "Telehealth visit documentation",
+    "table": {
+     "columns": [
+      "Measure",
+      "Right Eye",
+      "Left Eye"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Distance visual acuity (home chart)",
+        "Counts fingers only",
+        "20/20"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Photophobia (patient-reported)",
+        "Marked",
+        "None"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Conjunctival injection (camera)",
+        "Diffuse, moderate-severe",
+        "None"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Discharge",
+        "Watery",
+        "None"
+       ],
+       "flag": ""
+      }
+     ]
+    },
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    }
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Contact-lens-related microbial keratitis (corneal ulcer/infiltrate), right eye, until proven otherwise - risk factors include extended/overnight lens wear, water exposure (swimming/tap water rinse), and poor lens case hygiene. Pseudomonas and Acanthamoeba must be considered given water exposure.",
+   "differential": [
+    "Bacterial microbial keratitis (including Pseudomonas, given lake/tap water exposure)",
+    "Acanthamoeba keratitis (given water exposure while wearing lenses)",
+    "Herpes simplex keratitis",
+    "Contact lens-related sterile corneal infiltrate (less likely given severity of pain, acuity loss, and photophobia)",
+    "Fungal keratitis (lower likelihood but relevant given water exposure)"
+   ],
+   "keyFindings": [
+    "Acute painful red right eye with marked photophobia and watery discharge, onset yesterday",
+    "Focal corneal white opacity/infiltrate visible on photo with surrounding haze",
+    "Visual acuity right eye reduced to counts-fingers from a baseline of 20/20",
+    "History of extended monthly lens wear stretched to ~2 months, overnight sleeping in lenses several nights per week",
+    "Lens worn while swimming in a lake and rinsed with tap water afterward",
+    "Patient reinserted contact lens this morning despite symptoms, to see for work",
+    "Patient used a friend's leftover steroid-antibiotic combination eye drop without professional guidance",
+    "Contact lens case shown on camera has cloudy/discolored solution, overdue for replacement, inconsistent with hygiene counseling given 14 months ago"
+   ],
+   "plan": [
+    "Instruct patient to remove and discontinue contact lens wear in right eye (and left eye) immediately",
+    "Advise against use of the borrowed steroid-antibiotic drop; discontinue immediately given risk of worsening infection/masking pseudomonas or fungal/Acanthamoeba keratitis with steroid component",
+    "Arrange same-day urgent referral to ophthalmology (cornea specialist or on-call ED ophthalmology) for corneal culture/scraping and smear, given sight-threatening presentation; corneal scraping and initiation of fortified topical antibiotics are outside optometry's scope and must be performed by ophthalmology - the optometrist's role is to recognize the emergency, stop harmful self-treatment, and ensure urgent hand-off",
+    "Instruct patient to bring current contact lenses and lens case/solution to the in-person visit for culture",
+    "Do not patch the eye; do not delay referral for home remedies",
+    "Counsel patient that this is outside safe scope for telehealth management alone and outside optometric scope for definitive treatment - visual acuity loss and corneal infiltrate require urgent in-person ophthalmologic slit lamp assessment and likely culture-directed fortified topical antibiotics",
+    "Document and report risk factors (extended wear, overnight wear, water exposure, non-prescribed steroid drop) for the receiving ophthalmology clinician",
+    "Arrange follow-up communication/contact with the in-person ophthalmology clinician or ED to confirm the patient was seen"
+   ],
+   "redFlags": [
+    "Marked reduction in visual acuity (counts fingers) in the affected eye",
+    "Corneal infiltrate/white spot visible on external photo",
+    "Severe photophobia and pain disproportionate to simple conjunctivitis",
+    "History of water exposure while wearing contact lenses (Acanthamoeba and Pseudomonas risk)",
+    "Use of a non-prescribed steroid-containing eye drop in the setting of a possible infectious corneal process",
+    "Overnight/extended contact lens wear as an ongoing risk behavior"
+   ],
+   "educationPoints": [
+    "Contact lens wearers with a painful red eye and vision change must be treated as having presumed microbial keratitis until an in-person slit lamp exam and culture rule it out",
+    "Overnight wear, extended replacement beyond manufacturer schedule, and water exposure (swimming, tap water rinsing) are major modifiable risk factors for contact-lens-related keratitis including Pseudomonas and Acanthamoeba",
+    "Topical steroids should never be used for a red eye of unclear or infectious cause without ophthalmic evaluation, as they can worsen bacterial, fungal, and Acanthamoeba keratitis and promote corneal melting",
+    "A corneal infiltrate with vision loss and significant pain is outside the scope of telehealth-only management and outside optometric scope for definitive treatment (corneal scraping, fortified antibiotics); it requires urgent referral to ophthalmology for in-person care and possible corneal scraping for microbiology",
+    "Patients may minimize or normalize risky lens hygiene behaviors ('I take care of them normally') and may need direct, nonjudgmental questioning to reveal the full history",
+    "Lens cases should be replaced regularly (e.g., every 1-3 months) and not allowed to accumulate cloudy or discolored solution, as biofilm formation increases infection risk",
+    "Optometrists play a critical triage role in recognizing sight-threatening presentations and must know the limits of their scope, ensuring timely referral to ophthalmology rather than attempting procedures like corneal scraping themselves"
+   ]
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Painful red right eye since yesterday, light sensitivity, blurred vision"
+   },
+   {
+    "label": "Problem list",
+    "value": "Myopia, soft contact lens wearer"
+   },
+   {
+    "label": "Medications",
+    "value": "None prescribed; uses monthly disposable soft contact lenses and multipurpose solution"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Not applicable - ocular visit, no recent vitals on file"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per primary care record"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. R. Olsen, OD (optometry, prior routine contact lens exams)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable to this visit)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "eye complaint triage / urgent telehealth assessment",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Painful red right eye since yesterday morning with photophobia, watering, and blurred vision",
+    "says": "My right eye's been really red and sore since yesterday morning. It's watering a ton and bright light kills it. Vision's kind of blurry too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "pain description",
+    "chart": "Describes pain as gritty/burning, worsening since onset",
+    "says": "It feels gritty, like something's in there, and it's burning more today than yesterday.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "onset timing",
+    "chart": "Symptoms began yesterday morning, progressively worsening",
+    "says": "I woke up yesterday and it was already a little red, but now it's way worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "vision change",
+    "chart": "Reports marked blurring of vision in right eye compared to left",
+    "says": "I can barely see out of that eye today, honestly. The left one's totally fine though.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "light sensitivity",
+    "chart": "Significant photophobia right eye",
+    "says": "Any bright light and I just want to close that eye. It's rough.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "discharge",
+    "chart": "Watery discharge, no thick purulent discharge reported",
+    "says": "It's just watery, not like gunky or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "contact lens use today",
+    "chart": "Reinserted contact lens into symptomatic eye this morning to work",
+    "says": "Yeah I put the lens back in this morning, I've got a deadline at work and I needed to see my screen.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "medications",
+    "topic": "eye drop use",
+    "chart": "Used a friend's leftover combination steroid-antibiotic eye drop this morning without professional guidance",
+    "says": "My buddy had some old eye drops left over, I think they're like a steroid-antibiotic combo thing, so I put a couple drops in. Figured it couldn't hurt.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "lens hygiene general",
+    "chart": "Initially reports lens care as normal, no issues",
+    "says": "I take care of my lenses pretty normally, nothing weird.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "lens replacement schedule",
+    "chart": "Admits to stretching monthly lenses to approximately two months per lens",
+    "says": "Okay, honestly, I usually stretch each pair to like two months instead of one. They still feel fine so I just keep wearing them.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "hpi",
+    "topic": "overnight lens wear",
+    "chart": "Sleeps in contact lenses several nights per week",
+    "says": "I probably sleep in them like three or four nights a week, I just forget to take them out.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "hpi",
+    "topic": "water exposure",
+    "chart": "Wore lenses while swimming in a lake over the weekend and rinsed lenses with tap water afterward",
+    "says": "Oh yeah, we went to the lake this weekend and I swam with them in. Afterward I just rinsed them under the tap at home.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "hpi",
+    "topic": "lens case care",
+    "chart": "Does not replace lens case regularly or clean it rigorously",
+    "says": "The case? I don't know, I've had the same one for a while. Maybe a year? I just top off the solution sometimes instead of dumping it.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "hpi",
+    "topic": "foreign body sensation",
+    "chart": "Denies feeling a specific foreign body, describes generalized gritty sensation",
+    "says": "It doesn't feel like something specific is stuck in there, just generally irritated and gritty.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "hpi",
+    "topic": "eye trauma",
+    "chart": "Denies trauma, scratch, or chemical exposure to the eye",
+    "says": "No, nothing poked it or splashed in it that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "systemic symptoms",
+    "chart": "Denies fever, headache, nausea, or vomiting",
+    "says": "No fever or headache or anything like that, just the eye.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "other eye involvement",
+    "chart": "Denies any symptoms in the left eye",
+    "says": "Left eye feels totally normal, no redness or pain there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "pmh",
+    "topic": "eye history",
+    "chart": "No prior history of eye infections, herpes keratitis, or eye surgery",
+    "says": "I've never had anything like this happen to my eyes before.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "general health",
+    "chart": "No diabetes, no autoimmune conditions, otherwise healthy",
+    "says": "I'm pretty healthy otherwise, no diabetes or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "No allergies to any medications that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "medications",
+    "topic": "other medications",
+    "chart": "Takes no regular prescription medications",
+    "says": "I don't take any regular meds, just the contacts stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "occupation and screen use",
+    "chart": "Works as a software tester, spends most of day on computer screens, has a work deadline this week",
+    "says": "I'm a software tester, I'm basically on screens all day, and I've got a big deadline this week which is why I really need my eye working.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "distractor dry air",
+    "chart": "Mentions his apartment has dry heat/air which he thinks sometimes bothers his eyes",
+    "says": "My apartment's heating is really dry in general, sometimes my eyes feel dry because of it.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "distractor allergies season",
+    "chart": "Reports mild seasonal eye itchiness in spring unrelated to current episode",
+    "says": "I do get itchy eyes sometimes in spring from allergies, but this doesn't feel like that at all.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "adherence",
+    "topic": "prior lens counseling",
+    "chart": "Recalls being told at last contact lens exam about proper hygiene but has not consistently followed it",
+    "says": "Yeah, I remember the doctor telling me last time about not sleeping in them and the water thing, I just kind of got lazy about it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "function",
+    "topic": "impact on daily activity",
+    "chart": "Reports difficulty working on computer screen today due to vision and pain in right eye",
+    "says": "I literally can't really look at my screen with that eye today, it's that bad.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "work pressure",
+    "chart": "Expresses worry about missing work deadline more than about the eye itself initially",
+    "says": "I'm honestly more stressed about this deadline than the eye, I just need to get through today.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "photo quality",
+    "chart": "Able to take and send a close-up photo of the right eye using smartphone camera",
+    "says": "I can try to get a close-up pic with my phone, hang on.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "patient expectation",
+    "chart": "Hopes for eye drops to fix it quickly so he can keep working, initially resistant to idea of stopping lens wear",
+    "says": "Can't you just prescribe me something so I can keep wearing my lenses and get through this week?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "recent illness",
+    "chart": "Denies recent upper respiratory infection or sick contacts",
+    "says": "No, I haven't been sick or around anyone sick lately.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "substance",
+    "topic": "alcohol tobacco",
+    "chart": "Denies tobacco use, drinks alcohol socially on weekends",
+    "says": "I don't smoke, I'll have a couple beers on the weekend sometimes but that's it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f9",
+    "artifactId": "d3",
+    "patientClaim": "Patient initially states he takes care of his contact lenses 'pretty normally, nothing weird'",
+    "recordEvidence": "Prior optometry note from 14 months ago documents he was specifically counseled on nightly removal, avoiding water exposure, and replacing lens case every 3 months - counseling that, per his own later admissions, he has not followed (stretching wear to 2 months, sleeping in lenses, swimming in lenses, not replacing case)",
+    "teachingPoint": "Patients may underreport risky health behaviors when first asked in general terms; direct, specific, nonjudgmental questioning (and reviewing prior counseling documentation) is often needed to uncover true risk factors like extended wear, overnight wear, and water exposure."
+   },
+   {
+    "id": "m2",
+    "factId": "f29",
+    "artifactId": "d2",
+    "patientClaim": "Patient asks the learner to just prescribe something so he can keep wearing his lenses and get through the work week",
+    "recordEvidence": "Medication list and exam findings (visual acuity loss, corneal infiltrate on photo, no ocular medications on file) show this is a sight-threatening presentation requiring lens removal and same-day in-person referral, not a quick prescription to continue lens wear",
+    "teachingPoint": "Patient priorities and expectations (returning to normal activity quickly) can conflict with clinically necessary action; the learner must clearly explain why continuing lens wear or giving a quick-fix prescription is unsafe here and advocate for urgent in-person care despite the patient's work pressure."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete contact lens history including replacement schedule, overnight wear, and water exposure despite initial minimization by the patient, using direct interview questions beyond the patient's initial general reassurance",
+    "factIds": [
+     "f9",
+     "f10",
+     "f11",
+     "f12",
+     "f25"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize red flag signs of microbial keratitis (acute vision loss, corneal infiltrate, photophobia, pain) in a contact lens wearer via remote visual acuity testing and photo review",
+    "factIds": [
+     "f1",
+     "f4",
+     "f5"
+    ],
+    "actionIds": [
+     "a2",
+     "a3",
+     "a4",
+     "a10"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify unsafe self-treatment behaviors (reinserting lens, using borrowed steroid-antibiotic drops) and counsel the patient to stop them immediately",
+    "factIds": [
+     "f7",
+     "f8"
+    ],
+    "actionIds": [
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Formulate an appropriate triage and referral plan recognizing this presentation is outside safe scope for telehealth-only management, arranging same-day in-person evaluation with corneal scraping",
+    "factIds": [
+     "f4",
+     "f7",
+     "f8",
+     "f12"
+    ],
+    "actionIds": [
+     "a10",
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Address patient goals and work pressure with empathetic communication while firmly explaining why continuing lens wear or a quick prescription is not appropriate",
+    "factIds": [
+     "f27",
+     "f29"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Differentiate relevant risk factors from distractors such as dry indoor air and seasonal allergy symptoms",
+    "factIds": [
+     "f23",
+     "f24"
+    ],
+    "actionIds": [
+     "a1",
+     "a7"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Kyle Andersen",
+   "age": 25,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white",
+   "occupation": "Software tester",
+   "language": "English",
+   "appearance": "A young man in his mid-20s with short brown hair, wearing a casual t-shirt, sitting at a desk with a monitor and keyboard visible behind him in what looks like a home office or apartment bedroom. His right eye appears visibly red and watery even on camera, and he squints and blinks frequently on that side, occasionally rubbing near it, while the room lighting is a bit dim with a desk lamp as the main light source."
+  },
+  "persona": {
+   "personality": "Casual, easygoing, tends to downplay symptoms and minimize risky behaviors until pressed directly; practical and a bit impatient due to work stress.",
+   "communicationStyle": "Informal, brief answers, uses casual language, sometimes deflects with humor or by pivoting to his work deadline; opens up more once he feels the clinician is not judging him.",
+   "healthLiteracy": "low",
+   "emotionalState": "Mildly anxious about his vision and worried about missing work, but trying to seem unbothered; becomes more concerned when the seriousness of the eye issue is explained.",
+   "background": "Grew up in the Minneapolis suburbs, works remotely as a software tester for a local tech company, lives alone in an apartment, enjoys weekend trips to lakes and casual pickup basketball with friends. Has worn contact lenses since high school and generally considers himself low-maintenance about health stuff.",
+   "speechExamples": [
+    "Yeah it's pretty red, but I figured it'd just clear up on its own.",
+    "Honestly I just want something that'll get me through this week, I've got a huge deadline.",
+    "I mean, I probably push the lens schedule a little, but a lot of people do that, right?",
+    "It's not like I feel like something's stuck in there, it's just irritated I guess.",
+    "My buddy said these drops helped him with something similar once."
+   ],
+   "concerns": [
+    "Worried he might need to miss work or his deadline because of his eye",
+    "Hopes he can just get a quick prescription and keep wearing his contacts",
+    "Mildly worried something might be seriously wrong with his vision but trying not to show it",
+    "Doesn't want to be told he has to throw away his contacts or stop wearing them for a long time"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are an optometry student conducting a telehealth video visit. The patient, Kyle Andersen, a 25-year-old contact lens wearer, is calling about a painful red right eye that started yesterday. Take a focused ocular history, use remote exam techniques (camera inspection, patient-submitted photo, home visual acuity check) to assess severity, and determine the appropriate triage and management plan within your scope of practice.",
+   "chiefComplaint": "Painful red right eye since yesterday with light sensitivity, watering, and blurred vision",
+   "openingLine": "Hey, so my right eye has been really red and sore since yesterday morning, it's watering a lot and bright light is killing it, and my vision's kind of blurry too.",
+   "tasks": [
+    "Take a thorough history of the eye complaint including onset, pain, discharge, and vision changes",
+    "Take a detailed contact lens wear and hygiene history",
+    "Perform feasible remote exam elements: camera inspection, request a close-up photo, check visual acuity at home, and assess light sensitivity",
+    "Assess the severity of the presentation and determine the appropriate level and urgency of care",
+    "Communicate your management plan to the patient, including advice on contact lens wear and next steps"
+   ],
+   "timeLimitMin": 20
+  },
+  "setting": "Telehealth video visit, patient at home in his apartment in Minneapolis, Minnesota",
+  "specialty": "Optometry",
+  "summary": "A 25-year-old contact lens wearer presents via telehealth with an acutely painful, photophobic, red right eye and vision loss after a weekend of swimming in lenses, extended lens wear, and overnight wear, compounded by self-treatment with a borrowed steroid-antibiotic drop. The case teaches optometry students to recognize contact-lens-related microbial keratitis as a sight-threatening emergency requiring immediate lens discontinuation, cessation of inappropriate steroid use, and same-day in-person referral for corneal scraping, rather than telehealth-only management.",
+  "title": "Acute Painful Red Eye in a Contact Lens Wearer: Suspected Microbial Keratitis",
+  "professions": [
+   "optometry"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

@@ -1,0 +1,945 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home pulse oximetry and heart rate reading",
+    "result": "SpO2 95% on room air, HR 96 bpm, obtained with home finger pulse oximeter per patient/caregiver report",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Review home blood pressure reading",
+    "result": "BP 108/64 mmHg, seated, taken on home cuff by Carol 10 minutes prior to visit",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Ask patient to count respiratory rate over 30 seconds on camera",
+    "result": "RR 22/min, mildly labored with speaking, no accessory muscle use at rest",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Sit-to-stand functional screen (ask patient to try rising from chair without using arms, on camera)",
+    "result": "Unable to rise from a standard chair without pushing off with both arms; required 2 attempts; visible quadriceps wasting",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Camera inspection of healing heel pressure injury (ask patient/Carol to position camera)",
+    "result": "Right heel: stage 2 pressure injury, 2x2cm, pink wound bed, no drainage, no surrounding erythema or odor, dressing changed daily per Carol",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera inspection of former central line insertion site (neck)",
+    "result": "Right internal jugular site: healed, no erythema, swelling, or drainage; small residual scar",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Swallow screen - ask patient to drink a few sips of water on camera and report any coughing/choking",
+    "result": "Mild delayed cough with thin liquids; reports solid pills 'get stuck,' no stridor or overt aspiration witnessed",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Confusion Assessment Method (CAM) screening questions by phone/video",
+    "result": "No acute fluctuating inattention or disorganized thinking identified on structured CAM screening at this visit; features of delirium (acute onset, fluctuating course, inattention, disorganized thinking) not elicited. Does not rule out underlying cognitive change outside the CAM's scope.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Administer validated post-ICU psychological screening tool (e.g., IES-6)",
+    "result": "Screening tool administered; patient endorses sleep disturbance and avoidance-type items sufficient to flag a positive screen for post-ICU psychological distress, warranting formal referral for further evaluation",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "PHQ-2 depression screen",
+    "result": "Score 3/6 (little interest/pleasure 'several days' = 2, feeling down 'some days' = 1) - at standard cutoff of ≥3, warrants further depression evaluation",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "test",
+    "name": "Ask patient to weigh himself on home scale on camera",
+    "result": "Weight 79 kg today. Since hospital admission (90 kg): 11 kg loss, ~12.2% weight loss. Since hospital discharge 10 days ago (81 kg): 2 kg loss, ~2.5% weight loss.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review hospital discharge summary",
+    "result": "16-day admission, 9 days ICU, mechanical ventilation 7 days, septic shock secondary to pyelonephritis, central line and indwelling catheter removed prior to discharge, discharge diagnosis includes ICU-acquired weakness",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "See medication list artifact - no new psychiatric medications started, outpatient antibiotics completed, home PT referral pending",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review of medication administration technique with caregiver (interview/reconciliation)",
+    "result": "Carol reports crushing some pills into applesauce because 'he says they get stuck,' not confirmed safe for all formulations by pharmacy or SLP",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "vitals",
+    "name": "Review temperature if available at home",
+    "result": "Temperature 97.6F (36.4C) reported by tympanic thermometer, afebrile",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "exam",
+    "name": "Camera inspection of general skin and extremities for edema or new rash",
+    "result": "No lower extremity edema, no new rash, skin intact elsewhere; mild diffuse muscle wasting of thighs and upper arms visible",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Hospital Discharge Summary",
+    "author": "Hospital Medicine / ICU Team",
+    "date": "10 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Mr. Gary Lindstrom, 59M, admitted with septic shock secondary to acute pyelonephritis (E. coli bacteremia). Course complicated by respiratory failure requiring mechanical ventilation (7 days), vasopressor support, and ICU-acquired weakness. Central venous catheter (right IJ) and Foley catheter placed during ICU stay, both removed prior to discharge without complication. Developed a stage 2 right heel pressure injury during prolonged bed rest, being managed with daily dressing changes. Total length of stay 16 days (9 ICU, 7 floor). Completed IV then oral antibiotics for pyelonephritis (last dose 3 days prior to discharge). Discharge weight 81 kg (admission weight 90 kg). Discharged home with spouse as primary caregiver, home PT/OT referral placed, follow-up with primary care and tele-ICU nursing follow-up program arranged. Counseled family that fatigue, weakness, and emotional changes are common after critical illness."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "Primary Care / Discharge Pharmacy",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Amoxicillin-clavulanate",
+        "875-125 mg",
+        "Oral",
+        "Twice daily",
+        ""
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Once daily",
+        "Home BP medication, pre-existing"
+       ]
+      },
+      {
+       "cells": [
+        "Vitamin D3",
+        "1000 IU",
+        "Oral",
+        "Once daily",
+        ""
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Multivitamin",
+        "1 tablet",
+        "Oral",
+        "Once daily",
+        ""
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen",
+        "650 mg",
+        "Oral",
+        "As needed for pain, max 3g/day",
+        ""
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "flowsheet",
+    "title": "Home Monitoring Flowsheet - Past 7 Days",
+    "author": "Tele-ICU Remote Monitoring Program",
+    "date": "Last 7 days",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Day",
+      "SpO2 (%)",
+      "Heart Rate (bpm)",
+      "BP (mmHg)",
+      "Weight (kg)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Day 1 (3 days post-discharge)",
+        "94",
+        "98",
+        "112/68",
+        "82"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Day 3",
+        "95",
+        "94",
+        "110/66",
+        "81"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Day 5",
+        "96",
+        "92",
+        "106/62",
+        "80"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Day 7 (today)",
+        "95",
+        "96",
+        "108/64",
+        "79"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Weight Trend Since Hospital Admission",
+    "author": "Tele-ICU Remote Monitoring Program",
+    "date": "Admission to today",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Timepoint",
+     "yLabel": "Weight (kg)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "Hospital admission",
+         "y": 90
+        },
+        {
+         "x": "Hospital discharge",
+         "y": 81
+        },
+        {
+         "x": "Day 3 post-discharge",
+         "y": 82
+        },
+        {
+         "x": "Day 5 post-discharge",
+         "y": 80
+        },
+        {
+         "x": "Today (Day 10)",
+         "y": 79
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "lab_report",
+    "title": "Last Inpatient Labs Prior to Discharge",
+    "author": "Hospital Laboratory",
+    "date": "10 days ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "10.8",
+        "g/dL",
+        "13.0-17.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "White blood cell count",
+        "8.9",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.9",
+        "mg/dL",
+        "0.7-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Albumin",
+        "2.8",
+        "g/dL",
+        "3.5-5.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Prealbumin",
+        "12",
+        "mg/dL",
+        "18-45"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "C-reactive protein",
+        "18",
+        "mg/L",
+        "0-10"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Home PT/OT Referral Status",
+    "author": "Care Coordination",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "body": "Home physical therapy and occupational therapy referral placed at discharge. Status: pending insurance authorization, no visits completed yet. Estimated start within 5-7 business days. Patient has not yet been evaluated for assistive devices or formal strength/mobility assessment."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for follow-up call",
+    "chart": "Patient and wife present for scheduled post-ICU follow-up call 10 days after hospital discharge following septic shock/ICU stay",
+    "says": "The hospital folks said someone would check in on me now that I'm home. I'm doing fine, just a little lazy still.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "hospital stay length",
+    "chart": "16-day hospitalization, 9 days in ICU, for septic shock from kidney infection",
+    "says": "I was in there over two weeks, nine of those days in the ICU hooked up to all kinds of machines.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "breathing with activity",
+    "chart": "Reports dyspnea on exertion walking to barn, previously able to walk that distance without difficulty",
+    "says": "Walking out to the barn, which I used to do without even thinking about it, now I'm huffing and puffing halfway there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "getting up from chairs",
+    "chart": "Unable to rise from seated position without using arms for push-off",
+    "says": "I can't even get up out of my own recliner without pushing myself up with my arms. Never had that problem before.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Weight loss of approximately 11 kg since hospital admission",
+    "says": "My pants are falling off me. I guess I lost some weight in there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "voice changes",
+    "chart": "Hoarse voice since extubation, not improved",
+    "says": "My voice has been scratchy and rough ever since they took that breathing tube out. Carol says I sound like a different person.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "swallowing difficulty",
+    "chart": "Reports pills getting 'stuck' when swallowing; some coughing with thin liquids",
+    "says": "The pills get stuck going down sometimes. And every once in a while I'll cough on water for no reason.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "sleep disturbances",
+    "chart": "Reports recurrent vivid nightmares of being restrained/tied down since ICU stay",
+    "says": "I keep having this same dream where I'm tied down and can't move. Wakes me right up, heart pounding.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "psychosocial",
+    "topic": "talking about the hospital",
+    "chart": "Patient actively avoids discussing details of hospitalization when prompted",
+    "says": "I'd really rather not go over all that hospital stuff again if it's alright. Nothing good comes from dwelling on it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "psychosocial",
+    "topic": "memory and attention",
+    "chart": "Caregiver reports new forgetfulness and word-finding difficulty since discharge, not present before hospitalization",
+    "says": "[Carol] He forgets things I just told him five minutes ago. And he'll be talking and just lose the word, which never used to happen.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "psychosocial",
+    "topic": "mood and irritability",
+    "chart": "Caregiver reports increased irritability and snapping at family since discharge",
+    "says": "[Carol] He's snapping at me over little things. That's not him at all, he's always been easygoing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "hpi",
+    "topic": "self-assessment of condition",
+    "chart": "Patient minimizes symptoms, attributes weakness to laziness rather than illness",
+    "says": "I'm fine. I just need to quit being lazy and get back out there and work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "pmh",
+    "topic": "pre-existing conditions",
+    "chart": "History of hypertension, previously well-controlled on lisinopril 10mg daily",
+    "says": "I've had high blood pressure for years, take a little pill for it, never caused me trouble.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "current medications",
+    "chart": "Taking amoxicillin-clavulanate (completing course), lisinopril, vitamin D, multivitamin, acetaminophen PRN",
+    "says": "I'm still finishing up one antibiotic, taking my blood pressure pill, a vitamin, and Tylenol when my heel hurts.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "adherence",
+    "topic": "how pills are taken",
+    "chart": "Caregiver reports crushing some pills into applesauce due to swallowing difficulty; not yet cleared by pharmacist or speech therapist for which medications are safe to crush",
+    "says": "[Carol] Some of these pills he just can't get down whole anymore, so I've been crushing them up in applesauce.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "hpi",
+    "topic": "heel wound",
+    "chart": "Developed stage 2 heel pressure injury during ICU admission, being treated at home with daily dressing changes by caregiver",
+    "says": "I got a sore spot on my heel from laying in that bed so long. Carol's been changing the bandage every day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "hpi",
+    "topic": "heel wound trend",
+    "chart": "Caregiver reports heel wound appears smaller and less red than at discharge",
+    "says": "[Carol] It actually looks better than it did when we left the hospital, smaller and not as angry-looking.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "psh",
+    "topic": "central line site",
+    "chart": "Central venous catheter (right internal jugular) removed prior to discharge, site reportedly healed",
+    "says": "They had a line in my neck for the medicines, that came out before I left the hospital.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "fever or chills",
+    "chart": "Denies fever, chills, or sweats since discharge",
+    "says": "No, I haven't had any fevers or chills or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "chest pain",
+    "chart": "Denies chest pain or palpitations",
+    "says": "No chest pain, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies dysuria, urinary frequency, or flank pain since discharge",
+    "says": "No trouble with my waterworks since I got home, no burning or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "nutrition",
+    "topic": "appetite",
+    "chart": "Reports poor appetite since discharge, eating smaller portions than before illness",
+    "says": "I just don't have much of an appetite. Carol has to practically beg me to finish a plate.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "function",
+    "topic": "home safety and falls",
+    "chart": "Caregiver reports no falls so far but close call once when patient lost balance standing from toilet",
+    "says": "[Carol] He almost went down once getting up off the toilet, I grabbed him just in time. Hasn't actually fallen though.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "function",
+    "topic": "home therapy services",
+    "chart": "Home PT/OT referral placed at discharge but no visits completed yet, pending authorization",
+    "says": "They said someone would come to the house for therapy but nobody's been out yet.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "social",
+    "topic": "farm work status",
+    "chart": "Patient has not returned to farm duties; neighbor and adult son covering dairy chores since discharge",
+    "says": "My son and the neighbor have been doing the milking. I just watch from the porch, which about kills me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "caregiver strain",
+    "chart": "Caregiver reports feeling overwhelmed managing wound care, medications, and emotional changes without additional support yet",
+    "says": "[Carol] I'm doing my best but I'm tired too. Nobody's really checked in on how I'm holding up.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "hallucinations currently",
+    "chart": "Denies current visual or auditory hallucinations; nightmares occur only during sleep",
+    "says": "No, I don't see or hear things that aren't there when I'm awake. It's just the dreams.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports occasional beer, 1-2 per week, no change from baseline, no history of withdrawal symptoms during hospitalization",
+    "says": "I'll have a beer or two on the weekend, same as always. Never been a big drinker.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f29",
+    "category": "family",
+    "topic": "family history",
+    "chart": "Father had history of heart disease, no family history of early dementia or psychiatric illness noted",
+    "says": "My dad had heart trouble later in life, but nobody in the family's had memory problems or anything like that young.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "hearing changes",
+    "chart": "No reported hearing changes; patient denies tinnitus or hearing loss",
+    "says": "My hearing's fine, same as always.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "goals",
+    "topic": "patient's goals",
+    "chart": "Patient's stated goal is to return to full farm work as soon as possible",
+    "says": "I just want to get back to normal and pull my weight on the farm again.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "willingness to discuss emotional symptoms",
+    "chart": "Patient initially reluctant to discuss psychological symptoms, becomes more open when rapport established and normalized as common post-ICU experience",
+    "says": "I didn't think this stuff was something you'd even want to hear about. Didn't seem like a 'medical' thing.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f33",
+    "category": "other",
+    "topic": "understanding of weakness cause",
+    "chart": "Patient unaware that profound weakness after critical illness is a recognized medical condition (ICU-acquired weakness) rather than personal failing",
+    "says": "Nobody told me being this weak was an actual 'thing.' I figured it was just me not trying hard enough.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize and screen for the three domains of post-intensive care syndrome (physical, cognitive, psychological) in a patient and caregiver.",
+    "factIds": [
+     "f4",
+     "f8",
+     "f11"
+    ],
+    "actionIds": [
+     "a4",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Perform remote functional and swallow screening appropriate to tele-ICU follow-up scope and identify findings warranting referral.",
+    "factIds": [
+     "f4",
+     "f7"
+    ],
+    "actionIds": [
+     "a4",
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Inspect healing wounds and prior device sites via camera and correlate with trend data to assess for deterioration versus expected healing.",
+    "factIds": [
+     "f16",
+     "f17",
+     "f18"
+    ],
+    "actionIds": [
+     "a5",
+     "a6"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify a patient-caregiver mismatch between reported medication adherence and actual pill administration technique, and escalate appropriately to pharmacy/speech therapy rather than acting outside scope.",
+    "factIds": [
+     "f15"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess caregiver burden and safety concerns (near-fall, caregiver fatigue) and determine when escalation or resource connection is needed.",
+    "factIds": [
+     "f23",
+     "f26"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Synthesize findings into an SBAR communication for escalation to the primary care/rehabilitation team, recognizing this falls within tele-ICU nursing scope rather than diagnosing or prescribing.",
+    "factIds": [
+     "f24",
+     "f33"
+    ],
+    "actionIds": [
+     "a12",
+     "a13"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Post-intensive care syndrome (PICS) encompassing physical (ICU-acquired weakness, dysphagia, dysphonia, weight loss), cognitive (new memory/word-finding difficulty), and psychological (nightmares, avoidance, irritability) domains, with associated caregiver strain, 10 days after a 16-day hospitalization (9 ICU days, mechanical ventilation) for septic shock from pyelonephritis.",
+   "differential": [
+    "Post-intensive care syndrome (PICS) - physical, cognitive, and psychological domains (most consistent with full picture)",
+    "ICU-acquired weakness / critical illness myopathy-neuropathy as isolated physical contributor",
+    "Post-extubation dysphagia and laryngeal injury contributing to voice change and swallowing difficulty",
+    "Recurrent or unresolved infection (less likely given afebrile, benign wound, no urinary symptoms, improving trend)",
+    "Major depressive disorder or PTSD as primary psychiatric diagnosis (possible but insufficiently characterized at this screening visit; needs formal evaluation)",
+    "Early dementia or other primary cognitive disorder (less likely given temporal onset tightly linked to critical illness and no prior family history)"
+   ],
+   "keyFindings": [
+    "Cannot rise from chair without using arms; visible muscle wasting - functional/physical PICS",
+    "11 kg weight loss since admission with low albumin/prealbumin on last labs - malnutrition/catabolism from critical illness",
+    "Hoarse voice and pills 'getting stuck' with mild cough on thin liquids - post-extubation dysphagia/dysphonia risk, aspiration risk",
+    "Recurrent nightmares of being restrained, avoidance of discussing hospitalization - psychological PICS symptoms",
+    "New short-term memory lapses and word-finding difficulty per caregiver - cognitive PICS",
+    "Caregiver reports near-fall and her own fatigue/overwhelm - safety and caregiver strain",
+    "Heel pressure injury improving, former central line site healed - no acute wound concern",
+    "Home PT/OT referral placed but not yet started - gap in care needing escalation",
+    "Mismatch: caregiver crushing pills into applesauce without pharmacy/SLP clearance despite patient reporting he is just 'taking his pills as given'"
+   ],
+   "plan": [
+    "Document findings using nursing note + SBAR and escalate to primary care provider and rehabilitation/care coordination team today given multiple PICS domains affected and pending unmet PT/OT referral",
+    "Recommend formal swallow evaluation by speech-language pathology given dysphonia, pill-sticking sensation, and cough with thin liquids before continuing to crush medications",
+    "Request pharmacist review of which medications are safe to crush/alternative formulations rather than empiric crushing by caregiver",
+    "Refer for formal psychological/mental health evaluation given nightmares, avoidance, and caregiver-observed irritability consistent with possible post-ICU psychological distress or PTSD",
+    "Refer for formal cognitive screening (e.g., via primary care or neuropsychology) given caregiver-reported new memory and word-finding changes",
+    "Expedite home PT/OT start given documented fall risk (near-fall episode) and inability to rise from chair without arm support; flag to care coordination",
+    "Continue heel wound daily dressing changes as current trajectory is improving; no change needed at this time but continue monitoring",
+    "Assess and offer support resources for caregiver (Carol), including respite or caregiver support services, and validate her observations as clinically important",
+    "Continue home vital sign and weight monitoring via remote program; set parameters for when to escalate (e.g., SpO2 <92%, new fever, wound changes)",
+    "Educate patient and caregiver that these symptoms represent a recognized condition after critical illness (PICS) rather than personal failing or laziness, to support engagement with referrals"
+   ],
+   "redFlags": [
+    "Any oxygen saturation drop below 92% or new/worsening dyspnea at rest would warrant urgent escalation to provider",
+    "New fever, increasing redness/drainage/odor from heel wound would suggest wound infection requiring prompt evaluation",
+    "Overt choking, stridor, or witnessed aspiration during swallow screen would require emergent escalation and NPO precautions pending SLP evaluation",
+    "Expressed thoughts of self-harm or hopelessness would require immediate escalation to mental health crisis resources",
+    "A witnessed fall or acute confusion/fluctuating attention (positive CAM) would require urgent same-day provider contact to rule out delirium or acute medical change"
+   ],
+   "educationPoints": [
+    "Post-intensive care syndrome affects survivors across physical, cognitive, and psychological domains and commonly persists for weeks to months after discharge",
+    "Weakness after critical illness is a recognized medical phenomenon (ICU-acquired weakness/critical illness myopathy), not a matter of willpower or laziness, and patients benefit from hearing this framed explicitly",
+    "Post-extubation dysphagia and voice changes are common after prolonged intubation and warrant formal swallow evaluation before caregivers adjust medication administration on their own",
+    "Caregivers of ICU survivors experience significant strain and benefit from being asked directly about their own wellbeing, not just the patient's",
+    "Tele-ICU/post-ICU nursing follow-up role is to screen, monitor trends, support family, and escalate findings to the appropriate prescribing or specialist team rather than to diagnose or treat independently"
+   ]
+  },
+  "patient": {
+   "name": "Gary Lindstrom",
+   "age": 59,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "White",
+   "occupation": "Dairy farmer",
+   "language": "English",
+   "appearance": "A thin-framed man who appears older than his stated age, with close-cropped gray hair and visible temporal and limb muscle wasting under a loose flannel shirt. He is seated in a recliner in a modestly furnished farmhouse living room, posture slightly slumped, speaking in a hoarse, raspy voice; his wife Carol sits close beside him, occasionally touching his arm, with worried eyes and ready to add detail he leaves out."
+  },
+  "persona": {
+   "personality": "Stoic, self-reliant, and used to pushing through physical discomfort; takes pride in being the one who works hard and provides, which makes acknowledging weakness or emotional distress uncomfortable for him.",
+   "communicationStyle": "Brief and matter-of-fact about physical symptoms, deflects or minimizes with humor or self-criticism ('just lazy'), becomes quieter and more guarded when hospital experience or emotions come up; warms up with patience and normalization.",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly calm and a bit embarrassed about needing help, but shows flashes of frustration and sadness when his limitations or nightmares come up; defers emotional topics to his wife initially.",
+   "background": "Has run the family dairy farm for over 30 years alongside his wife Carol and, more recently, their adult son. Farm work has always been physically demanding and a core part of his identity; he has rarely been sick or hospitalized before this illness. Enjoys woodworking in the winter months and helping coach his grandson's youth hockey team.",
+   "speechExamples": [
+    "I'm fine, just being lazy, that's all.",
+    "Carol, tell them what you told me about the forgetting thing.",
+    "I'd rather not go back over all that hospital business if we can help it.",
+    "Walking out to the barn about does me in these days.",
+    "Didn't know being this wore out was an actual medical thing."
+   ],
+   "concerns": [
+    "Wants to know when he can get back to full farm work and milking",
+    "Worried he is being a burden on his wife and son",
+    "Embarrassed about needing help getting up from chairs",
+    "Hasn't connected his nightmares and irritability to the hospitalization until prompted"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a tele-ICU/post-ICU follow-up nurse conducting a scheduled video visit with Gary Lindstrom, 59, who was discharged home 10 days ago after a 16-day hospitalization (9 days in the ICU on a ventilator) for septic shock from a kidney infection. His wife Carol will be present. Review the available home monitoring data and hospital discharge summary before the call. Your goals are to assess his recovery, screen for common post-ICU complications, support the family, and determine whether escalation is needed.",
+   "chiefComplaint": "Scheduled post-ICU follow-up visit for recovery after septic shock and prolonged ICU stay",
+   "openingLine": "Hi there, thanks for calling. I'm doing fine, just a little lazy still since I got home. My wife Carol's here with me too.",
+   "tasks": [
+    "Take a systematic history covering physical, cognitive, and psychological recovery since discharge",
+    "Perform feasible remote examination and review available monitoring data",
+    "Review the medication list and administration technique with the patient and caregiver",
+    "Assess caregiver wellbeing and home safety",
+    "Summarize your findings and formulate a plan including any referrals or escalation needed"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Scheduled tele-ICU post-ICU follow-up, 10 days post-discharge"
+   },
+   {
+    "label": "Problem list",
+    "value": "Septic shock (resolved, recent), ICU-acquired weakness, acute kidney infection (pyelonephritis, treated), stage 2 right heel pressure injury (healing), hypertension (pre-existing, stable), status post mechanical ventilation and central line removal"
+   },
+   {
+    "label": "Medications",
+    "value": "Amoxicillin-clavulanate 875-125mg PO BID (completing course), Lisinopril 10mg PO daily, Vitamin D3 1000 IU PO daily, Multivitamin PO daily, Acetaminophen 650mg PO PRN pain"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "SpO2 95% RA, HR 96, BP 108/64, Temp 97.6F, RR 22, Weight 79 kg (recorded today via home monitoring)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per hospital record; influenza and pneumococcal vaccines given during admission"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider, tele-ICU post-ICU follow-up nursing program, home PT/OT (referral pending), care coordination"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f15",
+    "artifactId": "d2",
+    "patientClaim": "Carol states she has been crushing some of his pills into applesauce because he has trouble swallowing them whole, believing this is a safe workaround for his medication regimen.",
+    "recordEvidence": "The medication list (d2) does not indicate any medications as 'may crush' or 'do not crush,' and there is no pharmacist or SLP note clearing specific formulations for crushing; some combination antibiotics and certain formulations may have altered absorption or taste/safety issues when crushed.",
+    "teachingPoint": "Caregivers often develop practical workarounds for medication administration difficulties without realizing not all medications are safe to crush; this requires pharmacist and speech-language pathology input rather than independent caregiver modification, and the nurse should flag this gap rather than assume safety."
+   },
+   {
+    "id": "m2",
+    "factId": "f12",
+    "artifactId": "d1",
+    "patientClaim": "Patient attributes his profound weakness and inability to rise from a chair to simply 'being lazy' and not trying hard enough.",
+    "recordEvidence": "The hospital discharge summary (d1) explicitly documents ICU-acquired weakness as a discharge diagnosis and notes the care team counseled the family that weakness and fatigue are common and expected after critical illness.",
+    "teachingPoint": "Patients frequently internalize post-ICU physical limitations as personal failure despite the medical record clearly documenting a recognized clinical syndrome (ICU-acquired weakness); part of the nursing role is to reframe this compassionately using information already given to the family at discharge."
+   }
+  ],
+  "professions": [
+   "critical-care-nursing"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "difficulty": 3,
+  "variants": [],
+  "title": "Post-ICU syndrome after prolonged mechanical ventilation for septic shock in a 59-year-old farmer",
+  "summary": "A 59-year-old dairy farmer presents 10 days post-discharge after 16-day hospitalization (9 days ICU, mechanical ventilation) for septic shock from pyelonephritis. He exhibits physical (ICU-acquired weakness, dysphagia, dysphonia, weight loss), cognitive (memory impairment), and psychological (nightmares, avoidance, irritability) features of post-intensive care syndrome, with caregiver strain. The case teaches systematic remote screening for PICS domains, tele-assessment techniques (functional testing, wound inspection, swallow screen), recognition of scope boundaries, and structured escalation using SBAR.",
+  "specialty": "Critical Care Nursing",
+  "setting": "Telehealth video visit; patient's farmhouse living room in central Wisconsin",
+  "encounterType": "Post-ICU follow-up"
+ }
+}

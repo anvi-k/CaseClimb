@@ -1,0 +1,794 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "exam",
+    "name": "Guided camera inspection of plantar lesion (close-up, good lighting)",
+    "result": "Left plantar heel/midfoot: single pigmented macule/patch ~11 mm, irregular asymmetric border, variegated brown-black to tan color. On close review of the submitted photos, pigment appears to track along the skin ridges rather than the furrows between them (parallel ridge pattern) - a pattern favoring melanoma over a benign acral nevus, though in-person dermoscopy is required for definitive distinction. No surface ulceration, bleeding, or satellite lesions visible on this image.",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "ABCDE assessment from photographs",
+    "result": "Asymmetry present; Border irregular/notched; Color variegated (two shades brown-black); Diameter ~11 mm; Evolving per patient report (growth over ~12 months). Meets multiple ABCDE criteria.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Request additional photos: close-up with ruler/coin for scale, oblique lighting, and dermatoscope-free macro shot",
+    "result": "Patient submits additional images; lesion measures approximately 11 x 9 mm using coin for scale; borders remain irregular; no change in color pattern noted between images taken 2 weeks apart.",
+    "importance": "important",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Guided camera survey of total body skin (arms, legs, trunk, scalp part lines) for other pigmented lesions",
+    "result": "No other atypical pigmented lesions identified on patient-performed survey; several scattered benign-appearing seborrheic-type and nevus lesions on trunk, none concerning by patient description and camera review; limited by lighting and patient's inability to visualize own back fully.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Inspect regional area for satellite lesions or in-transit nodules on left foot/ankle (patient self-palpation)",
+    "result": "No palpable nodules, no satellite pigmentation, no ulceration reported or visualized on left foot or ankle.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Guided self-palpation of inguinal and popliteal lymph node regions",
+    "result": "Patient reports no palpable lumps or tenderness in left groin or behind left knee.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Camera inspection of neck lesions (razor bumps)",
+    "result": "Multiple small (1-3 mm) firm hyperpigmented papules along the anterior and lateral neck in the beard-adjacent shave area, some with visible curled hairs; no pustules, no active drainage, no scarring plaques. Consistent with pseudofolliculitis barbae.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review prior dermatology or primary care notes for this lesion",
+    "result": "No prior dermatology visit on file. Primary care note from 8 months ago documents 'callus, left foot' with no biopsy or photography performed.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review family history documentation",
+    "result": "No first- or second-degree relatives with melanoma or other skin cancer per patient-reported history on file.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review medication list",
+    "result": "No current prescription medications; occasional ibuprofen for muscle soreness.",
+    "importance": "minor",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "test",
+    "name": "Home ruler/tape measurement of lesion size with photo documentation",
+    "result": "Lesion measures 11 mm in greatest diameter by patient's own ruler measurement, correlating with submitted image.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "lab",
+    "name": "Review most recent complete blood count (baseline, from annual physical)",
+    "result": "WBC 6.1 x10^9/L (ref 4.0-11.0), Hgb 14.8 g/dL (ref 13.5-17.5), Platelets 240 x10^9/L (ref 150-400) — all within normal limits.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "exam",
+    "name": "Camera inspection of all 20 nails (fingers and toes) for pigmented streaks",
+    "result": "No longitudinal melanonychia or periungual pigmentation (Hutchinson sign) seen on any digit, including left great toe.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Overall teledermatology risk stratification and triage decision",
+    "result": "Lesion is high-risk for acral lentiginous melanoma based on history (growth over 1 year), morphology (ABCDE-positive, parallel ridge pattern on photo), and acral location in a patient with deeply pigmented skin. Cannot be excluded or confirmed without in-person dermoscopy and tissue biopsy. Urgent in-person referral indicated within 2 weeks; teledermatology alone is insufficient for definitive diagnosis.",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "Patient-submitted photographs: left plantar lesion",
+    "author": "Patient-submitted via patient portal",
+    "date": "Today, pre-visit upload",
+    "body": "Three images uploaded by patient: (1) wide shot of left sole showing lesion location on weight-bearing heel/midfoot transition; (2) close-up showing irregular border and two-tone brown-black pigmentation, estimated 11 mm; (3) image with coin placed for scale confirming ~11 x 9 mm size. No measurement or pattern interpretation documented at time of upload.",
+    "release": {
+     "when": "start"
+    }
+   },
+   {
+    "id": "d2",
+    "type": "imaging",
+    "title": "Patient-submitted photograph: neck lesions",
+    "author": "Patient-submitted via patient portal",
+    "date": "Today, pre-visit upload",
+    "body": "Close-up image of anterior/lateral neck shave area showing multiple small hyperpigmented firm papules, several with visible ingrown curled hairs. No pustules or scarring noted.",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    }
+   },
+   {
+    "id": "d3",
+    "type": "note",
+    "title": "Primary care visit note (8 months ago)",
+    "author": "Dr. R. Patel, Internal Medicine",
+    "date": "8 months ago",
+    "body": "35-year-old male presents for annual physical. Reports a 'rough dark spot' on left foot sole, attributed to callus/friction from running. No photograph taken, no measurement documented. Advised moisturizing cream and comfortable footwear. No referral made. Patient instructed to follow up if it changes.",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    }
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current medications",
+    "author": "EHR medication reconciliation",
+    "date": "Updated today",
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ibuprofen",
+        "200 mg",
+        "Oral",
+        "As needed, muscle soreness"
+       ]
+      }
+     ]
+    },
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    }
+   },
+   {
+    "id": "d5",
+    "type": "lab_report",
+    "title": "Complete blood count (annual physical, 8 months ago)",
+    "author": "Quest Diagnostics",
+    "date": "8 months ago",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "6.1",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "14.8",
+        "g/dL",
+        "13.5-17.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "240",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": ""
+      }
+     ]
+    },
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    }
+   },
+   {
+    "id": "d6",
+    "type": "chart",
+    "title": "Lesion size over time (per patient report and photographs)",
+    "author": "Compiled from patient history and photo review",
+    "date": "Today",
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time",
+     "yLabel": "Longest diameter (mm)",
+     "series": [
+      {
+       "name": "Left plantar lesion",
+       "points": [
+        {
+         "x": "~12 months ago (first noticed)",
+         "y": 5
+        },
+        {
+         "x": "8 months ago (PCP visit)",
+         "y": 6
+        },
+        {
+         "x": "~3 months ago",
+         "y": 7
+        },
+        {
+         "x": "Today",
+         "y": 11
+        }
+       ]
+      }
+     ]
+    },
+    "release": {
+     "when": "fact",
+     "ref": "f5"
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "New skin lesion evaluation - pigmented lesion on left foot, by video with photographs"
+   },
+   {
+    "label": "Problem list",
+    "value": "None documented"
+   },
+   {
+    "label": "Medications",
+    "value": "Ibuprofen 200 mg PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 118/76, HR 72, Temp 98.2 F, documented 8 months ago at annual physical"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per employee health records (works in pediatric unit)"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. R. Patel, Internal Medicine; no prior dermatology visits"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable, outpatient)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "diagnostic interview / new lesion evaluation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "foot spot",
+    "chart": "Patient reports a dark patch on left sole, present approximately 1 year, recently grown",
+    "says": "I've got this dark spot on the bottom of my left foot. It's been there about a year but it seems bigger now, so I wanted to get it checked.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "lesion location",
+    "chart": "Lesion located on left plantar heel/midfoot, weight-bearing area",
+    "says": "It's right on the bottom, kind of where my heel meets the middle of my foot - right where I'd put weight when I run.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "lesion appearance",
+    "chart": "Patient describes irregular shape with two shades of brown-black color",
+    "says": "It's not just one solid color - there's a darker brown part and almost black part, and the edges aren't a neat circle, kind of jagged.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "symptom quality",
+    "chart": "No pain, itching, bleeding, or ulceration reported at lesion site",
+    "says": "It doesn't hurt or itch or anything. It's never bled or opened up. Honestly if it didn't look weird I'd never have noticed it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "size change over time",
+    "chart": "Patient estimates lesion grew from ~5mm when first noticed to ~11mm currently over 12 months",
+    "says": "When I first saw it maybe a year ago it was tiny, like the size of a pencil eraser. Now it's noticeably bigger, almost half an inch.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "prior opinion about lesion",
+    "chart": "A colleague suggested the lesion was likely a plantar wart or exercise-related bruise",
+    "says": "One of the nurses I work with took a look and said it's probably just a wart, or maybe a bruise from all my running. That made me feel better for a while.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "trauma history",
+    "chart": "No specific recalled trauma or injury to the area preceding lesion onset",
+    "says": "I didn't stub my toe or drop anything on it that I remember. I run a few times a week but no specific injury.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "other new spots",
+    "chart": "No other new or changing pigmented lesions elsewhere on body per patient report",
+    "says": "I haven't noticed anything like this anywhere else - just the one spot on my foot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "nail changes",
+    "chart": "No pigmented nail streaks or nail changes reported",
+    "says": "My nails look normal to me, no dark lines or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "family",
+    "topic": "family skin cancer history",
+    "chart": "No known family history of melanoma or other skin cancer",
+    "says": "Nobody in my family has had skin cancer that I know of - not my parents, not my siblings.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "pmh",
+    "topic": "sun sensitivity",
+    "chart": "Patient reports he does not sunburn and has never had a severe sunburn",
+    "says": "I don't really burn in the sun. Growing up in Nigeria I was outside all the time and never burned.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "pmh",
+    "topic": "prior skin cancer",
+    "chart": "No personal history of skin cancer or prior biopsies",
+    "says": "I've never had any skin cancer or biopsies before, this is new for me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works as a pediatric nurse, Dallas",
+    "says": "I work as a nurse on the pediatric floor at a hospital here in Dallas.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "social",
+    "topic": "exercise habits",
+    "chart": "Runs several times weekly, often outdoors, usually in athletic shoes",
+    "says": "I try to run three or four times a week, mostly outside in the evenings when it's cooler.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "social",
+    "topic": "footwear",
+    "chart": "Wears closed athletic shoes for running, no history of barefoot walking on abrasive surfaces",
+    "says": "I always wear running shoes, never go barefoot outside.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f16",
+    "category": "hpi",
+    "topic": "lesion washing/scraping",
+    "chart": "Patient has not attempted to scrape, pare, or treat the lesion at home",
+    "says": "I haven't tried to file it down or put anything on it. I just leave it alone.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "systemic symptoms",
+    "chart": "Denies unintentional weight loss, fatigue, fever, or night sweats",
+    "says": "I feel fine otherwise - no weight loss, no fevers, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "lymph node swelling",
+    "chart": "Denies noticing any lumps in groin, behind knee, or elsewhere",
+    "says": "I haven't felt any lumps anywhere, not in my groin or behind my knee.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "psychosocial",
+    "topic": "worry about bothering specialist",
+    "chart": "Patient expresses mild embarrassment about seeking specialist care for what he fears might be minor",
+    "says": "I feel a little silly taking up your time with this - I know you probably see much more serious things.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "psychosocial",
+    "topic": "health literacy",
+    "chart": "Patient has moderate-to-high health literacy as a nurse but limited dermatology-specific knowledge",
+    "says": "I know medical stuff from my nursing job but skin conditions aren't really my area.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "goals",
+    "topic": "patient's main question",
+    "chart": "Patient wants to know if the lesion is dangerous and whether it can be managed without an in-person visit",
+    "says": "I guess what I really want to know is - is this something serious, and can we handle it over video, or do I need to come in somewhere?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f22",
+    "category": "chief_complaint",
+    "topic": "neck bumps",
+    "chart": "Patient also reports chronic small bumps on neck related to shaving, wants advice",
+    "says": "While I have you, I've also got these little bumps on my neck from shaving that bother me sometimes - any tips for those?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "hpi",
+    "topic": "neck bump history",
+    "chart": "Neck papules present for several years, worse with shaving against the grain, no drainage or significant pain",
+    "says": "I've had those bumps for years, ever since I started shaving regularly. They get worse if I shave too close.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "hpi",
+    "topic": "neck bump treatment attempts",
+    "chart": "Has tried shaving less frequently and using electric razor with partial improvement",
+    "says": "I switched to an electric razor sometimes and that helps a little, but they never fully go away.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "pmh",
+    "topic": "immunosuppression history",
+    "chart": "No history of immunosuppression, organ transplant, or chronic immunosuppressive medication use",
+    "says": "I'm not on any medications like that, no transplant or anything.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "I'm not allergic to any medications that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "substance",
+    "topic": "tobacco and alcohol use",
+    "chart": "Denies tobacco use; drinks alcohol occasionally, 1-2 drinks per month",
+    "says": "I don't smoke. I'll have a drink occasionally, maybe once or twice a month.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "primary care discussion of lesion",
+    "chart": "Patient recalls mentioning the foot spot to his primary care doctor at his last physical and was told it was likely a callus",
+    "says": "Actually I did mention it to my regular doctor at my check-up a while back. She said it looked like a callus from running and gave me some cream for dry skin.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f29",
+    "category": "hpi",
+    "topic": "reason for seeking care now",
+    "chart": "Patient sought dermatology evaluation now because the lesion appeared visibly larger and darker over the past 2-3 months",
+    "says": "The last couple months it just seemed to get noticeably bigger and darker, and that's what finally pushed me to ask for a specialist visit.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "function",
+    "topic": "impact on daily activity",
+    "chart": "No functional limitation from lesion; no change in gait or ability to run",
+    "says": "It hasn't stopped me from running or walking normally, it's just the look of it that worries me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "ros",
+    "topic": "other skin conditions",
+    "chart": "No history of psoriasis, eczema, or other chronic skin disease",
+    "says": "Other than the shaving bumps, I haven't had other skin problems like psoriasis or eczema.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "nutrition",
+    "topic": "vitamin D or diet",
+    "chart": "No specific dietary concerns relevant to skin; takes a daily multivitamin",
+    "says": "I take a regular multivitamin every morning, nothing special.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f28",
+    "artifactId": "d3",
+    "patientClaim": "Patient recalls his primary care doctor examined the spot and called it a callus, giving him cream, without raising concern.",
+    "recordEvidence": "Primary care note from 8 months ago documents the lesion as 'callus, left foot' per patient's own description, with no photograph, no measurement, and no referral - confirming the lesion was underassessed rather than properly ruled out.",
+    "teachingPoint": "A benign-sounding label in the chart does not equal an adequate evaluation; acral pigmented lesions require photographic documentation, measurement, and a low threshold for referral, especially in patients with deeply pigmented skin where melanoma is often diagnosed late and at acral sites."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete lesion history including onset, change over time, and prior reassurance that delayed care-seeking.",
+    "factIds": [
+     "f1",
+     "f5",
+     "f6",
+     "f28",
+     "f29"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Apply ABCDE criteria and recognize acral lentiginous melanoma risk features (parallel ridge pattern, acral site, growth) using submitted photographs despite the limits of teledermatology.",
+    "factIds": [
+     "f3",
+     "f5"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Perform a camera-guided regional and total-body skin survey to screen for satellite lesions, additional atypical nevi, and nodal spread within the limits of a remote exam.",
+    "factIds": [
+     "f8",
+     "f9",
+     "f18"
+    ],
+    "actionIds": [
+     "a4",
+     "a5",
+     "a6",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify a mismatch between patient-reported reassurance from primary care and the actual documentation, and use it to reinforce the need for urgent in-person biopsy.",
+    "factIds": [
+     "f28"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Correctly triage a high-risk pigmented acral lesion to urgent in-person dermoscopy and biopsy within two weeks, recognizing this is outside the scope of definitive diagnosis by telehealth alone.",
+    "factIds": [
+     "f21"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Separately address the patient's secondary concern (pseudofolliculitis barbae) with appropriate camera exam and conservative counseling, without letting it distract from the urgent primary issue.",
+    "factIds": [
+     "f22",
+     "f23",
+     "f24"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Oluwaseun \"Seun\" Bello",
+   "age": 35,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Nigerian-born, Black African",
+   "occupation": "Pediatric nurse",
+   "language": "English",
+   "appearance": "Seun appears as a fit man in his mid-30s with deeply pigmented skin, short closely-cropped hair, wearing navy scrub top, seated at a small desk in what looks like a home office with a bookshelf visible behind him. Lighting is good and even; he leans slightly toward the camera when showing his foot, and his affect is calm and attentive, with an occasional apologetic smile.",
+   "portrait": "/portraits/dermatology-seun-bello-foot-lesion.jpg"
+  },
+  "persona": {
+   "personality": "Calm, polite, and slightly self-effacing; approaches his own health the way he approaches patient care at work - methodical and matter-of-fact, but visibly anxious underneath about what the lesion could mean.",
+   "communicationStyle": "Clear, organized historian who uses some medical vocabulary from his nursing background but checks himself and clarifies in plain language; apologizes for 'taking up time.'",
+   "healthLiteracy": "high",
+   "emotionalState": "Outwardly composed but with an undercurrent of worry; relieved to finally be evaluated by a specialist after being told it was likely benign.",
+   "background": "Moved to the United States from Lagos, Nigeria for nursing school eight years ago and has worked the past five years on a pediatric unit in Dallas. Enjoys long-distance running and volunteers at a weekend community health fair. Married with one young daughter; active in his church community.",
+   "speechExamples": [
+    "I know this might be nothing, but it's been bugging me so I figured I'd finally get it looked at.",
+    "I work with kids all day so I'm used to looking for things that are 'off' - this just seemed off.",
+    "Sorry if this is a silly question, but could this just be from running?",
+    "I don't want to waste your time if it's nothing serious."
+   ],
+   "concerns": [
+    "Whether the foot lesion could be skin cancer",
+    "Whether he waited too long to get it checked",
+    "Whether this can be fully resolved through telehealth or requires an in-person visit",
+    "Simple ways to manage the razor bumps on his neck"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dermatology resident on a telehealth video visit with Oluwaseun 'Seun' Bello, a 35-year-old pediatric nurse, who has submitted photographs of a pigmented lesion on his left foot sole and a secondary concern about neck bumps. Review his history and the submitted images to determine next steps.",
+   "chiefComplaint": "Dark, enlarging pigmented lesion on the sole of the left foot, present about one year",
+   "openingLine": "Hi, thanks for seeing me - I've got this dark spot on the bottom of my left foot that's been there about a year, and it seems like it's gotten bigger, so I wanted to get it checked out.",
+   "tasks": [
+    "Take a focused history of the foot lesion including timeline, changes, and any prior evaluations",
+    "Guide the patient through a camera-based examination of the lesion and perform a relevant skin examination",
+    "Review the medical record and reconcile any documentation with the patient's history",
+    "Formulate and communicate an appropriate management plan",
+    "Address the patient's secondary concern about the neck bumps"
+   ],
+   "timeLimitMin": 22
+  },
+  "answerKey": {
+   "primaryProblem": "Pigmented lesion on left plantar heel/midfoot highly suspicious for acral lentiginous melanoma - requires urgent in-person dermoscopy and biopsy; cannot be diagnosed or excluded via telehealth alone.",
+   "differential": [
+    "Acral lentiginous melanoma (leading concern given growth, ABCDE features, parallel ridge pattern on exam, acral site, patient demographic)",
+    "Benign acral nevus (possible but less likely given documented growth and irregular morphology)",
+    "Subungual/plantar hematoma (less likely - no trauma history, lesion has persisted and grown over a year rather than resolving)",
+    "Verruca (plantar wart) with secondary pigmentation (raised by colleague, but lacks typical verrucous surface change and does not explain the pigment pattern)",
+    "Talon noir (black heel) - typically resolves over weeks as skin exfoliates, inconsistent with a year of persistence and growth; the classic bedside paring test to confirm blood vs. melanin is not possible by telehealth, another reason this lesion cannot be excluded remotely"
+   ],
+   "keyFindings": [
+    "11 mm pigmented plantar lesion with irregular border and two-tone brown-black coloration",
+    "Documented growth from ~5mm to ~11mm over approximately 12 months",
+    "On dermatologist review of photographs, pigment pattern appears to follow skin ridges (parallel ridge pattern), a feature favoring melanoma",
+    "No satellite lesions, no palpable regional lymphadenopathy, no nail pigment changes on remote exam",
+    "Prior primary care documentation labeled the lesion 'callus' without photography, measurement, or referral - inadequate prior evaluation",
+    "No personal or family history of melanoma; patient reports no sunburn history, consistent with the fact that acral melanoma arises independent of UV exposure"
+   ],
+   "plan": [
+    "Urgent in-person dermatology referral within 2 weeks for dermoscopic examination and excisional or punch biopsy of the plantar lesion",
+    "Counsel patient explicitly that teledermatology cannot rule in or rule out melanoma for this lesion and that photographs, while helpful, are not a substitute for in-person tissue diagnosis",
+    "Advise patient to avoid attempting to pare, shave, or otherwise disturb the lesion before biopsy",
+    "Document and communicate the discrepancy between the benign 'callus' label in the primary care note and the current concerning features, reinforcing the need for definitive histology",
+    "Provide brief conservative guidance for pseudofolliculitis barbae (reduce shave frequency, consider single-blade or electric razor, shave with the grain, warm compress, avoid tight close shaving) and offer dermatology follow-up or topical options if it does not improve, without this detracting from the urgent primary issue",
+    "Arrange safety-net follow-up to confirm the patient was successfully scheduled for in-person biopsy and to review results once available"
+   ],
+   "redFlags": [
+    "Documented lesion growth over 12 months on an acral, non-sun-exposed site in a patient with deeply pigmented skin - classic high-risk pattern for delayed melanoma diagnosis",
+    "Irregular border and color variegation (ABCDE-positive)",
+    "Parallel ridge pattern identified by dermatologist on photograph review",
+    "Prior clinical encounter mislabeling the lesion as benign without appropriate documentation or referral"
+   ],
+   "educationPoints": [
+    "Melanoma in patients with deeply pigmented skin disproportionately arises at acral and mucosal sites (palms, soles, nail units) rather than sun-exposed areas, and is frequently diagnosed at a more advanced stage due to delayed recognition by patients and clinicians.",
+    "The parallel ridge pattern on acral dermoscopy (pigment following the ridges rather than the furrows) is a feature associated with acral melanoma, as opposed to the parallel furrow or lattice patterns seen in benign acral nevi; definitive distinction still requires in-person dermoscopy and histology - this pattern should be actively assessed by the examiner on photo review rather than assumed from the images alone.",
+    "Teledermatology has real limits for pigmented acral lesions: photograph quality, lack of true dermoscopy, inability to palpate or biopsy remotely, and inability to perform bedside tests such as the paring test for talon noir mean any lesion with concerning growth or morphology warrants in-person referral rather than reassurance by video alone.",
+    "A benign label in a prior chart note (e.g., 'callus') does not substitute for proper documentation (photography, measurement) or an adequate risk assessment, and should not anchor the current evaluation.",
+    "Pseudofolliculitis barbae is a separate, common, benign condition best managed conservatively and should be addressed without diverting attention or urgency from a potentially life-threatening lesion."
+   ]
+  },
+  "title": "Enlarging Pigmented Plantar Lesion in a Patient with Skin of Colour: Recognizing Acral Melanoma by Telehealth",
+  "summary": "A 35-year-old Nigerian-born nurse presents by video with a growing, irregularly bordered, two-toned pigmented lesion on his left sole that a colleague and his primary care physician previously dismissed as a wart or callus. The case teaches recognition of acral lentiginous melanoma risk features in deeply pigmented skin, the limits of teledermatology for definitive diagnosis, and appropriate urgent in-person triage, while also addressing a benign secondary complaint (pseudofolliculitis barbae) within scope.",
+  "specialty": "Dermatology",
+  "setting": "Telehealth video visit, patient at home in Dallas, Texas, using a laptop camera with photographs pre-submitted via patient portal",
+  "professions": [
+   "dermatology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}
