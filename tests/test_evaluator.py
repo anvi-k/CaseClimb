@@ -385,3 +385,50 @@ def test_committed_sample_outputs_are_current():
         committed = json.loads((EXAMPLES / "output" / name).read_text())
         assert committed == document, f"{name} is stale; run scripts/build_sample_outputs.py"
         validate(committed, "debrief_result")
+
+
+def _schema(record):
+    return grade_schema(load_rubric(), record["learning_objectives"], record["discrepancies"], None, None)
+
+
+def test_json_reply_is_parsed_out_of_fences_and_checked(record, raw):
+    from evaluator.llm import parse_json_reply
+
+    schema = _schema(record)
+    assert parse_json_reply("```json\n" + json.dumps(raw) + "\n```", schema) == raw
+
+    with pytest.raises(ValueError, match="no JSON object"):
+        parse_json_reply("I cannot do that.", schema)
+    with pytest.raises(ValueError, match="invalid JSON"):
+        parse_json_reply('{"domain_scores": [' + "}", schema)
+    raw["domain_scores"][0]["score"] = "5"
+    del raw["strengths"]
+    with pytest.raises(ValueError, match="does not match the schema") as error:
+        parse_json_reply(json.dumps(raw), schema)
+    assert "strengths" in str(error.value) and "domain_scores/0/score" in str(error.value)
+
+
+def test_bedrock_grader_retries_with_the_validation_error(record, raw):
+    from evaluator.llm import BedrockLLM, LLMError
+
+    class Scripted(BedrockLLM):
+        def __init__(self, replies):
+            self.model, self.effort, self.replies, self.requests = "scripted", "high", list(replies), []
+
+        def _final_text(self, **request):
+            self.requests.append(request)
+            return self.replies.pop(0)
+
+    schema = _schema(record)
+    llm = Scripted(["Here you go: {not json}", json.dumps(raw)])
+    assert llm.complete_json("SYSTEM", "USER", schema) == raw
+
+    first, second = llm.requests
+    assert first["system"].startswith("SYSTEM") and '"domain_scores"' in first["system"]
+    assert "format" not in first["output_config"]
+    assert first["messages"][0]["content"] == "USER"
+    retry = second["messages"][0]["content"]
+    assert retry.startswith("USER") and "invalid JSON" in retry and "{not json}" in retry
+
+    with pytest.raises(LLMError, match="after 3 attempts"):
+        Scripted(["nope"] * 3).complete_json("SYSTEM", "USER", schema)

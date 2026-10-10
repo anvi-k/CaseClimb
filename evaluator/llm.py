@@ -7,10 +7,37 @@ import os
 from pathlib import Path
 from typing import Protocol
 
+from jsonschema import Draft202012Validator
+
 # The best Claude model the challenge's workshop AWS accounts are allowed to call.
 DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"
 DEFAULT_CLIENT = "runtime"
 DEFAULT_REGION = "us-east-1"
+
+
+_JSON_ATTEMPTS = 3
+_JSON_INSTRUCTIONS = """
+Output format
+
+Reply with a single JSON object and nothing else: no prose before or after it and no code fence. It must validate against this JSON Schema, with every required key present and no extra keys:"""
+
+
+def parse_json_reply(text: str, schema: dict) -> dict:
+    """Read the JSON object out of a model reply and check it against `schema`."""
+    start, end = text.find("{"), text.rfind("}")
+    if start == -1 or end <= start:
+        raise ValueError("no JSON object found")
+    try:
+        document = json.loads(text[start : end + 1])
+    except json.JSONDecodeError as error:
+        raise ValueError(f"invalid JSON: {error}") from None
+    errors = sorted(Draft202012Validator(schema).iter_errors(document), key=lambda e: list(e.path))
+    if errors:
+        shown = "; ".join(
+            f"{'/'.join(map(str, e.path)) or '(root)'}: {e.message[:200]}" for e in errors[:8]
+        )
+        raise ValueError(f"does not match the schema: {shown}")
+    return document
 
 
 class LLMError(RuntimeError):
@@ -70,19 +97,31 @@ class BedrockLLM:
             raise LLMError("The model declined this request")
         if message.stop_reason == "max_tokens":
             raise LLMError("The model ran out of output tokens before finishing")
-        return next(b.text for b in message.content if b.type == "text")
+        return "".join(b.text for b in message.content if b.type == "text")
 
     def complete_json(self, system: str, user: str, schema: dict) -> dict:
-        text = self._final_text(
-            max_tokens=32000,
-            system=system,
-            messages=[{"role": "user", "content": user}],
-            output_config={
-                "effort": self.effort,
-                "format": {"type": "json_schema", "schema": schema},
-            },
-        )
-        return json.loads(text)
+        # The grading schema is too large for Bedrock's constrained JSON output
+        # ("compiled grammar is too large"), so the schema goes in the prompt
+        # and the reply is validated here, with the errors fed back on a retry.
+        system = f"{system}\n{_JSON_INSTRUCTIONS}\n{json.dumps(schema)}"
+        prompt = user
+        for _ in range(_JSON_ATTEMPTS):
+            text = self._final_text(
+                max_tokens=32000,
+                system=system,
+                messages=[{"role": "user", "content": prompt}],
+                output_config={"effort": self.effort},
+            )
+            try:
+                return parse_json_reply(text, schema)
+            except ValueError as error:
+                problem = str(error)
+                prompt = (
+                    f"{user}\n\nYour previous reply was rejected: {problem}\n"
+                    f"<previous_reply>\n{text}\n</previous_reply>\n"
+                    "Return the corrected JSON object only."
+                )
+        raise LLMError(f"The model did not return valid JSON after {_JSON_ATTEMPTS} attempts: {problem}")
 
     def complete_text(self, system: str, messages: list[dict]) -> str:
         return self._final_text(
