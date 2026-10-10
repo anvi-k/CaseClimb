@@ -77,6 +77,14 @@ For planning, calculate `voice_minutes = students × sessions_per_student × act
 
 The current docs describe newer SDK hooks and voice products; older examples may differ. At implementation time, record the installed SDK/package lock versions, selected model IDs, voice ID, agent version, transport, audio formats, privacy settings, and date. This source research does not validate their compatibility; consult the implementation record for subsequent tests and measured results.
 
+## Application-owned live speech path
+
+The user subsequently requested an immediately usable live conversation. The implemented path uses opt-in [browser SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) to finalize an utterance, the existing bounded application encounter engine to select authored replies, and the current TTS-scoped ElevenLabs key to speak the stored response. Recognition stops during requests/playback and resumes after playback; explicit pause/end and failures stop the loop. Browser recognition has limited support and may transmit audio to the browser vendor. This is live audio interaction using ElevenLabs speech, not a hosted ElevenAgent or a native responsive video renderer.
+
+An original nonclinical conversation demo is separate from the faculty-reviewed clinical library. It uses fixed authored conversation topics, scoped encounter tokens, ten-minute deadlines, lifetime provider quotas, and transcript-only completion. Imported clinical drafts remain unpublished. Worried, calm, curious, frustrated, and neutral delivery presets use the supported v4 Turbo parameters and fixed tags. Current measured checks are recorded in the [implementation record](implementation-and-verification-2026-10-10.md).
+
+A future fully hosted ElevenAgent can use a [custom LLM adapter](https://elevenlabs.io/docs/eleven-agents/customization/llm/custom-llm) and [private-session credentials](https://elevenlabs.io/docs/eleven-agents/customization/authentication), but needs appropriately scoped API access rather than the existing TTS-only key. [Speech Engine](https://elevenlabs.io/docs/eleven-api/guides/cookbooks/speech-engine) offers provider-owned transcription/turn-taking around application logic and requires a persistent WebSocket upstream; the current HTTP API/Mangum deployment does not supply one. These are future integration routes, not current deployment claims or authorization to expand credentials/subscriptions.
+
 ## Proposed rollout acceptance checks
 
 1. **Authorized entry:** an unauthenticated or unassigned student cannot obtain a session credential; another student's session is inaccessible; no API key or signed credential appears in source, analytics, or logs.

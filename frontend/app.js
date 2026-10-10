@@ -13,6 +13,8 @@ const app = {
   audioEnabled: false, audio: null, audioUrl: null, audioController: null,
   audioGeneration: 0, voiceMode: null, dictationConsent: false, recognition: null,
   video: null, videoAttempted: false,
+  conversation: null, audioPlayback: null, turnOperation: null,
+  demoStarting: null, demoGeneration: 0,
 };
 const introVideoUrl = new URL("./media/caseclimb-introduction.mp4", location.href).href;
 
@@ -33,6 +35,7 @@ function stopIntroVideo() {
 }
 
 function previewIntroVideo() {
+  app.conversation?.stop();
   stopAudio(); stopDictation(); $("intro-video-status").textContent = "";
   $("intro-video-dialog").showModal(); const video = $("intro-video"); video.src = introVideoUrl;
   video.play().catch(() => { $("intro-video-status").textContent = "Choose Play in the video player to begin. The transcript is below the clip."; });
@@ -125,6 +128,7 @@ async function api(path, { method = "GET", body, token, binary = false, signal, 
 }
 
 function setView(view) {
+  if (view !== "encounter") app.conversation?.stop();
   ["practice", "encounter", "studio"].forEach((name) => { $(`${name}-view`).hidden = name !== view; });
   $("practice-nav").classList.toggle("active", view !== "studio");
   $("studio-nav").classList.toggle("active", view === "studio");
@@ -220,13 +224,107 @@ async function startEncounter(event) {
   finally { setBusy(button, false); }
 }
 
+function isConversationDemo() { return app.encounter?.mode === "conversation_demo"; }
+
+function openDemo() {
+  message("demo-error", "");
+  const supported = speechSupported(), voice = !!app.status?.tts_available;
+  $("demo-speak").disabled = !supported || !voice;
+  $("demo-availability").textContent = !supported ? "Speech recognition is unavailable in this browser. Open this app in Chrome for spoken turns, or start with typing." : !voice ? "Voice is unavailable in this environment. Start with typing and visible replies." : "The microphone listens between replies. Chrome supports browser speech recognition; you can stop at any time.";
+  $("demo-dialog").showModal();
+}
+
+async function startDemo(spoken) {
+  if (app.demoStarting) return;
+  const controller = new AbortController(); app.demoStarting = controller;
+  const generation = ++app.demoGeneration;
+  setBusy($("demo-speak"), true, "Opening conversation…"); setBusy($("demo-type"), true, "Opening conversation…");
+  message("demo-error", "");
+  try {
+    const result = await api("/demo/encounters", { method: "POST", body: { nonclinical_demo: true, emotion: $("demo-emotion").value }, signal: controller.signal });
+    if (controller.signal.aborted || generation !== app.demoGeneration || !$("demo-dialog").open) return;
+    cleanupEncounter(); app.encounterToken = result.token; app.audioEnabled = !!result.state.tts_available;
+    $("turn-text").value = ""; $("feedback-panel").hidden = true; message("encounter-message", "");
+    updateEncounter(result.state); createLiveConversation();
+    app.demoStarting = null; $("demo-dialog").close(); setView("encounter");
+    app.timer = setInterval(tickTimer, 1000); tickTimer();
+    if (spoken) await app.conversation.start({ consented: true, openingReply: latestPatient() });
+    else { renderLiveConversation({ state: "off", reason: "typed-start", enabled: false }); $("turn-text").focus(); }
+  } catch (error) { if (!controller.signal.aborted && generation === app.demoGeneration) message("demo-error", error.message, "error"); }
+  finally {
+    if (app.demoStarting === controller) app.demoStarting = null;
+    setBusy($("demo-speak"), false); setBusy($("demo-type"), false);
+    $("demo-speak").disabled = !speechSupported() || !app.status?.tts_available;
+  }
+}
+
+function createLiveConversation() {
+  app.conversation = new LiveSpeechConversation({
+    createRecognition: () => new (window.SpeechRecognition || window.webkitSpeechRecognition)(),
+    availability: () => ({ sessionActive: app.encounter?.status === "active" && remainingSeconds() > 0 && app.encounter.confirmed_turns < app.encounter.max_turns,
+      recognition: speechSupported(), voice: !!app.encounter?.tts_available && app.audioEnabled, busy: app.sending || !!app.encounter?.pending_turn }),
+    sendFinal: (text, { requestId, signal }) => submitEncounterTurn(text, { requestId, signal, live: true }),
+    speakReply: (reply, { signal }) => playPatientAudio(reply.id, { signal, strict: true }),
+    stopPlayback: stopAudio, onState: renderLiveConversation,
+    onTranscript: ({ text, final }) => {
+      $("live-caption").textContent = text ? `${final ? "You said" : "Listening"}: ${text}` : "";
+      $("live-caption").hidden = !text;
+      if (final) $("turn-text").value = text;
+    },
+  });
+}
+
+function renderLiveConversation({ state, reason, enabled }) {
+  const labels = { off: "Listening paused", stopped: "Listening paused", starting: "Starting microphone", listening: "Listening to you", submitting: "Preparing reply", speaking: "Character speaking", error: "Listening stopped", unavailable: "Typing available" };
+  const reasons = {
+    "typed-start": "Type a message below. Choose Resume listening when you want spoken turns.",
+    "recognition-unavailable": "Speech recognition is unavailable here. Open this app in Chrome for spoken turns, or continue typing.",
+    "voice-unavailable": "Voice is unavailable. Continue with typing and visible replies.",
+    "microphone-denied": "Microphone access was denied. Adjust your browser permission, then choose Resume listening; or type a message.",
+    "microphone-unavailable": "No microphone was available. Check your input device or continue typing.",
+    "recognition-network": "The speech recognition connection stopped. Choose Resume listening when ready, or continue typing.",
+    "no-speech": "No final phrase was heard. Choose Resume listening to try again, or type a message.",
+    "turn-error": "The turn could not complete. Review the message below and retry it explicitly; listening stays paused.",
+    "playback-error": "Voice could not finish. Read the visible reply; choose Resume listening when ready.",
+    "turn-pending": "A turn is still processing. Wait for its result before resuming listening.",
+    "session-ended": "The conversation has ended. Your transcript is available below.",
+    "phrase-too-long": "That phrase was too long. Shorten it in the editor and send it explicitly.",
+    "paused": "Listening is paused. Type a message or choose Resume listening.",
+  };
+  $("live-state").textContent = labels[state] || "Listening paused";
+  $("live-state").dataset.state = state;
+  const fallback = !speechSupported() ? reasons["recognition-unavailable"] : !app.encounter?.tts_available || !app.audioEnabled ? reasons["voice-unavailable"] : "";
+  $("live-status").textContent = fallback || reasons[reason] || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: "Microphone paused while the server prepares a reply.", speaking: "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || "Listening is paused. Type a message or choose Resume listening.";
+  $("live-toggle").textContent = enabled ? "Pause conversation" : "Resume listening";
+  $("live-toggle").disabled = app.encounter?.status !== "active" || remainingSeconds() <= 0 || !speechSupported() || !app.encounter?.tts_available || app.sending || !!app.encounter?.pending_turn;
+  // Pause remains available while a request/audio operation is in progress.
+  if (enabled) $("live-toggle").disabled = false;
+}
+
 function updateEncounter(state) {
   if (state !== app.encounter) app.clockOffset = state.server_time * 1000 - Date.now();
   app.encounter = state;
+  const demo = isConversationDemo();
+  $("encounter-view").classList.toggle("conversation-demo", demo);
   $("encounter-heading").textContent = state.title;
-  $("encounter-context").textContent = `Student encounter · Version ${state.version}`;
+  $("encounter-context").textContent = demo ? "Live conversation · Nonclinical demo" : `Student encounter · Version ${state.version}`;
   $("patient-name").textContent = state.patient.name;
-  $("patient-detail").textContent = `${state.patient.age} years · ${state.patient.setting}`;
+  $("patient-detail").textContent = demo ? "Synthetic character · ElevenLabs voice when available" : `${state.patient.age} years · ${state.patient.setting}`;
+  $("patient-mood").hidden = demo; $("dictate").hidden = demo;
+  $("live-conversation-controls").hidden = !demo;
+  $("conversation-guide").hidden = !demo; $("chart-heading").closest(".chart-panel").hidden = demo;
+  $("turn-label").textContent = demo ? "Or type your next message" : "Your next question";
+  $("caption-label").textContent = demo ? "Latest character reply" : "Latest patient reply";
+  if (!app.sending) $("send-turn").textContent = demo ? "Send message ↗" : "Send question ↗";
+  $("composer-note").textContent = demo ? "Typing pauses spoken turn-taking. Ctrl/⌘ + Enter sends your message." : "Review dictated words before sending. Ctrl/⌘ + Enter sends your question.";
+  if (demo) {
+    $("demo-notice").textContent = state.assessment_notice || state.notice || "Original nonclinical conversation demo. No medical advice or clinical assessment.";
+    const prompts = $("conversation-prompts"); prompts.replaceChildren();
+    (state.conversation_prompts || []).forEach((text) => {
+      const button = el("button", "conversation-prompt", text); button.type = "button";
+      button.addEventListener("click", () => { app.conversation?.stop(); $("turn-text").value = text; $("turn-text").focus(); }); prompts.append(button);
+    });
+  }
   const mood = state.simulated_mood?.mood || "guarded";
   $("patient-mood").textContent = mood.charAt(0).toUpperCase() + mood.slice(1);
   const rapport = state.simulated_mood?.rapport ?? 0;
@@ -243,9 +341,10 @@ function updateEncounter(state) {
   $("send-turn").disabled = !canSend || app.sending;
   $("dictate").disabled = !canSend || app.sending || !speechSupported();
   if (!speechSupported()) $("dictate").title = "Dictation is unavailable in this browser. Type your question instead.";
-  $("finish-encounter").textContent = active ? "Finish & review" : "Load review";
+  $("finish-encounter").textContent = active ? (demo ? "End conversation" : "Finish & review") : (demo ? "View transcript" : "Load review");
+  if (demo && app.conversation) renderLiveConversation(app.conversation);
   if (state.video?.deadline && app.video) app.video.limitDeadline(state.video.deadline);
-  if (!active) { stopAudio(); stopDictation(); app.video?.stop(); }
+  if (!active) { app.conversation?.sessionEnded(); stopAudio(); stopDictation(); app.video?.stop(); }
 }
 
 function latestPatient() { return app.encounter?.events.filter((event) => event.actor === "patient").at(-1); }
@@ -256,26 +355,29 @@ function remainingSeconds() {
 
 async function tickTimer() {
   if (!app.encounter) return;
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
   const seconds = app.encounter.status === "active" ? remainingSeconds() : 0;
   $("encounter-timer").textContent = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
   $("timer-box").classList.toggle("urgent", seconds <= 60);
   if (seconds || app.encounter.status !== "active" || app.expiryRefreshing) return;
   clearInterval(app.timer); app.timer = null;
-  app.expiryRefreshing = true; stopAudio(); stopDictation(); app.video?.stop();
+  app.expiryRefreshing = true; app.conversation?.sessionEnded(); stopAudio(); stopDictation(); app.video?.stop();
   $("send-turn").disabled = true; $("turn-text").disabled = true; $("dictate").disabled = true;
   try {
-    const state = await api(`/encounters/${app.encounter.encounter_id}`, { token: app.encounterToken });
+    const state = await api(`/encounters/${encounterId}`, { token });
+    if (app.encounter?.encounter_id !== encounterId || app.encounterToken !== token) return;
     updateEncounter(state);
     if (state.status !== "active") {
-      message("encounter-message", "Your ten-minute encounter has ended. Review the evidence and plan your next conversation.");
+      message("encounter-message", isConversationDemo() ? "Your ten-minute conversation has ended. Your transcript remains available." : "Your ten-minute encounter has ended. Review the evidence and plan your next conversation.");
       await loadFeedback();
     } else if (remainingSeconds() > 0) {
       app.timer = setInterval(tickTimer, 1000);
     }
   } catch (error) {
+    if (app.encounter?.encounter_id !== encounterId || app.encounterToken !== token) return;
     message("encounter-message", "Time has ended. Reconnect, then choose Load review to recover the encounter feedback.", "warning");
     $("finish-encounter").textContent = "Load review";
-  } finally { app.expiryRefreshing = false; }
+  } finally { if (app.encounter?.encounter_id === encounterId && app.encounterToken === token) app.expiryRefreshing = false; }
 }
 
 function renderTranscript() {
@@ -324,53 +426,78 @@ async function sendTurn(event) {
   event.preventDefault();
   if (app.sending || !app.encounter || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
   const text = $("turn-text").value.trim(); if (!text) return;
+  app.conversation?.stop();
+  try { await submitEncounterTurn(text); } catch { /* Static error and recoverable editor are shown by the shared submitter. */ }
+}
+
+async function submitEncounterTurn(text, { requestId, signal, live = false } = {}) {
+  if (app.sending || !app.encounter || app.encounter.status !== "active" || remainingSeconds() <= 0) throw new RequestError("This turn is unavailable.");
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
+  const operation = new AbortController(); app.turnOperation = operation;
+  const onAbort = () => operation.abort(); signal?.addEventListener("abort", onAbort, { once: true });
+  if (signal?.aborted) operation.abort();
+  const current = () => app.encounter?.encounter_id === encounterId && app.encounterToken === token && app.turnOperation === operation;
   stopDictation(); stopAudio(); app.video?.interrupt(); app.sending = true;
-  if (!app.pendingTurn || app.pendingTurn.text !== text) app.pendingTurn = { request_id: crypto.randomUUID(), text, confirmed: true };
+  if (!app.pendingTurn || app.pendingTurn.text !== text) app.pendingTurn = { request_id: requestId || crypto.randomUUID(), text, confirmed: true };
   setBusy($("send-turn"), true, "Patient is responding…"); $("turn-text").disabled = true; $("dictate").disabled = true;
   message("encounter-message", "");
   try {
-    const result = await api(`/encounters/${app.encounter.encounter_id}/turns`, { method: "POST", token: app.encounterToken, body: app.pendingTurn });
+    const result = await api(`/encounters/${encounterId}/turns`, { method: "POST", token, body: app.pendingTurn, signal: operation.signal });
+    if (!current() || operation.signal.aborted || app.encounter.status !== "active" || remainingSeconds() <= 0) return null;
     app.pendingTurn = null; $("turn-text").value = "";
     updateEncounter(result.state);
     if (result.patient_event && app.encounter.status === "active") {
       if (app.video?.active) app.video.speak(result.patient_event.id);
-      else if (app.audioEnabled) playPatientAudio(result.patient_event.id);
+      else if (app.audioEnabled && !live) playPatientAudio(result.patient_event.id);
     }
+    return result.patient_event || null;
   } catch (error) {
+    if (!current() || operation.signal.aborted) throw error;
     if (error.kind === "pending") message("encounter-message", "A question is still being processed. Wait briefly, then retry the same question; a confirmed replay will not count twice.", "warning");
     else if (error.kind === "new_request") {
       app.pendingTurn = null;
       message("encounter-message", "This question did not complete. Review it, then press Send question to explicitly retry while time remains.", "warning");
     } else message("encounter-message", error.message, "error");
     if (error.status === 409 || error.status === 429) {
-      try { updateEncounter(await api(`/encounters/${app.encounter.encounter_id}`, { token: app.encounterToken })); } catch { /* Keep the recoverable editor state. */ }
+      try { const state = await api(`/encounters/${encounterId}`, { token }); if (current() && !operation.signal.aborted) updateEncounter(state); } catch { /* Keep the recoverable editor state. */ }
     }
+    throw error;
   } finally {
-    app.sending = false; setBusy($("send-turn"), false);
-    if (app.encounter) updateEncounter(app.encounter);
-    if (!$("turn-text").disabled) $("turn-text").focus();
+    signal?.removeEventListener("abort", onAbort);
+    if (current()) {
+      app.turnOperation = null; app.sending = false; setBusy($("send-turn"), false);
+      updateEncounter(app.encounter);
+      if (!live && !$("turn-text").disabled) $("turn-text").focus();
+    }
   }
 }
 
 async function finishEncounter() {
   if (!app.encounter) return;
-  stopAudio(); stopDictation(); app.video?.stop();
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
+  const current = () => app.encounter?.encounter_id === encounterId && app.encounterToken === token;
+  app.conversation?.sessionEnded(); app.turnOperation?.abort(); stopAudio(); stopDictation(); app.video?.stop();
   const button = $("finish-encounter"); setBusy(button, true, "Preparing review…");
   message("encounter-message", "");
   try {
-    const result = await api(`/encounters/${app.encounter.encounter_id}/conclude`, { method: "POST", token: app.encounterToken });
+    const result = await api(`/encounters/${encounterId}/conclude`, { method: "POST", token });
+    if (!current()) return;
     updateEncounter(result.state); app.feedback = result.feedback; renderFeedback();
     clearInterval(app.timer); app.timer = null; tickTimer();
     $("feedback-panel").scrollIntoView({ behavior: "smooth", block: "start" });
-  } catch (error) { message("encounter-message", error.message, "error"); }
+  } catch (error) { if (current()) message("encounter-message", error.message, "error"); }
   finally {
+    if (!current()) return;
     setBusy(button, false);
-    button.textContent = app.encounter?.status === "active" && remainingSeconds() > 0 ? "Finish & review" : "Load review";
+    updateEncounter(app.encounter);
   }
 }
 
 async function loadFeedback() {
-  app.feedback = await api(`/encounters/${app.encounter.encounter_id}/feedback`, { token: app.encounterToken });
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
+  const feedback = await api(`/encounters/${encounterId}/feedback`, { token });
+  if (app.encounter?.encounter_id !== encounterId || app.encounterToken !== token) return;
+  app.feedback = feedback;
   clearInterval(app.timer); app.timer = null; renderFeedback();
   $("feedback-panel").scrollIntoView({ behavior: "smooth", block: "start" });
 }
@@ -384,6 +511,19 @@ function revealEvidence(event, eventId) {
 function renderFeedback() {
   const feedback = app.feedback; if (!feedback) return;
   const target = $("feedback-content"); target.replaceChildren();
+  const demo = feedback.mode === "conversation_demo";
+  $("feedback-heading").textContent = demo ? "Your conversation, in your words." : "What to take into the next conversation";
+  $("feedback-heading").previousElementSibling.textContent = demo ? "A transcript to return to" : "Reflection, grounded in this encounter";
+  $("feedback-panel").querySelector(".notice").textContent = demo ? feedback.notice : "Formative feedback uses authored criteria and disclosed evidence. It requires faculty review and does not establish clinical competence.";
+  if (demo) {
+    target.append(el("p", "small-note", feedback.transcript_notice || "The full conversation remains above. No clinical or empathy assessment is produced."));
+    (feedback.transcript || []).forEach((event) => {
+      const row = el("article", "transcript-event"); row.append(el("strong", "", event.actor === "patient" ? app.encounter.patient.name : "You"), el("p", "", `${event.text}${event.excerpt ? "…" : ""}`));
+      const link = el("a", "evidence-link", "Find this turn in the full conversation ↗"); link.href = `#event-${encodeURIComponent(event.id)}`;
+      link.addEventListener("click", (click) => revealEvidence(click, event.id)); row.append(link); target.append(row);
+    });
+    $("feedback-panel").hidden = false; $("feedback-heading").focus({ preventScroll: true }); return;
+  }
   const summary = el("div", "feedback-next");
   summary.append(el("span", "eyebrow", "Try this in your next encounter"), el("p", "", feedback.next_attempt));
   target.append(summary);
@@ -441,7 +581,7 @@ function renderVoiceControls() {
   $("enable-audio").title = videoBusy ? "Turn off video to use audio-only playback." : "";
   $("play-response").disabled = !active || !(videoActive || (available && app.audioEnabled)) || !latestPatient();
   if (videoActive) $("stop-audio").disabled = !app.video.speaking;
-  if (!available) $("audio-status").textContent = app.encounter?.video_available ? "Patient voice plays through the video feed when enabled. Captions remain available." : "Voice and live video are unavailable here. Continue with the illustrated patient and captions.";
+  if (!available) $("audio-status").textContent = isConversationDemo() ? "Voice is unavailable here. Type a message and read the character's reply below." : app.encounter?.video_available ? "Patient voice plays through the video feed when enabled. Captions remain available." : "Voice and live video are unavailable here. Continue with the illustrated patient and captions.";
   else if (videoBusy) $("audio-status").textContent = "Patient voice plays through the video feed. Captions remain available.";
   else if (!app.audioEnabled) $("audio-status").textContent = "Captions are always available. Voice is optional.";
   renderPresentationLabel();
@@ -483,35 +623,48 @@ async function startPatientVideo() {
 
 function stopAudio() {
   app.audioGeneration += 1;
+  app.audioPlayback?.reject(new RequestError("Audio stopped.")); app.audioPlayback = null;
   app.audioController?.abort(); app.audioController = null;
   if (app.audio) { app.audio.pause(); app.audio.removeAttribute("src"); app.audio.load(); app.audio = null; }
   if (app.audioUrl) { URL.revokeObjectURL(app.audioUrl); app.audioUrl = null; }
   $("patient-scene").classList.remove("speaking"); $("stop-audio").disabled = true;
 }
 
-async function playPatientAudio(eventId) {
-  if (!app.audioEnabled || !app.encounter?.tts_available || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
+async function playPatientAudio(eventId, { signal, strict = false } = {}) {
+  if (!app.audioEnabled || !app.encounter?.tts_available || app.encounter.status !== "active" || remainingSeconds() <= 0) {
+    if (strict) throw new RequestError("Patient voice is unavailable."); return;
+  }
   stopAudio(); const generation = app.audioGeneration;
+  const encounterId = app.encounter.encounter_id, token = app.encounterToken;
   const controller = new AbortController(); app.audioController = controller;
+  const onAbort = () => { if (generation === app.audioGeneration) stopAudio(); };
+  signal?.addEventListener("abort", onAbort, { once: true });
+  if (signal?.aborted) { controller.abort(); signal?.removeEventListener("abort", onAbort); if (strict) throw new RequestError("Audio stopped."); return; }
+  const current = () => generation === app.audioGeneration && app.encounter?.encounter_id === encounterId && app.encounterToken === token && !signal?.aborted;
   $("audio-status").textContent = "Preparing patient audio…"; $("stop-audio").disabled = false;
   try {
-    const blob = await api(`/encounters/${app.encounter.encounter_id}/tts`, { method: "POST", token: app.encounterToken, body: { event_id: eventId }, binary: true, signal: controller.signal, timeout: 30000 });
-    if (generation !== app.audioGeneration || !app.audioEnabled || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
+    const blob = await api(`/encounters/${encounterId}/tts`, { method: "POST", token, body: { event_id: eventId }, binary: true, signal: controller.signal, timeout: 30000 });
+    if (!current() || !app.audioEnabled || app.encounter.status !== "active" || remainingSeconds() <= 0) { if (strict) throw new RequestError("Audio stopped."); return; }
     app.audioUrl = URL.createObjectURL(blob); app.audio = new Audio(app.audioUrl);
-    app.audio.addEventListener("play", () => {
-      if (generation === app.audioGeneration) { $("patient-scene").classList.add("speaking"); $("audio-status").textContent = "Patient voice is playing. You can stop audio at any time."; }
+    await new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => fail(new RequestError("Audio playback timed out. Continue with captions.")), Math.min(90000, remainingSeconds() * 1000));
+      let settled = false;
+      const done = () => { if (!settled) { settled = true; clearTimeout(timeout); resolve(); } };
+      const fail = (error) => { if (!settled) { settled = true; clearTimeout(timeout); reject(error); } };
+      app.audioPlayback = { resolve: done, reject: fail };
+      app.audio.addEventListener("play", () => {
+        if (current()) { $("patient-scene").classList.add("speaking"); $("audio-status").textContent = "Patient voice is playing. You can stop audio at any time."; }
+      });
+      app.audio.addEventListener("ended", () => {
+        if (current()) { app.audioPlayback = null; done(); stopAudio(); $("audio-status").textContent = "Patient audio finished. Captions remain available."; }
+      }, { once: true });
+      app.audio.addEventListener("error", () => { if (current()) fail(new RequestError("This browser could not play the audio. Continue with captions.")); }, { once: true });
+      app.audio.play().catch(() => fail(new RequestError("Playback was blocked. Choose Replay response, or continue with captions.")));
     });
-    app.audio.addEventListener("ended", () => {
-      if (generation === app.audioGeneration) { stopAudio(); $("audio-status").textContent = "Patient audio finished. Captions remain available."; }
-    });
-    app.audio.addEventListener("error", () => {
-      if (generation === app.audioGeneration) { stopAudio(); $("audio-status").textContent = "This browser could not play the audio. Continue with captions."; }
-    });
-    await app.audio.play();
   } catch (error) {
-    if (generation !== app.audioGeneration || controller.signal.aborted) return;
-    stopAudio(); $("audio-status").textContent = error.message;
-  }
+    if (current() && !controller.signal.aborted) { stopAudio(); $("audio-status").textContent = error.message; }
+    if (strict) throw error;
+  } finally { signal?.removeEventListener("abort", onAbort); }
 }
 
 function speechSupported() { return !!(window.SpeechRecognition || window.webkitSpeechRecognition); }
@@ -525,6 +678,10 @@ function requestVoiceConsent(mode) {
     $("voice-dialog-title").textContent = "Enable the video patient";
     $("voice-dialog-description").textContent = "Stored patient replies are sent to ElevenLabs for speech, then the resulting audio is sent to LiveAvatar to render synchronized video. Your browser connects to the provider's LiveKit video room. This sends no webcam or microphone feed. Video ends with this encounter; captions remain available if it fails.";
     $("voice-confirm").textContent = "Enable video patient";
+  } else if (mode === "conversation") {
+    $("voice-dialog-title").textContent = "Resume spoken conversation";
+    $("voice-dialog-description").textContent = "Your browser requests microphone access and may transmit microphone audio to its speech recognition service. Final recognized phrases automatically send to this nonclinical encounter. ElevenLabs generates the character's voice; the microphone pauses during each reply. Captions remain visible. No webcam is used.";
+    $("voice-confirm").textContent = "Agree & start listening";
   } else {
     $("voice-dialog-title").textContent = "Dictate with your browser";
     $("voice-dialog-description").textContent = "Your browser will request microphone access and may send audio to its speech recognition service. Recognized words will appear in the question editor. Review them before choosing Send question. No webcam is used.";
@@ -568,9 +725,11 @@ function startDictation() {
 }
 
 function cleanupEncounter() {
+  app.conversation?.stop(); app.conversation = null; app.turnOperation?.abort(); app.turnOperation = null; app.sending = false; setBusy($("send-turn"), false);
   clearInterval(app.timer); app.timer = null; stopAudio(); stopDictation();
   app.video?.stop(); app.video = null; app.videoAttempted = false;
   app.encounter = null; app.encounterToken = ""; app.feedback = null;
+  app.expiryRefreshing = false;
   app.audioEnabled = false; app.dictationConsent = false; app.pendingTurn = null;
   if (location.hash.startsWith("#event-")) history.replaceState(null, "", location.pathname + location.search);
 }
@@ -810,10 +969,23 @@ function clearFaculty() {
 
 $("practice-nav").addEventListener("click", () => setView(app.encounter ? "encounter" : "practice"));
 $("intro-preview").addEventListener("click", previewIntroVideo);
+$("demo-open").addEventListener("click", openDemo);
+$("demo-speak").addEventListener("click", () => startDemo(true));
+$("demo-type").addEventListener("click", () => startDemo(false));
+$("demo-dialog").addEventListener("close", () => {
+  if (app.demoStarting) { ++app.demoGeneration; app.demoStarting.abort(); app.demoStarting = null; }
+});
+$("live-toggle").addEventListener("click", () => {
+  if (!app.conversation) return;
+  if (app.conversation.enabled) app.conversation.stop();
+  else if (app.conversation.consent) { stopDictation(); app.conversation.start(); }
+  else requestVoiceConsent("conversation");
+});
 $("intro-video-dialog").addEventListener("close", stopIntroVideo);
 $("intro-video").addEventListener("error", () => { $("intro-video-status").textContent = "The introduction could not play. Continue with text practice; the transcript is above."; });
 $("app-lock-form").addEventListener("submit", async (event) => {
   event.preventDefault(); setBusy($("app-lock"), true, "Locking…");
+  app.demoStarting?.abort(); ++app.demoGeneration; app.conversation?.stop(); app.turnOperation?.abort();
   stopAudio(); stopDictation(); await app.video?.stop();
   cleanupEncounter(); clearFaculty(); $("app-lock-form").submit();
 });
@@ -827,11 +999,11 @@ $("turn-text").addEventListener("keydown", (event) => {
 $("finish-encounter").addEventListener("click", finishEncounter);
 $("return-library").addEventListener("click", () => { cleanupEncounter(); setView("practice"); loadLibrary(); });
 $("enable-audio").addEventListener("click", () => {
-  if (app.audioEnabled) { app.audioEnabled = false; stopAudio(); renderVoiceControls(); }
+  if (app.audioEnabled) { app.conversation?.stop(); app.audioEnabled = false; stopAudio(); renderVoiceControls(); }
   else requestVoiceConsent("audio");
 });
-$("play-response").addEventListener("click", () => { if (latestPatient()) { if (app.video?.active) app.video.speak(latestPatient().id); else playPatientAudio(latestPatient().id); } });
-$("stop-audio").addEventListener("click", () => { stopAudio(); app.video?.interrupt(); $("audio-status").textContent = "Response stopped. Continue reading the captions."; });
+$("play-response").addEventListener("click", () => { app.conversation?.stop(); if (latestPatient()) { if (app.video?.active) app.video.speak(latestPatient().id); else playPatientAudio(latestPatient().id); } });
+$("stop-audio").addEventListener("click", () => { app.conversation?.stop(); stopAudio(); app.video?.interrupt(); $("audio-status").textContent = "Response stopped. Continue reading the captions."; });
 $("enable-video").addEventListener("click", () => {
   if (app.video?.active || app.video?.starting) { app.video.stop(); $("video-status").textContent = "Video stopped. A new video session cannot be started in this encounter. Continue with captions or enable audio-only playback."; }
   else requestVoiceConsent("video");
@@ -846,6 +1018,7 @@ $("voice-confirm").addEventListener("click", () => {
   $("voice-dialog").close();
   if (app.voiceMode === "audio") { app.audioEnabled = true; renderVoiceControls(); if (latestPatient()) playPatientAudio(latestPatient().id); }
   else if (app.voiceMode === "video") startPatientVideo();
+  else if (app.voiceMode === "conversation") { app.audioEnabled = true; stopDictation(); app.conversation?.start({ consented: true }); }
   else { app.dictationConsent = true; startDictation(); }
 });
 $("faculty-login").addEventListener("submit", facultyLogin);
@@ -880,6 +1053,6 @@ $("approval-dialog").addEventListener("close", () => { $("approval-form").reset(
 window.addEventListener("beforeunload", (event) => {
   if (app.encounter?.status === "active" || app.draftDirty) { event.preventDefault(); event.returnValue = ""; }
 });
-window.addEventListener("pagehide", () => { app.video?.stop({ keepalive: true }); stopIntroVideo(); stopAudio(); stopDictation(); });
+window.addEventListener("pagehide", () => { app.conversation?.pageHidden(); app.turnOperation?.abort(); app.demoStarting?.abort(); ++app.demoGeneration; app.video?.stop({ keepalive: true }); stopIntroVideo(); stopAudio(); stopDictation(); });
 setEditorTab("preview");
 loadLibrary();

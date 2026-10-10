@@ -77,7 +77,7 @@ def disclosed_chart(case: CaseDraft, encounter: dict):
     }
 
 
-def reply(case: CaseDraft, encounter: dict, text: str, selector=None):
+def reply(case: CaseDraft, encounter: dict, text: str, selector=None, *, track_rapport=True):
     released = set(encounter["disclosed_fact_ids"])
     candidates, withheld = [], []
     for fact in case.facts:
@@ -119,17 +119,20 @@ def reply(case: CaseDraft, encounter: dict, text: str, selector=None):
     encounter["disclosed_artifact_ids"].extend(artifacts)
     if not answers and (selected or artifacts):
         answers = ["You can review the information now available in my chart."]
-    rapport = encounter["simulated_mood"]["rapport"]
-    change = 0
+    change = 0 if track_rapport else None
     if matches(text, case.behavior.dismissive_keywords):
-        change = -5
+        if track_rapport:
+            change = -5
         if not answers:
             answers = [case.behavior.dismissive_response]
     elif matches(text, case.behavior.supportive_keywords):
-        change = 5
+        if track_rapport:
+            change = 5
         if not answers:
             answers = [case.behavior.supportive_response]
-    encounter["simulated_mood"]["rapport"] = min(100, max(0, rapport + change))
+    if track_rapport:
+        rapport = encounter["simulated_mood"]["rapport"]
+        encounter["simulated_mood"]["rapport"] = min(100, max(0, rapport + change))
     rendered = " ".join(dict.fromkeys(a for a in answers if a)) or case.fallback_answer
     return rendered, newly, artifacts, provider, change
 

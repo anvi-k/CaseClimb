@@ -1,0 +1,40 @@
+name: Application checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          version: '0.8.23'
+      - name: Install locked dependencies
+        run: uv sync --frozen
+      - name: Check backend behavior
+        run: uv run --frozen pytest -q
+      - name: Check browser code
+        run: |
+          node --check frontend/app.js
+          node --check frontend/video.js
+          node --check frontend/conversation.js
+          node --test frontend/*.test.cjs
+      - name: Check infrastructure documents
+        run: |
+          python -m json.tool infra/stack.json > /dev/null
+          python -m json.tool infra/artifacts.json > /dev/null

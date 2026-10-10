@@ -17,6 +17,7 @@ from fastapi.staticfiles import StaticFiles
 from mangum import Mangum
 
 from .access import AppAccess
+from .conversation_demo import DEMO_ID, DEMO_MODE, NOTICE as DEMO_NOTICE, PROMPTS as DEMO_PROMPTS, StartDemo, demo_case, demo_feedback, is_demo, public_event
 from .debrief import BedrockDebriefSelector, enrich_feedback
 from .engine import disclosed_chart, feedback, reply, validate_case
 from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, Turn
@@ -78,6 +79,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         return app.state.store.put(f"encounter:{encounter['id']}", encounter, revision, int(encounter["started_at"] + 86400))
 
     def case_snapshot(encounter):
+        if is_demo(encounter):
+            return CaseDraft.model_validate(encounter["demo_snapshot"])
         record = get_case(encounter["case_id"])
         snapshot = next((v for v in record["payload"]["versions"] if v["version"] == encounter["version"]), None)
         if not snapshot:
@@ -98,7 +101,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             encounter["status"] = "expired"
             encounter["ended_at"] = encounter["deadline"]
             cancel_pending(encounter, "encounter_expired")
-            encounter["feedback"] = feedback(case_snapshot(encounter), encounter)
+            encounter["feedback"] = demo_feedback(encounter) if is_demo(encounter) else feedback(case_snapshot(encounter), encounter)
 
     def cancel_pending(encounter, reason):
         pending = encounter.get("pending_turn")
@@ -136,9 +139,18 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         for _ in range(5):
             record = encounter_record(encounter_id, auth)
             encounter = record["payload"]
+            previous_status = encounter["status"]
             expire(encounter)
             if encounter["status"] == "active":
                 raise HTTPException(409, "Feedback is available after the encounter ends.")
+            if is_demo(encounter):
+                if previous_status != encounter["status"] or "feedback" not in encounter:
+                    encounter["feedback"] = demo_feedback(encounter)
+                    try:
+                        persist_encounter(encounter, record["revision"])
+                    except Conflict:
+                        continue
+                return encounter
             encounter.setdefault("feedback", feedback(case_snapshot(encounter), encounter))
             if "critical_thinking_debrief" in encounter["feedback"]:
                 return encounter
@@ -190,7 +202,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
     def state(encounter):
         case = case_snapshot(encounter)
         now = app.state.clock()
-        return {
+        result = {
             "encounter_id": encounter["id"], "case_id": encounter["case_id"], "version": encounter["version"],
             "patient": {"name": case.patient_name, "age": case.age, "setting": case.setting},
             "title": case.title, "status": encounter["status"], "started_at": encounter["started_at"], "deadline": encounter["deadline"],
@@ -202,6 +214,13 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             "pending_turn": ({"request_id": encounter["pending_turn"]["request_id"], "lease_until": encounter["pending_turn"]["lease_until"]} if encounter.get("pending_turn") else None),
             "assessment_notice": "Synthetic practice only. Rapport is simulated; feedback is unvalidated and requires faculty review.",
         }
+        result["mode"] = encounter.get("mode", "clinical_practice")
+        if is_demo(encounter):
+            result.update(events=[public_event(e) for e in encounter["events"]], chart={"facts": [], "artifacts": []}, video_available=False,
+                          conversation_prompts=list(DEMO_PROMPTS), assessment_notice=DEMO_NOTICE,
+                          simulated_mood={"mood": encounter["simulated_mood"]["mood"], "label": "Preset fictional delivery; no learner score"})
+            result["patient"]["age"] = None
+        return result
 
     @app.get("/health")
     @app.get("/api/health")
@@ -276,7 +295,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
 
     @app.get("/api/faculty/analytics", dependencies=[Depends(admin)])
     def analytics():
-        encounters = [r["payload"] for r in app.state.store.list("encounter:")]
+        encounters = [r["payload"] for r in app.state.store.list("encounter:") if not is_demo(r["payload"])]
         statuses = {}
         for e in encounters:
             effective = "expired" if e["status"] == "active" and app.state.clock() >= e["deadline"] else e["status"]
@@ -295,16 +314,30 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         published = next((v for v in versions if v["version"] == request.version), None) if request.version else (versions[-1] if versions else None)
         if published is None:
             raise HTTPException(409, "Only a published, reviewer-attested case version can be launched.")
+        return begin_encounter(CaseDraft.model_validate(published["case"]), request.case_id, published["version"])
+
+    def begin_encounter(case, case_id, version, demo=False):
         if not app.state.quotas.reserve("sessions"):
             raise HTTPException(429, "Workshop session allowance exhausted. Ask the administrator to review the deployment budget.")
-        case = CaseDraft.model_validate(published["case"])
         encounter_id, token, now = str(uuid.uuid4()), secrets.token_urlsafe(32), app.state.clock()
         initial_facts = [f.id for f in case.facts if f.initially_released]
         initial_artifacts = [a.id for a in case.artifacts if a.initially_released]
         opening = " ".join(dict.fromkeys([case.opening, *[f.patient_answer for f in case.facts if f.initially_released and f.audience != "chart" and f.patient_answer]]))
-        encounter = {"id": encounter_id, "case_id": request.case_id, "version": published["version"], "token_hash": digest(token), "started_at": now, "deadline": now + CAP_SECONDS, "status": "active", "turn_count": 0, "provider_attempts": 0, "pending_turn": None, "requests": {}, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "initial_rapport": case.behavior.initial_rapport, "simulated_mood": {"mood": case.behavior.mood, "rapport": case.behavior.initial_rapport, "label": "Simulated state, not an empathy score"}, "events": [{"id": "e0", "actor": "patient", "text": opening, "timestamp": now, "confirmed": True, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "provider": "authored"}]}
+        encounter = {"id": encounter_id, "case_id": case_id, "version": version, "token_hash": digest(token), "started_at": now, "deadline": now + CAP_SECONDS, "status": "active", "turn_count": 0, "provider_attempts": 0, "pending_turn": None, "requests": {}, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "simulated_mood": {"mood": case.behavior.mood, "label": "Preset fictional delivery; no learner score" if demo else "Simulated state, not an empathy score"}, "events": [{"id": "e0", "actor": "patient", "text": opening, "timestamp": now, "confirmed": True, "disclosed_fact_ids": initial_facts, "disclosed_artifact_ids": initial_artifacts, "provider": "authored"}]}
+        if demo:
+            snapshot = case.model_dump()
+            snapshot["behavior"].pop("initial_rapport", None)
+            encounter.update(mode=DEMO_MODE, demo_snapshot=snapshot)
+        else:
+            encounter["initial_rapport"] = case.behavior.initial_rapport
+            encounter["simulated_mood"]["rapport"] = case.behavior.initial_rapport
         persist_encounter(encounter, None)
         return {"encounter_id": encounter_id, "token": token, "state": state(encounter)}
+
+    @app.post("/api/demo/encounters", status_code=201)
+    def start_demo(request: StartDemo):
+        case = demo_case(getattr(app.state.tts, "voice_id", None), request.emotion)
+        return begin_encounter(case, DEMO_ID, 1, demo=True)
 
     @app.get("/api/encounters/{encounter_id}")
     def get_encounter(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
@@ -340,7 +373,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
                 if prior["text_hash"] != digest(text):
                     raise HTTPException(409, "request_id was already used for different content.")
                 if prior.get("event_id"):
-                    return {"state": state(encounter), "patient_event": next(e for e in encounter["events"] if e["id"] == prior["event_id"]), "replayed": True}
+                    event = next(e for e in encounter["events"] if e["id"] == prior["event_id"])
+                    return {"state": state(encounter), "patient_event": public_event(event) if is_demo(encounter) else event, "replayed": True}
                 if prior["status"] == "failed":
                     # Persist a recovered lease before allowing a new explicit request.
                     try:
@@ -369,7 +403,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         try:
             case = case_snapshot(reserved)
             selector = BudgetedSelector(app.state.selector, app.state.quotas, lambda: app.state.clock() < min(reserved["deadline"], reserved["pending_turn"]["lease_until"])) if app.state.selector else None
-            answer, fact_ids, artifact_ids, provider, mood_change = reply(case, reserved, text, selector)
+            answer, fact_ids, artifact_ids, provider, mood_change = reply(case, reserved, text, selector, track_rapport=not is_demo(reserved))
         except Exception:
             abort_pending(encounter_id, nonce, "response_failed")
             raise HTTPException(502, "Patient response failed. Retry explicitly with a new request_id, or use the debrief.")
@@ -386,7 +420,9 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
             encounter["simulated_mood"] = reserved["simulated_mood"]
             n = len(encounter["events"])
             learner = {"id": f"e{n}", "actor": "learner", "text": text, "timestamp": now, "confirmed": True, "request_id": request.request_id}
-            patient = {"id": f"e{n+1}", "actor": "patient", "text": answer, "timestamp": now, "confirmed": True, "disclosed_fact_ids": fact_ids, "disclosed_artifact_ids": artifact_ids, "provider": provider, "rapport_change": mood_change}
+            patient = {"id": f"e{n+1}", "actor": "patient", "text": answer, "timestamp": now, "confirmed": True, "disclosed_fact_ids": fact_ids, "disclosed_artifact_ids": artifact_ids, "provider": provider}
+            if not is_demo(encounter):
+                patient["rapport_change"] = mood_change
             encounter["events"].extend([learner, patient])
             encounter["turn_count"] += 1
             encounter["requests"][request.request_id] = {"status": "confirmed", "text_hash": digest(text), "event_id": patient["id"]}
@@ -398,7 +434,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
                 persist_encounter(encounter, record["revision"])
             except Conflict:
                 continue
-            return {"state": state(encounter), "patient_event": patient, "replayed": False}
+            return {"state": state(encounter), "patient_event": public_event(patient) if is_demo(encounter) else patient, "replayed": False}
         abort_pending(encounter_id, nonce, "confirmation_conflict")
         raise HTTPException(409, "Could not confirm the pending turn. Retry explicitly with a new request_id.")
 
@@ -412,7 +448,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
                 encounter["status"] = "completed"
                 encounter["ended_at"] = app.state.clock()
             cancel_pending(encounter, "encounter_concluded")
-            encounter.setdefault("feedback", feedback(case_snapshot(encounter), encounter))
+            encounter.setdefault("feedback", demo_feedback(encounter) if is_demo(encounter) else feedback(case_snapshot(encounter), encounter))
             try:
                 persist_encounter(encounter, record["revision"])
             except Conflict:
@@ -431,6 +467,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
     @app.post("/api/encounters/{encounter_id}/video/start")
     def video_start(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
         encounter = encounter_record(encounter_id, auth)["payload"]
+        if is_demo(encounter):
+            raise HTTPException(409, "This nonclinical spoken demo uses audio and captions; live video is not enabled.")
         return app.state.video.start(encounter, case_snapshot(encounter))
 
     @app.post("/api/encounters/{encounter_id}/video/stop")
@@ -441,6 +479,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
     @app.post("/api/encounters/{encounter_id}/video/audio")
     def video_audio(encounter_id: str, request: SpeechRequest, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
         encounter = encounter_record(encounter_id, auth)["payload"]
+        if is_demo(encounter):
+            raise HTTPException(409, "This nonclinical spoken demo uses audio and captions; live video is not enabled.")
         return app.state.video.audio(encounter, case_snapshot(encounter), request.event_id)
 
     @app.post("/api/encounters/{encounter_id}/tts")
