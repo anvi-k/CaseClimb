@@ -36,7 +36,10 @@ class BedrockLLM:
         self.model = model or os.environ.get("CASECLIMB_GRADER_MODEL", DEFAULT_MODEL)
         self.effort = effort
         self._client = AnthropicBedrockMantle(
-            aws_region=region or os.environ.get("AWS_REGION", DEFAULT_REGION)
+            aws_region=region
+            or os.environ.get("AWS_REGION")
+            or os.environ.get("AWS_DEFAULT_REGION")
+            or DEFAULT_REGION
         )
 
     def _final_text(self, **request) -> str:
