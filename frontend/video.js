@@ -249,7 +249,11 @@ class PatientVideoRenderer {
       if (this.stillCurrent(generation) && !controller.signal.aborted && speechGeneration === this.speechGeneration && !this.needsPlayback) {
         this.stop(); this.onStatus("The live avatar could not finish this reply. Continue with ElevenLabs voice, illustration, and captions; listening stays paused until you resume it.");
       }
-      throw new Error("Live video reply did not finish. Read the captions or replay with voice.");
+      const error = new Error("Live video reply did not finish. Read the captions or replay with voice.");
+      // A local interrupt keeps the same video session and only advances its
+      // speech generation. Session failures/expiry advance the session too.
+      if (generation === this.generation && speechGeneration !== this.speechGeneration) error.kind = "video-interrupted";
+      throw error;
     } finally { signal?.removeEventListener("abort", onAbort); if (this.audioController === controller) this.audioController = null; }
   }
 

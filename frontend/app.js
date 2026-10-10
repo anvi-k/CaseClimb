@@ -785,7 +785,7 @@ async function playPatientReply(eventId, { signal, strict = false } = {}) {
   if (!app.video?.active) return playPatientAudio(eventId, { signal, strict });
   try { await app.video.speak(eventId, { signal }); }
   catch (error) {
-    if (!signal?.aborted) $("audio-status").textContent = "Video audio did not finish. Read the captions, or replay the reply after allowing playback. Voice and illustrations remain available when video ends.";
+    if (!signal?.aborted && error.kind !== "video-interrupted") $("audio-status").textContent = "Video audio did not finish. Read the captions, or replay the reply after allowing playback. Voice and illustrations remain available when video ends.";
     if (strict) throw error;
   }
 }

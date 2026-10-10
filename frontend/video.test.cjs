@@ -225,6 +225,29 @@ test("actual app and speech controller play one video reply and do not resume mi
   c.controller.stop(); f.renderer.stop();
 });
 
+test("intentionally interrupting opening video leaves status intact, while strict playback still rejects", async () => {
+  const f = fixture(); await connect(f); const c = conversationFixture(f);
+  const status = f.context.document.getElementById("audio-status"); status.textContent = "Patient voice plays through the video feed.";
+  const opening = f.context.playReply("e0"); await flush(); f.renderer.interrupt(); await opening;
+  assert.equal(status.textContent, "Patient voice plays through the video feed.");
+  assert.equal(f.renderer.active, true); assert.equal(c.recognitions.length, 0);
+  const strict = f.context.playReply("e2", { strict: true });
+  const rejected = assert.rejects(strict, (error) => error.kind === "video-interrupted");
+  await flush(); f.renderer.interrupt(); await rejected;
+  assert.equal(status.textContent, "Patient voice plays through the video feed.");
+  assert.equal(c.recognitions.length, 0); f.renderer.stop();
+});
+
+test("a real provider failure still displays the static playback warning", async () => {
+  const f = fixture(); await connect(f); conversationFixture(f);
+  const status = f.context.document.getElementById("audio-status"); status.textContent = "Patient voice plays through the video feed.";
+  const opening = f.context.playReply("e0"); await flush();
+  f.sockets[0].receive({ type: "error", source_event_id: f.packet.utterance_id, error: { message: "private-provider-detail" } }); await opening;
+  assert.match(status.textContent, /^Video audio did not finish\./);
+  assert.equal(status.textContent.includes("private-provider-detail"), false);
+  assert.equal(f.renderer.active, false);
+});
+
 test("video expiry pauses mic during reply, keeps visible text, then resumes ordinary voice only by user action", async () => {
   const f = fixture(); await connect(f); const c = conversationFixture(f);
   await c.controller.start({ consented: true }); c.recognitions[0].final("Hello"); await flush();

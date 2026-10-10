@@ -6,7 +6,7 @@
 
 The user now specifically requests ElevenLabs' native video tools. Prioritize an original synthetic patient introduction and reusable, faculty-approved reply clips generated in ElevenLabs, while keeping the ten-minute encounter, captions, and authored case engine usable during video preparation or failure. A visible illustration with voice remains a useful fallback.
 
-ElevenLabs offers both voice infrastructure and an asynchronous Image & Video API. Its native generated clips and its documented real-time integration have different contracts. The latter uses HeyGen LiveAvatar and remains optional and disabled for this project; no additional provider setup or paid API-plan upgrade is authorized by the native-video request.
+ElevenLabs offers both voice infrastructure and an asynchronous Image & Video API. Its native generated clips and its documented real-time integration have different contracts. The real-time route uses HeyGen LiveAvatar. The user subsequently authorized free account setup and a workspace-scoped key; the deployed application now uses a direct LITE Wayne sandbox driven by ElevenLabs PCM audio. A separate hosted ElevenAgent connector remains unconfigured, and no paid API-plan upgrade was performed. Actual streaming evidence is recorded in the [implementation record](implementation-and-verification-2026-10-10.md).
 
 ## Native video, Avatar library, and current access
 

@@ -80,7 +80,7 @@ def main():
     parser.add_argument("--expected-account", required=True, help="Refuse deployment to a different AWS account")
     parser.add_argument("--region", default="us-west-2")
     parser.add_argument("--stack", default="caseclimb")
-    parser.add_argument("--provider-env", help="Explicit private env file containing ELEVENLABS_API_KEY, if available")
+    parser.add_argument("--provider-env", help="Explicit private env file for ElevenLabs and optional sandbox LiveAvatar keys")
     parser.add_argument("--model-id", default="", help="Verified regional Bedrock Converse model; blank leaves authored engine")
     parser.add_argument("--voice-id", default="")
     args = parser.parse_args()
