@@ -360,6 +360,8 @@ function openDemo(profileId) {
   const supported = speechSupported(), voice = !!app.status?.tts_available;
   $("demo-speak").disabled = !selectedDemoProfile() || !supported || !voice;
   $("demo-type").disabled = !selectedDemoProfile();
+  $("demo-video-option").hidden = !app.status?.demo_video_available;
+  $("demo-video").checked = false;
   $("demo-availability").textContent = !supported ? "Speech recognition is unavailable in this browser. Open this app in Chrome for spoken turns, or start with typing." : !voice ? "Voice is unavailable in this environment. Start with typing and visible replies." : "The microphone listens between replies. Chrome supports browser speech recognition; you can stop at any time.";
   $("demo-dialog").showModal();
 }
@@ -371,6 +373,7 @@ async function startDemo(spoken) {
   }
   const profile = selectedDemoProfile();
   if (!profile) { message("demo-error", "Choose a conversation profile before starting.", "error"); return; }
+  const withVideo = !!app.status?.demo_video_available && $("demo-video").checked;
   const controller = new AbortController(); app.demoStarting = controller;
   const generation = ++app.demoGeneration;
   setBusy($("demo-speak"), true, "Opening conversation…"); setBusy($("demo-type"), true, "Opening conversation…");
@@ -381,10 +384,16 @@ async function startDemo(spoken) {
     cleanupEncounter(); app.encounterToken = result.token; app.audioEnabled = !!result.state.tts_available;
     $("turn-text").value = ""; $("feedback-panel").hidden = true; message("encounter-message", "");
     updateEncounter(result.state); createLiveConversation();
+    const encounterId = app.encounter.encounter_id, token = app.encounterToken;
     app.demoStarting = null; $("demo-dialog").close(); setView("encounter");
     app.timer = setInterval(tickTimer, 1000); tickTimer();
+    if (withVideo && app.encounter.video_available) await startPatientVideo({ playOpening: false });
+    if (generation !== app.demoGeneration || app.encounter?.encounter_id !== encounterId || app.encounterToken !== token || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
     if (spoken) await app.conversation.start({ consented: true, openingReply: latestPatient() });
-    else { renderLiveConversation({ state: "off", reason: "typed-start", enabled: false }); $("turn-text").focus(); }
+    else {
+      renderLiveConversation({ state: "off", reason: "typed-start", enabled: false }); $("turn-text").focus();
+      if (withVideo && app.video?.active && latestPatient()) await playPatientReply(latestPatient().id);
+    }
   } catch (error) { if (!controller.signal.aborted && generation === app.demoGeneration) message("demo-error", error.message, "error"); }
   finally {
     if (app.demoStarting === controller) app.demoStarting = null;
@@ -398,10 +407,10 @@ function createLiveConversation() {
   app.conversation = new LiveSpeechConversation({
     createRecognition: () => new (window.SpeechRecognition || window.webkitSpeechRecognition)(),
     availability: () => ({ sessionActive: app.encounter?.status === "active" && remainingSeconds() > 0 && app.encounter.confirmed_turns < app.encounter.max_turns,
-      recognition: speechSupported(), voice: !!app.encounter?.tts_available && app.audioEnabled, busy: app.sending || !!app.encounter?.pending_turn }),
+      recognition: speechSupported(), voice: !!app.encounter?.tts_available && (app.audioEnabled || !!app.video?.active), busy: app.sending || !!app.video?.starting || !!app.encounter?.pending_turn }),
     sendFinal: (text, { requestId, signal }) => submitEncounterTurn(text, { requestId, signal, live: true }),
-    speakReply: (reply, { signal }) => playPatientAudio(reply.id, { signal, strict: true }),
-    stopPlayback: stopAudio, onState: renderLiveConversation,
+    speakReply: (reply, { signal }) => playPatientReply(reply.id, { signal, strict: true }),
+    stopPlayback: () => { stopAudio(); app.video?.interrupt(); }, onState: renderLiveConversation,
     onTranscript: ({ text, final }) => {
       $("live-caption").textContent = text ? `${final ? "You said" : "Listening"}: ${text}` : "";
       $("live-caption").hidden = !text;
@@ -429,7 +438,7 @@ function renderLiveConversation({ state, reason, enabled }) {
   };
   $("live-state").textContent = labels[state] || "Listening paused";
   $("live-state").dataset.state = state;
-  const fallback = !speechSupported() ? reasons["recognition-unavailable"] : !app.encounter?.tts_available || !app.audioEnabled ? reasons["voice-unavailable"] : "";
+  const fallback = !speechSupported() ? reasons["recognition-unavailable"] : !app.encounter?.tts_available || !(app.audioEnabled || app.video?.active) ? reasons["voice-unavailable"] : "";
   $("live-status").textContent = fallback || reasons[reason] || ({ starting: "Waiting for the microphone. Your browser may ask for permission.", listening: "Speak, then pause. Your final phrase sends automatically; captions stay visible.", submitting: "Microphone paused while the server prepares a reply.", speaking: "Microphone paused while the character speaks. Listening resumes when audio ends." })[state] || "Listening is paused. Type a message or choose Resume listening.";
   $("live-toggle").textContent = enabled ? "Pause conversation" : "Resume listening";
   $("live-toggle").disabled = app.encounter?.status !== "active" || remainingSeconds() <= 0 || !speechSupported() || !app.encounter?.tts_available || app.sending || !!app.encounter?.pending_turn;
@@ -501,6 +510,7 @@ async function tickTimer() {
   const seconds = app.encounter.status === "active" ? remainingSeconds() : 0;
   $("encounter-timer").textContent = `${String(Math.floor(seconds / 60)).padStart(2, "0")}:${String(seconds % 60).padStart(2, "0")}`;
   $("timer-box").classList.toggle("urgent", seconds <= 60);
+  if (app.video?.active && app.video.sandbox) $("video-countdown").textContent = `${Math.ceil(app.video.remaining())}s video preview left`;
   if (seconds || app.encounter.status !== "active" || app.expiryRefreshing) return;
   clearInterval(app.timer); app.timer = null;
   app.expiryRefreshing = true; app.conversation?.sessionEnded(); stopAudio(); stopDictation(); app.video?.stop();
@@ -589,8 +599,9 @@ async function submitEncounterTurn(text, { requestId, signal, live = false } = {
     app.pendingTurn = null; $("turn-text").value = "";
     updateEncounter(result.state);
     if (result.patient_event && app.encounter.status === "active") {
-      if (app.video?.active) app.video.speak(result.patient_event.id);
-      else if (app.audioEnabled && !live) playPatientAudio(result.patient_event.id);
+      // Spoken turns are played exactly once by the speech controller, which
+      // waits for the chosen audio/video transport to finish before listening.
+      if (!live && (app.video?.active || app.audioEnabled)) await playPatientReply(result.patient_event.id, { signal: operation.signal });
     }
     return result.patient_event || null;
   } catch (error) {
@@ -732,25 +743,28 @@ function renderVoiceControls() {
 
 function renderPresentationLabel() {
   const person = isConversationDemo() ? "avatar" : "patient";
-  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? "Live rendered video · stored replies" : app.audioEnabled ? `Illustrated ${person} · voice on` : `Illustrated ${person} · captions`;
+  $("patient-scene").querySelector(".scene-label").textContent = app.video?.visual ? app.video.sandbox ? "Wayne live video · shared demo face" : "Live avatar · ElevenLabs voice" : app.audioEnabled ? `Illustrated ${person} · voice on` : `Illustrated ${person} · captions`;
 }
 
 function renderVideoControls() {
   const active = app.encounter?.status === "active" && remainingSeconds() > 0;
   const videoBusy = !!(app.video?.active || app.video?.starting);
   $("enable-video").closest(".video-controls").hidden = !app.encounter?.video_available && !videoBusy && !app.videoAttempted;
-  $("enable-video").textContent = videoBusy ? "Turn off video" : "Enable video patient";
+  const sandbox = !!app.encounter?.video_sandbox?.enabled;
+  $("enable-video").textContent = videoBusy ? "Turn off video" : sandbox ? "Try live video · 60 seconds" : "Enable video patient";
   $("enable-video").disabled = !active || (!videoBusy && (!app.encounter?.video_available || app.videoAttempted));
   $("allow-video-playback").hidden = !active || !app.video?.needsPlayback;
   $("video-stage").hidden = !app.video?.visual;
+  $("video-countdown").hidden = !app.video?.active || !app.video?.sandbox;
+  if (app.video?.active && app.video.sandbox) $("video-countdown").textContent = `${Math.ceil(app.video.remaining())}s video preview left`;
   $("patient-scene").classList.toggle("video-live", !!app.video?.visual);
   renderPresentationLabel();
-  if (!videoBusy && !app.videoAttempted) $("video-status").textContent = app.encounter?.video_available ? "Video is optional. Enable it to receive a live synthetic patient feed." : "Live video is unavailable here. The illustrated patient and captions remain available.";
+  if (!videoBusy && !app.videoAttempted) $("video-status").textContent = app.encounter?.video_available ? sandbox ? "Optional 60-second Wayne live video preview. Every profile shares this rendered face; your selected profile supplies the words and ElevenLabs voice. Voice and captions continue afterward." : "Video is optional. Enable it to receive a live synthetic patient feed." : "Live video is unavailable here. The illustrated patient and captions remain available.";
 }
 
-async function startPatientVideo() {
+async function startPatientVideo({ playOpening = true } = {}) {
   if (!app.encounter?.video_available || app.videoAttempted || app.encounter.status !== "active" || remainingSeconds() <= 0) return;
-  stopAudio(); app.audioEnabled = false;
+  app.conversation?.stop(); stopAudio();
   const encounterId = app.encounter.encounter_id; const token = app.encounterToken;
   const renderer = new PatientVideoRenderer({
     request: (suffix, options) => api(`/encounters/${encounterId}${suffix}`, { ...options, token }),
@@ -758,11 +772,22 @@ async function startPatientVideo() {
     videoElement: $("patient-video"), audioContainer: $("video-audio"),
     onAttempt: () => { if (app.video === renderer) app.videoAttempted = true; },
     onStatus: (text) => { if (app.video === renderer) $("video-status").textContent = text; },
-    onChange: () => { if (app.video === renderer) { renderVoiceControls(); renderVideoControls(); } },
+    onChange: () => { if (app.video === renderer) { renderVoiceControls(); renderVideoControls(); if (app.conversation) renderLiveConversation(app.conversation); } },
   });
   app.video = renderer;
   await renderer.start();
-  if (app.video === renderer && renderer.active && latestPatient()) renderer.speak(latestPatient().id);
+  if (app.video === renderer && renderer.active && latestPatient() && playOpening) await playPatientReply(latestPatient().id);
+}
+
+// A reply has one audible path. Never send it to the live avatar and to an MP3
+// player simultaneously, and never resolve merely because audio was submitted.
+async function playPatientReply(eventId, { signal, strict = false } = {}) {
+  if (!app.video?.active) return playPatientAudio(eventId, { signal, strict });
+  try { await app.video.speak(eventId, { signal }); }
+  catch (error) {
+    if (!signal?.aborted) $("audio-status").textContent = "Video audio did not finish. Read the captions, or replay the reply after allowing playback. Voice and illustrations remain available when video ends.";
+    if (strict) throw error;
+  }
 }
 
 function stopAudio() {
@@ -819,9 +844,10 @@ function requestVoiceConsent(mode) {
     $("voice-dialog-description").textContent = "Each patient reply can be sent to ElevenLabs for speech generation. Only the stored patient reply is spoken. You can stop playback or disable voice at any point.";
     $("voice-confirm").textContent = "Enable patient voice";
   } else if (mode === "video") {
-    $("voice-dialog-title").textContent = "Enable the video patient";
-    $("voice-dialog-description").textContent = "Stored patient replies are sent to ElevenLabs for speech, then the resulting audio is sent to LiveAvatar to render synchronized video. Your browser connects to the provider's LiveKit video room. This sends no webcam or microphone feed. Video ends with this encounter; captions remain available if it fails.";
-    $("voice-confirm").textContent = "Enable video patient";
+    const sandbox = !!app.encounter?.video_sandbox?.enabled;
+    $("voice-dialog-title").textContent = sandbox ? "Try live video with Wayne" : "Enable the video patient";
+    $("voice-dialog-description").textContent = `${sandbox ? "This free preview lasts up to 60 seconds and uses the same Wayne face for every profile. Your selected profile still supplies the words and voice. " : ""}Stored replies go to ElevenLabs for speech, then that audio goes to LiveAvatar for synchronized live video. Your browser receives the provider's LiveKit video and audio; no webcam or microphone feed goes to the video provider. ${sandbox ? "Afterward, continue with ElevenLabs voice, the profile's illustration, and captions." : "Video ends with this encounter; voice and captions remain available if it fails."}`;
+    $("voice-confirm").textContent = sandbox ? "Start 60-second video preview" : "Enable video patient";
   } else if (mode === "conversation") {
     $("voice-dialog-title").textContent = "Resume spoken conversation";
     $("voice-dialog-description").textContent = "Your browser requests microphone access and may transmit microphone audio to its speech recognition service. Final recognized phrases automatically send to this nonclinical encounter. ElevenLabs generates the character's voice; the microphone pauses during each reply. Captions remain visible. No webcam is used.";
@@ -1156,10 +1182,10 @@ $("enable-audio").addEventListener("click", () => {
   if (app.audioEnabled) { app.conversation?.stop(); app.audioEnabled = false; stopAudio(); renderVoiceControls(); }
   else requestVoiceConsent("audio");
 });
-$("play-response").addEventListener("click", () => { app.conversation?.stop(); if (latestPatient()) { if (app.video?.active) app.video.speak(latestPatient().id); else playPatientAudio(latestPatient().id); } });
+$("play-response").addEventListener("click", () => { app.conversation?.stop(); if (latestPatient()) playPatientReply(latestPatient().id); });
 $("stop-audio").addEventListener("click", () => { app.conversation?.stop(); stopAudio(); app.video?.interrupt(); $("audio-status").textContent = "Response stopped. Continue reading the captions."; });
 $("enable-video").addEventListener("click", () => {
-  if (app.video?.active || app.video?.starting) { app.video.stop(); $("video-status").textContent = "Video stopped. A new video session cannot be started in this encounter. Continue with captions or enable audio-only playback."; }
+  if (app.video?.active || app.video?.starting) { app.conversation?.stop(); app.video.stop(); $("video-status").textContent = "Video stopped. A new video session cannot be started in this encounter. Continue with your profile's ElevenLabs voice, illustration, and captions; choose Resume listening when ready."; }
   else requestVoiceConsent("video");
 });
 $("allow-video-playback").addEventListener("click", () => app.video?.allowPlayback());

@@ -99,6 +99,13 @@ def main():
     provider = read_env(args.provider_env)
     if provider.get("ELEVENLABS_API_KEY"):
         runtime["ELEVENLABS_API_KEY"] = provider["ELEVENLABS_API_KEY"]
+    # Video is optional and sandbox-only in this workshop deployment. Never
+    # change an existing disabled configuration into billable video implicitly.
+    video_key = provider.get("LIVEAVATAR_API_KEY", "")
+    video_sandbox = provider.get("CASECLIMB_LIVEAVATAR_SANDBOX", "false")
+    if video_key and video_sandbox != "true":
+        raise RuntimeError("Workshop deployment only supports explicitly enabled LiveAvatar sandbox")
+    video_avatar = "dd73ea75-1218-4ef3-92ce-606d5f7fbc0a" if video_key else ""
     private_write(env_file, "".join(f"{key}={value}\n" for key, value in runtime.items()))
     archive = ROOT / ".private" / "caseclimb-lambda.zip"
     if not archive.exists():
@@ -110,9 +117,12 @@ def main():
     key = f"packages/{package_hash}.zip"
     aws_session.client("s3").upload_file(str(archive), bucket, key, ExtraArgs={"ServerSideEncryption": "AES256"})
     parameters = {"ArtifactBucket": bucket, "ArtifactKey": key, "AdminToken": runtime["CASECLIMB_ADMIN_TOKEN"], "StudentCode": runtime["CASECLIMB_STUDENT_CODE"], "AppPassword": runtime["CASECLIMB_APP_PASSWORD"], "SessionSecret": runtime["CASECLIMB_SESSION_SECRET"], "ElevenLabsKey": runtime.get("ELEVENLABS_API_KEY", ""), "VoiceId": args.voice_id, "BedrockModelId": args.model_id}
+    parameters.update(LiveAvatarKey=video_key, LiveAvatarId=video_avatar,
+                      LiveAvatarSandbox="true" if video_key else "false")
     stack = upsert_stack(cf, args.stack, json.loads((ROOT / "infra" / "stack.json").read_text()), [{"ParameterKey": k, "ParameterValue": v} for k, v in parameters.items()], ["CAPABILITY_IAM"])
     outputs = {item["OutputKey"]: item["OutputValue"] for item in stack["Outputs"]}
     record = {"stack": args.stack, "account": identity["Account"], "region": args.region, "outputs": outputs, "artifact_bucket": bucket, "package_sha256": package_hash, "bedrock_model_id": args.model_id, "elevenlabs_configured": bool(runtime.get("ELEVENLABS_API_KEY")), "deployed_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+    record["liveavatar_sandbox_configured"] = bool(video_key)
     private_write(ROOT / ".private" / "deployment.json", json.dumps(record, indent=2) + "\n")
     private_write(ROOT / ".private" / "app-access.md", f"# CaseClimb private access\n\nLive app: {outputs['ApiUrl']}/web/\n\nShared entrance password: `{runtime['CASECLIMB_APP_PASSWORD']}`\n\nStudent practice code: `{runtime['CASECLIMB_STUDENT_CODE']}`\n\nFaculty Studio access token: `{runtime['CASECLIMB_ADMIN_TOKEN']}`\n\nThese values are private. Share the entrance password and student code only with intended demo participants. Keep the faculty token with case reviewers. This file is ignored by Git.\n")
     print(f"Deployed: {outputs['ApiUrl']}")

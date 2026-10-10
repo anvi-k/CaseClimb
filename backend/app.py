@@ -24,7 +24,7 @@ from .models import Approval, CaseDraft, SpeechRequest, StartEncounter, Turn
 from .providers import BedrockSelector, ElevenLabsTTS, speech_plan
 from .quotas import BudgetedSelector, Quotas
 from .store import Conflict, configured_store
-from .video import LiveAvatarClient, VideoService
+from .video import LiveAvatarClient, SANDBOX_AVATAR_ID, VideoService
 
 CAP_SECONDS = 600
 MAX_TURNS = 60
@@ -51,9 +51,10 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         app.state.tts = ElevenLabsTTS(os.environ["ELEVENLABS_API_KEY"], os.getenv("CASECLIMB_VOICE_ID"))
     if debrief_selector is None and os.getenv("CASECLIMB_DEBRIEF_MODEL_ID"):
         app.state.debrief_selector = BedrockDebriefSelector(os.environ["CASECLIMB_DEBRIEF_MODEL_ID"])
-    if liveavatar is None and os.getenv("LIVEAVATAR_API_KEY") and os.getenv("LIVEAVATAR_AVATAR_ID"):
-        liveavatar = LiveAvatarClient(os.environ["LIVEAVATAR_API_KEY"], os.environ["LIVEAVATAR_AVATAR_ID"])
-    app.state.video = VideoService(app.state.store, app.state.clock, app.state.quotas, liveavatar, app.state.tts)
+    video_sandbox = os.getenv("CASECLIMB_LIVEAVATAR_SANDBOX", "").lower() == "true"
+    if liveavatar is None and os.getenv("LIVEAVATAR_API_KEY") and (os.getenv("LIVEAVATAR_AVATAR_ID") or video_sandbox):
+        liveavatar = LiveAvatarClient(os.environ["LIVEAVATAR_API_KEY"], os.getenv("LIVEAVATAR_AVATAR_ID", SANDBOX_AVATAR_ID), sandbox=video_sandbox)
+    app.state.video = VideoService(app.state.store, app.state.clock, app.state.quotas, liveavatar, app.state.tts, sandbox=video_sandbox)
 
     def admin(auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
         configured = os.getenv("CASECLIMB_ADMIN_TOKEN")
@@ -216,7 +217,8 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
         }
         result["mode"] = encounter.get("mode", "clinical_practice")
         if is_demo(encounter):
-            result.update(events=[public_event(e) for e in encounter["events"]], chart={"facts": [], "artifacts": []}, video_available=False,
+            result.update(events=[public_event(e) for e in encounter["events"]], chart={"facts": [], "artifacts": []},
+                          video_available=app.state.video.available(case, demo=True), video_sandbox=app.state.video.sandbox_metadata(),
                           conversation_prompts=list(encounter.get("conversation_prompts", DEMO_PROMPTS)),
                           conversation_profile=copy.deepcopy(encounter.get("conversation_profile", public_profile())), assessment_notice=DEMO_NOTICE,
                           simulated_mood={"mood": encounter["simulated_mood"]["mood"], "label": "Preset fictional delivery; no learner score"})
@@ -230,7 +232,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
 
     @app.get("/api/status")
     def status():
-        return {"status": "ok", "storage": os.getenv("CASECLIMB_STORE", "file"), "app_access_required": app.state.access.required, "faculty_access_configured": bool(os.getenv("CASECLIMB_ADMIN_TOKEN")), "student_access_required": True, "student_access_configured": bool(os.getenv("CASECLIMB_STUDENT_CODE")), "bedrock_configured": app.state.selector is not None, "debrief_configured": app.state.debrief_selector is not None, "tts_configured": app.state.tts is not None, "tts_available": app.state.tts is not None and app.state.quotas.remaining("tts_characters") > 0, "video_configured": app.state.video.client is not None, "video_available": app.state.video.available(), "encounter_seconds": CAP_SECONDS, "max_turns": MAX_TURNS, "synthetic_only": True, "budgets_remaining": {name: app.state.quotas.remaining(name) for name in app.state.quotas.limits}, "budget_notice": "Finite workshop lifetime quotas. Reserved unsuccessful provider attempts count; use authored text/captions when exhausted."}
+        return {"status": "ok", "storage": os.getenv("CASECLIMB_STORE", "file"), "app_access_required": app.state.access.required, "faculty_access_configured": bool(os.getenv("CASECLIMB_ADMIN_TOKEN")), "student_access_required": True, "student_access_configured": bool(os.getenv("CASECLIMB_STUDENT_CODE")), "bedrock_configured": app.state.selector is not None, "debrief_configured": app.state.debrief_selector is not None, "tts_configured": app.state.tts is not None, "tts_available": app.state.tts is not None and app.state.quotas.remaining("tts_characters") > 0, "video_configured": app.state.video.client is not None, "video_available": app.state.video.available(), "demo_video_available": app.state.video.available(demo=True), "video_sandbox": app.state.video.sandbox_metadata(), "encounter_seconds": CAP_SECONDS, "max_turns": MAX_TURNS, "synthetic_only": True, "budgets_remaining": {name: app.state.quotas.remaining(name) for name in app.state.quotas.limits}, "budget_notice": "Finite workshop lifetime quotas. Reserved unsuccessful provider attempts count; use authored text/captions when exhausted."}
 
     @app.get("/api/library")
     def library():
@@ -476,9 +478,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
     @app.post("/api/encounters/{encounter_id}/video/start")
     def video_start(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
         encounter = encounter_record(encounter_id, auth)["payload"]
-        if is_demo(encounter):
-            raise HTTPException(409, "This nonclinical spoken demo uses audio and captions; live video is not enabled.")
-        return app.state.video.start(encounter, case_snapshot(encounter))
+        return app.state.video.start(encounter, case_snapshot(encounter), demo=is_demo(encounter))
 
     @app.post("/api/encounters/{encounter_id}/video/stop")
     def video_stop(encounter_id: str, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
@@ -488,9 +488,7 @@ def create_app(store=None, clock=None, selector=None, tts=None, liveavatar=None,
     @app.post("/api/encounters/{encounter_id}/video/audio")
     def video_audio(encounter_id: str, request: SpeechRequest, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):
         encounter = encounter_record(encounter_id, auth)["payload"]
-        if is_demo(encounter):
-            raise HTTPException(409, "This nonclinical spoken demo uses audio and captions; live video is not enabled.")
-        return app.state.video.audio(encounter, case_snapshot(encounter), request.event_id)
+        return app.state.video.audio(encounter, case_snapshot(encounter), request.event_id, demo=is_demo(encounter))
 
     @app.post("/api/encounters/{encounter_id}/tts")
     def speech(encounter_id: str, request: SpeechRequest, auth: HTTPAuthorizationCredentials | None = Depends(bearer)):

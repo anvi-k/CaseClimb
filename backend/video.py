@@ -11,10 +11,15 @@ from fastapi import HTTPException
 from .store import Conflict
 from .providers import ElevenLabsTTS, speech_plan
 
+SANDBOX_AVATAR_ID = "dd73ea75-1218-4ef3-92ce-606d5f7fbc0a"
+SANDBOX_SECONDS = 60
+SANDBOX_NOTICE = "LiveAvatar Wayne sandbox lasts up to 60 seconds. All profiles share Wayne's rendered face; the selected fictional profile controls authored words and its ElevenLabs stock voice. Continue with voice and captions after video ends."
+
 
 class LiveAvatarClient:
-    def __init__(self, key, avatar_id, client=None):
-        self.key, self.avatar_id, self.client = key, str(uuid.UUID(avatar_id)), client
+    def __init__(self, key, avatar_id, client=None, *, sandbox=False):
+        self.sandbox = bool(sandbox)
+        self.key, self.avatar_id, self.client = key, str(uuid.UUID(SANDBOX_AVATAR_ID if self.sandbox else avatar_id)), client
 
     def _post(self, path, *, token=None, body=None, timeout=5):
         transport = self.client or httpx
@@ -24,8 +29,14 @@ class LiveAvatarClient:
         return response.json().get("data")
 
     def prepare(self, duration, avatar_id=None):
-        avatar = str(uuid.UUID(avatar_id)) if avatar_id else self.avatar_id
-        result = self._post("token", body={"mode": "LITE", "avatar_id": avatar, "video_settings": {"quality": "low", "encoding": "H264"}, "max_session_duration": duration})
+        # Sandbox is a server configuration, never a per-request choice. Its
+        # fixed supported avatar and cap cannot be overridden by an authored case.
+        avatar = SANDBOX_AVATAR_ID if self.sandbox else str(uuid.UUID(avatar_id)) if avatar_id else self.avatar_id
+        duration = min(SANDBOX_SECONDS, duration) if self.sandbox else duration
+        body = {"mode": "LITE", "avatar_id": avatar, "video_settings": {"quality": "low", "encoding": "H264"}, "max_session_duration": duration}
+        if self.sandbox:
+            body["is_sandbox"] = True
+        result = self._post("token", body=body)
         if not result or not result.get("session_id") or not result.get("session_token"):
             raise ValueError("Video token response incomplete")
         return result
@@ -44,10 +55,20 @@ class LiveAvatarClient:
 
 
 class VideoService:
-    def __init__(self, store, clock, quotas, client, tts):
+    def __init__(self, store, clock, quotas, client, tts, *, sandbox=False):
         self.store, self.clock, self.quotas, self.client, self.tts = store, clock, quotas, client, tts
+        self.sandbox = bool(sandbox)
 
-    def available(self, case=None):
+    @property
+    def sandbox_enabled(self):
+        return self.sandbox and bool(getattr(self.client, "sandbox", False))
+
+    def sandbox_metadata(self):
+        return {"enabled": self.sandbox_enabled, "avatar_name": "Wayne", "max_seconds": SANDBOX_SECONDS, "notice": SANDBOX_NOTICE}
+
+    def available(self, case=None, *, demo=False):
+        if demo and not self.sandbox_enabled:
+            return False
         voice = not isinstance(self.tts, ElevenLabsTTS) or bool((case.voice_id if case else None) or self.tts.voice_id)
         return self.client is not None and self.tts is not None and hasattr(self.tts, "speak_pcm") and voice and self.quotas.remaining("video_sessions") > 0 and self.quotas.remaining("video_minutes") > 0
 
@@ -59,10 +80,15 @@ class VideoService:
         return {"status": record["payload"]["status"], "deadline": record["payload"].get("deadline")} if record else {"status": "off"}
 
     def private_credentials(self, video):
-        return {"status": "active", "video_id": video["session_id"], "livekit_url": video["livekit_url"], "livekit_client_token": video["livekit_client_token"], "ws_url": video["ws_url"], "deadline": video["deadline"]}
+        result = {"status": "active", "video_id": video["session_id"], "livekit_url": video["livekit_url"], "livekit_client_token": video["livekit_client_token"], "ws_url": video["ws_url"], "deadline": video["deadline"]}
+        if video.get("sandbox"):
+            result.update(sandbox=True, avatar_name="Wayne", max_seconds=SANDBOX_SECONDS)
+        return result
 
-    def start(self, encounter, case):
+    def start(self, encounter, case, *, demo=False):
         eid = encounter["id"]
+        if demo and not self.sandbox_enabled:
+            raise HTTPException(409, "Live video in this nonclinical demo requires the explicitly configured free Wayne sandbox. Continue with voice and captions.")
         if encounter["status"] != "active" or self.clock() >= encounter["deadline"]:
             raise HTTPException(409, "Video cannot start after the encounter ends.")
         prior = self._get(eid)
@@ -73,14 +99,15 @@ class VideoService:
             if video["status"] == "starting" and self.clock() >= video["lease_until"]:
                 self.stop(eid, "SERVER_ERROR")
             raise HTTPException(409, "A video start was already attempted for this encounter. Use text/voice if unavailable.")
-        if not self.available(case):
+        if not self.available(case, demo=demo):
             raise HTTPException(503, "Video provider is not configured or the workshop allowance is exhausted. Use text/voice.")
         # Both provider HTTP calls have bounded timeouts. Reserve a startup margin
         # so the provider's own maximum duration also fits the encounter deadline.
-        duration = min(600, int(encounter["deadline"] - self.clock()) - 30)
+        sandbox = bool(getattr(self.client, "sandbox", False))
+        duration = min(SANDBOX_SECONDS if sandbox else 600, int(encounter["deadline"] - self.clock()) - 30)
         if duration < 1:
             raise HTTPException(409, "Insufficient encounter time remains to start video.")
-        video = {"status": "starting", "lease_until": self.clock() + 20, "deadline": self.clock() + duration, "created_at": self.clock()}
+        video = {"status": "starting", "lease_until": self.clock() + 20, "deadline": self.clock() + duration, "created_at": self.clock(), "sandbox": sandbox}
         token = None
         try:
             reserved = self.store.put(f"video:{eid}", video, None, int(encounter["started_at"] + 86400))
@@ -91,7 +118,7 @@ class VideoService:
             self.store.put(f"video:{eid}", video, reserved["revision"], int(encounter["started_at"] + 86400))
             raise HTTPException(429, "Workshop video allowance exhausted. Use text/voice.")
         try:
-            token = self.client.prepare(duration, case.avatar_id)
+            token = self.client.prepare(duration, SANDBOX_AVATAR_ID if sandbox else case.avatar_id)
             video.update(session_id=token["session_id"], session_token=token["session_token"])
             reserved = self.store.put(f"video:{eid}", video, reserved["revision"], int(encounter["started_at"] + 86400))
             started = self.client.activate(token["session_token"])
@@ -152,7 +179,9 @@ class VideoService:
         if record and (encounter["status"] != "active" or self.clock() >= record["payload"]["deadline"] or (record["payload"]["status"] == "starting" and self.clock() >= record["payload"]["lease_until"])):
             return self.stop(encounter["id"], "MAX_DURATION_REACHED")
 
-    def audio(self, encounter, case, event_id):
+    def audio(self, encounter, case, event_id, *, demo=False):
+        if demo and not self.sandbox_enabled:
+            raise HTTPException(409, "Live video in this nonclinical demo requires the explicitly configured free Wayne sandbox. Continue with voice and captions.")
         video_record = self._get(encounter["id"])
         video = video_record["payload"] if video_record else {}
         if encounter["status"] != "active" or video.get("status") != "active" or self.clock() >= min(encounter["deadline"], video.get("deadline", 0)):

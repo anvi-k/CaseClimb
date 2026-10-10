@@ -9,6 +9,9 @@
     "AppPassword": {"Type": "String", "NoEcho": true, "MinLength": 12},
     "SessionSecret": {"Type": "String", "NoEcho": true, "MinLength": 32},
     "ElevenLabsKey": {"Type": "String", "NoEcho": true, "Default": ""},
+    "LiveAvatarKey": {"Type": "String", "NoEcho": true, "Default": ""},
+    "LiveAvatarId": {"Type": "String", "Default": "", "AllowedPattern": "[a-fA-F0-9-]*"},
+    "LiveAvatarSandbox": {"Type": "String", "Default": "false", "AllowedValues": ["true", "false"]},
     "VoiceId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9_-]*"},
     "BedrockModelId": {"Type": "String", "Default": "", "AllowedPattern": "[a-zA-Z0-9.:-]*"}
   },
@@ -60,6 +63,9 @@
           "CASECLIMB_ADMIN_TOKEN": {"Ref": "AdminToken"}, "CASECLIMB_STUDENT_CODE": {"Ref": "StudentCode"},
           "CASECLIMB_APP_PASSWORD": {"Ref": "AppPassword"}, "CASECLIMB_SESSION_SECRET": {"Ref": "SessionSecret"},
           "ELEVENLABS_API_KEY": {"Ref": "ElevenLabsKey"}, "CASECLIMB_VOICE_ID": {"Ref": "VoiceId"},
+          "LIVEAVATAR_API_KEY": {"Ref": "LiveAvatarKey"}, "LIVEAVATAR_AVATAR_ID": {"Ref": "LiveAvatarId"},
+          "CASECLIMB_LIVEAVATAR_SANDBOX": {"Ref": "LiveAvatarSandbox"},
+          "CASECLIMB_VIDEO_SESSION_BUDGET": "20", "CASECLIMB_VIDEO_MINUTE_BUDGET": "20",
           "CASECLIMB_BEDROCK_MODEL_ID": {"Ref": "BedrockModelId"},
           "CASECLIMB_DEBRIEF_MODEL_ID": {"Ref": "BedrockModelId"},
           "CASECLIMB_SESSION_BUDGET": "200", "CASECLIMB_BEDROCK_CALL_BUDGET": "300", "CASECLIMB_TTS_CHARACTER_BUDGET": "5000"

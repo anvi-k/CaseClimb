@@ -39,6 +39,7 @@ class PatientVideoRenderer {
     this.tracks = new Set(); this.generation = 0; this.speechGeneration = 0;
     this.deadline = null; this.serverAttempted = false; this.serverStopped = false; this.stopPromise = null; this.audioController = null;
     this.deadlineTimer = null; this.heartbeat = null; this.frameTimer = null;
+    this.utterance = null; this.sandbox = false; this.avatarName = ""; this.socketReadyCleanup = null;
   }
 
   changed() { this.onChange(this); }
@@ -49,8 +50,21 @@ class PatientVideoRenderer {
     this.deadline = Math.min(this.deadline || Infinity, deadline);
     if (this.active || this.starting) {
       clearTimeout(this.deadlineTimer);
-      this.deadlineTimer = setTimeout(() => { this.stop(); this.onStatus("The video session ended. Captions remain available."); }, this.remaining() * 1000);
+      this.deadlineTimer = setTimeout(() => this.endAtDeadline(), this.remaining() * 1000);
     }
+  }
+
+  endAtDeadline() {
+    this.stop();
+    this.onStatus(this.sandbox ? "The 60-second Wayne video preview ended. Continue with your selected profile's ElevenLabs voice, illustration, and captions. Choose Resume listening if it was paused." : "The video session ended. Voice, illustration, and captions remain available.");
+  }
+
+  settleUtterance(error) {
+    const utterance = this.utterance; this.utterance = null;
+    if (!utterance) return;
+    clearTimeout(utterance.timer);
+    this.speaking = false; this.changed();
+    if (error) utterance.reject(error); else utterance.resolve();
   }
 
   async start() {
@@ -66,6 +80,7 @@ class PatientVideoRenderer {
       if (!this.stillCurrent(generation)) { this.stop({ notifyServer: true }); return; }
       if (!Number.isFinite(session.deadline)) throw new Error("Missing video deadline.");
       this.deadline = session.deadline;
+      this.sandbox = session.sandbox === true; this.avatarName = this.sandbox ? "Wayne" : "";
       if (!this.stillCurrent(generation)) { this.stop(); return; }
       if (new URL(session.livekit_url).protocol !== "wss:" || new URL(session.ws_url).protocol !== "wss:") throw new Error("Invalid secure video transport.");
       const room = new sdk.Room({ adaptiveStream: true }); this.room = room;
@@ -77,12 +92,18 @@ class PatientVideoRenderer {
           this.videoElement.onloadeddata = () => {
             if (!this.stillCurrent(generation)) return;
             clearTimeout(this.frameTimer);
-            this.onStatus("Live video connected. Replies use the recorded patient response; captions remain available.");
+            this.onStatus(this.sandbox ? "Wayne live video preview connected. Your selected profile supplies the words and ElevenLabs voice; this rendered face is shared. Video lasts up to 60 seconds." : "Live video connected. Stored replies use synchronized ElevenLabs voice; captions remain available.");
           };
           this.videoElement.play().catch(() => { if (this.stillCurrent(generation)) { this.needsPlayback = true; this.changed(); } });
         } else if (track.kind === sdk.Track.Kind.Audio) {
           const element = track.attach(); element.autoplay = true;
           this.audioContainer.append(element);
+          Promise.resolve(element.play()).catch(() => {
+            if (!this.stillCurrent(generation)) return;
+            this.needsPlayback = true; this.changed();
+            this.settleUtterance(new Error("Allow video playback before replaying the reply."));
+            this.onStatus("Your browser paused video audio. Choose Allow video playback, then Replay response. Captions remain visible.");
+          });
         }
       });
       room.on(sdk.RoomEvent.TrackUnsubscribed, (track) => {
@@ -98,7 +119,10 @@ class PatientVideoRenderer {
       room.on(sdk.RoomEvent.AudioPlaybackStatusChanged, playbackChanged);
       room.on(sdk.RoomEvent.VideoPlaybackStatusChanged, playbackChanged);
       room.on(sdk.RoomEvent.Disconnected, () => {
-        if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection ended. Continue with captions and text."); }
+        if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection ended. Continue with ElevenLabs voice, illustration, and captions; choose Resume listening if it was paused."); }
+      });
+      if (sdk.RoomEvent.Reconnecting) room.on(sdk.RoomEvent.Reconnecting, () => {
+        if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection was interrupted. Continue with ElevenLabs voice and captions. Start a new encounter to try video again."); }
       });
       room.on(sdk.RoomEvent.TrackSubscriptionFailed, () => {
         if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video feed could not be received. Continue with captions."); }
@@ -111,10 +135,10 @@ class PatientVideoRenderer {
       if (!this.stillCurrent(generation)) return;
       this.active = true; this.starting = false; this.changed();
       this.onStatus("Video connected. Waiting for the patient feed…");
-      this.deadlineTimer = setTimeout(() => { this.stop(); this.onStatus("The video session ended with the encounter. Captions remain available."); }, Math.max(0, this.remaining()) * 1000);
+      this.deadlineTimer = setTimeout(() => this.endAtDeadline(), Math.max(0, this.remaining()) * 1000);
       this.frameTimer = setTimeout(() => { if (this.videoElement.readyState < 2) { this.stop(); this.onStatus("The video feed did not arrive. Continue with captions."); } }, 20000);
       this.heartbeat = setInterval(() => {
-        if (this.remaining() <= 0) { this.stop(); return; }
+        if (this.remaining() <= 0) { this.endAtDeadline(); return; }
         if (this.socket?.readyState === WebSocket.OPEN) {
           try { this.socket.send(JSON.stringify({ type: "session.keep_alive", event_id: crypto.randomUUID() })); }
           catch { this.stop(); this.onStatus("The video connection ended. Continue with captions."); }
@@ -133,22 +157,32 @@ class PatientVideoRenderer {
       const socket = new WebSocket(url); this.socket = socket;
       let ready = false;
       const timeout = setTimeout(() => reject(new Error("Video transport timed out.")), 15000);
+      this.socketReadyCleanup = () => { clearTimeout(timeout); if (!ready) reject(new Error("Video transport ended.")); };
       socket.onmessage = ({ data }) => {
         if (!this.stillCurrent(generation) || typeof data !== "string" || data.length > 1048576) return;
         let event; try { event = JSON.parse(data); } catch { return; }
-        if (event.type === "session.state_updated" && event.state === "connected") { ready = true; clearTimeout(timeout); resolve(); }
-        if (event.type === "agent.speak_started") { this.speaking = true; this.changed(); this.onStatus("The video patient is speaking. Stop response to interrupt."); }
-        if (event.type === "agent.speak_ended" || event.type === "agent.speak_interrupted") { this.speaking = false; this.changed(); this.onStatus("Patient response finished. Captions remain available."); }
+        if (event.type === "session.state_updated" && event.state === "connected") { ready = true; clearTimeout(timeout); this.socketReadyCleanup = null; resolve(); }
+        if (event.type === "session.state_updated" && event.state === "disconnected" && ready) { this.stop(); this.onStatus("The video transport ended. Continue with ElevenLabs voice, illustration, and captions."); return; }
+        // The provider's event_id identifies its response. source_event_id is
+        // the first-chunk ID that identifies OUR utterance. An old completion
+        // must never finish a later reply or reopen the learner's microphone.
+        const matched = this.utterance?.id && event.source_event_id === this.utterance.id;
+        if (event.type === "agent.speak_started" && matched) { this.speaking = true; this.changed(); this.onStatus("The live avatar is speaking with ElevenLabs voice. Stop response to interrupt."); }
+        if (event.type === "agent.speak_ended" && matched) { this.settleUtterance(); this.onStatus("Live video reply finished. Captions remain available."); }
+        if (event.type === "agent.speak_interrupted" && matched) { this.settleUtterance(new Error("Video reply interrupted.")); this.onStatus("Video reply stopped. Captions remain available."); }
         if (event.type === "error") {
           if (!ready) { clearTimeout(timeout); reject(new Error("Video renderer unavailable.")); }
-          else { this.interrupt(); this.onStatus("The video renderer could not complete this response. Continue reading the captions."); }
+          else if (!event.source_event_id || matched) { this.stop(); this.onStatus("The live avatar could not finish the reply. Continue with ElevenLabs voice, illustration, and captions; listening stays paused until you resume it."); }
         }
       };
-      socket.onerror = () => { if (!ready) { clearTimeout(timeout); reject(new Error("Video transport unavailable.")); } };
+      socket.onerror = () => {
+        if (!ready) { clearTimeout(timeout); reject(new Error("Video transport unavailable.")); }
+        else if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection failed. Continue with ElevenLabs voice and captions."); }
+      };
       socket.onclose = () => {
         clearTimeout(timeout);
         if (!ready) reject(new Error("Video transport ended."));
-        if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection ended. Continue with captions."); }
+        if (this.stillCurrent(generation)) { this.stop(); this.onStatus("The video connection ended. Continue with ElevenLabs voice, illustration, and captions; choose Resume listening if it was paused."); }
       };
     });
   }
@@ -165,6 +199,7 @@ class PatientVideoRenderer {
 
   interrupt() {
     this.speechGeneration += 1; this.audioController?.abort(); this.audioController = null;
+    this.settleUtterance(new Error("Video reply stopped."));
     if (this.socket?.readyState === WebSocket.OPEN) {
       try { this.socket.send(JSON.stringify({ type: "agent.interrupt", event_id: crypto.randomUUID() })); }
       catch { this.stop(); this.onStatus("The video connection ended. Continue with captions."); }
@@ -172,17 +207,31 @@ class PatientVideoRenderer {
     this.speaking = false; this.changed();
   }
 
-  async speak(eventId) {
-    if (!this.active || this.socket?.readyState !== WebSocket.OPEN || this.remaining() <= 0) return;
+  async speak(eventId, { signal } = {}) {
+    if (!this.active || this.socket?.readyState !== WebSocket.OPEN || this.remaining() <= 0) throw new Error("Live video is unavailable.");
+    if (this.needsPlayback) throw new Error("Allow video playback before replaying the reply.");
+    if (signal?.aborted) throw new Error("Video reply stopped.");
     this.interrupt(); const generation = this.generation; const speechGeneration = this.speechGeneration;
     const controller = new AbortController(); this.audioController = controller;
-    this.speaking = true; this.changed(); this.onStatus("Preparing the recorded patient response for video…");
+    const onAbort = () => { if (generation === this.generation && speechGeneration === this.speechGeneration) this.interrupt(); };
+    signal?.addEventListener("abort", onAbort, { once: true });
+    let resolveSpeech, rejectSpeech;
+    const finished = new Promise((resolve, reject) => { resolveSpeech = resolve; rejectSpeech = reject; });
+    // Cancellation can arrive while the HTTP audio request is pending.
+    finished.catch(() => {});
+    this.utterance = { id: null, resolve: resolveSpeech, reject: rejectSpeech, timer: null };
+    this.speaking = true; this.changed(); this.onStatus("Preparing ElevenLabs voice for the live avatar…");
     try {
       const packet = await this.request("/video/audio", { method: "POST", body: { event_id: eventId }, signal: controller.signal, timeout: 28000 });
-      if (!this.stillCurrent(generation) || speechGeneration !== this.speechGeneration) return;
+      if (!this.stillCurrent(generation) || speechGeneration !== this.speechGeneration) throw new Error("Video reply stopped.");
       this.limitDeadline(packet.deadline);
-      if (!this.stillCurrent(generation)) return;
+      if (!this.stillCurrent(generation)) throw new Error("Video reply stopped.");
       if (packet.format !== "pcm_s16le" || packet.sample_rate !== 24000 || packet.channels !== 1 || !Array.isArray(packet.chunks) || !packet.chunks.length || packet.chunks.length > 30 || typeof packet.utterance_id !== "string") throw new Error("Unexpected audio format.");
+      this.utterance.id = packet.utterance_id;
+      this.utterance.timer = setTimeout(() => {
+        if (generation !== this.generation || speechGeneration !== this.speechGeneration) return;
+        this.stop(); this.onStatus("The video reply timed out. Continue with ElevenLabs voice and captions; choose Resume listening when ready.");
+      }, Math.min(90000, this.remaining() * 1000));
       for (const chunk of packet.chunks) {
         if (typeof chunk !== "string" || chunk.length > 100000 || !/^[A-Za-z0-9+/]+={0,2}$/.test(chunk)) throw new Error("Unexpected audio chunk.");
         const bufferDeadline = Date.now() + 5000;
@@ -190,22 +239,27 @@ class PatientVideoRenderer {
           if (!this.stillCurrent(generation) || speechGeneration !== this.speechGeneration || Date.now() > bufferDeadline) throw new Error("Audio transport interrupted.");
           await new Promise((resolve) => setTimeout(resolve, 50));
         }
-        if (!this.stillCurrent(generation) || speechGeneration !== this.speechGeneration || this.socket?.readyState !== WebSocket.OPEN) return;
+        if (!this.stillCurrent(generation) || speechGeneration !== this.speechGeneration || this.socket?.readyState !== WebSocket.OPEN) throw new Error("Video reply stopped.");
         this.socket.send(JSON.stringify({ type: "agent.speak", event_id: packet.utterance_id, audio: chunk }));
       }
       this.socket.send(JSON.stringify({ type: "agent.speak_end", event_id: packet.utterance_id }));
-      this.onStatus("Patient response sent to the video renderer. Captions remain available.");
+      this.onStatus("The live avatar is preparing this reply. Listening stays paused until the video audio finishes.");
+      await finished;
     } catch {
-      if (!this.stillCurrent(generation) || controller.signal.aborted || speechGeneration !== this.speechGeneration) return;
-      this.interrupt(); this.onStatus("The patient response could not be rendered as video. Continue with captions.");
-    } finally { if (this.audioController === controller) this.audioController = null; }
+      if (this.stillCurrent(generation) && !controller.signal.aborted && speechGeneration === this.speechGeneration && !this.needsPlayback) {
+        this.stop(); this.onStatus("The live avatar could not finish this reply. Continue with ElevenLabs voice, illustration, and captions; listening stays paused until you resume it.");
+      }
+      throw new Error("Live video reply did not finish. Read the captions or replay with voice.");
+    } finally { signal?.removeEventListener("abort", onAbort); if (this.audioController === controller) this.audioController = null; }
   }
 
   stop({ notifyServer = true, keepalive = false } = {}) {
     this.generation += 1; this.speechGeneration += 1;
     this.audioController?.abort(); this.audioController = null;
+    this.settleUtterance(new Error("Video session ended."));
     clearTimeout(this.deadlineTimer); clearTimeout(this.frameTimer); clearInterval(this.heartbeat);
     this.deadlineTimer = null; this.frameTimer = null; this.heartbeat = null;
+    this.socketReadyCleanup?.(); this.socketReadyCleanup = null;
     if (this.socket) {
       this.socket.onmessage = null; this.socket.onerror = null; this.socket.onclose = null;
       try { if (this.socket.readyState === WebSocket.OPEN || this.socket.readyState === WebSocket.CONNECTING) this.socket.close(); } catch {}

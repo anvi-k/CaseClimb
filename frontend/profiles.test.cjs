@@ -79,7 +79,7 @@ test("typing starts the selected profile with its requested delivery and no micr
   context.LiveSpeechConversation = class {};
   context.appState.status = { tts_available: true };
   vm.runInContext(`
-    api = async (path, options) => { recordRequest(path, options); return { token: "scoped-demo-token", state: { tts_available: true, mode: "conversation_demo" } }; };
+    api = async (path, options) => { recordRequest(path, options); return { token: "scoped-demo-token", state: { encounter_id: "original-demo", status: "active", deadline: Date.now() / 1000 + 600, tts_available: true, mode: "conversation_demo" } }; };
     cleanupEncounter = () => {};
     updateEncounter = (state) => { app.encounter = state; };
     createLiveConversation = () => { app.conversation = { start() { throw new Error("Unexpected microphone start"); } }; };
@@ -99,4 +99,40 @@ test("unavailable profile metadata disables launch and leaves no fabricated prof
   assert.equal(context.appState.selectedDemoProfile, null);
   assert.equal(nodes.get("demo-profile-library").children.length, 0);
   assert.match(nodes.get("demo-profiles-message").textContent, /profiles are unavailable/);
+});
+
+test("live video setup requires an available sandbox and starts typed video without opening a microphone", async () => {
+  const { context, nodes, document } = fixture(); context.renderProfiles(); context.selectProfile("jordan");
+  const started = [], spoken = [];
+  context.LiveSpeechConversation = class {}; context.appState.status = { tts_available: true, demo_video_available: true };
+  document.getElementById("demo-video").checked = true;
+  context.recordVideo = (options) => started.push(options); context.recordSpoken = (id) => spoken.push(id);
+  vm.runInContext(`
+    api = async () => ({ token: "scoped-demo-token", state: { encounter_id: "original-demo", status: "active", deadline: Date.now() / 1000 + 600, tts_available: true, video_available: true, mode: "conversation_demo", events: [{ id: "e0", actor: "patient", text: "Hello." }] } });
+    cleanupEncounter = () => {}; updateEncounter = (state) => { app.encounter = state; };
+    createLiveConversation = () => { app.conversation = { start() { throw new Error("Unexpected microphone start"); } }; };
+    startPatientVideo = async (options) => { recordVideo(options); app.video = { active: true, speak: async (id) => recordSpoken(id) }; };
+    setView = () => {}; tickTimer = () => {}; renderLiveConversation = () => {};
+  `, context);
+  await context.startConversation(false);
+  assert.deepEqual(started.map((options) => JSON.parse(JSON.stringify(options))), [{ playOpening: false }]);
+  assert.deepEqual(spoken, ["e0"]); assert.equal(nodes.get("turn-text").focused, true);
+  assert.equal(nodes.get("demo-dialog").open, false);
+});
+
+test("ending or replacing an encounter while video connects cannot play an opening or start the mic", async () => {
+  const { context, document } = fixture(); context.renderProfiles();
+  let connected; const wait = new Promise((resolve) => { connected = resolve; }); let starts = 0;
+  context.LiveSpeechConversation = class {}; context.appState.status = { tts_available: true, demo_video_available: true };
+  document.getElementById("demo-video").checked = true; context.waitForVideo = () => wait; context.recordStart = () => { starts++; };
+  vm.runInContext(`
+    api = async () => ({ token: "scoped-demo-token", state: { encounter_id: "original-demo", status: "active", deadline: Date.now() / 1000 + 600, tts_available: true, video_available: true, mode: "conversation_demo", events: [{ id: "e0", actor: "patient", text: "Hello." }] } });
+    cleanupEncounter = () => {}; updateEncounter = (state) => { app.encounter = state; };
+    createLiveConversation = () => { app.conversation = { start: () => recordStart() }; };
+    startPatientVideo = async () => waitForVideo();
+    setView = () => {}; tickTimer = () => {}; renderLiveConversation = () => {};
+  `, context);
+  const starting = context.startConversation(true); await Promise.resolve(); await Promise.resolve();
+  context.appState.encounter = null; context.appState.encounterToken = ""; context.appState.demoGeneration++;
+  connected(); await starting; assert.equal(starts, 0);
 });
