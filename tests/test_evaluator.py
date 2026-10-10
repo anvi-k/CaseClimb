@@ -308,6 +308,7 @@ def test_cli_replay_writes_both_documents(tmp_path, capsys):
     ])
     assert code == 0
     assert "Rubric: 15 / 28" in capsys.readouterr().out
+    validate(json.loads((tmp_path / "ep.0001.debrief_result.json").read_text()), "debrief_result")
     evaluation = json.loads((tmp_path / "ep.0001.evaluation.json").read_text())
     graded = json.loads((tmp_path / "ep.0001.graded_episode.json").read_text())
     assert evaluation["grader"]["model"] == "replay:grader_response.json"
@@ -341,3 +342,46 @@ def test_sample_episodes_are_valid_and_differ_as_described(
     assert findings["missed_fact_ids"] == missed
     assert findings["discrepancies"][0]["contradiction_was_visible"] is contradiction_visible
     assert findings["over_time_limit"] is False
+
+
+def test_debrief_result_is_self_contained(record, episode, raw):
+    from evaluator import build_debrief_result
+
+    document = build_debrief_result(record, episode, grade(record, episode, raw))
+    validate(document, "debrief_result")
+
+    assert document["learner"]["display_name"] == "Sam"
+    assert {t["speaker"] for t in document["transcript"]} == {"patient", "learner"}
+    assert len(document["rubric"]["domains"]) == 7
+
+    # Evidence carries what the screen needs to jump to the turn.
+    lie = document["lies"][0]
+    assert lie["patient_claim"] == "I take my metformin every day."
+    assert lie["evidence"][0] == {
+        "turn_id": "t7", "quote": "I take my metformin every day.", "turn_index": 7, "speaker": "patient",
+    }
+
+    # Facts come with labels, and missed ones say what would have unlocked them.
+    assert [f["label"] for f in document["facts"]["elicited"]] == ["Thirst and urination", "Sweet tea", "HbA1c"]
+    mother = document["facts"]["missed"][0]
+    assert mother["label"] == "Mother's diabetes"
+    assert mother["unlocked_by"] == ["family history", "what worries you"]
+
+    t7 = document["transcript"][7]
+    assert t7["face"]["emotion"] == "embarrassed"
+    assert "lies.d.adherence" in t7["referenced_by"] and "debrief_questions.0" in t7["referenced_by"]
+    assert document["transcript"][5]["facts_released"] == [
+        {"fact_id": "f.sh.diet", "label": "Sweet tea", "channel": "patient"}
+    ]
+
+
+def test_committed_sample_outputs_are_current():
+    import sys
+
+    sys.path.insert(0, str(EXAMPLES.parent / "scripts"))
+    from build_sample_outputs import build
+
+    for name, document in build().items():
+        committed = json.loads((EXAMPLES / "output" / name).read_text())
+        assert committed == document, f"{name} is stale; run scripts/build_sample_outputs.py"
+        validate(committed, "debrief_result")

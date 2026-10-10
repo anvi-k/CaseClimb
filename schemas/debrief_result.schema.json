@@ -1,0 +1,426 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caseclimb.app/schemas/debrief_result.schema.json",
+  "title": "DebriefResult",
+  "description": "Everything the debrief screen shows for one graded episode, in one self-contained document. Names, fact labels, and turn positions are already resolved, so the front end needs no other file. Built by the evaluator from the patient record, the episode, and the evaluation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "episode_id",
+    "generated_at",
+    "grader",
+    "learner",
+    "patient",
+    "encounter",
+    "rubric",
+    "written_evidence",
+    "facts",
+    "lies",
+    "under_probing",
+    "objectives",
+    "behaviors",
+    "goal_progress",
+    "strengths",
+    "improvements",
+    "next_attempt_suggestions",
+    "debrief_questions",
+    "transcript"
+  ],
+  "properties": {
+    "episode_id": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "grader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": { "enum": ["ai", "faculty"] },
+        "user_id": { "type": "string" },
+        "model": { "type": "string" }
+      }
+    },
+    "learner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["participant_id", "display_name", "role"],
+      "properties": {
+        "participant_id": { "type": "string" },
+        "display_name": { "type": "string" },
+        "role": { "type": "string" }
+      }
+    },
+    "patient": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["record_id", "case_title", "name", "age", "sex", "chief_complaint"],
+      "properties": {
+        "record_id": { "type": "string" },
+        "case_title": {
+          "type": "string",
+          "description": "Faculty's name for the case. It usually gives away the diagnosis, so show it only after the encounter."
+        },
+        "name": { "type": "string" },
+        "age": { "type": "integer" },
+        "sex": { "type": "string" },
+        "chief_complaint": { "type": "string" }
+      }
+    },
+    "encounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration_seconds", "over_time_limit", "student_turn_count"],
+      "properties": {
+        "duration_seconds": { "type": ["integer", "null"] },
+        "over_time_limit": { "type": "boolean", "description": "True when the encounter ran past 10 minutes." },
+        "student_turn_count": { "type": "integer" }
+      }
+    },
+
+    "rubric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["total", "max_total", "needs_teacher_review", "review_reasons", "domains"],
+      "properties": {
+        "total": { "type": "integer", "description": "A discussion aid, not a pass/fail grade." },
+        "max_total": { "type": "integer", "description": "4 per scored domain; 28 when none are N/A." },
+        "needs_teacher_review": { "type": "boolean" },
+        "review_reasons": { "type": "array", "items": { "type": "string" } },
+        "domains": {
+          "type": "array",
+          "description": "Always all seven, in rubric order.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["domain_id", "number", "name", "score", "label", "rationale", "evidence"],
+            "properties": {
+              "domain_id": { "type": "string" },
+              "number": { "type": "integer" },
+              "name": { "type": "string" },
+              "score": {
+                "type": ["integer", "null"],
+                "minimum": 1,
+                "maximum": 4,
+                "description": "null when the domain is N/A or was not scored; show `label` instead."
+              },
+              "label": { "type": "string", "description": "Strong, Competent, Developing, Unsafe or absent, N/A, or Not scored." },
+              "rationale": { "type": "string" },
+              "evidence": { "$ref": "#/$defs/evidence_list" }
+            }
+          }
+        }
+      }
+    },
+
+    "written_evidence": {
+      "type": "object",
+      "description": "The three written points the rubric requires. These lead the debrief.",
+      "additionalProperties": false,
+      "required": ["strength", "important_gap", "safety_or_accuracy_concern"],
+      "properties": {
+        "strength": { "$ref": "#/$defs/written_point" },
+        "important_gap": { "$ref": "#/$defs/written_point" },
+        "safety_or_accuracy_concern": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["present", "text", "evidence"],
+          "properties": {
+            "present": { "type": "boolean", "description": "When false there is no concern and `text` may be empty." },
+            "text": { "type": "string" },
+            "evidence": { "$ref": "#/$defs/evidence_list" }
+          }
+        }
+      }
+    },
+
+    "checklist": {
+      "type": "object",
+      "description": "Only present when the case has a points checklist.",
+      "additionalProperties": false,
+      "required": ["checklist_id", "title", "items", "points_awarded", "points_possible"],
+      "properties": {
+        "checklist_id": { "type": "string" },
+        "title": { "type": "string" },
+        "points_awarded": { "type": "integer" },
+        "points_possible": { "type": "integer" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["item_id", "description", "points_possible", "points_awarded", "evidence", "feedback"],
+            "properties": {
+              "item_id": { "type": "string" },
+              "description": { "type": "string" },
+              "points_possible": { "type": "integer" },
+              "points_awarded": { "type": "integer" },
+              "evidence": { "$ref": "#/$defs/evidence_list" },
+              "feedback": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["elicited", "missed"],
+      "properties": {
+        "elicited": {
+          "type": "array",
+          "description": "Facts the learner earned by asking or ordering, in the order they came out.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["fact_id", "label", "value", "category", "channel", "turn_id", "turn_index", "trigger"],
+            "properties": {
+              "fact_id": { "type": "string" },
+              "label": { "type": "string" },
+              "value": { "type": "string" },
+              "category": { "type": "string" },
+              "channel": { "enum": ["patient", "chart"] },
+              "turn_id": { "type": "string" },
+              "turn_index": { "type": "integer" },
+              "trigger": { "type": "string", "description": "What the learner did that released it." }
+            }
+          }
+        },
+        "missed": {
+          "type": "array",
+          "description": "Facts the case expected the learner to find and they did not.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["fact_id", "label", "value", "category", "unlocked_by"],
+            "properties": {
+              "fact_id": { "type": "string" },
+              "label": { "type": "string" },
+              "value": { "type": "string" },
+              "category": { "type": "string" },
+              "unlocked_by": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "Topics that would have released it."
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "lies": {
+      "type": "array",
+      "description": "One per scripted discrepancy between what the patient says and the truth.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "discrepancy_id",
+          "patient_claim",
+          "truth",
+          "reveal_condition",
+          "outcome",
+          "contradiction_was_visible",
+          "evidence",
+          "feedback"
+        ],
+        "properties": {
+          "discrepancy_id": { "type": "string" },
+          "patient_claim": { "type": "string" },
+          "truth": { "type": "string" },
+          "reveal_condition": { "type": "string" },
+          "outcome": {
+            "enum": ["uncovered", "challenged_unresolved", "accepted_without_challenge", "not_raised"],
+            "description": "uncovered: the truth came out. challenged_unresolved: the learner probed but did not get there. accepted_without_challenge: the patient made the claim and the learner took it. not_raised: the topic never came up."
+          },
+          "contradiction_was_visible": {
+            "type": "boolean",
+            "description": "Whether the chart ever showed the learner evidence against the claim."
+          },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "under_probing": {
+      "type": "array",
+      "description": "Things the learner never asked about, or asked about too shallowly.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "why_it_mattered", "related_facts", "evidence"],
+        "properties": {
+          "topic": { "type": "string" },
+          "why_it_mattered": { "type": "string" },
+          "related_facts": { "type": "array", "items": { "$ref": "#/$defs/fact_card" } },
+          "evidence": { "$ref": "#/$defs/evidence_list" }
+        }
+      }
+    },
+
+    "objectives": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["objective_id", "description", "competency", "result", "evidence", "feedback"],
+        "properties": {
+          "objective_id": { "type": "string" },
+          "description": { "type": "string" },
+          "competency": { "type": "string" },
+          "result": { "enum": ["met", "partially_met", "not_met"] },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "behaviors": {
+      "type": "array",
+      "description": "What the grader looked for and whether it saw it.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["behavior", "category", "observed", "evidence", "feedback"],
+        "properties": {
+          "behavior": { "type": "string", "description": "snake_case name, e.g. open_ended_opening." },
+          "category": {
+            "enum": ["interview_structure", "communication", "empathy", "professionalism", "clinical_reasoning", "teamwork"]
+          },
+          "observed": { "type": "boolean" },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "goal_progress": {
+      "type": "array",
+      "description": "Empty when the learner has no personal goals set.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["goal_id", "description", "progress", "evidence", "feedback"],
+        "properties": {
+          "goal_id": { "type": "string" },
+          "description": { "type": "string" },
+          "progress": { "enum": ["achieved", "progressing", "not_demonstrated"] },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "strengths": { "type": "array", "items": { "type": "string" } },
+    "improvements": { "type": "array", "items": { "type": "string" } },
+    "next_attempt_suggestions": { "type": "array", "items": { "type": "string" } },
+
+    "debrief_questions": {
+      "type": "array",
+      "description": "Questions that ask the learner to reason about a moment, most important first.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "evidence"],
+        "properties": {
+          "question": { "type": "string" },
+          "evidence": { "$ref": "#/$defs/evidence_list" }
+        }
+      }
+    },
+
+    "transcript": {
+      "type": "array",
+      "description": "Every turn in order.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["turn_id", "index", "speaker", "display_name", "at", "text", "facts_released", "referenced_by"],
+        "properties": {
+          "turn_id": { "type": "string" },
+          "index": { "type": "integer" },
+          "speaker": { "enum": ["patient", "learner", "other"] },
+          "display_name": { "type": "string" },
+          "at": { "type": "string", "format": "date-time" },
+          "text": { "type": "string" },
+          "face": {
+            "type": "object",
+            "description": "What the avatar showed. Patient turns only.",
+            "additionalProperties": false,
+            "required": ["emotion"],
+            "properties": {
+              "emotion": { "type": "string" },
+              "intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+              "gestures": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "facts_released": {
+            "type": "array",
+            "description": "Facts that became visible on this turn.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["fact_id", "label", "channel"],
+              "properties": {
+                "fact_id": { "type": "string" },
+                "label": { "type": "string" },
+                "channel": { "enum": ["patient", "chart"] }
+              }
+            }
+          },
+          "referenced_by": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Sections of this document that cite the turn, as dotted paths such as 'rubric.information_gathering', 'lies.d.adherence', or 'debrief_questions.0'. Use it to highlight turns."
+          }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "evidence_list": {
+      "type": "array",
+      "description": "Where in the encounter a point comes from. May be empty when the point is that something never happened.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [{ "required": ["turn_id", "turn_index", "speaker"] }, { "required": ["location"] }],
+        "properties": {
+          "turn_id": { "type": "string" },
+          "turn_index": { "type": "integer" },
+          "speaker": { "enum": ["patient", "learner", "other"] },
+          "quote": {
+            "type": "string",
+            "description": "Exact words from that turn, checked against the transcript. Absent when only the turn is cited."
+          },
+          "location": {
+            "type": "string",
+            "description": "For evidence outside the conversation, e.g. 'handoff.assessment'."
+          }
+        }
+      }
+    },
+    "written_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "evidence"],
+      "properties": {
+        "text": { "type": "string" },
+        "evidence": { "$ref": "#/$defs/evidence_list" }
+      }
+    },
+    "fact_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fact_id", "label", "value", "category"],
+      "properties": {
+        "fact_id": { "type": "string" },
+        "label": { "type": "string" },
+        "value": { "type": "string" },
+        "category": { "type": "string" }
+      }
+    }
+  }
+}

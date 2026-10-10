@@ -3,6 +3,7 @@
 from .debrief import DebriefSession
 from .evaluate import EvaluationResult, evaluate_episode
 from .llm import BedrockLLM, ReplayLLM
+from .report import build_debrief_result
 from .rubric import load_checklist, load_rubric
 
 __all__ = [
@@ -10,6 +11,7 @@ __all__ = [
     "DebriefSession",
     "EvaluationResult",
     "ReplayLLM",
+    "build_debrief_result",
     "evaluate_episode",
     "load_checklist",
     "load_rubric",

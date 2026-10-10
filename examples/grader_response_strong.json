@@ -1,0 +1,187 @@
+{
+  "domain_scores": [
+    {
+      "domain_id": "opening_and_purpose",
+      "score": "4",
+      "rationale": "You gave your name and role, said who you work with, laid out what the visit would cover, and asked her permission before starting.",
+      "evidence": [{ "turn_id": "t0", "quote": "I'd like to hear what's been going on, look at your chart with you, and make a plan together. Does that sound all right?", "location": "" }]
+    },
+    {
+      "domain_id": "rapport_respect_empathy",
+      "score": "4",
+      "rationale": "You named her fear and asked about it, and you took the blame out of the adherence conversation before she had to defend herself. She ended the visit relieved.",
+      "evidence": [
+        { "turn_id": "t14", "quote": "You look frightened. What are you most afraid of?", "location": "" },
+        { "turn_id": "t10", "quote": "I'm not trying to catch you out.", "location": "" },
+        { "turn_id": "t21", "quote": "Thank you for not making me feel bad.", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "information_gathering",
+      "score": "4",
+      "rationale": "Open, concrete questions throughout. You asked what gets in the way of the metformin instead of whether she takes it, and that brought out both the side effects and the cost.",
+      "evidence": [
+        { "turn_id": "t4", "quote": "What do you eat and drink from morning to night?", "location": "" },
+        { "turn_id": "t10", "quote": "What gets in the way for you?", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "listening_and_cues",
+      "score": "4",
+      "rationale": "She looked away when she said the metformin was fine, and you checked the refill history instead of moving on. You also caught her fear the moment it showed.",
+      "evidence": [
+        { "turn_id": "t8", "quote": "I'm going to pull up your pharmacy refill history so I have the full picture.", "location": "" },
+        { "turn_id": "t14", "quote": "You look frightened.", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "explanation_and_shared_decisions",
+      "score": "3",
+      "rationale": "You explained what an HbA1c is before ordering it, tied the result to her symptoms, and let her set her own goal for the sweet tea. You did not ask her to say back what the 9.2 percent means, so you cannot be sure it landed.",
+      "evidence": [
+        { "turn_id": "t12", "quote": "which shows your average sugar over the last three months", "location": "" },
+        { "turn_id": "t18", "quote": "What feels doable?", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "clinical_reasoning_and_synthesis",
+      "score": "4",
+      "rationale": "You connected the high HbA1c to missed doses and sugar intake instead of to a failing drug, and your handoff note states that reasoning clearly.",
+      "evidence": [
+        { "turn_id": "t16", "quote": "That's higher than we want, and it fits with the thirst.", "location": "" },
+        { "turn_id": "", "quote": "Poor control is explained by missed doses and sugar intake.", "location": "handoff.assessment" }
+      ]
+    },
+    {
+      "domain_id": "professionalism_safety_closure",
+      "score": "4",
+      "rationale": "You stayed within your role on the medication decision, summarised who would do what, set a follow-up, and invited questions.",
+      "evidence": [
+        { "turn_id": "t18", "quote": "I'll go over the options with Dr. Chen rather than promise something specific", "location": "" },
+        { "turn_id": "t20", "quote": "What questions do you have?", "location": "" }
+      ]
+    }
+  ],
+  "written_evidence": {
+    "strength": {
+      "text": "When the refill history contradicted her, you told her what it showed, said you were not trying to catch her out, and offered two ordinary reasons people struggle with metformin. That made it safe for her to tell you the truth.",
+      "evidence": [{ "turn_id": "t10", "quote": "Metformin is hard on a lot of people's stomachs, and it isn't cheap. What gets in the way for you?", "location": "" }]
+    },
+    "important_gap": {
+      "text": "You gave her the HbA1c number and what it means but did not check her understanding. With low health literacy, asking her to tell you in her own words what the result means would confirm it.",
+      "evidence": [{ "turn_id": "t16", "quote": "Your HbA1c is 9.2 percent.", "location": "" }]
+    },
+    "safety_or_accuracy_concern": {
+      "present": false,
+      "text": "",
+      "evidence": []
+    }
+  },
+  "objective_results": [
+    {
+      "objective_id": "o.history",
+      "result": "met",
+      "evidence": [
+        { "turn_id": "t2", "quote": "When did you first notice it?", "location": "" },
+        { "turn_id": "t4", "quote": "Tell me about a typical day.", "location": "" }
+      ],
+      "feedback": "You covered symptoms and diet directly. Her family history came out because you asked about her fear, which is a good route to it, though asking about family history outright would make sure you never miss it."
+    },
+    {
+      "objective_id": "o.adherence",
+      "result": "met",
+      "evidence": [
+        { "turn_id": "t8", "quote": "I'm going to pull up your pharmacy refill history", "location": "" },
+        { "turn_id": "t11", "quote": "It tears up my stomach, and it's forty dollars I don't always have.", "location": "" }
+      ],
+      "feedback": "You checked her account against the chart and then found out why. Both halves of this objective."
+    },
+    {
+      "objective_id": "o.empathy",
+      "result": "met",
+      "evidence": [
+        { "turn_id": "t14", "quote": "What are you most afraid of?", "location": "" },
+        { "turn_id": "t16", "quote": "I'm so sorry about your mother. It makes sense that this scares you.", "location": "" }
+      ],
+      "feedback": "You stopped for her fear before giving the result, and you acknowledged her mother before moving to numbers."
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "agenda_setting",
+      "category": "interview_structure",
+      "observed": true,
+      "evidence": [{ "turn_id": "t0", "quote": "make a plan together", "location": "" }],
+      "feedback": "Clear agenda with her agreement."
+    },
+    {
+      "behavior": "noticed_contradiction",
+      "category": "clinical_reasoning",
+      "observed": true,
+      "evidence": [{ "turn_id": "t10", "quote": "It shows two fills in the last six months.", "location": "" }],
+      "feedback": "You checked the claim and raised the difference without accusation."
+    },
+    {
+      "behavior": "empathic_response",
+      "category": "empathy",
+      "observed": true,
+      "evidence": [{ "turn_id": "t14", "quote": "You look frightened.", "location": "" }],
+      "feedback": "You named the emotion you saw."
+    },
+    {
+      "behavior": "teach_back",
+      "category": "communication",
+      "observed": false,
+      "evidence": [],
+      "feedback": "You asked for questions at the end but did not ask her to explain the result or the plan back to you."
+    },
+    {
+      "behavior": "sbar.assessment",
+      "category": "teamwork",
+      "observed": true,
+      "evidence": [{ "turn_id": "", "quote": "She is frightened of dialysis and motivated to change.", "location": "handoff.assessment" }],
+      "feedback": "The handoff gives the dietitian both the clinical picture and what matters to the patient."
+    }
+  ],
+  "discrepancy_findings": [
+    {
+      "discrepancy_id": "d.adherence",
+      "outcome": "uncovered",
+      "evidence": [
+        { "turn_id": "t7", "quote": "I take my metformin every day.", "location": "" },
+        { "turn_id": "t11", "quote": "I didn't want you to think I wasn't trying.", "location": "" }
+      ],
+      "feedback": "She made the claim, you checked it, and she told you the truth once it was safe to."
+    }
+  ],
+  "under_probing": [],
+  "checklist_results": [],
+  "goal_progress": [],
+  "strengths": [
+    "Checked the refill history when her answer and her face did not match.",
+    "Asked about barriers to metformin without blame.",
+    "Responded to her fear before giving the lab result.",
+    "Let her choose her own goal for cutting sweet tea."
+  ],
+  "improvements": [
+    "Check understanding after giving a result, in her words.",
+    "Ask about family history directly as part of the history."
+  ],
+  "next_attempt_suggestions": [
+    "After explaining a number, try: \"Tell me what you'll say when your family asks what the doctor said.\""
+  ],
+  "debrief_questions": [
+    {
+      "question": "At t7 she told you \"I take my metformin every day,\" and you went to the refill history. What made you check?",
+      "evidence": [{ "turn_id": "t7", "quote": "I take my metformin every day.", "location": "" }]
+    },
+    {
+      "question": "At t10 you chose to tell her what the record showed. How did you decide what to say next, and what were you trying to avoid?",
+      "evidence": [{ "turn_id": "t10", "quote": "It shows two fills in the last six months.", "location": "" }]
+    },
+    {
+      "question": "After you gave her the HbA1c at t16, how confident are you that she understood what 9.2 percent means? What would tell you?",
+      "evidence": [{ "turn_id": "t16", "quote": "Your HbA1c is 9.2 percent.", "location": "" }]
+    }
+  ]
+}

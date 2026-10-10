@@ -10,6 +10,7 @@ from pathlib import Path
 from .debrief import DebriefSession
 from .evaluate import evaluate_episode
 from .llm import BedrockLLM, ReplayLLM
+from .report import build_debrief_result
 from .rubric import load_checklist, load_json, load_rubric
 
 
@@ -66,8 +67,9 @@ def main(argv: list[str] | None = None) -> int:
     stem = episode["episode_id"].replace(":", "_")
     _write(out / f"{stem}.evaluation.json", result.evaluation)
     _write(out / f"{stem}.graded_episode.json", result.graded_episode(episode))
+    _write(out / f"{stem}.debrief_result.json", build_debrief_result(record, episode, result))
     print(_summary(result.evaluation))
-    print(f"Wrote {out / f'{stem}.evaluation.json'} and {out / f'{stem}.graded_episode.json'}")
+    print(f"Wrote {stem}.debrief_result.json, {stem}.evaluation.json and {stem}.graded_episode.json to {out}/")
 
     if args.debrief:
         session = DebriefSession(record, episode, result.evaluation, llm)

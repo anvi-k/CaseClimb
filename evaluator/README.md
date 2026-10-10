@@ -8,6 +8,7 @@ Given a patient record and a completed episode, it produces:
 
 - **The episode's `grading` block**, matching `schemas/episode.schema.json`: elicited and missed facts, a result per learning objective, a behavior trace, strengths, improvements.
 - **An evaluation document**, matching `schemas/evaluation.schema.json`: the seven rubric domains scored 1 to 4 or N/A, the total, the three pieces of written evidence, the teacher-review flag, the optional case checklist, lies the student accepted, topics they never probed, goal progress, and opening questions for the debrief.
+- **A debrief result**, matching `schemas/debrief_result.schema.json`: the two documents above merged into one self-contained file for the debrief screen, with fact labels, turn positions, and the transcript included. This is the one the front end reads. Samples are in `examples/output/`.
 - **A debrief conversation** (`DebriefSession`) that asks the student to reason about specific moments.
 
 The model scores and explains. The code decides what it may claim:
@@ -20,13 +21,14 @@ The model scores and explains. The code decides what it may claim:
 ## Use
 
 ```python
-from evaluator import BedrockLLM, DebriefSession, evaluate_episode
+from evaluator import BedrockLLM, DebriefSession, build_debrief_result, evaluate_episode
 
 llm = BedrockLLM()
 result = evaluate_episode(record, episode, llm, checklist=None, goals=None)
 
 result.evaluation                 # rubric scores and debrief material
 result.graded_episode(episode)    # copy of the episode with `grading` filled in
+build_debrief_result(record, episode, result)   # one document for the debrief screen
 
 debrief = DebriefSession(record, episode, result.evaluation, llm)
 first = debrief.open()
