@@ -39,7 +39,7 @@ export default async function StudentHome() {
     "SELECT co.name, u.name AS faculty FROM courses co JOIN enrollments en ON en.course_id = co.id JOIN users u ON u.id = co.faculty_id WHERE en.user_id = ? ORDER BY en.created_at",
     user.id,
   );
-  // Oldest assignment first, each patient once, in the order the instructor listed them.
+  // Oldest assignment first, each patient once. Students may see them in any order.
   const assignments = studentAssignments(user.id)
     .filter((x) => !x.a.journey_id)
     .sort((x, y) => x.a.created_at.localeCompare(y.a.created_at));
@@ -60,8 +60,6 @@ export default async function StudentHome() {
     }
   }
   const doneCount = rows.filter((r) => r.done).length;
-  const nextIndex = rows.findIndex((r) => !r.done);
-  const next = nextIndex >= 0 ? rows[nextIndex] : null;
   const who = (r: Row) => (r.age === null ? r.name : `${r.name}, ${r.age}`);
 
   return (
@@ -89,27 +87,7 @@ export default async function StudentHome() {
               {doneCount} of {rows.length} visits done
             </p>
 
-            {next ? (
-              <div className="mt-7 flex flex-wrap items-center gap-7 rounded-2xl border-2 border-brand-600 bg-white p-7">
-                <Portrait src={next.portrait} name={next.name} size="h-32 w-32 !rounded-2xl text-3xl" />
-                <div className="min-w-0 flex-1">
-                  <p className="text-[15px] font-semibold text-brand-700">{next.activeId ? "In progress" : "Up next"}</p>
-                  <p className="text-[30px] font-semibold leading-snug text-slate-900">{who(next)}</p>
-                  <p className="flex items-center gap-2 text-slate-600">
-                    <Icon name="clock" />
-                    10-minute visit
-                  </p>
-                </div>
-                {next.activeId ? (
-                  <LinkButton href={visitUrl(next.activeId)} size="lg" className="!px-7 !py-3.5 !text-[19px]">
-                    <Icon name="video" />
-                    Continue visit
-                  </LinkButton>
-                ) : (
-                  <StartVisit size="lg" body={{ caseId: next.caseId, assignmentId: next.assignmentId }} />
-                )}
-              </div>
-            ) : (
+            {doneCount === rows.length && (
               <div className="mt-7 rounded-2xl border border-emerald-300 bg-emerald-50 p-7 text-emerald-900">
                 <p className="flex items-center gap-2.5 text-[26px] font-semibold">
                   <Icon name="check" />
@@ -119,41 +97,39 @@ export default async function StudentHome() {
               </div>
             )}
 
-            <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
-              <Icon name="users" className="h-7 w-7 text-brand-600" />
-              All patients
-            </h2>
-            <ul className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
-              {rows.map((r, i) => {
-                const locked = !r.done && nextIndex >= 0 && i > nextIndex;
-                return (
-                  <li key={r.caseId} className={`flex flex-wrap items-center gap-5 px-7 py-4 ${locked ? "text-slate-500" : ""}`}>
-                    {locked ? (
-                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-slate-200 text-slate-600" aria-label="Locked">
-                        <Icon name="lock" className="h-6 w-6" />
-                      </div>
-                    ) : (
-                      <Portrait src={r.portrait} name={r.name} size="h-14 w-14" />
-                    )}
-                    <div className={`min-w-0 flex-1 ${i === nextIndex ? "font-semibold" : ""}`}>{locked ? `Patient ${i + 1}` : who(r)}</div>
-                    {r.done ? (
-                      <>
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">
-                          <Icon name="check" />
-                          {r.score ? `Done · ${r.score}` : "Done"}
-                        </span>
-                        {r.lastId && (
-                          <LinkButton href={feedbackUrl(r.lastId)} variant="secondary" className="!px-4 !py-2 !text-base">
-                            See feedback
-                          </LinkButton>
-                        )}
-                      </>
-                    ) : (
-                      <span className="text-[15px] text-slate-600">{i === nextIndex ? (r.activeId ? "In progress" : "Up next") : `Opens after ${i === nextIndex + 1 && next ? next.name.split(" ")[0] : `patient ${i}`}`}</span>
-                    )}
-                  </li>
-                );
-              })}
+            <ul className="mt-7 space-y-3">
+              {rows.map((r) => (
+                <li key={r.caseId} className="flex flex-wrap items-center gap-6 rounded-2xl border border-slate-200 bg-white px-7 py-5">
+                  <Portrait src={r.portrait} name={r.name} size="h-20 w-20 text-xl" />
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[24px] font-semibold leading-snug text-slate-900">{who(r)}</p>
+                    <p className="flex items-center gap-2 text-slate-600">
+                      <Icon name="clock" />
+                      10-minute visit
+                    </p>
+                  </div>
+                  {r.done ? (
+                    <>
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">
+                        <Icon name="check" />
+                        {r.score ? `Done · ${r.score}` : "Done"}
+                      </span>
+                      {r.lastId && (
+                        <LinkButton href={feedbackUrl(r.lastId)} variant="secondary" className="!px-4 !py-2 !text-base">
+                          See feedback
+                        </LinkButton>
+                      )}
+                    </>
+                  ) : r.activeId ? (
+                    <LinkButton href={visitUrl(r.activeId)} size="lg">
+                      <Icon name="video" />
+                      Continue visit
+                    </LinkButton>
+                  ) : (
+                    <StartVisit size="lg" body={{ caseId: r.caseId, assignmentId: r.assignmentId }} />
+                  )}
+                </li>
+              ))}
             </ul>
           </>
         )}
