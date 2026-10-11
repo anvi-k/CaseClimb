@@ -17,7 +17,7 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
     return (
       <AppShell user={user}>
         <div className="mx-auto max-w-3xl">
-          <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Start a class</h1>
+          <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Start a Class</h1>
           <p className="mb-6 mt-1 text-slate-600">Name your class. You will get a join code to give your students, and then you can assign them patients.</p>
           <div className="rounded-2xl border border-slate-200 bg-white">
             <CreateCourse />

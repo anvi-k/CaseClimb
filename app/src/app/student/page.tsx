@@ -66,7 +66,7 @@ export default async function StudentHome() {
   return (
     <AppShell user={user}>
       <div className="mx-auto max-w-5xl">
-        <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Your patients</h1>
+        <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Your Patients</h1>
         {courses.length > 0 && <p className="mt-1 text-slate-600">Assigned by {courses[0].faculty} · {courses.map((c) => c.name).join(", ")}</p>}
 
         {courses.length === 0 ? (

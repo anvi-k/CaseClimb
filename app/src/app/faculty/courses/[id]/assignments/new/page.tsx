@@ -23,7 +23,7 @@ export default async function NewAssignment({ params }: { params: Promise<{ id: 
         </Link>{" "}
         / New assignment
       </div>
-      <PageHeader title="New assignment" subtitle="Ask the guide for a starting point, or fill in the form yourself. Either way you decide every setting." />
+      <PageHeader title="New Assignment" subtitle="Ask the guide for a starting point, or fill in the form yourself. Either way you decide every setting." />
       <AssignmentBuilder
         courseId={course.id}
         courseProfession={course.profession_id}

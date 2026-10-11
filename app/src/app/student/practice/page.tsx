@@ -12,7 +12,7 @@ export default async function PracticePage() {
         <Link href="/student" className="text-[15px] text-brand-700 hover:underline">
           Back to your patients
         </Link>
-        <h1 className="mt-2 text-[40px] font-semibold leading-tight text-slate-900">Practice patient</h1>
+        <h1 className="mt-2 text-[40px] font-semibold leading-tight text-slate-900">Practice Patient</h1>
         <p className="mb-8 mt-1 text-slate-600">Choose how the patient behaves. Everything else is picked for you.</p>
         <TemperamentPicker />
       </div>

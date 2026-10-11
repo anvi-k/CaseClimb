@@ -354,7 +354,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
   return (
     <div className="mx-auto max-w-4xl">
       <PageHeader
-        title="New patient"
+        title="New Patient"
         subtitle="Every route ends in the same editor, where you review and correct everything before publishing. Nothing reaches students until you publish."
         action={
           <Link href="/faculty/cases" className="text-sm text-slate-600 hover:text-slate-900">

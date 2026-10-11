@@ -5,7 +5,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
   return (
     <div className="grid min-h-full lg:grid-cols-2">
       <div className="hidden flex-col justify-between bg-brand-900 p-10 text-white lg:flex">
-        <Logo inverse />
+        <Logo large />
         <div>
           <h1 className="text-3xl font-semibold leading-tight">Practice the visit before the visit.</h1>
           <p className="mt-4 max-w-md text-brand-100">
@@ -17,7 +17,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
       <div className="flex items-center justify-center p-6">
         <div className="w-full max-w-md">
           <div className="mb-6 lg:hidden">
-            <Logo />
+            <Logo large />
           </div>
           {children}
         </div>

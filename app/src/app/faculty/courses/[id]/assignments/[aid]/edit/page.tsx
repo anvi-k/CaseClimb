@@ -27,7 +27,7 @@ export default async function EditAssignment({ params }: { params: Promise<{ id:
         </Link>{" "}
         / Edit
       </div>
-      <PageHeader title="Edit assignment" subtitle={started ? `${started} visit${started === 1 ? " has" : "s have"} already been started. Changes apply to visits started from now on.` : "Nobody has started this assignment yet."} />
+      <PageHeader title="Edit Assignment" subtitle={started ? `${started} visit${started === 1 ? " has" : "s have"} already been started. Changes apply to visits started from now on.` : "Nobody has started this assignment yet."} />
       <AssignmentBuilder
         courseId={course.id}
         courseProfession={course.profession_id}
