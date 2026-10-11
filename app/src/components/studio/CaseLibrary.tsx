@@ -160,7 +160,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
 }
 
 /** Pop-up for choosing which students get a patient. */
-function AssignDialog({ patient, onClose }: { patient: LibraryItem; onClose: () => void }) {
+export function AssignDialog({ patient, onClose }: { patient: { id: string; patient: string }; onClose: () => void }) {
   const [students, setStudents] = useState<{ id: string; name: string; assigned: boolean }[] | null>(null);
   const [picked, setPicked] = useState<Set<string>>(new Set());
   const [busy, setBusy] = useState(false);

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Icon, { type IconName } from "@/components/Icon";
 import { Button } from "@/components/ui";
+import { AssignDialog } from "./CaseLibrary";
 import { Notice, startTestVisit } from "./fields";
 
 export interface Summary {
@@ -39,6 +40,7 @@ export default function PatientSummary({ s }: { s: Summary }) {
   const router = useRouter();
   const status = s.status;
   const [busy, setBusy] = useState("");
+  const [assigning, setAssigning] = useState(false);
   const [error, setError] = useState("");
   const edit = `/faculty/cases/${s.id}?edit=1`;
 
@@ -99,9 +101,13 @@ export default function PatientSummary({ s }: { s: Summary }) {
           </div>
         </div>
         <div className="flex flex-none flex-col gap-2.5">
-          <Button size="lg" disabled={!!busy || status === "archived"} onClick={() => run("test", async () => router.push(await startTestVisit(s.id)))}>
+          <Button variant="secondary" size="lg" disabled={!!busy || status === "archived"} onClick={() => run("test", async () => router.push(await startTestVisit(s.id)))}>
             <Icon name="video" />
             {busy === "test" ? "Starting…" : "Test visit"}
+          </Button>
+          <Button size="lg" disabled={status === "archived"} onClick={() => setAssigning(true)}>
+            <Icon name="clipboard" />
+            Assign
           </Button>
         </div>
       </div>
@@ -134,6 +140,7 @@ export default function PatientSummary({ s }: { s: Summary }) {
         )}
       </div>
 
+      {assigning && <AssignDialog patient={{ id: s.id, patient: s.name }} onClose={() => setAssigning(false)} />}
       <p className="mt-7">
         <Link href={edit} className="inline-flex items-center gap-1.5 text-[15px] font-medium text-brand-700 hover:underline">
           Edit all details
