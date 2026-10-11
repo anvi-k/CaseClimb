@@ -118,7 +118,12 @@ export default async function StudentHome() {
                 return (
                   <li key={r.caseId} className={`flex flex-wrap items-center gap-5 px-7 py-4 ${locked ? "text-slate-500" : ""}`}>
                     {locked ? (
-                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-slate-200 text-xl text-slate-600">{i + 1}</div>
+                      <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-slate-200 text-slate-600" aria-label="Locked">
+                        <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <rect x="5" y="11" width="14" height="9" rx="2" />
+                          <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+                        </svg>
+                      </div>
                     ) : (
                       <Portrait src={r.portrait} name={r.name} size="h-14 w-14" />
                     )}
