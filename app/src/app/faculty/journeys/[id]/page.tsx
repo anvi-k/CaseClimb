@@ -73,7 +73,7 @@ export default async function FacultyJourney({ params }: { params: Promise<{ id:
                       <p className="mt-2 text-sm text-slate-700">{ev.summary}</p>
                       <details className="mt-2">
                         <summary className="cursor-pointer text-xs font-medium text-brand-700">Behaviours not observed, with evidence location and feedback</summary>
-                        <ul className="mt-2 space-y-1.5 text-[13px]">
+                        <ul className="mt-2 space-y-1.5 text-[14px]">
                           {ev.behaviours.filter((b) => b.observed === "no").map((b) => (
                             <li key={b.key} className="rounded border border-slate-200 px-2.5 py-1.5">
                               <span className="font-medium text-slate-800">{BEHAVIOURS.find((x) => x.key === b.key)?.label}</span>

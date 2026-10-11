@@ -432,3 +432,15 @@ def test_bedrock_grader_retries_with_the_validation_error(record, raw):
 
     with pytest.raises(LLMError, match="after 3 attempts"):
         Scripted(["nope"] * 3).complete_json("SYSTEM", "USER", schema)
+
+
+def test_grade_is_requested_in_two_halves(record, episode, raw):
+    llm = FakeLLM(raw)
+    evaluate_episode(record, episode, llm, now=NOW)
+
+    asked = sorted((sorted(schema["properties"]), schema["required"] == list(schema["properties"])) for _, _, schema in llm.calls)
+    assert len(llm.calls) == 2
+    assert asked[0] == (["domain_scores", "written_evidence"], True)
+    assert "domain_scores" not in asked[1][0] and "debrief_questions" in asked[1][0] and asked[1][1]
+    prompts_sent = {user.rsplit("\n\n", 1)[1] for _, user, _ in llm.calls}
+    assert len(prompts_sent) == 2  # each half is told which part it is writing

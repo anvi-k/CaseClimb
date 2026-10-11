@@ -35,6 +35,11 @@ interface VisitData {
   messages: Msg[];
 }
 
+// How long the student must stop talking before their turn is sent.
+const SILENCE_MS = 2500;
+// Goals shown in the waiting room before "Show all".
+const GOALS_SHOWN = 3;
+
 // Minimal typing for the browser speech recognition API (Chrome, Edge, Safari).
 interface SpeechRec {
   lang: string;
@@ -96,6 +101,8 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
   const [scoring, setScoring] = useState(false);
   const [lastDelta, setLastDelta] = useState(0);
   const [recTick, setRecTick] = useState(0);
+  const [endClickedAt, setEndClickedAt] = useState<number | null>(null);
+  const [allGoals, setAllGoals] = useState(false);
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const recRef = useRef<SpeechRec | null>(null);
@@ -142,8 +149,9 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
   const paused = data?.status === "paused";
   const ended = data?.status === "submitted" || data?.status === "scored";
   const utc = (t: string) => new Date(t.replace(" ", "T") + "Z").getTime();
-  // The clock does not run in the waiting room or while an instructor has the visit paused.
-  const clockNow = data?.pausedAt ? utc(data.pausedAt) : now;
+  // The clock does not run in the waiting room, while an instructor has the visit paused, or once
+  // the student has clicked End visit (it resumes if they go back to the patient).
+  const clockNow = data?.pausedAt ? utc(data.pausedAt) : endClickedAt ?? now;
   const elapsed = data && joined ? Math.max(0, Math.floor((clockNow - utc(data.startedAt)) / 1000)) : 0;
   const remaining = data?.timeLimitMin ? data.timeLimitMin * 60 - elapsed : null;
 
@@ -152,6 +160,10 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
   useEffect(() => {
     if (timeUp && joined && !ended) setWrapOpen(true);
   }, [timeUp, joined, ended]);
+  useEffect(() => {
+    if (wrapOpen) setEndClickedAt((t) => t ?? Date.now());
+    else if (!scoring && !ended) setEndClickedAt(null);
+  }, [wrapOpen, scoring, ended]);
 
   // Speech is synthesised sentence by sentence so the patient starts talking while the reply is still arriving.
   const voice = useRef<{ gen: number; queue: Promise<string | null>[]; playing: boolean }>({ gen: 0, queue: [], playing: false });
@@ -277,9 +289,11 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
     if (!Ctor) return;
     const rec = new Ctor();
     rec.lang = "en-US";
-    rec.continuous = false;
+    // Keep listening through short pauses; the turn is sent only after SILENCE_MS without speech.
+    rec.continuous = true;
     rec.interimResults = true;
     let finalText = "";
+    let quiet: ReturnType<typeof setTimeout> | null = null;
     rec.onresult = (e) => {
       let live = "";
       for (let i = e.resultIndex; i < e.results.length; i++) {
@@ -287,6 +301,8 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
         else live += e.results[i][0].transcript;
       }
       setInterim(finalText + live);
+      if (quiet) clearTimeout(quiet);
+      if ((finalText + live).trim()) quiet = setTimeout(() => rec.stop(), SILENCE_MS);
     };
     rec.onerror = (e) => {
       if (e.error === "not-allowed" || e.error === "service-not-allowed") {
@@ -295,6 +311,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
       }
     };
     rec.onend = () => {
+      if (quiet) clearTimeout(quiet);
       recRef.current = null;
       if (finalText.trim()) send(finalText);
       // Silence timed out: start listening again.
@@ -305,6 +322,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
       rec.start();
     } catch {}
     return () => {
+      if (quiet) clearTimeout(quiet);
       rec.onend = null;
       rec.abort();
       recRef.current = null;
@@ -411,11 +429,11 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
         <span className="truncate text-slate-700">
           Video visit with <span className="font-medium text-slate-900">{p.name}</span>
         </span>
-        <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[11px] font-medium text-slate-600">{MODE_LABEL[data.mode] || data.mode}</span>
-        <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[11px] text-slate-600 sm:inline">Level {data.level}</span>
-        {data.visitNumber > 1 ? <span className="hidden rounded bg-sky-100 px-1.5 py-0.5 text-[11px] font-medium text-sky-800 sm:inline">Follow-up · visit {data.visitNumber}</span> : data.attempt > 1 && <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[11px] text-slate-600 sm:inline">Attempt {data.attempt}</span>}
-        <span className={`hidden rounded px-1.5 py-0.5 text-[11px] font-medium md:inline ${data.recorded ? "bg-violet-100 text-violet-800" : "bg-slate-100 text-slate-600"}`}>{data.recorded ? "Recorded for instructor" : "Private practice"}</span>
-        {data.liveAssist && <span className="hidden rounded bg-violet-100 px-1.5 py-0.5 text-[11px] font-medium text-violet-800 md:inline">Instructor can join</span>}
+        <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[12px] font-medium text-slate-600">{MODE_LABEL[data.mode] || data.mode}</span>
+        <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[12px] text-slate-600 sm:inline">Level {data.level}</span>
+        {data.visitNumber > 1 ? <span className="hidden rounded bg-sky-100 px-1.5 py-0.5 text-[12px] font-medium text-sky-800 sm:inline">Follow-up · visit {data.visitNumber}</span> : data.attempt > 1 && <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[12px] text-slate-600 sm:inline">Attempt {data.attempt}</span>}
+        <span className={`hidden rounded px-1.5 py-0.5 text-[12px] font-medium md:inline ${data.recorded ? "bg-violet-100 text-violet-800" : "bg-slate-100 text-slate-600"}`}>{data.recorded ? "Recorded for instructor" : "Private practice"}</span>
+        {data.liveAssist && <span className="hidden rounded bg-violet-100 px-1.5 py-0.5 text-[12px] font-medium text-violet-800 md:inline">Instructor can join</span>}
         <div className="flex-1" />
         <span className={`tabular-nums ${remaining !== null && remaining < 120 ? "font-semibold text-rose-600" : "text-slate-600"}`}>{remaining !== null ? `${fmt(remaining)} left` : fmt(elapsed)}</span>
         {data.hints && joined && (
@@ -442,11 +460,11 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
             )}
             <div className={`pointer-events-none absolute inset-0 rounded-lg transition-shadow ${patientTalking ? "shadow-[inset_0_0_0_3px_rgba(52,211,153,0.9)]" : ""}`} />
             <div className="absolute left-3 top-3 flex items-center gap-2">
-              <span className="flex items-center gap-1.5 rounded bg-black/55 px-2 py-1 text-[11px] font-medium text-white">
+              <span className="flex items-center gap-1.5 rounded bg-black/55 px-2 py-1 text-[12px] font-medium text-white">
                 <span className="h-1.5 w-1.5 rounded-full bg-rose-500" /> LIVE
               </span>
               {chart.rapport !== null && joined && (
-                <span className="flex items-center gap-2 rounded bg-black/55 px-2 py-1 text-[11px] text-white" title="How comfortable the patient is with you. Shown in practice only.">
+                <span className="flex items-center gap-2 rounded bg-black/55 px-2 py-1 text-[12px] text-white" title="How comfortable the patient is with you. Shown in practice only.">
                   Comfort
                   <span className="h-1.5 w-20 overflow-hidden rounded-full bg-white/25">
                     <span className={`block h-full rounded-full transition-all duration-700 ${chart.rapport >= 60 ? "bg-emerald-400" : chart.rapport >= 40 ? "bg-amber-400" : "bg-rose-400"}`} style={{ width: `${chart.rapport}%` }} />
@@ -458,10 +476,10 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
             {/* Self view */}
             <div className="absolute right-3 top-3 h-20 w-28 overflow-hidden rounded-md border border-white/20 bg-slate-800">
               {camOn ? <video ref={selfRef} autoPlay muted playsInline className="h-full w-full -scale-x-100 object-cover" /> : <div className="grid h-full place-items-center text-lg font-semibold text-slate-400">{initials(viewerName)}</div>}
-              <span className="absolute bottom-0.5 left-1 text-[10px] text-white/80">You</span>
+              <span className="absolute bottom-0.5 left-1 text-[11px] text-white/80">You</span>
             </div>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/50 to-transparent px-4 pb-3 pt-10">
-              {captionsOn && caption && <p className="mb-2 text-[15px] leading-snug text-white">{(() => { const t = stripCues(caption); return t.length > 190 ? "… " + t.slice(t.length - 190).replace(/^\S*\s/, "") : t || "…"; })()}</p>}
+              {captionsOn && caption && <p className="mb-2 text-[16px] leading-snug text-white">{(() => { const t = stripCues(caption); return t.length > 190 ? "… " + t.slice(t.length - 190).replace(/^\S*\s/, "") : t || "…"; })()}</p>}
               {micOn && !patientTalking && !busy && <p className="mb-2 text-sm italic text-emerald-200">{interim ? `You: ${interim}` : "Listening… speak to the patient"}</p>}
               <div className="flex items-center justify-between">
                 <div className="text-sm font-medium text-white">
@@ -495,7 +513,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
                 m.speaker === "student" ? (
                   <div key={m.id} className="group flex justify-end gap-2">
                     {data.canRewind && m.id > 0 && !busy && (
-                      <button onClick={() => rewindTo(m.turn - 1)} className="self-center whitespace-nowrap text-[11px] text-slate-400 underline decoration-dotted hover:text-brand-600">
+                      <button onClick={() => rewindTo(m.turn - 1)} className="self-center whitespace-nowrap text-[12px] text-slate-400 underline decoration-dotted hover:text-brand-600">
                         Try this again
                       </button>
                     )}
@@ -508,8 +526,8 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
                     </div>
                   </div>
                 ) : (
-                  <div key={m.id} className={`whitespace-pre-wrap rounded-md border px-3 py-2 text-[13px] ${m.speaker === "coach" ? "border-amber-200 bg-amber-50 text-amber-900" : m.speaker === "instructor" ? "border-violet-200 bg-violet-50 text-violet-900" : "border-slate-200 bg-slate-50 font-mono text-[12px] text-slate-700"}`}>
-                    <span className="mr-1.5 font-sans text-[10px] font-semibold uppercase tracking-wide opacity-70">{m.speaker === "coach" ? "Coach" : m.speaker === "instructor" ? "Instructor" : m.speaker === "clinician" ? "Colleague" : "Chart"}</span>
+                  <div key={m.id} className={`whitespace-pre-wrap rounded-md border px-3 py-2 text-[14px] ${m.speaker === "coach" ? "border-amber-200 bg-amber-50 text-amber-900" : m.speaker === "instructor" ? "border-violet-200 bg-violet-50 text-violet-900" : "border-slate-200 bg-slate-50 font-mono text-[13px] text-slate-700"}`}>
+                    <span className="mr-1.5 font-sans text-[11px] font-semibold uppercase tracking-wide opacity-70">{m.speaker === "coach" ? "Coach" : m.speaker === "instructor" ? "Instructor" : m.speaker === "clinician" ? "Colleague" : "Chart"}</span>
                     {m.text}
                   </div>
                 ),
@@ -560,21 +578,26 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
             <p className="mt-4 text-sm leading-relaxed text-slate-700">{chart.brief}</p>
             {chart.tasks.length > 0 && (
               <>
-                <h2 className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">In this visit</h2>
+                <h2 className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Session goals</h2>
                 <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm text-slate-700">
-                  {chart.tasks.map((t, i) => (
+                  {(allGoals ? chart.tasks : chart.tasks.slice(0, GOALS_SHOWN)).map((t, i) => (
                     <li key={i}>{t}</li>
                   ))}
                 </ul>
+                {chart.tasks.length > GOALS_SHOWN && (
+                  <button onClick={() => setAllGoals((v) => !v)} className="mt-1 pl-5 text-xs text-brand-700 underline decoration-dotted">
+                    {allGoals ? "Show fewer" : `Show all ${chart.tasks.length}`}
+                  </button>
+                )}
               </>
             )}
-            <div className="mt-4 rounded-md bg-slate-50 p-3 text-[13px] text-slate-600">
+            <div className="mt-4 rounded-md bg-slate-50 p-3 text-[14px] text-slate-600">
               {data.timeLimitMin ? `You have ${data.timeLimitMin} minutes. ` : "No time limit. "}
               Talk by microphone or type. The chart on the right fills in as you learn things; request exams, tests and records from its Results tab. When you are done, end the visit and write your {data.role.noteFormat} wrap-up.
               {data.mode === "exam" && " This is an exam: no hints, and the comfort meter is hidden."}
               {data.liveAssist && " Your instructor may watch this visit, pause it, or send you a note."}
             </div>
-            <p className={`mt-3 text-[13px] ${data.recorded ? "text-violet-800" : "text-slate-600"}`}>
+            <p className={`mt-3 text-[14px] ${data.recorded ? "text-violet-800" : "text-slate-600"}`}>
               {data.recorded ? "Recorded: your instructor can see this visit, its transcript and its score." : "Private practice: only you see this visit and its feedback. It still updates your own progress."}
             </p>
            </div>

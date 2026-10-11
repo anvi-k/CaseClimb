@@ -190,7 +190,7 @@ export default function PracticeLibrary({ cases, professionNames, myProfession }
       </p>
       {shown.length === 0 ? (
         <Empty>
-          {prof && inRole.length === 0 ? `There are no published patients for ${professionNames[prof] || prof} yet. Choose "All roles" to practise with patients written for other roles.` : "No patients match those filters."}
+          {prof && inRole.length === 0 ? `There are no published patients for ${professionNames[prof] || prof} yet. Choose "All roles" to practice with patients written for other roles.` : "No patients match those filters."}
         </Empty>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

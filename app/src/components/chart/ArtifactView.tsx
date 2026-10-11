@@ -25,7 +25,7 @@ function DataTable({ table }: { table: NonNullable<Artifact["table"]> }) {
   const ownFlag = table.columns.some((c) => /flag|status/i.test(c));
   return (
     <div className="overflow-x-auto">
-      <table className="w-full border-collapse text-left text-[13px]">
+      <table className="w-full border-collapse text-left text-[14px]">
         <thead>
           <tr className="border-b border-slate-200 text-xs text-slate-500">
             {table.columns.map((c, i) => (
@@ -204,7 +204,7 @@ export default function ArtifactView({ artifact: a }: { artifact: Artifact }) {
     <article className="text-sm">
       <header className="mb-2 flex flex-wrap items-baseline justify-between gap-x-3 border-b border-slate-200 pb-2">
         <div>
-          <div className="text-[11px] font-medium uppercase tracking-wide text-slate-500">{artifactTypeLabel(a.type)}</div>
+          <div className="text-[12px] font-medium uppercase tracking-wide text-slate-500">{artifactTypeLabel(a.type)}</div>
           <h3 className="font-semibold text-slate-900">{a.title}</h3>
         </div>
         <div className="text-right text-xs text-slate-500">
@@ -231,7 +231,7 @@ export default function ArtifactView({ artifact: a }: { artifact: Artifact }) {
           <DataTable table={a.table} />
         </div>
       )}
-      {a.body && <div className={`whitespace-pre-wrap leading-relaxed text-slate-800 ${a.type === "ecg" || a.type === "imaging" ? "font-mono text-[12.5px]" : ""}`}>{a.body}</div>}
+      {a.body && <div className={`whitespace-pre-wrap leading-relaxed text-slate-800 ${a.type === "ecg" || a.type === "imaging" ? "font-mono text-[13.5px]" : ""}`}>{a.body}</div>}
     </article>
   );
 }

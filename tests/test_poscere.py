@@ -29,7 +29,7 @@ class Grader:
 
     def complete_json(self, system, user, schema):
         self.prompt = user
-        ids = lambda key, field: schema["properties"][key]["items"]["properties"][field].get("enum", [])
+        ids = lambda key, field: schema["properties"].get(key, {"items": {"properties": {}}})["items"]["properties"].get(field, {}).get("enum", [])
         told = ev("T3-student", "You'll need to start metformin.")
         return {
             "domain_scores": [

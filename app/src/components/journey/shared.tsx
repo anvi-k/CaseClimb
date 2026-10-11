@@ -17,7 +17,7 @@ export const STATUS_COLOR: Record<EntryStatus, string> = {
 
 export function StatusBadge({ status }: { status: EntryStatus }) {
   return (
-    <span className="inline-flex items-center gap-1 whitespace-nowrap rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[11px] font-medium text-slate-700">
+    <span className="inline-flex items-center gap-1 whitespace-nowrap rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[12px] font-medium text-slate-700">
       <span className="h-2 w-2 rounded-sm" style={{ background: STATUS_COLOR[status] }} />
       {STATUS_LABEL[status]}
     </span>
@@ -172,7 +172,7 @@ export function EntryRow({ entry, onOpen, showWho = true, dense }: { entry: Stat
       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-sm" style={{ background: STATUS_COLOR[entry.effectiveStatus] }} title={STATUS_LABEL[entry.effectiveStatus]} />
       <span className="min-w-0 flex-1">
         <span className="text-sm text-slate-800">{entry.text}</span>
-        <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[11px] text-slate-500">
+        <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-[12px] text-slate-500">
           <span>{KIND_LABEL[entry.kind] || entry.kind}</span>
           <span>{STATUS_LABEL[entry.effectiveStatus]}</span>
           {showWho && entry.stageId !== "record" && <span>{entry.contributorName}</span>}
@@ -255,10 +255,10 @@ export function ProvenancePanel({ view, entryId, onOpen, onClose }: { view: RunV
               return (
                 <li key={`o${l.id}`}>
                   <button onClick={() => onOpen(t.id)} className="w-full rounded-md border border-slate-200 px-2.5 py-1.5 text-left hover:bg-slate-50">
-                    <span className="text-[11px] font-semibold text-brand-700">{REL_OUT[l.relation]}</span>
+                    <span className="text-[12px] font-semibold text-brand-700">{REL_OUT[l.relation]}</span>
                     <span className="block text-sm text-slate-800">{t.text}</span>
-                    <span className="text-[11px] text-slate-500">{t.contributorName} · {stageLabel(view, t)}</span>
-                    {l.evidence?.quote && <span className="mt-0.5 block text-[11px] italic text-slate-500">&ldquo;{l.evidence.quote.slice(0, 220)}&rdquo;</span>}
+                    <span className="text-[12px] text-slate-500">{t.contributorName} · {stageLabel(view, t)}</span>
+                    {l.evidence?.quote && <span className="mt-0.5 block text-[12px] italic text-slate-500">&ldquo;{l.evidence.quote.slice(0, 220)}&rdquo;</span>}
                   </button>
                 </li>
               );
@@ -268,16 +268,16 @@ export function ProvenancePanel({ view, entryId, onOpen, onClose }: { view: RunV
               return (
                 <li key={`i${l.id}`}>
                   <button onClick={() => onOpen(f.id)} className="w-full rounded-md border border-slate-200 px-2.5 py-1.5 text-left hover:bg-slate-50">
-                    <span className="text-[11px] font-semibold text-slate-600">{REL_IN[l.relation]}</span>
+                    <span className="text-[12px] font-semibold text-slate-600">{REL_IN[l.relation]}</span>
                     <span className="block text-sm text-slate-800">{f.text}</span>
-                    <span className="text-[11px] text-slate-500">{f.contributorName} · {stageLabel(view, f)} · {f.simTime}</span>
+                    <span className="text-[12px] text-slate-500">{f.contributorName} · {stageLabel(view, f)} · {f.simTime}</span>
                   </button>
                 </li>
               );
             })}
           </ul>
         </div>
-        <p className="mt-5 text-[11px] text-slate-400">Entry {e.id}. Entries are never edited; later information is added as new entries linked to this one.</p>
+        <p className="mt-5 text-[12px] text-slate-400">Entry {e.id}. Entries are never edited; later information is added as new entries linked to this one.</p>
       </aside>
     </div>
   );
@@ -329,11 +329,11 @@ export function TraceTable({ evaluation, compact }: { evaluation: TraceEvaluatio
                 <li key={def.key} className="grid gap-x-4 gap-y-1 px-3 py-2.5 md:grid-cols-[13rem_1fr]">
                   <div>
                     <div className="text-sm font-medium text-slate-800">{def.label}</div>
-                    <span className={cx("mt-1 inline-block rounded px-1.5 py-0.5 text-[11px] font-semibold", OBS[r!.observed].cls)}>{OBS[r!.observed].label}</span>
+                    <span className={cx("mt-1 inline-block rounded px-1.5 py-0.5 text-[12px] font-semibold", OBS[r!.observed].cls)}>{OBS[r!.observed].label}</span>
                   </div>
                   <div className="min-w-0 text-sm">
                     {r!.location && <div className="text-xs text-slate-500">Evidence: <span className="font-medium text-slate-700">{r!.location.replace("->", "→")}</span></div>}
-                    {r!.quote && <blockquote className="mt-1 border-l-2 border-slate-300 pl-2 text-[13px] italic text-slate-600">&ldquo;{r!.quote}&rdquo;</blockquote>}
+                    {r!.quote && <blockquote className="mt-1 border-l-2 border-slate-300 pl-2 text-[14px] italic text-slate-600">&ldquo;{r!.quote}&rdquo;</blockquote>}
                     <p className="mt-1 text-slate-800">{r!.feedback}</p>
                   </div>
                 </li>
@@ -366,7 +366,7 @@ export function Transcript({ lines, clinician, patient }: { lines: { turn: numbe
           </li>
         ) : (
           <li key={i} className={cx("max-w-[92%] rounded-lg px-3 py-2 text-sm", m.speaker === "clinician" ? "bg-brand-50 text-slate-800" : "ml-auto bg-slate-100 text-slate-800")}>
-            <div className="mb-0.5 text-[11px] font-semibold text-slate-500">{m.speaker === "clinician" ? clinician : patient} · turn {m.turn}</div>
+            <div className="mb-0.5 text-[12px] font-semibold text-slate-500">{m.speaker === "clinician" ? clinician : patient} · turn {m.turn}</div>
             <div className="whitespace-pre-wrap">{m.text}</div>
           </li>
         ),

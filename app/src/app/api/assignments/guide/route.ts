@@ -25,7 +25,7 @@ const schema = {
   required: ["title", "instructions", "type", "typeReason", "target", "cases", "level", "useCaseLevel", "levelReason", "timeLimitMin", "hints", "maxAttempts", "perturb", "liveAssist", "feedbackRelease", "settingsReason", "gaps"],
   properties: {
     title: { type: "string", description: "Short assignment title" },
-    instructions: { type: "string", description: "2-4 sentences shown to students: what to practise and what a good visit looks like. Must not reveal findings or diagnoses." },
+    instructions: { type: "string", description: "2-4 sentences shown to students: what to practice and what a good visit looks like. Must not reveal findings or diagnoses." },
     type: { type: "string", enum: ["homework", "exam", "practice"] },
     typeReason: { type: "string" },
     target: { type: "string", enum: ["cases", "journey"], description: "'journey' only when the instructor wants interprofessional or handoff practice and a listed care journey fits" },
@@ -79,7 +79,7 @@ export async function POST(req: Request) {
   if (!course) return bad("Course not found", 404);
   const request = String(b.request || "").trim().slice(0, 3000);
   const syllabus = String(b.syllabus || "").trim().slice(0, 12000);
-  if (!request && !syllabus) return bad("Say what you want students to practise, or paste your objectives");
+  if (!request && !syllabus) return bad("Say what you want students to practice, or paste your objectives");
   const cases = publishedCaseBriefs();
   if (!cases.length) return bad("There are no published patients yet. Publish one in Patient Studio first.");
   const journeys = publishedJourneys();
@@ -87,7 +87,7 @@ export async function POST(req: Request) {
 
   const prompt = `COURSE: ${course.name}${role ? `. Students are training as: ${role.name}` : ""}
 
-WHAT THE INSTRUCTOR WANTS STUDENTS TO PRACTISE
+WHAT THE INSTRUCTOR WANTS STUDENTS TO PRACTICE
 ${request || "(not stated; use the syllabus material)"}
 ${syllabus ? `\nSYLLABUS EXCERPT / OBJECTIVES PASTED BY THE INSTRUCTOR\n${syllabus}\n` : ""}
 PUBLISHED PATIENTS

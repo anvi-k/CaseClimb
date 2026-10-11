@@ -13,6 +13,10 @@
   --color-ink: #0f172a;
 }
 
+/* Slightly larger than the browser default so long visits are easier to read. */
+html {
+  font-size: 106.25%;
+}
 html,
 body {
   height: 100%;

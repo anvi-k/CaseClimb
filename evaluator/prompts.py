@@ -183,7 +183,7 @@ def grade_schema(
 
 def _block(tag: str, body) -> str:
     if not isinstance(body, str):
-        body = json.dumps(body, indent=2, ensure_ascii=False)
+        body = json.dumps(body, ensure_ascii=False)
     return f"<{tag}>\n{body}\n</{tag}>"
 
 
@@ -260,7 +260,12 @@ def grader_user_prompt(
         if goals
         else "No personal goals are set; leave goal_progress empty."
     )
-    asks.append("Write three to five debrief questions, most important first.")
+    asks.append("Write three debrief questions, most important first.")
+    asks.append(
+        "Be brief, because the student is waiting for this: one or two sentences per rationale or "
+        "feedback, at most two pieces of evidence per item, at most six behaviors, and at most "
+        "three each of strengths, improvements, next-attempt suggestions and under-probed topics."
+    )
     parts.append("\n".join(asks))
     return "\n\n".join(parts)
 

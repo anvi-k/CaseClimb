@@ -62,7 +62,9 @@ function runEvaluator(input: string): Promise<string> {
 
 /** Scores a submitted visit with the Python evaluator and returns it as this app's Feedback. */
 export async function gradeWithEvaluator(encId: string): Promise<Feedback> {
+  const started = Date.now();
   const printed = await runEvaluator(JSON.stringify(visitBundle(encId)));
+  console.log(`evaluator: scored ${encId} in ${Math.round((Date.now() - started) / 1000)}s`);
   const result = JSON.parse(printed) as { feedback: Feedback };
   if (!Array.isArray(result.feedback?.domains)) throw new Error("The evaluator returned no rubric scores. Your visit is saved; select Score this visit to try again.");
   return result.feedback;

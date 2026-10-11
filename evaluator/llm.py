@@ -13,6 +13,7 @@ from jsonschema import Draft202012Validator
 DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"
 DEFAULT_CLIENT = "runtime"
 DEFAULT_REGION = "us-east-1"
+DEFAULT_EFFORT = "low"
 
 
 _JSON_ATTEMPTS = 3
@@ -57,6 +58,7 @@ class BedrockLLM:
 
     Credentials come from the usual AWS chain (env vars, profile, role).
     Environment overrides: POSCERE_GRADER_MODEL for the model id,
+    POSCERE_GRADER_EFFORT for the thinking effort (low, medium, high),
     AWS_REGION or AWS_DEFAULT_REGION for the region, and
     POSCERE_BEDROCK_CLIENT for the endpoint: "runtime" (default), which
     takes inference-profile ids such as "us.anthropic.claude-sonnet-5", or
@@ -70,13 +72,14 @@ class BedrockLLM:
         self,
         model: str | None = None,
         region: str | None = None,
-        effort: str = "high",
+        effort: str | None = None,
         client: str | None = None,
     ):
         from anthropic import AnthropicBedrock, AnthropicBedrockMantle
 
         self.model = model or os.environ.get("POSCERE_GRADER_MODEL", DEFAULT_MODEL)
-        self.effort = effort
+        # "low" keeps a visit's grading inside about a minute; raise it to trade speed for depth.
+        self.effort = effort or os.environ.get("POSCERE_GRADER_EFFORT", DEFAULT_EFFORT)
         kind = client or os.environ.get("POSCERE_BEDROCK_CLIENT", DEFAULT_CLIENT)
         if kind not in ("mantle", "runtime"):
             raise ValueError(f"Unknown Bedrock client {kind!r}; use 'mantle' or 'runtime'")
@@ -107,7 +110,7 @@ class BedrockLLM:
         prompt = user
         for _ in range(_JSON_ATTEMPTS):
             text = self._final_text(
-                max_tokens=32000,
+                max_tokens=8000,
                 system=system,
                 messages=[{"role": "user", "content": prompt}],
                 output_config={"effort": self.effort},

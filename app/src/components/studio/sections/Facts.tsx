@@ -31,7 +31,7 @@ const FactRow = memo(function FactRow({ f, uses, onChange, onDelete }: { f: Fact
   return (
     <tr className="border-b border-slate-100 align-top" id={`fact-${f.id}`}>
       <td className="py-2 pl-3 pr-2">
-        <div className="font-mono text-[11px] text-slate-400">{f.id}</div>
+        <div className="font-mono text-[12px] text-slate-400">{f.id}</div>
         <select className={cx(SMALL, "mt-1")} value={f.category} aria-label="Category" onChange={(e) => onChange(f.id, { category: e.target.value })}>
           {Object.entries(FACT_CATEGORIES).map(([k, v]) => (
             <option key={k} value={k}>
@@ -62,7 +62,7 @@ const FactRow = memo(function FactRow({ f, uses, onChange, onDelete }: { f: Fact
             </option>
           ))}
         </select>
-        <label className="mt-1 flex items-center gap-1 text-[11px] text-slate-600" title="A plausible red herring that is not relevant to the main problem. Only used at higher difficulty.">
+        <label className="mt-1 flex items-center gap-1 text-[12px] text-slate-600" title="A plausible red herring that is not relevant to the main problem. Only used at higher difficulty.">
           <input type="checkbox" checked={!!f.distractor} onChange={(e) => onChange(f.id, { distractor: e.target.checked })} />
           Distractor
         </label>

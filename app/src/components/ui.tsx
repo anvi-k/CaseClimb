@@ -42,7 +42,7 @@ const TONES = {
   violet: "bg-violet-100 text-violet-800",
 };
 export function Badge({ tone = "slate", className, ...p }: ComponentProps<"span"> & { tone?: keyof typeof TONES }) {
-  return <span {...p} className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-[11px] font-medium", TONES[tone], className)} />;
+  return <span {...p} className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-[12px] font-medium", TONES[tone], className)} />;
 }
 const FIELD = "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200";
 export function Input({ className, ...p }: ComponentProps<"input">) {

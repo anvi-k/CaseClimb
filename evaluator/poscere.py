@@ -29,6 +29,7 @@ import argparse
 import json
 import re
 import sys
+import time
 from datetime import datetime, timezone
 
 from .evaluate import evaluate_episode
@@ -571,8 +572,10 @@ def main(argv: list[str] | None = None) -> int:
     else:
         bundle = json.load(sys.stdin)
     llm = ReplayLLM(args.replay) if args.replay else BedrockLLM(model=args.model)
+    started = time.monotonic()
     json.dump(grade_visit(bundle, llm), sys.stdout, ensure_ascii=False)
     sys.stdout.write("\n")
+    print(f"Graded with {llm.model} in {time.monotonic() - started:.0f} seconds.", file=sys.stderr)
     return 0
 
 

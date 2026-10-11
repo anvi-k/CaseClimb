@@ -161,7 +161,7 @@ def test_app_encounter_grades_end_to_end(record, episode):
 
 def _stub_grade(schema):
     """A minimal valid grader reply for whatever case the schema was built from."""
-    ids = lambda key, field: schema["properties"][key]["items"]["properties"][field].get("enum", [])
+    ids = lambda key, field: schema["properties"].get(key, {"items": {"properties": {}}})["items"]["properties"].get(field, {}).get("enum", [])
     return {
         "domain_scores": [
             {"domain_id": d, "score": "3", "rationale": "Adequate.", "evidence": []}

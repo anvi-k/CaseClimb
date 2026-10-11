@@ -42,7 +42,7 @@ export default async function PracticePage() {
       <PageHeader title="Practice" subtitle="Any published patient, as many times as you like. Practice visits are not graded, and each one updates your skill ratings." />
       {user.role === "student" && (
         <Card className="mb-5">
-          <CardHeader title="Make your own practice patient" subtitle="Describe who you want to practise with, or the skill you want to work on, and a private patient is written for you." />
+          <CardHeader title="Make your own practice patient" subtitle="Describe who you want to practice with, or the skill you want to work on, and a private patient is written for you." />
           <div className="space-y-4 p-4">
             <MakePatient roleName={profession(user.profession_id).name} />
             {own.length > 0 && (

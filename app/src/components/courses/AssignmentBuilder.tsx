@@ -205,10 +205,10 @@ export default function AssignmentBuilder({
       {/* ---------- Guide ---------- */}
       <div>
         <Card className="lg:sticky lg:top-4">
-          <CardHeader title="Assignment guide" subtitle="Describe what you want students to practise. The guide suggests patients and settings; you review and change anything before saving." />
+          <CardHeader title="Assignment guide" subtitle="Describe what you want students to practice. The guide suggests patients and settings; you review and change anything before saving." />
           <div className="space-y-3 p-4">
             <div>
-              <Label htmlFor="guide-request">What should students practise?</Label>
+              <Label htmlFor="guide-request">What should students practice?</Label>
               <Textarea
                 id="guide-request"
                 rows={5}
@@ -245,7 +245,7 @@ export default function AssignmentBuilder({
                 <p>Each suggestion has a short reason next to the field it filled in.</p>
               </div>
             )}
-            <p className="text-[11px] leading-snug text-slate-500">The guide only chooses among published patients and care journeys. It cannot see student data.</p>
+            <p className="text-[12px] leading-snug text-slate-500">The guide only chooses among published patients and care journeys. It cannot see student data.</p>
           </div>
         </Card>
       </div>

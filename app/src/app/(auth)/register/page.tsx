@@ -12,7 +12,7 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
   return (
     <>
       <h2 className="mb-1 text-xl font-semibold">Create your account</h2>
-      <p className="mb-6 text-sm text-slate-600">Students practise visits. Faculty build patients and courses.</p>
+      <p className="mb-6 text-sm text-slate-600">Students practice visits. Faculty build patients and courses.</p>
       <AuthForm mode="register" groups={groups} next={next} />
     </>
   );

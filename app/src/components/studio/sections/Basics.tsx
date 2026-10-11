@@ -188,7 +188,7 @@ export function LinkPicker({ label, options, selected, onChange, empty }: { labe
           const o = options.find((x) => x.id === id);
           return (
             <span key={id} className={`inline-flex items-center gap-1 rounded border px-1.5 py-0.5 text-xs ${o ? "border-slate-200 bg-slate-50 text-slate-800" : "border-rose-200 bg-rose-50 text-rose-800"}`}>
-              <span className="font-mono text-[10px] text-slate-400">{id}</span>
+              <span className="font-mono text-[11px] text-slate-400">{id}</span>
               {o ? o.label : "no longer exists"}
               <button type="button" aria-label={`Unlink ${id}`} className="ml-0.5 text-slate-400 hover:text-rose-700" onClick={() => onChange(selected.filter((x) => x !== id))}>
                 x

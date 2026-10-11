@@ -3,7 +3,7 @@ import { apiUser } from "@/lib/auth";
 import { bad } from "@/lib/http";
 import { professions } from "@/lib/professions";
 
-/** The next adaptive session for the signed-in student. Optional ?profession= to practise another role. */
+/** The next adaptive session for the signed-in student. Optional ?profession= to practice another role. */
 export async function GET(req: Request) {
   const user = await apiUser();
   if (user instanceof Response) return user;

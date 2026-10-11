@@ -3,7 +3,7 @@ import { chatStream, MODELS, type Turn } from "../llm";
 import { profession } from "../professions";
 import { FACT_CATEGORIES } from "../types";
 import type { Artifact, CaseProfile, EncounterConfig, EncounterState, Fact, Knobs, Perturbation } from "../types";
-import { applyPerturbation, knobsForLevel, PERTURBATIONS } from "./difficulty";
+import { applyPerturbation, knobsForLevel, PERTURBATIONS, MAX_VISIT_MIN } from "./difficulty";
 import { auditReply, caseFacts, decide, gatekeep, matchActions } from "./gatekeeper";
 import { patientSystem } from "./patient";
 
@@ -175,6 +175,8 @@ export function createEncounter(input: CreateInput): string {
   let knobs = { ...knobsForLevel(input.level ?? c.difficulty, c.scenario.timeLimitMin), ...(input.knobs || {}) };
   knobs = applyPerturbation(knobs, perturbation);
   if (input.mode === "exam") knobs.hints = false;
+  // Assignment and adaptive settings can shorten a visit but not lengthen it. Care-journey stages keep their own timing.
+  if (input.mode !== "journey") knobs.timeLimitMin = Math.min(knobs.timeLimitMin || MAX_VISIT_MIN, MAX_VISIT_MIN);
   const rel = input.teamScope ? relationship(input.teamScope, input.caseId) : input.followUp ? relationship(input.userId, input.caseId) : null;
   // Trust carries over between visits, good or bad.
   if (rel) knobs.rapportStart = Math.max(15, Math.min(85, rel.rapport));

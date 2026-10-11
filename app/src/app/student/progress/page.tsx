@@ -31,7 +31,7 @@ function Stat({ label, value, note }: { label: string; value: string; note: stri
 export default async function ProgressPage({ searchParams }: { searchParams: Promise<{ profession?: string }> }) {
   const user = await requireUser();
   const asked = (await searchParams).profession;
-  // Ratings are kept per role, so a student who practised in another role can switch.
+  // Ratings are kept per role, so a student who practiced in another role can switch.
   const rated = all<{ profession_id: string }>("SELECT DISTINCT profession_id FROM skill_ratings WHERE user_id = ?", user.id).map((r) => r.profession_id);
   const own = profession(user.profession_id).id;
   const professionId = asked && (rated.includes(asked) || professions().some((p) => p.id === asked)) ? asked : own;
@@ -154,7 +154,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
       <h2 className="mb-2 mt-6 text-sm font-semibold text-slate-900">Attempts by patient</h2>
       {heldCount > 0 && <p className="mb-2 text-xs text-slate-500">{heldCount} submitted visit{heldCount === 1 ? " is" : "s are"} not shown because your instructor has not released the feedback yet.</p>}
       {perCase.length === 0 ? (
-        <Empty>Nothing scored yet. Each patient you practise with will appear here with every attempt and what changed between them.</Empty>
+        <Empty>Nothing scored yet. Each patient you practice with will appear here with every attempt and what changed between them.</Empty>
       ) : (
         <div className="space-y-4">
           {perCase.map((c) => {
@@ -173,7 +173,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
                   </div>
                   {scores.length > 1 && (
                     <div className="flex items-center gap-2">
-                      <span className="text-[11px] text-slate-500">Score by attempt, 0 to 100%</span>
+                      <span className="text-[12px] text-slate-500">Score by attempt, 0 to 100%</span>
                       <ScoreSpark scores={scores} labels={c.attempts.map((a, i) => `Attempt ${i + 1}: ${Math.round(a.percent)}% at level ${a.level}`)} />
                     </div>
                   )}

@@ -6,14 +6,18 @@ export const LEVEL_NAMES = ["", "Foundational", "Developing", "Proficient", "Adv
  * Difficulty never changes the clinical facts of a case. It changes how hard the patient is to
  * interview: how much trust is needed, how vague they are, how many facts come out per answer.
  */
+/** No visit runs longer than this, whatever the case or assignment asks for. */
+export const MAX_VISIT_MIN = 10;
+
 export function knobsForLevel(level: number, caseTimeLimitMin = 20): Knobs {
   const L = Math.max(1, Math.min(5, Math.round(level)));
+  const cap = Math.min(caseTimeLimitMin || MAX_VISIT_MIN, MAX_VISIT_MIN);
   const t = {
-    1: { rapportStart: 62, reluctantAt: 55, hiddenAt: 70, factsPerTurn: 4, volunteers: true, vagueness: 0, emotion: 0, distractors: false, hints: true, time: null as number | null },
-    2: { rapportStart: 55, reluctantAt: 60, hiddenAt: 74, factsPerTurn: 3, volunteers: true, vagueness: 1, emotion: 1, distractors: false, hints: true, time: null as number | null },
-    3: { rapportStart: 48, reluctantAt: 64, hiddenAt: 78, factsPerTurn: 3, volunteers: false, vagueness: 1, emotion: 1, distractors: true, hints: true, time: caseTimeLimitMin },
-    4: { rapportStart: 42, reluctantAt: 68, hiddenAt: 82, factsPerTurn: 2, volunteers: false, vagueness: 2, emotion: 2, distractors: true, hints: false, time: caseTimeLimitMin },
-    5: { rapportStart: 36, reluctantAt: 72, hiddenAt: 86, factsPerTurn: 2, volunteers: false, vagueness: 3, emotion: 3, distractors: true, hints: false, time: Math.max(8, caseTimeLimitMin - 5) },
+    1: { rapportStart: 62, reluctantAt: 55, hiddenAt: 70, factsPerTurn: 4, volunteers: true, vagueness: 0, emotion: 0, distractors: false, hints: true, time: cap as number | null },
+    2: { rapportStart: 55, reluctantAt: 60, hiddenAt: 74, factsPerTurn: 3, volunteers: true, vagueness: 1, emotion: 1, distractors: false, hints: true, time: cap as number | null },
+    3: { rapportStart: 48, reluctantAt: 64, hiddenAt: 78, factsPerTurn: 3, volunteers: false, vagueness: 1, emotion: 1, distractors: true, hints: true, time: cap },
+    4: { rapportStart: 42, reluctantAt: 68, hiddenAt: 82, factsPerTurn: 2, volunteers: false, vagueness: 2, emotion: 2, distractors: true, hints: false, time: cap },
+    5: { rapportStart: 36, reluctantAt: 72, hiddenAt: 86, factsPerTurn: 2, volunteers: false, vagueness: 3, emotion: 3, distractors: true, hints: false, time: Math.min(cap, 8) },
   }[L]!;
   return {
     level: L,

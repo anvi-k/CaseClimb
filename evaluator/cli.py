@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from pathlib import Path
 
 from .debrief import DebriefSession
@@ -51,7 +52,8 @@ def main(argv: list[str] | None = None) -> int:
     record, episode = load_json(args.record), load_json(args.episode)
     llm = ReplayLLM(args.replay) if args.replay else BedrockLLM(model=args.model)
 
-    print(f"Grading {episode['episode_id']} with {llm.model}. This can take a few minutes...", file=sys.stderr)
+    print(f"Grading {episode['episode_id']} with {llm.model}. This usually takes about a minute...", file=sys.stderr)
+    started = time.monotonic()
     result = evaluate_episode(
         record,
         episode,
@@ -63,6 +65,7 @@ def main(argv: list[str] | None = None) -> int:
         encounter_type=args.encounter_type,
     )
 
+    print(f"Graded in {time.monotonic() - started:.0f} seconds.", file=sys.stderr)
     out = Path(args.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     stem = episode["episode_id"].replace(":", "_")

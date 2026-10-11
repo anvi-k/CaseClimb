@@ -125,7 +125,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                     <StatusBadges c={c} />
                     {c.openHigh > 0 && <Badge tone="red">{c.openHigh} high-severity issue{c.openHigh === 1 ? "" : "s"} open</Badge>}
                   </div>
-                  <Link href={`/faculty/cases/${c.id}`} className="text-[15px] font-semibold text-slate-900 hover:text-brand-700">
+                  <Link href={`/faculty/cases/${c.id}`} className="text-[16px] font-semibold text-slate-900 hover:text-brand-700">
                     {c.title}
                   </Link>
                   <p className="mt-0.5 text-xs text-slate-500">

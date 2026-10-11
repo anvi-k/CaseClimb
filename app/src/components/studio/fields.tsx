@@ -27,7 +27,7 @@ export function Text({ label, hint, value, onChange, className, ...p }: { label?
 /** Textarea that grows with its content. */
 export function Area({ label, hint, value, onChange, className, minRows = 2, dense, ...p }: { label?: ReactNode; hint?: ReactNode; value: string; onChange: (v: string) => void; className?: string; minRows?: number; dense?: boolean } & Omit<React.ComponentProps<"textarea">, "value" | "onChange" | "className">) {
   const rows = Math.max(minRows, Math.min(14, value.split("\n").reduce((n, line) => n + Math.max(1, Math.ceil(line.length / 70)), 0)));
-  const area = <Textarea {...p} rows={rows} value={value} onChange={(e) => onChange(e.target.value)} className={cx("[field-sizing:content] resize-y", dense && "px-2 py-1.5 text-[13px] leading-snug")} />;
+  const area = <Textarea {...p} rows={rows} value={value} onChange={(e) => onChange(e.target.value)} className={cx("[field-sizing:content] resize-y", dense && "px-2 py-1.5 text-[14px] leading-snug")} />;
   return label ? (
     <Field label={label} hint={hint} className={className}>
       {area}

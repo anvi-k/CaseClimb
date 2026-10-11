@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import copy
 import re
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from functools import lru_cache
@@ -189,6 +190,35 @@ def _checklist(raw: list[dict], checklist: dict, check: _EvidenceChecker) -> dic
     }
 
 
+# The grade is asked for in two halves at the same time, which roughly halves the wait.
+_SCORING = ("domain_scores", "written_evidence")
+_HALVES = {
+    "scores": "In this reply give only the rubric domain scores and the three written points.",
+    "rest": "In this reply give everything except the rubric domain scores and the three written "
+    "points; those are being scored separately.",
+}
+
+
+def _grade(llm: LLM, user: str, schema: dict) -> dict:
+    keys = {
+        "scores": [k for k in schema["properties"] if k in _SCORING],
+        "rest": [k for k in schema["properties"] if k not in _SCORING],
+    }
+
+    def ask(half: str) -> dict:
+        part = {
+            **schema,
+            "required": keys[half],
+            "properties": {k: schema["properties"][k] for k in keys[half]},
+        }
+        reply = llm.complete_json(prompts.GRADER_SYSTEM, f"{user}\n\n{_HALVES[half]}", part)
+        return {k: reply[k] for k in keys[half]}
+
+    with ThreadPoolExecutor(max_workers=2) as pool:
+        scores, rest = pool.map(ask, ("scores", "rest"))
+    return {**scores, **rest}
+
+
 def evaluate_episode(
     record: dict,
     episode: dict,
@@ -222,8 +252,8 @@ def evaluate_episode(
     objectives = applicable_objectives(record, graded["role"])
     findings = analyze(record, episode, graded)
 
-    raw = llm.complete_json(
-        prompts.GRADER_SYSTEM,
+    raw = _grade(
+        llm,
         prompts.grader_user_prompt(
             record, episode, graded, objectives, findings, rubric, checklist, goals, encounter_type,
             write_up,

@@ -100,16 +100,16 @@ function focusKnobs(weakest: string | null): { knobs: Partial<Knobs>; why: strin
   switch (weakest) {
     case "rapport_respect_empathy":
     case "listening_and_response_to_cues":
-      return { knobs: { emotion: 2, reluctantAt: 70 }, why: "a more emotional, guarded patient to practise empathy and picking up cues" };
+      return { knobs: { emotion: 2, reluctantAt: 70 }, why: "a more emotional, guarded patient to practice empathy and picking up cues" };
     case "information_gathering":
       return { knobs: { vagueness: 2, volunteers: false, factsPerTurn: 2 }, why: "a vaguer patient who needs specific, well-sequenced questions" };
     case "explanation_and_shared_decisions":
       return { knobs: { vagueness: 1 }, why: "a patient who asks for explanations and needs plain language" };
     case "clinical_reasoning_and_synthesis":
-      return { knobs: { distractors: true }, why: "a case with red herrings to practise separating relevant from irrelevant findings" };
+      return { knobs: { distractors: true }, why: "a case with red herrings to practice separating relevant from irrelevant findings" };
     case "opening_and_purpose":
     case "professionalism_safety_closure":
-      return { knobs: { timeLimitMin: 15 }, why: "a time-boxed visit to practise a clear opening and a safe close" };
+      return { knobs: { timeLimitMin: 15 }, why: "a time-boxed visit to practice a clear opening and a safe close" };
     default:
       return { knobs: {}, why: "a balanced patient" };
   }

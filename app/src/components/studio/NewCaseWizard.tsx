@@ -232,7 +232,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
               <li key={i} className="flex gap-3">
                 <span
                   className={cx(
-                    "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[11px] font-semibold",
+                    "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[12px] font-semibold",
                     s.state === "done" && "bg-emerald-100 text-emerald-800",
                     s.state === "active" && "bg-brand-600 text-white",
                     s.state === "todo" && "bg-slate-100 text-slate-400",

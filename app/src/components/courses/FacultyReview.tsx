@@ -46,7 +46,7 @@ export default function FacultyReview({ encounterId, note, score }: { encounterI
         <div>
           <Label htmlFor={`fr-score-${encounterId}`}>Adjusted score (%)</Label>
           <Input id={`fr-score-${encounterId}`} type="number" min={0} max={100} step={1} inputMode="decimal" value={adj} onChange={(e) => setAdj(e.target.value)} placeholder="Leave blank" aria-invalid={invalid} />
-          <p className="mt-1 text-[11px] text-slate-500">{invalid ? "Enter a number from 0 to 100." : "Blank keeps the rubric score."}</p>
+          <p className="mt-1 text-[12px] text-slate-500">{invalid ? "Enter a number from 0 to 100." : "Blank keeps the rubric score."}</p>
         </div>
       </div>
       <div className="mt-3 flex items-center gap-3">

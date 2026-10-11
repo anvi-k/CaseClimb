@@ -77,7 +77,7 @@ Features, each described in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md):
 - **One shared patient for a class.** An assignment setting. Students of different professions see
   the same continuing patient in turn; the patient remembers each of them by name and can point out
   conflicting advice, and earlier students' write-ups are in the chart as notes.
-- **Make your own practice patient.** A student describes who or what they want to practise with
+- **Make your own practice patient.** A student describes who or what they want to practice with
   and gets a private, AI-drafted, unreviewed patient.
 - **Episodes.** Every stored visit, searchable by patient, participant, role and words said, on the
   `/episodes` page, through `GET /api/episodes`, and through an MCP endpoint at `/api/mcp` with

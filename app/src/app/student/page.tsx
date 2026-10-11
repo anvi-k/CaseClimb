@@ -44,7 +44,7 @@ export default async function StudentHome() {
 
   return (
     <AppShell user={user}>
-      <PageHeader title={`Welcome, ${user.name.split(" ")[0]}`} subtitle={`You are practising as ${role.name}.`} action={<LinkButton href="/student/practice" variant="secondary">Browse all patients</LinkButton>} />
+      <PageHeader title={`Welcome, ${user.name.split(" ")[0]}`} subtitle={`You are practicing as ${role.name}.`} action={<LinkButton href="/student/practice" variant="secondary">Browse all patients</LinkButton>} />
 
       <div className="grid gap-5 lg:grid-cols-[1fr_22rem]">
         <div className="space-y-5">
@@ -71,7 +71,7 @@ export default async function StudentHome() {
                   </p>
                 ) : (
                   <p className="mt-2 text-sm text-slate-600">
-                    There are no published patients for {role.name} yet, so there is nothing to recommend. You can still practise with patients written for other roles in the{" "}
+                    There are no published patients for {role.name} yet, so there is nothing to recommend. You can still practice with patients written for other roles in the{" "}
                     <Link href="/student/practice" className="font-medium text-brand-700 underline">
                       practice library
                     </Link>

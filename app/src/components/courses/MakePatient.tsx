@@ -51,10 +51,10 @@ export default function MakePatient({ roleName }: { roleName: string }) {
   }
   return (
     <div className="space-y-2">
-      <Textarea value={text} onChange={(e) => setText(e.target.value)} rows={2} maxLength={1500} placeholder={`Describe a patient or a skill you want to practise as a ${roleName.toLowerCase()} student`} />
+      <Textarea value={text} onChange={(e) => setText(e.target.value)} rows={2} maxLength={1500} placeholder={`Describe a patient or a skill you want to practice as a ${roleName.toLowerCase()} student`} />
       <div className="flex flex-wrap gap-1.5">
         {IDEAS.map((i) => (
-          <button key={i} type="button" onClick={() => setText(i)} className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-left text-[11px] text-slate-600 hover:border-brand-500">
+          <button key={i} type="button" onClick={() => setText(i)} className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-left text-[12px] text-slate-600 hover:border-brand-500">
             {i}
           </button>
         ))}

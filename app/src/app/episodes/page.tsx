@@ -38,7 +38,7 @@ export default async function EpisodesPage({ searchParams }: { searchParams: Pro
         <Empty>No episodes match.</Empty>
       ) : (
         <Card className="overflow-x-auto">
-          <table className="w-full border-collapse text-left text-[13px]">
+          <table className="w-full border-collapse text-left text-[14px]">
             <thead>
               <tr className="border-b border-slate-200 text-xs text-slate-500">
                 <th className="px-3 py-2 font-medium">When</th>
