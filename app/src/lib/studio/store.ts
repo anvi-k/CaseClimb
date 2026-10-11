@@ -58,10 +58,33 @@ export function metaOf(row: CaseRow, u: User): CaseMeta {
 export interface LibraryItem extends CaseMeta {
   patient: string;
   portrait: string | null;
+  /** One or two words from the personality, and the first problem on the chart. */
+  temperament: string;
+  mainIssue: string;
   summary: string;
   encounterType: string;
   counts: { facts: number; actions: number; artifacts: number; variants: number };
   openHigh: number;
+}
+
+/** "Reserved, private, and practical. Measures..." becomes "Reserved, private". */
+function temperamentOf(p: Partial<CaseProfile>): string {
+  const first = String(p.persona?.personality || "").split(/[.;:]| - | — /)[0];
+  const parts = first.split(/,|\band\b|\bbut\b|\bwith\b/).map((w) => w.trim());
+  const words = parts.filter((w) => w && w.split(" ").length <= 2 && !/ly$|^(a|an|the|very|to)\b/i.test(w.split(" ")[0])).slice(0, 2);
+  const out = (words.length ? words.join(", ") : first.trim().split(" ")[0]).trim();
+  return out ? out[0].toUpperCase() + out.slice(1) : "";
+}
+
+// What a nutrition visit is most likely about, most specific first.
+const FOCUS = /diabet|heart|ischemic|coronary|hypertens|obes|body mass|lipid|cholesterol|kidney|renal|an(a)?emia|osteopor|stroke|malnutri|weight/i;
+
+/** The problem the visit is most likely about: the first nutrition-related entry on the chart's problem list, else the first entry. */
+function mainIssueOf(p: Partial<CaseProfile>): string {
+  const list = (p.chartAtStart || []).find((c) => /problem/i.test(c.label))?.value || "";
+  const items = list.split(";").map((i) => i.replace(/\s*\([^)]*\)/g, "").split(",")[0].trim()).filter(Boolean);
+  const pick = items.find((i) => FOCUS.test(i)) || items[0] || "";
+  return /body mass index.*severe/i.test(pick) ? "Severe obesity" : /body mass index.*obes/i.test(pick) ? "Obesity" : pick;
 }
 
 /** The faculty member's own cases plus every shared (seeded) one. */
@@ -74,6 +97,8 @@ export function listCases(u: User): LibraryItem[] {
       ...metaOf(row, u),
       patient: p.patient ? `${p.patient.name}, ${p.patient.age}` : "",
       portrait: p.patient?.portrait || null,
+      temperament: temperamentOf(p),
+      mainIssue: mainIssueOf(p),
       summary: p.summary || "",
       encounterType: p.encounterType || "",
       counts: { facts: p.facts?.length || 0, actions: p.actions?.length || 0, artifacts: p.artifacts?.length || 0, variants: (p.variants || []).filter((v) => v.approved).length },

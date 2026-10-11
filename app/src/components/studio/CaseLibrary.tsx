@@ -50,7 +50,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
       if (origin === "sample" && c.origin !== "sample") return false;
       if (origin === "ai_unreviewed" && !(c.origin === "ai_draft" && !c.reviewed)) return false;
       if (origin === "faculty" && c.origin !== "faculty") return false;
-      if (needle && ![c.title, c.patient, c.specialty, c.summary, c.encounterType].join(" ").toLowerCase().includes(needle)) return false;
+      if (needle && ![c.title, c.patient, c.specialty, c.summary, c.encounterType, c.mainIssue, c.temperament].join(" ").toLowerCase().includes(needle)) return false;
       return true;
     });
   }, [cases, q, role, status, origin]);
@@ -122,9 +122,20 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                 <Link href={`/faculty/cases/${c.id}`} className="font-semibold text-slate-900 hover:text-brand-700">
                   {c.patient || "Unnamed patient"}
                 </Link>
-                <p className="line-clamp-1 text-sm text-slate-600" title={c.title}>
-                  {c.title}
-                </p>
+                <div className="mt-1.5 flex flex-wrap gap-2 text-sm">
+                  {c.mainIssue && (
+                    <span className="inline-flex items-center gap-1.5 rounded-lg bg-sky-100 px-2.5 py-1 font-medium text-sky-800">
+                      <Icon name="pulse" />
+                      {c.mainIssue}
+                    </span>
+                  )}
+                  {c.temperament && (
+                    <span className="inline-flex items-center gap-1.5 rounded-lg bg-violet-100 px-2.5 py-1 font-medium text-violet-800">
+                      <Icon name="mood" />
+                      {c.temperament}
+                    </span>
+                  )}
+                </div>
               </div>
               <div className="flex shrink-0 flex-wrap items-center gap-2">
                 {c.status === "published" ? <Badge tone="green">Published</Badge> : c.status === "archived" ? <Badge tone="slate">Archived</Badge> : <Badge tone="amber">Draft</Badge>}
