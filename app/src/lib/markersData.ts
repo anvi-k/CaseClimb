@@ -20,8 +20,8 @@ let cache: Row[] | null = null;
 
 function load(): Row[] {
   if (cache) return cache;
-  if (!fs.existsSync(FILE)) return (cache = []);
-  const lines = fs.readFileSync(FILE, "utf8").split(/\r?\n/).filter(Boolean);
+  if (!fs.existsSync(/*turbopackIgnore: true*/ FILE)) return (cache = []);
+  const lines = fs.readFileSync(/*turbopackIgnore: true*/ FILE, "utf8").split(/\r?\n/).filter(Boolean);
   const head = lines[0].split(",").map((h) => h.trim());
   const rows: Row[] = [];
   for (let i = 1; i < lines.length; i++) {
