@@ -1,4 +1,5 @@
 // Deterministic consistency checks. Pure; runs on the server at check and publish time.
+import { markerProblems } from "@/lib/markers";
 import type { CaseProfile } from "@/lib/types";
 import type { PatchOp } from "./patch";
 import type { SectionId } from "./profile";
@@ -41,6 +42,9 @@ const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 export function runRuleChecks(p: CaseProfile, rubricIds?: string[]): Issue[] {
   const out: Issue[] = [];
   const add = (i: Omit<Issue, "id" | "source" | "status">) => out.push({ ...i, id: "r" + key(i.title + "|" + i.where), source: "rule", status: "open" });
+
+  // --- Values taken from a dataset must still match it ---
+  for (const m of markerProblems(p)) add({ severity: m.severity, section: m.where.startsWith("Action") || m.where.startsWith("Laboratory") ? "actions" : "artifacts", where: m.where, title: m.title, why: m.why });
   const factIds = new Set(p.facts.map((f) => f.id));
   const actionIds = new Set(p.actions.map((a) => a.id));
   const artifactIds = new Set(p.artifacts.map((d) => d.id));

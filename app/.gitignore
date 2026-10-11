@@ -50,3 +50,6 @@ next-env.d.ts
 /.secrets/
 
 /data/seed/cases/.review/
+
+# organiser datasets used to ground patients (see src/lib/markersData.ts)
+/data/private/

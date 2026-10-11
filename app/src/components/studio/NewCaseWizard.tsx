@@ -68,6 +68,15 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
   const [elapsed, setElapsed] = useState(0);
   const [saved, setSaved] = useState<{ id: string; title: string; seconds: number; counts: { facts: number; actions: number; artifacts: number; objectives: number } } | null>(null);
   const [importing, setImporting] = useState(false);
+  // Laboratory values and blood pressure can come from the health-markers dataset instead of the model.
+  const [markers, setMarkers] = useState<{ available: boolean; conditions: { id: string; label: string; rows: number }[] } | null>(null);
+  const [condition, setCondition] = useState("");
+  useEffect(() => {
+    fetch("/api/markers")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => j && setMarkers(j))
+      .catch(() => {});
+  }, []);
   const started = useRef(0);
 
   useEffect(() => {
@@ -124,7 +133,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
     setStage("writing");
     try {
       const r = await api<NonNullable<typeof saved>>("/api/cases/generate", {
-        json: { professionId: role, description: way === "describe" ? description : form.notes || "", structured: way === "form" ? form : undefined, goals, level: Number(level) || undefined, uploadId: doc?.id, answers: qa },
+        json: { professionId: role, description: way === "describe" ? description : form.notes || "", structured: way === "form" ? form : undefined, goals, level: Number(level) || undefined, uploadId: doc?.id, answers: qa, markers: condition ? { condition } : undefined },
       });
       setSaved(r);
       router.push(`/faculty/cases/${r.id}?created=1`);
@@ -191,6 +200,18 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
             <option value="5">5 - Complex, sensitive, easy to miss</option>
           </Select>
         </Field>
+        {markers?.available && (
+          <Field label="Clinical values from data" hint="Takes blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure from one row of the health-markers dataset. The model writes the person and the story around those numbers but cannot change them, and the row number is kept on the patient.">
+            <Select value={condition} onChange={(e) => setCondition(e.target.value)}>
+              <option value="">Written by the guide (no dataset)</option>
+              {markers.conditions.map((c) => (
+                <option key={c.id} value={c.id}>
+                  {c.label} · {c.rows.toLocaleString()} rows
+                </option>
+              ))}
+            </Select>
+          </Field>
+        )}
         <Field label="Source document (optional)" hint="A guideline, protocol or paper as PDF, TXT or MD. The case is written to agree with it, and it is attached as a knowledge source that grounds student feedback.">
           {doc ? (
             <div className="flex items-center justify-between gap-2 rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm">

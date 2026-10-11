@@ -448,6 +448,14 @@ export default function CaseEditor({
           {flash.text}
         </Notice>
       )}
+      {profile.dataSource && (
+        <Notice tone="teal" className="mb-3">
+          <p className="text-sm">
+            <span className="font-medium">Clinical values from data.</span> Blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure come from {profile.dataSource.dataset}, row {profile.dataSource.row} (labelled {profile.dataSource.conditionLabel}). They are in the document &ldquo;Laboratory results&rdquo; and the
+            actions &ldquo;Blood tests&rdquo; and &ldquo;Blood pressure&rdquo;. Everything else about this patient was drafted by the guide.
+          </p>
+        </Notice>
+      )}
       {showIntro && (
         <Notice tone="teal" className="mb-3">
           <div className="flex items-start justify-between gap-3">

@@ -181,6 +181,20 @@ export interface CaseProfile {
   variants?: Variant[];
   /** Deliberate conflicts between what the patient says and what the record shows. */
   mismatches?: Mismatch[];
+  /** Set when the laboratory values and blood pressure were taken from a dataset row, not written by the model. */
+  dataSource?: DataSource;
+}
+
+export interface DataSource {
+  dataset: string;
+  /** 1-based data row in the dataset file. */
+  row: number;
+  condition: string;
+  conditionLabel: string;
+  /** Values as shown in the case, keyed by dataset column. */
+  values: Record<string, string>;
+  documentId: string;
+  actionIds: string[];
 }
 
 export interface Mismatch {

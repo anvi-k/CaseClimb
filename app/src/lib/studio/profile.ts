@@ -1,6 +1,6 @@
 // Pure helpers for working with a CaseProfile in the Patient Studio. Safe to import from client components.
 import { FACT_CATEGORIES } from "@/lib/types";
-import type { ActionKind, Artifact, CaseProfile, ClinicalAction, Fact, Importance, Mismatch, Objective, Tier, Variant } from "@/lib/types";
+import type { ActionKind, Artifact, CaseProfile, ClinicalAction, DataSource, Fact, Importance, Mismatch, Objective, Tier, Variant } from "@/lib/types";
 
 export const TIERS: { id: Tier; label: string; rule: string }[] = [
   { id: "initial", label: "Volunteered", rule: "The patient says this without being asked, in the opening line or the first replies." },
@@ -251,7 +251,16 @@ export function sanitizeProfile(input: unknown): CaseProfile {
       }),
       "m",
     ),
+    ...(dataSource(c.dataSource) ? { dataSource: dataSource(c.dataSource) } : {}),
   };
+}
+
+function dataSource(x: unknown): DataSource | undefined {
+  const d = obj(x);
+  if (!d.dataset || !d.row) return undefined;
+  const values: Record<string, string> = {};
+  for (const [k, v] of Object.entries(obj(d.values))) values[k] = str(v);
+  return { dataset: str(d.dataset), row: Math.round(num(d.row, 0)), condition: str(d.condition), conditionLabel: str(d.conditionLabel), values, documentId: str(d.documentId), actionIds: strs(d.actionIds) };
 }
 
 export function blankProfile(professionId: string): CaseProfile {

@@ -73,3 +73,20 @@ Engine smoke test: `npx tsx --env-file=.env.local scripts/sim-test.ts`.
 EC2 behind CloudFront. A systemd timer on the server polls `main` on GitHub every minute, builds
 the new commit in its own release directory and switches over. `GET /api/health` reports the
 running commit.
+
+## Dataset-grounded patients
+
+A patient's blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure can be taken from a
+row of the organisers' health-markers dataset instead of being written by the model.
+
+- Put the file at `data/private/health_markers_dataset.csv` (gitignored) or set `HEALTH_MARKERS_CSV`.
+  Without it the option does not appear and generation works as before.
+- In **New patient**, choose a condition under **Clinical values from data**. The server picks a
+  random complete row with that label (`src/lib/markersData.ts`), tells the model the values so
+  the story fits them, and then writes them into the case itself (`applyMarkers` in
+  `src/lib/markers.ts`): a "Laboratory results" document and "Blood tests" and "Blood pressure"
+  actions. The row number is stored on the case as `dataSource`.
+- The consistency check fails with a high-severity issue if those values are later changed, and
+  lists any other record in the case that gives a different number for the same test.
+- Units and reference ranges are standard adult values supplied in `markers.ts`; the dataset has
+  numbers only. Rows with a missing marker are not used.
