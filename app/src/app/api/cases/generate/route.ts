@@ -3,8 +3,6 @@ import { generateCase } from "@/lib/casegen";
 import { bad, longJson } from "@/lib/http";
 import { applyMarkers, markerBrief, MARKER_CONDITIONS } from "@/lib/markers";
 import { pickMarkers } from "@/lib/markersData";
-import { applySynthea, sealSynthea, syntheaBrief } from "@/lib/synthea";
-import { syntheaRecord } from "@/lib/syntheaData";
 import { professions } from "@/lib/professions";
 import { fillHeader } from "@/lib/studio/ai";
 import { runRuleChecks } from "@/lib/studio/checks";
@@ -32,8 +30,6 @@ const STRUCTURED_LABELS: Record<string, string> = {
  * Drafts a full case with the model and stores it as an unreviewed AI draft.
  * Body: { professionId, description? , structured?: {..}, goals?, level?, uploadId?, answers?: [{ question, answer }], markers?: { condition, row? } }
  * With `markers`, laboratory values and blood pressure are taken from a row of the health-markers dataset.
- * With `synthea: { id }`, the whole clinical record (demographics, problems, medications, allergies,
- * vital signs, laboratory results) is taken from a Synthea record.
  */
 export async function POST(req: Request) {
   const user = await apiUser("faculty");
@@ -53,10 +49,6 @@ export async function POST(req: Request) {
   const source = wanted ? pickMarkers(wanted, Number(b.markers.row) || undefined) : null;
   if (wanted && !source) return bad("The health-markers dataset is not installed on this server, or that row is not usable.");
   if (source) description = [description, markerBrief(source)].filter(Boolean).join("\n\n");
-  const synId = !source && b.synthea && typeof b.synthea === "object" ? String(b.synthea.id || "") : "";
-  const syn = synId ? syntheaRecord(synId) : null;
-  if (synId && !syn) return bad("That Synthea record could not be found.");
-  if (syn) description = [description, syntheaBrief(syn.record)].filter(Boolean).join("\n\n");
   if (description.length < 15) return bad("Describe the patient first.");
   const answers = (Array.isArray(b.answers) ? b.answers : []).filter((a: { question?: string; answer?: string }) => a?.question && String(a.answer || "").trim());
   if (answers.length) description += "\n\nFaculty answers to clarifying questions:\n" + answers.map((a: { question: string; answer: string }) => `- ${a.question} ${String(a.answer).trim()}`).join("\n");
@@ -78,7 +70,6 @@ export async function POST(req: Request) {
     let profile = tidyTables(sanitizeProfile(await fillHeader(sanitizeProfile(drafted), level)));
     // The numbers are written by code from the dataset row, whatever the model produced.
     if (source) profile = sanitizeProfile(applyMarkers(profile, source));
-    if (syn) profile = sealSynthea(sanitizeProfile(applySynthea(profile, syn.record, syn.source, syn.index)));
     if (upload?.text) profile.knowledge.push({ id: "k1", title: upload.filename.replace(/\.[a-z0-9]+$/i, ""), text: upload.text.slice(0, 60000) });
     const id = insertCase({ ownerId: user.id, origin: "ai_draft", profile });
     const rules = runRuleChecks(profile);
@@ -88,7 +79,7 @@ export async function POST(req: Request) {
       seconds: Math.round((Date.now() - started) / 1000),
       counts: { facts: profile.facts.length, actions: profile.actions.length, artifacts: profile.artifacts.length, objectives: profile.objectives.length },
       structureIssues: rules.length,
-      dataSource: profile.dataSource ? { dataset: profile.dataSource.dataset, row: profile.dataSource.row, record: profile.dataSource.recordId || null, condition: profile.dataSource.conditionLabel } : null,
+      dataSource: profile.dataSource ? { dataset: profile.dataSource.dataset, row: profile.dataSource.row, condition: profile.dataSource.conditionLabel } : null,
     };
   });
 }
