@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { visitUrl } from "@/lib/courses/settings";
 
-const LEVELS = [
+export const LEVELS = [
   { name: "Easygoing", about: "Open and cooperative. Answers fully and volunteers what matters." },
   { name: "Reserved", about: "Polite but brief. Needs a follow-up question to say more." },
   { name: "Guarded", about: "Gives short answers and holds things back until you earn some trust." },

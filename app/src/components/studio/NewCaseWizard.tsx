@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Button, cx, Input, PageHeader, Select } from "@/components/ui";
+import Icon from "@/components/Icon";
+import { LEVELS } from "@/components/courses/TemperamentPicker";
 import type { ClarifyQuestion } from "@/lib/studio/ai";
 import { api, Area, Field, Notice, Panel, Text } from "./fields";
 
@@ -74,6 +76,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
   // Laboratory values and blood pressure can come from the health-markers dataset instead of the model.
   const [markers, setMarkers] = useState<{ available: boolean; conditions: { id: string; label: string; rows: number }[]; synthea?: { available: boolean; records: { id: string; label: string }[] } } | null>(null);
   const [condition, setCondition] = useState("");
+  const [temperament, setTemperament] = useState(3);
   useEffect(() => {
     fetch("/api/markers")
       .then((r) => (r.ok ? r.json() : null))
@@ -129,7 +132,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
     }
   }
 
-  async function write(qa: { question: string; answer: string }[]) {
+  async function write(qa: { question: string; answer: string }[], simple?: { description: string; synthea: string }) {
     setError(null);
     setSaved(null);
     started.current = Date.now();
@@ -137,7 +140,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
     setStage("writing");
     try {
       const r = await api<NonNullable<typeof saved>>("/api/cases/generate", {
-        json: { professionId: role, description: way === "describe" ? description : form.notes || "", structured: way === "form" ? form : undefined, goals, level: Number(level) || undefined, uploadId: doc?.id, answers: qa, markers: condition && !condition.startsWith("syn:") ? { condition } : undefined, synthea: condition.startsWith("syn:") ? { id: condition.slice(4) } : undefined },
+        json: simple ? { professionId: role, description: simple.description, synthea: { id: simple.synthea } } : { professionId: role, description: way === "describe" ? description : form.notes || "", structured: way === "form" ? form : undefined, goals, level: Number(level) || undefined, uploadId: doc?.id, answers: qa, markers: condition && !condition.startsWith("syn:") ? { condition } : undefined, synthea: condition.startsWith("syn:") ? { id: condition.slice(4) } : undefined },
       });
       setSaved(r);
       router.push(`/faculty/cases/${r.id}?created=1`);
@@ -239,6 +242,13 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
     </div>
   );
 
+  // The one choice an instructor makes: how the patient behaves. The clinical record comes from
+  // a Synthea record the server picks, and the guide writes the rest.
+  const mood = LEVELS[temperament - 1];
+  const create = () => {
+    setCondition("syn:auto");
+    return write([], { description: `Temperament: ${mood.name.toLowerCase()}. ${mood.about} A general outpatient visit.`, synthea: "auto" });
+  };
   if (stage === "writing" || stage === "failed") {
     const steps: { label: string; detail?: string; state: "done" | "active" | "todo" | "failed" }[] = [
       { label: way === "describe" ? "Description read" : `Form read (${formFilled} fields filled in)`, state: "done", detail: understood || undefined },
@@ -296,9 +306,9 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
             <div className="mt-4 space-y-3">
               <Notice tone="red">{error}</Notice>
               <div className="flex gap-2">
-                <Button onClick={() => write(questions.map((q) => ({ question: q.question, answer: answers[q.id] || "" })))}>Try again</Button>
+                <Button onClick={create}>Try again</Button>
                 <Button variant="secondary" onClick={() => setStage("input")}>
-                  Back to the description
+                  Back
                 </Button>
               </div>
             </div>
@@ -352,121 +362,36 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
   ];
 
   return (
-    <div className="mx-auto max-w-4xl">
-      <PageHeader
-        title="New Patient"
-        subtitle="Every route ends in the same editor, where you review and correct everything before publishing. Nothing reaches students until you publish."
-        action={
-          <Link href="/faculty/cases" className="text-sm text-slate-600 hover:text-slate-900">
-            Back to the library
-          </Link>
-        }
-      />
-      <div className="mb-4 grid gap-2 sm:grid-cols-3" role="tablist">
-        {ways.map((w) => (
-          <button
-            key={w.id}
-            type="button"
-            role="tab"
-            aria-selected={way === w.id}
-            onClick={() => {
-              setWay(w.id);
-              setError(null);
-            }}
-            className={cx("rounded-lg border p-3 text-left transition-colors", way === w.id ? "border-brand-600 bg-brand-50 ring-1 ring-brand-600" : "border-slate-200 bg-white hover:border-slate-300")}
-          >
-            <span className="block text-sm font-semibold text-slate-900">{w.title}</span>
-            <span className="mt-0.5 block text-xs leading-relaxed text-slate-600">{w.text}</span>
-          </button>
-        ))}
+    <div className="mx-auto max-w-3xl">
+      <Link href="/faculty/cases" className="inline-flex items-center gap-1.5 text-[15px] text-brand-700 hover:underline">
+        <Icon name="arrowLeft" />
+        Back to patients
+      </Link>
+      <h1 className="mt-2 text-[40px] leading-tight text-slate-900">New Patient</h1>
+      <p className="mb-8 mt-1 text-slate-600">Choose how the patient behaves. Everything else is picked for you from a real-data patient record.</p>
+      <div className="rounded-2xl border border-slate-200 bg-white p-9">
+        <h2 className="flex items-center gap-2.5 text-[26px] text-slate-900">
+          <Icon name="mood" className="h-7 w-7 text-brand-600" />
+          Temperament
+        </h2>
+        <input type="range" min={1} max={5} step={1} value={temperament} onChange={(e) => setTemperament(Number(e.target.value))} aria-label="Patient temperament" aria-valuetext={mood.name} className="mt-6 h-3 w-full cursor-pointer accent-brand-600" />
+        <div className="mt-2 grid grid-cols-5 text-[15px] text-slate-600">
+          {LEVELS.map((l, i) => (
+            <button key={l.name} type="button" onClick={() => setTemperament(i + 1)} className={`${i === 0 ? "text-left" : i === 4 ? "text-right" : "text-center"} ${i + 1 === temperament ? "font-semibold text-slate-900" : ""}`}>
+              {l.name}
+            </button>
+          ))}
+        </div>
+        <div className="my-7 rounded-xl bg-slate-100 px-6 py-5">
+          <p className="text-[22px] font-semibold text-slate-900">{mood.name}</p>
+          <p className="text-slate-600">{mood.about.replace("you earn", "the student earns").replace("you respond", "the student responds")}</p>
+        </div>
+        <button onClick={create} className="inline-flex items-center gap-2.5 rounded-full bg-brand-600 px-7 py-3.5 text-[19px] font-semibold text-white hover:bg-brand-700">
+          <Icon name="userPlus" />
+          Create patient
+        </button>
+        <p className="mt-4 text-[15px] text-slate-600">Takes one to two minutes. The patient opens as a draft for you to review before students can see it.</p>
       </div>
-      {error && (
-        <Notice tone="red" className="mb-3">
-          {error}
-        </Notice>
-      )}
-
-      {way === "describe" && (
-        <Panel title="Describe the patient" subtitle="Say who they are, why they booked the visit, and what the case should teach. Details you give are kept as written; the guide fills in the rest.">
-          <div className="space-y-4">
-            {roleSelect}
-            <div>
-              <Area
-                label="Patient description"
-                minRows={7}
-                value={description}
-                onChange={setDescription}
-                placeholder="e.g. 58-year-old truck driver with three weeks of exertional chest tightness. Smoker, father died of a heart attack at 60. Plays it down as heartburn..."
-              />
-              <div className="mt-1.5 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
-                Start from an example:
-                {EXAMPLES.filter((e) => roles.some((r) => r.id === e.role)).map((e) => (
-                  <button
-                    key={e.label}
-                    type="button"
-                    className="rounded-full border border-slate-300 px-2.5 py-0.5 text-slate-700 hover:bg-slate-50"
-                    onClick={() => {
-                      setDescription(e.text);
-                      setGoals(e.goals);
-                      setRole(e.role);
-                    }}
-                  >
-                    {e.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-            {shared}
-            <div className="flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
-              <Button disabled={!canContinue || stage === "asking" || uploading} onClick={next}>
-                {stage === "asking" ? "Reading your description..." : "Continue"}
-              </Button>
-              <span className="text-xs text-slate-500">Next: the guide may ask up to three short questions, then drafts the case (usually one to two minutes).</span>
-            </div>
-          </div>
-        </Panel>
-      )}
-
-      {way === "form" && (
-        <Panel title="Core clinical details" subtitle="Fill in what matters to you and leave the rest blank. At minimum give the reason for the visit or the underlying problem.">
-          <div className="space-y-4">
-            {roleSelect}
-            <div className="grid gap-4 sm:grid-cols-4">
-              {FORM_FIELDS.map((f) =>
-                f.area ? (
-                  <Area key={f.key} className="sm:col-span-2" label={f.label} minRows={2} placeholder={f.placeholder} value={form[f.key] || ""} onChange={(v) => setForm((s) => ({ ...s, [f.key]: v }))} />
-                ) : (
-                  <Text key={f.key} className={f.half ? "sm:col-span-1" : "sm:col-span-2"} label={f.label} placeholder={f.placeholder} value={form[f.key] || ""} onChange={(v) => setForm((s) => ({ ...s, [f.key]: v }))} />
-                ),
-              )}
-              <Area className="sm:col-span-4" label="Anything else the guide should know (optional)" minRows={2} value={form.notes || ""} onChange={(v) => setForm((s) => ({ ...s, notes: v }))} />
-            </div>
-            {shared}
-            <div className="flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
-              <Button disabled={!canContinue || uploading} onClick={next}>
-                Draft the patient
-              </Button>
-              <span className="text-xs text-slate-500">Drafting usually takes one to two minutes and can take longer. You review everything before it can be published.</span>
-            </div>
-          </div>
-        </Panel>
-      )}
-
-      {way === "import" && (
-        <Panel title="Import a patient profile" subtitle="Use a JSON file exported from the editor (Export JSON), or any file that follows the Poscere case format. The import is saved as a draft you own.">
-          <Input type="file" accept=".json,application/json" disabled={importing} onChange={(e) => e.target.files?.[0] && importFile(e.target.files[0])} />
-          {importing && <p className="mt-2 text-sm text-slate-500">Importing...</p>}
-          <div className="mt-5 border-t border-slate-100 pt-4">
-            <p className="text-sm text-slate-700">Prefer to write everything yourself?</p>
-            <div className="mt-2 flex flex-wrap items-end gap-2">
-              <div className="w-64">{roleSelect}</div>
-            </div>
-            <Button variant="secondary" className="mt-3" onClick={blank}>
-              Start with an empty profile
-            </Button>
-          </div>
-        </Panel>
-      )}
     </div>
   );
 }

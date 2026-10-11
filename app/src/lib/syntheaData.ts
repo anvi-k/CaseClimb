@@ -28,3 +28,12 @@ export function syntheaRecord(id: string): { record: SyntheaRecord; index: numbe
   const i = records.findIndex((r) => r.id === id);
   return i < 0 ? null : { record: records[i], index: i + 1, source };
 }
+
+/** A record no existing patient was built from (or any record, once all are used), picked at random. */
+export function unusedSyntheaRecordId(used: Set<string>): string | null {
+  const { records } = load();
+  if (!records.length) return null;
+  const free = records.filter((r) => !used.has(r.id));
+  const pool = free.length ? free : records;
+  return pool[Math.floor(Math.random() * pool.length)].id;
+}

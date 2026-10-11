@@ -4,7 +4,8 @@ import { bad, longJson } from "@/lib/http";
 import { applyMarkers, markerBrief, MARKER_CONDITIONS } from "@/lib/markers";
 import { pickMarkers } from "@/lib/markersData";
 import { applySynthea, sealSynthea, syntheaBrief } from "@/lib/synthea";
-import { syntheaRecord } from "@/lib/syntheaData";
+import { all } from "@/lib/db";
+import { syntheaRecord, unusedSyntheaRecordId } from "@/lib/syntheaData";
 import { professions } from "@/lib/professions";
 import { fillHeader } from "@/lib/studio/ai";
 import { runRuleChecks } from "@/lib/studio/checks";
@@ -53,7 +54,12 @@ export async function POST(req: Request) {
   const source = wanted ? pickMarkers(wanted, Number(b.markers.row) || undefined) : null;
   if (wanted && !source) return bad("The health-markers dataset is not installed on this server, or that row is not usable.");
   if (source) description = [description, markerBrief(source)].filter(Boolean).join("\n\n");
-  const synId = !source && b.synthea && typeof b.synthea === "object" ? String(b.synthea.id || "") : "";
+  let synId = !source && b.synthea && typeof b.synthea === "object" ? String(b.synthea.id || "") : "";
+  // "auto": the server picks a record that no patient in the library was built from yet.
+  if (synId === "auto") {
+    const used = new Set(all<{ id: string | null }>("SELECT json_extract(profile, '$.dataSource.recordId') AS id FROM cases").map((r) => r.id || ""));
+    synId = unusedSyntheaRecordId(used) || "";
+  }
   const syn = synId ? syntheaRecord(synId) : null;
   if (synId && !syn) return bad("That Synthea record could not be found.");
   if (syn) description = [description, syntheaBrief(syn.record)].filter(Boolean).join("\n\n");
