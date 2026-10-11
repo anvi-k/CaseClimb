@@ -170,9 +170,9 @@ function fingerprint(c: CaseProfile): string {
   );
 }
 
-const RECORD_DOC = /\b(lab|labs|laboratory|panel|blood count|cbc|bmp|cmp|hba1c|a1c|lipid|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|anthropometric|flowsheet|weight|bmi|blood pressure|problem list|medication list|immuni[sz]ation|vaccin)/i;
+const RECORD_DOC = /\b(lab|labs|laboratory|panel|blood count|cbc|bmp|cmp|hba1c|a1c|lipid|cholesterol|ldl|hdl|triglycerides?|trend|creatinine|egfr|ha?emoglobin|potassium|sodium|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|anthropometric|flowsheet|weight|bmi|blood pressure|problem list|medication list|immuni[sz]ation|vaccin)/i;
 const KEEP_DOC = /refill|dispens|pharmacy|referral|letter|visit note|food|diet|diary|recall|menu|receipt/i;
-const RECORD_ACTION = /\b(lab|labs|laboratory|panel|blood count|cbc|hba1c|a1c|lipid|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|blood pressure|weight|height|bmi|anthropometric|problem list|medication list|immuni[sz]ation|vaccin)/i;
+const RECORD_ACTION = /\b(lab|labs|laboratory|panel|blood count|cbc|hba1c|a1c|lipid|cholesterol|ldl|hdl|triglycerides?|creatinine|egfr|ha?emoglobin|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|blood pressure|weight|height|bmi|anthropometric|problem list|medication list|immuni[sz]ation|vaccin)/i;
 const KEEP_ACTION = /refill|dispens|pharmacy|adherence|recall|diet|food|intake|screen|interview|history|readiness|literacy|hydration|activity|sleep/i;
 
 /**

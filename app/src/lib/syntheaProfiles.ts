@@ -186,6 +186,7 @@ Rules
 - Make this person specific. Name actual foods, shops, routines, people and phrases. Avoid the generic patient who "eats fast food and wants to be healthier".
 - Do not reuse names, foods, jobs, phrases or scenarios from the example profiles. They show the format, the level of detail and the tone, nothing else.
 - Do not give the patient the foods, beliefs or family patterns conventionally associated with their race or ethnicity. Build what they eat from the assigned eating pattern, their job, budget, household, age and where they live. Cultural context is about this individual's upbringing and values, written with respect.
+- Keep the recorded race and ethnicity exactly as given; do not add a heritage the record does not state.
 - Hidden and reluctant items must be concrete: name the person, the amount, the event. Never hedge with "likely", "possibly" or "something".
 - Do not repeat laboratory values, vital signs or measurements in the fields you write; refer to them in words if you need to ("her cholesterol is high").
 - information_disclosure sorts what the patient reveals into four tiers: initial (said unprompted at the start), discoverable (comes out with ordinary good questions), reluctant (needs trust or a careful, non-judgmental question), hidden (only with real rapport). The held-back trait belongs in reluctant or hidden. Put at least one item in each tier.
