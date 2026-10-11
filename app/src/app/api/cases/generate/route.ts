@@ -4,7 +4,7 @@ import { bad, longJson } from "@/lib/http";
 import { applyMarkers, markerBrief, MARKER_CONDITIONS } from "@/lib/markers";
 import { pickMarkers } from "@/lib/markersData";
 import { applySynthea, sealSynthea, syntheaBrief } from "@/lib/synthea";
-import { all } from "@/lib/db";
+import { all, run } from "@/lib/db";
 import { syntheaRecord, unusedSyntheaRecordId } from "@/lib/syntheaData";
 import { professions } from "@/lib/professions";
 import { fillHeader } from "@/lib/studio/ai";
@@ -87,6 +87,8 @@ export async function POST(req: Request) {
     if (syn) profile = sealSynthea(sanitizeProfile(applySynthea(profile, syn.record, syn.source, syn.index)));
     if (upload?.text) profile.knowledge.push({ id: "k1", title: upload.filename.replace(/\.[a-z0-9]+$/i, ""), text: upload.text.slice(0, 60000) });
     const id = insertCase({ ownerId: user.id, origin: "ai_draft", profile });
+    // There is no review-and-publish step: a new patient can be assigned straight away.
+    run("UPDATE cases SET status = 'published' WHERE id = ?", id);
     const rules = runRuleChecks(profile);
     return {
       id,

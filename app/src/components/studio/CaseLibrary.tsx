@@ -35,7 +35,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
   const [cases, setCases] = useState(initial);
   const [q, setQ] = useState("");
   const [role, setRole] = useState("");
-  const [status, setStatus] = useState("active");
+  const status = "active";
   const [origin, setOrigin] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -77,7 +77,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
     <>
       <PageHeader
         title="Patients"
-        subtitle="Students only see patients you have published."
+        subtitle="Every patient here can be assigned to your class."
         action={
           <LinkButton href="/faculty/cases/new">
             <Icon name="userPlus" />
@@ -85,14 +85,8 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
           </LinkButton>
         }
       />
-      <div className="mb-4 grid gap-2 sm:grid-cols-[1fr_auto]">
+      <div className="mb-4 grid gap-2 ">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by patient name or topic" aria-label="Search patients" />
-        <Select value={status} onChange={(e) => setStatus(e.target.value)} aria-label="Filter by status" className="sm:w-44">
-          <option value="active">Drafts and published</option>
-          <option value="draft">Drafts</option>
-          <option value="published">Published</option>
-          <option value="archived">Archived</option>
-        </Select>
       </div>
       {error && (
         <Notice tone="red" className="mb-3">
@@ -138,7 +132,6 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                 </div>
               </div>
               <div className="flex shrink-0 flex-wrap items-center gap-2">
-                {c.status === "published" ? <Badge tone="green">Published</Badge> : c.status === "archived" ? <Badge tone="slate">Archived</Badge> : <Badge tone="amber">Draft</Badge>}
                 <LinkButton href={`/faculty/cases/${c.id}`} variant="secondary" size="sm">
                   Open
                 </LinkButton>
@@ -151,11 +144,6 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                 >
                   Test visit
                 </Button>
-                {c.canEdit && c.status === "archived" && (
-                  <Button variant="ghost" size="sm" disabled={busy === c.id} onClick={() => setStatusOf(c.id, "restore")}>
-                    Restore
-                  </Button>
-                )}
               </div>
             </li>
           ))}

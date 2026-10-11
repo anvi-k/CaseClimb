@@ -101,6 +101,8 @@ export function seed() {
  * edited in the Studio are left alone.
  */
 function retireRemovedSeeds(dir: string) {
+  // Publishing is no longer a step, so drafts made before that change become assignable.
+  run("UPDATE cases SET status = 'published' WHERE status = 'draft'");
   if (!fs.existsSync(dir)) return;
   const files = new Set(fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => "seed_" + f.replace(/\.json$/, "")));
   for (const c of all<{ id: string }>("SELECT id FROM cases WHERE id LIKE 'seed_%' AND status = 'published' AND owner_id IS NULL AND created_at = updated_at")) {

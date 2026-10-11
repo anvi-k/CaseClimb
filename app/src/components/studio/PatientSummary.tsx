@@ -4,8 +4,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Icon, { type IconName } from "@/components/Icon";
-import { Badge, Button, LinkButton } from "@/components/ui";
-import { api, Notice, startTestVisit } from "./fields";
+import { Button } from "@/components/ui";
+import { Notice, startTestVisit } from "./fields";
 
 export interface Summary {
   id: string;
@@ -37,7 +37,7 @@ function Block({ icon, title, children }: { icon: IconName; title: string; child
 /** What an instructor sees on opening a patient: who they are and what the visit is about. The full editor is one link away. */
 export default function PatientSummary({ s }: { s: Summary }) {
   const router = useRouter();
-  const [status, setStatus] = useState(s.status);
+  const status = s.status;
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const edit = `/faculty/cases/${s.id}?edit=1`;
@@ -96,7 +96,6 @@ export default function PatientSummary({ s }: { s: Summary }) {
                 {s.temperament}
               </span>
             )}
-            {status === "published" ? <Badge tone="green">Published</Badge> : status === "archived" ? <Badge tone="slate">Archived</Badge> : <Badge tone="amber">Draft</Badge>}
           </div>
         </div>
         <div className="flex flex-none flex-col gap-2.5">
@@ -104,26 +103,6 @@ export default function PatientSummary({ s }: { s: Summary }) {
             <Icon name="video" />
             {busy === "test" ? "Starting…" : "Test visit"}
           </Button>
-          {status === "published" ? (
-            <Button
-              variant="secondary"
-              disabled={!!busy}
-              onClick={() =>
-                run("unpublish", async () => {
-                  await api(`/api/cases/${s.id}/status`, { json: { action: "unpublish" } });
-                  setStatus("draft");
-                })
-              }
-            >
-              {busy === "unpublish" ? "Unpublishing…" : "Unpublish"}
-            </Button>
-          ) : (
-            status === "draft" && (
-              <LinkButton href={edit} variant="secondary">
-                Review and publish
-              </LinkButton>
-            )
-          )}
         </div>
       </div>
       {error && (

@@ -143,7 +143,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
         json: simple ? { professionId: role, description: simple.description, synthea: { id: simple.synthea } } : { professionId: role, description: way === "describe" ? description : form.notes || "", structured: way === "form" ? form : undefined, goals, level: Number(level) || undefined, uploadId: doc?.id, answers: qa, markers: condition && !condition.startsWith("syn:") ? { condition } : undefined, synthea: condition.startsWith("syn:") ? { id: condition.slice(4) } : undefined },
       });
       setSaved(r);
-      router.push(`/faculty/cases/${r.id}?created=1`);
+      router.push(`/faculty/cases/${r.id}`);
     } catch (e) {
       setError((e as Error).message);
       setStage("failed");
@@ -258,13 +258,13 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
         detail: "The guide writes the persona, the facts with their disclosure tiers, the exams and orders with their results, the chart documents, the objectives and the answer key together, so they agree with each other. This usually takes one to two minutes and can take longer. There is no partial result to show until it finishes.",
         state: saved ? "done" : stage === "failed" ? "failed" : "active",
       },
-      { label: "Checking ids and links, then saving as a draft", state: saved ? "done" : "todo", detail: saved ? `${saved.counts.facts} facts, ${saved.counts.actions} exams and orders, ${saved.counts.artifacts} documents, ${saved.counts.objectives} objectives` : undefined },
-      { label: "Opening the editor for your review", state: saved ? "active" : "todo" },
+      { label: "Checking ids and links, then saving", state: saved ? "done" : "todo", detail: saved ? `${saved.counts.facts} facts, ${saved.counts.actions} exams and orders, ${saved.counts.artifacts} documents, ${saved.counts.objectives} objectives` : undefined },
+      { label: "Opening the patient", state: saved ? "active" : "todo" },
     ];
     return (
       <div className="mx-auto max-w-2xl">
-        <PageHeader title="Drafting your patient" subtitle="The draft is saved to your library as soon as it is written, even if you close this page." />
-        <Panel title={stage === "failed" ? "The draft was not written" : saved ? saved.title : `Working · ${fmt(elapsed)} elapsed`}>
+        <PageHeader title="Creating Your Patient" subtitle="The patient is saved to your list as soon as it is written, even if you close this page." />
+        <Panel title={stage === "failed" ? "The patient was not written" : saved ? saved.title : `Working · ${fmt(elapsed)} elapsed`}>
           <ol className="space-y-3">
             {steps.map((s, i) => (
               <li key={i} className="flex gap-3">
@@ -390,7 +390,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
           <Icon name="userPlus" />
           Create patient
         </button>
-        <p className="mt-4 text-[15px] text-slate-600">Takes one to two minutes. The patient opens as a draft for you to review before students can see it.</p>
+        <p className="mt-4 text-[15px] text-slate-600">Takes one to two minutes. The patient is ready to assign as soon as it is written.</p>
       </div>
     </div>
   );

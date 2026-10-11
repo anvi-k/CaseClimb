@@ -370,7 +370,6 @@ export default function CaseEditor({
                 <Icon name="arrowLeft" />
                 Patients
               </Link>
-              <StatusBadges c={meta} />
               <span
                 role="status"
                 className={cx("ml-1", saveState === "saved" && "text-slate-400", saveState === "dirty" && "text-amber-700", saveState === "saving" && "text-slate-500", saveState === "error" && "font-medium text-rose-700")}
@@ -403,15 +402,6 @@ export default function CaseEditor({
             <Button variant="secondary" size="sm" onClick={testVisit} disabled={busy === "test" || meta.status === "archived"} title="Saves, then starts a visit with this patient as a student would see it. Works for drafts.">
               {busy === "test" ? "Starting..." : "Test visit"}
             </Button>
-            {meta.status === "published" ? (
-              <Button variant="secondary" size="sm" disabled={!!busy} onClick={() => simple("unpublish", "Unpublished. The patient is a draft again and students can no longer start it.")}>
-                Unpublish
-              </Button>
-            ) : (
-              <Button size="sm" disabled={!!busy || meta.status === "archived"} onClick={openPublish}>
-                {busy === "publish" ? "Checking..." : "Publish"}
-              </Button>
-            )}
             <div className="relative">
               <Button variant="secondary" size="sm" onClick={() => setMenu(!menu)} aria-expanded={menu}>
                 More
@@ -420,9 +410,7 @@ export default function CaseEditor({
                 <div className="absolute right-0 z-40 mt-2 w-64 rounded-2xl border border-slate-200 bg-white p-2 text-sm shadow-lg">
                   <MenuItem label={check.running ? `Checking... ${check.seconds}s` : "Check consistency"} onClick={() => { setMenu(false); void runCheck(); }} />
                   <MenuItem label="Student preview" onClick={() => { setMenu(false); go("preview"); }} />
-                  <MenuItem label={meta.reviewed ? "Remove the faculty-reviewed mark" : "Mark as faculty-reviewed"} onClick={toggleReviewed} />
                   <MenuItem label="Export JSON" onClick={exportJson} />
-                  <MenuItem label={meta.status === "archived" ? "Restore from archive" : "Archive"} onClick={toggleArchive} />
                 </div>
               )}
             </div>
@@ -475,7 +463,7 @@ export default function CaseEditor({
         <nav aria-label="Sections" className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm lg:sticky lg:top-[5.75rem] lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto">
           <p className="px-2.5 pb-1 pt-1 text-[14px] font-semibold uppercase tracking-wide text-slate-400">Patient profile</p>
           {SECTIONS.map((s) => navBtn(s.id, s.label, counts[s.id]))}
-          <p className="mt-2 border-t border-slate-100 px-2.5 pb-1 pt-2 text-[14px] font-semibold uppercase tracking-wide text-slate-400">Before publishing</p>
+          <p className="mt-2 border-t border-slate-100 px-2.5 pb-1 pt-2 text-[14px] font-semibold uppercase tracking-wide text-slate-400">Checks</p>
           {navBtn(
             "consistency",
             "Consistency check",
