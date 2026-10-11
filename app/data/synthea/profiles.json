@@ -1,0 +1,630 @@
+[
+ {
+  "patient_overview": {
+   "name": "Velda Schuster",
+   "age": 31,
+   "sex": "Female",
+   "description": "Velda Schuster is a 31-year-old woman from Union, New Jersey, currently pregnant and also managing prediabetes, who comes in chatty and eager to connect, often circling through stories about her kids or her neighbor before landing back on the question asked. She reads a lot about nutrition and pregnancy online and has started making real changes to her diet in the last few weeks, though she admits those changes feel shaky with eight people in her house and a tight grocery budget. She lost a pregnancy in the second trimester a few years back, and while she's hopeful about this one, that history sits quietly under her friendliness. She likes being liked and tends to tell the student what she thinks they want to hear before circling back to the harder truths.",
+   "keywords": [
+    "prediabetes",
+    "pregnancy nutrition",
+    "miscarriage history",
+    "food insecurity",
+    "food pantry",
+    "health literacy",
+    "medication nonadherence",
+    "large household",
+    "budget shopping",
+    "fragile behavior change"
+   ]
+  },
+  "demographics": {
+   "occupation": "Part-time home health aide, picking up shifts a few days a week",
+   "residence": "Union, New Jersey; household of 8",
+   "ethnicity": "Black, Hispanic",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "More than high school",
+   "insurance": "Private insurance",
+   "cultural_context": "Velda grew up in a Black and Hispanic household in northern New Jersey where big family dinners were the center of the week, even when money was tight; her grandmother cooked for whoever showed up. She carries that same instinct now, cooking in bulk for her household of eight, and she takes pride in being the one who \"makes it stretch.\" She doesn't follow any particular traditional diet now so much as whatever combination of cheap, filling foods keeps everyone fed, but she still measures a good meal by whether there's enough for seconds."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Normal pregnancy",
+   "secondary_diagnoses": [
+    "Prediabetes",
+    "Past pregnancy history of miscarriage"
+   ],
+   "medical_history": [
+    "Prediabetes since 2017",
+    "Past pregnancy history of miscarriage since 2019",
+    "Normal pregnancy since 2026",
+    "Normal pregnancy (2023-07 to 2023-09, resolved)",
+    "Miscarriage in second trimester (2023-08 to 2023-09, resolved)",
+    "Complication occurring during pregnancy (2023-08 to 2023-09, resolved)",
+    "Viral sinusitis (2025-04 to 2025-04, resolved)",
+    "Evaluation of uterine fundal height (2026-09-18)",
+    "Auscultation of the fetal heart (2026-09-18)",
+    "Fetal anatomy study (2026-08-21)",
+    "Alpha-fetoprotein test - antenatal (2026-08-21)",
+    "Standard pregnancy test (2026-06-26)",
+    "Ultrasound scan for fetal viability (2026-06-26)"
+   ],
+   "current_symptoms": [
+    "Gets winded going up the stairs in her building",
+    "Craves salty snacks like chips in the late afternoon",
+    "Occasional heartburn after dinner",
+    "Feels her feet swell by the end of the day",
+    "Low energy by mid-afternoon, especially on days she skips lunch"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears tired around the eyes but animated and smiling when she talks",
+    "Mild ankle swelling noted when she sits with legs down during the visit",
+    "Gravid abdomen consistent with pregnancy, moves a bit stiffly getting up from the chair",
+    "Skin on her hands looks dry and chapped"
+   ],
+   "laboratory_data": [
+    "HbA1c: 5.9 % (reference < 5.7; 2026-06-05)",
+    "Glucose: 77.3 mg/dL (reference 70-99 (fasting); 2026-06-05)",
+    "Total cholesterol: 211 mg/dL (reference < 200; 2026-06-05)",
+    "LDL cholesterol: 133.3 mg/dL (reference < 100; 2026-06-05)",
+    "HDL cholesterol: 49.4 mg/dL (reference >= 40; 2026-06-05)",
+    "Triglycerides: 141.8 mg/dL (reference < 150; 2026-06-05)",
+    "Haemoglobin: 17.3 g/dL (reference 12.0-17.5; 2023-06-02)",
+    "White cell count: 4.7 10*3/uL (reference 4.0-11.0; 2023-06-02)",
+    "Platelets: 211.7 10*3/uL (reference 150-450; 2023-06-02)",
+    "Potassium: 4.4 mmol/L (reference 3.5-5.1; 2026-06-05)",
+    "Sodium: 140.4 mmol/L (reference 135-145; 2026-06-05)",
+    "Urea nitrogen: 19.5 mg/dL (reference 7-20; 2026-06-05)"
+   ],
+   "vital_signs": [
+    "BP: 135/88 mmHg",
+    "HR: 93 bpm",
+    "RR: 13 breaths/min",
+    "Recorded: 2026-06-05"
+   ],
+   "anthropometrics": [
+    "Height: 152.6 cm",
+    "Weight: 69.8 kg",
+    "BMI: 30 kg/m2",
+    "Weight change: +5.3 kg since 2023-06-02"
+   ]
+  },
+  "medication_profile": {
+   "medications": [],
+   "supplements_and_otc": [
+    "Prenatal vitamin from the OB",
+    "Occasional Tums for heartburn",
+    "Store-brand fish oil capsules she read about online for 'baby brain development' but takes inconsistently"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Mixed diet built around whatever is cheap, filling, and stretches across eight people - lots of rice, pasta, canned goods, and bread, with vegetables and fruit added when the budget or the food pantry allows",
+   "food_preferences": [
+    "Rice and chicken thighs",
+    "Spaghetti with jarred sauce doctored up with extra garlic and peppers",
+    "Oatmeal with cinnamon for breakfast since she read it helps blood sugar",
+    "Bananas and apples when they're on sale",
+    "Canned black beans"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "How often the food pantry visits run out of fresh produce by the time she gets there",
+    "Portion sizes at the big family dinners she cooks",
+    "Late-night snacking on chips or crackers when she's tired after a shift",
+    "How much soda is still in the house for the kids versus what she drinks herself",
+    "Whether she's actually checking labels the way she says she does online"
+   ],
+   "meal_pattern": "Tries to eat three meals a day now but often skips lunch on work days; family dinner is the one meal everyone eats together, usually later in the evening",
+   "hydration": "Drinks mostly water now, switched from soda about three weeks ago but keeps a few cans in the fridge for 'emergencies'",
+   "physical_activity": "Walks to the bus stop and up three flights of stairs daily; started a short evening walk around the block a few weeks ago when she can",
+   "substance_use": "Ex-smoker, quit several years ago; drinks alcohol rarely, maybe one drink at a family event",
+   "sleep": "Interrupted sleep most nights, between the pregnancy and the younger kids waking up"
+  },
+  "psychosocial_profile": {
+   "personality": "Warm, chatty, eager to be liked, quick to laugh and quick to apologize if she thinks she's rambling",
+   "communication_style": "Tells long, winding stories that start on topic and drift into something about her sister or her kids before she circles back; needs gentle redirecting",
+   "goals": [
+    "Get through this pregnancy healthy after losing the last one",
+    "Get her blood sugar numbers down before they become a bigger problem",
+    "Keep the household fed without running out of money before the end of the month"
+   ],
+   "concerns": [
+    "Worried the prediabetes will turn into diabetes while she's pregnant",
+    "Worried she won't have enough support once the baby comes",
+    "Worried she's not doing enough even though she's trying hard right now"
+   ],
+   "beliefs": [
+    "Believes that eating more whole grains and 'natural' sugar will fix most of her blood sugar issues since she read it online",
+    "Believes stress about the last pregnancy loss could happen again if she's not careful",
+    "Believes doctors sometimes rush through visits without hearing the whole picture"
+   ],
+   "motivations": [
+    "Her unborn baby",
+    "Her other children watching her try to eat better",
+    "Wanting to prove to herself she can stick with something this time"
+   ],
+   "fears": [
+    "Losing this pregnancy the way she lost the one in 2023",
+    "Her prediabetes turning into full diabetes",
+    "Being judged for not managing everything perfectly with eight people in the house"
+   ],
+   "barriers": [
+    "Tight grocery budget stretched across eight people",
+    "Part-time, irregular work hours that make meal planning hard",
+    "Very little hands-on help at home day to day",
+    "Food pantry stock is inconsistent, heavy on starches and canned goods"
+   ],
+   "strengths": [
+    "Genuinely motivated and already making changes",
+    "Reads and researches on her own, comes in with real nutrition knowledge",
+    "Resourceful cook who can stretch a small budget",
+    "Strong social contact and talks easily with people"
+   ],
+   "support_system": "Large household but little practical day-to-day help; husband works long hours, older kids help some, no nearby extended family to lean on",
+   "readiness_to_change": "In action - she started real changes a few weeks ago (cutting soda, trying to eat lunch, walking in the evening) but it's fragile and could slip if stress or money gets tighter"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "She's pregnant and excited, due in a few months",
+    "She has prediabetes and has been trying to eat better",
+    "She has eight people in her household and does most of the cooking",
+    "She lost a pregnancy in 2023 and is nervous but hopeful this time"
+   ],
+   "discoverable_information": [
+    "She shops at a discount grocery store and sometimes uses a food pantry when money is tight",
+    "She cut out soda about three weeks ago but still keeps some in the fridge",
+    "She works part-time as a home health aide with unpredictable hours",
+    "She reads a lot of nutrition articles and sometimes isn't sure which ones to trust",
+    "She skips lunch some days to make sure the kids have enough"
+   ],
+   "reluctant_information": [
+    "She doesn't take her prenatal vitamin daily the way it was prescribed - some weeks she only takes it three or four times because it makes her nauseous and she forgets when things get busy",
+    "She feels like she's carrying the whole household's food planning alone and it's exhausting"
+   ],
+   "hidden_information": [
+    "She is quietly terrified every week of this pregnancy that something will go wrong like it did in 2023, and she hasn't told her OB how much that fear affects her sleep",
+    "There have been a few weeks this year where the food pantry ran dry and she skipped her own meals for two or three days to stretch food for the kids"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Take a thorough diet history despite a wandering communication style",
+     "expected_discoveries": [
+      "Her actual meal pattern across a busy week",
+      "Where food comes from (store, pantry, discount shop)",
+      "Gaps between what she says and what she does"
+     ],
+     "possible_patient_reactions": [
+      "She drifts into a story about her sister's wedding before circling back",
+      "She laughs and says 'sorry, I do that, ask me again'",
+      "She lights up when asked about a recipe she's proud of"
+     ]
+    },
+    {
+     "learning_objective": "Explore medication/supplement adherence without judgment",
+     "expected_discoveries": [
+      "She isn't taking her prenatal vitamin daily",
+      "Nausea and forgetfulness are the real barriers, not lack of caring"
+     ],
+     "possible_patient_reactions": [
+      "She looks embarrassed and downplays it at first",
+      "She opens up more if the student asks gently and normalizes missed doses",
+      "She may deflect with a joke before admitting the truth"
+     ]
+    },
+    {
+     "learning_objective": "Assess food security and the role of the food pantry in her diet",
+     "expected_discoveries": [
+      "Inconsistent pantry stock heavy in starches",
+      "Episodes where she skipped meals to feed her kids"
+     ],
+     "possible_patient_reactions": [
+      "She hesitates, not wanting to seem like she can't provide",
+      "She becomes more open once she feels she won't be judged",
+      "She may minimize ('it's not that bad, we manage')"
+     ]
+    },
+    {
+     "learning_objective": "Support fragile behavior change using motivational interviewing",
+     "expected_discoveries": [
+      "Her recent wins (cutting soda, evening walks)",
+      "Her fear of backsliding under stress",
+      "What would help her sustain the changes"
+     ],
+     "possible_patient_reactions": [
+      "She's proud and wants praise for what she's already done",
+      "She gets anxious talking about what could make her slip",
+      "She responds well to being asked what's worked, not just what hasn't"
+     ]
+    },
+    {
+     "learning_objective": "Address prediabetes management in the context of pregnancy",
+     "expected_discoveries": [
+      "Her understanding of her HbA1c and glucose numbers",
+      "Beliefs about carbohydrates and 'natural sugar' that may need gentle correction",
+      "Her fear of the prediabetes progressing"
+     ],
+     "possible_patient_reactions": [
+      "She cites something she read online, confidently",
+      "She asks the student to confirm or correct what she's read",
+      "She gets quiet when the risk of progression comes up"
+     ]
+    },
+    {
+     "learning_objective": "Recognize the emotional weight of a prior pregnancy loss during nutrition counseling",
+     "expected_discoveries": [
+      "Her fear resurfaces when discussing this pregnancy's progress",
+      "How that fear may affect her sleep, stress, and eating patterns"
+     ],
+     "possible_patient_reactions": [
+      "She changes the subject quickly if it feels too raw",
+      "She may tear up briefly before covering it with a joke",
+      "She opens up only if the student is patient and doesn't push"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "The unprescribed medication-taking issue refers to her prenatal vitamin/supplement regimen since no prescription medications are on record",
+    "Her part-time home health aide work explains irregular hours and modest household income",
+    "Household of 8 includes her husband, several children, and possibly another relative, contributing to the tight budget"
+   ],
+   "optional_details": [
+    "She keeps a running list on her phone of 'foods that are supposed to help with blood sugar' from different websites",
+    "Her oldest daughter has started helping her cook dinner some nights",
+    "She has a neighbor she talks to most days but doesn't ask for help with the kids",
+    "She was referred for dental care at a recent checkup and hasn't gone yet"
+   ]
+  },
+  "source": {
+   "synthea_record": "021d485a",
+   "condition_group": "prediabetes",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "warm and talkative, likes to be liked",
+    "communication": "long stories that wander off the question",
+    "readiness": "action: started changing in the last few weeks and it is fragile",
+    "literacy": "high health literacy, reads a lot online",
+    "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+    "held_back": "does not take one of their medicines the way it was prescribed",
+    "support": "very little day-to-day support"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
+   "name": "Jayme Littel",
+   "age": 35,
+   "sex": "Female",
+   "description": "Jayme Littel is a 35-year-old married woman from Perth Amboy, NJ, with chronic low back and neck pain, chronic sinusitis, and obesity, on a pain management plan that includes a fentanyl patch and Percocet. She's blunt and impatient in the visit, giving short clipped answers unless pressed twice, and clearly doesn't see much point in a dietitian appointment. She comes across as tired and guarded, more focused on getting through the day than on long-term health changes.",
+   "keywords": [
+    "chronic pain",
+    "obesity",
+    "opioid management",
+    "low health literacy",
+    "precontemplation",
+    "convenience foods",
+    "caregiver burden",
+    "chronic low back pain",
+    "high cholesterol"
+   ]
+  },
+  "demographics": {
+   "occupation": "Former retail stock associate, currently unemployed",
+   "residence": "Perth Amboy, New Jersey; household of 3",
+   "ethnicity": "White",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "More than high school",
+   "insurance": "Private insurance",
+   "cultural_context": "Jayme grew up in a working-class household in central New Jersey where meals were whatever was fastest between shifts; nobody sat down and taught her to cook, and she never saw the point of learning. Food in her family was fuel, not a ritual, and she carries that same practical, no-frills attitude now. She doesn't attach any heritage or celebration meaning to food, and bristles a little at the idea that eating should be anything more than getting through the day."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Chronic low back pain",
+   "secondary_diagnoses": [
+    "Chronic sinusitis",
+    "Body mass index 30+ - obesity",
+    "Chronic pain",
+    "Chronic neck pain"
+   ],
+   "medical_history": [
+    "Chronic sinusitis since 1992",
+    "Body mass index 30+ - obesity since 2013",
+    "Chronic pain since 2014",
+    "Chronic low back pain since 2014",
+    "Chronic neck pain since 2014",
+    "Normal pregnancy (2024-06 to 2025-02, resolved)",
+    "Pre-eclampsia (2024-12 to 2025-02, resolved)",
+    "Normal pregnancy (2025-12 to 2026-01, resolved)",
+    "Gingivitis (2026-02 to 2026-03, resolved)",
+    "Primary dental caries (2026-03 to 2026-03, resolved)",
+    "Dental fluoride treatment (2026-03-02)",
+    "Restoration of tooth with coverage of all cusps using dental filling material (2026-03-02)",
+    "Dental plain X-ray bitewing (2026-03-02)",
+    "Examination of gingivae (2026-03-02)",
+    "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-03-02)",
+    "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-03-02)"
+   ],
+   "current_symptoms": [
+    "Constant dull ache in her low back that flares with standing or lifting",
+    "Stiffness and soreness in her neck, worse by afternoon",
+    "Sinus pressure and congestion, especially in spring",
+    "Low energy, says she's 'just tired all the time'",
+    "Occasional nausea she blames on her pain medication"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Guarded, stiff posture when shifting in the chair",
+    "Visibly limited range of motion turning her neck",
+    "Mild facial puffiness",
+    "Flat, clipped affect with minimal eye contact until rapport builds"
+   ],
+   "laboratory_data": [
+    "Total cholesterol: 290 mg/dL (reference < 200; 2025-02-09)",
+    "LDL cholesterol: 208.8 mg/dL (reference < 100; 2025-02-09)",
+    "HDL cholesterol: 54.3 mg/dL (reference >= 40; 2025-02-09)",
+    "Triglycerides: 134.2 mg/dL (reference < 150; 2025-02-09)",
+    "Haemoglobin: 15.9 g/dL (reference 12.0-17.5; 2024-02-04)",
+    "White cell count: 8.1 10*3/uL (reference 4.0-11.0; 2024-02-04)",
+    "Platelets: 243.1 10*3/uL (reference 150-450; 2024-02-04)"
+   ],
+   "vital_signs": [
+    "BP: 127/77 mmHg",
+    "HR: 80 bpm",
+    "RR: 15 breaths/min",
+    "Recorded: 2026-02-15"
+   ],
+   "anthropometrics": [
+    "Height: 165.8 cm",
+    "Weight: 86.7 kg",
+    "BMI: 31.5 kg/m2"
+   ]
+  },
+  "medication_profile": {
+   "medications": [
+    {
+     "name": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",
+     "dose": "0.35 MG",
+     "frequency": "once daily, oral contraceptive pill",
+     "purpose": "Not recorded",
+     "adherence": "Takes it fairly consistently, keeps it by the bathroom sink",
+     "patient_concerns": "Not worried about this one, says it's 'just birth control' and barely thinks about it"
+    },
+    {
+     "name": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+     "dose": "325 MG",
+     "frequency": "as needed for breakthrough pain, up to a few times a week",
+     "purpose": "Not recorded",
+     "adherence": "Uses it when pain spikes but tries to 'save' pills in case things get worse, so sometimes under-doses herself and suffers through pain instead",
+     "patient_concerns": "Doesn't like how it makes her foggy and constipated, and gets defensive if asked too much about how often she takes it"
+    },
+    {
+     "name": "72 HR Fentanyl 0.025 MG/HR Transdermal System",
+     "dose": "0.025 MG",
+     "frequency": "patch changed every 72 hours",
+     "purpose": "Not recorded",
+     "adherence": "Mostly consistent with patch changes, admits she's forgotten a day or two and just put the next one on late",
+     "patient_concerns": "Worried about becoming too dependent on it long-term but doesn't bring this up unless asked directly; annoyed when providers focus on the patch instead of her actual pain"
+    }
+   ],
+   "supplements_and_otc": [
+    "Occasional ibuprofen for sinus headaches, on top of her prescribed pain meds",
+    "A multivitamin she bought once and takes 'sometimes, when I remember'",
+    "Saline nasal spray for sinus congestion"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Heavy reliance on microwave meals, fast food, and gas-station snacks; low intake of fruits/vegetables",
+   "food_preferences": [
+    "Frozen lasagna and other microwave entrees from the Stop & Shop freezer aisle",
+    "Chicken nuggets and fries from the drive-thru near her apartment",
+    "Diet soda, drinks several a day",
+    "Convenience store snacks like chips and candy bars when she's out running errands"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Skipping meals when caregiving duties take over the day, then overeating convenience food later",
+    "Portion sizes with pain-medication-related nausea affecting appetite",
+    "Sodium intake from frozen and fast food given her cholesterol numbers",
+    "Fluid intake, mostly soda and coffee rather than water"
+   ],
+   "meal_pattern": "Irregular; coffee in the morning, often no real lunch, bigger convenience dinner at night once things calm down",
+   "hydration": "Mostly diet soda and coffee; drinks very little plain water",
+   "physical_activity": "Minimal; pain limits standing or walking for long, mostly sedentary at home",
+   "substance_use": "Ex-smoker, quit a few years back; drinks alcohol rarely, about one drink on occasion",
+   "sleep": "Poor and interrupted, says her back wakes her up most nights and she's up early for other reasons"
+  },
+  "psychosocial_profile": {
+   "personality": "Blunt, impatient, wants to get to the point; not interested in small talk or being coddled",
+   "communication_style": "Gives short, flat answers at first; opens up a little more only if asked the same question a second time in a different way; dislikes feeling lectured",
+   "goals": [
+    "Just wants the pain to be more manageable day to day",
+    "Doesn't have specific nutrition goals, mostly wants to be left alone about her weight"
+   ],
+   "concerns": [
+    "Worried about her housing situation and whether they can keep up with rent",
+    "Annoyed that every doctor visit turns into a conversation about her weight",
+    "Doesn't want to be told she needs to 'eat healthy' with no explanation of why it matters for her pain"
+   ],
+   "beliefs": [
+    "Thinks diet has little to do with her back and neck pain",
+    "Believes cooking is a waste of time when you can just heat something up",
+    "Thinks the lab numbers are 'just numbers' and not something she feels day to day"
+   ],
+   "motivations": [
+    "Avoiding more pain, more than any long-term health goal",
+    "Keeping some normalcy for her household despite everything going on"
+   ],
+   "fears": [
+    "Fear that her pain will get even worse and she won't be able to do anything",
+    "Underlying fear that she's not doing enough for the person she's caring for, though she won't say that outright"
+   ],
+   "barriers": [
+    "Chronic pain limits standing, cooking, and shopping",
+    "Low health literacy makes lab values and dietary advice feel abstract and irrelevant",
+    "No time or energy left after caregiving duties",
+    "Financial strain limits what she buys at the store"
+   ],
+   "strengths": [
+    "Resourceful about getting through hard days",
+    "Honest once she decides to talk, doesn't sugarcoat things",
+    "Has a partner who helps pick up slack at home"
+   ],
+   "support_system": "Married; her partner is supportive but anxious and hovers, often asking her a lot of questions out of worry, which she finds both helpful and exhausting",
+   "readiness_to_change": "Precontemplation; does not see a clear reason to change her eating habits and gets defensive if pushed too hard on it"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States she has chronic back and neck pain and takes medication for it",
+    "Mentions she's unemployed right now",
+    "Says she eats 'whatever's quick' and doesn't cook much"
+   ],
+   "discoverable_information": [
+    "Describes her usual day of meals: coffee, maybe skips lunch, frozen dinner at night",
+    "Mentions her partner is anxious and asks her a lot of questions about her health",
+    "Admits she doesn't really believe food has much to do with her pain",
+    "Will say she's worried about keeping up with rent if asked about stress"
+   ],
+   "reluctant_information": [
+    "Admits, if asked a second time more gently, that most of her day goes to caring for her elderly mother who lives nearby, leaving no time to cook or rest",
+    "Reluctantly says she sometimes skips her own meals entirely while managing her mother's appointments and meds"
+   ],
+   "hidden_information": [
+    "Has not told any provider that she's been rationing her Percocet some weeks to make sure there's enough for her mother's pain management too, not just her own",
+    "Hides that she cried in the car after a recent appointment because she felt like nobody asked how SHE was doing"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Build rapport with a blunt, guarded patient using open-ended, non-judgmental questions",
+     "expected_discoveries": [
+      "Patient's short initial answers soften with a second, differently-phrased question",
+      "Underlying caregiving responsibilities surface only with patience"
+     ],
+     "possible_patient_reactions": [
+      "'I already told you, I eat whatever's fast.'",
+      "'Why does this matter for my back?'",
+      "'Fine, if you really want to know...'"
+     ]
+    },
+    {
+     "learning_objective": "Assess for low health literacy and adapt nutrition education accordingly",
+     "expected_discoveries": [
+      "Patient doesn't understand how cholesterol or sodium relate to her symptoms",
+      "Needs plain-language, concrete connections between diet and pain or energy"
+     ],
+     "possible_patient_reactions": [
+      "'I don't get what that number even means.'",
+      "'Nobody ever explains why it matters.'"
+     ]
+    },
+    {
+     "learning_objective": "Identify caregiving burden as a hidden barrier to self-care and nutrition",
+     "expected_discoveries": [
+      "Patient spends most of her day caring for her mother",
+      "Patient skips her own meals during caregiving tasks"
+     ],
+     "possible_patient_reactions": [
+      "Deflects at first: 'I'm just busy, that's all.'",
+      "Opens up only if asked gently and without pressure"
+     ]
+    },
+    {
+     "learning_objective": "Explore the role of her partner's anxious, hovering support style in her health behaviors",
+     "expected_discoveries": [
+      "Partner means well but adds pressure by over-asking about her habits",
+      "Patient feels both supported and smothered"
+     ],
+     "possible_patient_reactions": [
+      "'He means well but it's a lot sometimes.'",
+      "Shrugs off the question initially"
+     ]
+    },
+    {
+     "learning_objective": "Discuss practical, low-effort nutrition strategies given her reliance on convenience foods and limited energy",
+     "expected_discoveries": [
+      "Opportunities to improve frozen/convenience meal choices rather than demanding full meal prep",
+      "Patient's resistance to anything that sounds like 'cooking from scratch'"
+     ],
+     "possible_patient_reactions": [
+      "'I'm not going to start meal-prepping, if that's what you're getting at.'",
+      "More receptive to small swaps if framed as still 'quick'"
+     ]
+    },
+    {
+     "learning_objective": "Screen for medication-related nutrition concerns such as opioid-induced constipation and appetite changes",
+     "expected_discoveries": [
+      "Patient's nausea and constipation linked to pain medication affects her eating patterns",
+      "Patient has not discussed this with prior providers"
+     ],
+     "possible_patient_reactions": [
+      "'It just makes my stomach messed up, so I don't eat much some days.'",
+      "Defensive if she thinks she's being accused of misusing medication"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Assumed Jayme's caregiving responsibility is for her elderly mother, consistent with household of 3 and no mention of other dependents",
+    "Assumed unemployment is recent and connected to managing chronic pain and caregiving demands",
+    "Assumed her partner is the second adult in the household of 3, with a third person being her mother visiting frequently or a dependent, though record lists household of 3 as her immediate home"
+   ],
+   "optional_details": [
+    "Keeps a small succulent on her windowsill that she says is 'the one thing I haven't killed'",
+    "Has a worn paperback she rereads when she can't sleep from back pain",
+    "Used to enjoy walking her dog before her back pain worsened, now has a neighbor help with walks"
+   ]
+  },
+  "source": {
+   "synthea_record": "03229300",
+   "condition_group": "weight",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "blunt and impatient, wants the point quickly",
+    "communication": "short answers until asked a second time",
+    "readiness": "precontemplation: does not see a reason to change",
+    "literacy": "low health literacy",
+    "eating": "relies on convenience and ready meals because cooking for one feels pointless",
+    "held_back": "caring duties for someone else that leave no time for their own health",
+    "support": "a partner who is supportive but anxious and hovers"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ }
+]

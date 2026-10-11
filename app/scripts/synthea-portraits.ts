@@ -7,6 +7,7 @@
  *   limit    how many patients to draw this run (default: all without a portrait)
  *   --force  draw again even if the picture exists
  *   --dry    print the prompts only
+ *   CONCURRENCY=4 pictures at a time
  *   STYLE=home  keep the photographic look but show the patient at home in their own clothes
  * Writes public/portraits/<case-file>.jpg (640 px tall, via macOS `sips`) and sets
  * profile.patient.portrait in the case file. Review the pictures before showing them to anyone.
@@ -88,7 +89,7 @@ async function main() {
   const files = fs.readdirSync(CASES).filter((f) => f.startsWith("synthea-") && f.endsWith(".json")).sort();
   const todo = files.filter((f) => force || !fs.existsSync(path.join(OUT, f.replace(/\.json$/, ".jpg")))).slice(0, limit);
   console.log(`${files.length} Synthea patients, ${files.length - todo.length} already have a picture or are left for later, ${todo.length} to draw now (${home ? "at home" : "hospital"} style)`);
-  for (const file of todo) {
+  const one = async (file: string) => {
     const full = path.join(CASES, file);
     const data = JSON.parse(fs.readFileSync(full, "utf8")) as { profile: CaseProfile };
     const profileFile = path.join(PROFILES, `${data.profile.dataSource?.recordId}.json`);
@@ -96,7 +97,7 @@ async function main() {
     const prompt = promptFor(data.profile, personality);
     if (dry) {
       console.log(`\n${file}\n  ${prompt}`);
-      continue;
+      return;
     }
     const t = Date.now();
     try {
@@ -128,7 +129,14 @@ async function main() {
         process.exit(1);
       }
     }
-  }
+  };
+  // Several pictures at a time; CONCURRENCY changes how many.
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.max(1, Number(process.env.CONCURRENCY) || 4) }, async () => {
+      while (next < todo.length) await one(todo[next++]);
+    }),
+  );
 }
 
 main();
