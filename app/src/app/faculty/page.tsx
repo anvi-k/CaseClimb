@@ -5,7 +5,7 @@ import CreateCourse from "@/components/courses/CreateCourse";
 import { LinkButton } from "@/components/ui";
 import { requireUser } from "@/lib/auth";
 import { all, parse } from "@/lib/db";
-import { coursesOf, feedbackUrl, reviewQueue } from "@/lib/courses";
+import { coursesOf, feedbackUrl, reviewQueue, studentAssignments } from "@/lib/courses";
 
 /** The instructor's home: one class, the two things they do with it, and who needs attention. */
 export default async function FacultyHome({ searchParams }: { searchParams: Promise<{ class?: string }> }) {
@@ -28,18 +28,14 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
     );
   }
 
-  // Every patient assigned in this class, once each, and how many of them each student has finished.
-  const assigned = [
-    ...new Set(all<{ case_ids: string }>("SELECT case_ids FROM assignments WHERE course_id = ? AND journey_id IS NULL", course.id).flatMap((a) => parse<string[]>(a.case_ids, []))),
-  ];
+  // Each student's own list (class-wide patients plus any assigned to them by name) and how much of it is done.
   const students = all<{ id: string; name: string }>("SELECT u.id, u.name FROM enrollments en JOIN users u ON u.id = en.user_id WHERE en.course_id = ? ORDER BY u.name", course.id).map((s) => {
-    const done = all<{ case_id: string }>(
-      `SELECT DISTINCT e.case_id FROM encounters e JOIN assignments a ON a.id = e.assignment_id
-       WHERE e.user_id = ? AND a.course_id = ? AND e.status IN ('scored','submitted')`,
-      s.id,
-      course.id,
-    ).filter((r) => assigned.includes(r.case_id)).length;
-    return { ...s, done };
+    const mine = new Map<string, boolean>();
+    for (const { a, cases } of studentAssignments(s.id)) {
+      if (a.journey_id || a.course_id !== course.id) continue;
+      for (const c of cases) mine.set(c.card.id, mine.get(c.card.id) || c.scoredCount > 0);
+    }
+    return { ...s, total: mine.size, done: [...mine.values()].filter(Boolean).length };
   });
   const review = reviewQueue(user).filter((r) => r.course_id === course.id);
 
@@ -117,13 +113,15 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
           <ul className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
             {students.map((s) => (
               <li key={s.id} className="flex flex-wrap items-center gap-5 px-7 py-4">
-                <div className="min-w-0 flex-1">{s.name}</div>
-                {assigned.length > 0 && (
+                <Link href={`/faculty/students/${s.id}`} className="min-w-0 flex-1 font-semibold text-slate-900 hover:text-brand-700">
+                  {s.name}
+                </Link>
+                {s.total > 0 && (
                   <div className="h-2.5 w-56 overflow-hidden rounded-full bg-slate-200">
-                    <div className={`h-2.5 rounded-full ${s.done === assigned.length ? "bg-emerald-600" : "bg-brand-600"}`} style={{ width: `${(100 * s.done) / assigned.length}%` }} />
+                    <div className={`h-2.5 rounded-full ${s.done === s.total ? "bg-emerald-600" : "bg-brand-600"}`} style={{ width: `${(100 * s.done) / s.total}%` }} />
                   </div>
                 )}
-                <span className="w-32 text-[15px] text-slate-600">{assigned.length === 0 ? "Nothing assigned" : s.done === 0 ? "Not started" : `${s.done} of ${assigned.length} done`}</span>
+                <span className="w-32 text-[15px] text-slate-600">{s.total === 0 ? "Nothing assigned" : s.done === 0 ? "Not started" : `${s.done} of ${s.total} done`}</span>
               </li>
             ))}
           </ul>
