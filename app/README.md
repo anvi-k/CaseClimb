@@ -26,14 +26,12 @@ challenges:
 
 ## Demo accounts
 
-Password for all four: `poscere-demo`
+Password for both: `poscere-demo`
 
 | Email | Role | Profession |
 |---|---|---|
 | `faculty@poscere.demo` | Faculty | Medicine |
 | `student@poscere.demo` | Student | Medicine |
-| `dietetics@poscere.demo` | Student | Dietetics |
-| `nursing@poscere.demo` | Student | Nursing |
 
 These accounts are shared, so you may see patients, visits and journey runs left by other people.
 Use Chrome, Edge or Safari if you want to talk by microphone; typing works in any browser.

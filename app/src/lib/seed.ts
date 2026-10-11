@@ -62,10 +62,17 @@ export function seed() {
   }
   const demo = [
     { email: "faculty@poscere.demo", legacyEmail: "faculty@rounds.demo", name: "Dr. Dana Faculty", role: "faculty", profession: "medicine" },
-    { email: "student@poscere.demo", legacyEmail: "student@rounds.demo", name: "Sam Student", role: "student", profession: "medicine" },
-    { email: "dietetics@poscere.demo", legacyEmail: "dietetics@rounds.demo", name: "Riley Dietetics", role: "student", profession: "dietetics" },
-    { email: "nursing@poscere.demo", legacyEmail: "nursing@rounds.demo", name: "Noor Nursing", role: "student", profession: "nursing" },
+    { email: "student@poscere.demo", legacyEmail: "student@rounds.demo", name: "Sam Carter", role: "student", profession: "medicine" },
   ];
+  // Students are no longer separated by program, so the per-program demo accounts are removed and
+  // the remaining demo student loses the name that read as a category.
+  for (const email of ["dietetics@poscere.demo", "nursing@poscere.demo", "dietetics@rounds.demo", "nursing@rounds.demo"]) {
+    const gone = get<{ id: string }>("SELECT id FROM users WHERE email = ?", email);
+    if (!gone) continue;
+    run("DELETE FROM enrollments WHERE user_id = ?", gone.id);
+    run("DELETE FROM users WHERE id = ?", gone.id);
+  }
+  run("UPDATE users SET name = 'Sam Carter' WHERE email = 'student@poscere.demo' AND name = 'Sam Student'");
   for (const d of demo) {
     if (get("SELECT 1 FROM users WHERE email = ?", d.email)) continue;
     const legacy = get<{ id: string }>("SELECT id FROM users WHERE email = ?", d.legacyEmail);
