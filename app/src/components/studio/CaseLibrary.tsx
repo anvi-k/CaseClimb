@@ -148,19 +148,6 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                   >
                     Test visit
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    disabled={busy === c.id}
-                    onClick={() =>
-                      act(c.id, async () => {
-                        const { id } = await api<{ id: string }>(`/api/cases/${c.id}/duplicate`, { json: {} });
-                        router.push(`/faculty/cases/${id}`);
-                      })
-                    }
-                  >
-                    Duplicate
-                  </Button>
                   {c.canEdit &&
                     (c.status === "archived" ? (
                       <Button variant="ghost" size="sm" disabled={busy === c.id} onClick={() => setStatusOf(c.id, "restore")}>

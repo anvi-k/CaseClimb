@@ -1,5 +1,6 @@
 "use client";
 
+import Icon from "@/components/Icon";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -37,7 +38,7 @@ const AUTOSAVE_MS = 1200;
 
 function MenuItem({ label, onClick }: { label: string; onClick: () => void }) {
   return (
-    <button type="button" className="block w-full px-3 py-1.5 text-left text-slate-700 hover:bg-slate-50" onClick={onClick}>
+    <button type="button" className="block w-full rounded-lg px-3 py-2 text-left text-slate-700 hover:bg-slate-50" onClick={onClick}>
       {label}
     </button>
   );
@@ -323,12 +324,6 @@ export default function CaseEditor({
     });
 
   const toggleReviewed = () => (meta.reviewed ? simple("unreview", "Marked as not reviewed.") : simple("review", "Marked as faculty-reviewed."));
-  const duplicate = () =>
-    doing("dup", async () => {
-      await mustSave();
-      const r = await api<{ id: string }>(`/api/cases/${id}/duplicate`, { json: {} });
-      router.push(`/faculty/cases/${r.id}`);
-    });
   const exportJson = () =>
     doing("export", async () => {
       await mustSave();
@@ -367,14 +362,14 @@ export default function CaseEditor({
   return (
     <div>
       {/* Top bar */}
-      <div className="sticky top-0 z-30 -mx-4 -mt-5 mb-4 border-b border-slate-200 bg-white/95 px-4 py-2.5 backdrop-blur">
+      <div className="editor-bar sticky top-0 z-30 -mx-4 -mt-5 mb-5 border-b border-slate-200 px-6 py-4 backdrop-blur">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-center gap-1.5 text-xs">
-              <Link href="/faculty/cases" className="text-slate-500 hover:text-slate-900">
-                Patient Studio
+              <Link href="/faculty/cases" className="inline-flex items-center gap-1 font-medium text-brand-700 hover:underline">
+                <Icon name="arrowLeft" />
+                Patients
               </Link>
-              <span className="text-slate-300">/</span>
               <StatusBadges c={meta} />
               <span
                 role="status"
@@ -392,12 +387,12 @@ export default function CaseEditor({
               )}
             </div>
             {/* The patient's name comes first and never truncates; the faculty title follows and may take a second line. */}
-            <h1 className="line-clamp-2 text-base leading-snug text-slate-900" title={profile.title || undefined}>
-              <span className="whitespace-nowrap font-semibold">
-                {profile.patient.name || "Unnamed patient"}, {profile.patient.age}
-              </span>
-              <span className="ml-2 text-sm font-normal text-slate-600">{profile.title || "Untitled patient"}</span>
+            <h1 className="mt-1 text-[26px] leading-tight text-slate-900">
+              {profile.patient.name || "Unnamed patient"}, {profile.patient.age}
             </h1>
+            <p className="line-clamp-1 text-sm text-slate-600" title={profile.title || undefined}>
+              {profile.title || "Untitled patient"}
+            </p>
           </div>
           <div className="flex flex-wrap items-center gap-1.5">
             {undo.length > 0 && (
@@ -405,12 +400,6 @@ export default function CaseEditor({
                 Undo last accepted change
               </Button>
             )}
-            <Button variant="secondary" size="sm" onClick={runCheck} disabled={check.running}>
-              {check.running ? `Checking... ${check.seconds}s` : "Check consistency"}
-            </Button>
-            <Button variant="secondary" size="sm" onClick={() => go("preview")}>
-              Student preview
-            </Button>
             <Button variant="secondary" size="sm" onClick={testVisit} disabled={busy === "test" || meta.status === "archived"} title="Saves, then starts a visit with this patient as a student would see it. Works for drafts.">
               {busy === "test" ? "Starting..." : "Test visit"}
             </Button>
@@ -424,13 +413,14 @@ export default function CaseEditor({
               </Button>
             )}
             <div className="relative">
-              <Button variant="ghost" size="sm" onClick={() => setMenu(!menu)} aria-expanded={menu}>
+              <Button variant="secondary" size="sm" onClick={() => setMenu(!menu)} aria-expanded={menu}>
                 More
               </Button>
               {menu && (
-                <div className="absolute right-0 z-40 mt-1 w-60 rounded-md border border-slate-200 bg-white py-1 text-sm shadow-lg">
+                <div className="absolute right-0 z-40 mt-2 w-64 rounded-2xl border border-slate-200 bg-white p-2 text-sm shadow-lg">
+                  <MenuItem label={check.running ? `Checking... ${check.seconds}s` : "Check consistency"} onClick={() => { setMenu(false); void runCheck(); }} />
+                  <MenuItem label="Student preview" onClick={() => { setMenu(false); go("preview"); }} />
                   <MenuItem label={meta.reviewed ? "Remove the faculty-reviewed mark" : "Mark as faculty-reviewed"} onClick={toggleReviewed} />
-                  <MenuItem label="Duplicate" onClick={duplicate} />
                   <MenuItem label="Export JSON" onClick={exportJson} />
                   <MenuItem label={meta.status === "archived" ? "Restore from archive" : "Archive"} onClick={toggleArchive} />
                 </div>
@@ -453,13 +443,11 @@ export default function CaseEditor({
           <p className="text-sm">
             {profile.dataSource.kind === "synthea" ? (
               <>
-                <span className="font-medium">Clinical record from data.</span> This patient&rsquo;s name, age, sex, problem list, medications, allergies, vital signs, laboratory results and immunisations come from {profile.dataSource.dataset}, record {profile.dataSource.recordId}. They are in the chart summary, the documents
-                &ldquo;Problem list and history&rdquo;, &ldquo;Medication list&rdquo; and &ldquo;Laboratory results&rdquo;, and the actions &ldquo;Vital signs&rdquo;, &ldquo;Recent laboratory results&rdquo; and &ldquo;Immunisation record&rdquo;. The guide drafted the personality, the conversation and the teaching design.
+                <span className="font-medium">Clinical record from data.</span> The demographics, problems, medications, allergies, vital signs, laboratory results and immunisations come from Synthea record {profile.dataSource.recordId}. The guide drafted the personality and the conversation.
               </>
             ) : (
               <>
-                <span className="font-medium">Clinical values from data.</span> Blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure come from {profile.dataSource.dataset}, row {profile.dataSource.row} (labelled {profile.dataSource.conditionLabel}). They are in the document &ldquo;Laboratory results&rdquo; and
-                the actions &ldquo;Blood tests&rdquo; and &ldquo;Blood pressure&rdquo;. Everything else about this patient was drafted by the guide.
+                <span className="font-medium">Clinical values from data.</span> The laboratory values and blood pressure come from {profile.dataSource.dataset}, row {profile.dataSource.row}. The guide drafted everything else.
               </>
             )}
           </p>

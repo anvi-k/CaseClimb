@@ -117,6 +117,10 @@ h2 {
 h1 {
   font-weight: 900;
 }
+/* The sticky bar at the top of the patient editor. */
+.editor-bar {
+  background-color: rgba(13, 43, 76, 0.92);
+}
 /* The dropdown under the three-bar button. */
 .user-menu {
   background: linear-gradient(180deg, #131a33 0%, #0f1730 100%);
