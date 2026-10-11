@@ -3,14 +3,14 @@
 @theme inline {
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
-  --color-brand-50: #eff6ff;
-  --color-brand-100: #dbeafe;
-  --color-brand-200: #bfdbfe;
-  --color-brand-500: #3b82f6;
-  --color-brand-600: #2563eb;
-  --color-brand-700: #1d4ed8;
-  --color-brand-900: #172554;
-  --color-ink: #0f172a;
+  --color-brand-50: #12424f;
+  --color-brand-100: #164e55;
+  --color-brand-200: #2f7f6f;
+  --color-brand-500: #5fdcae;
+  --color-brand-600: #5fdcae;
+  --color-brand-700: #7fe6c0;
+  --color-brand-900: #d6fff0;
+  --color-ink: #f4f8fc;
 }
 
 /*
@@ -25,10 +25,124 @@ body {
   height: 100%;
 }
 body {
-  background: #f6f8fc;
+  background:
+    radial-gradient(1100px 620px at 78% 8%, #2f6d9e 0%, rgba(47, 109, 158, 0) 62%),
+    radial-gradient(900px 600px at 8% 92%, #1b5a86 0%, rgba(27, 90, 134, 0) 60%),
+    linear-gradient(160deg, #0a2540 0%, #123a63 55%, #0d2f52 100%);
+  background-attachment: fixed;
   color: var(--color-ink);
   font-family: var(--font-sans);
   line-height: 1.7;
+}
+
+/*
+ * Deep blue and mint theme.
+ *
+ * The components are written with light-theme utility classes (white cards, dark slate text).
+ * Rather than rewrite every class, the palette itself is turned over here: each shade keeps its
+ * job (900 is still "strongest text", 200 is still "hairline border", 50 is still "faint tint")
+ * but points at the colour that does that job on a dark blue page. The few classes that mean a
+ * literal colour, not a role, are corrected underneath.
+ */
+@theme {
+  --color-slate-50: #1a4673;
+  --color-slate-100: #1f4f80;
+  --color-slate-200: #2f5f8e;
+  --color-slate-300: #4a79a6;
+  --color-slate-400: #8fb0cf;
+  --color-slate-500: #a9c4de;
+  --color-slate-600: #c3d8ec;
+  --color-slate-700: #d3e1ef;
+  --color-slate-800: #e6eef7;
+  --color-slate-900: #f4f8fc;
+
+  --color-emerald-50: #123f3a;
+  --color-emerald-100: #15504a;
+  --color-emerald-200: #1f6e63;
+  --color-emerald-700: #8ff0cb;
+  --color-emerald-800: #a6f4d6;
+  --color-emerald-900: #c8f9e6;
+
+  --color-amber-50: #3b3117;
+  --color-amber-100: #4a3c18;
+  --color-amber-200: #6b5520;
+  --color-amber-700: #fad38f;
+  --color-amber-800: #fbdca6;
+  --color-amber-900: #fde8c4;
+  --color-amber-950: #fff3dc;
+
+  --color-rose-50: #43202b;
+  --color-rose-100: #532431;
+  --color-rose-200: #74303f;
+  --color-rose-700: #ffb3bf;
+  --color-rose-800: #ffc4cd;
+  --color-rose-900: #ffd9de;
+
+  --color-sky-50: #163f66;
+  --color-sky-100: #1b4d7a;
+  --color-sky-200: #2a6498;
+  --color-sky-700: #a9d6fa;
+  --color-sky-800: #bfe0fb;
+
+  --color-violet-50: #2e2a5c;
+  --color-violet-100: #383270;
+  --color-violet-200: #4b4391;
+  --color-violet-700: #cfc8ff;
+  --color-violet-800: #dad4ff;
+  --color-violet-900: #e8e4ff;
+  --color-violet-950: #f3f1ff;
+
+  --color-orange-700: #ffc59a;
+}
+
+/* "White" as a surface is the translucent blue panel. As text (on buttons, on photos) it stays white. */
+.bg-white {
+  background-color: rgba(20, 62, 104, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+/* Mint buttons and badges carry dark text. */
+.bg-brand-600,
+.bg-brand-500,
+.hover\:bg-brand-700:hover {
+  color: #06324a;
+}
+/* Surfaces that were written as dark stay dark, and what sits on them stays light. */
+[class~="bg-slate-900"],
+[class~="bg-slate-800"],
+[class~="bg-slate-700"] {
+  background-color: #081d33;
+  color: #f4f8fc;
+}
+[class~="bg-slate-900"] [class*="text-slate-"],
+[class~="bg-slate-800"] [class*="text-slate-"] {
+  color: #d3e1ef;
+}
+[class*="bg-slate-900/"] {
+  background-color: rgba(3, 14, 27, 0.6);
+}
+/* The sign-in side panel is a literal dark panel with light text. */
+.bg-brand-900 {
+  background-color: rgba(8, 29, 51, 0.55);
+}
+.bg-brand-900 .text-brand-100 {
+  color: #c3d8ec;
+}
+.bg-brand-900 .text-brand-200 {
+  color: #8fb0cf;
+}
+/* Disabled buttons were light grey with white text. */
+.disabled\:bg-slate-300:disabled {
+  background-color: #2f5f8e;
+  color: #a9c4de;
+}
+::placeholder {
+  color: #8fb0cf;
+}
+select option,
+select optgroup {
+  background: #123a63;
+  color: #f4f8fc;
 }
 
 @keyframes fadein {

@@ -527,7 +527,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
                   </div>
                 ) : (
                   <div key={m.id} className={`whitespace-pre-wrap rounded-md border px-3 py-2 text-[16px] ${m.speaker === "coach" ? "border-amber-200 bg-amber-50 text-amber-900" : m.speaker === "instructor" ? "border-violet-200 bg-violet-50 text-violet-900" : "border-slate-200 bg-slate-50 font-mono text-[15px] text-slate-700"}`}>
-                    <span className="mr-1.5 font-sans text-[14px] font-semibold uppercase tracking-wide opacity-70">{m.speaker === "coach" ? "Coach" : m.speaker === "instructor" ? "Instructor" : m.speaker === "clinician" ? "Colleague" : "Chart"}</span>
+                    <span className="mr-1.5 font-sans text-[14px] font-semibold uppercase tracking-wide opacity-70">{m.speaker === "coach" ? "Coach:" : m.speaker === "instructor" ? "Instructor" : m.speaker === "clinician" ? "Colleague" : "Chart"}</span>
                     {m.text}
                   </div>
                 ),
