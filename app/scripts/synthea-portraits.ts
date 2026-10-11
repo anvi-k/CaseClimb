@@ -52,8 +52,9 @@ export function promptFor(c: CaseProfile, personality: string): string {
   const noun = /^f|woman/i.test(p.sex) ? "woman" : /^m|man/i.test(p.sex) ? "man" : "person";
   const race = RACE[(p.ethnicity || "").split(",")[0].trim().toLowerCase()] || "";
   const expression = EXPRESSIONS.find(([re]) => re.test(personality))?.[1] || "a calm, neutral expression";
-  // Only the first sentence of the written appearance: later ones tend to describe behaviour.
-  const looks = (p.appearance || "").split(/(?<=[.!?])\s+/)[0] || "";
+  // The written appearance describes the patient on a video call at home (the chair, the room
+  // behind them), so it is only used for the at-home style; it would fight the hospital scene.
+  const looks = home ? (p.appearance || "").split(/[.;]/)[0] : "";
   const scene = home
     ? "at home in ordinary everyday clothes, sitting in a lived-in living room softly blurred behind them"
     : "a hospital patient wearing a pale blue patterned hospital gown, sitting up in a hospital room, with an IV pole and a wall-mounted monitor softly blurred in the background";
