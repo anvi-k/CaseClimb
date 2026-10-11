@@ -21,8 +21,6 @@ const STUDENT_NAV = [
 const FACULTY_MENU = [
   { href: "/faculty", label: "My class" },
   { href: "/faculty/cases", label: "Patients" },
-  { href: "/faculty/cases/new", label: "Create a patient" },
-  { href: "/faculty/courses", label: "Gradebook" },
 ];
 const STUDENT_MENU = [
   { href: "/student", label: "My patients" },
