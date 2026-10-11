@@ -576,9 +576,9 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
             </h1>
             <p className="mt-4 text-sm leading-relaxed text-slate-700">{chart.brief}</p>
             {chart.tasks.length > 0 && (
-              <>
-                <h2 className="mt-4 text-xs font-semibold uppercase tracking-wide text-slate-500">Session goals</h2>
-                <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm text-slate-700">
+              <div className="mt-5 rounded-xl border border-brand-200 border-l-4 border-l-brand-600 bg-brand-50 px-5 py-4">
+                <h2 className="text-sm uppercase tracking-wide text-brand-700">Session goals</h2>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-900 marker:text-brand-600">
                   {(allGoals ? chart.tasks : chart.tasks.slice(0, GOALS_SHOWN)).map((t, i) => (
                     <li key={i}>{t}</li>
                   ))}
@@ -588,7 +588,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
                     {allGoals ? "Show fewer" : `Show all ${chart.tasks.length}`}
                   </button>
                 )}
-              </>
+              </div>
             )}
             <div className="mt-4 rounded-md bg-slate-50 p-3 text-[16px] text-slate-600">
               {data.timeLimitMin ? `You have ${data.timeLimitMin} minutes. ` : "No time limit. "}
