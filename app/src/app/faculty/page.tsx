@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AppShell from "@/components/AppShell";
+import Icon from "@/components/Icon";
 import CreateCourse from "@/components/courses/CreateCourse";
 import { LinkButton } from "@/components/ui";
 import { requireUser } from "@/lib/auth";
@@ -54,9 +55,11 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
           </div>
           <div className="flex flex-wrap gap-3">
             <LinkButton href={`/faculty/courses/${course.id}/assignments/new`} size="lg" className="!rounded-full !px-7 !py-3.5 !text-[19px] !font-semibold">
+              <Icon name="clipboard" />
               Assign patients
             </LinkButton>
             <LinkButton href="/faculty/cases/new" variant="secondary" size="lg" className="!rounded-full !px-7 !py-3.5 !text-[19px] !font-semibold">
+              <Icon name="userPlus" />
               Create a patient
             </LinkButton>
           </div>
@@ -77,7 +80,10 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
           </p>
         )}
 
-        <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">Needs your review</h2>
+        <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+          <Icon name="flag" className="h-7 w-7 text-brand-600" />
+          Needs your review
+        </h2>
         {review.length === 0 ? (
           <p className="rounded-2xl border border-slate-200 bg-white px-7 py-5 text-slate-600">Nothing is waiting for you.</p>
         ) : (
@@ -87,7 +93,10 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
                 <div className="min-w-0 flex-1">
                   <span className="font-semibold">{r.student}</span> · {r.title}
                 </div>
-                <span className="rounded-lg bg-amber-100 px-3 py-1 text-[15px] font-semibold text-amber-900">{r.reasons[0] || "Flagged for review"}</span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3 py-1 text-[15px] font-semibold text-amber-900">
+                  <Icon name="alert" />
+                  {r.reasons[0] || "Flagged for review"}
+                </span>
                 <LinkButton href={feedbackUrl(r.id)} variant="secondary" className="!px-4 !py-2 !text-base">
                   Open visit
                 </LinkButton>
@@ -96,7 +105,10 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
           </ul>
         )}
 
-        <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">Students</h2>
+        <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+          <Icon name="users" className="h-7 w-7 text-brand-600" />
+          Students
+        </h2>
         {students.length === 0 ? (
           <p className="rounded-2xl border border-slate-200 bg-white px-7 py-5 text-slate-600">
             No students have joined yet. Give them the join code <span className="font-mono font-semibold text-slate-900">{course.join_code}</span>.
@@ -117,8 +129,9 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
           </ul>
         )}
         <p className="mt-6">
-          <Link href={`/faculty/courses/${course.id}`} className="text-[15px] font-medium text-brand-700 hover:underline">
+          <Link href={`/faculty/courses/${course.id}`} className="inline-flex items-center gap-1.5 text-[15px] font-medium text-brand-700 hover:underline">
             Open the gradebook and assignments for this class
+            <Icon name="arrowRight" />
           </Link>
         </p>
       </div>

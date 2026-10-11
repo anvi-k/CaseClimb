@@ -1,4 +1,5 @@
 "use client";
+import Icon from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { visitUrl } from "@/lib/courses/settings";
@@ -35,7 +36,10 @@ export default function TemperamentPicker() {
 
   return (
     <div className="rounded-2xl border border-slate-200 bg-white p-9">
-      <h2 className="text-[26px] font-semibold text-slate-900">Temperament</h2>
+      <h2 className="flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+        <Icon name="mood" className="h-7 w-7 text-brand-600" />
+        Temperament
+      </h2>
       <input
         type="range"
         min={1}
@@ -63,7 +67,8 @@ export default function TemperamentPicker() {
         <p className="text-[22px] font-semibold text-slate-900">{chosen.name}</p>
         <p className="text-slate-600">{chosen.about}</p>
       </div>
-      <button onClick={start} disabled={busy} className="rounded-full bg-brand-600 px-7 py-3.5 text-[19px] font-semibold text-white hover:bg-brand-700 disabled:bg-slate-300">
+      <button onClick={start} disabled={busy} className="inline-flex items-center gap-2.5 rounded-full bg-brand-600 px-7 py-3.5 text-[19px] font-semibold text-white hover:bg-brand-700 disabled:bg-slate-300">
+        <Icon name="video" />
         {busy ? "Finding a patient…" : "Start practice visit"}
       </button>
       {error && <p className="mt-3 text-[15px] text-rose-700">{error}</p>}

@@ -1,10 +1,9 @@
+/** A speech bubble with a pulse line through it: a conversation with a patient. */
 export function BrandMark({ className = "h-7 w-7" }: { className?: string }) {
   return (
-    <svg viewBox="0 0 32 32" className={className} fill="none" aria-hidden="true">
-      <path d="M10.2 5.1A11.5 11.5 0 1 1 5.6 10.7" stroke="currentColor" strokeWidth="3.25" strokeLinecap="round" />
-      <path d="M5.1 7.4c.9-2.5 3.1-4.1 5.8-4.1 2.4 0 4.3 1.2 5.4 3.3l-5.1 5.1-6.1-4.3Z" fill="currentColor" />
-      <circle cx="11.7" cy="6.2" r=".8" fill="white" />
-      <path d="m8.4 8.1 1.15 1.05L10.7 8.1" stroke="white" strokeWidth=".9" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 48 48" className={className} fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M8 8h32a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H22l-9 8v-8H8a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4z" />
+      <path d="M11 21h7l3-6 5 12 3-6h8" />
     </svg>
   );
 }

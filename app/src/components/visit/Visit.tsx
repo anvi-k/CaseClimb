@@ -1,5 +1,6 @@
 "use client";
 
+import AppIcon from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Logo } from "@/components/Brand";
@@ -577,7 +578,10 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
             <p className="mt-4 text-sm leading-relaxed text-slate-700">{chart.brief}</p>
             {chart.tasks.length > 0 && (
               <div className="mt-5 rounded-xl border border-brand-200 border-l-4 border-l-brand-600 bg-brand-50 px-5 py-4">
-                <h2 className="text-sm uppercase tracking-wide text-brand-700">Session goals</h2>
+                <h2 className="flex items-center gap-2 text-sm uppercase tracking-wide text-brand-700">
+                  <AppIcon name="target" className="h-5 w-5" />
+                  Session goals
+                </h2>
                 <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-900 marker:text-brand-600">
                   {(allGoals ? chart.tasks : chart.tasks.slice(0, GOALS_SHOWN)).map((t, i) => (
                     <li key={i}>{t}</li>

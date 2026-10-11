@@ -9,23 +9,23 @@ import type { User } from "@/lib/types";
 // Kept short on purpose. Care journeys, live visits, progress and the visit archive still exist at
 // their own addresses; they are just not offered from the header.
 const FACULTY_NAV = [
-  { href: "/faculty", label: "My class" },
-  { href: "/faculty/cases", label: "Patients" },
+  { href: "/faculty", label: "My class", icon: "school" as const },
+  { href: "/faculty/cases", label: "Patients", icon: "users" as const },
 ];
 const STUDENT_NAV = [
-  { href: "/student", label: "My patients" },
-  { href: "/student/practice", label: "Practice" },
+  { href: "/student", label: "My patients", icon: "users" as const },
+  { href: "/student/practice", label: "Practice", icon: "chat" as const },
 ];
 
 // The three-bar menu holds the pages that are used less often.
 const FACULTY_MENU = [
-  { href: "/faculty", label: "My class" },
-  { href: "/faculty/cases", label: "Patients" },
+  { href: "/faculty", label: "My class", icon: "school" as const },
+  { href: "/faculty/cases", label: "Patients", icon: "users" as const },
 ];
 const STUDENT_MENU = [
-  { href: "/student", label: "My patients" },
-  { href: "/student/practice", label: "Practice" },
-  { href: "/student/progress", label: "My progress" },
+  { href: "/student", label: "My patients", icon: "users" as const },
+  { href: "/student/practice", label: "Practice", icon: "chat" as const },
+  { href: "/student/progress", label: "My progress", icon: "chart" as const },
 ];
 
 export default function AppShell({ user, children, wide }: { user: User; children: ReactNode; wide?: boolean }) {

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
 import { Badge, Button, Empty, Input, LinkButton, PageHeader, Select } from "@/components/ui";
+import Icon from "@/components/Icon";
 import type { LibraryItem } from "@/lib/studio/store";
 import { api, Notice, startTestVisit } from "./fields";
 
@@ -77,7 +78,12 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
       <PageHeader
         title="Patients"
         subtitle="Build, review and publish simulated patients. Students only see patients you have published."
-        action={<LinkButton href="/faculty/cases/new">New patient</LinkButton>}
+        action={
+          <LinkButton href="/faculty/cases/new">
+            <Icon name="userPlus" />
+            New patient
+          </LinkButton>
+        }
       />
       <div className="mb-4 grid gap-2 sm:grid-cols-[1fr_auto_auto_auto]">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by title, patient name or specialty" aria-label="Search patients" />

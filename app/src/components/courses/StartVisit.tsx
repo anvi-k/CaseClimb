@@ -1,6 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import Icon from "@/components/Icon";
 import { Button } from "@/components/ui";
 import { visitUrl } from "@/lib/courses/settings";
 
@@ -35,6 +36,7 @@ export default function StartVisit({
   return (
     <span className="inline-flex flex-col items-end gap-1">
       <Button variant={variant} size={size} onClick={start} disabled={busy}>
+        <Icon name="video" />
         {busy ? "Starting…" : label}
       </Button>
       {error && <span className="max-w-xs text-right text-xs text-rose-700">{error}</span>}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AppShell from "@/components/AppShell";
+import Icon from "@/components/Icon";
 import FacultyReview from "@/components/courses/FacultyReview";
 import When from "@/components/courses/When";
 import { Badge, Card, CardHeader, LinkButton } from "@/components/ui";
@@ -130,7 +131,10 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
 
       {f.needsReview && (
         <div className="mb-4 rounded-2xl border border-rose-300 bg-rose-50 px-6 py-5 text-rose-900">
-          <p className="text-lg font-bold">Flagged for instructor review</p>
+          <p className="flex items-center gap-2 text-lg font-bold">
+            <Icon name="alert" className="h-6 w-6" />
+            Flagged for instructor review
+          </p>
           <p className="mt-0.5 text-sm">An instructor should look at this visit whatever the total score.</p>
           <ul className="mt-3 divide-y divide-rose-200 border-t border-rose-200 text-sm">
             {f.reviewReasons.map((r, i) => {

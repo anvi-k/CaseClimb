@@ -1,5 +1,6 @@
 import Link from "next/link";
 import AppShell from "@/components/AppShell";
+import Icon from "@/components/Icon";
 import JoinCourse from "@/components/courses/JoinCourse";
 import StartVisit from "@/components/courses/StartVisit";
 import { LinkButton } from "@/components/ui";
@@ -94,10 +95,14 @@ export default async function StudentHome() {
                 <div className="min-w-0 flex-1">
                   <p className="text-[15px] font-semibold text-brand-700">{next.activeId ? "In progress" : "Up next"}</p>
                   <p className="text-[30px] font-semibold leading-snug text-slate-900">{who(next)}</p>
-                  <p className="text-slate-600">10-minute visit</p>
+                  <p className="flex items-center gap-2 text-slate-600">
+                    <Icon name="clock" />
+                    10-minute visit
+                  </p>
                 </div>
                 {next.activeId ? (
                   <LinkButton href={visitUrl(next.activeId)} size="lg" className="!px-7 !py-3.5 !text-[19px]">
+                    <Icon name="video" />
                     Continue visit
                   </LinkButton>
                 ) : (
@@ -106,12 +111,18 @@ export default async function StudentHome() {
               </div>
             ) : (
               <div className="mt-7 rounded-2xl border border-emerald-300 bg-emerald-50 p-7 text-emerald-900">
-                <p className="text-[26px] font-semibold">All visits done</p>
+                <p className="flex items-center gap-2.5 text-[26px] font-semibold">
+                  <Icon name="check" />
+                  All visits done
+                </p>
                 <p>You have seen every patient your instructor assigned. Open any visit below to read its feedback.</p>
               </div>
             )}
 
-            <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">All patients</h2>
+            <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+              <Icon name="users" className="h-7 w-7 text-brand-600" />
+              All patients
+            </h2>
             <ul className="divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white">
               {rows.map((r, i) => {
                 const locked = !r.done && nextIndex >= 0 && i > nextIndex;
@@ -119,10 +130,7 @@ export default async function StudentHome() {
                   <li key={r.caseId} className={`flex flex-wrap items-center gap-5 px-7 py-4 ${locked ? "text-slate-500" : ""}`}>
                     {locked ? (
                       <div className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-slate-200 text-slate-600" aria-label="Locked">
-                        <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <rect x="5" y="11" width="14" height="9" rx="2" />
-                          <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-                        </svg>
+                        <Icon name="lock" className="h-6 w-6" />
                       </div>
                     ) : (
                       <Portrait src={r.portrait} name={r.name} size="h-14 w-14" />
@@ -130,7 +138,10 @@ export default async function StudentHome() {
                     <div className={`min-w-0 flex-1 ${i === nextIndex ? "font-semibold" : ""}`}>{locked ? `Patient ${i + 1}` : who(r)}</div>
                     {r.done ? (
                       <>
-                        <span className="rounded-lg bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">{r.score ? `Done · ${r.score}` : "Done"}</span>
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">
+                          <Icon name="check" />
+                          {r.score ? `Done · ${r.score}` : "Done"}
+                        </span>
                         {r.lastId && (
                           <LinkButton href={feedbackUrl(r.lastId)} variant="secondary" className="!px-4 !py-2 !text-base">
                             See feedback
@@ -148,7 +159,8 @@ export default async function StudentHome() {
         )}
 
         <p className="mt-9">
-          <Link href="/student/practice" className="inline-flex rounded-full border border-slate-300 bg-white px-7 py-3.5 text-[19px] font-semibold text-slate-900 hover:bg-slate-50">
+          <Link href="/student/practice" className="inline-flex items-center gap-2.5 rounded-full border border-slate-300 bg-white px-7 py-3.5 text-[19px] font-semibold text-slate-900 hover:bg-slate-50">
+            <Icon name="chat" />
             Practice with an extra patient
           </Link>
         </p>
