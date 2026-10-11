@@ -170,10 +170,50 @@ function fingerprint(c: CaseProfile): string {
   );
 }
 
+const RECORD_DOC = /\b(lab|labs|laboratory|panel|blood count|cbc|bmp|cmp|hba1c|a1c|lipid|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|anthropometric|flowsheet|weight|bmi|blood pressure|problem list|medication list|immuni[sz]ation|vaccin)/i;
+const KEEP_DOC = /refill|dispens|pharmacy|referral|letter|visit note|food|diet|diary|recall|menu|receipt/i;
+const RECORD_ACTION = /\b(lab|labs|laboratory|panel|blood count|cbc|hba1c|a1c|lipid|glucose|metabolic|hematology|haematology|renal|kidney function|vitals?|vital signs|blood pressure|weight|height|bmi|anthropometric|problem list|medication list|immuni[sz]ation|vaccin)/i;
+const KEEP_ACTION = /refill|dispens|pharmacy|adherence|recall|diet|food|intake|screen|interview|history|readiness|literacy|hydration|activity|sleep/i;
+
+/**
+ * Removes anything the model wrote that restates the health record: its own lab reports, vital
+ * signs, weight trends, problem lists and medication lists, and the actions that review them.
+ * Those would sit beside the record's real values and could disagree with them. References to
+ * what is removed are pointed at the record's own items, and a mismatch that rested on a removed
+ * document is dropped, because its evidence no longer exists.
+ */
+export function stripRestatedRecord(c: CaseProfile, has: { labs: boolean; vitals: boolean; shots: boolean }): CaseProfile {
+  const ours = new Set<string>(Object.values(SYN));
+  const goneDocs = new Set(
+    c.artifacts
+      .filter((d) => !ours.has(d.id) && !KEEP_DOC.test(d.title) && (d.type === "lab_report" || d.type === "flowsheet" || (d.type === "medication_list") || ((d.type === "chart" || d.type === "other" || d.type === "form") && RECORD_DOC.test(d.title)) || /^(problem list|medication list|laboratory results|vital signs)/i.test(d.title)))
+      .map((d) => d.id),
+  );
+  const swap = new Map<string, string | null>();
+  for (const a of c.actions) {
+    if (ours.has(a.id) || KEEP_ACTION.test(a.name)) continue;
+    const restates = a.kind === "lab" || a.kind === "vitals" || ((a.kind === "record" || a.kind === "assessment" || a.kind === "exam") && RECORD_ACTION.test(a.name));
+    if (!restates) continue;
+    const to = /immuni|vaccin/i.test(a.name) ? (has.shots ? SYN.shots : null) : a.kind === "vitals" || /vital|blood pressure|weight|height|bmi|anthropometric/i.test(a.name) ? (has.vitals ? SYN.vitals : null) : /problem list|medication list/i.test(a.name) ? null : has.labs ? SYN.labOrder : null;
+    swap.set(a.id, to);
+  }
+  const remap = (ids: string[]) => [...new Set(ids.map((id) => (swap.has(id) ? swap.get(id) : id)).filter((id): id is string => !!id))];
+  return {
+    ...c,
+    actions: c.actions.filter((a) => !swap.has(a.id)).map((a) => ({ ...a, artifactIds: (a.artifactIds || []).filter((id) => !goneDocs.has(id)) })),
+    artifacts: c.artifacts
+      .filter((d) => !goneDocs.has(d.id))
+      .map((d) => (d.release.when === "action" && d.release.ref && swap.has(d.release.ref) ? { ...d, release: swap.get(d.release.ref) ? { when: "action" as const, ref: swap.get(d.release.ref)! } : { when: "start" as const } } : d)),
+    objectives: c.objectives.map((o) => ({ ...o, actionIds: remap(o.actionIds) })),
+    mismatches: (c.mismatches || []).filter((m) => !m.artifactId || !goneDocs.has(m.artifactId)),
+  };
+}
+
 /** Writes the record into the case: demographics, chart summary, documents and actions. */
-export function applySynthea(c: CaseProfile, r: SyntheaRecord, sourceLabel: string, index: number): CaseProfile {
+export function applySynthea(input: CaseProfile, r: SyntheaRecord, sourceLabel: string, index: number): CaseProfile {
   const { chart, docs, actions } = pieces(r);
   const ours = new Set<string>(Object.values(SYN));
+  const c = stripRestatedRecord(input, { labs: r.labs.length > 0, vitals: !!vitalsText(r), shots: r.immunizations.length > 0 });
   const next: CaseProfile = {
     ...c,
     patient: { ...c.patient, name: r.name, age: r.age, sex: r.sex, ethnicity: [r.race, r.ethnicity].filter(Boolean).join(", ") || c.patient.ethnicity },

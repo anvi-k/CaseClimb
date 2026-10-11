@@ -23,14 +23,14 @@ RECORDS = 100
 SUFFIX = re.compile(r"\s*\((disorder|finding|situation|person|procedure|regime/therapy|morphologic abnormality)\)$")
 NOT_PROBLEMS = {"Medication review due"}
 # Findings that belong on a problem list although Synthea does not call them disorders.
-CLINICAL_FINDINGS = ("prediabetes", "obesity", "chronic pain", "chronic low back pain", "chronic neck pain", "abnormal findings", "history of", "pregnancy")
+CLINICAL_FINDINGS = ("prediabetes", "obes", "chronic pain", "chronic low back pain", "chronic neck pain", "abnormal findings", "history of", "pregnancy", "retinopathy", "anxiety", "opioid abuse", "misuses drugs", "unhealthy alcohol")
 SKIP_PROCEDURES = ("medication reconciliation", "assessment", "screening", "depression screen", "patient referral", "counseling", "education", "notifications", "review of systems", "brief general examination", "initial patient assessment")
 LABS = {
     "Hemoglobin A1c/Hemoglobin.total in Blood": ("HbA1c", "%", "< 5.7"),
     "Glucose [Mass/volume] in Blood": ("Glucose", "mg/dL", "70-99 (fasting)"),
     "Glucose [Mass/volume] in Serum or Plasma": ("Glucose", "mg/dL", "70-99 (fasting)"),
-    "Creatinine [Mass/volume] in Blood": ("Creatinine", "mg/dL", "0.6-1.3"),
-    "Creatinine [Mass/volume] in Serum or Plasma": ("Creatinine", "mg/dL", "0.6-1.3"),
+    # Creatinine is left out on purpose: Synthea's values run high (median above 2 mg/dL across the
+    # whole population) and contradict the eGFR it reports for the same patient.
     "Glomerular filtration rate [Volume Rate/Area] in Serum or Plasma by Creatinine-based formula (MDRD)/1.73 sq M": ("eGFR", "mL/min/1.73m2", ">= 90"),
     "Cholesterol [Mass/volume] in Serum or Plasma": ("Total cholesterol", "mg/dL", "< 200"),
     "Low Density Lipoprotein Cholesterol": ("LDL cholesterol", "mg/dL", "< 100"),
@@ -83,6 +83,9 @@ SURVEY = {
     "Generalized anxiety disorder 7 item (GAD-7) total score [Reported.PHQ]": "gad7_anxiety_score",
 }
 NO_ANSWER = "I choose not to answer this question"
+# Findings Synthea attaches to a large share of its population. Passed to a model a hundred times
+# they would turn into a hundred stories about crime and violence, so they are not carried over.
+NOT_CARRIED = ("criminal record", "intimate partner abuse", "violence", "risk activity", "refugee")
 # What makes a record useful for a nutrition visit, most specific first.
 GROUPS = [
     ("diabetes", ("diabetes mellitus type 2", "due to type 2 diabetes", "diabetic")),
@@ -93,7 +96,7 @@ GROUPS = [
     ("prediabetes", ("prediabetes",)),
     ("anemia", ("anemia",)),
     ("bone", ("osteoporosis", "osteopenia")),
-    ("weight", ("obesity",)),
+    ("weight", ("obes",)),
 ]
 
 
@@ -116,6 +119,28 @@ def number(value: str, digits: int = 1) -> str:
 def group_of(problems: list[dict]) -> str | None:
     names = " | ".join(p["name"].lower() for p in problems)
     return next((g for g, words in GROUPS if any(w in names for w in words)), None)
+
+
+def consistent(problems: list[dict], vitals: dict, labs: dict, gender: str) -> bool:
+    """True when the problem list agrees with the patient's own latest measurements.
+
+    Synthea keeps a diagnosis on the list after the numbers behind it have moved, which gives
+    records like "obesity" at a BMI of 27 or insulin-treated diabetes at an HbA1c of 4%. Those
+    are left out rather than corrected.
+    """
+    names = " | ".join(p["name"].lower() for p in problems)
+    value = lambda test: float(labs[test]["value"]) if test in labs else None
+    bmi = float(vitals["bmi"]) if "bmi" in vitals else None
+    a1c, hb = value("HbA1c"), value("Haemoglobin")
+    if "obes" in names and bmi is not None and bmi < 30:
+        return False
+    if "diabetes mellitus type 2" in names and a1c is not None and a1c < 5.7:
+        return False
+    if "prediabetes" in names and "diabetes mellitus" not in names and a1c is not None and not 5.5 <= a1c < 6.5:
+        return False
+    if "anemia" in names and hb is not None and hb >= (13.0 if gender == "M" else 12.0):
+        return False
+    return True
 
 
 def spread(candidates: list[dict], wanted: int) -> list[dict]:
@@ -168,6 +193,7 @@ def main(folder: str, out: str) -> None:
     last_day = max(e["START"][:10] for es in encounters.values() for e in es)
     today = date.fromisoformat(last_day)
     candidates = []
+    skipped = 0
     for p in rows(folder, "patients"):
         pid = p["Id"]
         if p["DEATHDATE"]:
@@ -186,7 +212,7 @@ def main(folder: str, out: str) -> None:
                     past.append({"name": name, "from": c["START"][:7], "to": c["STOP"][:7]})
             elif disorder:
                 problems.append({"name": name, "since": c["START"][:4]})
-            else:
+            elif not any(k in name.lower() for k in NOT_CARRIED):
                 social.append(name)
         group = group_of(problems)
         if not group:
@@ -252,6 +278,9 @@ def main(folder: str, out: str) -> None:
 
         if not labs or "weight_kg" not in vitals:
             continue
+        if not consistent(problems, vitals, labs, p["GENDER"]):
+            skipped += 1
+            continue
         strip = lambda s: re.sub(r"\d+", "", s).strip()
         candidates.append(
             {
@@ -284,7 +313,7 @@ def main(folder: str, out: str) -> None:
     records = sorted(spread(candidates, RECORDS), key=lambda r: r["id"])
     with open(out, "w", encoding="utf-8") as f:
         json.dump({"source": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85", "generated": last_day, "records": records}, f, ensure_ascii=False, indent=1)
-    print(f"{len(records)} of {len(candidates)} eligible records written to {out}")
+    print(f"{len(records)} of {len(candidates)} eligible records written to {out} ({skipped} set aside because their problem list disagreed with their own numbers)")
 
 
 if __name__ == "__main__":

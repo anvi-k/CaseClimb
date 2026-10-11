@@ -123,7 +123,7 @@ What comes from where in a finished patient:
   taken from the record is edited, but it does not check the model's text against the record.
 - Synthea gives no reference ranges; the ones shown are standard adult ranges added by
   `scripts/synthea_records.py`. Records are plausible, not clinically curated: a problem list can
-  disagree with the latest numbers (for example type 2 diabetes on insulin beside an HbA1c of 4%).
+  disagree with the latest numbers (the converter sets aside records whose problem list contradicts their own BMI, HbA1c or haemoglobin, and leaves out creatinine, which Synthea reports unrealistically high).
 - To rebuild the records: download `synthea-with-dependencies.jar` from Synthea's releases, run the
   command in the header of `scripts/synthea_records.py`, then run that script.
 

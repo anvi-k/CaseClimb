@@ -158,7 +158,7 @@ export function gapSchema(r: SyntheaRecord) {
     cultural_context: str,
     primary_diagnosis: { type: "string", enum: r.problems.map((p) => p.name), description: "The recorded problem this nutrition visit is mainly about." },
     current_symptoms: { type: "array", items: str, description: "What the patient notices day to day, consistent with the recorded problems. No new diagnoses." },
-    clinical_findings: { type: "array", items: str, description: "2-5 physical examination findings a clinician would plausibly note, consistent with the record." },
+    clinical_findings: { type: "array", items: str, description: "2-4 things a clinician would see or hear on examining this patient (appearance, skin, mouth, swelling, gait, breath sounds), consistent with the recorded problems. Not laboratory values, vital signs or measurements: those are already in the record." },
     medications: {
       type: "array",
       description: "One entry for every recorded medication, in the same order.",
@@ -185,7 +185,9 @@ Rules
 - The assigned traits are fixed too. Build the person around them. If a trait cannot fit the record, bend the trait as little as needed and keep the record.
 - Make this person specific. Name actual foods, shops, routines, people and phrases. Avoid the generic patient who "eats fast food and wants to be healthier".
 - Do not reuse names, foods, jobs, phrases or scenarios from the example profiles. They show the format, the level of detail and the tone, nothing else.
-- Cultural context must be respectful and individual. Do not infer diet or beliefs from race or ethnicity alone.
+- Do not give the patient the foods, beliefs or family patterns conventionally associated with their race or ethnicity. Build what they eat from the assigned eating pattern, their job, budget, household, age and where they live. Cultural context is about this individual's upbringing and values, written with respect.
+- Hidden and reluctant items must be concrete: name the person, the amount, the event. Never hedge with "likely", "possibly" or "something".
+- Do not repeat laboratory values, vital signs or measurements in the fields you write; refer to them in words if you need to ("her cholesterol is high").
 - information_disclosure sorts what the patient reveals into four tiers: initial (said unprompted at the start), discoverable (comes out with ordinary good questions), reluctant (needs trust or a careful, non-judgmental question), hidden (only with real rapport). The held-back trait belongs in reluctant or hidden. Put at least one item in each tier.
 - Write patient reactions as things this patient would actually say, in their voice.
 - This is synthetic educational content. No real people.`;
@@ -234,6 +236,9 @@ export interface Gap {
   metadata: { assumptions: string[]; optional_details: string[] };
 }
 
+/** The learning opportunities that are complete; the model now and then emits a stray placeholder in the list. */
+const opportunities = (gap: Gap) => (Array.isArray(gap.learning_opportunities) ? gap.learning_opportunities : []).filter((o) => o && typeof o === "object" && String(o.learning_objective || "").trim() && Array.isArray(o.expected_discoveries));
+
 /** Reasons a model reply cannot be used. Empty when it is fine. */
 export function gapProblems(gap: Gap, r: SyntheaRecord): string[] {
   const out: string[] = [];
@@ -241,7 +246,8 @@ export function gapProblems(gap: Gap, r: SyntheaRecord): string[] {
   for (const tier of ["initial_information", "discoverable_information", "reluctant_information", "hidden_information"]) if (!gap.information_disclosure?.[tier]?.length) out.push(`information_disclosure.${tier} is empty`);
   for (const key of ["dietary_pattern", "meal_pattern"]) if (!String(gap.nutrition_profile?.[key] || "").trim()) out.push(`nutrition_profile.${key} is empty`);
   if (!String(gap.psychosocial_profile?.personality || "").trim()) out.push("psychosocial_profile.personality is empty");
-  if (!gap.learning_opportunities?.length) out.push("no learning opportunities");
+  if (opportunities(gap).length < 3) out.push("fewer than three usable learning opportunities");
+  if (/\b(likely|possibly|perhaps|probably)\b/i.test((gap.information_disclosure?.hidden_information || []).join(" "))) out.push("hidden_information hedges instead of stating what is hidden");
   return out;
 }
 
@@ -277,7 +283,7 @@ export function mergeProfile(r: SyntheaRecord, gap: Gap, traits: Traits, model: 
     nutrition_profile: gap.nutrition_profile,
     psychosocial_profile: gap.psychosocial_profile,
     information_disclosure: gap.information_disclosure,
-    learning_opportunities: { opportunities: gap.learning_opportunities },
+    learning_opportunities: { opportunities: opportunities(gap) },
     metadata: gap.metadata,
     source: {
       synthea_record: r.id,
