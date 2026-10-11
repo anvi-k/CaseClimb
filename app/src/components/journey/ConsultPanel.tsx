@@ -53,7 +53,7 @@ export default function ConsultPanel({ view, refresh, compact }: { view: RunView
         <ol className={cx("space-y-2 overflow-y-auto rounded-md border border-slate-200 bg-slate-50 p-2", compact ? "max-h-64" : "max-h-96")}>
           {thread.map((m) => (
             <li key={m.id} className={cx("max-w-[92%] rounded-lg px-3 py-2 text-sm", m.fromIsAi ? "bg-white text-slate-800" : "ml-auto bg-brand-50 text-slate-800")}>
-              <div className="mb-0.5 flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-slate-500">
+              <div className="mb-0.5 flex flex-wrap items-center gap-1.5 text-[14px] font-semibold text-slate-500">
                 {m.fromIsAi ? m.fromName : "You"}
                 {m.meta?.act && ACT_LABEL[m.meta.act] && <Badge tone="slate">{ACT_LABEL[m.meta.act]}</Badge>}
                 {m.meta?.loop === "closed" && <Badge tone="green">Loop closed</Badge>}

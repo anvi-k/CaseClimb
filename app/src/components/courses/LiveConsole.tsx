@@ -183,7 +183,7 @@ export default function LiveConsole() {
                 ))}
               </div>
             )}
-            <div className="mt-2 truncate text-[12px] text-slate-500">
+            <div className="mt-2 truncate text-[14px] text-slate-500">
               {v.assignment || "No assignment"} · {v.mode}
               {v.lastAt ? ` · last message ${mins(v.lastAt, now)} min ago` : " · no messages yet"}
             </div>
@@ -221,7 +221,7 @@ export default function LiveConsole() {
                   {current.messages.length === 0 && <p className="text-sm text-slate-500">The student has not said anything yet.</p>}
                   {current.messages.map((m) => (
                     <div key={m.id} className={cx("text-sm", m.speaker === "student" ? "pl-0 pr-8" : m.speaker === "patient" ? "pl-8" : "")}>
-                      <div className="text-[12px] font-medium text-slate-500">
+                      <div className="text-[14px] font-medium text-slate-500">
                         {WHO[m.speaker] || m.speaker} · turn {m.turn}
                       </div>
                       <div
@@ -252,7 +252,7 @@ export default function LiveConsole() {
                       <Textarea id="live-note" rows={2} value={note} onChange={(e) => setNote(e.target.value)} maxLength={1000} placeholder="e.g. You have asked three closed questions in a row. Ask what worries him most and wait." />
                       <div className="mt-1.5 flex flex-wrap gap-1.5">
                         {QUICK.map((q) => (
-                          <button key={q} type="button" onClick={() => setNote(q)} className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-left text-[12px] text-slate-600 hover:border-brand-500 hover:text-brand-700">
+                          <button key={q} type="button" onClick={() => setNote(q)} className="rounded-full border border-slate-200 bg-white px-2 py-0.5 text-left text-[14px] text-slate-600 hover:border-brand-500 hover:text-brand-700">
                             {q}
                           </button>
                         ))}
@@ -318,7 +318,7 @@ export default function LiveConsole() {
                   {current.chart.sections.length === 0 && <p className="text-slate-500">Nothing gathered yet.</p>}
                   {current.chart.sections.map((s) => (
                     <div key={s.category} className="mb-2">
-                      <div className="text-[12px] font-medium uppercase tracking-wide text-slate-500">{s.label}</div>
+                      <div className="text-[14px] font-medium uppercase tracking-wide text-slate-500">{s.label}</div>
                       <ul className="mt-0.5 space-y-0.5 text-slate-800">
                         {s.items.map((i) => (
                           <li key={i.id}>

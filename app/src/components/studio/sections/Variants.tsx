@@ -61,7 +61,7 @@ function VariantCard({ v, p, up, remove }: { v: Variant; p: CaseProfile; up: (pa
             <span className="text-sm font-semibold text-slate-900">{v.label || "Untitled variant"}</span>
           </div>
           <p className="mt-0.5 text-xs text-slate-600">{v.description}</p>
-          <p className="mt-0.5 text-[12px] text-slate-400">
+          <p className="mt-0.5 text-[14px] text-slate-400">
             Changes {nP} persona field{nP === 1 ? "" : "s"}, {nF} fact{nF === 1 ? "" : "s"}, {nA} result{nA === 1 ? "" : "s"}
           </p>
         </div>
@@ -140,7 +140,7 @@ function VariantCard({ v, p, up, remove }: { v: Variant; p: CaseProfile; up: (pa
                   <div key={id} className="rounded border border-slate-200 p-2">
                     <div className="mb-1 flex items-center justify-between">
                       <span className="text-xs font-medium text-slate-700">
-                        <span className="font-mono text-[11px] text-slate-400">{id}</span> {base.topic}
+                        <span className="font-mono text-[14px] text-slate-400">{id}</span> {base.topic}
                       </span>
                       <RemoveButton label="Keep base" onClick={() => setFact(id, null)} />
                     </div>
@@ -191,7 +191,7 @@ function VariantCard({ v, p, up, remove }: { v: Variant; p: CaseProfile; up: (pa
                     <div key={id} className="rounded border border-slate-200 p-2">
                       <div className="mb-1 flex items-center justify-between">
                         <span className="text-xs font-medium text-slate-700">
-                          <span className="font-mono text-[11px] text-slate-400">{id}</span> {base.name}
+                          <span className="font-mono text-[14px] text-slate-400">{id}</span> {base.name}
                         </span>
                         <RemoveButton label="Keep base" onClick={() => setAction(id, null)} />
                       </div>

@@ -36,7 +36,7 @@ export default async function JourneyIntro({ params, searchParams }: { params: P
           <Card className="p-4">
             <h2 className="text-sm font-semibold text-slate-900">The patient</h2>
             <p className="mt-1 text-sm text-slate-700">{c.patient?.name}, {c.patient?.age}, {c.patient?.sex}</p>
-            <dl className="mt-2 space-y-1.5 text-[14px]">
+            <dl className="mt-2 space-y-1.5 text-[16px]">
               {(c.chartAtStart || []).slice(0, 4).map((x) => (
                 <div key={x.label}>
                   <dt className="text-xs font-medium text-slate-500">{x.label}</dt>

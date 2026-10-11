@@ -24,7 +24,7 @@ const MET = { met: ["green", "Met"], partial: ["amber", "Partly met"], not_met: 
 function TurnLink({ turn }: { turn?: number }) {
   if (turn === undefined || turn === null) return null;
   return (
-    <a href={`#t${turn}`} className="ml-1.5 whitespace-nowrap rounded bg-slate-100 px-1 text-[11px] font-medium tabular-nums text-slate-600 hover:bg-brand-100 hover:text-brand-700">
+    <a href={`#t${turn}`} className="ml-1.5 whitespace-nowrap rounded bg-slate-100 px-1 text-[14px] font-medium tabular-nums text-slate-600 hover:bg-brand-100 hover:text-brand-700">
       T{turn}
     </a>
   );
@@ -205,10 +205,10 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
           <CardHeader title="The visit, turn by turn" subtitle="Calculated live from each turn as it happened: findings covered against a steady pace, how you communicated, and how comfortable the patient was. Hover to read a turn; the turn numbers match the transcript below." />
           <div className="grid gap-4 p-4 lg:grid-cols-[1fr_18rem]">
             <TrendChart chart={timelineChart(tl)} />
-            <ul className="max-h-64 space-y-1 overflow-y-auto text-[13px] text-slate-700">
+            <ul className="max-h-64 space-y-1 overflow-y-auto text-[15px] text-slate-700">
               {tl.map((p) => (
                 <li key={p.turn} className="flex gap-2">
-                  <a href={`#t${p.turn}`} className="w-7 shrink-0 rounded bg-slate-100 text-center text-[11px] font-medium leading-5 text-slate-600 hover:bg-brand-100">T{p.turn}</a>
+                  <a href={`#t${p.turn}`} className="w-7 shrink-0 rounded bg-slate-100 text-center text-[14px] font-medium leading-5 text-slate-600 hover:bg-brand-100">T{p.turn}</a>
                   <span className="w-8 shrink-0 tabular-nums font-medium text-slate-900">{Math.round(p.score * 100)}</span>
                   <span className="text-slate-600">{p.note || "no notable signals"}</span>
                 </li>
@@ -222,7 +222,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         <Card className="mt-4">
           <CardHeader title="What changed across your attempts" subtitle="Same patient, same answer key. Variation changes the patient's mood, not the facts." />
           <div className="overflow-x-auto p-4">
-            <table className="w-full border-collapse text-left text-[14px]">
+            <table className="w-full border-collapse text-left text-[16px]">
               <thead>
                 <tr className="border-b border-slate-200 text-xs text-slate-500">
                   <th className="py-1.5 pr-3 font-medium">Domain</th>
@@ -247,7 +247,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
                       return (
                         <td key={h.id} className={`px-2 py-1.5 tabular-nums ${h.id === id ? "bg-slate-50 font-semibold" : ""}`}>
                           {s === null ? "N/A" : s}
-                          {delta !== 0 && <span className={`ml-1 text-[12px] ${delta > 0 ? "text-emerald-700" : "text-rose-700"}`}>{delta > 0 ? "▲" : "▼"}{Math.abs(delta)}</span>}
+                          {delta !== 0 && <span className={`ml-1 text-[14px] ${delta > 0 ? "text-emerald-700" : "text-rose-700"}`}>{delta > 0 ? "▲" : "▼"}{Math.abs(delta)}</span>}
                         </td>
                       );
                     })}
@@ -268,7 +268,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
               </tbody>
             </table>
             {prev && (
-              <p className="mt-3 text-[14px] text-slate-700">
+              <p className="mt-3 text-[16px] text-slate-700">
                 <span className="font-medium">New this time:</span> {f.elicited.filter((e) => !prevElicited.has(e.id)).map((e) => e.chart).join("; ") || "nothing you had not already found"}.
                 {f.missed.some((m) => prevElicited.has(m.id)) && (
                   <>
@@ -293,7 +293,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
                   {d.score === null ? <Badge>Not applicable</Badge> : f.rubricType === "domain4" ? <Badge tone={TONE[d.score as 1 | 2 | 3 | 4]}>{d.score} · {LABEL[d.score]}</Badge> : <Badge tone={d.score >= d.max * 0.8 ? "green" : d.score >= d.max * 0.5 ? "amber" : "red"}>{d.score} / {d.max}</Badge>}
                 </div>
               </div>
-              <div className="text-[14px]">
+              <div className="text-[16px]">
                 <p className="text-slate-800">{d.rationale}</p>
                 {d.evidence.length > 0 && (
                   <ul className="mt-2 space-y-1.5">
@@ -315,7 +315,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader title={`Findings you elicited (${f.elicited.length})`} subtitle="From the disclosure record, not from a model's impression." />
-          <ul className="space-y-1 p-4 text-[14px]">
+          <ul className="space-y-1 p-4 text-[16px]">
             {f.elicited.length === 0 && <li className="text-slate-500">None.</li>}
             {f.elicited.map((e) => (
               <li key={e.id} className="flex items-start gap-2">
@@ -331,7 +331,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         </Card>
         <Card>
           <CardHeader title={`Findings you missed (${f.missed.length})`} subtitle="Most important first." />
-          <ul className="space-y-1 p-4 text-[14px]">
+          <ul className="space-y-1 p-4 text-[16px]">
             {f.missed.length === 0 && <li className="text-slate-500">Nothing missed.</li>}
             {f.missed.map((m) => (
               <li key={m.id} className="flex items-start gap-2">
@@ -351,7 +351,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
           <CardHeader title="What the patient said versus what the chart showed" subtitle="Built into the case to test whether you cross-check the record." />
           <ul className="divide-y divide-slate-100">
             {f.mismatches.map((m) => (
-              <li key={m.id} className="p-4 text-[14px]">
+              <li key={m.id} className="p-4 text-[16px]">
                 <Badge tone={m.noticed ? "green" : "red"}>{m.noticed ? "You caught this" : "Not picked up"}</Badge>
                 <p className="mt-1.5 text-slate-800">
                   <span className="font-medium">Patient:</span> {m.patientClaim} <span className="font-medium">Chart:</span> {m.recordEvidence}
@@ -368,7 +368,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
           <CardHeader title="Learning objectives" subtitle="Set by the faculty author of this case." />
           <ul className="divide-y divide-slate-100">
             {f.objectives.map((o) => (
-              <li key={o.id} className="p-4 text-[14px]">
+              <li key={o.id} className="p-4 text-[16px]">
                 <div className="flex items-start gap-2">
                   <Badge tone={MET[o.met][0]} className="mt-0.5 shrink-0">{MET[o.met][1]}</Badge>
                   <span className="font-medium text-slate-900">{o.text}</span>
@@ -380,7 +380,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         </Card>
         <Card>
           <CardHeader title="Exams, tests and records" />
-          <div className="space-y-3 p-4 text-[14px]">
+          <div className="space-y-3 p-4 text-[16px]">
             <div>
               <div className="mb-1 text-xs font-medium text-slate-500">Requested</div>
               {f.actionsDone.length ? f.actionsDone.map((a) => <Badge key={a.id} tone="teal" className="mb-1 mr-1">{a.name}</Badge>) : <span className="text-slate-500">None.</span>}
@@ -402,7 +402,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader title="What went well" />
-          <ul className="space-y-2 p-4 text-[14px] text-slate-800">
+          <ul className="space-y-2 p-4 text-[16px] text-slate-800">
             {f.strengths.map((s, i) => (
               <li key={i}>{s.text}<TurnLink turn={s.turn} /></li>
             ))}
@@ -410,7 +410,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         </Card>
         <Card>
           <CardHeader title="What to work on" />
-          <ul className="space-y-2 p-4 text-[14px] text-slate-800">
+          <ul className="space-y-2 p-4 text-[16px] text-slate-800">
             {f.improvements.map((s, i) => (
               <li key={i}>{s.text}<TurnLink turn={s.turn} /></li>
             ))}
@@ -422,7 +422,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         <div className="mt-4 grid gap-4 lg:grid-cols-2">
           <Card>
             <CardHeader title="Questions to think through" subtitle="Before reading on, answer these for yourself. Each points at a moment in your visit." />
-            <ol className="list-decimal space-y-2 p-4 pl-8 text-[14px] text-slate-800">
+            <ol className="list-decimal space-y-2 p-4 pl-8 text-[16px] text-slate-800">
               {f.debrief.questions.map((q, i) => (
                 <li key={i}>{q.question}<TurnLink turn={q.turn} /></li>
               ))}
@@ -430,7 +430,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
           </Card>
           <Card>
             <CardHeader title="What you did not ask about" subtitle="Topics that were never raised, or were raised too lightly to get an answer." />
-            <ul className="space-y-2 p-4 text-[14px] text-slate-800">
+            <ul className="space-y-2 p-4 text-[16px] text-slate-800">
               {f.debrief.underProbing.map((u, i) => (
                 <li key={i}><span className="font-medium">{u.topic}.</span> {u.whyItMattered}</li>
               ))}
@@ -443,7 +443,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       {(f.safetyConcerns.length > 0 || f.accuracyIssues.length > 0) && (
         <Card className="mt-4 border-rose-200">
           <CardHeader title="Safety and accuracy" subtitle="Checked against the case answer key and the faculty's knowledge sources only." />
-          <ul className="space-y-2 p-4 text-[14px] text-slate-800">
+          <ul className="space-y-2 p-4 text-[16px] text-slate-800">
             {f.safetyConcerns.map((s, i) => (
               <li key={"s" + i}><Badge tone="red" className="mr-1.5">Safety</Badge>{s.text}<TurnLink turn={s.turn} /></li>
             ))}
@@ -457,7 +457,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       <div className="mt-4 grid gap-4 lg:grid-cols-2">
         <Card>
           <CardHeader title="How the interview was built" />
-          <dl className="space-y-3 p-4 text-[14px]">
+          <dl className="space-y-3 p-4 text-[16px]">
             {([["Structure", f.interview.structure], ["Sequencing", f.interview.sequencing], ["Question mix", f.interview.questionMix]] as const).map(([k, v]) => (
               <div key={k}>
                 <dt className="text-xs font-medium text-slate-500">{k}</dt>
@@ -468,7 +468,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
         </Card>
         <Card>
           <CardHeader title={`Your ${role.noteFormat} write-up`} />
-          <div className="space-y-3 p-4 text-[14px]">
+          <div className="space-y-3 p-4 text-[16px]">
             <p className="text-slate-800">{f.wrapUpReview}</p>
             {role.wrapUp.map((w) => (
               <div key={w.id}>
@@ -497,7 +497,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
             if (m.speaker === "student")
               return (
                 <div key={m.id} id={`t${m.turn}`} className="flex scroll-mt-20 gap-2 target:rounded target:bg-amber-50">
-                  <span className="mt-1 w-8 shrink-0 text-right text-[11px] tabular-nums text-slate-400">T{m.turn}</span>
+                  <span className="mt-1 w-8 shrink-0 text-right text-[14px] tabular-nums text-slate-400">T{m.turn}</span>
                   <div className="text-sm"><span className="font-medium text-brand-700">{own ? "You" : "Student"}:</span> <span className="text-slate-900">{m.text}</span></div>
                 </div>
               );
@@ -507,7 +507,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
                   <span className="w-8 shrink-0" />
                   <div className="text-sm">
                     <span className="font-medium text-slate-700">{c.patient.name.split(" ")[0]}:</span> <span className="text-slate-800">{m.text}</span>
-                    <div className="mt-0.5 flex flex-wrap items-center gap-1 text-[12px]">
+                    <div className="mt-0.5 flex flex-wrap items-center gap-1 text-[14px]">
                       {x.questionType && !["other", "greeting"].includes(x.questionType) && <span className="rounded bg-slate-100 px-1 text-slate-600">{({ open: "open question", focused: "focused question", closed: "closed question", leading: "leading question", multiple: "stacked questions", statement: "statement" } as Record<string, string>)[x.questionType] || x.questionType}</span>}
                       {!!x.rapportDelta && <span className={`rounded px-1 ${x.rapportDelta > 0 ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"}`}>comfort {x.rapportDelta > 0 ? "+" : ""}{x.rapportDelta}</span>}
                       {(x.revealed || []).map((fid) => <span key={fid} className="rounded bg-brand-50 px-1 text-brand-700">unlocked: {factText(fid)?.topic}</span>)}
@@ -519,8 +519,8 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
             return (
               <div key={m.id} className="flex gap-2">
                 <span className="w-8 shrink-0" />
-                <div className={`whitespace-pre-wrap rounded px-2 py-1 text-[13px] ${m.speaker === "coach" ? "bg-amber-50 text-amber-900" : m.speaker === "instructor" ? "bg-violet-50 text-violet-900" : "bg-slate-50 font-mono text-slate-600"}`}>
-                  <span className="mr-1 font-sans text-[11px] font-semibold uppercase">{m.speaker === "system" ? "Chart" : m.speaker}</span>
+                <div className={`whitespace-pre-wrap rounded px-2 py-1 text-[15px] ${m.speaker === "coach" ? "bg-amber-50 text-amber-900" : m.speaker === "instructor" ? "bg-violet-50 text-violet-900" : "bg-slate-50 font-mono text-slate-600"}`}>
+                  <span className="mr-1 font-sans text-[14px] font-semibold uppercase">{m.speaker === "system" ? "Chart" : m.speaker}</span>
                   {m.text}
                 </div>
               </div>

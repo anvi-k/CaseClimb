@@ -144,3 +144,24 @@ row of the organisers' health-markers dataset. Only those values come from the d
   lists any other record in the case that gives a different number for the same test.
 - Units and reference ranges are standard adult values supplied in `markers.ts`; the dataset has
   numbers only. Rows with a missing marker are not used.
+
+## One learner role, two simple home screens
+
+The app no longer asks anyone for a profession. Sign-up, class creation and the new-patient form
+have no role picker, and new patients are written as a general outpatient visit (the `medicine`
+role internally). The role catalog in `data/professions.json` is still what the engine reads, and
+the 44 library patients keep the nutrition visit they were written for.
+
+- **Student home** (`src/app/student/page.tsx`): the patients the instructor assigned, in order,
+  one open at a time. Finished visits link to their feedback.
+- **Practice** (`src/app/student/practice/page.tsx`): one choice, the patient's temperament on a
+  five-step slider. `POST /api/practice` picks a published patient the student has seen least and
+  maps the temperament onto the engine's difficulty level and mood. Nothing is generated.
+- **Instructor home** (`src/app/faculty/page.tsx`): one class, its join code, "Assign patients",
+  "Create a patient", visits flagged for review, and each student's progress.
+- The header links only to those. Care journeys, live visits, progress and the visit archive still
+  exist at their own addresses.
+- The library is the 8 organiser samples and the 36 Synthea-based patients. Seed patients whose
+  files are removed are archived on the next start (`retireRemovedSeeds` in `src/lib/seed.ts`),
+  and a demo class with five assigned patients is created for the demo accounts.
+- Text sizes follow health-content guidance: 19px body, 14px minimum, page titles 40px.

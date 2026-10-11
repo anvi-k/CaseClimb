@@ -21,3 +21,5 @@ frontend/media/caseclimb-introduction.jpg
 
 # Evaluator results written by `python -m evaluator`.
 out/
+.claude/
+mockups/

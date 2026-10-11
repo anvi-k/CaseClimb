@@ -120,7 +120,7 @@ export default function GuidePanel({ caseId, profileNow, onAccept, onClose }: { 
               <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-800">{m.text}</p>
               {m.views && m.views.length > 0 && (
                 <div className={cx("mt-2 border-t border-slate-200 pt-2", m.state !== "pending" && "opacity-70")}>
-                  <p className="mb-1.5 text-[12px] font-semibold uppercase tracking-wide text-slate-500">
+                  <p className="mb-1.5 text-[14px] font-semibold uppercase tracking-wide text-slate-500">
                     {m.state === "pending" ? `Proposed: ${m.views.length} edit${m.views.length === 1 ? "" : "s"}` : m.state === "accepted" ? "Accepted" : "Rejected, nothing changed"}
                   </p>
                   <PatchDiff views={m.views} picked={m.state === "pending" && m.views.length > 1 ? m.picked : undefined} onPick={(k, on) => patchMsg(i, { picked: m.picked!.map((x, j) => (j === k ? on : x)) })} />
@@ -165,7 +165,7 @@ export default function GuidePanel({ caseId, profileNow, onAccept, onClose }: { 
           }}
         />
         <div className="mt-1.5 flex items-center justify-between">
-          <span className="text-[12px] text-slate-400">Enter to send, Shift+Enter for a new line</span>
+          <span className="text-[14px] text-slate-400">Enter to send, Shift+Enter for a new line</span>
           <Button size="sm" type="submit" disabled={busy || !input.trim()}>
             Ask
           </Button>

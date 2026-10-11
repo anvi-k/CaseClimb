@@ -9,7 +9,7 @@ const BTN = {
   danger: "bg-rose-600 text-white hover:bg-rose-700 disabled:bg-slate-300",
   ghost: "text-slate-700 hover:bg-slate-100 disabled:text-slate-400",
 };
-const SIZE = { sm: "px-2.5 py-1 text-xs", md: "px-3.5 py-2 text-sm", lg: "px-5 py-2.5 text-base" };
+const SIZE = { sm: "px-2.5 py-1 text-xs", md: "px-3.5 py-2 text-sm", lg: "px-6 py-3 text-lg" };
 type BtnProps = { variant?: keyof typeof BTN; size?: keyof typeof SIZE };
 
 export function Button({ variant = "primary", size = "md", className, ...p }: ComponentProps<"button"> & BtnProps) {
@@ -42,7 +42,7 @@ const TONES = {
   violet: "bg-violet-100 text-violet-800",
 };
 export function Badge({ tone = "slate", className, ...p }: ComponentProps<"span"> & { tone?: keyof typeof TONES }) {
-  return <span {...p} className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-[12px] font-medium", TONES[tone], className)} />;
+  return <span {...p} className={cx("inline-flex items-center rounded px-1.5 py-0.5 text-[14px] font-medium", TONES[tone], className)} />;
 }
 const FIELD = "w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-200";
 export function Input({ className, ...p }: ComponentProps<"input">) {

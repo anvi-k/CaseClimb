@@ -47,7 +47,7 @@ export default function AccessKeys({ origin }: { origin: string }) {
       {fresh && (
         <div className="rounded-md border border-amber-300 bg-amber-50 p-3">
           <div className="text-xs font-medium text-amber-900">Copy this key now. It is not shown again.</div>
-          <code className="mt-1 block break-all text-[14px] text-slate-900">{fresh}</code>
+          <code className="mt-1 block break-all text-[16px] text-slate-900">{fresh}</code>
         </div>
       )}
       {keys.length > 0 && (
@@ -70,7 +70,7 @@ export default function AccessKeys({ origin }: { origin: string }) {
           <p>
             MCP (Streamable HTTP): <code className="rounded bg-slate-100 px-1">{origin}/api/mcp</code> with header <code className="rounded bg-slate-100 px-1">Authorization: Bearer &lt;key&gt;</code>
           </p>
-          <pre className="overflow-x-auto rounded bg-slate-900 p-3 text-[13px] text-slate-100">{cfg}</pre>
+          <pre className="overflow-x-auto rounded bg-slate-900 p-3 text-[15px] text-slate-100">{cfg}</pre>
           <p>
             REST: <code className="rounded bg-slate-100 px-1">GET {origin}/api/episodes?patient=&amp;participant=&amp;role=&amp;text=</code> and <code className="rounded bg-slate-100 px-1">?id=&lt;episode&gt;</code>, same header.
           </p>

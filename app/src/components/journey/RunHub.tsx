@@ -14,7 +14,7 @@ function StepDot({ state }: { state: "done" | "now" | "todo" | "error" }) {
   return (
     <span
       className={cx(
-        "grid h-5 w-5 shrink-0 place-items-center rounded-full border text-[11px] font-bold",
+        "grid h-5 w-5 shrink-0 place-items-center rounded-full border text-[14px] font-bold",
         state === "done" && "border-brand-600 bg-brand-600 text-white",
         state === "now" && "border-brand-600 bg-white text-brand-700",
         state === "todo" && "border-slate-300 bg-white text-slate-400",
@@ -221,19 +221,19 @@ function HuddleItemCard({ view, item, onOpen, refresh }: { view: RunView; item: 
         <StatusBadge status={item.reason} />
         <span className="min-w-0 flex-1">
           <span className="block text-sm font-medium text-slate-900">{entry.text}</span>
-          <span className="text-[12px] text-slate-500">Raised by {entry.contributorName}, {entry.contributorRole} · {entry.simTime}</span>
+          <span className="text-[14px] text-slate-500">Raised by {entry.contributorName}, {entry.contributorRole} · {entry.simTime}</span>
         </span>
       </button>
       <div className="space-y-2 px-4 py-3">
         {item.positions.map((p, i) => (
           <div key={i} className="rounded-md bg-slate-50 px-3 py-2 text-sm">
-            <div className="text-[12px] font-semibold text-slate-500">{p.name} · {p.role}</div>
+            <div className="text-[14px] font-semibold text-slate-500">{p.name} · {p.role}</div>
             <p className="text-slate-800">{p.text}</p>
             {p.cites.length > 0 && (
               <div className="mt-1 flex flex-wrap gap-1">
                 {p.cites.map((id) => {
                   const e = view.entries.find((x) => x.id === id);
-                  return e ? <button key={id} onClick={() => onOpen(id)} className="max-w-[15rem] truncate rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[12px] text-slate-600 hover:bg-slate-100">{e.text}</button> : null;
+                  return e ? <button key={id} onClick={() => onOpen(id)} className="max-w-[15rem] truncate rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[14px] text-slate-600 hover:bg-slate-100">{e.text}</button> : null;
                 })}
               </div>
             )}
@@ -241,12 +241,12 @@ function HuddleItemCard({ view, item, onOpen, refresh }: { view: RunView; item: 
         ))}
         {item.outcome ? (
           <>
-            {proposal && <div className="ml-auto max-w-[92%] rounded-md bg-brand-50 px-3 py-2 text-sm"><div className="text-[12px] font-semibold text-slate-500">{view.viewerIsOwner ? "You" : view.studentName}</div>{proposal.text}</div>}
-            <div className="rounded-md bg-slate-50 px-3 py-2 text-sm"><div className="text-[12px] font-semibold text-slate-500">Team response</div>{item.outcome.teamResponse}</div>
+            {proposal && <div className="ml-auto max-w-[92%] rounded-md bg-brand-50 px-3 py-2 text-sm"><div className="text-[14px] font-semibold text-slate-500">{view.viewerIsOwner ? "You" : view.studentName}</div>{proposal.text}</div>}
+            <div className="rounded-md bg-slate-50 px-3 py-2 text-sm"><div className="text-[14px] font-semibold text-slate-500">Team response</div>{item.outcome.teamResponse}</div>
             <button onClick={() => onOpen(item.outcome!.entryId)} className={cx("w-full rounded-md border px-3 py-2 text-left text-sm", item.outcome.decision === "resolved" ? "border-emerald-200 bg-emerald-50" : "border-amber-200 bg-amber-50")}>
-              <div className="text-[12px] font-semibold uppercase tracking-wide text-slate-600">{item.outcome.decision === "resolved" ? "Recorded as resolved" : "Stays open, with an owner"}</div>
+              <div className="text-[14px] font-semibold uppercase tracking-wide text-slate-600">{item.outcome.decision === "resolved" ? "Recorded as resolved" : "Stays open, with an owner"}</div>
               <div className="text-slate-900">{item.outcome.text}</div>
-              {item.outcome.owner && <div className="text-[12px] text-slate-600">Owner: {item.outcome.owner}</div>}
+              {item.outcome.owner && <div className="text-[14px] text-slate-600">Owner: {item.outcome.owner}</div>}
             </button>
           </>
         ) : view.viewerIsOwner && view.huddle?.status === "open" ? (
@@ -437,7 +437,7 @@ export default function RunHub({ runId }: { runId: string }) {
                 </li>
               ))}
             </ol>
-            <p className="mt-3 px-3 text-[12px] leading-relaxed text-slate-400">Each encounter starts from the shared patient state, adds to it, and hands off with an SBAR. Nothing in the state is ever overwritten.</p>
+            <p className="mt-3 px-3 text-[14px] leading-relaxed text-slate-400">Each encounter starts from the shared patient state, adds to it, and hands off with an SBAR. Nothing in the state is ever overwritten.</p>
           </nav>
           <div className="min-w-0">
             {sv && (sv.isStudent ? <StudentStage view={view} s={sv} onOpen={setOpen} refresh={refresh} /> : <AiStage key={sv.stage.id} view={view} s={sv} live={live} onOpen={setOpen} />)}
@@ -460,7 +460,7 @@ export default function RunHub({ runId }: { runId: string }) {
             <div className="space-y-2 p-4">
               {view.messages.filter((m) => m.thread !== "huddle" && m.thread !== "plan").map((m) => (
                 <div key={m.id} className={cx("rounded-md px-3 py-2 text-sm", m.fromIsAi ? "bg-slate-50" : "bg-brand-50")}>
-                  <div className="mb-0.5 flex flex-wrap items-center gap-1.5 text-[12px] font-semibold text-slate-500">
+                  <div className="mb-0.5 flex flex-wrap items-center gap-1.5 text-[14px] font-semibold text-slate-500">
                     {m.fromName} to {m.toRole || "team"}
                     {m.kind === "callout" && <Badge tone="amber">Call-out</Badge>}
                     {m.meta?.act && <Badge>{m.meta.act.replace("_", " ")}</Badge>}
@@ -507,7 +507,7 @@ export default function RunHub({ runId }: { runId: string }) {
       )}
 
       {open && <ProvenancePanel view={view} entryId={open} onOpen={setOpen} onClose={() => setOpen(null)} />}
-      <p className="mt-6 text-[12px] text-slate-400">Status key: {Object.values(STATUS_LABEL).join(" · ")}.</p>
+      <p className="mt-6 text-[14px] text-slate-400">Status key: {Object.values(STATUS_LABEL).join(" · ")}.</p>
     </div>
   );
 }

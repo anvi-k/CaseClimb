@@ -47,9 +47,9 @@ function ChainFlow({ chain, onOpen, stages }: { chain: Chain; onOpen: (id: strin
           const st = STEP_STYLE[s.kind];
           const body = (
             <>
-              <div className={cx("text-[12px] font-semibold uppercase tracking-wide", st.tag)}>{s.label}</div>
-              <div className="mt-0.5 line-clamp-4 text-[14px] leading-snug text-slate-800">{s.kind === "asked" ? `“${s.detail}”` : s.detail}</div>
-              <div className="mt-1 text-[12px] text-slate-500">{s.who}{s.stageOrder > 0 && s.stageOrder <= stages ? ` · encounter ${s.stageOrder}` : ""}</div>
+              <div className={cx("text-[14px] font-semibold uppercase tracking-wide", st.tag)}>{s.label}</div>
+              <div className="mt-0.5 line-clamp-4 text-[16px] leading-snug text-slate-800">{s.kind === "asked" ? `“${s.detail}”` : s.detail}</div>
+              <div className="mt-1 text-[14px] text-slate-500">{s.who}{s.stageOrder > 0 && s.stageOrder <= stages ? ` · encounter ${s.stageOrder}` : ""}</div>
             </>
           );
           return (
@@ -100,7 +100,7 @@ function Evolution({ view }: { view: RunView }) {
           <div key={r.order} className="grid items-center gap-x-3 sm:grid-cols-[13rem_1fr]">
             <div className="leading-tight">
               <div className="text-sm font-medium text-slate-800">{r.label}</div>
-              <div className="text-[12px] text-slate-500">{r.sub}</div>
+              <div className="text-[14px] text-slate-500">{r.sub}</div>
             </div>
             <div className="flex items-center gap-2">
               <div className="flex h-5" style={{ width: `${(r.total / max) * 88}%`, gap: 2 }}>
@@ -109,12 +109,12 @@ function Evolution({ view }: { view: RunView }) {
                     key={s}
                     onMouseEnter={() => setHover({ row: ri, status: s })}
                     onMouseLeave={() => setHover(null)}
-                    className="relative flex min-w-[3px] items-center justify-center rounded-[3px] text-[12px] font-semibold text-white"
+                    className="relative flex min-w-[3px] items-center justify-center rounded-[3px] text-[14px] font-semibold text-white"
                     style={{ flexGrow: r.counts[s], flexBasis: 0, background: STATUS_COLOR[s], opacity: hover && !(hover.row === ri && hover.status === s) ? 0.55 : 1 }}
                   >
                     {r.counts[s] / r.total > 0.07 && (r.total / max) > 0.3 ? <span className="rounded-sm bg-slate-900/45 px-1 leading-4">{r.counts[s]}</span> : null}
                     {hover?.row === ri && hover.status === s && (
-                      <span className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1 -translate-x-1/2 whitespace-nowrap rounded bg-slate-900 px-2 py-1 text-[12px] font-medium text-white shadow">
+                      <span className="pointer-events-none absolute bottom-full left-1/2 z-10 mb-1 -translate-x-1/2 whitespace-nowrap rounded bg-slate-900 px-2 py-1 text-[14px] font-medium text-white shadow">
                         {r.counts[s]} {STATUS_LABEL[s].toLowerCase()} · {r.label.toLowerCase()}
                       </span>
                     )}
@@ -181,14 +181,14 @@ function PlanItemRow({ view, item, onOpen, refresh }: { view: RunView; item: Pla
         {item.ownerRoles.map((o) => <Badge key={o} tone="blue">{o}</Badge>)}
         {item.timeframe && <span className="text-slate-500">· {item.timeframe}</span>}
       </div>
-      <p className="mt-1 text-[14px] text-slate-600">{item.rationale}</p>
+      <p className="mt-1 text-[16px] text-slate-600">{item.rationale}</p>
       <div className="mt-1.5 flex flex-wrap items-center gap-1">
-        <span className="text-[12px] text-slate-500">Rests on:</span>
+        <span className="text-[14px] text-slate-500">Rests on:</span>
         {item.restsOn.map((id) => {
           const e = byId.get(id);
           if (!e) return null;
           return (
-            <button key={id} onClick={() => onOpen(id)} title={e.text} className="inline-flex max-w-[16rem] items-center gap-1 rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[12px] text-slate-700 hover:bg-slate-50">
+            <button key={id} onClick={() => onOpen(id)} title={e.text} className="inline-flex max-w-[16rem] items-center gap-1 rounded border border-slate-200 bg-white px-1.5 py-0.5 text-[14px] text-slate-700 hover:bg-slate-50">
               <span className="h-1.5 w-1.5 shrink-0 rounded-sm" style={{ background: STATUS_COLOR[e.effectiveStatus] }} />
               <span className="truncate">{e.stageId === "record" ? "Record" : e.contributorRole}: {e.text}</span>
             </button>
@@ -196,9 +196,9 @@ function PlanItemRow({ view, item, onOpen, refresh }: { view: RunView; item: Pla
         })}
       </div>
       {item.revisions?.map((r, i) => (
-        <p key={i} className="mt-1.5 rounded bg-emerald-50 px-2 py-1 text-[13px] text-emerald-900">Changed in the huddle by {r.by}. Was: &ldquo;{r.from}&rdquo;</p>
+        <p key={i} className="mt-1.5 rounded bg-emerald-50 px-2 py-1 text-[15px] text-emerald-900">Changed in the huddle by {r.by}. Was: &ldquo;{r.from}&rdquo;</p>
       ))}
-      {reply && !editing && <p className="mt-1.5 rounded bg-slate-50 px-2 py-1 text-[13px] text-slate-700"><span className="font-semibold">{reply.fromName}:</span> {reply.text}</p>}
+      {reply && !editing && <p className="mt-1.5 rounded bg-slate-50 px-2 py-1 text-[15px] text-slate-700"><span className="font-semibold">{reply.fromName}:</span> {reply.text}</p>}
       {view.viewerIsOwner &&
         (editing ? (
           <div className="mt-2 space-y-2">
@@ -257,10 +257,10 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
             <p className="mt-1.5 text-sm leading-relaxed text-slate-700">{syn?.patientSummary || "The integrated summary and care plan are written after the team huddle. Everything below is live and grows after each encounter."}</p>
             {syn && syn.summaryCites.length > 0 && (
               <div className="mt-2 flex flex-wrap gap-1">
-                <span className="text-[12px] text-slate-500">Rests on:</span>
+                <span className="text-[14px] text-slate-500">Rests on:</span>
                 {syn.summaryCites.slice(0, 8).map((id) => {
                   const e = view.entries.find((x) => x.id === id);
-                  return e ? <button key={id} onClick={() => onOpen(id)} className="max-w-[14rem] truncate rounded border border-slate-200 px-1.5 py-0.5 text-[12px] text-slate-700 hover:bg-slate-50">{e.text}</button> : null;
+                  return e ? <button key={id} onClick={() => onOpen(id)} className="max-w-[14rem] truncate rounded border border-slate-200 px-1.5 py-0.5 text-[14px] text-slate-700 hover:bg-slate-50">{e.text}</button> : null;
                 })}
               </div>
             )}
@@ -274,7 +274,7 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
             ].map(([n, l]) => (
               <div key={l as string} className="rounded-md border border-slate-200 px-2 py-2">
                 <div className="text-xl font-semibold tabular-nums text-slate-900">{n}</div>
-                <div className="text-[12px] leading-tight text-slate-500">{l}</div>
+                <div className="text-[14px] leading-tight text-slate-500">{l}</div>
               </div>
             ))}
           </div>
@@ -282,7 +282,7 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
         <div className="overflow-x-auto border-t border-slate-100 px-4 py-3">
           <table className="w-full min-w-[34rem] text-left text-sm">
             <thead>
-              <tr className="text-[12px] uppercase tracking-wide text-slate-500">
+              <tr className="text-[14px] uppercase tracking-wide text-slate-500">
                 <th className="py-1 pr-3 font-semibold">Encounter</th>
                 <th className="px-2 py-1 font-semibold" title="Earlier entries this professional drew on">Used</th>
                 <th className="px-2 py-1 font-semibold" title="New entries this professional added">Contributed</th>
@@ -314,13 +314,13 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
               <div key={p.id} className="rounded-lg border border-slate-200">
                 <div className="border-b border-slate-100 bg-slate-50 px-4 py-2.5">
                   <h3 className="text-sm font-semibold text-slate-900">{p.title}</h3>
-                  {p.patientGoal && <p className="mt-0.5 text-[14px] text-slate-700"><span className="font-medium">What the patient wants:</span> {p.patientGoal}</p>}
-                  <p className="mt-0.5 text-[14px] text-slate-600">{p.summary}</p>
+                  {p.patientGoal && <p className="mt-0.5 text-[16px] text-slate-700"><span className="font-medium">What the patient wants:</span> {p.patientGoal}</p>}
+                  <p className="mt-0.5 text-[16px] text-slate-600">{p.summary}</p>
                 </div>
                 <ul className="divide-y divide-slate-100">{p.items.map((it) => <PlanItemRow key={it.id} view={view} item={it} onOpen={onOpen} refresh={refresh} />)}</ul>
               </div>
             ))}
-            <p className="text-[12px] text-slate-400">
+            <p className="text-[14px] text-slate-400">
               Written by a model from the shared state only. Each action was checked: it must cite entries that exist and contain no value absent from the record{syn.droppedItems ? `; ${syn.droppedItems} proposed action${syn.droppedItems === 1 ? "" : "s"} failed that check and ${syn.droppedItems === 1 ? "was" : "were"} left out` : ""}.
             </p>
           </div>
@@ -338,7 +338,7 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
                 <div className="flex items-center justify-between gap-2 border-b border-slate-100 px-3 py-2">
                   <div>
                     <div className="text-sm font-semibold text-slate-900">{c.title}</div>
-                    <div className="text-[12px] text-slate-500">{c.name} · {mine.length} entries</div>
+                    <div className="text-[14px] text-slate-500">{c.name} · {mine.length} entries</div>
                   </div>
                   {c.id !== "record" && c.id !== "huddle" && <Badge tone={c.isStudent ? "teal" : "slate"}>{c.isStudent ? "Student" : "AI colleague"}</Badge>}
                 </div>
@@ -350,9 +350,9 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
                         if (!items.length) return null;
                         return (
                           <div key={g.title} className="mb-1.5">
-                            <div className="px-2 pt-1 text-[12px] font-semibold uppercase tracking-wide text-slate-500">{g.title}</div>
+                            <div className="px-2 pt-1 text-[14px] font-semibold uppercase tracking-wide text-slate-500">{g.title}</div>
                             {items.slice(0, expanded ? 99 : 4).map((e) => <EntryRow key={e.id} entry={e} onOpen={onOpen} showWho={false} dense />)}
-                            {!expanded && items.length > 4 && <div className="px-2 text-[12px] text-slate-400">and {items.length - 4} more</div>}
+                            {!expanded && items.length > 4 && <div className="px-2 text-[14px] text-slate-400">and {items.length - 4} more</div>}
                           </div>
                         );
                       })}
@@ -369,7 +369,7 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
       <Section id="chains" title="How earlier information affected later decisions" subtitle="Built only from recorded relations: what was found, who picked it up, the question they asked because of it, what that uncovered, and who built on that.">
         {view.chains.length ? (
           <div className="space-y-3">
-            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[12px] text-slate-500">
+            <div className="flex flex-wrap gap-x-4 gap-y-1 text-[14px] text-slate-500">
               {[["discovered", "Recorded"], ["handed_off", "Handed off"], ["asked", "Asked because of it"], ["new_information", "New information"], ["incorporated", "Built on"], ["plan", "Care plan"]].map(([k, l]) => (
                 <span key={k} className="inline-flex items-center gap-1.5"><span className={cx("h-3 border-l-4", STEP_STYLE[k].bar)} />{l}</span>
               ))}
@@ -392,13 +392,13 @@ export default function FinalView({ view, onOpen, refresh }: { view: RunView; on
                     <span className="text-sm font-semibold text-slate-900">{b.title}</span>
                     <span className="text-sm tabular-nums text-slate-500">{b.items.length}</span>
                   </div>
-                  <p className="text-[12px] text-slate-500">{b.hint}</p>
+                  <p className="text-[14px] text-slate-500">{b.hint}</p>
                 </div>
                 <div className="p-1.5">
                   {b.items.slice(0, expanded ? 200 : 5).map((e) => (
                     <div key={e.id}>
                       <EntryRow entry={e} onOpen={onOpen} dense />
-                      <div className="-mt-0.5 pb-1 pl-6 text-[12px] text-slate-400">{stageLabel(view, e)}</div>
+                      <div className="-mt-0.5 pb-1 pl-6 text-[14px] text-slate-400">{stageLabel(view, e)}</div>
                     </div>
                   ))}
                   {!b.items.length && <p className="px-2 py-2 text-xs text-slate-400">None.</p>}

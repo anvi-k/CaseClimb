@@ -89,10 +89,10 @@ export default function ChartPanel({
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`flex items-center gap-1.5 whitespace-nowrap rounded-t-md border border-b-0 px-3 py-1.5 text-[14px] ${tab === t.id ? "border-slate-300 bg-white font-medium text-slate-900" : "border-transparent text-slate-600 hover:bg-slate-200"}`}
+            className={`flex items-center gap-1.5 whitespace-nowrap rounded-t-md border border-b-0 px-3 py-1.5 text-[16px] ${tab === t.id ? "border-slate-300 bg-white font-medium text-slate-900" : "border-transparent text-slate-600 hover:bg-slate-200"}`}
           >
             {t.label}
-            {!!t.unread && t.unread > 0 && <span className="rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold leading-4 text-white">{t.unread}</span>}
+            {!!t.unread && t.unread > 0 && <span className="rounded-full bg-brand-600 px-1.5 text-[14px] font-semibold leading-4 text-white">{t.unread}</span>}
           </button>
         ))}
       </div>
@@ -100,13 +100,13 @@ export default function ChartPanel({
       <div className="min-h-0 flex-1 overflow-y-auto p-4">
         {tab === "summary" && (
           <div className="space-y-3">
-            <p className="rounded-md bg-slate-50 px-3 py-2 text-[14px] text-slate-700">{chart.setting}</p>
+            <p className="rounded-md bg-slate-50 px-3 py-2 text-[16px] text-slate-700">{chart.setting}</p>
             {header.length === 0 && <p className="text-sm text-slate-500">Nothing on file before this visit.</p>}
             <div className="grid gap-3 sm:grid-cols-2">
               {header.map((x, i) => (
                 <div key={i} className="rounded-md border border-slate-200 p-3">
-                  <div className="mb-1 text-[12px] font-semibold uppercase tracking-wide text-slate-500">{x.label}</div>
-                  <div className="whitespace-pre-wrap text-[14px] leading-relaxed text-slate-800">{x.value}</div>
+                  <div className="mb-1 text-[14px] font-semibold uppercase tracking-wide text-slate-500">{x.label}</div>
+                  <div className="whitespace-pre-wrap text-[16px] leading-relaxed text-slate-800">{x.value}</div>
                 </div>
               ))}
             </div>
@@ -119,11 +119,11 @@ export default function ChartPanel({
             {chart.sections.length === 0 && <p className="text-sm text-slate-500">Nothing documented yet. What the patient tells you is filed here as you go.</p>}
             {chart.sections.map((s) => (
               <section key={s.category}>
-                <h3 className="mb-1 border-b border-slate-200 pb-1 text-[12px] font-semibold uppercase tracking-wide text-slate-500">{s.label}</h3>
+                <h3 className="mb-1 border-b border-slate-200 pb-1 text-[14px] font-semibold uppercase tracking-wide text-slate-500">{s.label}</h3>
                 <ul className="space-y-0.5">
                   {s.items.map((it) => (
-                    <li key={it.id} className={`flex items-start gap-2 rounded px-1.5 py-1 text-[14px] ${fresh.has(it.id) ? "flash-new" : ""}`}>
-                      <span className="mt-0.5 shrink-0 rounded bg-slate-100 px-1 text-[11px] tabular-nums text-slate-500" title={it.how === "record" ? "Already on record from an earlier encounter" : `Turn ${it.turn}`}>
+                    <li key={it.id} className={`flex items-start gap-2 rounded px-1.5 py-1 text-[16px] ${fresh.has(it.id) ? "flash-new" : ""}`}>
+                      <span className="mt-0.5 shrink-0 rounded bg-slate-100 px-1 text-[14px] tabular-nums text-slate-500" title={it.how === "record" ? "Already on record from an earlier encounter" : `Turn ${it.turn}`}>
                         {it.how === "record" ? "REC" : `T${it.turn}`}
                       </span>
                       <span className="text-slate-800">{it.text}</span>
@@ -151,24 +151,24 @@ export default function ChartPanel({
                   {ordering ? "Sending" : "Request"}
                 </button>
               </div>
-              <p className="mt-1.5 text-[12px] text-slate-500">Only results approved for this case can come back. Exams are guided over video.</p>
+              <p className="mt-1.5 text-[14px] text-slate-500">Only results approved for this case can come back. Exams are guided over video.</p>
             </form>
             {chart.results.length === 0 && chart.unmatched.length === 0 && <p className="text-sm text-slate-500">No results yet.</p>}
             <ul className="space-y-2">
               {chart.results.map((r) => (
                 <li key={r.id} className={`rounded-md border p-3 ${r.abnormal ? "border-amber-300 bg-amber-50/60" : "border-slate-200"} ${fresh.has(r.id) ? "flash-new" : ""}`}>
                   <div className="flex items-center justify-between gap-2">
-                    <span className="text-[14px] font-semibold text-slate-900">{r.name}</span>
-                    <span className="flex items-center gap-1.5 text-[12px] text-slate-500">
+                    <span className="text-[16px] font-semibold text-slate-900">{r.name}</span>
+                    <span className="flex items-center gap-1.5 text-[14px] text-slate-500">
                       {r.abnormal && <span className="rounded bg-amber-200 px-1.5 font-medium text-amber-900">Abnormal</span>}
                       {KIND_LABEL[r.kind] || r.kind} · T{r.turn}
                     </span>
                   </div>
-                  <p className="mt-1 whitespace-pre-wrap text-[14px] leading-relaxed text-slate-800">{r.result}</p>
+                  <p className="mt-1 whitespace-pre-wrap text-[16px] leading-relaxed text-slate-800">{r.result}</p>
                 </li>
               ))}
               {chart.unmatched.map((u, i) => (
-                <li key={"u" + i} className="rounded-md border border-dashed border-slate-300 p-3 text-[14px] text-slate-600">
+                <li key={"u" + i} className="rounded-md border border-dashed border-slate-300 p-3 text-[16px] text-slate-600">
                   <span className="font-medium text-slate-800">{u.request}</span>: no approved result is available for this in the case file.
                 </li>
               ))}
@@ -186,12 +186,12 @@ export default function ChartPanel({
                     onClick={() => setDocId(d.id)}
                     className={`w-full rounded-md border px-2.5 py-2 text-left ${doc?.id === d.id ? "border-brand-500 bg-brand-50" : "border-slate-200 hover:bg-slate-50"} ${fresh.has(d.id) ? "flash-new" : ""}`}
                   >
-                    <div className="flex items-center justify-between text-[11px] font-medium uppercase tracking-wide text-slate-500">
+                    <div className="flex items-center justify-between text-[14px] font-medium uppercase tracking-wide text-slate-500">
                       {artifactTypeLabel(d.type)}
                       {d.turn > 0 && <span className="rounded bg-brand-100 px-1 normal-case tracking-normal text-brand-700">new · T{d.turn}</span>}
                     </div>
-                    <div className="text-[14px] font-medium leading-snug text-slate-900">{d.title}</div>
-                    {d.date && <div className="text-[12px] text-slate-500">{d.date}</div>}
+                    <div className="text-[16px] font-medium leading-snug text-slate-900">{d.title}</div>
+                    {d.date && <div className="text-[14px] text-slate-500">{d.date}</div>}
                   </button>
                 </li>
               ))}
@@ -206,9 +206,9 @@ export default function ChartPanel({
             {chart.log.length === 0 && <p className="text-sm text-slate-500">Nothing yet.</p>}
             <ol className="space-y-1">
               {chart.log.map((l, i) => (
-                <li key={i} className="flex items-start gap-2 text-[14px]">
-                  <span className="mt-0.5 w-8 shrink-0 rounded bg-slate-100 px-1 text-center text-[11px] tabular-nums text-slate-500">T{l.turn}</span>
-                  <span className={`mt-0.5 w-16 shrink-0 text-[11px] font-medium uppercase tracking-wide ${l.kind === "fact" ? "text-brand-600" : l.kind === "result" ? "text-amber-700" : "text-violet-700"}`}>{l.kind === "fact" ? "History" : l.kind === "result" ? "Result" : "Document"}</span>
+                <li key={i} className="flex items-start gap-2 text-[16px]">
+                  <span className="mt-0.5 w-8 shrink-0 rounded bg-slate-100 px-1 text-center text-[14px] tabular-nums text-slate-500">T{l.turn}</span>
+                  <span className={`mt-0.5 w-16 shrink-0 text-[14px] font-medium uppercase tracking-wide ${l.kind === "fact" ? "text-brand-600" : l.kind === "result" ? "text-amber-700" : "text-violet-700"}`}>{l.kind === "fact" ? "History" : l.kind === "result" ? "Result" : "Document"}</span>
                   <span className="text-slate-800">{l.text}</span>
                 </li>
               ))}

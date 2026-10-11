@@ -485,9 +485,9 @@ export default function CaseEditor({
       <div className={cx("grid items-start gap-4", guideOpen ? "lg:grid-cols-[15rem_minmax(0,1fr)] 2xl:grid-cols-[15rem_minmax(0,1fr)_22rem]" : "lg:grid-cols-[15rem_minmax(0,1fr)]")}>
         {/* Section navigation */}
         <nav aria-label="Sections" className="rounded-lg border border-slate-200 bg-white p-2 shadow-sm lg:sticky lg:top-[5.75rem] lg:max-h-[calc(100vh-6.5rem)] lg:overflow-y-auto">
-          <p className="px-2.5 pb-1 pt-1 text-[12px] font-semibold uppercase tracking-wide text-slate-400">Patient profile</p>
+          <p className="px-2.5 pb-1 pt-1 text-[14px] font-semibold uppercase tracking-wide text-slate-400">Patient profile</p>
           {SECTIONS.map((s) => navBtn(s.id, s.label, counts[s.id]))}
-          <p className="mt-2 border-t border-slate-100 px-2.5 pb-1 pt-2 text-[12px] font-semibold uppercase tracking-wide text-slate-400">Before publishing</p>
+          <p className="mt-2 border-t border-slate-100 px-2.5 pb-1 pt-2 text-[14px] font-semibold uppercase tracking-wide text-slate-400">Before publishing</p>
           {navBtn(
             "consistency",
             "Consistency check",

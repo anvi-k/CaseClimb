@@ -46,20 +46,7 @@ export default function AuthForm({ mode, groups, next }: { mode: "login" | "regi
             </div>
             <p className="mt-1.5 text-right text-xs text-slate-500">Faculty accounts can see every patient&apos;s answer key.</p>
           </div>
-          <div>
-            <Label htmlFor="profession">{role === "student" ? "Your program" : "Your discipline"}</Label>
-            <Select id="profession" name="profession" value={profession} onChange={(e) => setProfession(e.target.value)}>
-              {groups?.map((g) => (
-                <optgroup key={g.group} label={g.group}>
-                  {g.items.map((p) => (
-                    <option key={p.id} value={p.id}>
-                      {p.name}
-                    </option>
-                  ))}
-                </optgroup>
-              ))}
-            </Select>
-          </div>
+          <input type="hidden" name="profession" value="medicine" />
         </>
       )}
       <div>

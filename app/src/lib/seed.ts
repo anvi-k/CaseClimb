@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 import fs from "node:fs";
 import path from "node:path";
-import { get, newId, run } from "./db";
+import { all, get, newId, run } from "./db";
 import type { CaseProfile } from "./types";
 
 const DEMO_PASSWORD = "poscere-demo";
@@ -75,6 +75,8 @@ export function seed() {
     }
     run("INSERT INTO users (id, email, password_hash, name, role, profession_id) VALUES (?,?,?,?,?,?)", newId("u_"), d.email, bcrypt.hashSync(DEMO_PASSWORD, 10), d.name, d.role, d.profession);
   }
+  retireRemovedSeeds(dir);
+  seedDemoClass();
   // ===== Care Journeys (Challenge 2): ready-made published journeys. Idempotent. =====
   try {
     const n = seedJourneys();
@@ -84,6 +86,50 @@ export function seed() {
   }
   // ===== end Care Journeys =====
   return added;
+}
+
+/**
+ * A seed patient whose file has been removed from data/seed/cases is taken out of the library.
+ * It is archived, not deleted, so visits already held with it keep working. Patients someone has
+ * edited in the Studio are left alone.
+ */
+function retireRemovedSeeds(dir: string) {
+  if (!fs.existsSync(dir)) return;
+  const files = new Set(fs.readdirSync(dir).filter((f) => f.endsWith(".json")).map((f) => "seed_" + f.replace(/\.json$/, "")));
+  for (const c of all<{ id: string }>("SELECT id FROM cases WHERE id LIKE 'seed_%' AND status = 'published' AND owner_id IS NULL AND created_at = updated_at")) {
+    if (!files.has(c.id)) run("UPDATE cases SET status = 'archived' WHERE id = ?", c.id);
+  }
+}
+
+/** The patients the demo class is assigned, in order. Two organiser samples, then Synthea-based ones. */
+const DEMO_PATIENTS = ["seed_sample-walter-greene", "seed_sample-nisha-patel", "seed_synthea-jayme-littel-03229300", "seed_synthea-velda-schuster-021d485a", "seed_synthea-kasey-haley-3e9ca627"];
+
+/**
+ * Gives the demo instructor a class with the demo students in it and five patients assigned, so
+ * both home screens have something to show on a fresh install. Does nothing once the instructor
+ * has any class.
+ */
+function seedDemoClass() {
+  const faculty = get<{ id: string }>("SELECT id FROM users WHERE email = 'faculty@poscere.demo'");
+  if (!faculty || get("SELECT 1 FROM courses WHERE faculty_id = ?", faculty.id)) return;
+  const patients = DEMO_PATIENTS.filter((id) => get("SELECT 1 FROM cases WHERE id = ? AND status = 'published'", id));
+  if (!patients.length) return;
+  const courseId = newId("co_");
+  run("INSERT INTO courses (id, faculty_id, name, profession_id, join_code) VALUES (?,?,?,?,?)", courseId, faculty.id, "Nutrition counseling", null, "NUTR48");
+  for (const s of all<{ id: string }>("SELECT id FROM users WHERE email LIKE '%@poscere.demo' AND role = 'student'")) run("INSERT OR IGNORE INTO enrollments (course_id, user_id) VALUES (?,?)", courseId, s.id);
+  run(
+    "INSERT INTO assignments (id, course_id, title, instructions, type, case_ids, journey_id, settings, due_at, feedback_released) VALUES (?,?,?,?,?,?,?,?,?,?)",
+    newId("as_"),
+    courseId,
+    "Nutrition counseling visits",
+    "See each patient in turn.",
+    "homework",
+    JSON.stringify(patients),
+    null,
+    JSON.stringify({ level: 2 }),
+    null,
+    1,
+  );
 }
 
 // Care Journeys seed loader (import kept beside its block; ES imports are hoisted).

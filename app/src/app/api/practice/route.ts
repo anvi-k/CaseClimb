@@ -1,44 +1,33 @@
 import { apiUser } from "@/lib/auth";
-import { generateCase } from "@/lib/casegen";
-import { newId, run } from "@/lib/db";
+import { all } from "@/lib/db";
 import { createEncounter } from "@/lib/engine/encounter";
-import { longJson } from "@/lib/http";
-import { profession } from "@/lib/professions";
+import { bad } from "@/lib/http";
+import { parse } from "@/lib/db";
+
+/** How each temperament step plays: the engine's difficulty level, plus a mood for the sharper ones. */
+const MOOD: Record<number, string | false> = { 1: false, 2: "withdrawn", 3: false, 4: "badday", 5: "skeptical" };
 
 /**
- * A student describes what they want to practice and gets a private patient built for it.
- * The case belongs to them and is never listed for anyone else; they never see the case file,
- * only the visit. Body: { description, level? } -> { id: encounterId }
+ * Starts a private practice visit. The student chooses only the patient's temperament (1 easygoing
+ * to 5 very difficult); the patient is picked here from the published library, preferring one the
+ * student has not seen. No patient is generated. Body: { temperament } -> { id: encounterId }
  */
 export async function POST(req: Request) {
   const user = await apiUser();
   if (user instanceof Response) return user;
   const b = await req.json().catch(() => ({}));
-  const description = String(b.description || "").trim().slice(0, 1500);
-  if (description.length < 15) return Response.json({ error: "Describe the patient or the skill you want to practice in a sentence or two." }, { status: 400 });
-  const level = Math.max(1, Math.min(5, Math.round(Number(b.level) || 2)));
-  const role = profession(user.profession_id);
-  return longJson(async () => {
-    const profile = await generateCase({
-      professionId: role.id,
-      level,
-      description,
-      guidance: "A student wrote this request to practice on their own. Build a realistic patient that exercises what they asked for. Keep it within what this role does over a video visit.",
-    });
-    const caseId = newId("c_");
-    run(
-      "INSERT INTO cases (id, owner_id, status, origin, reviewed, title, specialty, professions, difficulty, profile) VALUES (?,?,?,?,?,?,?,?,?,?)",
-      caseId,
-      user.id,
-      "draft",
-      "ai_draft",
-      0,
-      profile.title,
-      profile.specialty || "",
-      JSON.stringify(profile.professions),
-      profile.difficulty,
-      JSON.stringify(profile),
-    );
-    return { id: createEncounter({ userId: user.id, caseId, professionId: role.id, mode: "practice", level }) };
-  });
+  const temperament = Math.max(1, Math.min(5, Math.round(Number(b.temperament) || 3)));
+
+  const cases = all<{ id: string; professions: string; seen: number }>(
+    `SELECT c.id, c.professions, (SELECT COUNT(*) FROM encounters e WHERE e.case_id = c.id AND e.user_id = ? AND e.status != 'abandoned') AS seen
+     FROM cases c WHERE c.status = 'published'`,
+    user.id,
+  );
+  if (!cases.length) return bad("There are no published patients to practice with yet.", 404);
+  const fewest = Math.min(...cases.map((c) => c.seen));
+  const pool = cases.filter((c) => c.seen === fewest);
+  const pick = pool[Math.floor(Math.random() * pool.length)];
+  const professions = parse<string[]>(pick.professions, []);
+  const professionId = user.profession_id && professions.includes(user.profession_id) ? user.profession_id : professions[0] || user.profession_id || "medicine";
+  return Response.json({ id: createEncounter({ userId: user.id, caseId: pick.id, professionId, mode: "practice", level: temperament, perturb: MOOD[temperament] }) });
 }

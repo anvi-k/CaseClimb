@@ -173,7 +173,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
                   </div>
                   {scores.length > 1 && (
                     <div className="flex items-center gap-2">
-                      <span className="text-[12px] text-slate-500">Score by attempt, 0 to 100%</span>
+                      <span className="text-[14px] text-slate-500">Score by attempt, 0 to 100%</span>
                       <ScoreSpark scores={scores} labels={c.attempts.map((a, i) => `Attempt ${i + 1}: ${Math.round(a.percent)}% at level ${a.level}`)} />
                     </div>
                   )}

@@ -49,12 +49,15 @@ const FORM_FIELDS: { key: string; label: string; placeholder: string; area?: boo
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 
+/** The role new patients are written for now that the app has a single kind of learner. */
+const GENERAL_ROLE = "medicine";
+
 export default function NewCaseWizard({ groups, defaultRole }: { groups: { group: string; items: Role[] }[]; defaultRole: string }) {
   const router = useRouter();
   const roles = groups.flatMap((g) => g.items);
   const [way, setWay] = useState<Way>("describe");
   const [stage, setStage] = useState<Stage>("input");
-  const [role, setRole] = useState(roles.some((r) => r.id === defaultRole) ? defaultRole : roles[0]?.id || "");
+  const [role, setRole] = useState(roles.some((r) => r.id === GENERAL_ROLE) ? GENERAL_ROLE : roles.some((r) => r.id === defaultRole) ? defaultRole : roles[0]?.id || "");
   const [description, setDescription] = useState("");
   const [goals, setGoals] = useState("");
   const [level, setLevel] = useState("");
@@ -172,21 +175,8 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
     }
   }
 
-  const roleSelect = (
-    <Field label="Who is the learner?" hint="The case is scoped to what this role does in a telehealth visit. You can add more roles later.">
-      <Select value={role} onChange={(e) => setRole(e.target.value)}>
-        {groups.map((g) => (
-          <optgroup key={g.group} label={g.group}>
-            {g.items.map((r) => (
-              <option key={r.id} value={r.id}>
-                {r.name}
-              </option>
-            ))}
-          </optgroup>
-        ))}
-      </Select>
-    </Field>
-  );
+  // One learner role: every new patient is written as a general outpatient visit.
+  const roleSelect = null;
   const shared = (
     <div className="grid gap-4 sm:grid-cols-2">
       <Area label="Learning goals (optional)" minRows={3} value={goals} onChange={setGoals} placeholder="What should a student be able to do by the end of this visit?" />
@@ -270,7 +260,7 @@ export default function NewCaseWizard({ groups, defaultRole }: { groups: { group
               <li key={i} className="flex gap-3">
                 <span
                   className={cx(
-                    "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[12px] font-semibold",
+                    "mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[14px] font-semibold",
                     s.state === "done" && "bg-emerald-100 text-emerald-800",
                     s.state === "active" && "bg-brand-600 text-white",
                     s.state === "todo" && "bg-slate-100 text-slate-400",

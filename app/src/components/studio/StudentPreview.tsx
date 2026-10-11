@@ -21,7 +21,7 @@ export default function StudentPreview({ p, roleTitle }: { p: CaseProfile; roleT
       <div className="grid gap-4 xl:grid-cols-2">
         <Panel title="Before the visit" subtitle="The brief the student reads before joining the call.">
           <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
-            <p className="text-[12px] font-semibold uppercase tracking-wide text-slate-500">Telehealth visit · you are the {roleTitle}</p>
+            <p className="text-[14px] font-semibold uppercase tracking-wide text-slate-500">Telehealth visit · you are the {roleTitle}</p>
             <p className="mt-1 text-lg font-semibold text-slate-900">
               {p.patient.name || "Unnamed patient"}, {p.patient.age}
             </p>

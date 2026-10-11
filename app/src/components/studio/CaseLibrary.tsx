@@ -81,14 +81,6 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
       />
       <div className="mb-4 grid gap-2 sm:grid-cols-[1fr_auto_auto_auto]">
         <Input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search by title, patient name or specialty" aria-label="Search patients" />
-        <Select value={role} onChange={(e) => setRole(e.target.value)} aria-label="Filter by learner role" className="sm:w-52">
-          <option value="">All learner roles</option>
-          {professions.map((p) => (
-            <option key={p.id} value={p.id}>
-              {p.name}
-            </option>
-          ))}
-        </Select>
         <Select value={status} onChange={(e) => setStatus(e.target.value)} aria-label="Filter by status" className="sm:w-44">
           <option value="active">Drafts and published</option>
           <option value="draft">Drafts</option>
@@ -129,7 +121,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                     {c.title}
                   </Link>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    {[c.patient, c.professions.map(roleName).join(", "), c.specialty, `Difficulty ${c.difficulty} of 5`].filter(Boolean).join("  ·  ")}
+                    {[c.patient, c.specialty, `Difficulty ${c.difficulty} of 5`].filter(Boolean).join("  ·  ")}
                   </p>
                   {c.summary && <p className="mt-1.5 line-clamp-2 max-w-4xl text-sm text-slate-600">{c.summary}</p>}
                   <p className="mt-1.5 text-xs text-slate-400">

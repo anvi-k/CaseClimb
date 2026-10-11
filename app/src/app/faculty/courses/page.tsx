@@ -19,7 +19,7 @@ export default async function CoursesPage() {
       <PageHeader title="Courses" subtitle="A course has a join code, a roster, assignments and a gradebook." />
       <Card className="mb-5">
         <CardHeader title="Create a course" subtitle="Students join with a six-character code you share in class." />
-        <CreateCourse professions={professions().map((p) => ({ id: p.id, name: p.name }))} />
+        <CreateCourse />
       </Card>
       {courses.length === 0 ? (
         <Empty>You have no courses yet. Create one above, then add assignments to it.</Empty>

@@ -245,7 +245,7 @@ export default function AssignmentBuilder({
                 <p>Each suggestion has a short reason next to the field it filled in.</p>
               </div>
             )}
-            <p className="text-[12px] leading-snug text-slate-500">The guide only chooses among published patients and care journeys. It cannot see student data.</p>
+            <p className="text-[14px] leading-snug text-slate-500">The guide only chooses among published patients and care journeys. It cannot see student data.</p>
           </div>
         </Card>
       </div>

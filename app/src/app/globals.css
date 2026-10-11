@@ -13,9 +13,12 @@
   --color-ink: #0f172a;
 }
 
-/* Slightly larger than the browser default so long visits are easier to read. */
+/*
+ * Readable sizes for health content: body text 19px, the smallest text 14px, generous line
+ * spacing. Every rem-based size in the app scales from this one number.
+ */
 html {
-  font-size: 106.25%;
+  font-size: 118.75%;
 }
 html,
 body {
@@ -25,6 +28,7 @@ body {
   background: #f6f8fc;
   color: var(--color-ink);
   font-family: var(--font-sans);
+  line-height: 1.7;
 }
 
 @keyframes fadein {

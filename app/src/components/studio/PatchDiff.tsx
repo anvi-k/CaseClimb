@@ -34,18 +34,18 @@ function wordDiff(a: string, b: string): { before: { t: string; ch: boolean }[];
 
 function Change({ v }: { v: OpView }) {
   const d = useMemo(() => (v.verb === "Change" && v.before && v.after ? wordDiff(v.before, v.after) : null), [v]);
-  const box = "whitespace-pre-wrap break-words rounded border px-2 py-1.5 text-[13.5px] leading-snug";
+  const box = "whitespace-pre-wrap break-words rounded border px-2 py-1.5 text-[15px] leading-snug";
   return (
     <div className="space-y-1">
       {v.verb !== "Add" && (
         <div className={cx(box, "border-rose-200 bg-rose-50 text-slate-800")}>
-          <span className="mr-1.5 text-[11px] font-semibold uppercase tracking-wide text-rose-700">{v.verb === "Remove" ? "Removed" : "Now"}</span>
+          <span className="mr-1.5 text-[14px] font-semibold uppercase tracking-wide text-rose-700">{v.verb === "Remove" ? "Removed" : "Now"}</span>
           {d ? d.before.map((w, k) => (w.ch && w.t.trim() ? <del key={k} className="bg-rose-200 decoration-rose-700">{w.t}</del> : <span key={k}>{w.t}</span>)) : v.before || <em className="text-slate-400">empty</em>}
         </div>
       )}
       {v.verb !== "Remove" && (
         <div className={cx(box, "border-emerald-200 bg-emerald-50 text-slate-800")}>
-          <span className="mr-1.5 text-[11px] font-semibold uppercase tracking-wide text-emerald-700">{v.verb === "Add" ? "Added" : "Proposed"}</span>
+          <span className="mr-1.5 text-[14px] font-semibold uppercase tracking-wide text-emerald-700">{v.verb === "Add" ? "Added" : "Proposed"}</span>
           {d ? d.after.map((w, k) => (w.ch && w.t.trim() ? <ins key={k} className="bg-emerald-200 no-underline">{w.t}</ins> : <span key={k}>{w.t}</span>)) : v.after || <em className="text-slate-400">empty</em>}
         </div>
       )}

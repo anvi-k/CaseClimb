@@ -59,7 +59,7 @@ function TableEditor({ table, onChange }: { table: ArtifactTable; onChange: (t: 
                   </div>
                 </th>
               ))}
-              <th className="p-0.5 text-[12px] font-medium text-slate-500" title="H = high, L = low, A = abnormal">
+              <th className="p-0.5 text-[14px] font-medium text-slate-500" title="H = high, L = low, A = abnormal">
                 Flag
               </th>
               <th />
@@ -144,7 +144,7 @@ function PointsEditor({ points, onChange }: { points: { x: string; y: number }[]
           onChange(textToPoints(e.target.value));
         }}
       />
-      <p className={cx("text-[12px]", lines > valid ? "text-amber-700" : "text-slate-500")}>
+      <p className={cx("text-[14px]", lines > valid ? "text-amber-700" : "text-slate-500")}>
         One point per line as: label, number. {valid} point{valid === 1 ? "" : "s"} read{lines > valid ? `, ${lines - valid} line${lines - valid === 1 ? "" : "s"} not understood yet` : ""}.
       </p>
     </div>
@@ -283,8 +283,8 @@ export function ArtifactsSection({ p, set }: SectionProps) {
               <li key={x.id}>
                 <button type="button" onClick={() => setSel(x.id)} className={cx("w-full rounded-md border px-2.5 py-2 text-left", x.id === d.id ? "border-brand-600 bg-brand-50" : "border-slate-200 hover:bg-slate-50")}>
                   <span className="block text-sm font-medium leading-snug text-slate-900">{x.title || "Untitled document"}</span>
-                  <span className="mt-0.5 block text-[12px] text-slate-500">{typeLabel(x.type).split(" (")[0]}</span>
-                  <span className={cx("mt-0.5 block text-[12px]", x.release.when === "start" ? "text-emerald-700" : "text-amber-700")}>{releaseLabel(p, x)}</span>
+                  <span className="mt-0.5 block text-[14px] text-slate-500">{typeLabel(x.type).split(" (")[0]}</span>
+                  <span className={cx("mt-0.5 block text-[14px]", x.release.when === "start" ? "text-emerald-700" : "text-amber-700")}>{releaseLabel(p, x)}</span>
                 </button>
               </li>
             ))}

@@ -49,7 +49,7 @@ export default function JourneyChartTab({ runId, encounterId }: { runId: string;
             <button onClick={() => setFilter("open")} className={`px-2 py-1 ${filter === "open" ? "bg-slate-100 font-medium text-slate-900" : "text-slate-600"}`}>Uncertain or unresolved ({openCount})</button>
           </div>
         </div>
-        <div className="mb-2 flex flex-wrap gap-x-3 gap-y-1 text-[12px] text-slate-500">
+        <div className="mb-2 flex flex-wrap gap-x-3 gap-y-1 text-[14px] text-slate-500">
           {(Object.keys(STATUS_LABEL) as EntryStatus[]).map((s) => (
             <span key={s} className="inline-flex items-center gap-1"><span className="h-2 w-2 rounded-sm" style={{ background: STATUS_COLOR[s] }} />{STATUS_LABEL[s]}</span>
           ))}
@@ -62,7 +62,7 @@ export default function JourneyChartTab({ runId, encounterId }: { runId: string;
               <div key={g.key} className="rounded-lg border border-slate-200 bg-white">
                 <div className="border-b border-slate-100 px-3 py-1.5">
                   <div className="text-xs font-semibold text-slate-800">{g.title}</div>
-                  <div className="text-[12px] text-slate-500">{g.sub}</div>
+                  <div className="text-[14px] text-slate-500">{g.sub}</div>
                 </div>
                 <div className="p-1">{items.map((e) => <EntryRow key={e.id} entry={e} onOpen={setOpen} showWho={false} dense />)}</div>
               </div>
@@ -70,7 +70,7 @@ export default function JourneyChartTab({ runId, encounterId }: { runId: string;
           })}
           {!shown.length && <p className="text-slate-500">Nothing here yet.</p>}
         </div>
-        <p className="mt-1.5 text-[12px] text-slate-400">Select any line to see who recorded it, when, and the words it rests on.</p>
+        <p className="mt-1.5 text-[14px] text-slate-400">Select any line to see who recorded it, when, and the words it rests on.</p>
       </section>
 
       <section>
