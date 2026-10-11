@@ -62,6 +62,41 @@ export default async function StudentHome() {
   const doneCount = rows.filter((r) => r.done).length;
   const who = (r: Row) => (r.age === null ? r.name : `${r.name}, ${r.age}`);
 
+  const todo = rows.filter((r) => !r.done);
+  const finished = rows.filter((r) => r.done);
+  const card = (r: Row) => (
+    <li key={r.caseId} className="flex flex-wrap items-center gap-6 rounded-2xl border border-slate-200 bg-white px-7 py-5">
+      <Portrait src={r.portrait} name={r.name} size="h-20 w-20 text-xl" />
+      <div className="min-w-0 flex-1">
+        <p className="text-[24px] font-semibold leading-snug text-slate-900">{who(r)}</p>
+        <p className="flex items-center gap-2 text-slate-600">
+          <Icon name="clock" />
+          10-minute visit
+        </p>
+      </div>
+      {r.done ? (
+        <>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">
+            <Icon name="check" />
+            {r.score ? `Done · ${r.score}` : "Done"}
+          </span>
+          {r.lastId && (
+            <LinkButton href={feedbackUrl(r.lastId)} variant="secondary" className="!px-4 !py-2 !text-base">
+              See feedback
+            </LinkButton>
+          )}
+        </>
+      ) : r.activeId ? (
+        <LinkButton href={visitUrl(r.activeId)} size="lg">
+          <Icon name="video" />
+          Continue visit
+        </LinkButton>
+      ) : (
+        <StartVisit size="lg" body={{ caseId: r.caseId, assignmentId: r.assignmentId }} />
+      )}
+    </li>
+  );
+
   return (
     <AppShell user={user}>
       <div className="mx-auto max-w-5xl">
@@ -97,40 +132,17 @@ export default async function StudentHome() {
               </div>
             )}
 
-            <ul className="mt-7 space-y-3">
-              {rows.map((r) => (
-                <li key={r.caseId} className="flex flex-wrap items-center gap-6 rounded-2xl border border-slate-200 bg-white px-7 py-5">
-                  <Portrait src={r.portrait} name={r.name} size="h-20 w-20 text-xl" />
-                  <div className="min-w-0 flex-1">
-                    <p className="text-[24px] font-semibold leading-snug text-slate-900">{who(r)}</p>
-                    <p className="flex items-center gap-2 text-slate-600">
-                      <Icon name="clock" />
-                      10-minute visit
-                    </p>
-                  </div>
-                  {r.done ? (
-                    <>
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1 text-[15px] font-semibold text-emerald-900">
-                        <Icon name="check" />
-                        {r.score ? `Done · ${r.score}` : "Done"}
-                      </span>
-                      {r.lastId && (
-                        <LinkButton href={feedbackUrl(r.lastId)} variant="secondary" className="!px-4 !py-2 !text-base">
-                          See feedback
-                        </LinkButton>
-                      )}
-                    </>
-                  ) : r.activeId ? (
-                    <LinkButton href={visitUrl(r.activeId)} size="lg">
-                      <Icon name="video" />
-                      Continue visit
-                    </LinkButton>
-                  ) : (
-                    <StartVisit size="lg" body={{ caseId: r.caseId, assignmentId: r.assignmentId }} />
-                  )}
-                </li>
-              ))}
-            </ul>
+            {todo.length > 0 && <ul className="mt-7 space-y-3">{todo.map(card)}</ul>}
+
+            {finished.length > 0 && (
+              <>
+                <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+                  <Icon name="check" className="h-7 w-7 text-brand-600" />
+                  Completed
+                </h2>
+                <ul className="space-y-3">{finished.map(card)}</ul>
+              </>
+            )}
           </>
         )}
 
