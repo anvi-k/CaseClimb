@@ -7,7 +7,9 @@ import { LinkButton } from "@/components/ui";
 import { requireUser } from "@/lib/auth";
 import { all, get, parse } from "@/lib/db";
 import { feedbackUrl, studentAssignments, visitUrl } from "@/lib/courses";
-import type { Feedback } from "@/lib/types";
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
+import { mainIssueOf } from "@/lib/studio/store";
+import type { CaseProfile, Feedback } from "@/lib/types";
 
 interface Row {
   caseId: string;
@@ -20,6 +22,8 @@ interface Row {
   done: boolean;
   /** "21 of 28", or null when there is no score to show. */
   score: string | null;
+  /** 1 to 5, the temperament the instructor chose (or the patient's own). */
+  temperament: number;
 }
 
 function Portrait({ src, name, size }: { src: string | null; name: string; size: string }) {
@@ -56,13 +60,16 @@ export default async function StudentHome() {
         const f = parse<Partial<Feedback>>(get<{ feedback: string | null }>("SELECT feedback FROM encounters WHERE id = ?", c.lastId)?.feedback, {});
         if (typeof f.total === "number" && f.max) score = `${f.total} of ${f.max}`;
       }
-      rows.push({ caseId: c.card.id, assignmentId: a.id, name: p?.name || "Patient", age: p?.age ?? null, portrait: p?.portrait || null, activeId: c.activeId, lastId: c.lastId, done: c.scoredCount > 0, score });
+      rows.push({ caseId: c.card.id, assignmentId: a.id, name: p?.name || "Patient", age: p?.age ?? null, portrait: p?.portrait || null, activeId: c.activeId, lastId: c.lastId, done: c.scoredCount > 0, score, temperament: a.settings.level || c.card.difficulty || 3 });
     }
   }
   const doneCount = rows.filter((r) => r.done).length;
   const who = (r: Row) => (r.age === null ? r.name : `${r.name}, ${r.age}`);
 
-  const todo = rows.filter((r) => !r.done);
+  // The patient shown large at the top: a visit already begun, else the first one not yet done.
+  const next = rows.find((r) => !r.done && r.activeId) || rows.find((r) => !r.done) || null;
+  const nextIssue = next ? mainIssueOf(parse<Partial<CaseProfile>>(get<{ profile: string }>("SELECT profile FROM cases WHERE id = ?", next.caseId)?.profile, {})) : "";
+  const todo = rows.filter((r) => !r.done && r !== next);
   const finished = rows.filter((r) => r.done);
   const card = (r: Row) => (
     <li key={r.caseId} className="flex flex-wrap items-center gap-6 rounded-2xl border border-slate-200 bg-white px-7 py-5">
@@ -100,8 +107,8 @@ export default async function StudentHome() {
   return (
     <AppShell user={user}>
       <div className="mx-auto max-w-5xl">
-        <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Your Patients</h1>
-        {courses.length > 0 && <p className="mt-1 text-slate-600">Assigned by {courses[0].faculty} · {courses.map((c) => c.name).join(", ")}</p>}
+        <h1 className="text-[40px] font-semibold leading-tight text-slate-900">Welcome, {user.name.split(" ")[0]}</h1>
+        {courses.length > 0 && <p className="mt-1 text-slate-600">Your patients from {courses[0].faculty} · {courses.map((c) => c.name).join(", ")}</p>}
 
         {courses.length === 0 ? (
           <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8">
@@ -132,7 +139,61 @@ export default async function StudentHome() {
               </div>
             )}
 
-            {todo.length > 0 && <ul className="mt-7 space-y-3">{todo.map(card)}</ul>}
+            {next && (
+              <div className="mt-7 grid overflow-hidden rounded-3xl border border-slate-200 bg-white md:grid-cols-[2fr_3fr]">
+                {next.portrait ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={next.portrait} alt="" className="h-72 w-full object-cover object-[50%_20%] md:h-full md:min-h-[26rem]" />
+                ) : (
+                  <div className="flex h-72 items-center justify-center bg-brand-100 text-6xl font-semibold text-brand-700 md:h-full md:min-h-[26rem]">{next.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}</div>
+                )}
+                <div className="flex flex-col justify-center p-9">
+                  <p className="text-sm font-bold uppercase tracking-[0.14em] text-brand-700">{next.activeId ? "Visit in progress" : "Your next step"}</p>
+                  <h2 className="mt-1 text-[34px] leading-tight text-slate-900">{next.activeId ? "Pick up where you left off" : "Ready for your next patient?"}</h2>
+                  <p className="mt-4 text-[26px] text-slate-900">{who(next)}</p>
+                  <p className="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-slate-600">
+                    {nextIssue && (
+                      <span className="inline-flex items-center gap-1.5">
+                        <Icon name="pulse" />
+                        {nextIssue}
+                      </span>
+                    )}
+                    <span className="inline-flex items-center gap-1.5">
+                      <Icon name="clock" />
+                      10-minute visit
+                    </span>
+                  </p>
+                  <div className="mt-5 flex items-center gap-3" aria-label={`Temperament: ${TEMPERAMENTS[next.temperament]}`}>
+                    <span className="flex gap-1.5" aria-hidden="true">
+                      {[1, 2, 3, 4, 5].map((n) => (
+                        <span key={n} className={`h-2.5 w-7 rounded-full ${n <= next.temperament ? "bg-brand-600" : "bg-slate-200"}`} />
+                      ))}
+                    </span>
+                    <span className="text-slate-700">{TEMPERAMENTS[next.temperament]}</span>
+                  </div>
+                  <div className="mt-7">
+                    {next.activeId ? (
+                      <LinkButton href={visitUrl(next.activeId)} size="lg" className="!px-8 !py-4 !text-[20px]">
+                        Continue visit
+                        <Icon name="arrowRight" />
+                      </LinkButton>
+                    ) : (
+                      <StartVisit size="lg" label="Meet your patient" body={{ caseId: next.caseId, assignmentId: next.assignmentId }} />
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {todo.length > 0 && (
+              <>
+                <h2 className="mb-3 mt-10 flex items-center gap-2.5 text-[26px] font-semibold text-slate-900">
+                  <Icon name="users" className="h-7 w-7 text-brand-600" />
+                  More patients
+                </h2>
+                <ul className="space-y-3">{todo.map(card)}</ul>
+              </>
+            )}
 
             {finished.length > 0 && (
               <>
