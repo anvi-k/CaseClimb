@@ -10,7 +10,7 @@
   --color-brand-600: #5fdcae;
   --color-brand-700: #7fe6c0;
   --color-brand-900: #d6fff0;
-  --color-ink: #0f1f33;
+  --color-ink: #f4f8fc;
 }
 
 /*
@@ -25,26 +25,26 @@ body {
   height: 100%;
 }
 body {
-  background: #f1f4f8;
-  color: #0f1f33;
+  background:
+    radial-gradient(1100px 620px at 78% 8%, #2f6d9e 0%, rgba(47, 109, 158, 0) 62%),
+    radial-gradient(900px 600px at 8% 92%, #1b5a86 0%, rgba(27, 90, 134, 0) 60%),
+    linear-gradient(160deg, #0a2540 0%, #123a63 55%, #0d2f52 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
   font-family: var(--font-sans);
   line-height: 1.7;
 }
 
 /*
- * Light page, blue cards.
+ * Deep blue and mint theme.
  *
- * The page is light grey with dark text. Anything written as a white surface (cards, panels,
- * inputs, pop-ups) is a deep blue card, and inside one the palette is turned over: each shade
- * keeps its job (900 is still "strongest text", 200 is still "hairline border", 50 is still
- * "faint tint") but points at the colour that does that job on dark blue. So the same utility
- * classes give dark text on the page and light text on a card.
+ * The components are written with light-theme utility classes (white cards, dark slate text).
+ * Rather than rewrite every class, the palette itself is turned over here: each shade keeps its
+ * job (900 is still "strongest text", 200 is still "hairline border", 50 is still "faint tint")
+ * but points at the colour that does that job on a dark blue page. The few classes that mean a
+ * literal colour, not a role, are corrected underneath.
  */
-.bg-white,
-.bg-brand-900,
-.editor-bar,
-.user-menu {
-  color: #f4f8fc;
+@theme {
   --color-slate-50: #1a4673;
   --color-slate-100: #1f4f80;
   --color-slate-200: #2f5f8e;
@@ -94,40 +94,13 @@ body {
 
   --color-orange-700: #ffc59a;
 }
-.bg-white {
-  background-color: #133b63;
-  border-color: #133b63;
-}
-/* A white surface inside a card (an input, a nested panel) is a lighter wash of the card. */
-.bg-white .bg-white {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.18);
-}
-/* Mint reads on blue but not on the light page, so brand text is deep green there. */
-.text-brand-700,
-.text-brand-600 {
-  color: #0b6b52;
-}
-.text-brand-900 {
-  color: #064e3b;
-}
-.bg-brand-50,
-.bg-brand-100 {
-  background-color: #d8f1e4;
-}
-:is(.bg-white, .bg-brand-900, .editor-bar, .user-menu) :is(.text-brand-700, .text-brand-600) {
-  color: #7fe6c0;
-}
-:is(.bg-white, .bg-brand-900, .editor-bar, .user-menu) .text-brand-900 {
-  color: #d6fff0;
-}
-:is(.bg-white, .bg-brand-900, .editor-bar, .user-menu) .bg-brand-50 {
-  background-color: #12424f;
-}
-:is(.bg-white, .bg-brand-900, .editor-bar, .user-menu) .bg-brand-100 {
-  background-color: #164e55;
-}
 
+/* "White" as a surface is the translucent blue panel. As text (on buttons, on photos) it stays white. */
+.bg-white {
+  background-color: rgba(20, 62, 104, 0.86);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
 /* Mint buttons and badges carry dark text. */
 .bg-brand-600,
 .bg-brand-500,
@@ -181,7 +154,7 @@ h1 {
   color: #8fb0cf;
 }
 /* Disabled buttons were light grey with white text. */
-.bg-white .disabled\:bg-slate-300:disabled {
+.disabled\:bg-slate-300:disabled {
   background-color: #2f5f8e;
   color: #a9c4de;
 }

@@ -16,7 +16,7 @@ export default function NavLinks({ nav }: { nav: { href: string; label: string; 
           key={n.href}
           href={n.href}
           aria-current={n.href === current ? "page" : undefined}
-          className={`inline-flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 transition-colors ${n.href === current ? "nav-current bg-brand-600" : "text-slate-900 hover:bg-slate-200"}`}
+          className={`inline-flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 transition-colors ${n.href === current ? "nav-current bg-brand-600" : "text-slate-900 hover:bg-white/10"}`}
         >
           {n.icon && <Icon name={n.icon} />}
           {n.label}

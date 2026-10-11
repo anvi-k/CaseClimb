@@ -9,7 +9,7 @@ import { parse } from "@/lib/db";
 /**
  * Starts a private practice visit. The student chooses only the patient's temperament (1 easygoing
  * to 5 very difficult); the patient is picked here from the published library, preferring one the
- * student has not seen. No patient is generated. Body: { temperament, caseId? } -> { id: encounterId }
+ * student has not seen. No patient is generated. Body: { temperament } -> { id: encounterId }
  */
 export async function POST(req: Request) {
   const user = await apiUser();
@@ -23,12 +23,9 @@ export async function POST(req: Request) {
     user.id,
   );
   if (!cases.length) return bad("There are no published patients to practice with yet.", 404);
-  // A patient chosen on the Practice page, else one the student has seen least.
-  const chosen = b.caseId ? cases.find((c) => c.id === String(b.caseId)) : undefined;
-  if (b.caseId && !chosen) return bad("Patient not found", 404);
   const fewest = Math.min(...cases.map((c) => c.seen));
   const pool = cases.filter((c) => c.seen === fewest);
-  const pick = chosen || pool[Math.floor(Math.random() * pool.length)];
+  const pick = pool[Math.floor(Math.random() * pool.length)];
   const professions = parse<string[]>(pick.professions, []);
   const professionId = user.profession_id && professions.includes(user.profession_id) ? user.profession_id : professions[0] || user.profession_id || "medicine";
   return Response.json({ id: createEncounter({ userId: user.id, caseId: pick.id, professionId, mode: "practice", level: temperament, perturb: MOOD[temperament] }) });

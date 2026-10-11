@@ -28,7 +28,7 @@ export default function UserMenu({ links }: { links: { href: string; label: stri
         aria-label="Menu"
         aria-haspopup="menu"
         aria-expanded={open}
-        className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 text-slate-900 transition-colors hover:bg-slate-200"
+        className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-400 bg-white/10 text-white transition-colors hover:bg-white/20"
       >
         <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
           <path d="M5 7h14M5 12h14M5 17h14" />
