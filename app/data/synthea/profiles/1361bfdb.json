@@ -1,0 +1,309 @@
+{
+ "patient_overview": {
+  "name": "Dia Kovacek",
+  "age": 36,
+  "sex": "Female",
+  "description": "Dia Kovacek is a 36-year-old White woman from Irvington, New Jersey, who just finished a difficult pregnancy and a tubal ligation and is now navigating chronic neck pain, long-standing sepsis history, and a BMI that has crossed into the obesity range. She comes across as bright and well-read about nutrition — she can quote macros and inflammation theories from Instagram reels — but she is scattered in conversation, often answering a question with another question and losing track of what she was explaining. Underneath the information overload, she seems stretched thin, though she keeps steering the conversation away from herself. A dietetics student will need patience and gentle redirection to keep the visit on track.",
+  "keywords": [
+   "chronic neck pain",
+   "obesity",
+   "contemplation stage",
+   "health literacy",
+   "caregiver burden",
+   "self-directed diet",
+   "social media nutrition",
+   "food insecurity",
+   "postpartum",
+   "sepsis history"
+  ]
+ },
+ "demographics": {
+  "occupation": "Not currently in the labor force; previously worked part-time as a receptionist at a dental office before her youngest was born",
+  "residence": "Irvington, New Jersey; household of 5",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicaid",
+  "cultural_context": "Dia grew up in a working-class household in northern New Jersey where meals were whatever was quick and filling between shifts; nobody sat down to teach her to cook, so as an adult she has pieced together her food knowledge from the internet rather than family tradition. She takes pride in being the one who 'actually researches stuff' for her household, even though she sometimes feels embarrassed that she never went to college and worries people won't take her seriously when she brings up something she read."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Chronic neck pain",
+  "secondary_diagnoses": [
+   "Sepsis",
+   "Chronic pain",
+   "Body mass index 30+ - obesity",
+   "History of tubal ligation"
+  ],
+  "medical_history": [
+   "Sepsis since 2012",
+   "Chronic pain since 2014",
+   "Chronic neck pain since 2014",
+   "Body mass index 30+ - obesity since 2026",
+   "History of tubal ligation since 2026",
+   "Primary dental caries (2022-04 to 2022-04, resolved)",
+   "Gingivitis (2023-04 to 2023-05, resolved)",
+   "Gingival disease (2023-05 to 2023-05, resolved)",
+   "Normal pregnancy (2025-08 to 2026-03, resolved)",
+   "Anemia (2025-08 to 2026-03, resolved)",
+   "Postoperative care (2026-05-21)",
+   "Ligation of bilateral fallopian tubes (2026-05-21)",
+   "Physical examination procedure (2026-04-28)",
+   "Medical induction of labor (2026-03-17)",
+   "Human parturition function (observable entity) (2026-03-17)",
+   "Evaluation of uterine fundal height (2026-03-10)"
+  ],
+  "current_symptoms": [
+   "Constant dull ache across the neck and shoulders that flares by late afternoon",
+   "Generalized fatigue that she attributes to 'just being a mom of four now'",
+   "Occasional dizziness when she stands up too fast",
+   "Trouble falling asleep because her mind races through the next day's errands",
+   "Low-grade headaches a few times a week"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears tired, with dark circles under her eyes and slightly disheveled hair pulled back in a hurry",
+   "Mild forward-head posture and reduced neck rotation, rubbing the back of her neck repeatedly during conversation",
+   "Carries extra weight around the midsection, abdomen soft and non-tender on observation",
+   "Speech is quick and jumps between topics, occasionally stopping mid-sentence to ask the interviewer a question instead of finishing her own thought"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 270.5 mg/dL (reference < 200; 2024-04-16)",
+   "LDL cholesterol: 190 mg/dL (reference < 100; 2024-04-16)",
+   "HDL cholesterol: 54.1 mg/dL (reference >= 40; 2024-04-16)",
+   "Triglycerides: 132.1 mg/dL (reference < 150; 2024-04-16)",
+   "Haemoglobin: 10 g/dL (reference 12.0-17.5; 2025-08-05)",
+   "White cell count: 5.6 10*3/uL (reference 4.0-11.0; 2025-08-05)",
+   "Platelets: 294.2 10*3/uL (reference 150-450; 2025-08-05)"
+  ],
+  "vital_signs": [
+   "BP: 138/70 mmHg",
+   "HR: 87 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2026-04-28"
+  ],
+  "anthropometrics": [
+   "Height: 162.2 cm",
+   "Weight: 79.8 kg",
+   "BMI: 30.3 kg/m2",
+   "Weight change: +1.4 kg since 2025-04-22"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+    "dose": "325 MG",
+    "frequency": "Takes as needed, roughly 2-3 times a week",
+    "purpose": "Not recorded",
+    "adherence": "Inconsistent; forgets it in her bag half the time or takes it late when the neck pain is already bad",
+    "patient_concerns": "Worries she's 'relying on pills too much' but isn't sure what else to do for the pain, and read online that Tylenol can be hard on the liver if you take too much"
+   }
+  ],
+  "supplements_and_otc": [
+   "Magnesium glycinate (started after a TikTok video about 'moms and stress')",
+   "Elderberry gummies for immune support, taken on and off",
+   "A collagen powder a friend recommended for joint pain that she sometimes stirs into coffee"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Currently attempting a modified 'anti-inflammatory' eating plan she found through a wellness influencer and a friend from her mom's group, cutting out gluten and most dairy but not consistently",
+  "food_preferences": [
+   "Smoothies with frozen berries and spinach when she has time to blend them",
+   "Rotisserie chicken from the ShopRite on Springfield Ave because it's fast and feels 'less processed'",
+   "Rice cakes with almond butter as a go-to snack",
+   "Avoids bread and pasta most days but will eat them when she's too exhausted to cook anything else"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Skipping meals entirely on days when childcare and errands take over",
+   "Reliance on gas-station snacks when she's out running kids to appointments and has no time to eat",
+   "Possible under-eating overall despite the 'clean eating' intent, given her fatigue and weight pattern",
+   "Use of online supplement recommendations without checking for interactions"
+  ],
+  "meal_pattern": "Irregular; breakfast is often just coffee, lunch gets skipped or eaten standing at the counter, dinner is whatever can be made in under 20 minutes for the kids and whatever's left for her",
+  "hydration": "Mostly water but admits she sometimes goes most of the day without drinking much because she 'forgets' between errands",
+  "physical_activity": "No structured exercise; on her feet a lot chasing kids and doing housework but describes herself as 'too wiped out' for anything intentional",
+  "substance_use": "Light alcohol use, roughly a drink or two on occasion (AUDIT-C score 2); never smoked",
+  "sleep": "Difficulty falling asleep most nights, averaging maybe 5-6 hours, mind racing with to-do lists"
+ },
+ "psychosocial_profile": {
+  "personality": "Scattered and overwhelmed, talks fast and jumps topics, often answers a question by asking one back as if buying time to think",
+  "communication_style": "Deflects direct questions with questions of her own ('Well, what do you think I should do?'), gives a lot of information but circles back and repeats herself, needs gentle structure to stay on topic",
+  "goals": [
+   "Wants her neck pain to stop interfering with daily tasks",
+   "Hopes to lose some weight but mostly wants to 'feel like herself again'",
+   "Wants to find an eating plan that actually sticks instead of the next trendy one"
+  ],
+  "concerns": [
+   "Worried the pain medication isn't 'real medicine' for the pain and she's just masking it",
+   "Anxious about her weight gain since the pregnancy",
+   "Nervous about her blood test numbers she glimpsed in her patient portal but doesn't fully understand"
+  ],
+  "beliefs": [
+   "Believes cutting gluten and dairy will fix inflammation and pain",
+   "Believes she should be able to figure this out herself since she 'reads so much' about health",
+   "Believes doctors are too rushed to really listen, so she researches instead"
+  ],
+  "motivations": [
+   "Wants to have energy to keep up with her kids",
+   "Doesn't want to end up back in the hospital like she did with the sepsis years ago",
+   "Wants to feel in control of something in her life right now"
+  ],
+  "fears": [
+   "Fear of her health declining further while she's busy caring for everyone else",
+   "Fear of being judged for her weight or her diet choices",
+   "Fear that she's quietly failing at everything, even though she won't say it that plainly"
+  ],
+  "barriers": [
+   "No real time carved out for her own meals or appointments",
+   "Transportation problems that have made her miss things before",
+   "Limited budget stretched across a household of five",
+   "Mental load of caregiving leaves little bandwidth for consistent self-care",
+   "Chronic neck pain limits how much cooking or meal prep she can tolerate standing up"
+  ],
+  "strengths": [
+   "Genuinely motivated to learn and willing to try new things",
+   "Has a strong support person she leans on",
+   "Already tracks some of her symptoms and triggers informally",
+   "Resourceful at finding information and stretching a tight budget"
+  ],
+  "support_system": "Her next-door neighbor and close friend, Renata, is her main support — picks up groceries when transportation falls through, watches the kids in a pinch, and is the person Dia actually talks to about how she's really doing",
+  "readiness_to_change": "Contemplation: aware something needs to shift with her eating and pain management but feels torn between competing responsibilities and unsure where to start"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she has chronic neck pain that's been going on since 2014 and some days it's worse than others",
+   "Mentions she just had a baby in March and then had her tubes tied in May",
+   "Says she's been trying to eat 'anti-inflammatory' because she read it helps with pain and weight",
+   "Mentions she takes Tylenol for the neck pain when it gets bad"
+  ],
+  "discoverable_information": [
+   "Describes her actual daily meal pattern once asked directly, revealing skipped meals and irregular eating",
+   "Admits she doesn't always understand the lab numbers she sees in her patient portal and gets anxious about them",
+   "Reveals she has transportation problems that have made her miss appointments or grocery trips",
+   "Talks about her neighbor Renata helping out with the kids and errands when asked about her support system",
+   "Mentions the household income is tight and sometimes food runs short toward the end of the month"
+  ],
+  "reluctant_information": [
+   "Eventually admits she is the full-time caregiver for her elderly mother-in-law three days a week on top of her own four kids, and that's why she has no time to cook or go to appointments for herself",
+   "Admits that she sometimes doesn't eat at all until dinner because she's feeding everyone else first and 'just forgets' herself"
+  ],
+  "hidden_information": [
+   "Dia has gone an entire day without eating at least twice in the past month while juggling her mother-in-law's care and her kids, something she hasn't told anyone including Renata",
+   "She has started skipping her own follow-up calls about her cholesterol results because she 'doesn't have the mental space' to deal with one more thing right now"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a complete and honest 24-hour dietary recall despite a scattered communication style",
+    "expected_discoveries": [
+     "Meals are skipped or eaten standing up",
+     "Self-directed elimination diet is inconsistently followed",
+     "Possible caloric and nutrient inadequacy despite 'clean eating' intent"
+    ],
+    "possible_patient_reactions": [
+     "'Wait, are you asking about yesterday or like a normal day? Because yesterday was weird...'",
+     "'I mean I eat pretty clean, don't I seem like I eat clean?'",
+     "Loses train of thought and needs to be redirected back to the recall"
+    ]
+   },
+   {
+    "learning_objective": "Explore the patient's self-directed anti-inflammatory diet and assess evidence versus misinformation",
+    "expected_discoveries": [
+     "Diet was adopted from an influencer and a friend without professional guidance",
+     "Patient has some accurate health literacy mixed with myths about gluten and inflammation",
+     "Openness to modifying the approach if given credible, concrete alternatives"
+    ],
+    "possible_patient_reactions": [
+     "'I read that gluten causes inflammation everywhere, isn't that true?'",
+     "Becomes defensive if she feels her research is being dismissed outright",
+     "Relieved if the student validates what's useful in her plan while gently correcting myths"
+    ]
+   },
+   {
+    "learning_objective": "Uncover hidden caregiving responsibilities that limit time and energy for self-care",
+    "expected_discoveries": [
+     "Dia cares for her mother-in-law three days a week in addition to four children",
+     "This caregiving load is the real reason behind skipped meals and missed appointments",
+     "She has not disclosed this burden to her medical team before"
+    ],
+    "possible_patient_reactions": [
+     "Deflects at first with a joke or a question back",
+     "'Why do you need to know about that, isn't this supposed to be about my neck?'",
+     "Opens up more once she feels the student isn't going to judge or add to her load"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change and use motivational interviewing to move her from contemplation toward action",
+    "expected_discoveries": [
+     "Dia knows something needs to change but feels torn between caregiving duties and her own needs",
+     "She responds well when her own stated goals are reflected back to her",
+     "Small, concrete steps feel more achievable to her than a full plan overhaul"
+    ],
+    "possible_patient_reactions": [
+     "'I know I should do something but where would I even start?'",
+     "Shows relief when offered one small, specific change rather than a whole new diet",
+     "May spiral into listing everything wrong before settling on one manageable goal"
+    ]
+   },
+   {
+    "learning_objective": "Identify social and economic barriers, including transportation and food access, affecting nutrition care",
+    "expected_discoveries": [
+     "Transportation problems have caused missed grocery trips and appointments",
+     "Household income is tight for a family of five and she reports having gone without food at times",
+     "Her neighbor Renata is a key practical support for groceries and childcare"
+    ],
+    "possible_patient_reactions": [
+     "Mentions Renata helping out, almost in passing, as if it's not a big deal",
+     "Hesitant to say she's gone without food, downplays it as 'just a busy week'",
+     "Grateful if offered concrete resource information like food assistance programs"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed her previous work history as a receptionist to fit 'otherwise unemployed, not seeking work' status with a high school education",
+   "Assumed the unnamed caregiving duty from the assigned trait is for her mother-in-law, since household size is 5 and children are implied by recent pregnancy",
+   "Assumed GAD-7 score of 7 (mild anxiety) manifests as racing thoughts and difficulty sleeping rather than panic symptoms",
+   "Assumed 'went without: Food' on the social survey corresponds to intermittent food insecurity rather than chronic severe insecurity"
+  ],
+  "optional_details": [
+   "Dia keeps a running Notes app list on her phone titled 'things to ask doctor' that she rarely gets through",
+   "She has a favorite mug from a work conference years ago that she still drinks her one cup of coffee from each morning",
+   "Renata leaves extra produce from her own garden on Dia's porch some weeks in summer"
+  ]
+ },
+ "source": {
+  "synthea_record": "1361bfdb",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "overwhelmed and scattered, loses the thread",
+   "communication": "answers questions with questions",
+   "readiness": "contemplation: knows something should change but is torn",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "follows a self-directed diet picked up from social media or a friend",
+   "held_back": "caring duties for someone else that leave no time for their own health",
+   "support": "a close friend or neighbour who is the main support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

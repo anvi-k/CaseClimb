@@ -1,0 +1,966 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Postpartum Mother with Chronic Neck Pain, Obesity, and Self-Directed Anti-Inflammatory Diet: Uncovering Hidden Caregiver Burden and Food Insecurity",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment with a scattered, self-taught patient whose stated self-image ('I eat pretty clean') conflicts with the irregular, often inadequate intake uncovered through a careful 24-hour recall. The central teaching point is using motivational interviewing and gentle redirection to surface a hidden caregiver burden (unpaid caregiving for her mother-in-law) and intermittent food insecurity that she has disclosed to no one, while resisting red herrings (an outdated lipid panel, a resolved pregnancy anemia, and a remote sepsis history) that could distract from the real nutrition diagnosis.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Irvington, New Jersey (kitchen table, sounds of children occasionally audible in background)",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Dia Kovacek",
+   "age": 36,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Not currently in the labor force; previously worked part-time as a receptionist at a dental office before her youngest was born",
+   "language": "English",
+   "appearance": "Appears tired, with dark circles under her eyes and hair pulled back hastily. Sits at a cluttered kitchen table, occasionally rubs the back of her neck, mild forward-head posture visible on camera. Speech is quick, jumps between topics, sometimes trails off mid-sentence to ask the interviewer a question instead of finishing her own thought.",
+   "portrait": "/portraits/synthea-dia-kovacek-1361bfdb.jpg"
+  },
+  "persona": {
+   "personality": "Bright, self-taught, and genuinely curious about nutrition, but scattered and overwhelmed; tends to answer questions with questions as if buying time to think, and circles back to repeat herself mid-thought. Fights to keep composure and uses humor or redirection to deflect attention away from her own needs.",
+   "communicationStyle": "Talks fast and jumps between topics without finishing a thought; frequently flips a question back to the interviewer ('Well, what do you think I should do?'); gives a lot of detail but loses the thread and needs gentle, patient redirection to stay on one topic at a time. Opens up more once she feels she isn't being judged or rushed.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Stretched thin and quietly anxious underneath an energetic, information-heavy surface; anxious about her lab numbers and her weight gain, fearful of being judged, and visibly relieved when someone validates her efforts rather than dismissing them.",
+   "background": "Dia grew up in a working-class family in northern New Jersey where meals were whatever was quick between shifts, so nobody ever sat her down to teach her to cook — she pieced together what she knows from the internet instead. She takes pride in being the one who 'actually researches stuff' for her household, even though she never went to college and sometimes worries people won't take her seriously when she brings up something she read. She was a part-time dental receptionist before her youngest was born, is married, and now has four kids in a household of five in Irvington. She keeps a running 'things to ask doctor' list on her Notes app that she rarely gets through, drinks her one cup of coffee each morning from a favorite mug from an old work conference, and leans heavily on her next-door neighbor and best friend Renata for groceries, childcare, and emotional support.",
+   "speechExamples": [
+    "Wait, are you asking about yesterday or like a normal day? Because yesterday was weird...",
+    "I mean, I eat pretty clean, don't I seem like I eat clean?",
+    "Sorry, sorry, I keep doing that — jumping around. Where was I?",
+    "Why do you need to know about that, isn't this supposed to be about my neck?",
+    "I read that gluten causes inflammation everywhere, isn't that true?"
+   ],
+   "concerns": [
+    "Worried the Tylenol isn't 'real medicine' for her neck pain and she's just masking it",
+    "Anxious about the weight she's gained since the pregnancy",
+    "Nervous about blood test numbers she glimpsed in her patient portal but doesn't fully understand",
+    "Wants an eating plan that actually sticks instead of the next trendy thing she tries"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are joining a telehealth nutrition visit as the dietetics student. The patient is Dia Kovacek, a 36-year-old woman recently referred for a follow-up nutrition visit after a difficult pregnancy and tubal ligation, dealing with chronic neck pain and recent weight gain. She started an anti-inflammatory eating plan on her own and wants help making sense of it. Your job is to complete a nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit for chronic neck pain and weight gain since pregnancy; patient wants guidance on a self-started anti-inflammatory eating plan",
+   "openingLine": "Hi, sorry, give me one second — okay, hi! So I'm Dia, I've had this neck pain forever, like since 2014, and some days it's way worse than others. I just had my fourth baby back in March and then got my tubes tied in May, so it's been... a lot. I've been trying to eat anti-inflammatory because I read it helps with pain and the weight, and I take Tylenol when my neck really acts up. Where do you want to start?",
+   "tasks": [
+    "Take a focused diet history, including a structured 24-hour recall, despite the patient's scattered conversational style",
+    "Review available anthropometric measurements and relevant labs to inform your assessment",
+    "Explore the patient's self-directed anti-inflammatory diet, affirming accurate elements while gently addressing misinformation",
+    "Identify psychosocial and economic barriers (such as caregiving demands, transportation, or budget) that affect her eating pattern",
+    "Collaboratively set one small, achievable nutrition goal matched to her readiness to change"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for chronic neck pain and recent weight gain since pregnancy, referred to discuss a self-directed anti-inflammatory eating plan"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. A. Nwosu (Family Medicine, PCP); Dietetics referral active"
+   },
+   {
+    "label": "Problem list",
+    "value": "Sepsis (since 2012); Chronic pain (since 2014); Chronic neck pain (since 2014); Body mass index 30+ - obesity (since 2026); History of tubal ligation (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "Acetaminophen 325 MG Oral Tablet [Tylenol]"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "neck pain and diet follow-up",
+    "chart": "Presents for follow-up nutrition visit for chronic neck pain and weight gain since pregnancy; referred to discuss self-directed anti-inflammatory eating plan.",
+    "says": "I'm here because my neck's been killing me for years and I just had a baby and now everyone wants me to talk about my diet.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "neck pain history",
+    "chart": "Reports chronic dull aching neck and shoulder pain since 2014, worse by late afternoon.",
+    "says": "My neck's been bugging me since like 2014, it's just a constant dull ache that gets worse by the end of the day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "recent delivery and surgery",
+    "chart": "Delivered fourth child via induced labor 2026-03-17; underwent bilateral tubal ligation 2026-05-21.",
+    "says": "I had my fourth baby in March and then got my tubes tied in May, so my body's been through a lot this year.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "fatigue",
+    "chart": "Reports generalized fatigue, attributes to caregiving demands.",
+    "says": "I'm exhausted all the time but I figure that's just what happens when you've got four kids now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "dizziness",
+    "chart": "Reports occasional dizziness on standing.",
+    "says": "Sometimes when I stand up too fast I get this little head rush, it's probably nothing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "headaches",
+    "chart": "Reports low-grade headaches a few times a week.",
+    "says": "I get these dull headaches a few times a week, I just push through them.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "sleep pattern",
+    "chart": "Reports difficulty falling asleep, sleeping 5-6 hours nightly, mind racing with next day's tasks.",
+    "says": "I can't shut my brain off at night, I'm just making lists in my head, so I'm lucky if I get 5 or 6 hours.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "neck mobility",
+    "chart": "Mild forward-head posture and reduced neck rotation observed; rubs neck frequently during conversation.",
+    "says": "Yeah I know I'm always rubbing my neck, I don't even notice I'm doing it half the time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "abdominal symptoms",
+    "chart": "Denies abdominal pain; abdomen soft and non-tender on observation, extra weight carried around midsection.",
+    "says": "My stomach doesn't hurt or anything, it's just softer and bigger than it used to be, especially after the baby.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "fever or infection symptoms",
+    "chart": "Denies fever, chills, or current signs of infection.",
+    "says": "No fevers or chills or anything like that, nothing like that scary sepsis thing years ago.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "chest or breathing symptoms",
+    "chart": "Denies chest pain, shortness of breath, or palpitations.",
+    "says": "No chest pain or trouble breathing, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies significant changes in bowel habits since starting elimination diet.",
+    "says": "My stomach's about the same as always, cutting out gluten didn't really change anything that way.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "mood and anxiety symptoms",
+    "chart": "Reports racing thoughts and difficulty winding down; no reported panic attacks.",
+    "says": "I just feel wound up a lot, my brain won't slow down, but I'm not like having panic attacks or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "sepsis history",
+    "chart": "History of sepsis in 2012, resolved, no current signs of infection.",
+    "says": "Back in 2012 I had sepsis, it was really scary, I don't ever want to end up back in the hospital like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "chronic pain diagnosis",
+    "chart": "Diagnosed with chronic pain and chronic neck pain since 2014.",
+    "says": "They basically told me it's chronic pain, like it's just something I live with now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "weight status",
+    "chart": "BMI 30.3 kg/m2 as of 2026-04-28, meeting criteria for obesity; weight up 1.4 kg since 2025-04-22.",
+    "says": "I know I've put on weight, especially since the baby, I just don't know how much exactly.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "pregnancy anemia history",
+    "chart": "Anemia diagnosed during pregnancy, 2025-08 to 2026-03, documented as resolved; hemoglobin 10 g/dL on 2025-08-05.",
+    "says": "They said I was anemic when I was pregnant, but I think that got better after the baby came.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "recent pregnancy",
+    "chart": "Normal pregnancy 2025-08 to 2026-03, resolved; induced labor 2026-03-17.",
+    "says": "My pregnancy was pretty normal overall, just a lot going on with four kids now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of dental caries (2022, resolved) and gingivitis/gingival disease (2023, resolved).",
+    "says": "I had some cavity and gum stuff a couple years back but that's all cleared up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "tubal ligation surgery",
+    "chart": "Underwent bilateral tubal ligation 2026-05-21, postoperative course uncomplicated.",
+    "says": "I got my tubes tied right after the baby, no more kids for us, that part healed up fine.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "pain medication use",
+    "chart": "Reports taking acetaminophen 325 mg as needed, roughly 2-3 times a week, for neck pain.",
+    "says": "I take Tylenol when the pain gets bad, maybe a couple times a week, nothing crazy.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Reports use of magnesium glycinate, elderberry gummies intermittently, and collagen powder, none discussed with a prescriber.",
+    "says": "I take magnesium at night, some elderberry gummies when I remember, and I put collagen powder in my coffee sometimes, my friend got me into that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "pain medication concerns",
+    "chart": "Expresses concern about acetaminophen overuse and potential liver effects.",
+    "says": "I worry I'm relying on the Tylenol too much, I read it can mess up your liver if you take too much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I don't have any allergies that I know of, to medicine or food.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "ros",
+    "topic": "blood test understanding",
+    "chart": "Reports seeing cholesterol-related lab results in patient portal but does not fully understand them and feels anxious.",
+    "says": "I saw some numbers pop up in my portal about my cholesterol and I got kind of freaked out but I don't really know what they mean.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Married; household of 5 (patient, spouse, four children)",
+    "says": "It's me, my husband, and our four kids — yeah, four, I know, I know.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "recent delivery",
+    "chart": "Delivered fourth child March 2026, induced labor",
+    "says": "I just had my fourth baby back in March, induced and everything, it was a whole ordeal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "caregiving responsibilities",
+    "chart": "Reports being 'busy' with family responsibilities; declines to elaborate initially",
+    "says": "Oh, it's just a lot, you know, with the kids and stuff. Busy season.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "extended family caregiving role",
+    "chart": "Discloses being primary caregiver for mother-in-law three days per week in addition to four children, not previously disclosed to care team",
+    "says": "Okay... honestly? I watch my mother-in-law three days a week too. Nobody really knows that, not even Renata. It's just... a lot, and I don't really say it out loud.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Resides in Irvington, NJ; household income limited",
+    "says": "We're in Irvington, little rental house, it's tight but it's home.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "transportation access",
+    "chart": "Reports transportation problems have caused missed appointments and grocery trips",
+    "says": "Our car's been iffy — sometimes my husband has it for work and I'm just stuck. I've missed stuff because of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "social",
+    "topic": "support person",
+    "chart": "Identifies neighbor Renata as primary support; helps with groceries and childcare",
+    "says": "Renata next door is basically my lifeline, she'll grab groceries or watch the kids when I'm stuck.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "social",
+    "topic": "household finances",
+    "chart": "Reports household income is tight; food sometimes runs short toward end of month",
+    "says": "Money gets tight toward the end of the month, like really tight sometimes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "social",
+    "topic": "work history",
+    "chart": "Previously worked part-time as a dental office receptionist; not currently employed since youngest born",
+    "says": "I used to work at a dental office up front, but I had to stop once the baby came.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "food access toward month end",
+    "chart": "Reports intermittent food insecurity; has gone without eating at least twice in past month, undisclosed to others",
+    "says": "There's been a couple days this month where I just... didn't eat. Like, at all, until maybe dinner. I never told anyone that, not even Renata.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "garden produce support",
+    "chart": "Reports neighbor occasionally shares garden produce",
+    "says": "Renata leaves extra veggies from her garden on my porch sometimes in the summer, which is really sweet.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "AUDIT-C score 2; reports 1-2 drinks on occasion; never smoked",
+    "says": "I'll have a drink maybe once a week if that, nothing crazy. Never smoked, ever.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "physical activity pattern",
+    "chart": "No structured exercise; on feet frequently with housework and childcare but reports feeling too fatigued for intentional activity",
+    "says": "I'm on my feet all day chasing kids but like, actual exercise? I'm too wiped for that.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "self-reliance on health research",
+    "chart": "States she researches health topics herself; feels doctors are too rushed to listen",
+    "says": "I just end up looking stuff up myself because, I mean, who has time for the doctor to really sit and explain it?",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "confidence discussing health literacy",
+    "chart": "Expresses worry that others won't take her seriously discussing health topics due to lack of college education",
+    "says": "I never went to college so sometimes I feel like people think I don't know what I'm talking about, even though I read a ton.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "personal wellness goal",
+    "chart": "States goal is to feel 'like herself again' and have more energy, more than a specific weight number",
+    "says": "I don't even care about a number on the scale really, I just want to feel like myself again, you know?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "follow-up on cholesterol results",
+    "chart": "Reports she has not called back about cholesterol follow-up because she 'doesn't have the mental space' to address it",
+    "says": "They left me a message about my cholesterol numbers a while back and... I just haven't called back. I know I should.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "fear tied to past hospitalization",
+    "chart": "Reports fear of recurrent serious illness referencing remote 2012 sepsis history",
+    "says": "I got really sick with sepsis years ago, like scary sick, and I just... I don't want to end up back in a hospital bed like that again.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review problem list / medical history summary",
+    "aliases": [],
+    "result": "Chronic neck pain since 2014; sepsis 2012 (resolved); anemia in pregnancy 2025-08 to 2026-03 (resolved); normal pregnancy delivered 2026-03-17; bilateral tubal ligation 2026-05-21; BMI 30+ obesity noted 2026.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Conduct structured 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: coffee only on waking (no breakfast); lunch skipped most days or eaten standing at the counter; afternoon rice cakes with almond butter if remembered; dinner is a quick 20-minute meal cooked for the kids (often pasta or rice-based) with whatever is left over for herself, eaten after the children are settled. Smoothie with frozen berries/spinach some mornings when there is time to blend it. Gluten/dairy avoidance inconsistent - ate bread and pasta on at least 2 of the last 3 days 'because I was too tired to cook anything else.' Fluid intake mostly water but long stretches (several hours) without drinking anything.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Assess usual meal pattern and frequency",
+    "aliases": [],
+    "result": "Describes breakfast as 'just coffee most days,' lunch 'skipped or eaten standing up,' dinner as 'whatever's fast for the kids, I eat what's left.' States this is her normal pattern, not just yesterday.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Explore self-directed anti-inflammatory diet details",
+    "aliases": [],
+    "result": "Describes avoiding gluten and most dairy based on information from a wellness influencer and a friend from her mom's group; believes gluten causes inflammation 'everywhere.' Admits she eats bread or pasta 'when I'm too exhausted to cook anything else,' several times a week.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Screen psychosocial stressors and caregiving load",
+    "aliases": [],
+    "result": "Initially states she is 'just busy with the kids.' With continued gentle questioning, discloses she also provides care for her mother-in-law three days a week in addition to her four children, and that this has not been shared with her medical team before.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Screen for food insecurity and meal-skipping pattern",
+    "aliases": [],
+    "result": "Initially downplays as 'just a busy week.' On further exploration, admits she sometimes doesn't eat at all until dinner because she is feeding everyone else first, and discloses going a full day without eating at least twice in the past month.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess household food access and budget",
+    "aliases": [],
+    "result": "Reports household income is tight for a family of five and that food sometimes runs short toward the end of the month. Relies on affordable staples like rotisserie chicken and rice cakes.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess transportation access to food and appointments",
+    "aliases": [],
+    "result": "Reports the household does not have reliable car access some weeks, which has caused missed grocery trips and appointments. Neighbor Renata sometimes drives her or picks up groceries.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 2 (reports 1-2 drinks on occasion). Never smoked.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Screen sleep pattern",
+    "aliases": [],
+    "result": "Reports averaging 5-6 hours of sleep nightly, difficulty falling asleep with 'mind racing through the next day's errands.'",
+    "importance": "minor",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Review social support system",
+    "aliases": [],
+    "result": "Identifies next-door neighbor Renata as main support; Renata helps with groceries, childcare, and occasional transportation.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage of change",
+    "aliases": [],
+    "result": "States she knows 'something needs to change' with her eating and pain management but feels torn between caregiving duties and her own needs; unsure where to start. Consistent with contemplation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "assessment",
+    "name": "Review self-reported supplement and OTC use",
+    "aliases": [],
+    "result": "Reports taking magnesium glycinate (started after a social media video), elderberry gummies on and off, and collagen powder stirred into coffee; none discussed previously with a clinician or dietitian.",
+    "importance": "minor",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 138/70 mmHg, heart rate 87/min, respiratory rate 14/min, weight 79.8 kg, height 162.2 cm, BMI 30.3 kg/m2, weight change +1.4 kg since 2025-04-22 (recorded 2026-04-28).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 270.5 mg/dL; LDL cholesterol 190 mg/dL; HDL cholesterol 54.1 mg/dL; Triglycerides 132.1 mg/dL; Haemoglobin 10 g/dL; White cell count 5.6 10*3/uL; Platelets 294.2 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-04-28); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2022-04-05); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-05-25).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Postpartum / Postoperative Follow-up Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-04-28",
+    "author": "Dr. A. Nwosu, Family Medicine",
+    "body": "36-year-old G?P4 seen for postpartum and chronic neck pain follow-up. Delivered via induced labor 2026-03-17; tubal ligation performed 2026-05-21, recovering as expected. Reports constant dull neck ache, worse by late afternoon, managed with intermittent acetaminophen. Mild forward-head posture noted on exam, reduced neck rotation. Vitals stable: BP 138/70, HR 87, RR 14. Weight 79.8 kg, BMI 30.3 (up from prior visit). Referred to dietetics for nutrition assessment given weight trend and self-reported anti-inflammatory diet attempt. Anemia of pregnancy noted resolved on last CBC; will recheck at next visit if symptomatic. Remote history of sepsis (2012), currently inactive, no acute concerns today."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Social Determinants of Health Screening",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "date": "2026-03-20",
+    "author": "Clinic Social Work Intake",
+    "body": "Routine social needs screening completed at postpartum visit. Transportation: patient indicated 'sometimes' a problem getting to appointments or obtaining food/medicine due to lack of reliable transportation. Food: patient indicated household 'sometimes' did not have enough food in the past 12 months. Housing and utilities: no concerns reported. Patient declined further resource referral at that time, stating she would 'look into it herself.'"
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nSepsis (since 2012)\nChronic pain (since 2014)\nChronic neck pain (since 2014)\nBody mass index 30+ - obesity (since 2026)\nHistory of tubal ligation (since 2026)\n\nRECENTLY RESOLVED\nPrimary dental caries (2022-04 to 2022-04)\nGingivitis (2023-04 to 2023-05)\nGingival disease (2023-05 to 2023-05)\nNormal pregnancy (2025-08 to 2026-03)\nAnemia (2025-08 to 2026-03)\n\nPROCEDURES\n2026-05-21: Postoperative care (History of tubal ligation)\n2026-05-21: Ligation of bilateral fallopian tubes (Sterilization requested)\n2026-04-28: Physical examination procedure\n2026-03-17: Medical induction of labor (Normal pregnancy)\n2026-03-17: Human parturition function (observable entity) (Normal pregnancy)\n2026-03-10: Evaluation of uterine fundal height (Normal pregnancy)\n\nRECENT ENCOUNTERS\n2026-05-21 inpatient: Admission to surgical department (Sterilization requested)\n2026-05-12 outpatient: Consultation for treatment (Sterilization requested)\n2026-04-28 ambulatory: Postnatal visit\n2026-04-28 wellness: General examination of patient\n2026-03-17 emergency: Obstetric emergency hospital admission (Normal pregnancy)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "270.5",
+        "mg/dL",
+        "< 200",
+        "2024-04-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "190",
+        "mg/dL",
+        "< 100",
+        "2024-04-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "54.1",
+        "mg/dL",
+        ">= 40",
+        "2024-04-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "132.1",
+        "mg/dL",
+        "< 150",
+        "2024-04-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "10",
+        "g/dL",
+        "12.0-17.5",
+        "2025-08-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "5.6",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-08-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "294.2",
+        "10*3/uL",
+        "150-450",
+        "2025-08-05"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete and honest 24-hour dietary recall and usual meal pattern despite the patient's scattered, tangential communication style, revealing skipped meals and irregular eating.",
+    "factIds": [
+     "h4",
+     "h16"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Review relevant anthropometric data and laboratory results (BMI/weight trend, lipid panel, CBC) to inform the nutrition assessment, recognizing which findings are and are not central to the current presentation.",
+    "factIds": [
+     "h16",
+     "h17"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore the patient's self-directed anti-inflammatory elimination diet, affirming accurate elements of her health literacy while gently correcting misinformation about gluten and inflammation.",
+    "factIds": [
+     "s14",
+     "s15"
+    ],
+    "actionIds": [
+     "a9",
+     "a18"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Use motivational interviewing and gentle, persistent screening to uncover hidden caregiving responsibilities and food insecurity that limit the patient's time and energy for self-care.",
+    "factIds": [
+     "s3",
+     "s4",
+     "s10",
+     "s17"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify social and economic barriers, including transportation, budget constraints, and support systems, that affect nutrition care access.",
+    "factIds": [
+     "s5",
+     "s6",
+     "s7",
+     "s8",
+     "s11"
+    ],
+    "actionIds": [
+     "a12",
+     "a13",
+     "a16"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Assess readiness to change and collaboratively set one small, achievable nutrition goal matched to the patient's contemplation stage rather than prescribing a full diet overhaul.",
+    "factIds": [
+     "s16",
+     "s18"
+    ],
+    "actionIds": [
+     "a17",
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Nutrition imbalance: inadequate oral food/beverage intake and irregular meal pattern related to caregiver burden and self-directed elimination diet, as evidenced by reported skipped breakfast/lunch, two full days without eating in the past month, and weight/BMI trending upward despite perceived 'clean eating'",
+   "differential": [
+    "Inadequate energy/protein intake related to competing caregiving demands and limited meal planning time",
+    "Food- and nutrition-related knowledge deficit regarding anti-inflammatory diet claims (gluten/dairy elimination)",
+    "Overweight/obesity (BMI 30.3) related to irregular eating pattern and lack of structured activity",
+    "Food insecurity related to limited household income and transportation barriers",
+    "Fatigue possibly multifactorial: sleep deprivation, caregiver burden, mild anemia history, and inadequate intake rather than a single cause"
+   ],
+   "keyFindings": [
+    "BMI 30.3 kg/m2 (obesity range), weight up 1.4 kg since 2025-04-22",
+    "Reported Tylenol use 'a couple times a week' consistent with chart but no further medication concerns",
+    "Self-described 'clean eating' contradicted by 24-hour recall showing skipped breakfast and lunch most days, dinner eaten standing or rushed",
+    "Self-directed gluten/dairy elimination diet adopted from social media/mom-group, followed inconsistently",
+    "Mild forward-head posture and reduced neck rotation observed on camera, consistent with chronic neck pain since 2014",
+    "Hemoglobin 10 g/dL (2025-08-05, low) charted as resolved pregnancy anemia but patient still reports fatigue and dizziness",
+    "Elevated total cholesterol 270.5 mg/dL and LDL 190 mg/dL from 2024-04-16, predating current pregnancy/postpartum period",
+    "AUDIT-C score 2 (light alcohol use); poor sleep ~5-6 hours nightly with racing thoughts",
+    "Reluctantly disclosed: caregiving for mother-in-law three days/week in addition to four children",
+    "Hidden until rapport-built disclosure: has gone a full day without eating at least twice in the past month; has not told anyone including her support person Renata; has also been skipping cholesterol follow-up calls"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment documenting diet history, 24-hour recall, anthropometrics, and relevant labs",
+    "Validate accurate elements of her anti-inflammatory diet knowledge while gently correcting myths about gluten/dairy and inflammation using plain-language, non-judgmental framing",
+    "Use motivational interviewing (open questions, reflective listening, affirmations) to explore barriers to regular eating, including caregiving load, transportation, and budget",
+    "Collaboratively identify one small, concrete, achievable nutrition goal appropriate to her contemplation stage (e.g., keeping a quick protein snack accessible during caregiving days, or setting a phone reminder to eat lunch)",
+    "Screen for food insecurity and provide information on local food assistance resources (e.g., SNAP, food pantry) if she discloses running short on food toward month's end",
+    "Encourage follow-through on her pending cholesterol follow-up call with her primary care/medical team and clarify she does not need to interpret the numbers alone",
+    "Schedule a follow-up nutrition visit to reassess intake pattern, weight trend, and goal progress",
+    "Document the caregiving burden and food-skipping pattern in the chart (with her consent) so the care team is aware for coordinated support"
+   ],
+   "redFlags": [
+    "Two episodes of going a full day without eating in the past month, raising concern for inadequate intake and possible food insecurity",
+    "Reports of household food running short toward end of month",
+    "Persistent fatigue and dizziness on standing, which should be flagged for medical follow-up given anemia history even though current visit is nutrition-focused",
+    "Skipping of her own medical follow-up calls regarding abnormal cholesterol results"
+   ],
+   "educationPoints": [
+    "Explain that elimination diets (gluten/dairy) are not supported by evidence for treating her type of chronic neck pain unless a specific intolerance or diagnosis (e.g., celiac disease) is identified, and that whole foods she already likes (berries, spinach, chicken) can fit into a balanced pattern without elimination",
+    "Teach that skipping meals, even when trying to 'eat clean,' can worsen fatigue and does not support stable energy or weight management",
+    "Normalize and destigmatize caregiver exhaustion; reassure her that naming the caregiving burden is not a failure and can help her care team support her better",
+    "Provide simple, low-effort strategies for eating something during high-demand caregiving days (e.g., grab-and-go protein options, pre-portioned snacks)",
+    "Clarify that her lab numbers from 2024 are being reviewed by her medical team and that she doesn't need to interpret them alone; encourage reconnecting with that follow-up",
+    "Discuss hydration reminders paired with existing routines (e.g., drinking water each time she sits down with the kids) to address her reported under-hydration"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m2",
+    "patientClaim": "Initially states she is 'just busy with the kids' and downplays any irregularity in eating as 'just a busy week' (s3), without disclosing the mother-in-law caregiving role",
+    "recordEvidence": "Social Determinants of Health Screening (document d6) and psychosocial/food insecurity screening actions (a10, a11) show, once explored further, that she provides caregiving for her mother-in-law three days a week in addition to four children and has gone a full day without eating at least twice in the past month",
+    "teachingPoint": "Caregiver burden and food insecurity are often underreported initially; gentle, persistent, non-judgmental follow-up questioning (and reviewing SDOH screening documentation) is needed to surface barriers that patients may minimize or hide out of embarrassment or survival-mode coping.",
+    "factId": "s4",
+    "artifactId": "d6"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 10,
+   "condition": "History of tubal ligation",
+   "conditionLabel": "36 F · History of tubal ligation, Chronic neck pain, Chronic pain +1 · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "1361bfdb",
+   "fingerprint": "11z886i"
+  }
+ }
+}

@@ -1,0 +1,328 @@
+{
+ "patient_overview": {
+  "name": "Elsy Boyer",
+  "age": 42,
+  "sex": "Female",
+  "description": "Elsy Boyer is a 42-year-old single mother of a large household in Paramus, New Jersey, referred for nutrition counseling related to obesity and asthma management. She works full-time, carries lifelong atopic dermatitis and asthma, and recently had a termination of a pregnancy in August 2026 after a prior miscarriage history. She comes across as proud, brisk, and quick to steer the conversation away from anything that feels like criticism, often redirecting to her work schedule or her church group when a topic gets too personal.",
+  "keywords": [
+   "obesity",
+   "asthma",
+   "atopic dermatitis",
+   "low health literacy",
+   "precontemplation",
+   "grazing eating pattern",
+   "medication nonadherence",
+   "food allergies",
+   "faith community support",
+   "single mother"
+  ]
+ },
+ "demographics": {
+  "occupation": "Shift supervisor at a dry-cleaning and laundry service",
+  "residence": "Paramus, New Jersey; household of 8",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Single",
+  "education_level": "More than high school",
+  "insurance": "Medicare",
+  "cultural_context": "Elsy grew up in a working-class household in northern New Jersey and left school after some community college courses in business administration before going into retail and service management. She was raised going to a local nondenominational church and still attends most Sundays with several of her children; the congregation's potluck dinners and prayer groups are one of the few places she feels fully supported rather than judged. She takes pride in having kept her large household fed and housed on her own, and she associates asking for help with weakness, which shapes how she responds to medical advice."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [
+   "Atopic dermatitis",
+   "Asthma",
+   "Past pregnancy history of miscarriage"
+  ],
+  "medical_history": [
+   "Atopic dermatitis since 1989",
+   "Asthma since 2003",
+   "Past pregnancy history of miscarriage since 2018",
+   "Body mass index 30+ - obesity since 2026",
+   "Acute viral pharyngitis (2021-03 to 2021-03, resolved)",
+   "Misuses drugs (2021-03 to 2025-02, resolved)",
+   "Normal pregnancy (2022-07 to 2023-02, resolved)",
+   "Anemia (2022-07 to 2023-02, resolved)",
+   "Normal pregnancy (2026-08 to 2026-08, resolved)",
+   "Pregnancy termination care (2026-08-24)",
+   "Physical examination procedure (2026-08-24)",
+   "Induced termination of pregnancy (2026-08-09)",
+   "Standard pregnancy test (2026-08-01)",
+   "Ultrasound scan for fetal viability (2026-08-01)",
+   "Removal of intrauterine contraceptive device (2026-06-13)"
+  ],
+  "current_symptoms": [
+   "Feels winded climbing the stairs at the laundry facility",
+   "Occasional nighttime cough and chest tightness",
+   "Itchy, dry patches on her elbows and behind her knees that flare with stress",
+   "Low energy by mid-afternoon that she manages with coffee and snacks",
+   "Occasional heartburn after large or late meals"
+  ],
+  "allergies": [
+   "Mold (organism)",
+   "Animal dander (substance) (Rhinoconjunctivitis)",
+   "Grass pollen (substance)",
+   "Tree pollen (substance)",
+   "Wheat (substance) (Diarrhea)",
+   "Shellfish (substance) (Eruption of skin)"
+  ],
+  "clinical_findings": [
+   "Visibly lichenified, dry skin patches on the antecubital fossae consistent with chronic atopic dermatitis",
+   "Mild expiratory wheeze noted on auscultation",
+   "Central weight gain with a stocky build",
+   "Fatigued affect late in appointments, perks up when talking about her church group"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 152.8 mg/dL (reference < 200; 2024-02-03)",
+   "LDL cholesterol: 98.7 mg/dL (reference < 100; 2024-02-03)",
+   "HDL cholesterol: 31 mg/dL (reference >= 40; 2024-02-03)",
+   "Triglycerides: 115.5 mg/dL (reference < 150; 2024-02-03)",
+   "Haemoglobin: 16 g/dL (reference 12.0-17.5; 2026-02-14)",
+   "White cell count: 4 10*3/uL (reference 4.0-11.0; 2026-02-14)",
+   "Platelets: 219.7 10*3/uL (reference 150-450; 2026-02-14)"
+  ],
+  "vital_signs": [
+   "BP: 141/78 mmHg",
+   "HR: 63 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-02-14"
+  ],
+  "anthropometrics": [
+   "Height: 162.2 cm",
+   "Weight: 80.7 kg",
+   "BMI: 30.7 kg/m2",
+   "Weight change: +1.9 kg since 2025-02-08"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "budesonide 0.25 MG/ML Inhalation Suspension",
+    "dose": "0.25 MG/ML",
+    "frequency": "Prescribed as a daily maintenance nebulizer treatment for asthma",
+    "purpose": "Childhood asthma",
+    "adherence": "Uses it inconsistently, mainly when she notices her chest getting tight rather than every day as prescribed",
+    "patient_concerns": "Says the nebulizer setup takes too long before her shift and she forgets it on busy mornings"
+   },
+   {
+    "name": "albuterol 0.21 MG/ML Inhalation Solution",
+    "dose": "0.21 MG/ML",
+    "frequency": "Prescribed as a rescue inhaler to use as needed for asthma symptoms",
+    "purpose": "Childhood asthma",
+    "adherence": "Carries it in her bag and uses it fairly reliably when she feels an attack coming on",
+    "patient_concerns": "Worries about running out at work and not having a refill handy"
+   },
+   {
+    "name": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "Taken as needed, often at night",
+    "purpose": "Not recorded",
+    "adherence": "Takes it most nights, more often than directed, because it helps her sleep through the itching",
+    "patient_concerns": "Doesn't realize how often she's actually taking it; brushes off questions about how much she uses"
+   }
+  ],
+  "supplements_and_otc": [
+   "Over-the-counter hydrocortisone cream for flare-ups",
+   "A multivitamin she buys at the dollar store 'to cover the gaps'",
+   "Occasional antacid tablets after big dinners"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "No fixed meal structure; grazes on whatever is convenient throughout a long work day",
+  "food_preferences": [
+   "Pretzel rods and string cheese from the breakroom vending machine",
+   "Reheated spaghetti or sloppy joes left from feeding the kids",
+   "Church potluck casseroles and sheet cakes on Sundays",
+   "Iced coffee with flavored creamer",
+   "Frozen waffles or toast eaten standing up before work"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Frequency of skipped sit-down meals versus standing snacking",
+   "Portion sizes at the one larger meal she eats late in the evening",
+   "Reliance on vending machine and gas-station snacks between shifts",
+   "How wheat-containing snack foods are chosen despite her diagnosed wheat allergy",
+   "Sodium and sugar content of the convenience foods she grabs"
+  ],
+  "meal_pattern": "No set breakfast, lunch, or dinner; snacks steadily from morning until a bigger meal around 9 or 10 pm after the younger kids are in bed",
+  "hydration": "Mostly iced coffee and the occasional soda; says she 'forgets' plain water most days",
+  "physical_activity": "On her feet most of her shift but no structured exercise; says she's 'too tired' after work for anything extra",
+  "substance_use": "Ex-smoker, quit a few years back; drinks alcohol rarely, about one drink on occasion",
+  "sleep": "Reports trouble staying asleep because of itching and some nights of coughing"
+ },
+ "psychosocial_profile": {
+  "personality": "Proud, self-reliant, quick with a joke to deflect, dislikes being told what to do, especially about her body or her habits",
+  "communication_style": "Keeps things light and brisk; when a question gets close to something uncomfortable she changes the subject, often to her job or her church group",
+  "goals": [
+   "Keep working full-time without missing shifts",
+   "Get through the day without her skin or breathing flaring up badly",
+   "Keep her household fed and running smoothly"
+  ],
+  "concerns": [
+   "Being judged for her weight or her eating",
+   "Having to explain the recent pregnancy termination to anyone outside her closest circle",
+   "Running out of medication at an inconvenient time"
+  ],
+  "beliefs": [
+   "She feels fine most days so she doesn't see why she needs to change anything",
+   "Thinks her weight is 'just how her body is built' after having several children",
+   "Believes food allergies are mostly about avoiding an obvious reaction, not about reading every label"
+  ],
+  "motivations": [
+   "Providing for her children",
+   "Staying active and respected in her church community",
+   "Not wanting to depend on anyone else"
+  ],
+  "fears": [
+   "Losing control of her asthma at work and being sent home",
+   "Being seen as unable to manage her own health",
+   "Her skin flares getting bad enough that people notice"
+  ],
+  "barriers": [
+   "No regular schedule for meals due to shift work and childcare demands",
+   "Low health literacy around how food, allergies, and medication timing interact",
+   "Precontemplative stance - doesn't see her current habits as a problem",
+   "Large household stretches her time and money thin despite a reported high household income figure, which she says doesn't match what's left after bills"
+  ],
+  "strengths": [
+   "Reliable and hardworking, rarely misses a shift",
+   "Strong social contact and community involvement",
+   "Resourceful at stretching meals and budget for a big household"
+  ],
+  "support_system": "Her church group, where she attends services and potlucks most Sundays with several of her children; describes the women there as 'the only people who don't ask too many questions'",
+  "readiness_to_change": "Precontemplation; she does not believe she has a problem that needs addressing and resists any framing that suggests otherwise"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "She works full-time managing a laundry service and has eight people in her household",
+   "She mentions she has asthma and 'bad skin' but says both are 'under control'",
+   "She brings up her church potluck from last Sunday without being asked"
+  ],
+  "discoverable_information": [
+   "She skips sit-down meals most days and snacks instead",
+   "She drinks iced coffee most of the day instead of water",
+   "She quit smoking a few years ago but still gets short of breath sometimes",
+   "She had an IUD removed back in June"
+  ],
+  "reluctant_information": [
+   "She takes her diphenhydramine most nights, more than it's meant to be used, because of the itching keeping her up",
+   "She downplays how often she actually uses her daily nebulizer treatment, saying she 'does it when she needs it'"
+  ],
+  "hidden_information": [
+   "Elsy had a termination of pregnancy on 2026-08-24, just before this visit, and has not told anyone at work or most of her church group",
+   "She has been taking the diphenhydramine most nights for months, well beyond occasional use, and has not mentioned this to her prescriber",
+   "She feels embarrassed that she can't always afford fresh groceries for eight people despite the income figure on her chart, and covers the gap with discount snack food"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice eliciting a 24-hour food recall from a patient with an irregular, grazing eating pattern",
+    "expected_discoveries": [
+     "Lack of structured meals",
+     "Heavy reliance on vending machine and convenience snacks",
+     "Late, large evening meal"
+    ],
+    "possible_patient_reactions": [
+     "'I don't really sit down to eat, I just grab what's around.'",
+     "'Why does it matter when I eat, as long as I eat?'"
+    ]
+   },
+   {
+    "learning_objective": "Identify a medication being used in a way that differs from how it was prescribed, using a non-judgmental approach",
+    "expected_discoveries": [
+     "Nightly diphenhydramine use well beyond labeled directions",
+     "Her skin itching as the underlying driver"
+    ],
+    "possible_patient_reactions": [
+     "'It's just an allergy pill, it's not like it's anything serious.'",
+     "changes subject to ask about her kids' school schedules"
+    ]
+   },
+   {
+    "learning_objective": "Explore food allergy management given a diagnosed wheat allergy alongside grazing on packaged snacks",
+    "expected_discoveries": [
+     "Inconsistent label-reading habits",
+     "Occasional mild reactions she attributes to 'just a stomach thing'"
+    ],
+    "possible_patient_reactions": [
+     "'I know my allergies, I've had them my whole life.'",
+     "'I don't need a lecture on reading labels, I'm fine.'"
+    ]
+   },
+   {
+    "learning_objective": "Apply motivational interviewing with a patient in precontemplation who dislikes being advised",
+    "expected_discoveries": [
+     "Her belief that her weight and habits are simply 'how she is'",
+     "Her pride in self-sufficiency as a barrier to accepting suggestions"
+    ],
+    "possible_patient_reactions": [
+     "'I've been doing just fine managing myself for 42 years.'",
+     "deflects with a joke about the student 'sounding like my mother'"
+    ]
+   },
+   {
+    "learning_objective": "Recognize the role of community and faith-based support in a nutrition care plan",
+    "expected_discoveries": [
+     "Her church potlucks as both a social anchor and a source of calorie-dense food",
+     "Her reluctance to involve people outside that circle in her health"
+    ],
+    "possible_patient_reactions": [
+     "lights up describing a recent potluck dish",
+     "'That's my people, they don't need to know all my business.'"
+    ]
+   },
+   {
+    "learning_objective": "Sensitively address a recent reproductive health event without pressing for details she isn't ready to share",
+    "expected_discoveries": [
+     "She redirects quickly if termination or miscarriage history comes up",
+     "Possible emotional weight behind her brisk deflections"
+    ],
+    "possible_patient_reactions": [
+     "'That's old news, let's talk about something else.'",
+     "visibly stiffens and changes topic to work"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "The household income figure on record is treated by Elsy as not reflecting her actual day-to-day budget, consistent with her reported difficulty affording groceries for eight people",
+   "Her full-time job is physically active (on her feet, lifting laundry) which contributes to her fatigue and grazing eating pattern",
+   "The diphenhydramine, listed with no recorded purpose, is interpreted here as being used for both allergy and itch relief from her atopic dermatitis, which she has repurposed as a nightly sleep aid"
+  ],
+  "optional_details": [
+   "She keeps a small jar of hard candies at her work station that she shares with coworkers",
+   "She's known at church for bringing a baked ziti to every potluck",
+   "She has a loyalty card at the local discount grocery store she uses every week"
+  ]
+ },
+ "source": {
+  "synthea_record": "20aeaa1b",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "proud and self-reliant, dislikes being advised",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "low health literacy",
+   "eating": "has no set meals and grazes on snacks through the day",
+   "held_back": "does not take one of their medicines the way it was prescribed",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

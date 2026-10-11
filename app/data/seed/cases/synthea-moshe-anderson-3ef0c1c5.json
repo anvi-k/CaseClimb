@@ -1,0 +1,959 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Action-Stage Change in a 25-Year-Old With New Essential Hypertension: Portion Culture, Underreported Alcohol, and Undisclosed Substance Use",
+  "summary": "This case teaches dietetics students to conduct a culturally sensitive nutrition assessment and motivational-interviewing-based counseling visit with a young, data-driven, defensive patient newly diagnosed with hypertension. It builds skill in eliciting accurate alcohol intake and medication adherence through careful, non-confrontational questioning (both are patient-vs-chart mismatches: reported 'light drinking'/'mostly consistent adherence' vs. actual higher intake and two missed doses), while navigating family food culture, transportation/shift-work barriers, and a fragile but genuine action-stage change without undermining his cooking identity or triggering defensiveness. A hidden detail (undisclosed recreational substance use) is present only as a possible disclosure point for appropriate referral, not a target for the learner to pursue diagnostically.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Somers Point, New Jersey, calling from his apartment kitchen on a day off",
+  "encounterType": "nutrition assessment / counseling (initial follow-up after hypertension diagnosis)",
+  "difficulty": 4,
+  "patient": {
+   "name": "Moshe Anderson",
+   "age": 25,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Warehouse logistics coordinator at a regional distribution center",
+   "language": "English",
+   "appearance": "Sitting at a kitchen table on a laptop camera, well-groomed in a gym t-shirt, phone propped beside him with his BP log app open; face slightly flushed; posture upright and alert, leaning toward the camera when he makes a point.",
+   "portrait": "/portraits/synthea-moshe-anderson-3ef0c1c5.jpg"
+  },
+  "persona": {
+   "personality": "Skeptical, analytical, and proud; wants evidence and specifics before accepting any recommendation; defensive about his cooking and family but genuinely scared underneath the bravado; responds well when he feels respected as competent rather than lectured",
+   "communicationStyle": "Talks fast, cites his own BP readings and exact dates from memory, checks his phone app mid-conversation, asks 'what's the study on that' or 'how much would that actually drop my number' before buying in; softens when something is framed as data rather than a rule; gets short and clipped if he feels judged",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious under a confident surface; scared by a coworker's stroke and his uncle's heart attack, lonely in trying to change while his family dismisses the diagnosis, easily discouraged if progress feels slow",
+   "background": "Moshe is a 25-year-old warehouse logistics coordinator in Somers Point, NJ, who finished his bachelor's degree online while working full-time, something he's quietly proud of. He grew up in a close-knit South Jersey Italian-American family where Sunday dinners were sacred and his mother and aunt took it personally if you left food on your plate. He learned to cook from his mother and now makes elaborate family-style meals himself — chicken parm, baked ziti, garlic bread — and it's become part of his identity, the guy who feeds everyone. He lives with a roommate, doesn't own a reliable car so he depends on rides or the bus, and works rotating shifts at a distribution center, which throws off his sleep and meal timing. In his downtime he lifts at a cheap 24-hour gym (started five weeks ago) and plays in a weekend recreational basketball league when his schedule allows.",
+   "speechExamples": [
+    "My BP was 159 over 117 on September 22nd, I remember exactly because that's the day everything changed.",
+    "Okay but what's the actual study behind that — like how many points does cutting sodium really drop my systolic?",
+    "I mean, I have a couple beers on the weekend, nothing crazy.",
+    "You want me to eat less of my own cooking? That's like asking me to stop being me.",
+    "If this doesn't move the needle in a month, I don't see the point, honestly."
+   ],
+   "concerns": [
+    "Being on blood pressure medication for the rest of his life at 25",
+    "His family dismissing the diagnosis as 'just stress, you're young' and pushing more food on him anyway",
+    "Whether cutting portions means giving up the cooking that connects him to his mother and family",
+    "Whether his numbers will actually move fast enough to prove any of this is working"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dietetics student conducting a telehealth nutrition follow-up visit for Moshe Anderson, a 25-year-old man recently diagnosed with high blood pressure, referred for diet counseling after starting a new blood pressure medication about five to six weeks ago. He is on a video call from his kitchen table on a day off. Your job is to complete a nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit for newly diagnosed high blood pressure, referred to work on diet changes",
+   "openingLine": "Hey, yeah — so I'm guessing you saw the numbers from my last visit. 159 over 117, September 22nd. I've been trying to get ahead of this on my own already, but figured I'd hear what you've got.",
+   "tasks": [
+    "Take a focused diet history covering meal pattern, portion sizes, sodium sources, and alcohol intake using specific, non-judgmental questions",
+    "Review relevant anthropometric and vital sign data and relate it to the reported dietary pattern",
+    "Identify barriers to dietary change, including transportation, shift work, and family dynamics",
+    "Use motivational interviewing techniques to reinforce his existing self-initiated changes without triggering defensiveness about his cooking or family",
+    "Document an ADIME note including a nutrition diagnosis (PES statement) and an initial intervention plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for newly diagnosed high blood pressure, referred to work on diet changes"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider, Somers Point Family Health; Dietetics referral pending"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not clinically applicable, outpatient)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Misuses drugs (since 2020); Essential hypertension (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "lisinopril 10 MG Oral Tablet; Fexofenadine hydrochloride 30 MG Oral Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism); House dust mite (organism); Animal dander (substance) (Rhinoconjunctivitis, moderate); Tree pollen (substance); Aspirin; Penicillin V (Cough, moderate)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for nutrition follow-up after new diagnosis of essential hypertension five to six weeks ago.",
+    "says": "I'm here because they want me to work on my diet now that my blood pressure is apparently 'a problem.'",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "diagnosis circumstances",
+    "chart": "Diagnosed with essential hypertension at September 2026 wellness visit, BP 159/117 mmHg.",
+    "says": "They checked my pressure at my regular check-up in September and it was 159 over 117 — I remember the exact number.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "timeline since diagnosis",
+    "chart": "Approximately five to six weeks since diagnosis and medication initiation.",
+    "says": "It's been about five, almost six weeks since they put me on the pill.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "home blood pressure tracking",
+    "chart": "Monitors blood pressure at home with a personal cuff, logs readings in a phone app.",
+    "says": "I bought my own cuff and I log every reading in an app — I want to see the trend, not just one number.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "family reaction to diagnosis",
+    "chart": "Reports family attributes his hypertension to stress rather than a medical condition.",
+    "says": "My family keeps telling me it's just stress, that I'm too young for this to be real.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "headache pattern",
+    "chart": "Reports occasional headaches, attributes to work stress rather than blood pressure.",
+    "says": "I get headaches sometimes but that's just from work stress, not my pressure.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "breathing with activity",
+    "chart": "Reports mild shortness of breath climbing stairs to his apartment.",
+    "says": "I get a little winded going up the stairs to my place, but that's probably just the stairs.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "sleep complaint",
+    "chart": "Reports some nights of trouble sleeping, attributes to coffee intake rather than alcohol.",
+    "says": "Some nights I can't fall asleep — probably too much coffee, nothing else.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "digestive symptom after meals",
+    "chart": "Reports occasional heartburn after large family dinners.",
+    "says": "After the big Sunday dinners I sometimes get heartburn, but that's normal with how much I eat.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest pain",
+    "chart": "Denies chest pain.",
+    "says": "No, nothing like chest pain, I'd definitely notice that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies vision changes or blurry vision.",
+    "says": "My eyes are fine, no blurriness or anything weird.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "swelling in legs",
+    "chart": "Denies lower extremity swelling.",
+    "says": "No swelling in my legs or ankles that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Denies palpitations or racing heart sensations.",
+    "says": "My heart doesn't race or flutter, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "recent respiratory illness",
+    "chart": "History of acute bronchitis, June-July 2022, resolved.",
+    "says": "I had bronchitis a couple years back but that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of gingivitis, July 2022, resolved; dental cleaning performed same month.",
+    "says": "I had some gum stuff going on a while ago, got it cleaned up at the dentist.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "orthopedic injury history",
+    "chart": "History of wrist sprain, May-June 2023, resolved.",
+    "says": "I sprained my wrist a couple summers ago, totally healed now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "recent viral illness",
+    "chart": "History of viral sinusitis, November-December 2023, resolved.",
+    "says": "I had a nasty sinus infection over a winter, but that's long gone.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "baseline bloodwork",
+    "chart": "Baseline labs from September 2023: Hgb 12 g/dL, WBC 4.2 x10^3/uL, platelets 355.8 x10^3/uL, all within normal reference ranges.",
+    "says": "I've got old bloodwork from a couple years ago, everything came back normal — I keep track of all my numbers.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "respiratory function test",
+    "chart": "Respiratory function measurement performed June 2022, no further action documented.",
+    "says": "They had me blow into some machine for a breathing test once, nothing came of it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "blood pressure medication routine",
+    "chart": "Reports taking lisinopril 10 mg once daily every morning with breakfast, mostly consistent for past 5-6 weeks using a phone alarm.",
+    "says": "I take my blood pressure pill every morning at 7:15, I've got an alarm set for it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "blood pressure medication adherence specifics",
+    "chart": "On specific questioning, reports missing lisinopril doses twice in the past week after closing shifts.",
+    "says": "Okay... I guess I did miss it twice last week, both after I closed at the warehouse and just crashed.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "allergy medication use",
+    "chart": "Takes fexofenadine 30 mg as needed during allergy season, inconsistent use otherwise.",
+    "says": "I take an allergy pill when the pollen's bad, but I don't bother the rest of the year.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "emergency allergy device",
+    "chart": "Carries epinephrine auto-injector at all times, has never used it, checks expiration periodically.",
+    "says": "I always carry my EpiPen just in case, never had to use it though, I check the date every few months.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "over the counter supplement use",
+    "chart": "Takes magnesium citrate tablets believing it helps blood pressure, OTC ibuprofen for gym soreness, and protein powder in morning smoothies.",
+    "says": "I take magnesium because I read it helps with blood pressure, some ibuprofen when I'm sore from the gym, and I throw protein powder in my smoothie.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h25",
+    "category": "allergies",
+    "topic": "medication allergy history",
+    "chart": "Documented allergies to aspirin and penicillin V (cough reaction); avoids aspirin, uses ibuprofen instead.",
+    "says": "I'm allergic to aspirin and penicillin, so I stick to ibuprofen when I need something.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "allergies",
+    "topic": "environmental allergy history",
+    "chart": "Documented environmental allergies to mold, house dust mite, animal dander (with rhinoconjunctivitis), and tree pollen.",
+    "says": "I'm allergic to mold, dust mites, pet dander, and tree pollen — my eyes get itchy and everything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with a roommate; household of two",
+    "says": "I live with my roommate, Danny. Just the two of us.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "family meals",
+    "chart": "Reports close-knit extended family nearby; Sunday dinners central to family identity",
+    "says": "Sunday dinner's non-negotiable in my family. My mom and aunt would lose it if I skipped it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family reaction to diagnosis",
+    "chart": "Reports family minimizes hypertension diagnosis, attributes it to stress and youth",
+    "says": "My family thinks I'm being dramatic. They keep telling me, 'you're 25, you're fine, it's just stress.'",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "cooking identity",
+    "chart": "Describes strong personal identity tied to cooking for family",
+    "says": "Cooking's kind of my thing. It's how I show people I love them, honestly, like my mom did.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "portion pressure at meals",
+    "chart": "Reports family actively encourages second and third helpings and teases him about dieting",
+    "says": "If I only take one plate my mom asks what's wrong, and if I say I'm cutting back everyone starts ribbing me about 'dieting.'",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "transportation",
+    "chart": "No personal vehicle; relies on rides, bus, or roommate for transportation",
+    "says": "I don't have a car. I'm stuck getting rides or taking the bus, which makes grocery runs a pain.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "grocery access",
+    "chart": "Reports limited access to fresh groceries due to transportation barrier, relies more on convenience stores for lunch",
+    "says": "I can't just hop over to ShopRite whenever I feel like it, so lunch ends up being whatever's at WaWa.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "function",
+    "topic": "work schedule",
+    "chart": "Works rotating 10-hour shifts, including closing shifts, affecting meal timing",
+    "says": "My shifts rotate, so some weeks I'm closing late and everything, meals, sleep, gets thrown off.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "goals",
+    "topic": "blood pressure goal",
+    "chart": "Patient goal: get blood pressure under 130/80 without adding a second medication",
+    "says": "I want to get under 130 over 80 without needing a second pill. That's the number I'm chasing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "goals",
+    "topic": "cooking and change",
+    "chart": "Goal is to continue cooking elaborate family meals while reducing health impact",
+    "says": "I don't want to stop cooking the way I do. I just want to figure out how to make it count less against me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "motivation for change",
+    "chart": "Reports motivation from coworker's stroke at similar age and family history of early heart attack",
+    "says": "A guy I work with, same age as me, had a stroke last year. And my uncle had a heart attack at 52. That's in my head a lot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "readiness to change",
+    "chart": "Reports becoming discouraged if progress is not reflected quickly in home blood pressure readings",
+    "says": "If this doesn't start moving the numbers in like a month, I don't see the point of keeping it up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "basketball",
+    "chart": "Plays recreational weekend basketball when shift schedule allows",
+    "says": "I play in a rec basketball league on weekends when I'm not working. I want to be able to run full court without gassing out.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "substance",
+    "topic": "alcohol intake",
+    "chart": "Initially reports light drinking, AUDIT-C score 1",
+    "says": "I mean, I'll have a beer or two on the weekend, nothing crazy.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "substance",
+    "topic": "actual weekend drinking",
+    "chart": "On specific questioning, reports 4-5 beers across a typical weekend",
+    "says": "Okay, fine... if I'm being real, it's probably more like four or five beers over the weekend. Didn't really think of it as a lot.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "wine at family dinner",
+    "chart": "Reports additional wine intake at Sunday family dinners, not previously counted as drinking",
+    "says": "My mom pours wine at Sunday dinner, like, generously. I never really counted that as 'drinking,' it's just dinner.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "missed medication doses",
+    "chart": "Reports missing lisinopril twice in the past week following late closing shifts",
+    "says": "I take it most days... okay, I did miss it twice last week, after closing shifts I just crashed and forgot.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "undisclosed history",
+    "chart": "Hints at undisclosed information to care team when confidentiality is discussed; declines to elaborate further",
+    "says": "Look... there's some stuff I haven't told my doctor. Is this actually confidential, what I say to you?",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s19",
+    "category": "nutrition",
+    "topic": "self-tracking",
+    "chart": "Logs home blood pressure readings in a phone app; checks data frequently when discussing numbers",
+    "says": "I bought my own cuff and I log every reading in my notes app. I can show you the trend if you want.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s20",
+    "category": "psychosocial",
+    "topic": "fear of medication dependence",
+    "chart": "Expresses concern about being on antihypertensive medication long-term at a young age",
+    "says": "I'm 25. The idea of being on this pill forever kind of freaks me out.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Waist circumference (guided patient self-measurement)",
+    "aliases": [],
+    "result": "Waist circumference 97 cm, patient reports tape measured at the level of the navel while standing",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [],
+    "result": "Lunch: WaWa turkey/ham deli sandwich with cheese and condiments, bag of chips, bottled iced tea. Dinner: chicken parmesan with baked ziti, two ladles canned tomato sauce, garlic bread, side salad. No reported alcohol on recall day. Patient notes this was 'a pretty typical day.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Food frequency / usual intake pattern interview",
+    "aliases": [],
+    "result": "Reports home-cooked Italian-American dinner most nights (pasta, braised meats, garlic bread, canned sauce), WaWa deli sandwich most workdays for lunch, occasional late-night snack after closing shifts, recently added more vegetables and started reading sodium labels on canned goods.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening (administered verbally)",
+    "aliases": [],
+    "result": "Patient initially scores AUDIT-C = 1 (drinks alcohol monthly or less, typically 1-2 drinks per occasion, rarely 6 or more on one occasion)",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review pharmacy refill history for lisinopril",
+    "aliases": [],
+    "result": "Lisinopril 10 mg #30 tablets dispensed 2026-08-24, next refill filled 2026-09-23 (30-day supply, filled on schedule)",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review problem-oriented note from September 2026 wellness visit (hypertension diagnosis)",
+    "aliases": [],
+    "result": "25-year-old male presented for wellness visit, BP 159/117 mmHg confirmed on repeat measurement, HR 82, started on lisinopril 10 mg daily, referred to nutrition for dietary counseling, follow-up BP recheck advised in 4-6 weeks.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change interview",
+    "aliases": [],
+    "result": "Patient identifies as in active action stage: started lifting weights 3x/week five weeks ago, purchased a home BP cuff, logs readings daily, reading sodium labels on canned goods. Reports frustration if numbers don't improve quickly and describes family pressure to eat large portions at home.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Medication and supplement adherence interview (specific, non-judgmental probing)",
+    "aliases": [],
+    "result": "On initial questioning reports taking lisinopril 'mostly every day, 7:15 am alarm.' On specific day-by-day probing, patient discloses missing two doses in the past week after closing shifts. Also reports daily magnesium citrate, occasional ibuprofen after gym, protein powder in morning smoothie, fexofenadine 30 mg PRN for allergies.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Transportation and food access barrier assessment",
+    "aliases": [],
+    "result": "No personal vehicle; relies on roommate, bus, or rideshare for grocery shopping, which limits trips to larger supermarkets and increases reliance on nearby convenience/deli options; gym attendance also affected by ride availability on some shift weeks.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 159/117 mmHg, heart rate 82/min, respiratory rate 13/min, weight 88.6 kg, height 182.8 cm, BMI 26.5 kg/m2, weight change +4.7 kg since 2023-09-19 (recorded 2026-09-22).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Haemoglobin 12 g/dL; White cell count 4.2 10*3/uL; Platelets 355.8 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-09-22); meningococcal MCV4P (2023-09-19); Hep B adult (2023-09-19); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2023-09-19).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Wellness Visit Note - Hypertension Diagnosis",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-09-22",
+    "author": "Primary Care, Somers Point Family Health",
+    "body": "25-year-old male presents for routine wellness visit. Blood pressure 159/117 mmHg, confirmed on repeat manual measurement. Heart rate 82 bpm, respiratory rate 13/min. Face mildly flushed. No acute distress. Patient reports occasional headaches attributed to work stress, mild exertional dyspnea on stairs, and intermittent heartburn after large meals. Denies chest pain. Assessment: Essential hypertension, new diagnosis. Plan: Start lisinopril 10 mg PO once daily. Order basic metabolic panel and lipid panel. Refer to dietetics for nutrition counseling. Recheck BP in 4-6 weeks."
+   },
+   {
+    "id": "d7",
+    "type": "other",
+    "title": "Pharmacy Refill History - Lisinopril",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "date": "2026-09-23",
+    "author": "Somers Point Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Quantity Dispensed",
+      "Date Filled",
+      "Days Supply"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lisinopril 10 MG Oral Tablet",
+        "30 tablets",
+        "2026-08-24",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10 MG Oral Tablet",
+        "30 tablets",
+        "2026-09-23",
+        "30 days"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nMisuses drugs (since 2020)\nEssential hypertension (since 2026)\n\nRECENTLY RESOLVED\nAcute bronchitis (2022-06 to 2022-07)\nGingivitis (2022-07 to 2022-07)\nSprain of wrist (2023-05 to 2023-06)\nViral sinusitis (2023-11 to 2023-12)\n\nPROCEDURES\n2022-07-19: Examination of gingivae (Gingivitis)\n2022-07-19: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2022-07-19: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2022-07-19: Dental care (Gingivitis)\n2022-07-19: Dental consultation and report (Gingivitis)\n2022-06-26: Measurement of respiratory function (Acute bronchitis)\n\nRECENT ENCOUNTERS\n2026-09-22 wellness: General examination of patient\n2023-11-29 ambulatory: Encounter for symptom (Viral sinusitis)\n2023-09-19 wellness: General examination of patient\n2023-05-02 emergency: Emergency room admission (Sprain)\n2022-07-19 ambulatory: Encounter for check up (Gingivitis)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Lifestyle education regarding hypertension; Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-09",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Fexofenadine hydrochloride 30 MG Oral Tablet",
+        "2002-12",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+        "2002-12",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Haemoglobin",
+        "12",
+        "g/dL",
+        "12.0-17.5",
+        "2023-09-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.2",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-09-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "355.8",
+        "10*3/uL",
+        "150-450",
+        "2023-09-19"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit an accurate, non-judgmental diet and alcohol history, recognizing how specific follow-up questioning can reveal intake that differs from an initial screening score",
+    "factIds": [
+     "s14",
+     "s15",
+     "s16"
+    ],
+    "actionIds": [
+     "a6",
+     "a5",
+     "a4"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Relate anthropometric measurements and vital/lab data to the patient's reported dietary pattern to identify sodium and portion-related contributors to elevated blood pressure",
+    "factIds": [
+     "h2",
+     "h18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a3",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify practical barriers to dietary change, including transportation limitations, rotating shift work, and family dynamics that reinforce large portions and dismiss the diagnosis",
+    "factIds": [
+     "s5",
+     "s6",
+     "s7",
+     "s8",
+     "s3"
+    ],
+    "actionIds": [
+     "a16",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Apply motivational interviewing techniques to reinforce an existing, fragile stage of self-initiated behavior change without provoking defensiveness about cooking identity or family relationships",
+    "factIds": [
+     "s10",
+     "s12",
+     "s19",
+     "s13"
+    ],
+    "actionIds": [
+     "a12",
+     "asyn1"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess medication adherence through specific, non-confrontational questioning and recognize how patient self-report can diverge from objective pharmacy records",
+    "factIds": [
+     "h20",
+     "h21"
+    ],
+    "actionIds": [
+     "a14",
+     "a7"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate a nutrition diagnosis (PES statement) and initial intervention plan in ADIME format that addresses sodium sources, portion sizes, and barriers identified during the assessment",
+    "factIds": [
+     "s4",
+     "s9",
+     "s20"
+    ],
+    "actionIds": [
+     "asyn2",
+     "a5",
+     "a4"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium and portion intake related to home food preparation practices and limited family/environmental support for change, as evidenced by elevated blood pressure (159/117 mmHg), self-reported dietary pattern of large portion home-cooked meals and processed deli lunches, and underreported alcohol intake",
+   "differential": [
+    "Excessive sodium intake related to food preparation choices (canned sauce, cured deli meats)",
+    "Excessive energy/portion intake related to large family-style plating practices",
+    "Inconsistent carbohydrate/alcohol intake related to underestimation of weekend and family-event alcohol consumption",
+    "Self-monitoring deficit related to limited understanding of medication-lifestyle interaction (missed lisinopril doses not initially volunteered)"
+   ],
+   "keyFindings": [
+    "BP 159/117 mmHg at diagnosis 5-6 weeks prior to this visit; home readings tracked by patient on personal cuff",
+    "BMI 26.5 kg/m2, weight up 4.7 kg since 2023-09-19, central adiposity",
+    "Reports lisinopril adherence as 'mostly consistent' but on specific questioning discloses missing 2 doses last week after a closing shift",
+    "Reports AUDIT-C score of 1 (light drinking) but on non-judgmental specific questioning discloses 4-5 beers across a typical weekend plus unmeasured wine at family Sunday dinners",
+    "Diet pattern: WaWa deli sandwich (processed/cured meat, high sodium) most workdays for lunch; large home-cooked Italian-American dinner nightly with two full ladles of canned tomato sauce, garlic bread, and family-style portions plated to his mother's standard rather than his own hunger cues",
+    "Started self-directed lifting 3x/week and purchased a home BP cuff approximately 5 weeks ago; already reading sodium labels on canned goods",
+    "Transportation barrier limits fresh grocery access and consistent gym attendance; rotating shift schedule disrupts meal timing and sleep (~6 hrs/night)",
+    "Family actively encourages second/third helpings and frames the diagnosis as stress-related, undermining his fragile action-stage changes"
+   ],
+   "plan": [
+    "Document ADIME note: Assessment (diet history, anthropometrics, barriers, readiness stage), Diagnosis (nutrition diagnosis statement using PES format), Intervention (sodium/portion-focused, culturally congruent swaps; alcohol moderation counseling; adherence-supportive scheduling tied to existing phone alarm routine), Monitoring/Evaluation (home BP log trend, follow-up weight, repeat diet recall)",
+    "Provide specific, non-judgmental alcohol screening (expanded beyond AUDIT-C) and reflect findings back neutrally without confrontation",
+    "Negotiate concrete, low-barrier swaps that preserve his cooking identity: reduced-sodium canned tomato product or doctoring canned sauce with fresh garlic/herbs, measuring sauce ladles, smaller plated portion with option for seconds of vegetables rather than pasta/bread",
+    "Address WaWa lunch sodium with practical alternatives feasible without a car (lower-sodium prepackaged options, meal-prep on days off)",
+    "Explore family dynamics using MI (reflective listening, affirm his fear of conflict vs. fear of diagnosis) and brainstorm one small negotiable change with his mother (e.g., smaller batch of ziti) rather than wholesale dietary overhaul",
+    "Affirm and reinforce his self-initiated strength training and home BP monitoring as evidence of genuine engagement, using his own data-driven mindset to frame small nutrition changes as another experiment to track",
+    "Clarify medication adherence gently, link missed-dose pattern to shift schedule rather than motivation, and suggest a practical reminder strategy compatible with closing shifts",
+    "If patient discloses undisclosed substance use or expresses wanting to talk about something confidential, acknowledge supportively, clarify limits of nutrition counselor's scope, and offer to coordinate with his PCP/behavioral health; do not probe further for diagnostic detail",
+    "Schedule follow-up visit to reassess home BP trend, weight, and dietary pattern in 2-4 weeks"
+   ],
+   "redFlags": [
+    "BP 159/117 mmHg remains significantly above goal despite 5-6 weeks of treatment and self-initiated lifestyle change; warrants communication back to referring prescriber if not already being closely followed",
+    "Discrepancy between reported 'mostly consistent' adherence and actual missed doses could contribute to persistent elevated BP",
+    "Underreported alcohol intake (actual ~4-5 drinks/weekend plus wine) is clinically relevant to BP control and should be flagged for the medical team if disclosed",
+    "Any spontaneous disclosure of recreational substance use should prompt supportive referral to PCP/behavioral health, not nutrition-only management"
+   ],
+   "educationPoints": [
+    "Sodium often hides in 'healthy-seeming' home-cooked meals via canned sauces and cured/processed meats, not just obvious salty snacks",
+    "Portion size, not just food choice, drives sodium and calorie load — plating habits learned from family can be adjusted gradually without abandoning the dish",
+    "Alcohol, including wine at family meals, counts toward intake and can affect blood pressure even when 'moderate' feels like the right word",
+    "Consistent medication timing matters, and barriers like shift work are common and solvable rather than a sign of failure",
+    "Small, concrete, culturally respectful swaps (e.g., measuring sauce, adding a vegetable side, lower-sodium canned goods) are more sustainable than an all-or-nothing diet change",
+    "Tracking his own BP and recognizing patterns over weeks, not days, helps match his data-driven mindset to realistic expectations for lifestyle change"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking lisinopril 'mostly consistent' for the past 5-6 weeks using a phone alarm set for 7:15 am (h20)",
+    "recordEvidence": "Pharmacy refill history shows lisinopril 10 mg #30 tablets dispensed 2026-08-24 with next refill filled on schedule 2026-09-23, a full 30-day supply (d7)",
+    "teachingPoint": "On-time pharmacy refills can mask real-world adherence gaps; specific, non-judgmental day-by-day questioning (as in h21) is needed to uncover missed doses that a refill record alone would not reveal.",
+    "factId": "h20",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 36,
+   "condition": "Essential hypertension",
+   "conditionLabel": "25 M · Essential hypertension, Misuses drugs · 3 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "3ef0c1c5",
+   "fingerprint": "3u336h"
+  }
+ }
+}

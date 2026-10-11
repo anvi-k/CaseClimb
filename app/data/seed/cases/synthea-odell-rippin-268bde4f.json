@@ -1,0 +1,1131 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Follow-Up for Hyperlipidemia and Prediabetes in an 84-Year-Old Overnight Shift Worker",
+  "summary": "This case portrays an 84-year-old overnight-shift toll plaza worker with hyperlipidemia, prediabetes, and obesity whose anxious, over-explaining communication style masks both a chaotic shift-driven diet and understated statin non-adherence. It teaches dietetics students to elicit an accurate diet history despite narrative tangents, use motivational interviewing with a contemplation-stage patient, uncover a patient-reported-versus-refill-record medication mismatch without confrontation, and translate high but scattered health literacy into concrete, shift-compatible nutrition goals.\"",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Hopatcong, New Jersey, seated at his kitchen table before heading to a shift",
+  "encounterType": "nutrition assessment / follow-up counseling",
+  "difficulty": 3,
+  "patient": {
+   "name": "Odell Rippin",
+   "age": 84,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Toll plaza supervisor / overnight facilities coordinator for a regional transit authority, still working full-time",
+   "language": "English",
+   "appearance": "An older man in a wrinkled work polo with his transit-authority badge still clipped on, sitting at a cluttered kitchen table with a mug of coffee and a dog-eared notebook of printed health articles nearby; he looks tired, fidgets with the notebook, and leans toward the camera apologetically whenever he speaks.",
+   "portrait": "/portraits/synthea-odell-rippin-268bde4f.jpg"
+  },
+  "persona": {
+   "personality": "Anxious and apologetic, braces for criticism before anyone has said anything critical; proud, hardworking, intellectually engaged but torn between research and real-life habits; wants to be seen as a good, compliant patient",
+   "communicationStyle": "Talks in long, meandering stories - a question about breakfast might detour through his late wife, his old supervisor, or an article he read online before he circles back to actually answer; apologizes frequently for 'going on and on' or for his habits; quotes numbers and online claims readily",
+   "healthLiteracy": "high",
+   "emotionalState": "Nervous, self-conscious, pre-emptively guilty, but warms and relaxes if treated gently and without judgment",
+   "background": "Odell grew up in a working-class New Jersey family where his father worked the railroads and meals were whatever could be made fast between shifts, a pattern that's followed him his whole life. He's worked overnight at the regional transit authority toll plaza for decades and takes pride in never calling out sick in thirty years. He's divorced, lives with one other person who 'keeps to themselves,' has an adult daughter out of state he calls sometimes but doesn't want to worry, and has one night off a week when he goes to his usual diner where the waitress knows his order. He keeps a dog-eared notebook of health articles printed at the library.",
+   "speechExamples": [
+    "I know, I know, I probably haven't been doing enough - go ahead, you can say it.",
+    "Funny thing, my wife used to say the same thing about my coffee, God rest her - anyway, where was I...",
+    "I read somewhere that your LDL number matters more than the total, is that right? I printed the article out somewhere here...",
+    "It's fine, I'm used to eating alone, really, thirty years on the overnight shift, you get used to a lot of things.",
+    "I try, I really do, but by 3 a.m. that vending machine is just... there, you know?"
+   ],
+   "concerns": [
+    "That the student will think he's not trying",
+    "That his cholesterol numbers mean he's failing at managing himself",
+    "That he's too old for things to really change",
+    "Whether his B12 shots and fish oil are actually doing anything"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Odell Rippin, an 84-year-old man followed for hyperlipidemia and prediabetes. He is joining the call from his kitchen table before heading to his overnight shift as a toll plaza supervisor. This is a routine nutrition assessment and counseling follow-up. Review the available chart information before the visit and conduct a focused nutrition assessment and counseling session.",
+   "chiefComplaint": "Follow-up visit for cholesterol and blood sugar management",
+   "openingLine": "Hi there - thanks for calling. I, uh, I know I probably haven't been doing enough since the last time, my numbers are still not where they should be. I read an article the other day about this LDL business, so... go ahead, ask me whatever you need to.",
+   "tasks": [
+    "Take a focused 24-hour/typical-day diet and hydration history, accounting for his overnight shift schedule",
+    "Review his anthropometric measurements and relevant lab results and discuss them with him in plain language",
+    "Explore his understanding of and feelings about his current nutrition-related conditions and medications using open-ended, non-judgmental questions",
+    "Identify practical barriers to healthier eating given his work schedule, living situation, and physical limitations",
+    "Collaboratively identify one or two specific, individualized nutrition goals he feels ready to try, and document your findings in an ADIME-style note"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up visit for cholesterol and blood sugar management"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. R. Alvarez (Internal Medicine, PCP); Dietetics/Clinical Nutrition (current visit)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic sinusitis (since 1951); Prediabetes (since 1964); Anemia (since 1967); Body mass index 30+ - obesity (since 1976); Seizure disorder (since 1980); History of seizure (since 1980); Polyp of colon (since 2007); Hyperlipidemia (since 2017)"
+   },
+   {
+    "label": "Medications",
+    "value": "Simvastatin 10 MG Oral Tablet; Vitamin B12 5 MG/ML Injectable Solution"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "Presents for nutrition follow-up for hyperlipidemia and prediabetes management.",
+    "says": "I'm here for my follow-up about my cholesterol and that blood sugar thing - the pre-diabetes. I know I probably haven't been doing enough.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "cholesterol numbers",
+    "chart": "Reports awareness that LDL cholesterol remains above goal per recent reading.",
+    "says": "I read up on it - my LDL, the bad one, it's still not where it should be. I looked it up, it's supposed to be under 100 and I'm not there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "afternoon fatigue",
+    "chart": "Reports feeling tired by mid-afternoon on long overnight shifts.",
+    "says": "By the middle of my shift I just hit a wall. Dead tired, like someone pulled the plug.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "lightheadedness episodes",
+    "chart": "Reports occasional lightheadedness, which he attributes to low blood sugar from skipping lunch.",
+    "says": "Sometimes I get real woozy, shaky even. I figure that's my blood sugar dropping 'cause I skipped eating.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "stomach discomfort",
+    "chart": "Reports mild indigestion after late-night drive-through meals.",
+    "says": "My stomach gets all upset after one of those late-night burger runs. Burns a little.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "clothing fit",
+    "chart": "Reports pants fitting tighter over the past year.",
+    "says": "My pants been getting tighter. I noticed it over this past year or so.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "appetite pattern",
+    "chart": "Denies loss of appetite; describes grazing on snack foods rather than reduced intake.",
+    "says": "It's not that I'm not hungry - I'm eating, just not real meals, you know? Snacking my way through the shift.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "No, nothing like chest pain or my heart racing or anything like that. Nothing of that sort.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurred vision or visual disturbance.",
+    "says": "My eyes are fine, no blurriness or nothing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst or urinary frequency.",
+    "says": "I'm not running to the bathroom all the time or anything, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "bowel changes",
+    "chart": "Denies change in bowel habits or blood in stool.",
+    "says": "Bathroom-wise, everything's regular, no blood or nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "leg discomfort",
+    "chart": "Reports intermittent leg aching after long shifts standing at the toll plaza.",
+    "says": "My legs ache something awful after standing all those hours at the booth.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "recent seizure activity",
+    "chart": "Denies any recent seizure activity.",
+    "says": "No, I haven't had one of my spells in years, knock on wood.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "History of chronic sinusitis since 1951.",
+    "says": "I've had sinus trouble since I was a young man, way back.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "History of prediabetes since 1964.",
+    "says": "They told me I was 'borderline' sugar-wise, oh, decades ago now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "History of anemia since 1967.",
+    "says": "I'm told I run a little anemic, have been for years. That's why I get the shots.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "History of obesity, BMI 30 or greater, since 1976.",
+    "says": "I've carried extra weight since I was a younger man, way before any of this cholesterol business started.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "seizure history",
+    "chart": "History of seizure disorder since 1980; reportedly well-controlled.",
+    "says": "I had a seizure thing way back in 1980. Haven't had trouble with it in a long while though.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "colon finding history",
+    "chart": "History of colon polyp, 2007.",
+    "says": "They found a little polyp in there years back during one of those scope tests. Nothing since.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "cholesterol diagnosis",
+    "chart": "History of hyperlipidemia since 2017.",
+    "says": "They put me on the cholesterol pill back in 2017 or so, that's when they said it was high.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "pmh",
+    "topic": "old injury history",
+    "chart": "History of forearm fracture, 2021, resolved, full range of motion.",
+    "says": "I broke my arm back in 2021, tripped on some ice at the plaza. It's all healed up fine now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "pmh",
+    "topic": "recent dental care",
+    "chart": "Recent dental cleaning and gingivitis treatment, April 2026, resolved.",
+    "says": "Just had my teeth cleaned up a few weeks ago, had some gum trouble but they fixed me up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "cholesterol medication use",
+    "chart": "Reports taking simvastatin 10mg nightly.",
+    "says": "I take it every night, pretty much, the cholesterol pill. Simvastatin, 10 milligrams.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "missed statin doses",
+    "chart": "On further questioning, reports skipping simvastatin roughly a couple times per week when legs ache, due to concern about statin-related muscle or liver harm.",
+    "says": "Okay, honestly... maybe a couple times a week I don't take it. When my legs are really aching I get scared it's doing something to my muscles, so I skip it, just to be safe.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "makeup dosing habit",
+    "chart": "Reports sometimes doubling the simvastatin dose the following day after a missed dose.",
+    "says": "Sometimes if I miss a night I'll just take two the next day to make up for it. I didn't think that was a big deal.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "extended medication gap",
+    "chart": "Reports stopping simvastatin entirely for approximately three weeks last winter after reading online material linking statins to memory loss, resuming before a scheduled lab draw.",
+    "says": "There was a stretch this past winter, maybe three weeks, where I just... stopped taking it altogether. Read something online about statins and memory loss and it scared me good. Only started back up 'cause I knew my blood test was coming.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "B12 injection purpose",
+    "chart": "Receives periodic B12 injections per care plan; unclear on indication and dosing schedule.",
+    "says": "I get a shot every so often, B12 I think. Honestly I'm not real sure why, I figure it's for my blood. I feel kinda silly asking the nurse again.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h28",
+    "category": "medications",
+    "topic": "over the counter supplements",
+    "chart": "Takes a daily multivitamin, Tums as needed after fast food meals, and fish oil capsules inconsistently.",
+    "says": "I take a multivitamin, just in case. And I keep the Tums in the truck for after them drive-through meals. Started on fish oil too after reading an article, but I don't always remember it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h29",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, never had a reaction to anything that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h30",
+    "category": "psh",
+    "topic": "prior scope procedure",
+    "chart": "History of colonoscopy with polyp removal, 2007.",
+    "says": "Had one of those camera tests years back, they took a little growth out.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time overnight shifts as a toll plaza supervisor/facilities coordinator for a regional transit authority",
+    "says": "I've been doing the overnight shift at the toll plaza going on... gosh, a long time now. Been there through three different supervisors.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "psychosocial",
+    "topic": "patient demeanor",
+    "chart": "Patient appears anxious and apologizes preemptively before being asked about adherence or diet",
+    "says": "I know, I know, I probably haven't been doing enough, you don't have to tell me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "marital history",
+    "chart": "Divorced; frequently references late wife in conversation",
+    "says": "My wife, god rest her, she used to do all the cooking. I never really learned, if I'm honest.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with one other adult household member who is not involved in meal preparation or his health care",
+    "says": "There's someone else in the house, but they kinda keep to themselves. We don't really cross paths much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "family contact",
+    "chart": "Has an adult daughter living out of state; limited contact, does not disclose health details to her",
+    "says": "I call my daughter every now and then. I don't like loading her up with my health stuff, she's got her own life.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "nearby support",
+    "chart": "No family nearby since divorce; minimal day-to-day check-ins from others",
+    "says": "It's just me handling things, mostly. Nobody's really checking in day to day.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "isolation",
+    "chart": "Initially minimizes loneliness, later acknowledges it is difficult living with little support",
+    "says": "It's fine, I'm used to it... I mean, yeah, it gets lonely sometimes, if I'm being honest with you.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "function",
+    "topic": "mobility and joints",
+    "chart": "Reports knee discomfort limiting walking beyond work duties; no structured exercise",
+    "says": "My knees aren't what they used to be, so I don't go walking around much outside of work.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "nutrition",
+    "topic": "hydration habits",
+    "chart": "Reports drinking mostly coffee during shifts; minimal water intake until symptomatic",
+    "says": "Water? Honestly I forget it exists until I'm so thirsty my head's spinning.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "routine meal spot",
+    "chart": "Has a regular diner he visits on his one night off weekly where staff know his usual order",
+    "says": "There's a diner I go to on my night off, same waitress every time, she's got my order memorized - meatloaf, mostly.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s11",
+    "category": "other",
+    "topic": "health reading habits",
+    "chart": "Keeps a personal notebook of printed health articles and references them during visits",
+    "says": "I keep a notebook, see, printouts from the library computer. I read a lot about this stuff.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "adherence",
+    "topic": "statin-taking pattern",
+    "chart": "Reports taking simvastatin every night when first asked generally",
+    "says": "I take it every night, pretty much.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "adherence",
+    "topic": "statin-taking pattern",
+    "chart": "On further questioning, admits skipping simvastatin roughly a couple times a week when leg pain occurs after shifts",
+    "says": "Okay, maybe... a couple times a week I skip it, when my legs are really aching after a shift.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "adherence",
+    "topic": "making up missed doses",
+    "chart": "Admits sometimes doubling the simvastatin dose the following day after a missed dose, not previously disclosed",
+    "says": "Sometimes if I miss it I'll just take two the next night to catch up. I never told anyone that before.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "adherence",
+    "topic": "extended medication gap",
+    "chart": "Discloses stopping simvastatin entirely for approximately three weeks last winter after reading an online forum post linking statins to memory loss, resuming before his next lab draw",
+    "says": "Last winter I actually stopped taking it altogether, for like three weeks. Read something online about statins and memory loss and it scared me. I only started back up because I knew my bloodwork was coming.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "fear about driving status",
+    "chart": "Privately worried his seizure history could jeopardize his driver's license and job; has not raised this with his care team",
+    "says": "Can I tell you something I haven't said to anyone here? I'm scared that seizure thing from way back could cost me my license, and then my job. I haven't brought it up with anybody.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "goals",
+    "topic": "priorities for change",
+    "chart": "States goals of avoiding a cardiovascular event, continuing to work, and reducing guilt around eating",
+    "says": "I just want to not have a heart attack, keep working as long as I can, and maybe stop feeling so guilty every time I eat something I shouldn't.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "nutrition",
+    "topic": "B12 injection purpose",
+    "chart": "Attends scheduled B12 injections but is unclear on their purpose and hesitant to ask for clarification again",
+    "says": "I get those B12 shots. I think it's for my blood? I keep meaning to ask but I feel silly asking again.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour diet recall / typical shift-day eating pattern",
+    "aliases": [],
+    "result": "Patient reports: drive-through sausage-egg biscuit on way to overnight shift; vending machine peanut butter crackers and honey buns through the night; continuous black coffee; one sit-down meal (diner meatloaf or roast beef) on his single night off. No regular lunch most days. Denies regular water intake.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Hydration pattern assessment",
+    "aliases": [],
+    "result": "Patient reports drinking mostly black coffee during shifts and 'forgetting water exists' until he feels thirsty or lightheaded; estimates less than one glass of plain water most days.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage-of-change assessment",
+    "aliases": [],
+    "result": "Patient expresses he knows changes are needed and has researched extensively, but describes feeling 'torn' about where to start and has not made consistent changes - consistent with contemplation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Social support and meal-access barrier assessment",
+    "aliases": [],
+    "result": "Patient reports living with one other household member who 'keeps to themselves' and does not help with meals or shopping; no family nearby since his divorce; occasionally calls an out-of-state daughter but avoids worrying her with health details.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Patient reports mostly standing and walking at the toll plaza during shifts, no structured exercise, and says his knees 'aren't what they used to be' and limit walking beyond work.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Weight history / clothing fit interview",
+    "aliases": [],
+    "result": "Patient reports his pants have been fitting tighter over the past year; he has not weighed himself at home.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review medication list and adherence notes in chart",
+    "aliases": [],
+    "result": "Simvastatin 10 mg oral tablet, once daily at night, for hyperlipidemia; adherence documented as 'reports taking most nights.' Vitamin B12 5 mg/mL injectable, administered periodically per care plan.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review pharmacy refill history",
+    "aliases": [],
+    "result": "Simvastatin 10 mg tablets, 30-tablet fills dispensed at intervals of approximately 55-60 days over the past six months, rather than the expected 30-day interval.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review prior dietitian/PCP follow-up note",
+    "aliases": [],
+    "result": "Prior note documents counseling on reducing fast food frequency and improving hydration; patient was described as 'motivated but inconsistent in follow-through.'",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "exam",
+    "name": "Camera-guided oral mucosa and conjunctiva inspection",
+    "aliases": [],
+    "result": "Mild pallor of conjunctiva noted; oral mucosa appears slightly dry.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score 0/12 - patient reports no alcohol use.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 118/73 mmHg, heart rate 96/min, respiratory rate 14/min, weight 77.7 kg, height 160.1 cm, BMI 30.3 kg/m2 (recorded 2026-03-25).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.4 %; Glucose 67.9 mg/dL; eGFR 74.3 mL/min/1.73m2; Total cholesterol 164.7 mg/dL; LDL cholesterol 123.1 mg/dL; HDL cholesterol 35.2 mg/dL; Triglycerides 118.6 mg/dL; Haemoglobin 12.7 g/dL; White cell count 3.9 10*3/uL; Platelets 300.5 10*3/uL; Potassium 4.5 mmol/L; Sodium 139.6 mmol/L; Urea nitrogen 17.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-03-25); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2024-03-13); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-12).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "other",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2025-09-01 to 2026-03-20",
+    "author": "Retail Pharmacy Records",
+    "table": {
+     "columns": [
+      "Date Dispensed",
+      "Medication",
+      "Quantity",
+      "Days Supply"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "2025-09-02",
+        "Simvastatin 10 MG Oral Tablet",
+        "30 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2025-10-28",
+        "Simvastatin 10 MG Oral Tablet",
+        "30 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2025-12-22",
+        "Simvastatin 10 MG Oral Tablet",
+        "30 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2026-02-16",
+        "Simvastatin 10 MG Oral Tablet",
+        "30 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2026-03-19",
+        "Simvastatin 10 MG Oral Tablet",
+        "30 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Prior Dietitian/PCP Follow-Up Note",
+    "release": {
+     "when": "action",
+     "ref": "a15"
+    },
+    "date": "2025-12-10",
+    "author": "Dr. R. Alvarez, Internal Medicine",
+    "body": "84-year-old male seen for routine follow-up of hyperlipidemia and prediabetes. Reports continuing to work overnight shifts. Counseled on reducing fast food frequency and improving hydration during shifts. Patient was described as motivated but inconsistent in follow-through on prior recommendations. Will recheck labs in 3 months and refer to dietitian for structured nutrition counseling."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic sinusitis (since 1951)\nPrediabetes (since 1964)\nAnemia (since 1967)\nBody mass index 30+ - obesity (since 1976)\nSeizure disorder (since 1980)\nHistory of seizure (since 1980)\nPolyp of colon (since 2007)\nHyperlipidemia (since 2017)\n\nRECENTLY RESOLVED\nFracture of bone (2021-06 to 2021-08)\nFracture of forearm (2021-06 to 2021-08)\nAcute viral pharyngitis (2023-03 to 2023-03)\nGingivitis (2026-03 to 2026-04)\n\nPROCEDURES\n2026-04-08: Dental fluoride treatment (Gingivitis)\n2026-04-08: Examination of gingivae (Gingivitis)\n2026-04-08: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-04-08: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-04-08: Dental care (Gingivitis)\n2026-04-08: Dental consultation and report (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-04-08 ambulatory: Encounter for check up (Gingivitis)\n2026-03-26 ambulatory: Follow-up encounter (Hyperlipidemia)\n2026-03-25 wellness: General examination of patient\n2025-04-02 ambulatory: Encounter for check up (Patient referral for dental care)\n2025-03-26 ambulatory: Follow-up encounter (Hyperlipidemia)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact); Hyperlipidemia clinical management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Simvastatin 10 MG Oral Tablet",
+        "2026-03",
+        "Hyperlipidemia"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Vitamin B12 5 MG/ML Injectable Solution",
+        "1967-11",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.4",
+        "%",
+        "< 5.7",
+        "2026-03-25"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "67.9",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "74.3",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "164.7",
+        "mg/dL",
+        "< 200",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "123.1",
+        "mg/dL",
+        "< 100",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "35.2",
+        "mg/dL",
+        ">= 40",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "118.6",
+        "mg/dL",
+        "< 150",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.7",
+        "g/dL",
+        "12.0-17.5",
+        "2025-03-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "3.9",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-03-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "300.5",
+        "10*3/uL",
+        "150-450",
+        "2025-03-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "139.6",
+        "mmol/L",
+        "135-145",
+        "2026-03-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "17.5",
+        "mg/dL",
+        "7-20",
+        "2026-03-26"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete and accurate 24-hour/typical-day diet and hydration history from a patient whose eating is irregular and shift-driven, distinguishing his stated intentions from his actual intake pattern.",
+    "factIds": [
+     "h3",
+     "h4",
+     "h5",
+     "h6",
+     "h7",
+     "s9",
+     "s10"
+    ],
+    "actionIds": [
+     "a1",
+     "a2"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Integrate anthropometric measurements and relevant laboratory results (lipid panel, HbA1c/glucose, renal function, CBC) into the nutrition assessment and explain their significance to the patient in plain, non-judgmental language.",
+    "factIds": [
+     "h2",
+     "h6",
+     "h20"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Use open-ended, non-judgmental questioning and motivational interviewing to explore a contemplation-stage patient's ambivalence about change, surfacing beliefs that minimize the role of medication relative to diet.",
+    "factIds": [
+     "h23",
+     "s17"
+    ],
+    "actionIds": [
+     "a3",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Progressively build rapport to uncover reluctant and hidden information about medication-taking patterns, and cross-check self-report against the pharmacy refill record without confronting the patient accusatorially.",
+    "factIds": [
+     "h24",
+     "h25",
+     "h26",
+     "s12",
+     "s13",
+     "s14",
+     "s15"
+    ],
+    "actionIds": [
+     "a13",
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess practical and psychosocial barriers to healthier eating in an older adult with minimal day-to-day support, including living situation, isolation, physical limitations, and shift-work constraints.",
+    "factIds": [
+     "s4",
+     "s5",
+     "s6",
+     "s7",
+     "s8"
+    ],
+    "actionIds": [
+     "a4",
+     "a5"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Translate a highly health-literate but inconsistently applied knowledge base into individualized, shift-compatible nutrition goals, validating the patient's efforts rather than correcting him outright.",
+    "factIds": [
+     "s11",
+     "h27",
+     "h28"
+    ],
+    "actionIds": [
+     "a6",
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive fat/inconsistent carbohydrate intake pattern related to shift-work schedule and limited food access, as evidenced by reliance on vending machine snacks, drive-through meals, and skipped meals; secondary concern of inadequate fluid intake",
+   "differential": [
+    "Nutrition diagnosis: Undesirable food choices related to shift-work constraints and limited meal planning, as evidenced by reported vending machine and drive-through pattern",
+    "Nutrition diagnosis: Inconsistent carbohydrate/meal timing related to skipping meals to avoid driving, as evidenced by reported late overeating and lightheadedness after skipped lunches",
+    "Nutrition diagnosis: Inadequate fluid intake related to reliance on coffee as primary beverage, as evidenced by his report of 'forgetting water exists' until thirsty/dizzy",
+    "Not primarily a medication-adherence case for this discipline, but adherence context (statin skipping) is clinically relevant to nutrition counseling because of his belief that diet alone can substitute for medication"
+   ],
+   "keyFindings": [
+    "BMI 30.3 kg/m2 (obesity range)",
+    "LDL 123.1 mg/dL (above goal <100), HDL 35.2 mg/dL (low, below 40), triglycerides 118.6 mg/dL (normal)",
+    "HbA1c 6.4% consistent with prediabetes",
+    "Fasting glucose 67.9 mg/dL, below reference range, plausibly related to meal-skipping pattern he describes as 'low blood sugar' spells",
+    "Self-reported diet pattern: one real meal most days plus vending/drive-through snacking, heavy black coffee intake, minimal water",
+    "Pharmacy refill record shows simvastatin 10mg refills roughly every 55-60 days versus his initial statement of nightly adherence - a mismatch to explore, not confront directly",
+    "Reports living with one other person who is not involved in meals or health support; minimal outside support",
+    "Readiness to change: contemplation stage - intellectually engaged but behaviorally inconsistent"
+   ],
+   "plan": [
+    "Document ADIME note: Assessment (diet history, anthropometrics, labs, psychosocial/readiness), Diagnosis (PES statement(s) above), Intervention (education + goal-setting), Monitoring/Evaluation plan",
+    "Collaboratively identify 1-2 concrete, shift-compatible changes (e.g., a hydration strategy such as keeping a water bottle at his station, or a protein-forward vending/drive-through swap)",
+    "Discuss consistent meal timing/spacing to reduce skipped-meal to overeating cycle, linking this gently to his reported lightheadedness episodes",
+    "Normalize and validate his health-reading efforts; build on accurate knowledge rather than correcting him outright",
+    "Explore statin beliefs and adherence pattern non-judgmentally; without providing medical/prescribing advice, encourage him to discuss muscle-ache concerns and the refill gap with his prescriber, and offer to coordinate information sharing with the care team as appropriate within a nutrition visit scope",
+    "Assess and acknowledge social isolation; discuss low-cost ways to add structure/support (e.g., his daughter check-ins, the weekly diner routine as a strength to build on)",
+    "Set a follow-up plan to track weight, diet pattern, and labs at next visit; reinforce that change can be incremental"
+   ],
+   "redFlags": [
+    "Fasting glucose of 67.9 mg/dL is below the reference range and he attributes lightheadedness to this; worth noting in the ADIME note and flagging for the medical team given his age and job requiring alertness, though not an emergency in this visit",
+    "Self-reported near-nightly statin adherence contradicted by refill pattern - a mismatch that should be explored with curiosity, not confrontation, and documented factually without accusatory language",
+    "His hidden fear about losing his license/job due to seizure history, if it emerges, should be acknowledged supportively and, with his permission, communicated to the broader care team rather than addressed by the dietitian alone"
+   ],
+   "educationPoints": [
+    "Explain how LDL and HDL numbers relate to his overall cardiovascular risk in plain terms building on what he's already read",
+    "Clarify that skipping meals, especially with his irregular schedule, can contribute to the dizzy spells he's noticing, and that regular meal timing may help more than skipping to 'save calories'",
+    "Discuss simple ways to boost water intake during overnight shifts without adding driving trips (e.g., a refillable bottle kept at his station)",
+    "Offer realistic protein-forward alternatives within vending machine and drive-through constraints (e.g., nuts, string cheese, or egg-based options) rather than an all-or-nothing diet overhaul",
+    "Reinforce that medication and nutrition work together rather than one replacing the other, without overriding his prescriber's role in medication decisions",
+    "Validate his research efforts and effort to improve, countering his fear that he's 'failing' or that his age makes change pointless"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "When first asked generally about his statin, he says he takes simvastatin every night, pretty much (s12/h23).",
+    "recordEvidence": "Pharmacy refill history shows simvastatin 10mg fills dispensed at roughly 55-60 day intervals over six months, far longer than the expected 30-day supply interval (d4).",
+    "teachingPoint": "Self-reported adherence often overstates actual medication-taking; refill/fill-interval data can reveal a gap that should be explored with curiosity and non-judgmental follow-up rather than confrontation, especially since it affects how diet-vs-medication counseling messages should be framed.",
+    "factId": "s12",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 25,
+   "condition": "Hyperlipidemia",
+   "conditionLabel": "84 M · Hyperlipidemia, Polyp of colon, History of seizure +4 · 2 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "268bde4f",
+   "fingerprint": "k9f0r4"
+  }
+ }
+}

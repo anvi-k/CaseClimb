@@ -1,0 +1,1102 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling for Fragile Early Behavior Change in a 26-Year-Old with Prediabetes, Chronic Pain, and Food Insecurity",
+  "summary": "This case presents Oscar Kihn, a 26-year-old uninsured man with new prediabetes, chronic low back pain, a 2020 brain injury, and mild anemia, who presents warm and chatty but reluctant to disclose medication overuse, prior heavy drinking, or unreported supplement/opioid use. It teaches learners to conduct a nontransactional diet/OTC-medication history that surfaces a patient-vs-chart mismatch (unlabeled iron pills and rationed hydrocodone-acetaminophen not reflected in the record), to formulate a food-insecurity-sensitive nutrition diagnosis, and to use motivational interviewing to support a fragile early behavior change while recognizing when findings exceed dietetics scope and require referral.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Somerville, NJ (patient notes it's noisy because he shares the house with six family members)",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Oscar Kihn",
+   "age": 26,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Part-time stock associate at a hardware store",
+   "language": "English",
+   "appearance": "Calling from a cramped bedroom with a mattress visible behind him and muffled household noise in the background; leans forward chatty and smiling, occasionally rubbing his lower back or pausing mid-sentence before laughing it off; dressed in a hardware store polo like he's about to head to a shift.",
+   "portrait": "/portraits/synthea-oscar-kihn-13d36647.jpg"
+  },
+  "persona": {
+   "personality": "Warm, talkative, eager to be liked, quick with a joke or a compliment; proud of small wins but quietly afraid they won't last.",
+   "communicationStyle": "Chatty and informal, uses plain everyday language, asks the student personal questions and tries to connect; pivots to sports, church, or jokes whenever money, pain pills, or his drinking history come up; gets a little defensive if he senses judgment about his diet or budget.",
+   "healthLiteracy": "low",
+   "emotionalState": "Anxious underneath a friendly surface — worried the prediabetes diagnosis means he's 'going downhill,' proud of recent changes but scared one bad week will undo them, and embarrassed about things he hasn't told anyone yet.",
+   "background": "Oscar is a 26-year-old from Somerville, NJ, who works part-time stocking shelves at a hardware store and lives with six other family members in one house. He left high school with some vocational training but never did a four-year degree, which makes him a little self-conscious around people he sees as more educated. His closest community is his church's young adults group — he calls them 'basically my second family' — they do potlucks, give each other rides, and pray for one another. He likes pickup basketball at the church gym on weekends when his back allows, and he keeps a dog-eared devotional booklet his small-group leader gave him in his truck. He's saving spare cash in a jar toward a used car so he doesn't have to keep borrowing his cousin's.",
+   "speechExamples": [
+    "Yeah I cut way back on the soda these last few weeks — pretty proud of that, honestly.",
+    "My back's been bad since '18, hurt it moving stuff at an old job.",
+    "Ha, my brain's got a few potholes since 2020, I just laugh it off now.",
+    "I eat what we can afford, man, not everybody can buy the fancy stuff.",
+    "So wait, what do YOU usually eat on a work night? I'm nosy like that."
+   ],
+   "concerns": [
+    "Worried the prediabetes news means he's 'going downhill' like an uncle who lost his foot to diabetes",
+    "Afraid of being judged for using the food pantry and buying cheap food",
+    "Nervous about mixing OTC pain meds without really knowing the limits",
+    "Scared the 'good streak' he started a few weeks ago will fall apart like it has before"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition visit with Oscar Kihn, a 26-year-old man recently diagnosed with prediabetes. He is calling from home. This is a follow-up nutrition assessment tied to his prediabetes care plan. Review the available health record before the call.",
+   "chiefComplaint": "Follow-up nutrition visit for newly diagnosed prediabetes",
+   "openingLine": "Hey, thanks for calling — yeah so, I guess I'm here 'cause they told me I'm prediabetic now. I already started cutting back on soda the last few weeks though, pretty proud of that.",
+   "tasks": [
+    "Take a focused diet, meal pattern, and supplement/OTC medication history",
+    "Review available vitals, anthropometrics, and lab results relevant to his nutrition status",
+    "Identify a nutrition diagnosis related to his prediabetes and current eating pattern",
+    "Explore barriers to healthy eating such as budget, food access, pain, and health literacy",
+    "Use motivational interviewing to support and reinforce his recent small changes, and note anything that needs follow-up with his primary care provider"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for newly diagnosed prediabetes"
+   },
+   {
+    "label": "Care team",
+    "value": "No assigned primary care physician on file; uninsured; last seen at Somerville Family Health Center sliding-scale clinic"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (default, not clinically discussed)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic pain (since 2018); Chronic low back pain (since 2018); Traumatic or nontraumatic brain injury (since 2020); Prediabetes (since 2025); Anemia (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "Ibuprofen 400 MG Oral Tablet [Ibu]; Acetaminophen 325 MG Oral Tablet [Tylenol]; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for nutrition follow-up related to newly diagnosed prediabetes.",
+    "says": "I just found out I'm prediabetic so I'm here to figure out how to eat better before it turns into something worse.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent diet changes",
+    "chart": "Reports cutting back on soda and starting evening walks over the past few weeks.",
+    "says": "I cut way back on soda the last few weeks and started walking some nights, I'm pretty proud of that.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "back pain history",
+    "chart": "Chronic low back pain since 2018 from a work injury, worsened by standing shifts.",
+    "says": "My back's been bad since 2018, I hurt it moving stuff at an old job, and standing all day at the store doesn't help.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "energy and fatigue",
+    "chart": "Reports feeling worn out and short of breath with exertion such as climbing stairs.",
+    "says": "Lately I get winded just going up the stairs, which is annoying.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "afternoon energy dips",
+    "chart": "Reports craving sweets in the afternoon when energy crashes.",
+    "says": "Around 3pm I just want something sweet, my energy tanks.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "head injury history",
+    "chart": "Traumatic brain injury in 2020; reports occasional headaches and trouble concentrating he attributes to this.",
+    "says": "I had a head injury back in 2020, sometimes I still get headaches or lose my train of thought, but it's old news, I'm fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "dizziness",
+    "chart": "Reports occasional dizziness, not previously reported to a provider.",
+    "says": "I do get a little dizzy sometimes, honestly haven't told anybody that before.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "concentration lapses",
+    "chart": "Occasionally loses train of thought mid-sentence, attributes this to old brain injury.",
+    "says": "Sometimes I just blank out mid-sentence, my brain's got a few potholes, ha.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Denies nausea, vomiting, abdominal pain, or blood in stool.",
+    "says": "No, my stomach's fine, no pain or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain or palpitations.",
+    "says": "No chest pain or racing heart, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, urination frequency, or blurry vision.",
+    "says": "I'm not drinking a ton of water or peeing more than usual, and my eyes are fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "sleep and appetite",
+    "chart": "Reports inconsistent sleep; appetite intact.",
+    "says": "I don't sleep great with the house so noisy, but I'm always hungry, that's for sure.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "prediabetes diagnosis",
+    "chart": "Diagnosed with prediabetes in 2025, HbA1c 5.8% on 2026-07-02.",
+    "says": "They told me my sugar's borderline, prediabetes they called it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "anemia diagnosis",
+    "chart": "Diagnosed with anemia in 2026; hemoglobin 11.3 g/dL on 2026-07-09.",
+    "says": "They also said I'm a little anemic, which I guess explains being tired all the time.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "chronic pain history",
+    "chart": "Chronic pain and chronic low back pain since 2018.",
+    "says": "I've had this chronic pain thing going since 2018, mostly my back.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "brain injury history",
+    "chart": "History of traumatic brain injury since 2020.",
+    "says": "Had a brain injury back in 2020 from an accident, but I'm mostly back to normal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "past alcohol-related diagnosis",
+    "chart": "History of unhealthy alcohol drinking behavior, 2023-06 to 2025-10, resolved.",
+    "says": "I used to drink more than I should've for a couple years, but I got that under control.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "recent respiratory illness",
+    "chart": "History of acute bronchitis, 2025-11, resolved.",
+    "says": "I had bronchitis a while back but that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "recent dental care",
+    "chart": "Recent dental cleaning and gingival exam on 2026-07-23, resolved gingivitis/gingival disease from 2023.",
+    "says": "I just got my teeth cleaned up at the dentist, nothing major.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries reported.",
+    "says": "I've never had any surgeries.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "OTC pain medication use",
+    "chart": "Reports taking ibuprofen 400 mg as needed, usually a few times a week for back pain.",
+    "says": "I take ibuprofen when my back's acting up, a few times a week usually.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "OTC pain medication use",
+    "chart": "Reports taking acetaminophen 325 mg daily or near-daily, often alongside ibuprofen.",
+    "says": "I also take Tylenol pretty much every day, sometimes with the ibuprofen.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "ibuprofen dosing pattern",
+    "chart": "Reports sometimes taking more ibuprofen than labeled dose when pain is severe.",
+    "says": "Honestly sometimes I take a bit more than the bottle says, it just doesn't touch the pain otherwise, but I worry it's hard on my stomach.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "leftover prescription pain medication",
+    "chart": "Rations a few leftover acetaminophen-hydrocodone 300mg/5mg tablets from an old prescription, used every couple weeks on severe pain days.",
+    "says": "I've got a few old pain pills left from way back, the ones with hydrocodone, I only use one every couple weeks on the worst days, I didn't want to mention it 'cause I don't want anyone thinking I'm drug-seeking.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "vitamin and supplement use",
+    "chart": "Reports taking a dollar-store multivitamin most days.",
+    "says": "I take a cheap multivitamin from the dollar store most days.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "unreported iron supplement use",
+    "chart": "Takes unlabeled iron pills given by a cousin, a few times a week when feeling tired, not disclosed to any provider and not the brand his doctor would know about.",
+    "says": "My cousin gave me some iron pills, I take 'em a few times a week when I'm feeling really wiped out, I never told a doctor about those.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "protein supplement use",
+    "chart": "Uses a protein powder mixed into milk after work.",
+    "says": "I mix protein powder into milk after my shift, got it on sale.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household living situation",
+    "chart": "Lives in a household of 7 family members in Somerville, NJ",
+    "says": "I live with six other family members, it's a full house, that's for sure.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "employment",
+    "chart": "Works part-time as a stock associate at a hardware store",
+    "says": "I stock shelves part-time at the hardware store, keeps me on my feet all day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "church community support",
+    "chart": "Reports strong support from church young adults group, describes them as 'second family'",
+    "says": "My church group is basically my second family, they keep me sane.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "goals",
+    "topic": "blood sugar goal",
+    "chart": "States goal of preventing progression to diabetes",
+    "says": "I just don't want this prediabetes thing turning into the real deal.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "goals",
+    "topic": "weight goal",
+    "chart": "States goal of losing weight without buying specialty foods",
+    "says": "I'd like to drop some weight but I can't be buying some special diet food, we don't have room in the budget for that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "family health history fears",
+    "chart": "Expresses fear of diabetes-related complications, references uncle who had an amputation",
+    "says": "My uncle lost his foot to diabetes. I don't want to end up like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "family",
+    "category": "family",
+    "topic": "family medical history",
+    "chart": "Reports uncle with diabetes complicated by lower extremity amputation",
+    "says": "My uncle, he had diabetes bad, lost part of his foot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "nutrition",
+    "topic": "food budget concerns",
+    "chart": "Reports tight food budget shared among household of 7",
+    "says": "Money's tight with seven of us splitting everything, food's gotta stretch far.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "other",
+    "topic": "food assistance use",
+    "chart": "Reports intermittent use of local food pantry, typically Fridays",
+    "says": "Sometimes I hit up the food pantry on Fridays if things are running low.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "other",
+    "topic": "food insecurity screening",
+    "chart": "Reports going without food at times due to cost",
+    "says": "There's been weeks I just didn't eat as much so my younger cousins could.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "function",
+    "topic": "work-related fatigue",
+    "chart": "Reports back pain and fatigue after standing shifts limiting energy for meal prep",
+    "says": "By the time I get home from stocking shelves my back's killing me, I don't got energy to cook.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "education background",
+    "chart": "Completed vocational training beyond high school, did not pursue 4-year degree",
+    "says": "I did some trade school after high school, never went for the big college degree though.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "self-consciousness around education",
+    "chart": "Reports feeling self-conscious around more educated providers",
+    "says": "I know I'm not as book-smart as some of you doctors, so bear with me.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "adherence",
+    "topic": "recent lifestyle change",
+    "chart": "Reports cutting back soda intake and starting evening walks a few weeks ago",
+    "says": "I cut way back on soda the last few weeks and started walking some evenings, pretty proud of that actually.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "confidence in maintaining change",
+    "chart": "Expresses concern that recent behavior changes may not be sustained under stress",
+    "says": "I don't know, I mess these things up eventually, one bad week and I'm back to square one.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "substance",
+    "topic": "past alcohol use",
+    "chart": "History of heavier alcohol use 2023-2025, now resolved per patient report, credits church group support",
+    "says": "Yeah I used to drink a lot more a couple years back, my church group kinda helped me get a handle on it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "current alcohol use",
+    "chart": "Reports rare, light current alcohol intake",
+    "says": "I barely drink now, maybe once in a blue moon.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s17",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Denies current tobacco use",
+    "says": "Nah, I don't smoke or nothing.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "function",
+    "topic": "physical activity pattern",
+    "chart": "Reports standing/walking shifts at work several days a week, otherwise fairly sedentary at home due to back pain",
+    "says": "I'm on my feet a lot at work but at home I mostly just sit, my back don't let me do much else.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s19",
+    "category": "other",
+    "topic": "weekend recreation",
+    "chart": "Reports playing pickup basketball at church gym on weekends when back allows",
+    "says": "When my back's not acting up I like to shoot some hoops with the guys at church on weekends.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s20",
+    "category": "psychosocial",
+    "topic": "trust in care sources",
+    "chart": "Reports trusting pastor and church small group more than doctors for day-to-day guidance",
+    "says": "Honestly I trust my pastor and my small group more than most doctors when it comes to day to day stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s21",
+    "category": "sexual",
+    "topic": "relationship status",
+    "chart": "Not currently in a committed relationship, no reported sexual health concerns",
+    "says": "Nah, I'm single right now, nothing to report there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s22",
+    "category": "psychosocial",
+    "topic": "sleep pattern",
+    "chart": "Reports inconsistent sleep due to noisy household and financial worries",
+    "says": "Sleep's rough, house is loud and my head's spinning about money sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s23",
+    "category": "goals",
+    "topic": "role modeling for siblings",
+    "chart": "States desire to set a healthy example for younger siblings in the household",
+    "says": "I got younger cousins and siblings looking up to me, I want to show them it's possible to do better.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s24",
+    "category": "psychosocial",
+    "topic": "fear of judgment",
+    "chart": "Expresses worry about being judged for diet choices or budget constraints",
+    "says": "I eat what we can afford, not everybody can buy the fancy stuff, don't want nobody looking down on that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s25",
+    "category": "other",
+    "topic": "financial saving goal",
+    "chart": "Reports saving money toward purchasing a used car",
+    "says": "I've been saving up in a jar for a used car so I don't gotta keep borrowing my cousin's.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s26",
+    "category": "psychosocial",
+    "topic": "fear of disability",
+    "chart": "Expresses fear of becoming disabled or a burden on the household due to back or head injury",
+    "says": "I don't want to end up disabled or like a burden on everybody at home, that scares me more than anything.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s27",
+    "category": "nutrition",
+    "topic": "nutrition label understanding",
+    "chart": "Reports difficulty understanding nutrition labels and portion guidance",
+    "says": "Those nutrition labels on the back, I never really know what I'm supposed to be looking at.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s28",
+    "category": "other",
+    "topic": "belief about supplements",
+    "chart": "Believes vitamins and supplements can compensate for a less-than-ideal diet",
+    "says": "I figure if I take my vitamins it kinda makes up for not eating perfect, right?",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "24-hour diet recall / usual intake assessment",
+    "aliases": [],
+    "result": "Patient reports: skips breakfast most days before shift; large shared household dinner ~7pm (spaghetti with jarred sauce and sale meat, peanut butter sandwiches, or fried bologna); grazes on vending-machine snacks between meals; drinks mostly soda and tap water, says he 'cut way back on soda the last few weeks'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Food security screening (Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient endorses 'sometimes' running out of food before being able to afford more, and sometimes worrying food will run out; reports using the food pantry some Fridays",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score 1/12 (current light, infrequent drinking)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Physical activity assessment (self-report)",
+    "aliases": [],
+    "result": "On his feet for stocking shifts several days a week; otherwise fairly sedentary at home due to back pain; reports he 'started walking some evenings a few weeks ago'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [],
+    "result": "Patient describes himself as having made recent changes (cutting soda, evening walks) a few weeks ago; expresses pride but uncertainty about sustaining them, consistent with action stage with low confidence",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "OTC medication and supplement use inventory (patient self-report)",
+    "aliases": [],
+    "result": "Patient volunteers: dollar-store multivitamin 'most days,' protein powder mixed into milk after work; reports ibuprofen 400mg a few times a week and acetaminophen 325mg daily/near-daily as above",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review pharmacy/medication fill history",
+    "aliases": [],
+    "result": "Fill history shows acetaminophen 325mg tablets filled consistent with near-daily use, and ibuprofen 400mg filled at a rate suggesting use somewhat above the 'few times a week' reported; also shows one acetaminophen-hydrocodone 300mg/5mg prescription filled several months ago with no refills recorded since",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review most recent dental visit note",
+    "aliases": [],
+    "result": "2026-07-23: bitewing X-ray, gingival exam, scaling/plaque removal performed; no concerns noted; resolved gingivitis/gingival disease from 2023",
+    "importance": "minor",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 136/90 mmHg, heart rate 78/min, respiratory rate 13/min, weight 87 kg, height 181.2 cm, BMI 26.5 kg/m2, weight change +1.4 kg since 2025-06-26 (recorded 2026-07-02).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.8 %; Glucose 98.5 mg/dL; Haemoglobin 11.3 g/dL; White cell count 8 10*3/uL; Platelets 375.8 10*3/uL; Potassium 5 mmol/L; Sodium 143.6 mmol/L; Urea nitrogen 13.6 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-10-30); Hep B adult (2022-06-09); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2021-06-03); meningococcal MCV4P (2021-06-03); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-20).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Nutrition Intake Questionnaire (patient-completed, prior to visit)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-06-28",
+    "author": "Patient-reported, intake form",
+    "body": "Supplements/OTC products currently used: 'Multivitamin (dollar store brand), most days.' No other supplements listed. Protein powder noted under 'other foods/drinks' as 'mix into milk after work.' Section on prescription pain medication use left blank."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Pharmacy Fill History Summary",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2026-07-20",
+    "author": "Somerville Pharmacy Services",
+    "body": "Acetaminophen 325 mg tablets, 100-count bottle, OTC purchase pattern tracked via loyalty card: approximately one bottle every 5-6 weeks, consistent with near-daily use. Ibuprofen 400 mg tablets, 100-count bottle: approximately one bottle every 3-4 weeks, a rate exceeding 'a few times a week' as reported. Acetaminophen 300 mg / Hydrocodone bitartrate 5 mg tablets: single fill of #20 tablets on 2026-02-14, prescriber Dr. R. Alvarez (urgent care), no refills on file since; remaining supply not tracked by pharmacy."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Dental Visit Note",
+    "release": {
+     "when": "action",
+     "ref": "a17"
+    },
+    "date": "2026-07-23",
+    "author": "Somerville Dental Associates",
+    "body": "Bitewing radiographs obtained. Gingival examination unremarkable. Supragingival and subgingival plaque/calculus removed from all teeth. Patient tolerated procedure well. History of gingivitis/gingival disease (2023-06, resolved). No further dental concerns at this time."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic pain (since 2018)\nChronic low back pain (since 2018)\nTraumatic or nontraumatic brain injury (since 2020)\nPrediabetes (since 2025)\nAnemia (since 2026)\n\nRECENTLY RESOLVED\nUnhealthy alcohol drinking behavior (2023-06 to 2025-10)\nGingivitis (2023-06 to 2023-06)\nGingival disease (2023-06 to 2023-06)\nViral sinusitis (2023-10 to 2023-10)\nAcute bronchitis (2025-11 to 2025-11)\n\nPROCEDURES\n2026-07-23: Dental plain X-ray bitewing\n2026-07-23: Examination of gingivae (Patient referral for dental care)\n2026-07-23: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2026-07-23: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2026-07-23: Dental care (Patient referral for dental care)\n2026-07-23: Dental consultation and report (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-07-23 ambulatory: Encounter for check up (Patient referral for dental care)\n2026-07-09 ambulatory: Encounter for problem (Anemia)\n2026-07-02 wellness: General examination of patient\n2025-11-13 ambulatory: Encounter for symptom (Acute bronchitis)\n2025-11-06 outpatient: Encounter for check up\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact); Therapy"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ibuprofen 400 MG Oral Tablet [Ibu]",
+        "2026-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+        "2026-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+        "2018-10",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.8",
+        "%",
+        "< 5.7",
+        "2026-07-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "98.5",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-07-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.3",
+        "g/dL",
+        "12.0-17.5",
+        "2026-07-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-07-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "375.8",
+        "10*3/uL",
+        "150-450",
+        "2026-07-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-07-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143.6",
+        "mmol/L",
+        "135-145",
+        "2026-07-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "13.6",
+        "mg/dL",
+        "7-20",
+        "2026-07-02"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete and accurate OTC medication, prescription, and supplement history despite low health literacy and reluctance to disclose, including unlabeled or informally-sourced products.",
+    "factIds": [
+     "h21",
+     "h22",
+     "h23",
+     "h24",
+     "h25",
+     "h26",
+     "h27"
+    ],
+    "actionIds": [
+     "a13",
+     "a14"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Interpret vitals, anthropometrics, and relevant labs (HbA1c, fasting glucose, CBC/hemoglobin, BMP) to characterize nutrition status in the context of prediabetes and anemia.",
+    "factIds": [
+     "h13",
+     "h14",
+     "h4",
+     "h7"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Formulate a nutrition diagnosis addressing excessive carbohydrate/energy intake relative to needs, grounded in a focused diet and meal pattern history.",
+    "factIds": [
+     "h5",
+     "s13"
+    ],
+    "actionIds": [
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify and discuss practical barriers to healthy eating, including food insecurity, tight household budget, chronic pain, fatigue, and low health literacy.",
+    "factIds": [
+     "s7",
+     "s8",
+     "s9",
+     "s10",
+     "s27"
+    ],
+    "actionIds": [
+     "a9",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Apply motivational interviewing techniques to affirm and reinforce a fragile, recently-initiated behavior change (reduced soda, evening walking).",
+    "factIds": [
+     "h2",
+     "s13",
+     "s14"
+    ],
+    "actionIds": [
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize safety-relevant findings outside dietetics scope (overlapping acetaminophen exposure, unreported dizziness, unlabeled supplement use) and determine when to refer to the primary care provider rather than manage directly.",
+    "factIds": [
+     "h7",
+     "h24",
+     "h26"
+    ],
+    "actionIds": [
+     "a14",
+     "asyn1"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Nutrition diagnosis: Excessive carbohydrate/energy intake relative to needs (NI-5.8/NI-1.3) in a 26-year-old with prediabetes, in the context of food insecurity, chronic pain, and low health literacy, with a fragile early behavior change (reduced soda, started walking).",
+   "differential": [
+    "Prediabetes nutrition-related: excessive carbohydrate/energy intake relative to estimated needs",
+    "Inconsistent carbohydrate/meal timing pattern (breakfast skipping, large single evening meal, grazing) contributing to glycemic risk",
+    "Food/nutrition-related knowledge deficit regarding portion size and carbohydrate sources (vs. soda-only framing of 'healthy eating')",
+    "Inadequate iron intake/possible multifactorial mild anemia (dietary pattern plus unrecorded supplement use)",
+    "Limited access to nutritious food (food insecurity, household of 7, pantry reliance)"
+   ],
+   "keyFindings": [
+    "HbA1c 5.8% (2026-07-02), fasting glucose 98.5 mg/dL — consistent with prediabetes",
+    "BMI 26.5 kg/m2 (height 181.2 cm, weight 87 kg), weight up 1.4 kg over about a year",
+    "Hemoglobin 11.3 g/dL (mildly low) with mild conjunctival/nail bed pallor on observation",
+    "BP 136/90 mmHg; other labs (sodium, potassium, BUN, WBC, platelets) within normal limits",
+    "Dietary pattern: skips breakfast, large shared starchy/processed dinner (spaghetti with jarred sauce, peanut butter sandwiches, fried bologna), vending-machine snacking, soda as primary beverage",
+    "Reports taking a dollar-store multivitamin 'most days' and protein powder in milk; chart lists only the multivitamin as his supplement",
+    "Patient reveals in conversation that he also takes unlabeled iron pills from a cousin a few times a week when tired, not disclosed to any provider — a mismatch with the chart record of supplement use",
+    "Reports ibuprofen 400mg PRN 'a few times a week' and daily/near-daily acetaminophen 325mg; on gentle questioning admits sometimes exceeding the ibuprofen label dose",
+    "On further exploration, discloses rationing a few leftover acetaminophen-hydrocodone 300mg/5mg tablets every couple of weeks, creating unrecognized overlapping acetaminophen intake with his daily OTC acetaminophen use",
+    "Reports new-onset dizziness he has not mentioned to any provider, plausibly related to anemia and breakfast skipping",
+    "Food insecurity indicators: household of 7, uninsured, intermittent food pantry use, budget-driven food choices",
+    "Currently in action stage of change: reduced soda intake and started evening walking a few weeks ago, but expresses low confidence this will stick"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment: diet history (24-hr recall/typical day), anthropometrics, review of labs/vitals, OTC medication and supplement history, psychosocial/food access screen",
+    "Establish nutrition diagnosis(es) using PES statement format addressing excessive carbohydrate/energy intake relative to needs related to food insecurity and low health literacy, as evidenced by dietary pattern and HbA1c/BMI trend",
+    "Nutrition intervention: patient-centered education on balanced plate/portion concepts (not just 'cutting soda'), practical low-cost carbohydrate-aware meal ideas using foods already in his pattern (spaghetti, peanut butter, canned/boxed pantry items), consistent meal timing including a feasible breakfast option",
+    "Use motivational interviewing to affirm and reinforce his soda reduction and walking as self-directed, fragile but real progress; collaboratively set one small, concrete next step rather than overhauling his diet",
+    "Explore and validate food access barriers; connect him with food pantry days he already uses and any available food assistance resources without judgment",
+    "Flag for referral to primary care / pharmacist: overlapping acetaminophen exposure (OTC acetaminophen plus acetaminophen-hydrocodone), ibuprofen use exceeding label directions, unlabeled iron supplement use of unknown dose/source, and new unreported dizziness — dietetics scope is to identify and refer, not adjust these medications",
+    "Recommend recheck of hemoglobin/anemia workup and vital signs given reported dizziness, in coordination with his medical provider",
+    "Monitoring/follow-up: schedule nutrition follow-up visit to reassess diet pattern, weight, and sustainability of soda/walking changes; coordinate with primary care on labs and medication safety"
+   ],
+   "redFlags": [
+    "Overlapping acetaminophen intake from near-daily OTC acetaminophen plus intermittent acetaminophen-hydrocodone tablets, raising hepatotoxicity risk if combined without awareness",
+    "Ibuprofen use sometimes exceeding labeled dose in an uninsured patient with no routine monitoring (GI/renal risk)",
+    "Unlabeled, unsourced iron supplement use of unknown dose that could mask or complicate anemia work-up",
+    "New, unreported dizziness that has not been evaluated",
+    "Mild anemia (Hgb 11.3) that is undiagnosed in cause and not yet linked to his supplement or dietary pattern"
+   ],
+   "educationPoints": [
+    "Prediabetes can often be addressed with practical shifts in meal timing and portioning rather than buying special or expensive foods",
+    "A consistent breakfast or morning snack may help with energy, afternoon sweet cravings, and glycemic stability",
+    "All over-the-counter medications and supplements, including ones from family members, are important to share with a care team because they can add up or interact",
+    "Small, self-directed changes (like reducing soda and adding walks) are meaningful progress worth protecting with realistic, low-pressure next steps",
+    "Food pantry use and budget-driven food choices are common and nothing to be ashamed of; nutrition guidance can work within that reality"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Oscar reports taking a dollar-store multivitamin most days and protein powder after work as his only supplements (h25, h27)",
+    "recordEvidence": "Nutrition Intake Questionnaire / supplement inventory lists only the dollar-store multivitamin and protein powder; no mention of iron pills from a cousin",
+    "teachingPoint": "Patients may under-report unlabeled or informally-sourced supplements (e.g., pills from family) because they don't think of them as 'real' medication; a gentle, nonjudgmental supplement inventory can surface sources that complicate anemia work-up.",
+    "factId": "h26",
+    "artifactId": "d4"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Oscar reports taking ibuprofen 400mg 'as needed, usually a few times a week' and acetaminophen 325mg 'daily or near-daily' (h21, h22)",
+    "recordEvidence": "Pharmacy Fill History Summary shows ibuprofen refill rate above a 'few times a week' pattern and acetaminophen fills consistent with near-daily use, suggesting higher actual intake than initially reported",
+    "teachingPoint": "Self-reported OTC medication frequency often undercounts actual use, especially when patients fear being judged; cross-checking fill history helps identify overlapping acetaminophen exposure that needs referral.",
+    "factId": "h23",
+    "artifactId": "d5"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 11,
+   "condition": "Anemia",
+   "conditionLabel": "26 M · Anemia, Prediabetes, Traumatic or nontraumatic brain injury +2 · 3 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "13d36647",
+   "fingerprint": "17pvk8q"
+  }
+ }
+}

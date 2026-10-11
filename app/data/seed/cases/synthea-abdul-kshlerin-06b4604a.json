@@ -1,0 +1,1127 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for a Guarded Patient with Ischemic Heart Disease and Comfort-Eating Pattern Not Yet Disclosed",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment and MI-consistent counseling session with a guarded, low-health-literacy cardiac patient in the preparation stage of change. It emphasizes eliciting a comfort-eating pattern layer by layer (initial minimization, reluctant disclosure, and hidden shame-laden episodes), reconciling a self-reported-versus-record medication adherence mismatch without confrontation, and negotiating one concrete, sustainable dietary change rather than a full overhaul - while correctly disregarding two embedded red herrings (an implausible historical eGFR value and resolved dental work).",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Rockaway, New Jersey, sitting in a cluttered kitchen with the TV audible in the background",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Abdul Kshlerin",
+   "age": 66,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Maintenance technician at a commercial office building",
+   "language": "English",
+   "appearance": "Heavyset build, sitting stiffly at a kitchen table in a work polo, partial denture visible when he talks. Posture is closed-off at first—arms crossed, short answers—though he loosens up slightly once rapport builds. The camera shows a crowded kitchen counter behind him with dishes stacked and a coffee maker visible.",
+   "portrait": "/portraits/synthea-abdul-kshlerin-06b4604a.jpg"
+  },
+  "persona": {
+   "personality": "Reserved, private, and practical. Measures a good day by staying busy and providing for his family. Prefers logistics-talk ('where to get a decent sandwich') to feelings-talk. Not prone to complaining, slow to warm up but not hostile.",
+   "communicationStyle": "Gives short, flat answers at first, often one sentence or less. Needs a question asked a second time, gently and in a different way, before he opens up further. Deflects sensitive topics with mild humor or 'it's not a big deal.' Becomes more talkative on neutral/logistics topics (work, food spots, truck) than on feelings or shame-laden topics.",
+   "healthLiteracy": "low",
+   "emotionalState": "Guarded and a little tired. Not acutely anxious, but carries quiet embarrassment about his eating habits and a mild undercurrent of shame he doesn't name directly. Softens and seems relieved when not judged.",
+   "background": "Abdul grew up working-class in northern New Jersey and left school after his GED to start working right away. He's been a maintenance technician at a commercial office building for decades, on his feet most of the day fixing things. He lives in a crowded house with his wife, extended family, and visiting grandkids on weekends - seven people under one roof. Food was never a big ritual growing up; whoever got home first ate. As an adult, grabbing takeout became both a convenience and his main way to unwind and connect with coworkers and his wife. On weekends he plays cards with friends at the local VFW hall. He drives a pickup truck for work and often eats lunch in it, parked somewhere quiet.",
+   "speechExamples": [
+    "Fine, I guess. Nothing new.",
+    "Eh, I eat out most days. It's just easier with everybody and everything going on.",
+    "My wife asks me that enough already.",
+    "It's not a big deal. Everybody snacks sometimes.",
+    "I don't know, I just want one thing I can actually stick with - not some whole big overhaul."
+   ],
+   "concerns": [
+    "Doesn't want another hospital stay that would mean missing work",
+    "Doesn't want to be babied or lectured about giving up the one part of his day that feels like his own",
+    "Worried his wife hovers too much over what he eats and whether he took his pills",
+    "Wants a simple, concrete change, not a long list of things to fix",
+    "Doesn't want to be seen as weak or making a big deal out of his health in front of coworkers"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition counseling visit with Abdul Kshlerin, a 66-year-old man with a history of ischemic heart disease and a mechanical aortic valve replacement, referred for nutrition counseling after a recent cardiology follow-up. He has said he wants help figuring out 'one thing' to change about his eating. Review his available health record before or during the call, take a focused diet and lifestyle history, and provide patient-centered counseling.",
+   "chiefComplaint": "Referred for nutrition counseling; patient wants to identify one concrete change to his eating",
+   "openingLine": "Hey. Yeah, they said I should talk to someone about my eating. I eat out most days - it's just easier with everything going on at home. Figured I'd see what you think I should actually do.",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including meal pattern, food choices, hydration, and physical activity",
+    "Review available anthropometric and laboratory data in the chart and relate them to his nutrition status",
+    "Explore barriers, beliefs, and readiness to change using open-ended, patient-centered questions",
+    "Identify and gently reconcile any inconsistencies between what the patient reports and what the record shows",
+    "Negotiate one specific, sustainable first step for dietary change consistent with his stage of readiness, and document your assessment"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for nutrition counseling after cardiology follow-up; patient reports wanting help identifying one change to his eating"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider; Cardiology (Dr. R. Nakamura); Dietetics (referral); Rockaway Family Dental"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Aortic valve stenosis (since 1963); Ischemic heart disease (since 2006); Abnormal findings diagnostic imaging heart+coronary circulat (since 2006); Loss of teeth (since 2014); History of aortic valve replacement (since 2019)"
+   },
+   {
+    "label": "Medications",
+    "value": "aspirin 81 MG Oral Capsule [Vazalore]; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient presents for outpatient nutrition counseling following cardiology follow-up, referred to identify a sustainable dietary change.",
+    "says": "My cardiologist's office set this up. I guess I'm supposed to figure out one thing to change about my eating.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "eating pattern overview",
+    "chart": "Reports eating out most days, describing it as more convenient than cooking at home.",
+    "says": "I eat out most days. It's just easier with everything going on.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "cardiac history summary",
+    "chart": "Reports longstanding heart disease and a mechanical aortic valve replacement in 2019.",
+    "says": "I've had heart problems basically my whole adult life. Got my valve replaced back in '19.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "exertional symptoms",
+    "chart": "Reports becoming short of breath climbing stairs at the VFW hall.",
+    "says": "Stairs get me winded now, especially at the hall when we play cards.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "chest discomfort",
+    "chart": "Occasional chest tightness that resolves with rest; not consistently reported at every visit.",
+    "says": "Sometimes I get a little tightness in my chest, but it goes away if I sit a minute. Not a big deal.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "energy levels",
+    "chart": "Reports low energy most afternoons.",
+    "says": "By the afternoon I'm pretty dragged out.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "sleep pattern",
+    "chart": "Reports not sleeping well, waking around 4am most nights without further detail offered.",
+    "says": "I don't sleep great. Wake up around 4, every night pretty much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "recent dental work effect on eating",
+    "chart": "Reports mild difficulty chewing for about a week after January dental work, now resolved.",
+    "says": "My gums were sore after they worked on my teeth in January, hurt to chew for a bit, but that's cleared up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "belief about heart condition",
+    "chart": "States he believes his heart condition is largely resolved since the valve surgery.",
+    "says": "Far as I'm concerned, the surgery pretty much fixed me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "dizziness or lightheadedness",
+    "chart": "Denies dizziness or lightheadedness today.",
+    "says": "No, I don't feel dizzy or anything right now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "swelling or edema",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "No swelling in my legs that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Denies palpitations or racing heart.",
+    "says": "My heart doesn't race or flutter or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "bruising or bleeding",
+    "chart": "Reports bruising easily; has not reported this to cardiology.",
+    "says": "I bruise kind of easy lately, but I haven't said anything to my heart doctor about it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "nausea or GI symptoms with meals",
+    "chart": "Occasional use of antacid after large takeout meals; denies vomiting or regular abdominal pain.",
+    "says": "Sometimes I take a Tums after a big takeout meal, but no real stomach trouble otherwise.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "weight changes",
+    "chart": "Denies recent intentional or unintentional weight change.",
+    "says": "My weight's been about the same for a while, far as I know.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "valve condition history",
+    "chart": "Aortic valve stenosis since childhood (1963), mechanical aortic valve replacement 2019.",
+    "says": "I was born with something wrong with my valve, had it replaced a few years back.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "ischemic heart disease history",
+    "chart": "Ischemic heart disease since 2006.",
+    "says": "They told me I had heart disease way back, 2006 or so.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "prior fracture",
+    "chart": "History of bone and ankle fracture, 2021, resolved.",
+    "says": "I broke my ankle a few years ago, but that healed up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of tooth loss since 2014; partial denture; recent dental fillings and cleaning January 2026 for caries and gingivitis, resolved.",
+    "says": "I've lost some teeth over the years, got a partial. Just had some fillings done in January.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "heart surgery history",
+    "chart": "Status post mechanical aortic valve replacement, 2019.",
+    "says": "Had the open-heart surgery for my valve in 2019.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "Status post dental filling placement, cleaning, and bitewing X-ray, January 2026.",
+    "says": "Just had a filling, a cleaning, and some X-rays done at the dentist.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "antiplatelet regimen",
+    "chart": "Takes aspirin 81 mg once daily with coffee and clopidogrel 75 mg once daily; reports consistent adherence to both.",
+    "says": "I take my baby aspirin every morning with my coffee, and the other pill, the clopidogrel, right along with it. Never miss those.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "cholesterol medication adherence",
+    "chart": "Reports taking simvastatin 20 mg nightly, estimates missing it about once a week on late work shifts.",
+    "says": "I take the cholesterol pill most nights. Maybe miss it once a week if I'm working late.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "beta blocker use",
+    "chart": "Takes metoprolol succinate ER 100 mg once daily with breakfast; reports good adherence; notes afternoon fatigue he attributes to the medication.",
+    "says": "I take that one every morning with breakfast. Makes me extra tired in the afternoon sometimes, I think.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "nitroglycerin use",
+    "chart": "Carries nitroglycerin spray 0.4 mg/actuation for chest pain, used twice in the past year; expresses reluctance to use it around coworkers.",
+    "says": "I carry that spray but I've only used it twice all year. I don't want to pull it out in front of the guys at work.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "over the counter use",
+    "chart": "Occasional ibuprofen for knee soreness, a few times monthly; inconsistent multivitamin use.",
+    "says": "I take ibuprofen now and then for my knee, and my wife leaves a multivitamin out but I don't always remember it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h27",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I don't have any allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "ros",
+    "topic": "shortness of breath at rest",
+    "chart": "Denies shortness of breath at rest; only with exertion such as stairs.",
+    "says": "I'm fine just sitting around, it's only when I'm climbing stairs or pushing myself.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a household of 7, including wife and extended family",
+    "says": "It's a full house—me, my wife, the kids and grandkids are around a lot too.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work situation",
+    "chart": "Works full-time as a maintenance technician at a commercial office building",
+    "says": "I'm on my feet all day fixing whatever breaks at the building. Keeps me busy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "spouse involvement",
+    "chart": "Reports wife is supportive but anxious; frequently checks on his eating and medication adherence",
+    "says": "My wife means well, but she's always asking if I'm okay every time I eat something greasy. Gets to be a little much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "privacy about habits",
+    "chart": "Asks that details discussed not be relayed to his wife",
+    "says": "Look, I'll tell you stuff, but I don't need you repeating it all to her, alright?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "budget constraints",
+    "chart": "Reports tight household budget on a single income",
+    "says": "Money's tight. Seven people on what I make, you gotta watch every dollar.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "beliefs about diet cost",
+    "chart": "Believes eating healthy means buying expensive diet food he can't afford",
+    "says": "Eating healthy, that's like buying all that special diet stuff, right? Can't afford that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "beliefs about heart health",
+    "chart": "Believes his heart problem is largely resolved since the valve surgery",
+    "says": "They fixed the valve back in '19. Far as I'm concerned that mostly took care of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "views on changing habits",
+    "chart": "Believes willpower, not information, is the main barrier to changing his eating",
+    "says": "I know what's good for me, mostly. It's just doing it that's the hard part.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "goals",
+    "topic": "readiness for change",
+    "chart": "In preparation stage of change; wants one concrete, manageable first step rather than a full dietary overhaul",
+    "says": "I'm ready to do something. I just want one thing to try, not a whole new way of living.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "States motivation to stay well for his grandchildren and to avoid being a burden on his wife",
+    "says": "I want to see my grandkids grow up. And I don't want my wife taking care of me like I'm an invalid.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "resistance to full diet overhaul",
+    "chart": "Pushes back on any suggestion framed as giving up eating out entirely",
+    "says": "Don't tell me to just stop eating out. That's not happening.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "social",
+    "topic": "social outlet",
+    "chart": "Describes eating out and takeout as tied to his main social connection with coworkers and friends",
+    "says": "Grabbing lunch with the guys, that's kind of my social life. Same with cards at the VFW.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "card game stamina",
+    "chart": "Reports getting winded climbing stairs at the VFW hall where he plays cards weekly",
+    "says": "Those stairs at the VFW get me huffing lately.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s14",
+    "category": "substance",
+    "topic": "alcohol pattern",
+    "chart": "Light alcohol use, 1-2 beers on weekends during card games; never smoked",
+    "says": "Couple beers on the weekend when we play cards. Never smoked, not my thing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s15",
+    "category": "nutrition",
+    "topic": "late night eating",
+    "chart": "Reports, on repeated gentle questioning, eating a whole bag of chips or bowl of cereal late at night a few times a week when stressed or unable to sleep",
+    "says": "Alright, fine—sometimes late at night when I can't sleep I'll go through a whole bag of chips or a big bowl of cereal. Happens more than I'd like, maybe a few times a week when work's been bad. It's not a big deal though.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "feelings about late night eating",
+    "chart": "Reports feeling embarrassed about the frequency of late-night eating episodes",
+    "says": "I don't love admitting that. Feels kind of pathetic, sitting there alone with a bag of chips at midnight.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "other",
+    "topic": "a stressful incident last spring",
+    "chart": "Discloses eating an entire large pizza alone in the garage after a difficult work shift last spring, followed by feeling sick and ashamed; has not told his wife or any provider",
+    "says": "There was this one night last spring, bad shift at work... I ate a whole large pizza by myself out in the garage. Felt sick after. Never told anybody that, not even my wife.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "private snacking at work",
+    "chart": "Keeps a stash of candy bars in his truck's glove box that he eats alone at lunch so his wife will not notice or comment",
+    "says": "I keep some candy bars in the glove box of my truck. Eat 'em at lunch sometimes, by myself, so she doesn't see and start in on me.",
+    "tier": "hidden",
+    "importance": "critical"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review cardiology/surgical history note",
+    "aliases": [],
+    "result": "Ischemic heart disease since 2006; aortic valve stenosis since 1963; mechanical aortic valve replacement 2019; no new cardiac events documented since last cardiology visit.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review recent dental record (January 2026)",
+    "aliases": [],
+    "result": "Note dated 2026-01-19: gingivitis and primary dental caries treated with filling, scaling, and bitewing X-ray; resolved. No ongoing dental complaint documented.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review current medication list and refill history",
+    "aliases": [],
+    "result": "See pharmacy refill record document for simvastatin fill intervals; other medications (aspirin, clopidogrel, metoprolol succinate, nitroglycerin spray) show refill intervals consistent with daily or as-needed use as prescribed.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Take 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: coffee with cream and sugar on waking, skips or rushes breakfast most days; lunch out with coworkers or eaten in his truck; dinner is takeout (diner, Chinese, or pizza) eaten in front of the TV; soda during the day; says he 'forgets to drink water.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess usual meal pattern and food frequency (takeout rotation)",
+    "aliases": [],
+    "result": "Patient describes a weekly rotation: diner cheeseburger platter, Chinese takeout (General Tso's chicken, fried rice), pizza near work on Fridays. Reports eating out 'most days, it's just easier.' Says he usually finishes his plate even when full.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Screen for physical activity level",
+    "aliases": [],
+    "result": "On his feet most of the workday doing maintenance tasks; no structured exercise program. Reports getting winded climbing stairs at the VFW hall during card games.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen alcohol and tobacco use",
+    "aliases": [],
+    "result": "Reports 1-2 beers on weekends while playing cards; denies any history of smoking.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess hydration pattern",
+    "aliases": [],
+    "result": "Patient reports drinking mostly coffee and soda during the day and 'forgets' to drink water.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Assess nutrition label literacy and food budget constraints",
+    "aliases": [],
+    "result": "Patient states he does not know how to read nutrition labels well and believes eating healthy means buying expensive diet food he can't afford on his income.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Assess readiness to change (stage-of-change screening)",
+    "aliases": [],
+    "result": "Patient states he has decided he wants to make a change and is looking for one specific, manageable step rather than an overall diet overhaul; pushes back on suggestions that sound like giving up eating out entirely.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 97/75 mmHg, heart rate 73/min, respiratory rate 13/min, weight 88.1 kg, height 178.1 cm, BMI 27.8 kg/m2 (recorded 2026-01-05).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.6 %; Glucose 88.4 mg/dL; eGFR 9.9 mL/min/1.73m2; Total cholesterol 133.7 mg/dL; LDL cholesterol 81.3 mg/dL; HDL cholesterol 29.1 mg/dL; Triglycerides 117.1 mg/dL; Haemoglobin 14 g/dL; White cell count 4.5 10*3/uL; Platelets 359.2 10*3/uL; Potassium 3.8 mmol/L; Sodium 140.4 mmol/L; Urea nitrogen 16.6 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-01-05); Pneumococcal conjugate PCV 13 (2026-01-05); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2021-12-13); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-04-26).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History — Simvastatin 20 mg Oral Tablet",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "date": "Last 6 fill cycles",
+    "author": "Rockaway Pharmacy Services",
+    "table": {
+     "columns": [
+      "Fill date",
+      "Days supply",
+      "Days since previous fill"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "2025-08-02",
+        "30 days",
+        "—"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2025-09-14",
+        "30 days",
+        "43 days"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "2025-10-25",
+        "30 days",
+        "41 days"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "2025-12-05",
+        "30 days",
+        "41 days"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "2026-01-16",
+        "30 days",
+        "42 days"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Cardiology Follow-up Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-12-10",
+    "author": "Dr. R. Nakamura, Cardiology",
+    "body": "66-year-old male with ischemic heart disease since 2006, aortic valve stenosis since childhood, status post mechanical aortic valve replacement 2019. Stable on current regimen of aspirin 81 mg daily, clopidogrel 75 mg daily, simvastatin 20 mg nightly, metoprolol succinate ER 100 mg daily, nitroglycerin spray PRN. No new chest pain episodes reported at this visit beyond occasional exertional tightness resolving with rest. Mechanical valve click audible on auscultation, unchanged. Blood pressure runs low at baseline (90s/70s systolic), asymptomatic. Referred to dietetics for nutrition counseling given overweight BMI and reliance on prepared/takeout foods per patient report."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Dental Visit Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-01-19",
+    "author": "Rockaway Family Dental",
+    "body": "Patient presented for routine care. Examination of gingivae noted mild gingivitis. Primary dental caries identified in one molar, restored same visit with filling material covering all cusps. Supragingival and subgingival plaque/calculus removed from all teeth. Bitewing X-ray obtained, no additional pathology noted. Patient tolerated procedure well; advised to expect transient soreness for several days."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nAortic valve stenosis (since 1963)\nIschemic heart disease (since 2006)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2006)\nLoss of teeth (since 2014)\nHistory of aortic valve replacement (since 2019)\n\nRECENTLY RESOLVED\nFracture of bone (2021-07 to 2021-09)\nFracture of ankle (2021-07 to 2021-09)\nGingivitis (2026-01 to 2026-01)\nPrimary dental caries (2026-01 to 2026-01)\n\nPROCEDURES\n2026-01-19: Restoration of tooth with coverage of all cusps using dental filling material (Primary dental caries)\n2026-01-19: Dental plain X-ray bitewing\n2026-01-19: Examination of gingivae (Gingivitis)\n2026-01-19: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-01-19: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-01-19: Dental care (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-01-19 ambulatory: Encounter for check up (Gingivitis)\n2026-01-05 wellness: General examination of patient\n2025-10-17 ambulatory: Encounter for check up (Screening for malignant neoplasm of colon)\n2024-12-30 wellness: General examination of patient\n2023-12-25 wellness: General examination of patient\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Care plan (record artifact); Discharge care plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "aspirin 81 MG Oral Capsule [Vazalore]",
+        "2026-01",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2006-11",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2006-11",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2006-11",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2006-11",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.6",
+        "%",
+        "< 5.7",
+        "2019-07-28"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "88.4",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2019-08-31"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "9.9",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2019-08-31"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "133.7",
+        "mg/dL",
+        "< 200",
+        "2026-01-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "81.3",
+        "mg/dL",
+        "< 100",
+        "2026-01-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "29.1",
+        "mg/dL",
+        ">= 40",
+        "2026-01-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "117.1",
+        "mg/dL",
+        "< 150",
+        "2026-01-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "14",
+        "g/dL",
+        "12.0-17.5",
+        "2022-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "359.2",
+        "10*3/uL",
+        "150-450",
+        "2022-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "3.8",
+        "mmol/L",
+        "3.5-5.1",
+        "2019-08-31"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.4",
+        "mmol/L",
+        "135-145",
+        "2019-08-31"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "16.6",
+        "mg/dL",
+        "7-20",
+        "2019-08-31"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a full picture of eating patterns—including meal timing, takeout reliance, hydration, and physical activity—in a reserved patient who gives short initial answers, using open-ended and follow-up questioning techniques.",
+    "factIds": [
+     "h2",
+     "s12",
+     "s9",
+     "s11"
+    ],
+    "actionIds": [
+     "a10",
+     "a11",
+     "a14",
+     "a12"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Explore comfort/stress-related eating and shame-laden disclosures without judgment to build trust, recognizing that some information may only surface with repeated, gentle questioning.",
+    "factIds": [
+     "s15",
+     "s16",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate anthropometric and laboratory data into the nutrition assessment, correctly interpreting findings at goal, findings that are stable baseline, and historical values that are inconsistent with the rest of the record.",
+    "factIds": [
+     "h15"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify and gently reconcile a discrepancy between the patient's self-reported medication adherence and objective pharmacy refill data, without confronting or lecturing the patient.",
+    "factIds": [
+     "h23"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Translate low health-literacy nutrition concepts (sodium, portion size, label reading, cost beliefs) into plain, practical language tailored to the patient's actual food choices.",
+    "factIds": [
+     "s6",
+     "s8"
+    ],
+    "actionIds": [
+     "a15",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Negotiate one specific, sustainable first step for dietary change consistent with the patient's preparation stage of readiness, avoiding language implying he must give up eating out, and incorporate the role of his supportive-but-anxious wife while respecting his request for confidentiality.",
+    "factIds": [
+     "s9",
+     "s11",
+     "s3",
+     "s4",
+     "s10"
+    ],
+    "actionIds": [
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium and energy intake related to heavy reliance on takeout/convenience foods and emotional (stress/comfort) eating, as evidenced by frequent restaurant/takeout meals, skipped breakfast, late-night snacking episodes, and self-reported stress-driven eating patterns, in a patient with ischemic heart disease and overweight BMI.",
+   "differential": [
+    "Nutrition diagnosis: Excessive energy/sodium intake related to food/nutrition knowledge deficit and emotional eating",
+    "Nutrition diagnosis: Undesirable food choices related to limited access to self-prepared meals (household/budget barriers)",
+    "Not primarily a renal nutrition concern - historical eGFR 9.9 (2019) is inconsistent with rest of record and should be flagged for record review, not treated as CKD",
+    "Not primarily dental-nutrition related - January dental work is resolved and only caused transient, mild chewing difficulty"
+   ],
+   "keyFindings": [
+    "BMI 27.8 kg/m2 (overweight), weight 88.1 kg, height 178.1 cm",
+    "Lipids at goal 2026-01-05 (TC 133.7, LDL 81.3, TG 117.1) but HDL low at 29.1 mg/dL",
+    "Vitals stable baseline: BP 97/75, HR 73, RR 13 - low BP is chronic baseline, no dizziness reported",
+    "Diet history: takeout most days (diner, Chinese, pizza Fridays), skipped/rushed breakfast, coffee with cream/sugar multiple cups daily, minimal water intake",
+    "Reluctant disclosure: late-night cereal/chip binges 'a few times a week' when stressed or unable to sleep, wakes ~4am",
+    "Hidden (may not surface): isolated large-pizza binge last spring with shame afterward; ongoing hidden candy stash in truck glove box eaten alone at lunch",
+    "Mismatch: patient reports missing simvastatin only ~once/week, but pharmacy refill record shows refill gaps of 10-14 days beyond a 30-day supply, consistent with more frequent missed doses",
+    "Patient in preparation stage of change - wants one concrete swap, not full overhaul; resists framing of 'giving up eating out'",
+    "Red herring: eGFR 9.9 mL/min/1.73m2 (2019) is inconsistent with absence of any CKD diagnosis, dialysis, or nephrology follow-up and should be noted as a likely lab/entry error for record review, not pursued as active renal disease",
+    "Red herring: recent dental work (fillings/cleaning, Jan 2026) caused brief, now-resolved difficulty chewing; not a current nutritional driver"
+   ],
+   "plan": [
+    "Complete ADIME-formatted nutrition assessment: diet history, 24-hour recall, meal pattern, hydration, physical activity, psychosocial barriers",
+    "Review available anthropometric, vital sign, and lab data already in the chart to contextualize findings (do not duplicate as new findings)",
+    "Review pharmacy refill record if available and gently reconcile with patient's self-reported adherence, without accusing or lecturing",
+    "Explore late-night eating and stress-related eating patterns using open, non-judgmental, repeated gentle questioning",
+    "Negotiate one specific, concrete first step consistent with preparation stage (e.g., a lower-sodium swap at his usual diner, or a specific lunch choice), avoiding language that implies giving up eating out entirely",
+    "Provide plain-language education on sodium and portion size using his own food rotation as examples (diner, Chinese takeout, pizza) rather than generic label literacy instruction alone",
+    "Explore role of spouse supportively - how she could help without feeling like nagging - while respecting his request for confidentiality about specifics if he asks that details not be shared with her",
+    "Document nutrition diagnosis using PES statement and plan for follow-up visit to assess progress on the one agreed change",
+    "Flag the eGFR value and refill-gap pattern for review by the broader care team/record reconciliation rather than treating as new diagnoses in this visit"
+   ],
+   "redFlags": [
+    "Do not initiate or imply new renal diagnosis based on isolated 2019 eGFR of 9.9 without corroborating recent labs or clinical course",
+    "Do not confront patient directly or punitively about suspected under-reported statin non-adherence; raise gently and non-judgmentally",
+    "Avoid framing counseling as 'give up eating out' - will trigger disengagement given his fear of losing his main social outlet",
+    "If patient discloses shame-laden eating episodes, respond without alarm or moralizing to preserve trust and avoid shutting down future disclosure",
+    "Respect any explicit request not to relay details of eating behavior to spouse unless there is an immediate safety concern (there is none here)"
+   ],
+   "educationPoints": [
+    "Simple, concrete swaps within his existing takeout rotation (e.g., smaller portion, lower-sodium order, splitting a meal) are more sustainable for him right now than a full dietary overhaul",
+    "Plain-language explanation of how sodium relates to fluid balance and blood pressure, tailored to his usual meals rather than generic label-reading instruction",
+    "Reassurance that 'healthy eating' does not require expensive specialty foods - focus on where/how he already eats",
+    "Brief, non-alarming explanation linking consistent medication-taking (especially statin) with his heart health, inviting him to raise concerns about side effects with his prescriber",
+    "Normalize that stress-related eating is common and not a moral failing, to reduce shame and encourage future openness",
+    "Offer one agreed-upon next step and plan to check in on it at a follow-up visit rather than overwhelming him with multiple changes at once"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking simvastatin 20 mg nightly, estimates missing it about once a week on late work shifts (h23)",
+    "recordEvidence": "Pharmacy refill history for simvastatin 20 mg shows refill intervals consistently 10-14 days longer than a 30-day supply would allow, indicating doses are missed more often than reported",
+    "teachingPoint": "Self-reported adherence often overestimates actual medication-taking; refill/fill-date patterns provide objective corroboration and should be reconciled gently without confrontation, especially when nutrition counseling intersects with medication-related risk (e.g., lipid management)",
+    "factId": "h23",
+    "artifactId": "d3"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "States he believes his heart condition is largely resolved since the valve surgery (h9/s7)",
+    "recordEvidence": "Cardiology follow-up note documents ongoing ischemic heart disease since 2006 and aortic valve stenosis since 1963 as active, longstanding diagnoses with no indication of resolution, only absence of new acute events since last follow-up",
+    "teachingPoint": "Patients may misunderstand chronic disease as 'fixed' after a procedure; clarifying this belief (without alarming the patient) is relevant to framing nutrition counseling as part of ongoing cardiac risk management rather than optional lifestyle advice",
+    "factId": "h9",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 8,
+   "condition": "History of aortic valve replacement",
+   "conditionLabel": "66 M · History of aortic valve replacement, Loss of teeth, Ischemic heart disease +1 · 5 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "06b4604a",
+   "fingerprint": "d0k903"
+  }
+ }
+}

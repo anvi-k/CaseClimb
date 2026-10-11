@@ -1,0 +1,1047 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Dietary Change in a Skeptical Caregiver with Prediabetes, Obesity, and Hyperlipidemia",
+  "summary": "This case portrays Steven Turcotte, a 57-year-old caregiver with newly diagnosed prediabetes, obesity, and hyperlipidemia, whose fragile early dietary changes are being undermined by unspoken caregiving demands for his elderly mother. It teaches learners to move a guarded, 'why'-driven patient past short, flat answers using repeated open-ended questioning, to reframe portion/food-as-love beliefs without shaming his cooking identity, to correct a common lipid-panel misunderstanding (LDL vs. total cholesterol) in plain language, and to spot a patient-vs-chart mismatch between his stated adherence to self-care and a chart-documented missed cholesterol recheck tied to his caregiving burden.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Brick, New Jersey (kitchen table, evening after work)",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Steven Turcotte",
+   "age": 57,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Facilities maintenance supervisor at a commercial property management company",
+   "language": "English",
+   "appearance": "Heavyset man with a round, full face and central adiposity, seated at his kitchen table in a work polo with the company logo, arms crossed for much of the call; slight under-eye puffiness and a tired, slightly guarded expression; mild ankle swelling visible when he props his foot on a chair rung.",
+   "portrait": "/portraits/synthea-steven-turcotte-2842a581.jpg"
+  },
+  "persona": {
+   "personality": "Gruff, skeptical, analytical; doesn't like being told what to do without a clear reason, but not hostile - once he understands the 'why' he tends to follow through. Prickly if he feels lectured or like his cooking is being criticized.",
+   "communicationStyle": "Answers in short, flat bursts at first ('fine,' 'about the same,' 'not really'). Opens up with more detail if a question is rephrased or asked a second time, especially if he senses genuine curiosity rather than someone reading from a script. Uses plain blue-collar language, no medical jargon.",
+   "healthLiteracy": "low",
+   "emotionalState": "Guarded and a little defensive early on; tired underneath the gruffness; softens when he feels heard; mildly irritated if he thinks he's repeating himself or being lectured.",
+   "background": "Steven is 57, divorced, now living with a supportive partner in Brick, New Jersey. He works full-time as a facilities maintenance supervisor for a commercial property management company, climbing ladders and stairs all day. He grew up in a working-class South Jersey household where his mother cooked every meal from scratch for a houseful of relatives and his father ran a small appliance repair shop; he learned to cook at her side and still keeps a box of his dad's old tools in the garage, fixing neighbors' toasters for fun. He has a regular coffee spot near his mother's house, coaches his nephew's rec-league baseball team on weekends when he can get away, and sees friends only once or twice a week. Food, to him, has always been how he shows love - big trays of baked ziti, second helpings pushed on anyone who visits.",
+   "speechExamples": [
+    "Fine. About the same as always.",
+    "I cook real food, not fast food - don't see the problem.",
+    "Why do I need a pill if my number's not even that high?",
+    "I'm not gonna starve the people I cook for.",
+    "It's fine, I manage.",
+    "Huh. Nobody's ever put it like that before."
+   ],
+   "concerns": [
+    "Doesn't trust that a dietitian can tell him anything his own cooking instincts can't",
+    "Worried the changes he's started will fall apart like they have before",
+    "Annoyed that he's on medication when he thinks food should be enough"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. The patient is Steven Turcotte, a 57-year-old man referred for nutrition counseling related to prediabetes, obesity, and high cholesterol. This is his first nutrition visit. Review his chart before the call, then conduct a focused nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Referred for nutrition counseling for prediabetes, obesity, and high cholesterol",
+   "openingLine": "Yeah, I know why I'm here - doc wants me watching what I eat. Already cut back some on my own the last few weeks, so... not sure what else there is to say.",
+   "tasks": [
+    "Take a focused diet history including typical meals, portion sizes, meal timing, and hydration patterns",
+    "Explore barriers to maintaining the dietary changes he's already started",
+    "Review relevant labs and anthropometrics and explain lipid results in plain language the patient can understand",
+    "Identify what is realistically getting in the way of his own self-care and daily routine",
+    "Collaboratively set 1-2 small, specific nutrition goals he is likely to sustain"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for nutrition counseling for prediabetes, obesity, and high cholesterol"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician (Dr. A. Meeker); referred to Dietetics/Clinical Nutrition for counseling"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 1987); Anemia (since 1991); Sepsis (since 2000); Body mass index 30+ - obesity (since 2011); Sleep disorder (since 2012); Obstructive sleep apnea syndrome (since 2012); Hyperlipidemia (since 2013)"
+   },
+   {
+    "label": "Medications",
+    "value": "Simvastatin 10 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Referred for nutrition counseling for prediabetes, obesity, and hyperlipidemia",
+    "says": "My doctor sent me here 'cause I'm prediabetic and my cholesterol's up, and I'm supposed to watch what I eat.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent diet changes",
+    "chart": "Reports cutting portion sizes and switching to whole wheat bread over the past few weeks",
+    "says": "I already started cutting back on how much I eat and switched to the wheat bread a few weeks ago.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "cooking habits",
+    "chart": "Cooks home-made meals most nights, describes it as 'real food' not fast food",
+    "says": "I cook almost every night, it's not fast food, it's real food.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "consistency of changes",
+    "chart": "Reports difficulty maintaining recent dietary changes consistently",
+    "says": "It's been going okay but it slips sometimes, I'm not gonna lie.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "energy levels",
+    "chart": "Reports fatigue by mid-afternoon most days",
+    "says": "By like 3 o'clock I'm dragging, every day basically.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports snoring loudly and waking unrefreshed",
+    "says": "I snore like a freight train and I still wake up tired.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "breathing during sleep",
+    "chart": "Partner reports witnessed apneic episodes during sleep",
+    "says": "My partner says I stop breathing sometimes at night, scares her.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "heartburn",
+    "chart": "Reports occasional heartburn after large dinners",
+    "says": "After a big dinner I get heartburn sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "clothing fit",
+    "chart": "Reports pants fitting tighter than before",
+    "says": "My pants are tighter than they used to be, that's for sure.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Reports mild ankle swelling by end of day",
+    "says": "My ankles puff up a little by the end of the day sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "chest pain",
+    "chart": "Denies chest pain",
+    "says": "No, nothing like chest pain or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurred vision",
+    "says": "My eyes are fine, no blurry vision or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "frequent urination or thirst",
+    "chart": "Denies polyuria or polydipsia",
+    "says": "I'm not running to the bathroom more than usual or drinking crazy amounts of water.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness or tingling in feet",
+    "says": "No numbness in my feet, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes, long-standing",
+    "says": "They've told me for a while now I'm prediabetic.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "cholesterol history",
+    "chart": "Hyperlipidemia, diagnosed 2013",
+    "says": "I've had the cholesterol thing since like 2013.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "Obesity (BMI 30+), since 2011",
+    "says": "I've been carrying extra weight for a long time now, since around 2011 I guess.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "sleep diagnosis",
+    "chart": "Obstructive sleep apnea and sleep disorder, diagnosed 2012",
+    "says": "I got diagnosed with sleep apnea back in 2012.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "History of anemia since 1991, currently resolved/stable",
+    "says": "I had anemia way back, like the 90s, but that's not really a thing anymore I don't think.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "past serious infection",
+    "chart": "History of sepsis in 2000, no lasting organ damage",
+    "says": "I had a real bad infection, sepsis, back in 2000. Scared the hell out of me. But I'm fine now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h21",
+    "category": "psh",
+    "topic": "recent dental work",
+    "chart": "Dental filling and cleaning procedures, November 2024, resolved",
+    "says": "I had a tooth fixed and a cleaning last year, nothing major.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "cholesterol medication adherence",
+    "chart": "Reports taking simvastatin 10 mg nightly without missing doses, keeps it by the coffee maker",
+    "says": "I take that statin every single night, keep it right by the coffee maker so I don't forget.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "understanding statin purpose",
+    "chart": "Expresses uncertainty about why he needs a statin when his total cholesterol 'doesn't look that bad'",
+    "says": "I don't really get why I need a pill when my cholesterol number don't even look that high to me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "fish oil use",
+    "chart": "Reports taking fish oil capsules inconsistently, a few times a week",
+    "says": "I take fish oil here and there, whenever I remember.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Multivitamin given by partner, rarely taken, bottle mostly full",
+    "says": "My partner got me a multivitamin but honestly it just sits there, I barely touch it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "antacid use",
+    "chart": "Uses Tums as needed after large dinners",
+    "says": "I pop a Tums after a big dinner sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h27",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies",
+    "says": "No allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "hpi",
+    "topic": "own recent checkups",
+    "chart": "States he is 'on top of' his own labs and checkups",
+    "says": "I'm pretty on top of my own checkups and bloodwork, I don't let that slide.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h29",
+    "category": "hpi",
+    "topic": "missed appointment history",
+    "chart": "Record shows a no-show for a scheduled lipid recheck earlier in 2025; patient does not volunteer this",
+    "says": "...I mean, yeah, I guess I had to cancel one appointment, had to take my mother to the ER that same morning, totally forgot about it after.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h30",
+    "category": "hpi",
+    "topic": "own physical exam timing",
+    "chart": "Has not had his own complete physical in over a year",
+    "says": "Honestly? I haven't had a real physical for myself in... over a year probably. There's just never a slot left after her appointments.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with partner; household of 2",
+    "says": "It's just me and my partner at home now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "other",
+    "topic": "work schedule",
+    "chart": "Works full-time as a facilities maintenance supervisor, on his feet most of the day",
+    "says": "I'm a facilities supervisor, I'm on my feet climbing ladders all day.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family cooking background",
+    "chart": "Describes growing up in a household where his mother cooked every meal from scratch for extended family; learned to cook from her",
+    "says": "My mother cooked for a houseful of people every night, that's just how I learned.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "meaning of food",
+    "chart": "Views large portions and seconds as an expression of care for people he feeds",
+    "says": "Food's how I show people I love 'em. You don't give somebody a skimpy plate.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "function",
+    "topic": "structured exercise",
+    "chart": "Reports no structured exercise; used to walk the boardwalk in summer, stopped about 2 years ago",
+    "says": "I used to walk the boardwalk in summer. Haven't done that in a couple years.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "beliefs about exercise",
+    "chart": "Believes structured exercise is for people with desk jobs, not people who work with their hands",
+    "says": "Exercise is for guys sitting at a desk all day. I'm moving all day already.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks beer or wine a few times a week, more on weekends; AUDIT-C approximately 3",
+    "says": "I'll have a beer or wine most nights, maybe more on the weekend.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Does not smoke",
+    "says": "No, never smoked.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "family",
+    "topic": "caregiving responsibilities",
+    "chart": "Spends most evenings caregiving for his elderly mother who lives nearby - cooking her meals, managing bills, driving her to appointments",
+    "says": "Most nights go to my mother, she's up the road. I handle her meals, her bills, drive her around.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "function",
+    "topic": "time for self-care",
+    "chart": "Reports caregiving leaves almost no time to cook differently for himself or to rest",
+    "says": "By the time I'm done with her stuff there's nothing left in the day for me.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "eating during caregiving visits",
+    "chart": "Reports sometimes eating standing at his mother's counter instead of sitting down to a meal",
+    "says": "Some nights I just eat standing up at her counter, whatever's around.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "adherence",
+    "topic": "own medical appointments",
+    "chart": "Has not had his own full physical in over a year; reports appointment slots go to his mother's visits instead",
+    "says": "Honestly I can't remember the last time I went in for myself, her appointments eat up the time.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "adherence",
+    "topic": "missed lab recheck",
+    "chart": "States he is on top of his labs, but reports he skipped a scheduled cholesterol recheck this year because he had to take his mother to the ER that same morning",
+    "says": "I don't miss my own stuff... well, there was one time I had to blow it off 'cause I had to rush her to the ER.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "disclosing fatigue to partner",
+    "chart": "Reports hiding the extent of his fatigue from his partner because she already worries a lot about his health",
+    "says": "I don't tell her how beat I really am. She worries enough already.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "family",
+    "topic": "partner's involvement in care",
+    "chart": "Describes partner as supportive but anxious, frequently reminding him about his medication and diet",
+    "says": "She's great but she's always on me, reminding me about the pill, what I'm eating. It gets to be a lot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "States his uncle lost a foot to diabetes complications; motivated to avoid a similar outcome",
+    "says": "My uncle lost his foot to diabetes. I don't want that to be me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "goals",
+    "topic": "personal goals",
+    "chart": "Wants more energy for work and caregiving, and wants partner to stop worrying so much about him",
+    "says": "I just want enough energy to get through my shift and still help out, and I want her to stop worrying.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "social",
+    "topic": "social contact",
+    "chart": "Sees friends socially only once or twice a week; limited social contact otherwise",
+    "says": "I see my buddies maybe once or twice a week, that's about it these days.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review medication list and refill/adherence record",
+    "aliases": [],
+    "result": "Simvastatin 10 mg oral tablet, once daily, active, last filled on schedule; fish oil and multivitamin listed as patient-reported OTC supplements, not pharmacy-dispensed",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review problem list / diagnosis history",
+    "aliases": [],
+    "result": "Prediabetes (since 1987), Obesity BMI 30+ (since 2011), Hyperlipidemia (since 2013), Obstructive sleep apnea (since 2012), Sleep disorder (since 2012), Anemia (since 1991, resolved), Sepsis (2000, resolved)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review prior lab order and completion history",
+    "aliases": [],
+    "result": "Lipid recheck ordered 2025-04-02 marked 'no-show / not completed'; repeat lipid panel completed later on 2025-11-15",
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall / usual intake assessment",
+    "aliases": [],
+    "result": "Patient reports: workday breakfast is coffee and toast; lunch is a large sandwich; dinner is scratch-cooked Italian-American food (pasta, red sauce, bread) eaten around 7:30-8pm, with large self-plated portions; weekend breakfast larger (eggs, bacon, home fries); hydration mostly coffee and 1-2 sodas/day with water at dinner",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Administer AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "AUDIT-C score 3 (moderate, non-dependent use); beer or wine several times a week, more on weekends",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern (home/work activity recall)",
+    "aliases": [],
+    "result": "On feet most of workday (stairs, ladders) but no structured exercise; previously walked boardwalk in summer, stopped about 2 years ago",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen for sleep quality and daytime fatigue (brief sleep/fatigue questions)",
+    "aliases": [],
+    "result": "Reports about 6 hours of interrupted sleep nightly, loud snoring, partner-witnessed pauses in breathing, wakes groggy, fatigue by mid-afternoon most days",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Review readiness-to-change / stage-of-change for diet",
+    "aliases": [],
+    "result": "Patient reports he started cutting dinner portions and switched from white to whole-wheat bread a few weeks ago; describes difficulty maintaining this consistently",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review most recent completed visit/referral note",
+    "aliases": [],
+    "result": "Referral note from primary care dated 2025-11-15: referred for nutrition counseling for prediabetes, obesity, and hyperlipidemia; no mention of caregiving responsibilities or missed appointments",
+    "importance": "minor",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 113/68 mmHg, heart rate 85/min, respiratory rate 14/min, weight 100.1 kg, height 182.6 cm, BMI 30 kg/m2 (recorded 2025-11-08).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.1 %; Glucose 99.2 mg/dL; eGFR 76.2 mL/min/1.73m2; Total cholesterol 154.8 mg/dL; LDL cholesterol 136 mg/dL; HDL cholesterol 55.2 mg/dL; Triglycerides 155 mg/dL; Haemoglobin 12.8 g/dL; White cell count 7.5 10*3/uL; Platelets 380.7 10*3/uL; Potassium 4.5 mmol/L; Sodium 138.8 mmol/L; Urea nitrogen 16.2 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-11-08); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-01-30); zoster vaccine live (2020-10-10); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2020-10-10).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Order History - Laboratory Referrals 2025",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "date": "2025-11-15",
+    "author": "Primary Care Clinic",
+    "body": "2025-04-02: Lipid panel recheck ordered following routine follow-up visit. Status: No-show, patient did not attend scheduled draw. Order closed without result.\n\n2025-11-15: Repeat lipid panel and metabolic panel ordered and completed; results on file.\n\nNo documentation on file of a full annual physical exam for this patient in the past 12 months."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Nutrition Referral Note",
+    "release": {
+     "when": "action",
+     "ref": "a17"
+    },
+    "date": "2025-11-15",
+    "author": "Dr. A. Meeker, Primary Care",
+    "body": "57-year-old male referred for nutrition counseling in the setting of prediabetes (HbA1c 6.1%), obesity (BMI 30), and hyperlipidemia (LDL 136 mg/dL). Patient reports home-cooked meals most nights. No structured exercise program. Please assess dietary pattern, provide education on lipid management, and support behavior change. Follow up with PCP in 3 months for repeat labs."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 1987)\nAnemia (since 1991)\nSepsis (since 2000)\nBody mass index 30+ - obesity (since 2011)\nSleep disorder (since 2012)\nObstructive sleep apnea syndrome (since 2012)\nHyperlipidemia (since 2013)\n\nRECENTLY RESOLVED\nViral sinusitis (2022-01 to 2022-01)\nViral sinusitis (2022-04 to 2022-04)\nLaceration - injury (2022-08 to 2022-09)\nFacial laceration (2022-08 to 2022-09)\nPrimary dental caries (2024-11 to 2024-11)\n\nPROCEDURES\n2024-11-16: Application of composite dental filling material to dentin of tooth following fracture of tooth (Primary dental caries)\n2024-11-16: Dental plain X-ray bitewing\n2024-11-16: Examination of gingivae (Patient referral for dental care)\n2024-11-16: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2024-11-16: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2024-11-16: Dental care (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2025-11-15 ambulatory: Follow-up encounter (Hyperlipidemia)\n2025-11-08 wellness: General examination of patient\n2024-11-16 ambulatory: Encounter for check up (Patient referral for dental care)\n2024-11-06 ambulatory: Follow-up encounter (Hyperlipidemia)\n2024-11-02 wellness: General examination of patient\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Care plan (record artifact); Diabetes self management plan (record artifact); Hyperlipidemia clinical management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Simvastatin 10 MG Oral Tablet",
+        "2025-11",
+        "Hyperlipidemia"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.1",
+        "%",
+        "< 5.7",
+        "2025-11-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "99.2",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "76.2",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "154.8",
+        "mg/dL",
+        "< 200",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "136",
+        "mg/dL",
+        "< 100",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "55.2",
+        "mg/dL",
+        ">= 40",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "155",
+        "mg/dL",
+        "< 150",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.8",
+        "g/dL",
+        "12.0-17.5",
+        "2021-10-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "7.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2021-10-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "380.7",
+        "10*3/uL",
+        "150-450",
+        "2021-10-16"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.5",
+        "mmol/L",
+        "3.5-5.1",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "138.8",
+        "mmol/L",
+        "135-145",
+        "2025-11-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "16.2",
+        "mg/dL",
+        "7-20",
+        "2025-11-15"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Build rapport with a skeptical, terse patient using open-ended questions and gentle repeated follow-up to uncover barriers not offered on first ask.",
+    "factIds": [
+     "h4",
+     "s9",
+     "s10",
+     "s11"
+    ],
+    "actionIds": [
+     "a11",
+     "a15"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Take a focused diet history including portion sizes, meal timing, and hydration, and recognize how large home-cooked portions function as an expression of care within this patient's cultural and family background.",
+    "factIds": [
+     "h3",
+     "s3",
+     "s4"
+    ],
+    "actionIds": [
+     "a11"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review anthropometrics and relevant labs (HbA1c, lipid panel, kidney function) and explain lipid results in plain language, addressing the patient's misunderstanding that his cholesterol is 'fine' when his LDL is elevated.",
+    "factIds": [
+     "h23",
+     "h15",
+     "h16"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify caregiving responsibilities and competing time/energy demands that are undermining the patient's own self-care, diet consistency, and preventive follow-up.",
+    "factIds": [
+     "s9",
+     "s10",
+     "s11",
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a10",
+     "a17"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Screen for sleep-related fatigue and its potential impact on motivation and daily function, recognizing it as a separate but related concern to flag to the referring provider.",
+    "factIds": [
+     "h5",
+     "h6",
+     "h7",
+     "s14"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Collaboratively set 1-2 small, specific, sustainable nutrition goals that build on changes the patient has already started, accounting for his fragile stage of change and caregiver burden.",
+    "factIds": [
+     "h2",
+     "h4",
+     "s9"
+    ],
+    "actionIds": [
+     "a15",
+     "a11"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy and portion intake relative to needs (prediabetes/obesity/hyperlipidemia) complicated by caregiver-driven time/energy scarcity and fragile early behavior change",
+   "differential": [
+    "Overweight/obesity related to large home-cooked portions and refined carbohydrate pattern (bread/pasta staples)",
+    "Inconsistent self-care and missed follow-up labs due to caregiver burden for his mother",
+    "Excess daytime fatigue from untreated/undertreated OSA contributing to low motivation for activity",
+    "Knowledge deficit regarding lipid panel interpretation (LDL vs total cholesterol) and statin purpose"
+   ],
+   "keyFindings": [
+    "BMI 30 kg/m2 (height 182.6 cm, weight 100.1 kg)",
+    "HbA1c 6.1% (prediabetes range) on 2025-11-08",
+    "LDL 136 mg/dL elevated despite 'normal-looking' total cholesterol 154.8 mg/dL and HDL 55.2 mg/dL; triglycerides 155 mg/dL",
+    "Large, late (7:30-8pm) home-cooked dinners with generous second portions; bread/pasta as default sides",
+    "Minimal structured activity despite physically demanding job; stopped boardwalk walks ~2 years ago",
+    "Reports taking simvastatin 10 mg nightly without missed doses; chart review shows a missed cholesterol recheck earlier this year that he does not mention when asked if he's 'on top of' his labs",
+    "Reluctantly discloses most evenings are spent caregiving for his elderly mother (meals, bills, rides), leaving little time/energy for his own meals or rest",
+    "Describes himself as managing fine while chart/record indicates his own physical exam is overdue by more than a year"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment including 24-hour recall/typical day, portion sizes, meal timing, hydration, and caregiving-related barriers",
+    "Provide plain-language education on LDL vs. total cholesterol and the rationale for simvastatin without pushing medication adherence counseling outside scope",
+    "Collaboratively set 1-2 small, concrete, sustainable goals building on changes already started (maintain whole-wheat swap, consistent breakfast on workdays, water/soda swap at one meal)",
+    "Discuss portion-plating strategies that preserve his identity as a caregiving cook (e.g., plate-method, batch-cook with built-in portioning) rather than framing as restriction",
+    "Explore caregiving load and connect to realistic timing for his own meals (e.g., keeping a packed healthy option for evenings at his mother's house)",
+    "Screen for OSA-related fatigue impact on motivation and refer back to referring provider for sleep study/CPAP follow-up as appropriate",
+    "Encourage he reschedule or prioritize his own overdue physical and cholesterol recheck, framed supportively, not punitively",
+    "Arrange follow-up telehealth visit to reinforce goals and monitor fragile change"
+   ],
+   "redFlags": [
+    "Witnessed apneas and unrefreshing sleep suggesting undertreated OSA with daytime fatigue affecting safety (driving, ladder work) - warrants flag to referring provider",
+    "Significant gap in his own preventive care (>1 year since full physical, missed cholesterol recheck) due to caregiving demands",
+    "Risk of relapse of recent fragile dietary changes under ongoing caregiver stress"
+   ],
+   "educationPoints": [
+    "LDL is the primary driver of cardiovascular risk even when total cholesterol appears 'normal'; explain in plain terms why simvastatin targets LDL specifically",
+    "Portion control and plate composition (not necessarily different foods) can honor his cooking identity while supporting his goals",
+    "Small, consistent swaps (whole wheat bread, water instead of soda at one meal, a real breakfast on workdays) are more sustainable than overhauling his cooking",
+    "Caregiving demands are a legitimate barrier to self-care, not a personal failure; problem-solving around timing can reduce slippage",
+    "OSA and poor sleep quality can worsen fatigue and reduce motivation for activity, which is a separate but related concern to flag with his medical team"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Steven states he is 'on top of' his own labs and checkups (h28)",
+    "recordEvidence": "Order history shows a lipid recheck ordered 2025-04-02 marked 'no-show / not completed', with the repeat panel only completed later on 2025-11-15 (d6, a10)",
+    "teachingPoint": "Patients may sincerely believe they are managing their health well while caregiving demands cause them to miss their own appointments; reviewing order/referral history can reveal gaps in self-care that don't surface in the interview alone, prompting a supportive, non-judgmental follow-up question rather than confrontation.",
+    "factId": "h28",
+    "artifactId": "d6"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Steven reports taking simvastatin 10 mg nightly without missing doses (h22)",
+    "recordEvidence": "Medication/refill record confirms simvastatin is active and last filled on schedule (d5, a8), which is actually consistent with his report in this case - instead the mismatch lies in his nutrition referral note (d7) stating no caregiving responsibilities are documented, while he reluctantly reveals extensive caregiving demands once rapport is built",
+    "teachingPoint": "A referral note reflects only what was captured at the time of referral; a dietitian must probe directly for psychosocial and caregiving barriers that may not have been documented upstream, since absence of documentation does not mean absence of impact.",
+    "factId": "s9",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 26,
+   "condition": "Hyperlipidemia",
+   "conditionLabel": "57 M · Hyperlipidemia, Obstructive sleep apnea syndrome, Sleep disorder +3 · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2842a581",
+   "fingerprint": "vt16cb"
+  }
+ }
+}

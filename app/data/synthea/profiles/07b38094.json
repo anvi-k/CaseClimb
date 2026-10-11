@@ -1,0 +1,300 @@
+{
+ "patient_overview": {
+  "name": "Tyree Fahey",
+  "age": 41,
+  "sex": "Male",
+  "description": "Tyree Fahey is a 41-year-old divorced father of five living in Howell, New Jersey, coming in for a nutrition visit tied to his BMI (30.1) and chronic sinusitis. He's full-time employed, cheerful, and quick to crack a joke whenever the conversation turns toward anything that feels like a lecture. He cooks big family-style dinners for his household of six and tends to eat exactly what he serves everyone else, which has made it hard to keep up changes he made a while back. He comes across as agreeable and easygoing, often saying 'whatever you think is best, doc' rather than pushing back, even when he has reservations.",
+  "keywords": [
+   "obesity",
+   "chronic sinusitis",
+   "maintenance phase slipping",
+   "deflection humor",
+   "family meal cooking",
+   "medication non-adherence",
+   "moderate health literacy",
+   "stress eating",
+   "household of six",
+   "food insecurity"
+  ]
+ },
+ "demographics": {
+  "occupation": "Warehouse operations supervisor at a regional distribution center",
+  "residence": "Howell, New Jersey; household of 6",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Divorced",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Tyree grew up in central New Jersey in a big, loud Italian-American-adjacent household (though his own ethnicity is recorded as White, non-specific) where dinner was the one time everyone had to be at the table. He carried that into his own divorced-dad household: cooking for his kids is how he shows up for them, even on nights he's exhausted from a double shift. He takes pride in being the reliable, fun parent, and uses humor the way some people use silence — to keep things from getting too heavy."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [
+   "Chronic sinusitis"
+  ],
+  "medical_history": [
+   "Chronic sinusitis since 2003",
+   "Body mass index 30+ - obesity since 2022",
+   "Laceration - injury (2021-01 to 2021-01, resolved)",
+   "Laceration of foot (2021-01 to 2021-01, resolved)",
+   "Gingivitis (2025-08 to 2025-08, resolved)",
+   "Viral sinusitis (2026-09 to 2026-09, resolved)",
+   "Examination of gingivae (2025-08-28)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-08-28)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-08-28)",
+   "Dental care (2025-08-28)",
+   "Dental consultation and report (2025-08-28)",
+   "Suture open wound (2021-01-10)"
+  ],
+  "current_symptoms": [
+   "Nasal congestion and post-nasal drip, worse in spring and fall",
+   "Afternoon energy crashes around 3pm",
+   "Occasional heartburn after big dinners",
+   "Snoring that his kids tease him about",
+   "Mild joint ache in his knees going up the warehouse stairs"
+  ],
+  "allergies": [
+   "Mold (organism)",
+   "House dust mite (organism)",
+   "Animal dander (substance) (Rhinoconjunctivitis)",
+   "Grass pollen (substance)",
+   "Tree pollen (substance)",
+   "Lisinopril (Dyspnea)"
+  ],
+  "clinical_findings": [
+   "Mild facial fullness/puffiness consistent with sinus congestion",
+   "Breathes through his mouth somewhat when talking at length",
+   "Carries extra weight centrally, belt notched out a size since last visit",
+   "Mild tenderness over maxillary sinuses on light palpation"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 168.3 mg/dL (reference < 200; 2022-10-27)",
+   "LDL cholesterol: 84.7 mg/dL (reference < 100; 2022-10-27)",
+   "HDL cholesterol: 53.8 mg/dL (reference >= 40; 2022-10-27)",
+   "Triglycerides: 148.9 mg/dL (reference < 150; 2022-10-27)",
+   "Haemoglobin: 15 g/dL (reference 12.0-17.5; 2025-08-14)",
+   "White cell count: 9.7 10*3/uL (reference 4.0-11.0; 2025-08-14)",
+   "Platelets: 322.2 10*3/uL (reference 150-450; 2025-08-14)"
+  ],
+  "vital_signs": [
+   "BP: 113/82 mmHg",
+   "HR: 98 bpm",
+   "RR: 16 breaths/min",
+   "Recorded: 2025-08-14"
+  ],
+  "anthropometrics": [
+   "Height: 167.2 cm",
+   "Weight: 84.1 kg",
+   "BMI: 30.1 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "As needed, label says nightly during allergy season",
+    "purpose": "Not recorded",
+    "adherence": "Takes it only when congestion gets bad enough to keep him up, sometimes doubles up thinking it'll work faster, then skips several nights after",
+    "patient_concerns": "Says it makes him groggy for work the next morning so he 'saves it' for weekends or bad nights instead of taking it as directed"
+   }
+  ],
+  "supplements_and_otc": [
+   "Flonase nasal spray, uses on and off",
+   "A multivitamin his daughter bought him that he forgets most days",
+   "Tums kept in the truck for after dinner"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Traditional home-style American family meals - meat-and-starch dinners, generous portions, cooked from scratch most nights but heavy on butter, cheese, and bread",
+  "food_preferences": [
+   "Sunday gravy with meatballs and pasta",
+   "Baked ziti",
+   "Garlic bread",
+   "Chicken parm",
+   "Sausage and peppers on the grill in summer",
+   "Coffee with cream, several cups a day"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes he serves himself versus his kids",
+   "Second helpings out of habit while cleaning up",
+   "Snacking on whatever's left on the kids' plates",
+   "Weekend takeout when he's too tired to cook",
+   "Soda with dinner most nights"
+  ],
+  "meal_pattern": "Big family dinner every night around 6:30, skips or rushes breakfast before his shift, grabs whatever's in the break room for lunch",
+  "hydration": "Mostly coffee and soda; admits he barely drinks plain water",
+  "physical_activity": "On his feet all day at the warehouse but no structured exercise since his gym membership lapsed about a year ago",
+  "substance_use": "Never smoked; drinks a couple beers on weekends with the game",
+  "sleep": "Restless, snores, often up congested; says he 'sleeps like garbage half the year'"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, cheerful, quick with a one-liner, uses humor to sidestep anything that feels too serious or critical",
+  "communication_style": "Friendly and agreeable, frequently says 'whatever you think is best' rather than voicing disagreement, redirects with jokes when a topic hits close to home",
+  "goals": [
+   "Get back to where his pants fit like they did two years ago",
+   "Stop the afternoon crashes at work",
+   "Keep up with his kids without getting winded"
+  ],
+  "concerns": [
+   "Worried the weight is creeping back after he'd gotten it under control before his divorce finalized",
+   "Embarrassed that his adult kids notice and comment"
+  ],
+  "beliefs": [
+   "Thinks sinus issues are 'just allergies, nothing serious'",
+   "Believes cooking from scratch automatically makes a meal healthy, regardless of portion or ingredients",
+   "Feels like if he's not snacking between meals he's 'doing fine'"
+  ],
+  "motivations": [
+   "Wants to be around and active for his kids and eventually grandkids",
+   "Doesn't want to go on more medications than he has to"
+  ],
+  "fears": [
+   "Ending up on blood pressure medication like his brother, especially after a bad reaction to lisinopril in his chart",
+   "Being seen as someone who 'let himself go' after the divorce"
+  ],
+  "barriers": [
+   "Cooking in bulk for six makes portion control hard",
+   "Long warehouse shifts leave him drained for exercise",
+   "High household stress most days",
+   "Went without food at times this past year due to tight budget stretching across six people"
+  ],
+  "strengths": [
+   "Cooks most meals from scratch rather than relying on fast food",
+   "Good social support and regular contact with friends/family",
+   "Already made real changes a couple years back and knows what worked"
+  ],
+  "support_system": "Adult children who check in often but tend to lecture him about his weight and habits, which he deflects with jokes rather than engaging",
+  "readiness_to_change": "Maintenance slipping - he lost weight and improved habits a while back after his divorce, but things have crept back up over the last year and he knows it"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "He cooks dinner for his five kids every night and jokes that 'feeding an army' is his real job title",
+   "He mentions his sinuses have been bad lately, especially this time of year",
+   "He laughs that his pants don't fit like they used to"
+  ],
+  "discoverable_information": [
+   "He lost around 20 pounds a couple years ago after his divorce but it's been creeping back",
+   "He skips breakfast most days because mornings are chaos getting everyone out the door",
+   "He drinks soda most nights with dinner and several coffees during his shift",
+   "His adult kids comment on his weight and he waves it off with a joke"
+  ],
+  "reluctant_information": [
+   "He admits, if pressed gently, that stress has been 'very much' lately and he eats more when things pile up",
+   "He eventually says the warehouse shifts leave him too tired most nights to do anything active"
+  ],
+  "hidden_information": [
+   "He only takes his diphenhydramine occasionally and sometimes doubles the dose on bad nights instead of taking it nightly as labeled, then skips it for a week or more because it makes him groggy for his shift",
+   "There were a few weeks this past year where money was tight enough that he skipped meals himself so the kids could eat first"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit an honest medication-use history despite a cheerful, deflecting communication style",
+    "expected_discoveries": [
+     "Tyree is not taking the diphenhydramine as labeled, dosing it reactively instead of nightly",
+     "He worries about grogginess affecting his warehouse shift"
+    ],
+    "possible_patient_reactions": [
+     "'Eh, I take it when I need it, no big deal, right?'",
+     "'Doc, you don't want to see me running a forklift half-asleep.'"
+    ]
+   },
+   {
+    "learning_objective": "Assess portion sizes and eating patterns within a family-style, cook-from-scratch household",
+    "expected_discoveries": [
+     "He serves himself the same large portions he gives growing kids",
+     "He eats leftovers off plates while cleaning up"
+    ],
+    "possible_patient_reactions": [
+     "'I mean, I made it, somebody's gotta finish it off, ha!'",
+     "'Whatever you think is best - tell me what size plate I should use.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the link between household stress, food insecurity, and eating behavior using a non-judgmental approach",
+    "expected_discoveries": [
+     "Stress is rated very high on his intake survey",
+     "There were weeks he went without food himself so his kids could eat"
+    ],
+    "possible_patient_reactions": [
+     "Deflects at first with a joke: 'Stress? Nah, I'm living the dream.'",
+     "Becomes quieter and more serious if the student asks gently and patiently"
+    ]
+   },
+   {
+    "learning_objective": "Use motivational interviewing to address slipping maintenance rather than starting from scratch",
+    "expected_discoveries": [
+     "He already knows what worked two years ago (smaller portions, less soda, walking after dinner)",
+     "He feels discouraged his old habits crept back and his kids' lecturing makes him defensive"
+    ],
+    "possible_patient_reactions": [
+     "'I did it before, I guess I just fell off the wagon.'",
+     "'My kids won't stop nagging me, so why do I need you to tell me too?' said with a grin"
+    ]
+   },
+   {
+    "learning_objective": "Address hydration and beverage choices (soda, coffee) in the context of nasal/sinus symptoms and weight",
+    "expected_discoveries": [
+     "Minimal plain water intake",
+     "Multiple sodas and coffees daily contributing to habitual calorie intake"
+    ],
+    "possible_patient_reactions": [
+     "'Water's boring, doc. Coffee's basically a food group for me.'"
+    ]
+   },
+   {
+    "learning_objective": "Connect chronic sinusitis management (allergen triggers, antihistamine use) with overall self-care capacity for behavior change",
+    "expected_discoveries": [
+     "His sinus symptoms worsen his sleep, which affects energy and food choices the next day",
+     "His inconsistent antihistamine dosing may be worsening both sleep and daytime fatigue"
+    ],
+    "possible_patient_reactions": [
+     "'I just figured allergies were allergies, didn't think it tied into all this.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Diphenhydramine purpose is inferred as allergy/sinus symptom control given his chronic sinusitis and seasonal allergen allergies, consistent with the record's lack of a stated purpose",
+   "His 'went without food' survey answer is interpreted as periods of household food insecurity rather than intentional fasting",
+   "Household of six includes Tyree and five children, consistent with divorced status and no spouse listed"
+  ],
+  "optional_details": [
+   "Keeps a toolbox of hot sauces on the counter because his kids argue over whose food is spiciest",
+   "Coaches his youngest's rec-league baseball team on weekends",
+   "Has a running joke with his coworkers about who brings the best lunch leftovers"
+  ]
+ },
+ "source": {
+  "synthea_record": "07b38094",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "cheerful, deflects anything serious with a joke",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "moderate health literacy",
+   "eating": "cooks traditional family meals for a full household and eats what everyone eats",
+   "held_back": "does not take one of their medicines the way it was prescribed",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

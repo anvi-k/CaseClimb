@@ -1,0 +1,301 @@
+{
+ "patient_overview": {
+  "name": "Francina Cremin",
+  "age": 40,
+  "sex": "Female",
+  "description": "Francina Cremin is a 40-year-old married mother of two, unemployed and living in Hamilton, New Jersey, who comes in with newly diagnosed prediabetes and obesity following her October wellness visit. She is sharp, precise, and immediately wants to know the \"why\" behind every recommendation, citing her own HbA1c and glucose numbers from memory. She has already started making changes in the last few weeks — swapping white rice for cauliflower rice, cutting her portions — but the changes feel shaky, especially since her husband and mother-in-law tease her about \"eating like a rabbit.\" Underneath her no-nonsense exterior is a quiet dread she hasn't said aloud to anyone in the room yet.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "portion control",
+   "family food culture",
+   "fragile behavior change",
+   "health literacy",
+   "skeptical patient",
+   "transportation barrier",
+   "family history fear"
+  ]
+ },
+ "demographics": {
+  "occupation": "Former administrative coordinator for a school district, currently unemployed and job-searching",
+  "residence": "Hamilton, New Jersey; household of 4",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Francina grew up in a large, food-centered Italian-American household in central New Jersey where Sunday dinners were an institution and second helpings were a sign of affection, not excess. She carried that tradition into her own home, taking pride in cooking from scratch — sauce from her grandmother's recipe, roasted chicken, homemade bread. She does not identify with any particular \"diet culture\" and is somewhat suspicious of trendy nutrition advice, preferring to understand the physiology behind a recommendation before she'll adopt it."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Body mass index 30+ - obesity"
+  ],
+  "medical_history": [
+   "Prediabetes since 2026",
+   "Body mass index 30+ - obesity since 2026",
+   "Viral sinusitis (2023-02 to 2023-03, resolved)",
+   "Normal pregnancy (2024-02 to 2024-03, resolved)",
+   "Laceration - injury (2026-06 to 2026-07, resolved)",
+   "Facial laceration (2026-06 to 2026-07, resolved)",
+   "Injection of tetanus antitoxin (2026-06-21)",
+   "Suture open wound (2026-06-21)",
+   "Pregnancy termination care (2024-03-21)",
+   "Physical examination procedure (2024-03-21)",
+   "Induced termination of pregnancy (2024-03-04)",
+   "Standard pregnancy test (2024-02-13)"
+  ],
+  "current_symptoms": [
+   "Reports feeling more tired by mid-afternoon than she used to",
+   "Notices she gets uncomfortably full after dinner most nights",
+   "Occasional headaches she attributes to 'not drinking enough water'",
+   "Says her rings feel tighter than they did a year ago"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Central adiposity with weight concentrated around the abdomen",
+   "Skin appears healthy, no acanthosis nigricans noted by patient but not self-examined",
+   "Mild under-eye puffiness she attributes to poor sleep",
+   "Speaks in rapid, organized sentences, often pulling out her phone to check a number she's logged"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6 % (reference < 5.7; 2026-10-06)",
+   "Glucose: 73.5 mg/dL (reference 70-99 (fasting); 2026-10-06)",
+   "Total cholesterol: 177.6 mg/dL (reference < 200; 2023-12-19)",
+   "LDL cholesterol: 98.1 mg/dL (reference < 100; 2023-12-19)",
+   "HDL cholesterol: 53.2 mg/dL (reference >= 40; 2023-12-19)",
+   "Triglycerides: 131.2 mg/dL (reference < 150; 2023-12-19)",
+   "Haemoglobin: 13.3 g/dL (reference 12.0-17.5; 2026-10-06)",
+   "White cell count: 6.6 10*3/uL (reference 4.0-11.0; 2026-10-06)",
+   "Platelets: 217.1 10*3/uL (reference 150-450; 2026-10-06)",
+   "Potassium: 4.7 mmol/L (reference 3.5-5.1; 2026-10-06)",
+   "Sodium: 143.3 mmol/L (reference 135-145; 2026-10-06)",
+   "Urea nitrogen: 15.4 mg/dL (reference 7-20; 2026-10-06)"
+  ],
+  "vital_signs": [
+   "BP: 110/85 mmHg",
+   "HR: 84 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2026-10-06"
+  ],
+  "anthropometrics": [
+   "Height: 161.5 cm",
+   "Weight: 78.7 kg",
+   "BMI: 30.2 kg/m2",
+   "Weight change: +4.9 kg since 2023-12-19"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Over-the-counter multivitamin, taken most mornings",
+   "Fish oil capsules she started after reading they help with 'insulin stuff'",
+   "Occasional Tums after large dinners"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Home-cooked Italian-American meals, scratch-made, high in refined pasta, bread, and cheese; recently trying to add more vegetables and reduce portions but structure of meals largely unchanged",
+  "food_preferences": [
+   "Her grandmother's Sunday sauce with sausage and meatballs",
+   "Homemade bread with butter",
+   "Roasted chicken thighs with potatoes",
+   "Caesar salad, though usually with large amounts of dressing and croutons",
+   "Cannoli or sfogliatelle from the local bakery on weekends"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Plate size and second-helping habits at family dinners",
+   "Late dinners (often after 7:30pm) due to husband's work schedule",
+   "Snacking on leftover bread while cooking",
+   "Portion of pasta she serves herself versus what a single serving actually is",
+   "Stress-driven cooking as a way to feel in control while unemployed"
+  ],
+  "meal_pattern": "Three meals a day, fairly regular timing except dinner which is often late; breakfast is small (coffee and toast), lunch is often leftovers, dinner is the largest and most elaborate meal",
+  "hydration": "Drinks coffee in the morning, water through the day but admits she 'forgets' some days; occasional glass of wine with dinner",
+  "physical_activity": "Walks the dog about 20 minutes most days; started doing a YouTube workout video twice a week since her diagnosis but finds it hard to keep up",
+  "substance_use": "No tobacco use; alcohol screening score of 2, consistent with an occasional glass of wine, maybe two on weekends",
+  "sleep": "Reports difficulty falling asleep some nights, around 6-6.5 hours on average, says she 'should get more'"
+ },
+ "psychosocial_profile": {
+  "personality": "Skeptical and questioning; wants the reasoning behind every recommendation before she'll trust it. Organized, detail-oriented, a bit of a planner who likes data.",
+  "communication_style": "Precise and factual — quotes her own lab numbers and dates ('my HbA1c was 6.0 on October 6th, that's prediabetic range, right?'). Asks direct follow-up questions and gets impatient with vague answers.",
+  "goals": [
+   "Get her HbA1c back under 5.7%",
+   "Lose the 11 pounds she's gained since her 2023 labs",
+   "Keep cooking the meals her family loves, just differently",
+   "Prove to herself she can turn this around before it becomes diabetes"
+  ],
+  "concerns": [
+   "Worried the changes she started a few weeks ago won't stick without family support",
+   "Concerned that cutting portions at dinner will cause conflict with her husband",
+   "Wants to know exactly what 'prediabetes' means numerically and whether it's reversible"
+  ],
+  "beliefs": [
+   "Believes that if she just understands the mechanism — how carbs turn into blood sugar — she'll be able to control it through sheer willpower and planning",
+   "Thinks medication is a last resort and wants to avoid needing it",
+   "Believes portion size, not specific foods, is her main problem"
+  ],
+  "motivations": [
+   "Her two kids, including a toddler, whom she wants to be active with as they grow",
+   "Not wanting to end up on daily medication",
+   "A quiet, specific fear she hasn't voiced yet"
+  ],
+  "fears": [
+   "A close relative who developed type 2 diabetes complications later in life, and the thought that the same pattern could happen to her ('I don't want to end up like that')",
+   "Losing control over her own health while already feeling destabilized by unemployment"
+  ],
+  "barriers": [
+   "No car access some days — relies on her husband for transport, which has already made her miss a childcare drop-off and worries it could affect follow-up appointments",
+   "Family, especially her mother-in-law and husband, tease her about her changes and don't take prediabetes seriously ('you're not even diabetic, don't be dramatic')",
+   "Being unemployed means tighter grocery budget and more time at home around food",
+   "Late family dinner schedule makes portion control harder"
+  ],
+  "strengths": [
+   "Genuinely enjoys cooking and has strong kitchen skills to build on",
+   "Already took concrete first steps in the last few weeks (recipe swaps, smaller plates)",
+   "Tracks her own numbers and is engaged with her care",
+   "Strong desire to understand and solve the problem herself"
+  ],
+  "support_system": "Husband and mother-in-law live nearby and see her often, but neither takes the diagnosis seriously; sees friends 3-5 times a week socially, which could be a resource if engaged correctly",
+  "readiness_to_change": "Action stage, but fragile — she started changes a few weeks ago (smaller portions, some recipe swaps) and is proud of it, but admits she's already slipped at two recent family dinners and worries the lack of support at home could unravel it"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she was told she's prediabetic as of the October 6th lab work, HbA1c of 6%",
+   "Mentions her BMI is 30.2 and she's gained about 11 pounds (she says 'almost 5 kilos') since late 2023",
+   "Says she started cutting her pasta portions and swapping some sides about three weeks ago",
+   "Asks directly what the student's recommendations are based on and whether they're evidence-based"
+  ],
+  "discoverable_information": [
+   "Admits her dinners are usually served late, after 7:30pm, because of her husband's work hours",
+   "Describes cooking Sunday sauce and bread from scratch and taking real pride in it",
+   "Mentions she's unemployed right now and it's affecting the household budget and her stress level around food",
+   "Reveals that transportation has been a problem — she missed a childcare pickup once because she didn't have the car",
+   "Says her mother-in-law makes comments like 'one plate won't kill you' when she tries to take less food"
+  ],
+  "reluctant_information": [
+   "Admits, when asked gently about family history, that her husband and mother-in-law don't take prediabetes seriously and it makes it harder to stick with changes",
+   "Acknowledges she's already slipped back into old portions at two family dinners since starting her changes three weeks ago"
+  ],
+  "hidden_information": [
+   "Her father was diagnosed with type 2 diabetes in his fifties and later lost part of a foot to a diabetic ulcer; she has never said this out loud to any provider and is afraid the same progression is waiting for her",
+   "She sometimes lies awake after big dinners doing mental math on how many years she thinks she has before she 'ends up like him'"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit and validate a fragile early-action-stage change without triggering defensiveness",
+    "expected_discoveries": [
+     "Francina has already made concrete changes (portion swaps, cauliflower rice) in the past three weeks",
+     "She has had at least two slips at family dinners and feels some shame about it"
+    ],
+    "possible_patient_reactions": [
+     "'I know I shouldn't have had seconds at my mother-in-law's, but she kept pushing the plate at me.'",
+     "'Does one bad dinner undo three weeks of trying?'"
+    ]
+   },
+   {
+    "learning_objective": "Explore family and household dynamics as both barrier and potential resource",
+    "expected_discoveries": [
+     "Husband and mother-in-law minimize the diagnosis",
+     "Family dinners are the primary venue where portion control breaks down",
+     "Francina cooks for the whole family, giving her leverage to adjust recipes if she chooses"
+    ],
+    "possible_patient_reactions": [
+     "'My husband says I'm not even diabetic yet, why am I being so dramatic about it.'",
+     "'If I change the recipe, really change it, they'll notice and complain.'"
+    ]
+   },
+   {
+    "learning_objective": "Build rapport carefully enough to surface the hidden fear of repeating a relative's disease course",
+    "expected_discoveries": [
+     "Her father had type 2 diabetes and a diabetic foot ulcer/amputation",
+     "She has never disclosed this fear to a provider before and connects it to late-night rumination"
+    ],
+    "possible_patient_reactions": [
+     "If asked too directly early on: 'I don't see how that's relevant to my pasta portions.'",
+     "If trust is built: 'My dad lost part of his foot. I think about that more than I'd like to admit.'"
+    ]
+   },
+   {
+    "learning_objective": "Translate lab values and moderate health literacy into an actionable, specific plan",
+    "expected_discoveries": [
+     "She understands her HbA1c number but is unclear on exactly what dietary changes most affect it",
+     "She wants mechanistic explanations, not just rules"
+    ],
+    "possible_patient_reactions": [
+     "'Okay but why does white pasta spike it more than the sauce does?'",
+     "'Give me the actual number I should be aiming for, not just \"eat less.\"'"
+    ]
+   },
+   {
+    "learning_objective": "Address practical barriers (transportation, unemployment, budget) in intervention planning",
+    "expected_discoveries": [
+     "Transportation issues have already affected her schedule once",
+     "Unemployment is straining the grocery budget and her stress levels around cooking"
+    ],
+    "possible_patient_reactions": [
+     "'I can't just buy whatever vegetables I want right now, I'm watching every dollar.'",
+     "'If I don't have the car, I can't exactly get to a different grocery store for better produce.'"
+    ]
+   },
+   {
+    "learning_objective": "Use motivational interviewing to reinforce autonomy and self-efficacy given her skeptical, data-driven personality",
+    "expected_discoveries": [
+     "She responds well to being shown the reasoning rather than told what to do",
+     "She wants ownership of the solution, not a prescriptive diet handed to her"
+    ],
+    "possible_patient_reactions": [
+     "'Just tell me what will actually move the number, and I'll figure out how to make it work in my kitchen.'",
+     "'I don't want a diet, I want to understand my own body.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Francina's prediabetes and obesity diagnoses date to 2026, consistent with the care plan and recent labs",
+   "Her weight gain of 4.9 kg since 2023 aligns with the pregnancy termination in 2024 and subsequent lifestyle factors",
+   "No medications are recorded, consistent with early-stage prediabetes managed through lifestyle change alone",
+   "Her 'fragile action stage' is interpreted as starting dietary changes approximately three weeks before this visit",
+   "The induced termination of pregnancy in 2024 is part of her medical history but is not a topic she raises or that is relevant to the nutrition visit unless she brings it up"
+  ],
+  "optional_details": [
+   "She keeps a small notebook where she logs her weight and sometimes her meals",
+   "Her father's diabetic complications occurred in his late fifties, about a decade from now relative to her own age",
+   "She has a toddler and a school-age child, which factors into both her stress and her motivation",
+   "She studied communications in college and worked in school administration for over a decade before her unemployment"
+  ]
+ },
+ "source": {
+  "synthea_record": "0661fbba",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "skeptical and questioning, wants reasons for everything",
+   "communication": "precise and factual, quotes numbers and dates",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "moderate health literacy",
+   "eating": "cooks well and enjoys it, but portions are large and food is how the family shows love",
+   "held_back": "a fear that a relative's illness will repeat itself in them",
+   "support": "family nearby who do not take the condition seriously"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

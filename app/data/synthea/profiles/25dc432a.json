@@ -1,0 +1,302 @@
+{
+ "patient_overview": {
+  "name": "Lesli Armstrong",
+  "age": 43,
+  "sex": "Female",
+  "description": "Lesli Armstrong is a 43-year-old single woman from Newark who works part-time and was flagged at her last wellness visit with prediabetes and obesity, on top of a scoliosis diagnosis she's had since she was a teenager. She is stoic and tends to downplay everything — aches, stress, even her blood sugar numbers — and will change the subject if a question gets too close to money or how she's really doing. She's reached a point where she's decided she wants to do something about her blood sugar, but she needs the student to hand her one clear, doable first step rather than a long list.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "skipped meals",
+   "night eating",
+   "low health literacy",
+   "food budget",
+   "transportation barrier",
+   "scoliosis",
+   "faith community",
+   "stoic patient"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time receptionist at a dental office",
+  "residence": "Newark, New Jersey; household of 2",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Single",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Lesli grew up in Newark in a working-class household where you \"didn't make a fuss\" about aches and pains, and that attitude has stuck with her into adulthood. She was raised Baptist and still attends services most Sundays at a small congregation a few blocks from her apartment; the church's Wednesday potluck and prayer group are the main fixed points of her week and the people she trusts most. She doesn't tie her eating habits to any particular cultural cuisine — her food choices are shaped more by what's cheap, quick, and available near the bus line than by heritage."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Adolescent idiopathic scoliosis",
+   "Past pregnancy history of miscarriage",
+   "History of tubal ligation",
+   "Body mass index 30+ - obesity"
+  ],
+  "medical_history": [
+   "Adolescent idiopathic scoliosis since 1993",
+   "Past pregnancy history of miscarriage since 2015",
+   "History of tubal ligation since 2018",
+   "Body mass index 30+ - obesity since 2022",
+   "Prediabetes since 2023",
+   "Primary dental caries (2022-12 to 2022-12, resolved)",
+   "Acute bronchitis (2023-10 to 2023-10, resolved)",
+   "Viral sinusitis (2025-05 to 2025-05, resolved)",
+   "Application of composite dental filling material to dentin of tooth following fracture of tooth (2022-12-20)",
+   "Dental plain X-ray bitewing (2022-12-20)",
+   "Examination of gingivae (2022-12-20)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2022-12-20)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2022-12-20)",
+   "Dental care (2022-12-20)"
+  ],
+  "current_symptoms": [
+   "Low energy in the afternoons",
+   "Occasional lower back ache she attributes to her 'crooked back' from scoliosis",
+   "Feels unusually hungry and sometimes shaky by the time she gets home from work",
+   "Trouble falling asleep after her late dinner some nights"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Build consistent with obesity (BMI 30.6), carrying extra weight through the midsection",
+   "Mild asymmetry of shoulders/waistline visible on observation, consistent with longstanding adolescent scoliosis",
+   "Looks tired around the eyes, mentions she 'just doesn't sleep great' when asked about energy",
+   "Blood pressure reading today runs a bit high at the visit, which she brushes off as 'white coat stuff'"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.4 % (reference < 5.7; 2024-12-10)",
+   "Glucose: 85.4 mg/dL (reference 70-99 (fasting); 2024-12-10)",
+   "Total cholesterol: 140.8 mg/dL (reference < 200; 2023-10-10)",
+   "LDL cholesterol: 70.5 mg/dL (reference < 100; 2023-10-10)",
+   "HDL cholesterol: 50.2 mg/dL (reference >= 40; 2023-10-10)",
+   "Triglycerides: 100.8 mg/dL (reference < 150; 2023-10-10)",
+   "Haemoglobin: 14.9 g/dL (reference 12.0-17.5; 2022-12-06)",
+   "White cell count: 6.1 10*3/uL (reference 4.0-11.0; 2022-12-06)",
+   "Platelets: 150.8 10*3/uL (reference 150-450; 2022-12-06)",
+   "Potassium: 4.2 mmol/L (reference 3.5-5.1; 2024-12-10)",
+   "Sodium: 143 mmol/L (reference 135-145; 2024-12-10)",
+   "Urea nitrogen: 7.5 mg/dL (reference 7-20; 2024-12-10)"
+  ],
+  "vital_signs": [
+   "BP: 130/92 mmHg",
+   "HR: 88 bpm",
+   "RR: 12 breaths/min",
+   "Recorded: 2024-12-10"
+  ],
+  "anthropometrics": [
+   "Height: 167.1 cm",
+   "Weight: 85.3 kg",
+   "BMI: 30.6 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Vitamin B12 5 MG/ML Injectable Solution",
+    "dose": "5 MG/ML",
+    "frequency": "Monthly injection given at her doctor's office",
+    "purpose": "Not recorded",
+    "adherence": "Attends most scheduled appointments but has missed one or two when transportation fell through",
+    "patient_concerns": "She doesn't really understand why she needs it, just says 'the doctor said my levels were low' and shrugs it off"
+   }
+  ],
+  "supplements_and_otc": [
+   "A basic multivitamin she buys at the dollar store when she remembers",
+   "Tums for occasional heartburn after her late dinners"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Skips breakfast and often lunch, then eats one large meal late at night after getting home from work; relies heavily on convenience and shelf-stable foods",
+  "food_preferences": [
+   "Fried chicken from the corner store near the bus stop",
+   "White rice with gravy",
+   "Frozen dinners like Salisbury steak or lasagna",
+   "Sweet tea",
+   "Saltine crackers with peanut butter as a late-night filler"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "What she actually eats on days she works a double shift at the front desk",
+   "Whether she's skipping meals to stretch her grocery budget or just loses track of time",
+   "How much of her late-night eating is boredom or genuine hunger after a 14-hour fast",
+   "Whether she waters down or skips the B12 injections or other costs when money is tight that month",
+   "What foods she brings to the church potluck and whether that's a highlight of her week nutritionally"
+  ],
+  "meal_pattern": "Coffee only in the morning, nothing at lunch most days, then one large meal around 9-10pm after work",
+  "hydration": "Mostly sweet tea and a couple of cans of soda during the day; says she 'forgets' to drink water",
+  "physical_activity": "Mostly sedentary; standing and walking short distances at the reception desk, no structured exercise",
+  "substance_use": "Ex-smoker, quit about 6 years ago; drinks alcohol rarely, about one drink on an occasional weekend",
+  "sleep": "Goes to bed late after her big meal, around 6-7 hours of sleep, sometimes restless"
+ },
+ "psychosocial_profile": {
+  "personality": "Stoic, downplays pain and worry, prides herself on not complaining",
+  "communication_style": "Gives short, minimizing answers at first; changes the subject when a topic feels too close to money or personal struggle; opens up more once she trusts someone",
+  "goals": [
+   "Wants one concrete, simple change to start with, not a whole overhaul",
+   "Wants to keep her blood sugar from turning into 'full diabetes'",
+   "Wants to feel less drained by the end of her shift"
+  ],
+  "concerns": [
+   "Worried the prediabetes will get worse and she'll end up on daily medication",
+   "Doesn't want to be a burden on anyone, including her church friends",
+   "Embarrassed that she doesn't really understand what the HbA1c number means"
+  ],
+  "beliefs": [
+   "Thinks eating one big meal is fine as long as she's not 'snacking all day'",
+   "Believes her weight is 'just how her body is' and hard to change at her age",
+   "Thinks vitamins and supplements can make up for meals she skips"
+  ],
+  "motivations": [
+   "Not wanting to end up like her aunt who went on insulin and dialysis",
+   "Wanting enough energy to make it through double shifts without crashing",
+   "Her pastor's recent sermon on 'taking care of the body God gave you' stuck with her"
+  ],
+  "fears": [
+   "Fear of needles and daily injections if her condition worsens",
+   "Fear of losing more work hours if her health declines",
+   "Fear of being seen as someone who 'can't manage' her own life"
+  ],
+  "barriers": [
+   "Tight part-time income that limits grocery choices some weeks",
+   "Unreliable transportation that has made her miss appointments and sometimes pharmacy pickups",
+   "Lives alone with one roommate, limited help with meal planning or cooking",
+   "Low health literacy makes lab numbers and medical instructions confusing"
+  ],
+  "strengths": [
+   "Reliable and consistent in showing up for work and church",
+   "Has one trusted support system in her church group",
+   "Has already decided she wants to change something — just needs a clear starting point"
+  ],
+  "support_system": "A small Baptist congregation she's attended for over a decade; the Wednesday potluck and prayer group are her main social contact and emotional support, though she doesn't share much about money troubles even there",
+  "readiness_to_change": "Preparation stage — she has already decided she wants to act on the prediabetes diagnosis and is looking for one specific, manageable first step rather than a full lifestyle overhaul"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she was told her sugar is 'a little high' at her last checkup",
+   "Mentions she works part-time at a dental office and is often tired by evening",
+   "Says she doesn't really eat much during the day, 'just coffee till dinner'",
+   "Mentions she goes to church and that's where most of her friends are"
+  ],
+  "discoverable_information": [
+   "Describes her evening meal pattern in detail once asked directly about a typical day",
+   "Reveals she sometimes misses her B12 appointment because a ride fell through",
+   "Admits she doesn't fully understand what HbA1c or prediabetes means",
+   "Mentions her aunt's history with insulin and dialysis when asked about family history"
+  ],
+  "reluctant_information": [
+   "Only with gentle, non-judgmental questioning will she admit that some weeks she buys the cheapest frozen meals instead of fresh food because money is tight after rent",
+   "Needs rapport to admit she sometimes stretches her grocery budget by skipping breakfast and lunch on purpose, not just forgetting"
+  ],
+  "hidden_information": [
+   "Lesli has, twice in the past year, skipped refilling a prescription allergy medication (not the B12) because she couldn't afford both it and groceries that week",
+   "She has not told her church friends about her prediabetes diagnosis because she doesn't want anyone treating her differently or offering unwanted advice at potlucks"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit an accurate 24-hour recall despite the patient's tendency to minimize and give short answers",
+    "expected_discoveries": [
+     "The true gap between her last meal of one day and first meal of the next",
+     "Reliance on sweet tea and soda for most daytime hydration",
+     "Large portion sizes concentrated into one nighttime meal"
+    ],
+    "possible_patient_reactions": [
+     "'It's really not that much, I just eat dinner late, that's all.'",
+     "'I don't know, I never really measured it out or anything.'"
+    ]
+   },
+   {
+    "learning_objective": "Use plain-language, low-literacy-friendly explanations of HbA1c and prediabetes",
+    "expected_discoveries": [
+     "Patient has only a vague sense that her 'sugar is high'",
+     "She confuses prediabetes with full diabetes and fears daily injections",
+     "She responds well to simple visual or everyday comparisons rather than numbers"
+    ],
+    "possible_patient_reactions": [
+     "'So is that the diabetes or not? I get confused.'",
+     "'As long as it's not shots every day, I guess I'm okay.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore financial and transportation barriers to food and medication access without judgment",
+    "expected_discoveries": [
+     "Tight part-time income limiting fresh food purchases some weeks",
+     "Missed medical appointments and medication pickups due to transportation problems",
+     "Pattern of prioritizing rent and bills over consistent grocery shopping"
+    ],
+    "possible_patient_reactions": [
+     "Changes subject at first: 'It's fine, I manage.'",
+     "Opens up later: 'Some weeks it's rent or real food, so... yeah.'"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate one small, concrete first step consistent with the patient's preparation stage of change",
+    "expected_discoveries": [
+     "Patient wants a single actionable change, not a full diet overhaul",
+     "She responds to practical ideas tied to her existing routine, like adding a small daytime snack or shifting dinner earlier",
+     "She is more likely to follow through on something she can tie to an existing habit, like having something small before church or during her work break"
+    ],
+    "possible_patient_reactions": [
+     "'Okay, I can try that, long as it's not a big production.'",
+     "'I don't want a whole plan, just tell me one thing to start.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify and leverage the patient's faith community as a support for behavior change",
+    "expected_discoveries": [
+     "Weekly potluck as a recurring, predictable food event that could be used constructively",
+     "Patient's reluctance to disclose her diagnosis to her church friends",
+     "Potential for the student to help her think of low-key ways to eat better at potlucks without announcing her condition"
+    ],
+    "possible_patient_reactions": [
+     "'I don't really want them all up in my business about it.'",
+     "'Maybe I could just bring something myself so there's one thing I know is okay.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Patient has basic cooking facilities at home despite irregular meal timing",
+   "Transportation barrier affects both medical appointments and some grocery trips, not just medication pickup",
+   "Private insurance covers her B12 injections and routine visits without major out-of-pocket issues, but other costs (OTC items, some prescriptions) are more vulnerable to budget cuts"
+  ],
+  "optional_details": [
+   "Keeps a small devotional book in her purse that she reads on bus rides",
+   "Has worked at the same dental office for about seven years and knows the regular patients by name",
+   "Her one roommate works night shifts, so they rarely eat meals together"
+  ]
+ },
+ "source": {
+  "synthea_record": "25dc432a",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "stoic, plays every problem down",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "low health literacy",
+   "eating": "skips meals during the day and then eats a very large meal late at night",
+   "held_back": "money worries that affect which food or medicines they buy",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

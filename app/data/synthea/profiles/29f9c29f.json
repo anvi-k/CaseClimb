@@ -1,0 +1,356 @@
+{
+ "patient_overview": {
+  "name": "Harris Schuster",
+  "age": 58,
+  "sex": "Male",
+  "description": "Harris Schuster is a 58-year-old man from Deptford, New Jersey who works part-time doing light maintenance work and comes in for a nutrition visit tied to his blood pressure and a recent finding on heart imaging. He has lived with chronic back, neck, and general pain since 2014 and takes it as just part of getting older. He's polite but closed off, answering with 'whatever you think is best' when pushed on diet changes, and gives the impression he's humoring the visit more than engaging with it. He grazes on snacks all day instead of sitting down to meals, and a student will need patience and curiosity to find out what's really going on with his eating and what else he's taking beyond his prescriptions.",
+  "keywords": [
+   "precontemplation",
+   "chronic pain",
+   "hypertension",
+   "ischemic heart disease",
+   "grazing eating pattern",
+   "low health literacy",
+   "hidden supplements",
+   "self-reliance",
+   "medicaid",
+   "part-time work"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time maintenance worker for a local property management company",
+  "residence": "Deptford, New Jersey; household of 6",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "Less than high school degree",
+  "insurance": "Medicaid",
+  "cultural_context": "Harris grew up in a working-class South Jersey family where you went to work, didn't complain, and didn't bother doctors unless something was broken or bleeding. He left school early to help his father with odd jobs, and he still measures a man's worth by whether he can show up and do the work, not by what his lab numbers say. Asking for help, including dietary help, doesn't sit easily with him."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Essential hypertension",
+  "secondary_diagnoses": [
+   "Chronic sinusitis",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic neck pain",
+   "Ischemic heart disease",
+   "Abnormal findings diagnostic imaging heart+coronary circulat"
+  ],
+  "medical_history": [
+   "Chronic sinusitis since 2008",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic neck pain since 2014",
+   "Essential hypertension since 2024",
+   "Ischemic heart disease since 2024",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2024",
+   "Gingivitis (2023-03 to 2023-04, resolved)",
+   "Gingivitis (2024-03 to 2024-04, resolved)",
+   "Primary dental caries (2024-04 to 2024-04, resolved)",
+   "Acute bacterial sinusitis (2024-08 to 2024-10, resolved)",
+   "Gingivitis (2026-04 to 2026-04, resolved)",
+   "Dental fluoride treatment (2026-04-25)",
+   "Examination of gingivae (2026-04-25)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-04-25)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-04-25)",
+   "Dental care (2026-04-25)",
+   "Dental consultation and report (2026-04-25)"
+  ],
+  "current_symptoms": [
+   "Low-grade aching across the lower back that is 'just there most days'",
+   "Stiff neck that makes it hard to look over his shoulder when backing up his truck",
+   "Occasional sinus pressure and post-nasal drip, worse in damp weather",
+   "Picks at food throughout the day rather than sitting down to real meals",
+   "Says he doesn't feel 'sick,' just worn down"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Mildly overweight build with weight carried centrally, consistent with his BMI around 27",
+   "Guarded posture and reduced neck rotation when turning to answer questions, consistent with chronic neck pain",
+   "Stiff, deliberate movements when rising from the chair, consistent with chronic low back pain",
+   "Mild gum redness and tenderness noted around the lower front teeth, consistent with his recent gingivitis history"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 134.1 mg/dL (reference < 200; 2026-04-11)",
+   "LDL cholesterol: 57.9 mg/dL (reference < 100; 2026-04-11)",
+   "HDL cholesterol: 49.5 mg/dL (reference >= 40; 2026-04-11)",
+   "Triglycerides: 133.2 mg/dL (reference < 150; 2026-04-11)",
+   "Haemoglobin: 16 g/dL (reference 12.0-17.5; 2024-03-30)",
+   "White cell count: 6.1 10*3/uL (reference 4.0-11.0; 2024-03-30)",
+   "Platelets: 361.6 10*3/uL (reference 150-450; 2024-03-30)"
+  ],
+  "vital_signs": [
+   "BP: 97/66 mmHg",
+   "HR: 76 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-04-11"
+  ],
+  "anthropometrics": [
+   "Height: 177.7 cm",
+   "Weight: 86.1 kg",
+   "BMI: 27.3 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Ibuprofen 400 MG Oral Tablet [Ibu]",
+    "dose": "400 MG",
+    "frequency": "As needed, several times a week for back and neck pain",
+    "purpose": "Not recorded",
+    "adherence": "Takes it whenever the pain flares, sometimes more than the bottle says, doesn't track how much",
+    "patient_concerns": "Doesn't think an over-the-counter pain pill is something worth discussing with a nutritionist"
+   },
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily, morning",
+    "purpose": "Essential hypertension",
+    "adherence": "Takes it most days but admits to skipping it when he forgets or runs low near the end of the month",
+    "patient_concerns": "Not worried about it, says 'the doctor knows what he's doing'"
+   },
+   {
+    "name": "amLODIPine 2.5 MG Oral Tablet",
+    "dose": "2.5 MG",
+    "frequency": "Once daily, morning, with lisinopril",
+    "purpose": "Essential hypertension",
+    "adherence": "Taken together with lisinopril, similar occasional skipping",
+    "patient_concerns": "Doesn't understand why he needs two pills for one problem but doesn't ask"
+   },
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent, keeps it by the coffee maker as a reminder",
+    "patient_concerns": "Vaguely knows it's a 'blood thinner' for his heart, nothing more"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Not recorded",
+    "adherence": "Consistent most nights",
+    "patient_concerns": "No real concerns, takes it without question"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily, extended release",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent, occasionally doubles up the next day if he thinks he missed a dose",
+    "patient_concerns": "Mentions it makes him feel a little tired some mornings but hasn't brought it up to his doctor"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest discomfort",
+    "purpose": "Not recorded",
+    "adherence": "Keeps it in his truck and uses it rarely, unsure exactly when he's supposed to use it",
+    "patient_concerns": "A little uneasy admitting how infrequently he actually uses it or checks if it's expired"
+   }
+  ],
+  "supplements_and_otc": [
+   "Glucosamine-chondroitin capsules bought at the dollar store for his joints",
+   "A neighbor's recommended turmeric and black pepper capsules for 'inflammation'",
+   "Epsom salt soaks for his back, several nights a week",
+   "Occasional swig of apple cider vinegar in water, something his daughter read about online"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "No structured meals; grazes on whatever is around the house throughout the day, heavy on processed and salty convenience foods",
+  "food_preferences": [
+   "Lunch meat and cheese sandwiches",
+   "Potato chips",
+   "Canned soup",
+   "Coffee, black, several cups a day",
+   "Peanut butter crackers as a go-to snack"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "High sodium intake from processed snacks and canned soups despite hypertension",
+   "Skips sit-down meals most days, eats standing at the counter or in his truck between jobs",
+   "Doesn't track how much ibuprofen or sodium he's taking in a day",
+   "Uses coffee and snacking to get through pain and fatigue rather than addressing either"
+  ],
+  "meal_pattern": "Grazes all day on snacks rather than eating three set meals; sometimes doesn't eat anything substantial until late evening",
+  "hydration": "Mostly coffee during the day, water only when he remembers, rarely drinks anything else",
+  "physical_activity": "Physical job (maintenance work) keeps him moving, but limited intentional exercise outside of work due to back and neck pain",
+  "substance_use": "Ex-smoker, quit several years ago; drinks alcohol lightly, maybe one beer on a weekend",
+  "sleep": "Sleep is interrupted some nights by back pain, otherwise sleeps a reasonable amount"
+ },
+ "psychosocial_profile": {
+  "personality": "Proud, self-reliant, uncomfortable being told what to do, especially about something as personal as what he eats",
+  "communication_style": "Short answers, often defers with 'whatever you think is best' rather than engaging, avoids eye contact when asked about habits he knows aren't great",
+  "goals": [
+   "Keep working and not slow down",
+   "Avoid another trip to the hospital or more tests",
+   "Be left alone about his diet if nothing feels broken"
+  ],
+  "concerns": [
+   "Not wanting to be a burden on his wife or kids",
+   "Worried that too many doctor visits mean something is seriously wrong",
+   "Mild worry about his memory of which pill does what"
+  ],
+  "beliefs": [
+   "Believes pain and aging are just things you push through",
+   "Thinks diet advice is mostly for people who are overweight or have 'real' problems, not for him",
+   "Trusts home remedies and supplements as much as or more than prescribed medication"
+  ],
+  "motivations": [
+   "Wants to keep providing for his household of six",
+   "Wants to avoid his kids worrying about him or lecturing him further"
+  ],
+  "fears": [
+   "Fear of losing the ability to work and provide",
+   "Quiet fear that the heart finding means something worse is coming"
+  ],
+  "barriers": [
+   "Low health literacy makes some nutrition explanations hard to follow",
+   "Irregular work hours make meal planning difficult",
+   "Pride makes him resistant to being told what to do",
+   "Tight household budget limits food choices"
+  ],
+  "strengths": [
+   "Reliable and hardworking",
+   "Has a stable home and close household",
+   "Open to listening even if he doesn't say much back"
+  ],
+  "support_system": "Married, lives with his wife and extended household of six; adult children check in often but tend to lecture him about his health, which he brushes off",
+  "readiness_to_change": "Precontemplation: he does not see his eating or habits as a problem worth changing, since he doesn't feel 'sick'"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he's here because his doctor sent him after some heart test and the blood pressure thing",
+   "Mentions he works part-time doing maintenance and stays busy",
+   "Says he eats 'fine, just not on a schedule' when asked generally about meals"
+  ],
+  "discoverable_information": [
+   "Admits he snacks on chips and crackers through the day instead of sitting down for meals",
+   "Says he drinks a lot of coffee and not much water",
+   "Describes his back and neck pain as 'just part of getting older' and something he lives with",
+   "Mentions his adult kids are always on him about his health, rolls his eyes a bit when saying it"
+  ],
+  "reluctant_information": [
+   "Admits, when asked gently about pain management, that he sometimes takes more ibuprofen than the label says because 'it's just ibuprofen'",
+   "Reveals he's not totally sure what the clopidogrel or metoprolol are for, just takes them because the doctor said so"
+  ],
+  "hidden_information": [
+   "Takes glucosamine-chondroitin capsules and turmeric capsules daily that he never mentioned to his doctor",
+   "Does Epsom salt soaks and drinks apple cider vinegar in water a few times a week, something his daughter suggested, without telling the clinic"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full picture of eating pattern despite a patient who minimizes concerns",
+    "expected_discoveries": [
+     "Harris grazes on processed, high-sodium snacks all day with no set meals",
+     "His coffee intake is high while water intake is low"
+    ],
+    "possible_patient_reactions": [
+     "'I eat fine, I just don't sit down for it like you're supposed to, I guess.'",
+     "'Whatever you think is best, doc.'"
+    ]
+   },
+   {
+    "learning_objective": "Uncover undisclosed supplement and home remedy use through careful, nonjudgmental questioning",
+    "expected_discoveries": [
+     "Daily glucosamine-chondroitin and turmeric capsules",
+     "Regular Epsom salt soaks and occasional apple cider vinegar drinks"
+    ],
+    "possible_patient_reactions": [
+     "'That's not medicine, that's just stuff from the drugstore, didn't think it mattered.'",
+     "Looks a little sheepish when asked directly if he's taking anything else."
+    ]
+   },
+   {
+    "learning_objective": "Explore medication adherence and understanding, particularly for cardiac medications",
+    "expected_discoveries": [
+     "Inconsistent adherence to lisinopril and amlodipine near end of month",
+     "Limited understanding of what clopidogrel, simvastatin, and metoprolol are actually for",
+     "Uncertainty and infrequent use of nitroglycerin spray"
+    ],
+    "possible_patient_reactions": [
+     "'I just take what they give me, I don't ask too many questions.'",
+     "'I keep that spray in the truck, haven't needed it much.'"
+    ]
+   },
+   {
+    "learning_objective": "Practice motivational interviewing with a patient in precontemplation",
+    "expected_discoveries": [
+     "Harris doesn't see a reason to change since he doesn't feel sick",
+     "His main motivation is continuing to work, not lab numbers"
+    ],
+    "possible_patient_reactions": [
+     "'Nothing feels broken, so I don't see the problem.'",
+     "'My kids keep telling me the same thing you're telling me.'"
+    ]
+   },
+   {
+    "learning_objective": "Address sodium intake and hypertension-related dietary habits given his love of processed snacks and canned soup",
+    "expected_discoveries": [
+     "High reliance on canned soup and chips despite hypertension diagnosis",
+     "Low awareness of sodium content in his usual snacks"
+    ],
+    "possible_patient_reactions": [
+     "'Soup's soup, I didn't think about the salt in it.'",
+     "Shrugs when told chips might be part of the issue."
+    ]
+   },
+   {
+    "learning_objective": "Navigate family dynamics and readiness to change when adult children are a source of pressure rather than support",
+    "expected_discoveries": [
+     "Adult children lecture him about his health, which makes him defensive rather than receptive",
+     "Harris may be more open to small, non-nagging suggestions than directives"
+    ],
+    "possible_patient_reactions": [
+     "'My kids already tell me this stuff, I don't need to hear it twice.'",
+     "Softens slightly if the student avoids sounding like another lecture."
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Low blood pressure reading on record reflects effect of his antihypertensive regimen rather than symptomatic hypotension",
+   "His part-time, irregular work schedule contributes directly to his grazing eating pattern",
+   "Household income near $18,000 for a household of six implies tight food budgeting and reliance on cheap, shelf-stable processed foods"
+  ],
+  "optional_details": [
+   "Keeps a toolbox and a cooler with snacks in his truck for work days",
+   "Has a dog that he walks briefly most evenings, which is close to his only intentional activity"
+  ]
+ },
+ "source": {
+  "synthea_record": "29f9c29f",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "proud and self-reliant, dislikes being advised",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "moderate health literacy",
+   "eating": "has no set meals and grazes on snacks through the day",
+   "held_back": "takes supplements or home remedies the clinic does not know about",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

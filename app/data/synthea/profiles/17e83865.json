@@ -1,0 +1,334 @@
+{
+ "patient_overview": {
+  "name": "Alec Barton",
+  "age": 58,
+  "sex": "Male",
+  "description": "Alec Barton is a 58-year-old warehouse worker from Toms River, New Jersey, who comes in after a recent hospital stay for a whiplash injury and ongoing heart disease. He is unfailingly polite and agreeable, nodding along with whatever is suggested, but he answers questions in short bursts and rarely volunteers much unless asked twice. He used to walk and watch his portions a couple of years ago after his heart diagnosis, but those habits have quietly faded, and his wife now does virtually all the cooking and plating at home. A dietetics student will need patience and a second or third question to get past his pleasant, surface-level answers.",
+  "keywords": [
+   "ischemic heart disease",
+   "obesity",
+   "low health literacy",
+   "maintenance stage slipping",
+   "spouse does the cooking",
+   "agreeable personality",
+   "family illness fear",
+   "chronic sinusitis",
+   "cardiac diet",
+   "anxious caregiver partner"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time warehouse inventory associate at a home-goods distribution center",
+  "residence": "Toms River, New Jersey; household of 4",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Private insurance",
+  "cultural_context": "Alec grew up in a working-class South Jersey family where big weekend dinners were how the family showed love, and finishing what was on your plate was a point of pride. He never finished college and has always deferred to people he sees as \"the experts\" — doctors, bosses, and now his wife in the kitchen. He doesn't see himself as someone who thinks much about nutrition; that was always \"her department.\""
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Ischemic heart disease",
+  "secondary_diagnoses": [
+   "Body mass index 30+ - obesity",
+   "Chronic sinusitis",
+   "Abnormal findings diagnostic imaging heart+coronary circulat"
+  ],
+  "medical_history": [
+   "Body mass index 30+ - obesity since 2012",
+   "Chronic sinusitis since 2017",
+   "Ischemic heart disease since 2021",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2021",
+   "Viral sinusitis (2023-05 to 2023-05, resolved)",
+   "Viral sinusitis (2024-08 to 2024-09, resolved)",
+   "Viral sinusitis (2026-01 to 2026-01, resolved)",
+   "Injury of neck (2026-04 to 2026-05, resolved)",
+   "Whiplash injury to neck (2026-04 to 2026-05, resolved)",
+   "Discharge from hospital (2026-04-18)",
+   "Nursing care/supplementary surveillance (2026-04-17)",
+   "Professional / ancillary services care (2026-04-17)",
+   "Physical therapy procedure (2026-04-12)",
+   "History AND physical examination (2026-04-10)",
+   "Development of individualized plan of care (2026-04-10)"
+  ],
+  "current_symptoms": [
+   "Occasional chest tightness when he climbs the stairs at the warehouse too fast",
+   "Gets short of breath walking from the parking lot some mornings",
+   "Stuffy nose and sinus pressure that comes and goes, worse in humid weather",
+   "Low energy by mid-afternoon",
+   "Neck still feels stiff some days since the car accident in the spring"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears overweight with weight carried mostly around the abdomen",
+   "Mild nasal congestion and post-nasal drip, breathes through his mouth a bit when talking",
+   "Faint healing stiffness in neck movement, turns head slowly and carefully",
+   "Skin looks a little pale, no obvious distress at rest"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 233.3 mg/dL (reference < 200; 2024-08-15)",
+   "LDL cholesterol: 177.4 mg/dL (reference < 100; 2024-08-15)",
+   "HDL cholesterol: 31.7 mg/dL (reference >= 40; 2024-08-15)",
+   "Triglycerides: 120.5 mg/dL (reference < 150; 2024-08-15)",
+   "Haemoglobin: 17.3 g/dL (reference 12.0-17.5; 2024-08-15)",
+   "White cell count: 8.1 10*3/uL (reference 4.0-11.0; 2024-08-15)",
+   "Platelets: 192.3 10*3/uL (reference 150-450; 2024-08-15)"
+  ],
+  "vital_signs": [
+   "BP: 95/68 mmHg",
+   "HR: 62 bpm",
+   "RR: 16 breaths/min",
+   "Recorded: 2026-08-27"
+  ],
+  "anthropometrics": [
+   "Height: 173.5 cm",
+   "Weight: 90.7 kg",
+   "BMI: 30.1 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it most days, occasionally forgets when his routine is thrown off by a late shift",
+    "patient_concerns": "He doesn't really know what it's for beyond 'the heart thing,' just says the doctor told him to take it"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent, his wife sets out his pills each night",
+    "patient_concerns": "Mentions his legs felt a little achy a while back but didn't say anything to the doctor about it"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it every morning with coffee, rarely misses",
+    "patient_concerns": "Worries it makes him more tired in the afternoons but hasn't brought it up at appointments"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed, carries it with him",
+    "purpose": "Not recorded",
+    "adherence": "Has only used it a couple of times, keeps it in his jacket pocket 'just in case'",
+    "patient_concerns": "A little embarrassed to use it in front of coworkers, so sometimes just sits down and waits out the chest tightness instead"
+   }
+  ],
+  "supplements_and_otc": [
+   "Men's multivitamin his wife bought at the pharmacy, takes it when he remembers",
+   "Fish oil capsules, started after a magazine article his wife read",
+   "Tums for occasional heartburn after big dinners"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Standard American diet shaped by his wife's cooking: meat-and-starch dinners, generous portions, not much attention to sodium or fat content",
+  "food_preferences": [
+   "Pot roast and mashed potatoes",
+   "Meatloaf with ketchup glaze",
+   "Diner breakfast on Saturdays - eggs, bacon, home fries",
+   "Buttered rolls",
+   "Vanilla ice cream after dinner"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Second helpings offered and accepted almost automatically",
+   "Salt shaker used at the table without tasting first",
+   "Fast food picked up some lunch shifts at the warehouse",
+   "Soda with lunch most days",
+   "Snacking on crackers or chips while watching TV at night"
+  ],
+  "meal_pattern": "Three meals a day, wife cooks dinner every night and packs his lunch; breakfast is often just coffee and a muffin before work",
+  "hydration": "Mostly coffee in the morning, a couple of sodas during the day, modest water intake",
+  "physical_activity": "Used to walk the neighborhood loop most evenings after his heart diagnosis; has mostly stopped since the car accident and now mainly just does his warehouse shifts",
+  "substance_use": "Light drinker, a beer or two on weekends, never smoked",
+  "sleep": "Sleeps around 7 hours, occasionally restless since the accident when his neck aches"
+ },
+ "psychosocial_profile": {
+  "personality": "Agreeable to a fault; says 'sure, sounds good' to almost any suggestion but rarely changes his actual habits afterward",
+  "communication_style": "Gives short, polite answers at first - 'fine,' 'okay,' 'not bad' - and only opens up with a second, gently persistent question",
+  "goals": [
+   "Stay out of the hospital",
+   "Keep working at the warehouse without trouble",
+   "Not worry his wife more than she already does"
+  ],
+  "concerns": [
+   "Not wanting to be a bother to the care team",
+   "Worried the neck injury will slow him down at work permanently",
+   "Doesn't like talking about his heart in detail"
+  ],
+  "beliefs": [
+   "Thinks that since he 'already changed his diet once' a couple years ago, he's basically fine now",
+   "Believes food is really his wife's responsibility, not his",
+   "Figures if the doctor doesn't bring something up, it must not be that important"
+  ],
+  "motivations": [
+   "Wants to be around for his kids and grandkids",
+   "Doesn't want his wife to worry even more than she already does",
+   "Wants to keep some independence at work"
+  ],
+  "fears": [
+   "That he'll end up like his father, who had a major heart attack in his early 60s and was never the same afterward",
+   "Losing the ability to work and feeling useless"
+  ],
+  "barriers": [
+   "Low health literacy - doesn't fully understand his own lab numbers or what they mean",
+   "No control over what's cooked at home",
+   "Habits that improved a while back have quietly slipped as life got busier and more stressful",
+   "Avoids bringing up symptoms so as not to alarm his anxious wife"
+  ],
+  "strengths": [
+   "Reliable and even-tempered",
+   "Willing to attend appointments and follow instructions when clearly laid out",
+   "Has a supportive household, even if it's not perfectly tuned to his needs"
+  ],
+  "support_system": "Wife is attentive and does all the cooking, but tends to hover and worry, sometimes making Alec downplay symptoms to keep her calm; two grown children live nearby and visit regularly"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "He says he's 'doing okay' and the hospital stay for his neck 'wasn't a big deal'",
+   "Mentions his wife does the cooking at home",
+   "Says he takes his heart pills 'pretty much every day'"
+  ],
+  "discoverable_information": [
+   "Admits he used to walk every evening after his heart diagnosis in 2021 but stopped after the car accident in April",
+   "Says lunch at the warehouse is often fast food or whatever's quick",
+   "Mentions he doesn't really know what three of his four medications are actually for",
+   "Says his wife packs his plate and he just eats what's given to him",
+   "Reveals the nitroglycerin spray sits in his jacket pocket most days unused because he feels silly using it at work"
+  ],
+  "reluctant_information": [
+   "Admits, if asked gently a second time, that he gets short of breath some mornings walking from the parking lot and hasn't mentioned it to his doctor",
+   "Mentions that his stress has crept up lately because of money being tight on part-time hours"
+  ],
+  "hidden_information": [
+   "His father, Walter Barton, had a massive heart attack at 61 and was never able to work again, dying at 67 after years of being housebound, and Alec is quietly terrified the same thing is happening to him right now"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Recognize and respond to a patient who gives short, surface-level answers",
+    "expected_discoveries": [
+     "Alec's first answers to most questions are brief and minimizing",
+     "A second, specific follow-up question often reveals more detail",
+     "He is not being evasive out of distrust, just habit and low engagement with his own care"
+    ],
+    "possible_patient_reactions": [
+     "'Fine, I guess.' then after a pause, 'Well, actually, there was this one morning...'",
+     "'Oh, I don't know, whatever she makes.'"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change in a patient who has slipped from a prior maintenance stage",
+    "expected_discoveries": [
+     "Alec made real changes (walking, lighter portions) after his 2021 diagnosis but has drifted back to old habits",
+     "He believes he's still 'doing fine' because he changed once before",
+     "Stress and the recent injury disrupted his routine"
+    ],
+    "possible_patient_reactions": [
+     "'I already fixed my diet a few years back, so I figured I was good.'",
+     "'Guess I kind of fell off that, huh.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore household food dynamics when someone else cooks and plates meals",
+    "expected_discoveries": [
+     "His wife controls almost all food decisions at home",
+     "He has limited input or awareness of sodium, portion sizes, or ingredients used",
+     "Opportunities exist to involve the wife directly in nutrition counseling"
+    ],
+    "possible_patient_reactions": [
+     "'That's really her department, I just eat what's put in front of me.'",
+     "'She'd probably know more about that than I would.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify low health literacy and tailor education accordingly",
+    "expected_discoveries": [
+     "Alec doesn't know what his medications are for beyond vague descriptions",
+     "He doesn't understand his cholesterol or LDL numbers",
+     "Simple, concrete language and teach-back methods will work better than clinical jargon"
+    ],
+    "possible_patient_reactions": [
+     "'The doctor just said to take it, so I take it.'",
+     "'I don't really know what LDL means, is that bad?'"
+    ]
+   },
+   {
+    "learning_objective": "Gently uncover a hidden fear tied to family medical history",
+    "expected_discoveries": [
+     "With rapport, Alec may reveal his father's early heart attack and decline",
+     "His fear of repeating his father's fate may be driving some anxiety but also avoidance of discussing symptoms",
+     "This fear could be reframed as a motivator for sustainable change rather than something to hide"
+    ],
+    "possible_patient_reactions": [
+     "Changes subject quickly at first: 'Let's not get into that.'",
+     "If trust builds: 'My dad went through this. I don't want to end up like him.'"
+    ]
+   },
+   {
+    "learning_objective": "Address the role of an anxious, hovering partner in the patient's self-reporting",
+    "expected_discoveries": [
+     "Alec sometimes downplays symptoms to avoid worrying his wife further",
+     "This dynamic could be masking symptoms the care team needs to know about",
+     "Involving the wife constructively, rather than letting her anxiety suppress disclosure, is a key consideration"
+    ],
+    "possible_patient_reactions": [
+     "'I don't like telling her when I don't feel right, she already worries enough.'",
+     "'She'd probably want to come to every appointment if she could.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Alec's part-time warehouse job and household income suggest a modest but stable financial situation with some budget constraints on food choices",
+   "The 2026 neck injury was from a motor vehicle accident, explaining the ER visit, SNF transfer, and physical therapy",
+   "His wife is the primary cook based on the assigned eating pattern trait",
+   "The feared relative is his father, who had an early severe heart attack, fitting the hidden fear trait"
+  ],
+  "optional_details": [
+   "Alec has two grown children who live nearby and visit a few times a month",
+   "He keeps a NASCAR mug at his warehouse locker and talks about races with coworkers when he does open up",
+   "He and his wife have been married 32 years",
+   "He coached his son's youth baseball team years ago and still mentions it fondly"
+  ]
+ },
+ "source": {
+  "synthea_record": "17e83865",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "agreeable to a fault, says yes to everything and changes nothing",
+   "communication": "short answers until asked a second time",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "low health literacy",
+   "eating": "someone else in the home does all the cooking and decides what is on the plate",
+   "held_back": "a fear that a relative's illness will repeat itself in them",
+   "support": "a partner who is supportive but anxious and hovers"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

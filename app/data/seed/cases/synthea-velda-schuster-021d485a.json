@@ -1,0 +1,1029 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Action-Stage Dietary Change in a Pregnant Woman with Prediabetes and Prior Second-Trimester Loss",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment with a chatty, high-health-literacy pregnant patient whose fragile action-stage dietary changes and food-insecurity-driven eating pattern require patient-centered, non-judgmental elicitation. The core teaching points are managing a circumstantial communication style to extract a complete diet history, uncovering a self-report-versus-OB-chart mismatch around prenatal vitamin adherence without shaming the patient, and building a realistic, budget- and pantry-compatible meal plan for a household of eight while reinforcing recently started, still-shaky positive changes.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Union, New Jersey, seated in her kitchen with household noise audible in the background",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Velda Schuster",
+   "age": 31,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "black, hispanic",
+   "occupation": "Part-time receptionist at a dental office",
+   "language": "English",
+   "appearance": "Appears tired but animated, with dark circles under her eyes; sits with legs crossed/elevated for comfort due to mild ankle swelling; lips slightly dry; gestures a lot while talking, phone and a sales flyer visible nearby, occasional background noise from kids in the house",
+   "portrait": "/portraits/synthea-velda-schuster-021d485a.jpg"
+  },
+  "persona": {
+   "personality": "Warm, talkative, eager to be liked and seen as competent and capable; uses humor to soften hard topics; proud and private about struggles, especially around asking for help",
+   "communicationStyle": "Tells long, winding stories that start on topic, drift into family anecdotes or things she read online, and loop back around to answer the original question; speaks quickly, gestures a lot, loses her thread mid-sentence then circles back; responds well to gentle, patient redirection and isn't offended by it",
+   "healthLiteracy": "high",
+   "emotionalState": "Generally upbeat and animated on the surface, but tired and running on fragmented sleep; becomes quieter and more guarded when conversation nears the 2023 miscarriage or her vitamin lapses, tearing up briefly if pressed gently on the vitamin gap",
+   "background": "Velda grew up in Union, New Jersey in a big extended family where meals always stretched to feed whoever showed up, and she's carried that instinct into her own household of eight. She works part-time as a dental receptionist, is married, and considers herself the one everyone leans on. She shops with sales flyers, times trips to her favorite ShopRite for markdown produce, keeps a running list of 'good food swaps' on her phone from things she's read online, and talks to her sister two towns over most days by phone even though her sister can't help in person day-to-day.",
+   "speechExamples": [
+    "Oh honey, let me tell you about my morning - actually wait, you asked about breakfast, right? Okay so breakfast...",
+    "I read this thing online, hold on, lemme find it - no actually I remember it, it said oats are a 'slow carb' so I figured I was doing good",
+    "I'm fine, I'm always fine, that's kind of my whole deal, ha - but go ahead, ask me whatever you need to ask",
+    "Sorry, sorry, I do that, I go on and on - ask me again, I promise I'll actually answer this time",
+    "It's not that big a deal, I just... some days I forget, that's all, everybody forgets sometimes right?"
+   ],
+   "concerns": [
+    "That her prediabetes will turn into something worse after this baby comes",
+    "That she's not resting enough to keep her blood pressure where it should be",
+    "That she won't be able to keep up the changes she just started once life gets busy again",
+    "Whether the vegetables and food at the pantry are 'good enough' to actually help her and the baby"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Velda Schuster, a 31-year-old woman who is currently pregnant and has had prediabetes since 2017. She was referred for diet counseling during this pregnancy. Review her available health record before the call. Your job today is to complete a nutrition assessment, identify a nutrition diagnosis, and provide patient-centered counseling and education for the remainder of this visit.",
+   "chiefComplaint": "Nutrition follow-up visit for diet counseling during pregnancy with a history of prediabetes",
+   "openingLine": "Hi! Thanks for fitting me in, it's a little loud over here, my youngest is having a whole opera in the next room, ha - but yeah, I'm here! The doctor's office said y'all wanted to check in on how I'm eating now that I'm pregnant again, so, here I am.",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including meal pattern, household food resources, and recent changes she's made",
+    "Review relevant anthropometric and laboratory data to inform your nutrition assessment",
+    "Identify barriers to consistent healthy eating and supplement adherence in her daily life",
+    "Formulate a nutrition diagnosis and realistic, budget-appropriate plan tailored to her household and resources",
+    "Reinforce her recent dietary changes using patient-centered counseling techniques"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition follow-up visit for diet counseling during pregnancy with a history of prediabetes"
+   },
+   {
+    "label": "Care team",
+    "value": "Obstetrics (Union Family Health); Dietetics (this visit)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code / not applicable (outpatient)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 2017); Past pregnancy history of miscarriage (since 2019); Normal pregnancy (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "Presents for nutrition follow-up during pregnancy with history of prediabetes.",
+    "says": "I'm here to talk about my eating since I'm pregnant and I've got the prediabetes thing to watch too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "pregnancy status",
+    "chart": "Currently pregnant, estimated conception approximately June 2026, confirmed by positive pregnancy test and viability ultrasound 2026-06-26.",
+    "says": "I'm pregnant now, found out back in June.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "prior pregnancy loss",
+    "chart": "History of second-trimester miscarriage, August-September 2023, resolved, with associated pregnancy complication.",
+    "says": "I lost a baby back in 2023, second trimester. That's part of why I'm so nervous this time around.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "prediabetes history",
+    "chart": "Diagnosed with prediabetes in 2017.",
+    "says": "I've had the prediabetes label since like 2017.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "recent prenatal visits",
+    "chart": "Routine fetal anatomy scan and antenatal AFP test performed 2026-08-21; fundal height evaluation and fetal heart auscultation documented 2026-09-18.",
+    "says": "I've been going for all my checkups, had the big ultrasound and the blood test last month, and they checked the baby's heartbeat and my belly measurement just last week.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "energy level",
+    "chart": "Reports fatigue most days, worse by evening after full day of errands and childcare.",
+    "says": "I'm tired all day, every day, especially by the time dinner's done.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "dizziness pattern",
+    "chart": "Occasional lightheadedness in late afternoon if lunch is skipped.",
+    "says": "Sometimes I get a little dizzy around 3 or 4 if I didn't eat lunch.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "digestive symptoms",
+    "chart": "Mild heartburn after larger evening meals.",
+    "says": "After a big dinner I get that burning feeling in my chest.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Occasional mild ankle swelling by end of day.",
+    "says": "My feet puff up a little by nighttime, nothing crazy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "cravings pattern",
+    "chart": "Reports sugar cravings mid-afternoon, around 3-4 PM.",
+    "says": "Around 3 or 4 I just want something sweet, bad.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "hydration symptoms",
+    "chart": "Skin and lips mildly dry; reports inconsistent water intake during work hours.",
+    "says": "My lips get real dry, I think I just forget my water bottle at work half the time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "sleep pattern",
+    "chart": "Sleep fragmented, 5-6 hours nightly, disrupted by household noise.",
+    "says": "I don't really sleep through, the house is loud, I'm up and down all night.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "bleeding or cramping",
+    "chart": "Denies vaginal bleeding, cramping, or contractions.",
+    "says": "No bleeding, no cramping, nothing like that, thank God.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "vision or headache changes",
+    "chart": "Denies visual changes, severe headache, or epigastric pain.",
+    "says": "No headaches that worry me, no weird vision stuff.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "polyuria or polydipsia",
+    "chart": "Denies excessive thirst or urination beyond typical pregnancy frequency.",
+    "says": "I pee a lot but that's just the baby, nothing crazy thirsty though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "respiratory illness history",
+    "chart": "History of viral sinusitis, April 2025, resolved.",
+    "says": "I had a bad sinus thing last spring but that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "CBC from 2023-06-02 within normal limits: hemoglobin 17.3 g/dL, WBC 4.7 x10^3/uL, platelets 211.7 x10^3/uL.",
+    "says": "They checked my blood a while back before any of this and it was all fine I think.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "blood pressure history",
+    "chart": "Blood pressure 135/88 mmHg at 2026-06-05 visit; no prior diagnosis of hypertension.",
+    "says": "My blood pressure was a little up at that one appointment, they just said to keep an eye on it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries reported.",
+    "says": "I've never had any surgeries, no.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "prescribed medications",
+    "chart": "No prescribed medications currently.",
+    "says": "I'm not on any actual medicines, no pills from a doctor or anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "vitamin and supplement use",
+    "chart": "Reports taking prenatal vitamin, a take-home sample from her OB, most days.",
+    "says": "I take my prenatal most days, it's one they gave me a sample of.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "heartburn and nausea remedies",
+    "chart": "Uses occasional Tums for heartburn and ginger chews for nausea, both over-the-counter.",
+    "says": "I'll pop a Tums if my chest's burning, and I keep ginger chews in my purse for when my stomach's off.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "vitamin timing habits",
+    "chart": "Reports sometimes skipping the prenatal vitamin for a few days when nausea flares, often related to not taking it with food.",
+    "says": "Sometimes if my stomach's bad I'll miss it a few days in a row, I think it's worse when I take it empty.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "hpi",
+    "topic": "weight change concern",
+    "chart": "Reports being aware of weight gain since 2023 but attributes it mainly to stress eating and household demands, not current pregnancy.",
+    "says": "I know I've put on some weight since that whole 2023 thing, it just kind of crept up on me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in household of 8; patient does most of the cooking",
+    "says": "It's me, my husband, and six kids under one roof — dinner is basically a production every night.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time as dental receptionist with inconsistent hours",
+    "says": "I'm front desk at a dental office, but my hours bounce around week to week, so my eating schedule bounces right along with it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "spousal support",
+    "chart": "Husband works long hours and is not involved in meal planning or appointments",
+    "says": "My husband's a good man but he works like twelve-hour days — he's not the one standing at the stove figuring out dinner, that's me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "older children helping",
+    "chart": "Oldest children help with younger siblings inconsistently",
+    "says": "My oldest helps watch the little ones sometimes, when she's not got her own stuff going on.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "asking for help",
+    "chart": "Reports difficulty asking for help; sees self as the one others rely on",
+    "says": "I'm usually the one people call when THEY need help, so it feels weird going the other way around.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "practical support network",
+    "chart": "Minimal practical day-to-day support despite active social life; talks to sister by phone most days but sister lives two towns away and cannot help in person",
+    "says": "I talk to my sister almost every day on the phone, but she's not exactly down the block — if something's falling apart at 6pm, it's just me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "nutrition",
+    "topic": "food budgeting strategies",
+    "chart": "Shops using sales flyers; times grocery trips for markdown produce at local ShopRite",
+    "says": "I've got my flyer right here — I know exactly which day the ShopRite marks down the produce.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "nutrition",
+    "topic": "food pantry use",
+    "chart": "Uses food pantry near her church as a supplement to groceries",
+    "says": "Some weeks are tighter than others, so we go by the pantry at church — it fills in the gaps.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "nutrition",
+    "topic": "skipping own meals",
+    "chart": "Reports skipping her own lunch some days so younger children eat first",
+    "says": "Honestly if there's not quite enough, I just say I already ate and let them have it — I'll grab something later, usually.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "late-day eating pattern",
+    "chart": "Reports late-night snacking after household is asleep",
+    "says": "Once everybody's finally down, that's when I sneak into the kitchen for a little something, just for me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "function",
+    "topic": "sleep quality",
+    "chart": "Sleep fragmented, 5-6 hours nightly, disrupted by household noise; naps rare",
+    "says": "I get maybe five, six hours, broken up — somebody's always up for something in this house.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "function",
+    "topic": "daily activity pattern",
+    "chart": "No formal exercise; walks to bus stop and climbs three flights of stairs daily",
+    "says": "I'm moving all day long, up and down them stairs, but I wouldn't call it exercise exercise.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "substance",
+    "topic": "tobacco history",
+    "chart": "Ex-smoker, quit several years ago",
+    "says": "I used to smoke back in the day but I quit that years ago, no looking back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "substance",
+    "topic": "alcohol use pattern",
+    "chart": "AUDIT-C score 1; occasional wine at family gatherings",
+    "says": "Maybe a glass of wine at somebody's birthday, that's really it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s15",
+    "category": "adherence",
+    "topic": "vitamin-taking pattern",
+    "chart": "Reports taking prenatal vitamin most days; occasionally forgets due to nausea",
+    "says": "I take my prenatal most days — every now and then I forget, especially if my stomach's off.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "adherence",
+    "topic": "timing of vitamin with food",
+    "chart": "Hesitant to disclose she does not consistently take the prenatal vitamin with food as advised",
+    "says": "I mean... I know they said take it with something in your stomach, but some mornings I just pop it dry and run out the door, and then it's rough.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "full week without supplement",
+    "chart": "Has not disclosed to this visit a full week in August 2026 without any prenatal vitamin due to nausea",
+    "says": "There was... okay, there was a week back in August where I just didn't take it at all, the nausea got so bad I couldn't stand looking at the bottle. I didn't tell anybody that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "psychosocial",
+    "topic": "self-blame about weight and loss",
+    "chart": "Privately worries that weight gain since 2023 contributed to the miscarriage; has not voiced this to any provider",
+    "says": "Sometimes I wonder if I'd just kept the weight off after... if things would've gone different this time. I never said that to anybody before.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s19",
+    "category": "goals",
+    "topic": "sustaining recent changes",
+    "chart": "Fears one difficult week could undo recently started dietary changes",
+    "says": "I'm proud of the oatmeal and the water thing, I really am, but I'm scared one bad week and it all just falls apart again.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s20",
+    "category": "goals",
+    "topic": "postpartum weight goals",
+    "chart": "Wants to lose pregnancy weight gradually after delivery rather than through a crash diet",
+    "says": "After the baby comes I want to lose the weight the right way, not some crazy crash thing — I've seen how that goes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s21",
+    "category": "other",
+    "topic": "tracking food swaps",
+    "chart": "Keeps a running list of 'good food swaps' on her phone from online research",
+    "says": "I've got a whole list on my phone of swaps I've read about — wanna see it?",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review problem list and pregnancy history in chart",
+    "aliases": [],
+    "result": "Prediabetes since 2017; normal pregnancy since 2026-06; past pregnancy history of miscarriage since 2019; second-trimester miscarriage with associated pregnancy complication, Aug-Sep 2023, resolved; viral sinusitis Apr 2025, resolved; no known allergies",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review antenatal testing and OB visit timeline",
+    "aliases": [],
+    "result": "Positive pregnancy test and viability ultrasound 2026-06-26; fetal anatomy scan and antenatal AFP 2026-08-21; fundal height measurement and fetal heart auscultation 2026-09-18",
+    "importance": "minor",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review OB visit note from 2026-08-21",
+    "aliases": [],
+    "result": "See document: OB note documents a reported one-week gap in prenatal vitamin use in August 2026 due to nausea",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review current medication and supplement list",
+    "aliases": [],
+    "result": "No prescribed medications. Prenatal vitamin (OB-provided sample, patient reports taking most days), Tums as needed for heartburn, ginger chews as needed for nausea",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Take 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: coffee or nothing on rushed mornings, oatmeal with cinnamon when there's time, skips her own lunch some days so younger kids can eat, family dinner of rice/beans or pasta with jarred sauce and chicken thighs, frozen mixed vegetables when available, sweet tea some afternoons, late-night snack after the household is asleep",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess household food access and shopping patterns",
+    "aliases": [],
+    "result": "Patient reports shopping with sales flyers, timing visits to a local grocery store for markdown produce, and sometimes using the food pantry near her church to stretch the budget for a household of eight",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 1; occasional wine at family gatherings; ex-smoker, quit several years ago",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports no formal exercise; walks to and from the bus stop and climbs three flights of stairs at home daily",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Assess sleep pattern",
+    "aliases": [],
+    "result": "Patient reports fragmented sleep, 5-6 hours most nights, frequently woken by household noise and children; naps are rare",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 135/88 mmHg, heart rate 93/min, respiratory rate 13/min, weight 69.8 kg, height 152.6 cm, BMI 30 kg/m2, weight change +5.3 kg since 2023-06-02 (recorded 2026-06-05).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.9 %; Glucose 77.3 mg/dL; Total cholesterol 211 mg/dL; LDL cholesterol 133.3 mg/dL; HDL cholesterol 49.4 mg/dL; Triglycerides 141.8 mg/dL; Haemoglobin 17.3 g/dL; White cell count 4.7 10*3/uL; Platelets 211.7 10*3/uL; Potassium 4.4 mmol/L; Sodium 140.4 mmol/L; Urea nitrogen 19.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-06-05); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2026-06-05); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-14); Hep B adult (2019-02-22); meningococcal MCV4P (2017-05-19).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "OB Visit Note - 2026-08-21",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "date": "2026-08-21",
+    "author": "Obstetrics, Union Family Health",
+    "body": "31-year-old G_P_ at approximately 20 weeks gestation presenting for fetal anatomy ultrasound and antenatal alpha-fetoprotein screening. Fetal anatomy survey unremarkable; AFP sent, pending at time of visit.\n\nInterval history: Patient reports ongoing nausea, improved compared to first trimester but still present intermittently. On medication reconciliation, patient reports she went approximately one full week without taking her prenatal vitamin in early August 2026 due to nausea when taking it, then resumed. Counseled on taking prenatal vitamin with food or at bedtime to reduce nausea. Patient verbalized understanding.\n\nNo vaginal bleeding, no cramping, fetal movement reportedly present. Discussed warning signs to call for. Follow-up scheduled."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "OB Visit Timeline Summary",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "date": "2026-09-18",
+    "author": "Obstetrics, Union Family Health",
+    "body": "2026-06-26: Positive pregnancy test; ultrasound confirms fetal viability.\n2026-08-21: Fetal anatomy study performed, unremarkable; antenatal alpha-fetoprotein test sent.\n2026-09-18: Fundal height measured consistent with dates; fetal heart tones auscultated, normal rate.\n\nPast history: Second-trimester pregnancy loss, August-September 2023, resolved. Viral sinusitis, April 2025, resolved. No known drug allergies."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 2017)\nPast pregnancy history of miscarriage (since 2019)\nNormal pregnancy (since 2026)\n\nRECENTLY RESOLVED\nNormal pregnancy (2023-07 to 2023-09)\nMiscarriage in second trimester (2023-08 to 2023-09)\nComplication occurring during pregnancy (2023-08 to 2023-09)\nViral sinusitis (2025-04 to 2025-04)\n\nPROCEDURES\n2026-09-18: Evaluation of uterine fundal height (Normal pregnancy)\n2026-09-18: Auscultation of the fetal heart (Normal pregnancy)\n2026-08-21: Fetal anatomy study (Normal pregnancy)\n2026-08-21: Alpha-fetoprotein test - antenatal (Normal pregnancy)\n2026-06-26: Standard pregnancy test (Normal pregnancy)\n2026-06-26: Ultrasound scan for fetal viability (Normal pregnancy)\n\nRECENT ENCOUNTERS\n2026-09-18 ambulatory: Prenatal visit (Normal pregnancy)\n2026-08-21 ambulatory: Prenatal visit (Normal pregnancy)\n2026-07-24 ambulatory: Prenatal visit (Normal pregnancy)\n2026-06-26 ambulatory: Prenatal initial visit (Normal pregnancy)\n2026-06-19 ambulatory: Encounter for check up (Patient referral for dental care)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Diabetes self management plan (record artifact); Routine antenatal care"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.9",
+        "%",
+        "< 5.7",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "77.3",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "211",
+        "mg/dL",
+        "< 200",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "133.3",
+        "mg/dL",
+        "< 100",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "49.4",
+        "mg/dL",
+        ">= 40",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "141.8",
+        "mg/dL",
+        "< 150",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "17.3",
+        "g/dL",
+        "12.0-17.5",
+        "2023-06-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-06-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "211.7",
+        "10*3/uL",
+        "150-450",
+        "2023-06-02"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.4",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.4",
+        "mmol/L",
+        "135-145",
+        "2026-06-05"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "19.5",
+        "mg/dL",
+        "7-20",
+        "2026-06-05"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete diet and lifestyle history despite a circumstantial, story-driven communication style, capturing household meal patterns, food access strategies, and self-sacrificing eating behaviors.",
+    "factIds": [
+     "s1",
+     "s7",
+     "s8",
+     "s9",
+     "s10",
+     "h6",
+     "h10"
+    ],
+    "actionIds": [
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Integrate anthropometric and laboratory data (BMI, weight trend, HbA1c, fasting glucose, lipids) into a nutrition assessment, correctly distinguishing relevant findings from historical data that predates the current pregnancy.",
+    "factIds": [
+     "h4",
+     "h18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore prenatal vitamin and supplement adherence in a non-judgmental way, identifying the gap between what the patient reports and what the chart documents.",
+    "factIds": [
+     "h21",
+     "h24",
+     "s15",
+     "s16",
+     "s17"
+    ],
+    "actionIds": [
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify psychosocial and household barriers—including minimal practical support, food insecurity/pantry use, and inconsistent work hours—that affect her ability to sustain dietary change.",
+    "factIds": [
+     "s3",
+     "s5",
+     "s6",
+     "s8",
+     "s9"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize and reinforce a fragile action-stage behavior change using patient-centered counseling, while gently correcting overgeneralized beliefs about carbohydrate quality.",
+    "factIds": [
+     "s19",
+     "s20",
+     "s21",
+     "h10"
+    ],
+    "actionIds": [
+     "a11",
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate a nutrition diagnosis and a realistic, budget- and pantry-compatible meal plan for a household of eight that addresses sweet tea/juice intake, late-night snacking, and meal skipping.",
+    "factIds": [
+     "s7",
+     "s8",
+     "s9",
+     "s10"
+    ],
+    "actionIds": [
+     "a11",
+     "a12",
+     "asyn1"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Fragile action-stage dietary change in a pregnant woman (BMI 30, prediabetes) with inconsistent prenatal vitamin adherence and food-insecurity-driven eating pattern",
+   "differential": [
+    "Excessive carbohydrate/added sugar intake relative to glucose tolerance in pregnancy with prediabetes",
+    "Inadequate micronutrient intake from inconsistent prenatal vitamin use",
+    "Food insecurity/under-eating (skipped meals) secondary to household resource allocation",
+    "Behavioral risk of relapse from a very recently adopted, unsupported dietary change",
+    "Elevated BP (135/88) and lipid pattern (TC 211, LDL 133.3) warranting monitoring but not yet a nutrition diagnosis requiring urgent referral"
+   ],
+   "keyFindings": [
+    "HbA1c 5.9% (prediabetes range, stable, not worsened)",
+    "Fasting glucose 77.3 mg/dL, within normal range",
+    "BMI 30 kg/m2 (obese class I); weight +5.3 kg since 2023-06-02 (~3 years, not acute gestational gain)",
+    "BP 135/88 mmHg, HR 93 - borderline elevated, flag for OB follow-up not acute action",
+    "Diet pattern: budget-driven, starch-heavy, feeds household of 8; recently added oatmeal breakfast and more water (weeks-old change)",
+    "Skips own lunch so younger kids eat first; late-night snacking; finishes kids' sweet tea/juice",
+    "Uses sales flyers and food pantry near her church to stretch budget",
+    "Reports taking prenatal vitamin 'most days'; OB record from 2026-08-21 documents a full week in August 2026 with no vitamin use due to nausea - a mismatch she has not volunteered to this learner",
+    "No alcohol/tobacco concerns (ex-smoker, AUDIT-C 1); no known allergies",
+    "2023 CBC (hemoglobin 17.3, WBC 4.7, platelets 211.7) predates current pregnancy and is not relevant to current nutrition status"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment: diet history, 24-hr recall or typical day, anthropometrics, relevant labs, psychosocial/food access barriers",
+    "Nutrition diagnosis (PES): e.g., 'Inconsistent carbohydrate/meal timing related to household food allocation and limited support as evidenced by self-reported meal skipping and new but fragile dietary changes'",
+    "Reinforce and anchor recent wins (oatmeal breakfast, increased water) with specific, low-burden strategies to sustain them through a stressful week",
+    "Provide portion- and timing-specific guidance on carbohydrate choices to correct the 'good carbs are always fine' overgeneralization, using her existing knowledge as a base",
+    "Address meal skipping: counsel on ensuring she eats a protein/fiber-containing meal at the same time as feeding the kids, not after",
+    "Discuss practical budget- and pantry-compatible meal planning for a household of 8 (e.g., building meals around rice/beans/eggs/frozen vegetables, pantry inventory check)",
+    "Address sweet tea and finishing kids' juice: suggest realistic substitutions or portion limits rather than elimination",
+    "Gently explore prenatal vitamin adherence pattern and taking it with food/snack to reduce nausea; normalize the difficulty without judgment",
+    "Flag mismatch between patient self-report and OB documentation for care-team communication (not confrontation) and encourage her to raise it with her OB",
+    "Screen briefly for emotional wellbeing related to the prior loss and current pregnancy anxiety; refer to OB/behavioral health if distress is significant",
+    "Communicate elevated BP/HR and lipid values to the OB team for their follow-up; this is outside dietetics scope to manage directly",
+    "Schedule a focused follow-up visit in 2-4 weeks to reassess adherence and reinforce changes"
+   ],
+   "redFlags": [
+    "Any report of persistent vomiting/inability to retain fluids or vitamins (hyperemesis) - not currently present but worth monitoring",
+    "BP trending higher or new symptoms (headache, visual changes, swelling worsening) suggestive of preeclampsia - refer to OB urgently if it emerges",
+    "Expressed thoughts of self-harm or severe depressive symptoms tied to miscarriage anxiety - refer to behavioral health/OB immediately if disclosed",
+    "Complete cessation of prenatal vitamin for extended periods without clinical follow-up"
+   ],
+   "educationPoints": [
+    "Oatmeal and beans are good complex-carbohydrate choices, but portion size and pairing with protein/fat still matter for blood sugar in pregnancy with prediabetes",
+    "Skipping her own meals to feed the kids first can worsen fatigue and blood sugar swings and is not necessary even on a tight budget",
+    "Small, sustainable swaps (like the ones she's already started) are more durable than big overhauls, especially with low household support",
+    "Taking the prenatal vitamin with a small snack rather than on an empty stomach can reduce nausea and support more consistent use",
+    "It is safe and expected to tell her OB about gaps in vitamin use; this isn't about being 'in trouble', it helps the team support her better",
+    "Food pantry and sales-flyer shopping are valid, resourceful strategies, not something to be ashamed of; there are ways to build balanced meals from what's available there"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "She reports taking her prenatal vitamin most days, describing lapses as occasional forgetfulness when nausea flares on an empty stomach (h21, s15)",
+    "recordEvidence": "OB visit note from 2026-08-21 documents that she reported a full one-week gap with no prenatal vitamin use that same month due to nausea (d2)",
+    "teachingPoint": "Self-reported supplement adherence can minimize the true extent of gaps; cross-checking recent documentation helps the clinician gauge actual intake before building a plan, and the gap should be explored gently rather than confronted.",
+    "factId": "h21",
+    "artifactId": "d2"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "She attributes her weight gain mainly to current stress eating and household demands, not framing it as a multi-year trend (h25)",
+    "recordEvidence": "Weight trend shows a +5.3 kg change from 2023-06-02 to the current visit, a gain accumulated over roughly three years rather than acutely (d4)",
+    "teachingPoint": "Distinguishing gradual, multi-year weight change from acute gestational or recent change is essential for accurate nutrition assessment and avoids over- or under-attributing current eating patterns to a single cause."
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 1,
+   "condition": "Normal pregnancy",
+   "conditionLabel": "31 F · Normal pregnancy, Prediabetes · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "021d485a",
+   "fingerprint": "5o05c8"
+  }
+ }
+}

@@ -156,7 +156,7 @@ export function gapSchema(r: SyntheaRecord) {
     keywords: { type: "array", items: str, description: "6-10 lower-case keywords: conditions and teaching themes." },
     occupation: { type: "string", description: "A specific job (or former job) that fits the recorded employment status, age and education." },
     cultural_context: str,
-    primary_diagnosis: { type: "string", enum: r.problems.map((p) => p.name), description: "The recorded problem this nutrition visit is mainly about." },
+    primary_diagnosis: { type: "string", enum: focusProblems(r), description: "The recorded problem this nutrition visit is mainly about." },
     current_symptoms: { type: "array", items: str, description: "What the patient notices day to day, consistent with the recorded problems. No new diagnoses." },
     clinical_findings: { type: "array", items: str, description: "2-4 things a clinician would see or hear on examining this patient (appearance, skin, mouth, swelling, gait, breath sounds), consistent with the recorded problems. Not laboratory values, vital signs or measurements: those are already in the record." },
     medications: {
@@ -185,13 +185,31 @@ Rules
 - The assigned traits are fixed too. Build the person around them. If a trait cannot fit the record, bend the trait as little as needed and keep the record.
 - Make this person specific. Name actual foods, shops, routines, people and phrases. Avoid the generic patient who "eats fast food and wants to be healthier".
 - Do not reuse names, foods, jobs, phrases or scenarios from the example profiles. They show the format, the level of detail and the tone, nothing else.
-- Do not give the patient the foods, beliefs or family patterns conventionally associated with their race or ethnicity. Build what they eat from the assigned eating pattern, their job, budget, household, age and where they live. Cultural context is about this individual's upbringing and values, written with respect.
-- Keep the recorded race and ethnicity exactly as given; do not add a heritage the record does not state.
+- The record you are shown does not state race or ethnicity, on purpose. Do not guess one from the name and do not mention one. Build what the patient eats from the assigned eating pattern, their job, budget, household, age and where they live. Cultural context is about this individual's upbringing, work, community and values, written with respect, without naming a race, ethnicity or national origin.
 - Hidden and reluctant items must be concrete: name the person, the amount, the event. Never hedge with "likely", "possibly" or "something".
 - Do not repeat laboratory values, vital signs or measurements in the fields you write; refer to them in words if you need to ("her cholesterol is high").
 - information_disclosure sorts what the patient reveals into four tiers: initial (said unprompted at the start), discoverable (comes out with ordinary good questions), reluctant (needs trust or a careful, non-judgmental question), hidden (only with real rapport). The held-back trait belongs in reluctant or hidden. Put at least one item in each tier.
 - Write patient reactions as things this patient would actually say, in their voice.
 - This is synthetic educational content. No real people.`;
+
+/**
+ * The record as the model sees it. Race and ethnicity are held back: given them, the model
+ * reaches for the foods and family patterns conventionally attached to a group, however it is
+ * instructed. They are added to the finished profile from the record afterwards.
+ */
+function shown(r: SyntheaRecord) {
+  const base = baseProfile(r);
+  const { ethnicity: _withheld, ...demographics } = base.demographics;
+  return { ...base, demographics };
+}
+
+/** Problems a nutrition visit can be about. Falls back to every problem if none qualifies. */
+export function focusProblems(r: SyntheaRecord): string[] {
+  const all = r.problems.map((p) => p.name);
+  const off = /abuse|misuse|sinusitis|pain|migraine|molar|teeth|history of|pregnancy history|laceration|fracture|sprain|dermatitis|appendectomy|findings diagnostic imaging/i;
+  const fit = all.filter((n) => !off.test(n));
+  return fit.length ? fit : all;
+}
 
 export function gapPrompt(r: SyntheaRecord, traits: Traits, examples: unknown[]): string {
   const s = r.survey || {};
@@ -199,7 +217,7 @@ export function gapPrompt(r: SyntheaRecord, traits: Traits, examples: unknown[])
     .map(([k, v]) => `${k.replace(/_/g, " ")}: ${v}`)
     .join("; ");
   return `${examples.length ? `EXAMPLE PROFILES (format and depth only; do not copy their content)\n${examples.map((e) => JSON.stringify(e)).join("\n\n")}\n\n` : ""}THE RECORD (from Synthea; fixed)
-${JSON.stringify(baseProfile(r), null, 1)}
+${JSON.stringify(shown(r), null, 1)}
 Smoking status: ${r.smoking || "not recorded"}
 Social survey and screening answers: ${survey || "none recorded"}
 Other findings on record: ${r.social.join("; ") || "none"}
@@ -243,7 +261,7 @@ const opportunities = (gap: Gap) => (Array.isArray(gap.learning_opportunities) ?
 /** Reasons a model reply cannot be used. Empty when it is fine. */
 export function gapProblems(gap: Gap, r: SyntheaRecord): string[] {
   const out: string[] = [];
-  if (!r.problems.some((p) => p.name === gap.primary_diagnosis)) out.push("primary_diagnosis is not one of the recorded problems");
+  if (!focusProblems(r).includes(gap.primary_diagnosis)) out.push("primary_diagnosis is not one of the recorded problems a nutrition visit can focus on");
   for (const tier of ["initial_information", "discoverable_information", "reluctant_information", "hidden_information"]) if (!gap.information_disclosure?.[tier]?.length) out.push(`information_disclosure.${tier} is empty`);
   for (const key of ["dietary_pattern", "meal_pattern"]) if (!String(gap.nutrition_profile?.[key] || "").trim()) out.push(`nutrition_profile.${key} is empty`);
   if (!String(gap.psychosocial_profile?.personality || "").trim()) out.push("psychosocial_profile.personality is empty");

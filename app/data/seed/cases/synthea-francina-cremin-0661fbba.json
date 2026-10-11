@@ -1,0 +1,923 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Early Behavior Change in Newly Diagnosed Prediabetes with Obesity",
+  "summary": "Francina Cremin is a 40-year-old woman with newly diagnosed prediabetes (HbA1c 6.0%) and obesity (BMI 30.2) referred for nutrition counseling after an October wellness visit. The case teaches learners to support a fragile early action-stage change, navigate family food culture and social pressure, use motivational interviewing to surface a hidden fear of repeating her father's diabetes complications, and reconcile a patient-reported adherence narrative against her own self-monitoring data showing portion-size gaps at family dinners.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Hamilton, New Jersey, seated at her kitchen table with a notebook nearby",
+  "encounterType": "Nutrition assessment and counseling (initial visit)",
+  "difficulty": 3,
+  "patient": {
+   "name": "Francina Cremin",
+   "age": 40,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Former administrative coordinator for a school district, currently unemployed and job-searching",
+   "language": "English",
+   "appearance": "Seated at her kitchen table in a tidy, lived-in kitchen; dressed casually; keeps her phone nearby to check logged numbers; posture upright and alert, speaks quickly and precisely, occasional flicker of worry behind a composed exterior",
+   "portrait": "/portraits/synthea-francina-cremin-0661fbba.jpg"
+  },
+  "persona": {
+   "personality": "Skeptical and questioning; organized, detail-oriented planner who likes data and wants the reasoning behind every recommendation before trusting it",
+   "communicationStyle": "Precise and factual, quotes her own lab numbers and dates from memory, asks direct follow-up questions, gets impatient with vague answers but softens once she feels heard",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Outwardly composed and businesslike, with an undercurrent of anxiety and quiet dread she has not voiced to anyone yet",
+   "background": "Grew up in a large, food-centered Italian-American household in central New Jersey where Sunday dinners were an institution; studied communications in college and worked over a decade in school administration before recent unemployment; married with two children including a toddler; prides herself on scratch cooking passed down from her grandmother",
+   "speechExamples": [
+    "My HbA1c was 6.0 on October 6th - that's prediabetic range, right?",
+    "I don't want a diet, I want to understand my own body.",
+    "Does one bad dinner undo three weeks of trying?",
+    "My husband says I'm not even diabetic yet, why am I being so dramatic about it.",
+    "Just tell me what will actually move the number, and I'll figure out how to make it work in my kitchen."
+   ],
+   "concerns": [
+    "Worried the changes she started a few weeks ago won't stick without family support",
+    "Concerned that cutting portions at dinner will cause conflict with her husband",
+    "Wants to know exactly what 'prediabetes' means numerically and whether it's reversible"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition visit with Francina Cremin, a 40-year-old woman referred after her October wellness visit revealed new diagnoses of prediabetes and obesity. Review the available health record information before the call. Your goals are to complete a nutrition-focused assessment, identify a nutrition diagnosis, and provide patient-centered counseling using motivational interviewing.",
+   "chiefComplaint": "Newly diagnosed prediabetes and obesity, referred for nutrition counseling",
+   "openingLine": "Hi, thanks for setting this up. My doctor told me I'm prediabetic now - my A1c was 6.0 on October 6th. I already started cutting my pasta portions a few weeks ago, but I want to know if what I'm doing is actually enough.",
+   "tasks": [
+    "Take a focused nutrition history including current eating pattern, portion sizes, and recent changes",
+    "Review relevant labs and anthropometric data and explain their significance in terms the patient can use",
+    "Explore barriers and supports affecting the patient's ability to sustain dietary changes",
+    "Identify a nutrition diagnosis and negotiate a patient-centered, specific action plan using motivational interviewing",
+    "Document findings using the ADIME format"
+   ],
+   "timeLimitMin": 30
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition counseling referral for newly diagnosed prediabetes and obesity"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider (referring); Dietetics/Nutrition (current visit)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 2026); Body mass index 30+ - obesity (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient reports being told she is prediabetic based on October 6 labs, HbA1c 6.0%",
+    "says": "My doctor told me I'm prediabetic now - my A1c was 6.0 on October 6th. I looked it up, that's technically in the prediabetic range, right?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Reports BMI of 30.2 and weight gain of approximately 11 lbs (4.9 kg) since late 2023",
+    "says": "My BMI is apparently 30.2 now. I've gained almost 5 kilos - like 11 pounds - since my labs back in 2023.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "recent diet changes",
+    "chart": "Reports initiating portion reduction and recipe swaps (e.g., cauliflower rice for white rice) approximately 3 weeks prior to visit",
+    "says": "I started swapping cauliflower rice for white rice about three weeks ago, and I've been trying to cut my portions down too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "evidence basis for plan",
+    "chart": "Patient requests explanation of physiologic rationale behind nutrition recommendations before adopting them",
+    "says": "Before you tell me what to do, I want to understand why - what's actually happening in my body with the carbs and the blood sugar?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "meal timing",
+    "chart": "Reports dinner typically served after 7:30pm due to spouse's work schedule",
+    "says": "We don't eat dinner until like 7:30 or later most nights, because that's when my husband gets home from work.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "cooking habits",
+    "chart": "Reports cooking most meals from scratch, including sauce, bread, and roasted meats, and takes pride in this",
+    "says": "I make everything from scratch - my grandmother's sauce recipe, homemade bread, roasted chicken. It's kind of my thing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "social",
+    "topic": "employment status",
+    "chart": "Reports being unemployed since leaving administrative coordinator position; job-searching",
+    "says": "I'm not working right now - I used to coordinate for the school district, but I've been job hunting for a while.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "social",
+    "topic": "household budget",
+    "chart": "Reports unemployment has tightened grocery budget and increased time at home around food",
+    "says": "Money's tighter since I'm not working, so I'm watching what I spend on groceries. And I'm just... home a lot, around food, all day.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "social",
+    "topic": "transportation access",
+    "chart": "Reports no car access on some days; relies on spouse for transportation, which previously caused a missed childcare pickup",
+    "says": "I don't always have the car - I share it with my husband - and one time I actually missed picking up my daughter because of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "family",
+    "topic": "mother-in-law comments",
+    "chart": "Reports mother-in-law makes dismissive comments when patient reduces portions at family meals",
+    "says": "My mother-in-law says things like 'one plate won't kill you' whenever I try to take less food at her table.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "psychosocial",
+    "topic": "family reaction to changes",
+    "chart": "Reports husband and mother-in-law tease patient about dietary changes and minimize the diagnosis",
+    "says": "My husband and his mom tease me, say I'm 'eating like a rabbit.' They don't really get why I'm being careful.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "adherence",
+    "topic": "consistency of changes",
+    "chart": "Acknowledges reverting to larger portions at two family dinners since starting changes three weeks ago",
+    "says": "I'll be honest, I slipped at two family dinners already. I know I shouldn't have had seconds at my mother-in-law's, but she kept pushing the plate at me.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "family",
+    "topic": "family history",
+    "chart": "Reports paternal history of type 2 diabetes diagnosed in his fifties, later complicated by diabetic foot ulcer and partial amputation",
+    "says": "My dad... he got diagnosed with type 2 diabetes in his fifties, and later on he lost part of his foot to an ulcer. I've never really told anyone that here.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "psychosocial",
+    "topic": "nighttime worry",
+    "chart": "Reports lying awake after large dinners calculating how many years she may have before developing similar complications as her father",
+    "says": "Some nights after a big dinner I just lie there doing the math in my head - like how many years do I have before I end up like him.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "afternoon energy",
+    "chart": "Reports increased mid-afternoon fatigue compared to baseline",
+    "says": "I've noticed I get really tired by mid-afternoon lately, more than I used to.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "post-meal fullness",
+    "chart": "Reports uncomfortable fullness after dinner most nights",
+    "says": "Most nights I feel way too full after dinner, like uncomfortably stuffed.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "headaches",
+    "chart": "Reports occasional headaches, attributes to inadequate water intake",
+    "says": "I get headaches sometimes - I figure it's because I'm not drinking enough water.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "ring tightness",
+    "chart": "Reports rings feeling tighter over the past year",
+    "says": "My rings have been feeling tighter than they did a year ago.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "nutrition",
+    "topic": "typical breakfast",
+    "chart": "Reports small breakfast of coffee and toast",
+    "says": "Breakfast is small for me - just coffee and a piece of toast.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "nutrition",
+    "topic": "typical lunch",
+    "chart": "Reports lunch typically consists of leftovers from the previous night's dinner",
+    "says": "Lunch is usually just whatever's left over from the night before.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "nutrition",
+    "topic": "dinner composition",
+    "chart": "Reports dinner is the largest and most elaborate meal, typically including pasta, sauce, bread, and salad with dressing/croutons",
+    "says": "Dinner's the big meal - pasta with sauce, bread, salad with a lot of dressing and croutons usually.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f22",
+    "category": "nutrition",
+    "topic": "snacking while cooking",
+    "chart": "Reports snacking on bread while preparing dinner",
+    "says": "I'll admit I pick at the bread while I'm cooking, just a slice here or there.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "nutrition",
+    "topic": "portion perception",
+    "chart": "Believes portion size, not specific foods, is her primary dietary issue",
+    "says": "I don't think it's really what I'm eating, it's how much - portions are my real problem.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "nutrition",
+    "topic": "weekend treats",
+    "chart": "Reports eating cannoli or sfogliatelle from a local bakery on weekends",
+    "says": "On weekends we usually get cannoli or sfogliatelle from the bakery down the street - it's kind of a tradition.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "nutrition",
+    "topic": "hydration habits",
+    "chart": "Reports drinking coffee in the morning and water through the day, but admits inconsistent intake some days",
+    "says": "I drink coffee in the morning, water during the day, but honestly some days I just forget to drink much at all.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "nutrition",
+    "topic": "alcohol intake",
+    "chart": "Reports occasional glass of wine with dinner, up to two on weekends",
+    "says": "I'll have a glass of wine with dinner sometimes, maybe two on a weekend.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "function",
+    "topic": "physical activity",
+    "chart": "Reports walking dog approximately 20 minutes most days and attempting a twice-weekly YouTube workout video since diagnosis, with difficulty maintaining it",
+    "says": "I walk the dog maybe 20 minutes most days, and I started trying one of those YouTube workout videos twice a week since my diagnosis, but it's hard to keep up with.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "sleep quality",
+    "chart": "Reports difficulty falling asleep some nights, averaging 6 to 6.5 hours of sleep",
+    "says": "I have trouble falling asleep some nights - I'm probably getting six, six and a half hours, which I know isn't great.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Reports taking an over-the-counter multivitamin most mornings and fish oil capsules started recently for perceived benefit on insulin sensitivity",
+    "says": "I take a multivitamin most mornings, and I started fish oil pills recently - I read somewhere they help with the insulin stuff.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "medications",
+    "topic": "antacid use",
+    "chart": "Reports occasional use of Tums after large dinners",
+    "says": "I'll take a Tums sometimes after a really big dinner.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "goals",
+    "topic": "treatment goals",
+    "chart": "States goals of normalizing HbA1c, losing approximately 11 pounds gained, and avoiding progression to diabetes requiring medication",
+    "says": "I want my A1c back under 5.7, I want to lose this 11 pounds, and honestly I want to prove to myself I can turn this around before it turns into actual diabetes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "other",
+    "topic": "views on medication",
+    "chart": "States belief that medication should be a last resort and she wants to avoid needing it",
+    "says": "I really don't want to end up needing medication for this if I can help it - that feels like a last resort to me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "psychosocial",
+    "topic": "self-tracking habits",
+    "chart": "Reports logging weight most mornings and meals on some days in a personal notebook",
+    "says": "I keep a little notebook - I write my weight down most mornings, and some days I jot down what I ate too.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f34",
+    "category": "pmh",
+    "topic": "past surgical history",
+    "chart": "Reports facial laceration in June 2026 requiring sutures and tetanus injection, fully resolved",
+    "says": "Oh, I cut my face pretty badly back in June, needed stitches and a tetanus shot, but that's all healed up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f35",
+    "category": "pmh",
+    "topic": "reproductive history",
+    "chart": "Reports normal pregnancy in early 2024 followed by pregnancy termination later that year; does not wish to discuss further",
+    "says": "I had a pregnancy in early 2024 and then had it terminated - that's really not something I want to get into today, it's not related to this.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f36",
+    "category": "social",
+    "topic": "support network",
+    "chart": "Reports socializing with friends 3-5 times weekly, a potential but currently unengaged resource",
+    "says": "I see my friends three, four, five times a week honestly - we're pretty close.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [
+     "diet recall",
+     "food recall",
+     "24hr recall"
+    ],
+    "result": "Breakfast: coffee and toast. Lunch: leftovers from prior night's dinner. Dinner (~7:30-8pm): large portion of pasta with Sunday sauce, meatballs/sausage, side salad with dressing and croutons, bread with butter, occasional glass of wine. Snacking on bread while cooking reported.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Portion-size assessment (plate/serving comparison)",
+    "aliases": [
+     "plate assessment",
+     "portion check"
+    ],
+    "result": "Patient estimates her dinner pasta serving at roughly 2-3 cups cooked, versus a standard reference serving of about 1 cup/8oz measuring cup; she has not been measuring portions directly.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [
+     "stage of change",
+     "readiness assessment"
+    ],
+    "result": "Patient endorses active engagement with recent changes (recipe swaps, smaller plates) begun ~3 weeks ago, consistent with action stage; reports difficulty maintaining changes in social/family settings.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Alcohol use screening (AUDIT-C style)",
+    "aliases": [
+     "alcohol screen",
+     "AUDIT-C"
+    ],
+    "result": "Score 2, consistent with low-risk use (occasional glass of wine, maybe two on weekends)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [
+     "activity level",
+     "exercise assessment"
+    ],
+    "result": "Walks dog ~20 minutes most days; attempting a YouTube workout video twice weekly since diagnosis but reports difficulty keeping up with it",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review supplement and OTC use",
+    "aliases": [
+     "check supplements",
+     "check OTC use",
+     "medication reconciliation"
+    ],
+    "result": "Over-the-counter multivitamin most mornings; fish oil capsules started recently; occasional Tums after large dinners. No prescription medications on file.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Sleep pattern assessment",
+    "aliases": [
+     "sleep history",
+     "sleep check"
+    ],
+    "result": "Reports 6-6.5 hours average sleep, difficulty falling asleep some nights",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review prior visit note (October wellness visit)",
+    "aliases": [
+     "review referral",
+     "check wellness visit note"
+    ],
+    "result": "October 2026 wellness visit note: new diagnoses of prediabetes and obesity (BMI 30+) based on labs; patient referred to nutrition for lifestyle counseling.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review patient's self-logged food/weight notebook (as reported)",
+    "aliases": [
+     "check food log",
+     "check weight log"
+    ],
+    "result": "Patient reports logging weight most mornings and meals on 'some days' in a personal notebook; log not available for direct chart review, only patient-reported content.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 110/85 mmHg, heart rate 84/min, respiratory rate 14/min, weight 78.7 kg, height 161.5 cm, BMI 30.2 kg/m2, weight change +4.9 kg since 2023-12-19 (recorded 2026-10-06).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6 %; Glucose 73.5 mg/dL; Total cholesterol 177.6 mg/dL; LDL cholesterol 98.1 mg/dL; HDL cholesterol 53.2 mg/dL; Triglycerides 131.2 mg/dL; Haemoglobin 13.3 g/dL; White cell count 6.6 10*3/uL; Platelets 217.1 10*3/uL; Potassium 4.7 mmol/L; Sodium 143.3 mmol/L; Urea nitrogen 15.4 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-10-06); Hep A adult (2026-10-06); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-11-09); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2017-12-12).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "October Wellness Visit Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-10-06",
+    "author": "Primary Care Provider",
+    "body": "40-year-old female presents for annual wellness visit. BMI calculated at 30.2 kg/m2 (height 161.5 cm, weight 78.7 kg), up from prior documented weight in December 2023. Labs obtained today show HbA1c 6.0%, consistent with prediabetes per ADA criteria (5.7-6.4%). Fasting glucose within normal range at 73.5 mg/dL. Discussed diagnosis of prediabetes and obesity (BMI >=30) with patient. Patient was engaged and asked detailed questions about mechanism. Referred to outpatient nutrition counseling for medical nutrition therapy. Follow-up labs recommended in 3-6 months. No pharmacologic therapy initiated at this time; lifestyle modification recommended as first-line approach."
+   },
+   {
+    "id": "d4",
+    "type": "other",
+    "title": "Patient-Reported Food and Weight Notebook (summary shared by patient)",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "date": "Last 3 weeks",
+    "author": "Self-report, not a verified clinical document",
+    "body": "Patient describes logging her weight most mornings in a small spiral notebook and jotting down meals 'some days, not every day.' She reports estimating her dinner pasta portion as 'a big bowl, maybe two or three cups' most nights this week, though she has not measured it with a cup. She notes two entries flagged with a star that she says mean 'bad night' - both fall on dates she identifies as family dinners at her mother-in-law's house."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 2026)\nBody mass index 30+ - obesity (since 2026)\n\nRECENTLY RESOLVED\nViral sinusitis (2023-02 to 2023-03)\nNormal pregnancy (2024-02 to 2024-03)\nLaceration - injury (2026-06 to 2026-07)\nFacial laceration (2026-06 to 2026-07)\n\nPROCEDURES\n2026-06-21: Injection of tetanus antitoxin (Facial laceration)\n2026-06-21: Suture open wound (Facial laceration)\n2024-03-21: Pregnancy termination care (Normal pregnancy)\n2024-03-21: Physical examination procedure (Normal pregnancy)\n2024-03-04: Induced termination of pregnancy (Normal pregnancy)\n2024-02-13: Standard pregnancy test (Normal pregnancy)\n\nRECENT ENCOUNTERS\n2026-10-06 wellness: General examination of patient\n2026-06-21 emergency: Emergency room admission (Laceration - injury)\n2024-04-19 outpatient: Consultation for treatment (Contraception care)\n2024-03-21 ambulatory: Prenatal visit (Normal pregnancy)\n2024-03-04 ambulatory: Patient-initiated encounter (Normal pregnancy)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6",
+        "%",
+        "< 5.7",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "73.5",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "177.6",
+        "mg/dL",
+        "< 200",
+        "2023-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "98.1",
+        "mg/dL",
+        "< 100",
+        "2023-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "53.2",
+        "mg/dL",
+        ">= 40",
+        "2023-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "131.2",
+        "mg/dL",
+        "< 150",
+        "2023-12-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "13.3",
+        "g/dL",
+        "12.0-17.5",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.6",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "217.1",
+        "10*3/uL",
+        "150-450",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.7",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143.3",
+        "mmol/L",
+        "135-145",
+        "2026-10-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "15.4",
+        "mg/dL",
+        "7-20",
+        "2026-10-06"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and affirm a fragile early action-stage behavior change without triggering defensiveness, using motivational interviewing techniques",
+    "factIds": [
+     "f3",
+     "f12"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Explore family and household dynamics as both a barrier to and potential resource for sustained dietary change",
+    "factIds": [
+     "f10",
+     "f11",
+     "f6"
+    ],
+    "actionIds": [
+     "a6"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Build sufficient rapport to surface the patient's hidden fear of repeating her father's diabetes complications and connect it to her nighttime rumination",
+    "factIds": [
+     "f13",
+     "f14"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o4",
+    "text": "Translate HbA1c and glucose values into an actionable, mechanistically explained nutrition plan appropriate to the patient's health literacy and desire for rationale",
+    "factIds": [
+     "f1",
+     "f4",
+     "f31"
+    ],
+    "actionIds": [
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify and address practical barriers (transportation, unemployment, grocery budget) when developing the nutrition care plan",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o6",
+    "text": "Compare patient-reported adherence against self-monitoring records to identify a portion-size mismatch and use it as a non-judgmental teaching opportunity",
+    "factIds": [
+     "f23",
+     "f33"
+    ],
+    "actionIds": [
+     "a7",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive carbohydrate and energy intake relative to needs (large, late dinners with refined pasta/bread, large portions) related to family food culture, unstructured portion sizes, and social pressure at family meals, as evidenced by HbA1c 6.0%, BMI 30.2 kg/m2, +4.9 kg weight gain since 2023, and patient-reported dinner portions of 2-3 cups pasta versus 1-cup reference serving",
+   "differential": [
+    "Nutrition diagnosis: Excessive energy intake (NI-1.3) related to large portion sizes and late, calorie-dense dinners",
+    "Nutrition diagnosis: Limited adherence to nutrition-related recommendations (NB-1.6) related to family food culture and social pressure, evidenced by two reported slips in three weeks",
+    "Nutrition diagnosis: Food- and nutrition-related knowledge deficit (NB-1.1) regarding appropriate portion sizes and carbohydrate quantification, evidenced by patient's self-estimated dinner portion far exceeding standard serving size",
+    "Rule out: inadequate physical activity as primary driver (activity is modest but not the dominant contributor given dietary pattern)"
+   ],
+   "keyFindings": [
+    "HbA1c 6.0% (prediabetic range), fasting glucose normal at 73.5 mg/dL",
+    "BMI 30.2 kg/m2; weight +4.9 kg (~11 lb) since December 2023",
+    "Dietary pattern: small breakfast, leftover lunch, large late dinner (after 7:30pm) with refined pasta, bread, and salad with heavy dressing/croutons",
+    "Self-reported dinner portion of 2-3 cups pasta vs. ~1 cup standard reference serving, with two self-flagged 'bad night' entries at family dinners corresponding to reported slips",
+    "Family environment (husband, mother-in-law) minimizes diagnosis and pressures larger portions",
+    "Barriers: unemployment/budget constraints, inconsistent transportation, late meal timing",
+    "Strengths: strong cooking skills, early concrete behavior changes already initiated, active self-monitoring (notebook), high engagement with lab data"
+   ],
+   "plan": [
+    "Validate and reinforce the changes already made (recipe swaps, smaller plates) using MI-consistent affirmations",
+    "Collaboratively set a specific, measurable portion-size goal for dinner pasta (e.g., using a 1-cup measuring reference) that preserves family recipes but adjusts quantity",
+    "Discuss plate composition strategies (e.g., proportionally more vegetables/protein, measured starch) that fit her scratch-cooking style and budget",
+    "Problem-solve the late-dinner timing with a small afternoon snack or earlier light meal to reduce evening hunger-driven overeating",
+    "Explore options for involving husband/family in a low-conflict way (e.g., framing changes as 'cooking lighter' rather than 'dieting') without requiring confrontation she isn't ready for",
+    "Address identified barriers: discuss budget-friendly ways to add vegetables/fiber, and flag transportation issue for care team follow-up planning",
+    "Encourage continued self-monitoring (notebook) with specific prompts (e.g., noting portion estimates at family meals) and schedule follow-up to reassess HbA1c in 3-6 months per PCP plan",
+    "If hidden fear (father's diabetes/amputation) surfaces, acknowledge emotion, normalize fear as a motivator, and gently link it to the current actionable plan without catastrophizing",
+    "Document ADIME note capturing nutrition diagnosis, intervention, and measurable monitoring plan"
+   ],
+   "redFlags": [
+    "Progression from prediabetes to type 2 diabetes if intake pattern and portion sizes remain unchanged",
+    "Underlying unspoken fear/anxiety about repeating father's diabetic complications, which could affect emotional readiness and warrants supportive acknowledgment or referral if distress escalates",
+    "Lack of family support could undermine adherence and may require tailored strategies or involvement of family in counseling if patient is willing"
+   ],
+   "educationPoints": [
+    "Explain in physiologic terms how refined carbohydrate quantity (not just type) affects post-meal glucose and contributes to HbA1c elevation over time",
+    "Clarify that prediabetes (HbA1c 5.7-6.4%) is a window where lifestyle change can often normalize glucose metabolism before progression to diabetes",
+    "Teach practical portion-size reference tools (e.g., measuring cups, plate method) that do not require abandoning her traditional recipes",
+    "Discuss how late, large single meals can affect satiety signals and overall daily intake, and ways to redistribute intake across the day",
+    "Reinforce that occasional slips at family gatherings do not erase overall progress, and that consistency over time matters more than perfection"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Patient describes carefully watching her grocery budget and portion sizes, implying consistent portion control at home",
+    "recordEvidence": "Patient-reported food notebook summary (d4) shows two 'bad night' flagged entries corresponding to family dinner dates, and current estimated dinner portion of 2-3 cups of pasta versus a standard ~1 cup reference serving",
+    "teachingPoint": "Self-reported adherence can diverge from a patient's own tracked data; reviewing self-monitoring records alongside the interview can reveal gaps between stated intent and actual portions, especially around high-risk social eating occasions.",
+    "factId": "f7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 6,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "40 F · Prediabetes · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "0661fbba",
+   "fingerprint": "df6yon"
+  }
+ }
+}

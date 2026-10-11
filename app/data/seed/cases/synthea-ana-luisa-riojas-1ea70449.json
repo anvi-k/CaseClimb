@@ -1,0 +1,1086 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Three-Week Dietary Change in an 81-Year-Old with Prediabetes, Polypharmacy, and Hidden Nighttime Eating",
+  "summary": "This case features an 81-year-old Spanish-dominant Hispanic woman with new prediabetes (HbA1c 5.9%), extensive cardiac and polypharmacy history, and mild Alzheimer's, who presents three weeks into self-directed portion-control changes. It teaches learners to take a non-judgmental diet history from a skeptical, question-deflecting patient, to gently surface shame-based nighttime binge eating that contradicts her confident self-report of 'doing really well,' to recognize an unreconciled medication list and opioid-related constipation as nutrition-relevant findings warranting referral/counseling rather than nutritional fixes, and to problem-solve culturally congruent portion strategies without asking her to abandon family cooking traditions.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Somerset, New Jersey, seated at her kitchen table with a small radio audible in the background",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Ana Luisa Riojas",
+   "age": 81,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Retired seamstress, now part-time alterations work two mornings a week at a dry cleaner",
+   "language": "Spanish-dominant bilingual (speaks English with some mixing of Spanish, prefers to clarify medical terms in Spanish)",
+   "appearance": "Seated at her kitchen table, sharply dressed with care despite the early hour; gait seen walking to the chair was slow and favored the right hip, pausing at the doorframe; alert and animated, gestures while she talks, radio playing low Spanish-language talk in the background",
+   "portrait": "/portraits/synthea-ana-luisa-riojas-1ea70449.jpg"
+  },
+  "persona": {
+   "personality": "Skeptical, sharp-tongued, and proud; treats advice as a hypothesis to be tested rather than an order to follow. Fiercely independent and allergic to being told what to do without an explanation.",
+   "communicationStyle": "Answers nearly every question with a counter-question - 'Why does that matter?' 'Who told you that?' - testing whether the student actually knows their material rather than reading from a script. Uses concrete, kitchen-and-family language, not clinical terms, and occasionally slips into Spanish phrasing when she wants to be precise about something. Warms up and softens when she senses genuine curiosity instead of a checklist.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Proud of her three-week effort and ready to defend it, but carrying a guarded, slightly tense undertone whenever the conversation drifts toward nighttime eating or being 'checked up on.'",
+   "background": "Ana Luisa spent forty years as a seamstress and now does alterations two mornings a week at a dry cleaner near her home in Somerset. She raised her family in a household that has always been full - right now it's her daughter, two grandchildren, a great-grandchild, and a boarder, seven people under one roof. Sunday dinners have been the anchor of her life since childhood, when a full plate meant love and a clean plate meant gratitude, and she still cooks that way: big pots of arroz con pollo, beans, stewed meats, flan on Sundays. Her neighbor of twenty years, Teresa, drives her to appointments, fills her pill organizer every Sunday, and is the one person she tells things to that she wouldn't tell her own family. She keeps a little radio on the kitchen counter tuned to a Spanish-language talk station while she cooks, and she takes real pride in still being the sharpest person in most rooms despite her Alzheimer's diagnosis.",
+   "speechExamples": [
+    "Why do you need to know what I had for breakfast - are you writing a book about me?",
+    "Who told you that? Did my doctor say that, or is that just something you read?",
+    "I already fixed this myself three weeks ago - smaller plate, less rice. Nobody made me do it.",
+    "You think I can't keep this up? I've been cooking for this family for sixty years, mija.",
+    "Doesn't everyone eat a little extra when they're upset? That's not a crime last I checked."
+   ],
+   "concerns": [
+    "That her memory lapses will become everyone's excuse to take over her kitchen",
+    "That her part-time work hours will shrink if she gets sicker",
+    "That the household budget can't stretch to 'special' diabetic foods for just her",
+    "Why she has so many pills and whether some of them are duplicates nobody caught",
+    "Whether the burning in her chest some nights is her heart or just the beans repeating on her"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Ana Luisa Riojas, an 81-year-old woman recently flagged for prediabetes on bloodwork. She reports she has already started making changes to her eating on her own three weeks ago. Your job is to complete a nutrition assessment, understand her current eating pattern and barriers, and provide patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit after recent bloodwork showed blood sugar edging toward diabetes; patient reports she has already started changing her eating habits.",
+   "openingLine": "So you're the one I'm supposed to talk to about my eating? Fine - I already fixed it myself three weeks ago, smaller plate, less rice. What else do you need to know?",
+   "tasks": [
+    "Take a focused diet history covering a typical full day of eating, including portion sizes and household meal patterns",
+    "Explore the patient's recent self-directed dietary changes and her confidence in sustaining them, using open-ended and non-judgmental questions",
+    "Review the medication list for nutrition-relevant issues (timing, side effects, possible duplications) and determine what needs referral versus counseling today",
+    "Identify social or logistical barriers affecting her nutrition and medication follow-through",
+    "Develop a culturally congruent, collaborative nutrition plan that respects her role as the household cook and document it in ADIME format"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after recent bloodwork showed blood sugar creeping toward diabetes, to review eating habits now that patient says she's 'already fixed it myself'"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; cardiology; dietetics (current referral); neighbor Teresa Alvarez listed as support contact/transportation"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Recurrent urinary tract infection (since 1961); Past pregnancy history of miscarriage (since 1991); Prediabetes (since 1991); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014); Acute non-ST segment elevation myocardial infarction (since 2018); History of myocardial infarction (since 2018); Ischemic heart disease (since 2023); Abnormal findings diagnostic imaging heart+coronary circulat (since 2023); Alzheimer's disease (since 2024); Osteoporosis (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Alendronic acid 10 MG Oral Tablet; 24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; aspirin 81 MG Oral Tablet; bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet; simvastatin 10 MG Oral Tablet; valsartan 80 MG Oral Tablet; prasugrel 10 MG Oral Tablet; diphenhydrAMINE Hydrochloride 25 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Follow-up nutrition visit after recent bloodwork showed HbA1c trending toward diabetes range; patient reports self-initiated dietary changes three weeks ago.",
+    "says": "They sent me to talk to you because my sugar numbers came back a little high. But I already started fixing it myself three weeks ago - smaller plates, less rice at night.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent blood sugar result",
+    "chart": "Patient aware of recent A1c result in prediabetes range; attributes change to this news.",
+    "says": "The doctor said my number was 5.9, said that's 'pre' something. Not diabetes yet, but close enough to scare me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "timeline of dietary change",
+    "chart": "Reports starting portion control and reducing sugary drinks approximately 3 weeks ago.",
+    "says": "Three weeks now. Smaller plates, and I stopped the soda - just water and my coffee now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "family history of diabetes complications",
+    "chart": "Reports a sister with diabetes complications including bilateral lower-extremity amputation.",
+    "says": "My sister, God rest her, lost both her legs to the sugar. I am not doing that to myself.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "energy level after meals",
+    "chart": "Reports fatigue most afternoons, especially after a large midday meal.",
+    "says": "After lunch, especially a big one, I get so tired I could fall asleep in the chair.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "standing up sensation",
+    "chart": "Reports occasional lightheadedness on standing from seated position.",
+    "says": "Sometimes when I get up off the couch too fast, the room spins a little. Just for a second.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Reports intermittent dysuria, recurrent, 'every few months,' consistent with history of recurrent UTIs.",
+    "says": "Every few months the burning comes back when I go to the bathroom. I know it by now, like clockwork.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Reports constipation ongoing for several weeks, attributed to pain medication.",
+    "says": "I haven't gone right in weeks. I think it's that pain pill - it binds me up something terrible.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "chest sensations",
+    "chart": "Reports occasional burning chest sensation, uncertain if cardiac or gastrointestinal in origin; uses nitroglycerin spray as needed.",
+    "says": "Sometimes I get a burning in my chest and I don't know - is that my heart, or is that just the beans repeating on me?",
+    "tier": "discoverable",
+    "importance": "important",
+    "distractor": true
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "memory and daily tracking",
+    "chart": "Reports occasional difficulty recalling whether medications or meals were already taken.",
+    "says": "Sometimes I can't remember - did I already take that pill, did I already eat lunch? It comes and goes.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "pain pattern",
+    "chart": "Describes dull constant low back and neck ache worsening by late afternoon.",
+    "says": "My back and my neck, they ache all day but by the end of the afternoon it's worse, like a dull toothache that won't quit.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "pmh",
+    "topic": "heart history",
+    "chart": "History of NSTEMI (2018) and ischemic heart disease (dx 2023).",
+    "says": "I had a heart attack back in 2018. They put me on all these heart pills after that.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "memory diagnosis",
+    "chart": "Alzheimer's disease, diagnosed 2024, described by patient as mild.",
+    "says": "They told me last year it's Alzheimer's. Early, they say. I still cook circles around my daughter, so.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "bone health diagnosis",
+    "chart": "Osteoporosis, diagnosed 2026.",
+    "says": "Found out this year my bones are thinning. That one scared me straight - I take that pill now, no excuses.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "chronic pain history",
+    "chart": "Chronic low back and neck pain since 2014.",
+    "says": "My back and neck have been bad since 2014. Old sewing machine posture, I always say.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "urinary infection history",
+    "chart": "Recurrent UTIs since 1961.",
+    "says": "I've had bladder infections on and off since I was a young woman. Nothing new there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "Past pregnancy history includes a miscarriage, noted since 1991.",
+    "says": "I lost a baby once, a long time ago now. Why do you need that for the eating?",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "kidney function history",
+    "chart": "Old eGFR value of 8.9 mL/min/1.73m2 recorded 2018-02-18; no current renal diagnosis or dialysis history reported by patient.",
+    "says": "Nobody's ever told me my kidneys were bad. News to me if that's what's in there.",
+    "tier": "discoverable",
+    "importance": "important",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "pain medication regimen",
+    "chart": "Takes extended-release hydrocodone 10mg twice daily; uses PRN oxycodone/acetaminophen roughly 2-3 times weekly for pain flares, often skipped due to feeling 'foggy.'",
+    "says": "I take that long-acting one twice a day, and then there's the other one, the strong one, maybe two three times a week when it's really bad - that one makes my head cloudy so I try not to.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "bone medication timing",
+    "chart": "Takes alendronic acid 10mg weekly on an empty stomach; admits to sometimes lying down within 30 minutes afterward against instructions.",
+    "says": "I take that bone pill once a week, empty stomach like they said. Though I'll admit, some mornings I lay right back down on the couch after, which I know I'm not supposed to.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "memory medication",
+    "chart": "Takes donepezil/memantine extended-release 10mg/28mg daily; adherence maintained by neighbor who fills weekly pill organizer.",
+    "says": "That memory pill, my neighbor makes sure I take it every day. Though I don't see it doing much, if I'm honest.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "heart and blood pressure medications",
+    "chart": "Takes multiple cardiac medications including clopidogrel, prasugrel, aspirin, simvastatin (two listed strengths), metoprolol succinate, bisoprolol/HCTZ, valsartan, and PRN nitroglycerin spray; patient reports confusion over apparent duplicate entries.",
+    "says": "I've got so many heart pills I lose count. Two kinds of the same cholesterol pill, two kinds of blood thinner it looks like - nobody's ever explained why.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, nothing I'm allergic to, never have been.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household makeup",
+    "chart": "Lives with daughter, two grandchildren, a great-grandchild, and a boarder (household of 7)",
+    "says": "It's a full house - my daughter, the grandkids, the little one now too, and we rent a room to a young man from the church. Seven of us under one roof.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "family relationships",
+    "chart": "Reports recent financial argument with daughter about household money",
+    "says": "My daughter and I had words last month about the rent, about money - these things happen when too many people live in one house.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Retired seamstress, now does alterations part-time two mornings a week at a dry cleaner",
+    "says": "I sewed for forty years. Now I just do little alterations two mornings a week - keeps my hands busy, keeps a little money coming in.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "transportation",
+    "chart": "Relies on neighbor for transportation; missed a cardiology refill pickup last month when neighbor was unavailable",
+    "says": "The bus doesn't run right for my appointments, so Teresa drives me. Last month she couldn't, and I missed picking up one of my heart pills.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "housing stability",
+    "chart": "Expresses ongoing worry about affording rent in crowded household",
+    "says": "Seven people, one house - the rent worries me more than my sugar does some days, if I'm honest.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "support person",
+    "chart": "Neighbor Teresa of 20 years fills weekly pill organizer and drives her to appointments; confidante for things not shared with family",
+    "says": "Teresa next door, twenty years now - she fills my pill box every Sunday and drives me places. I tell her things I don't tell my own daughter.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Ex-smoker",
+    "says": "I smoked years ago, gave it up a long time back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Light alcohol use, roughly one glass of wine at holidays, AUDIT-C score 1",
+    "says": "Maybe a little wine at Christmas, that's it. I'm not a drinker.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "nutrition",
+    "topic": "cooking role",
+    "chart": "Cooks elaborate traditional meals nightly for household of seven; portions scaled for seven even when cooking for fewer",
+    "says": "I cook every night for whoever's home - rice, beans, meat, the works. That's just what you do for family.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "eating pattern after household sleeps",
+    "chart": "Reports occasionally eating a second meal alone at night after the household goes to sleep",
+    "says": "Sometimes if the house goes quiet before I've settled, I'll fix myself a little something again - no big deal, everybody does that.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "large eating episode",
+    "chart": "Admits, when trust is established, to eating nearly an entire tres leches cake alone over two nights after a family argument, and disposing of the evidence",
+    "says": "There was... a cake. After the fight with my daughter. I ate most of it myself over two nights and threw the pan out so nobody would ask.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "nutrition",
+    "topic": "concealed snacking",
+    "chart": "Admits, with strong rapport, to twice hiding pan dulce wrappers in her coat pocket rather than the kitchen trash to avoid detection",
+    "says": "Twice I put the wrapper in my coat pocket instead of the trash. I didn't want Teresa seeing it when she came by.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "memory and meals",
+    "chart": "Sometimes uncertain whether she has already eaten and eats again rather than ask her daughter and appear forgetful",
+    "says": "Sometimes I'm not sure if I already ate. I'd rather just eat again than ask my daughter and have her look at me funny.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "stress and cooking",
+    "chart": "Reports that household stress leads her to cook larger meals to feel in control",
+    "says": "When things get tense at home, I cook bigger - more dishes, more food. It makes me feel like I'm handling something, at least.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "fear of being seen as a burden",
+    "chart": "Expresses fear that memory or health decline will lead family to take over her kitchen and caregiving role",
+    "says": "If they decide I can't be trusted in my own kitchen, that's the beginning of the end for me. I won't be the one taking care of anybody anymore.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "Cites fear of her late sister's diabetes-related leg amputations as motivation to prevent progression to diabetes",
+    "says": "My sister lost both her legs to the sugar, little by little. I am not going down that road.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "goals",
+    "topic": "independence goals",
+    "chart": "States goal of remaining capable enough to cook for family events and avoid nursing home placement",
+    "says": "I want to be the one cooking at my great-grandbaby's birthday, not sitting in some home somewhere being fed by a stranger.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "adherence",
+    "topic": "response to three-week change",
+    "chart": "Reports one lapse in her three-week dietary change coinciding with grandson's school troubles, otherwise maintaining smaller portions",
+    "says": "I've been doing good - smaller plate, water instead of soda. Though there was one bad week, my grandson had trouble at school, and I slipped back some.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review problem list / diagnosis history",
+    "aliases": [],
+    "result": "Active problems include prediabetes, ischemic heart disease with history of NSTEMI (2018), Alzheimer's disease (dx 2024), osteoporosis (dx 2026), chronic low back and neck pain (since 2014), recurrent UTIs (since 1961)",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review pharmacy refill history",
+    "aliases": [],
+    "result": "Cardiology medication refill pickup recorded as missed last month; no documented reason in record",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall / usual intake interview",
+    "aliases": [],
+    "result": "Patient reports three home-cooked meals daily, large family-style dinner with rice, beans, stewed meat, and dessert most nights; reports smaller breakfast; states portions at dinner have 'gotten smaller' over the past three weeks and soda has been swapped for water",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Screen for GI symptoms related to opioid use (bowel pattern)",
+    "aliases": [],
+    "result": "Patient reports constipation ongoing for several weeks, attributes it to her pain medication, low fluid intake some days, and infrequent fiber-rich foods",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess hydration pattern",
+    "aliases": [],
+    "result": "Patient reports mostly coffee with condensed milk in the morning and water through the day; states she cut back on regular soda about three weeks ago",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen for alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 1; reports roughly one glass of wine at holiday gatherings only",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess physical activity level",
+    "aliases": [],
+    "result": "Patient reports limited activity due to chronic back and neck pain; short walks around the house and occasional slow evening walks with her neighbor Teresa",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Screen for home and social support barriers affecting nutrition follow-through",
+    "aliases": [],
+    "result": "Patient reports crowded household of seven, reliance on neighbor Teresa for transportation to appointments and medication organization, and ongoing stress about household finances and rent",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage of change for dietary modification",
+    "aliases": [],
+    "result": "Patient describes self-initiated changes beginning about three weeks ago (smaller plates, less rice, water instead of soda) and expresses pride in making the changes herself",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review most recent weight history/trend",
+    "aliases": [],
+    "result": "Weight stable at 70.4 kg over available records with no significant change noted in prior documented visits",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 107/70 mmHg, heart rate 83/min, respiratory rate 13/min, weight 70.4 kg, height 169.8 cm, BMI 24.4 kg/m2 (recorded 2026-05-24).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.9 %; Glucose 90 mg/dL; eGFR 8.9 mL/min/1.73m2; Total cholesterol 196.7 mg/dL; LDL cholesterol 106.8 mg/dL; HDL cholesterol 61.9 mg/dL; Triglycerides 139.8 mg/dL; Haemoglobin 15.4 g/dL; White cell count 8.1 10*3/uL; Platelets 153 10*3/uL; Potassium 4 mmol/L; Sodium 143.7 mmol/L; Urea nitrogen 12.4 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-04-26); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-16).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "date": "2026-05-10",
+    "author": "Somerset Pharmacy Services",
+    "body": "Cardiology medication refill (clopidogrel/prasugrel renewal) scheduled for pickup 2026-04-12; pickup not completed. No reschedule noted until next routine fill cycle."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nRecurrent urinary tract infection (since 1961)\nPast pregnancy history of miscarriage (since 1991)\nPrediabetes (since 1991)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\nAcute non-ST segment elevation myocardial infarction (since 2018)\nHistory of myocardial infarction (since 2018)\nIschemic heart disease (since 2023)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2023)\nAlzheimer's disease (since 2024)\nOsteoporosis (since 2026)\n\nRECENTLY RESOLVED\nAcute viral pharyngitis (2021-11 to 2021-11)\nGingivitis (2023-02 to 2023-02)\nGingival disease (2023-02 to 2023-02)\nGingivitis (2025-02 to 2025-03)\nAcute bacterial sinusitis (2026-06 to 2026-07)\n\nPROCEDURES\n2026-05-31: Dental fluoride treatment (Patient referral for dental care)\n2026-05-31: Examination of gingivae (Patient referral for dental care)\n2026-05-31: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2026-05-31: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2026-05-31: Dental care (Patient referral for dental care)\n2026-05-31: Dental consultation and report (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-06-07 ambulatory: Encounter for symptom (Acute bacterial sinusitis)\n2026-05-31 ambulatory: Encounter for check up (Patient referral for dental care)\n2026-05-24 outpatient: Encounter for check up\n2026-05-17 outpatient: Encounter for check up\n2026-05-10 urgentcare: Urgent care clinic (environment)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Dementia management; Diabetes self management plan (record artifact); Discharge care plan (record artifact); Self-care interventions; Therapy"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+        "2026-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule",
+        "2026-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Alendronic acid 10 MG Oral Tablet",
+        "2026-05",
+        "Osteoporosis"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule",
+        "2025-03",
+        "Alzheimer's disease"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2023-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2023-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2023-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2023-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "aspirin 81 MG Oral Tablet",
+        "2018-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+        "2018-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "simvastatin 10 MG Oral Tablet",
+        "2018-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "valsartan 80 MG Oral Tablet",
+        "2018-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "prasugrel 10 MG Oral Tablet",
+        "2018-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+        "1951-03",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.9",
+        "%",
+        "< 5.7",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "90",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "8.9",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2018-02-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "196.7",
+        "mg/dL",
+        "< 200",
+        "2026-03-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "106.8",
+        "mg/dL",
+        "< 100",
+        "2026-03-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "61.9",
+        "mg/dL",
+        ">= 40",
+        "2026-03-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "139.8",
+        "mg/dL",
+        "< 150",
+        "2026-03-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "15.4",
+        "g/dL",
+        "12.0-17.5",
+        "2023-02-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-02-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "153",
+        "10*3/uL",
+        "150-450",
+        "2023-02-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143.7",
+        "mmol/L",
+        "135-145",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "12.4",
+        "mg/dL",
+        "7-20",
+        "2026-05-24"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete, nonjudgmental diet history from a skeptical, question-deflecting patient, including portion sizes, household meal patterns, and recent self-directed changes.",
+    "factIds": [
+     "h1",
+     "h2",
+     "h3",
+     "s9",
+     "s18"
+    ],
+    "actionIds": [
+     "a10",
+     "a16"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Explore nighttime eating and comfort-eating patterns with sensitivity, recognizing shame and memory-related uncertainty as barriers to disclosure, without pathologizing the behavior.",
+    "factIds": [
+     "s10",
+     "s11",
+     "s12",
+     "s13",
+     "s14",
+     "h10"
+    ],
+    "actionIds": [
+     "a10",
+     "a16"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Interpret anthropometric and laboratory data (BMI, HbA1c, fasting glucose, lipid panel, basic metabolic panel) in the context of a nutrition diagnosis for prediabetes, and recognize a stale historical renal value as a red herring not warranting action.",
+    "factIds": [
+     "h18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a17"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Review a complex, 14-plus medication regimen for nutrition-relevant issues (opioid-related constipation, alendronic acid food/timing requirements, apparent duplicate cardiac agents) and determine what to counsel versus refer for reconciliation.",
+    "factIds": [
+     "h19",
+     "h20",
+     "h22",
+     "h8"
+    ],
+    "actionIds": [
+     "a8",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify social, logistical, and psychosocial barriers (transportation, crowded housing, financial stress, caregiver reliance) affecting nutrition and medication follow-through, and plan appropriate resource connections.",
+    "factIds": [
+     "s1",
+     "s2",
+     "s4",
+     "s5",
+     "s6",
+     "s15"
+    ],
+    "actionIds": [
+     "a9",
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Support a fragile, three-week-old action-stage behavior change using motivational interviewing techniques that reinforce autonomy and self-efficacy without triggering defensiveness or relapse.",
+    "factIds": [
+     "h3",
+     "s16",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prediabetes (HbA1c 5.9%) in an 81-year-old with fragile, three-week-old self-directed dietary changes complicated by shame-driven nighttime binge eating episodes",
+   "differential": [
+    "Excessive energy intake related to altered nutrition-related behavior (nighttime 'second dinner' / binge-type eating) evidenced by self-report of eating after household is asleep",
+    "Inadequate fiber/fluid intake related to opioid use (hydrocodone ER) as evidenced by patient-reported constipation",
+    "Food- and nutrition-related knowledge deficit regarding medication-food timing (alendronic acid empty-stomach/30-minute rule) as evidenced by patient questions about mechanism",
+    "Inconsistent nutrition-related behavior related to psychosocial stress (housing crowding, family financial conflict) as evidenced by patient report of 'cooking bigger' when stressed",
+    "Limited access to medications/follow-up related to transportation barriers as evidenced by missed cardiology refill pickup"
+   ],
+   "keyFindings": [
+    "HbA1c 5.9% (ref <5.7%) confirming prediabetes; fasting glucose 90 mg/dL is normal",
+    "BMI 24.4 kg/m2 (normal weight) despite large portions - weight is not currently the primary metabolic driver",
+    "Lipid panel (TC 196.7, LDL 106.8, HDL 61.9, TG 139.8) near or at goal, not an acute nutrition target today",
+    "Patient reports 'doing really well' with portion control for three weeks, but gentle rapport-building reveals a hidden tres leches cake binge after a family argument and hidden pan dulce wrappers - a mismatch between self-report and actual intake pattern",
+    "Fourteen-plus medication list with apparent duplications (two statin strengths, two antiplatelets, two BP-combo agents) reflecting an unreconciled list rather than intentional therapy",
+    "Hydrocodone ER 10mg BID x weeks with associated constipation, not yet addressed with fiber/fluid strategy",
+    "Missed a cardiology medication refill pickup last month due to lack of transportation",
+    "Old eGFR 8.9 mL/min/1.73m2 from 2018 is a stale outlier inconsistent with her current stable BUN/potassium/sodium and should not be acted on as current renal failure"
+   ],
+   "plan": [
+    "Elicit a full typical day's intake using open-ended, non-judgmental questions, including portion sizes relative to cooking for seven",
+    "Explore nighttime eating patterns and comfort-eating triggers with sensitivity, allowing disclosure at the patient's pace rather than direct confrontation",
+    "Reinforce and praise the self-directed three-week change (smaller plates, water instead of soda) to protect her sense of ownership and reduce relapse risk",
+    "Collaborate on culturally congruent portion strategies that preserve her role as family cook: freezing extra portions, adjusting recipe ratios for her own plate, pre-plating her portion before serving family-style",
+    "Counsel on fiber- and fluid-based strategies for opioid-related constipation without recommending additional medication",
+    "Review the medication list for duplicate/overlapping entries (two statins, two antiplatelets, two antihypertensive combinations) and flag for prescriber/pharmacist medication reconciliation referral rather than attempting resolution within the nutrition visit",
+    "Reinforce correct alendronic acid timing (empty stomach, remain upright 30 minutes) and explain the rationale in plain terms",
+    "Identify and document transportation and housing/financial stress as barriers to adherence and follow-through; discuss connecting with social work or community transportation resources",
+    "Loop in Teresa (with patient's permission) as a support person for follow-up planning given her role in medication organization and transportation",
+    "Schedule a follow-up nutrition visit to monitor fragile behavior change and reassess for recurrence of nighttime eating episodes"
+   ],
+   "redFlags": [
+    "Possible under-recognized binge-eating pattern driven by shame and family stress that could escalate or go undetected without a trusting therapeutic relationship",
+    "Missed cardiology medication pickup due to transportation barrier, risking gaps in cardiac secondary prevention therapy",
+    "Unreconciled 14+ medication list with apparent duplicate classes, risking adverse interactions or errors if not addressed by prescriber/pharmacy",
+    "Early Alzheimer's with reported forgetfulness about whether she has already eaten, which may contribute to inadvertent overeating independent of emotional triggers"
+   ],
+   "educationPoints": [
+    "Explain in plain language why HbA1c of 5.9% signals prediabetes even though her fasting glucose today was normal",
+    "Explain the rationale for taking alendronic acid on an empty stomach and remaining upright for 30 minutes (absorption and esophageal irritation prevention), addressing her request for 'the actual reason'",
+    "Discuss how dietary fiber and adequate fluids can help with opioid-related constipation without needing additional medication",
+    "Normalize that comfort eating during stress is common and not a moral failing, to reduce shame and encourage future disclosure",
+    "Explain that smaller personal portions do not have to mean smaller love or smaller meals for the family - practical strategies like plating her own portion first or freezing extras let her keep cooking the same recipes",
+    "Clarify that the apparent duplicate medications are a flag for her prescriber/pharmacist to review, not something she needs to resolve herself or stop taking without guidance"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Patient reports she's been doing well with portion control for the past three weeks, implying consistent adherence to her self-directed change (h3, s18 framed positively)",
+    "recordEvidence": "Pharmacy refill history shows a missed cardiology medication refill pickup last month with no documented reason",
+    "teachingPoint": "Patients may sincerely report progress on one behavior while other adherence gaps (like missed medication pickups due to transportation) go unmentioned until specifically explored; self-reported wellness does not rule out unaddressed barriers.",
+    "factId": "s4",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 16,
+   "condition": "Osteoporosis",
+   "conditionLabel": "81 F · Osteoporosis, Alzheimer's disease, Ischemic heart disease +7 · 14 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "1ea70449",
+   "fingerprint": "155h5of"
+  }
+ }
+}

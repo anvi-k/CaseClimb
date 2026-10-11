@@ -1,0 +1,306 @@
+{
+ "patient_overview": {
+  "name": "Sonia Alarcón",
+  "age": 23,
+  "sex": "Female",
+  "description": "Sonia Alarcón is a 23-year-old White, Hispanic woman who works full-time and juggles cooking for her household of two while coming in for recurrent UTIs and newly flagged obesity. She's quick to laugh, cracks a joke almost before you finish asking a question, and tends to answer with a long story about her tía's recipe or her last shift before circling back to what you actually asked. Underneath the humor she's sharp — she reads a lot online about health topics and will quote things back at you — but she's also stretched thin with very little help at home and admits, almost in passing, that she used to eat better before things got busy again.",
+  "keywords": [
+   "recurrent utis",
+   "obesity",
+   "hydration habits",
+   "maintenance stage slipping",
+   "high health literacy",
+   "home remedies",
+   "low support",
+   "food insecurity",
+   "shift work eating",
+   "contraception"
+  ]
+ },
+ "demographics": {
+  "occupation": "Line cook and server at a diner in West Cape May",
+  "residence": "West Cape May, New Jersey; household of 2",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "Medicaid",
+  "cultural_context": "Sonia grew up in a bicultural household where family meals were the anchor of the day — her mother and grandmother cooked big pots of arroz, habichuelas, and whatever meat was on sale, and Sonia carries that forward now that she cooks for her own small household. She takes pride in cooking \"real food\" from scratch rather than packaged meals, even when she's exhausted, and sees feeding people well as an act of care. She's wary of providers who dismiss home remedies passed down from her grandmother, since she sees them as complementary rather than opposed to medicine."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Recurrent urinary tract infection",
+  "secondary_diagnoses": [
+   "Body mass index 30+ - obesity"
+  ],
+  "medical_history": [
+   "Recurrent urinary tract infection since 2019",
+   "Body mass index 30+ - obesity since 2025",
+   "Normal pregnancy (2022-04 to 2022-05, resolved)",
+   "Normal pregnancy (2023-10 to 2024-05, resolved)",
+   "Dental fluoride treatment (2025-01-20)",
+   "Dental plain X-ray bitewing (2025-01-20)",
+   "Examination of gingivae (2025-01-20)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-01-20)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-01-20)",
+   "Dental care (2025-01-20)"
+  ],
+  "current_symptoms": [
+   "Burning sensation when urinating that comes and goes every couple of months",
+   "Feels like she has to pee all the time even right after going",
+   "Pelvic pressure and occasional lower back ache before a UTI flares up",
+   "Fatigue by the end of her double shifts at the diner",
+   "Occasional cloudy or strong-smelling urine she tries to catch early"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears well-nourished with central adiposity, BMI consistent with obesity class I",
+   "Mild suprapubic tenderness reported on history but not acutely distressed",
+   "Oral exam notes recent dental cleaning, gingiva mildly inflamed per recent dental visit",
+   "Skin and mucous membranes well-hydrated, no edema noted"
+  ],
+  "laboratory_data": [
+   "Haemoglobin: 15.3 g/dL (reference 12.0-17.5; 2025-01-06)",
+   "White cell count: 7.6 10*3/uL (reference 4.0-11.0; 2025-01-06)",
+   "Platelets: 216.5 10*3/uL (reference 150-450; 2025-01-06)"
+  ],
+  "vital_signs": [
+   "BP: 136/86 mmHg",
+   "HR: 85 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2025-01-06"
+  ],
+  "anthropometrics": [
+   "Height: 151.1 cm",
+   "Weight: 70.8 kg",
+   "BMI: 31 kg/m2",
+   "Weight change: +1.2 kg since 2022-01-03"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",
+    "dose": "0.35 MG",
+    "frequency": "One tablet daily, same time each night",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent but admits to missing a pill here or there after a late shift, then doubling up the next day",
+    "patient_concerns": "Worried it might be part of why she's gained a little weight, and jokes that 'this pill and my hips are in a feud'"
+   }
+  ],
+  "supplements_and_otc": [
+   "D-mannose powder she buys online and stirs into water when she feels a UTI coming on",
+   "Cranberry extract capsules she keeps in her bag 'just in case'",
+   "Her grandmother's home remedy of boiled corn silk tea for bladder flare-ups",
+   "Occasional over-the-counter cranberry juice cocktail, though she knows it's 'basically soda'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Traditional home-cooked meals built around rice, beans, stewed meats, and fried sides, cooked in bulk for the household and reheated through the week",
+  "food_preferences": [
+   "Arroz con habichuelas",
+   "Pernil or chicken thighs stewed with sofrito",
+   "Fried tostones",
+   "Sweet coffee with condensed milk",
+   "Diner leftovers like mozzarella sticks or fries she brings home from work"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How much salt and oil go into the sofrito and daily cooking",
+   "Portion sizes when she's exhausted and eats standing at the counter",
+   "How often she substitutes diner food for home meals on double-shift days",
+   "Low water intake during shifts because bathroom breaks are hard to time",
+   "Late dinners after closing the diner, sometimes close to midnight"
+  ],
+  "meal_pattern": "Coffee and little else before an early shift, grabs food from the diner during the day, cooks a big traditional dinner most nights for herself and her partner even when tired",
+  "hydration": "Drinks a lot of coffee and sweet tea during shifts, admits she doesn't drink enough plain water because bathroom access at work is limited",
+  "physical_activity": "On her feet most of the workday but no structured exercise; says she's 'too tired' to walk after a double",
+  "substance_use": "Light drinker, maybe a beer or a mixed drink on a night off; never smoked",
+  "sleep": "Irregular sleep tied to shift schedule, sometimes only 5-6 hours before an early shift"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, quick-witted, uses humor to deflect anything that feels too heavy or too personal",
+  "communication_style": "Launches into long, winding stories — about a customer at the diner, her grandmother's kitchen, her toddler's latest antics — before circling back to the original question; needs gentle redirection",
+  "goals": [
+   "Stop the UTIs from coming back every few months",
+   "Get back to the weight she was before her second pregnancy",
+   "Have enough energy to get through her shifts without crashing"
+  ],
+  "concerns": [
+   "Worried the UTIs mean something is 'wrong down there' permanently",
+   "Self-conscious about her weight gain since her second pregnancy",
+   "Frustrated that she used to eat better and feels like she's sliding back into old habits"
+  ],
+  "beliefs": [
+   "Believes cranberry and D-mannose are 'basically as good as antibiotics' for mild flares",
+   "Thinks her weight gain is mostly hormonal from the birth control",
+   "Believes homemade food is always healthier than anything from a package, regardless of portion or oil content"
+  ],
+  "motivations": [
+   "Wants to feel like herself again before having kids wore her down",
+   "Wants to set a good example of eating for her child",
+   "Tired of taking antibiotics and wants a more 'natural' long-term fix"
+  ],
+  "fears": [
+   "Fear that recurrent infections could eventually damage her kidneys",
+   "Fear of being judged for using home remedies instead of 'real medicine'",
+   "Fear of not having time or help to make real changes"
+  ],
+  "barriers": [
+   "Very little day-to-day support — no one to share cooking, childcare, or errands with",
+   "Shift work makes consistent meals and hydration hard",
+   "Household went without food at times per her own screening answers, so budget is tight",
+   "Language barrier can make some clinic materials harder to use fully"
+  ],
+  "strengths": [
+   "Resourceful and knowledgeable from her own research",
+   "Cooks from scratch and enjoys it, which gives a foundation to build on",
+   "Resilient and keeps a sense of humor even when stretched thin"
+  ],
+  "support_system": "Lives with her partner but reports very little practical day-to-day help with cooking, childcare, or errands; sees friends 3-5 times a week but that's mostly social, not hands-on help",
+  "readiness_to_change": "In maintenance but slipping — she made real changes after her first pregnancy (more water, less fried food) but has drifted back toward old patterns under stress and exhaustion"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "I'm back again for these darn UTIs, it's like clockwork every couple months!",
+   "I work at the diner down the street, you'd think I'd just live there at this point",
+   "I've gained a little weight since my second kid, baby weight that never left, ha!",
+   "I cook every night, big family meals, nothing fancy from a box"
+  ],
+  "discoverable_information": [
+   "Drinks mostly coffee and sweet tea during shifts, barely any plain water",
+   "Portions are large because she cooks for the household and eats the same as everyone else",
+   "Sometimes eats diner leftovers like fries or mozzarella sticks instead of a proper meal",
+   "Dinner is often very late, close to midnight after closing the diner",
+   "Household has gone without food at times when money was tight"
+  ],
+  "reluctant_information": [
+   "Admits she used to drink a lot more water and ate less fried food right after her first pregnancy, but has slipped back",
+   "Confesses she sometimes doubles up on her birth control pill the next day if she forgets one after a late shift",
+   "Says she's a little scared the UTIs mean her kidneys could get hurt eventually"
+  ],
+  "hidden_information": [
+   "She buys D-mannose powder online and mixes a scoop into water whenever she feels a UTI starting, without telling her doctor",
+   "She drinks her grandmother's boiled corn silk tea at the first sign of bladder pain, usually two cups over a day",
+   "She has cranberry extract capsules in her bag that she takes almost daily, not just during flares"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full hydration and voiding history relevant to recurrent UTIs",
+    "expected_discoveries": [
+     "Low plain water intake during shifts due to limited bathroom access",
+     "Heavy reliance on coffee and sweet tea instead of water",
+     "Pattern of holding urine for long stretches during work"
+    ],
+    "possible_patient_reactions": [
+     "Oh, water? Honey, if I drank water every time I was supposed to I'd never leave the bathroom at work!",
+     "She laughs it off but then admits the bathroom situation at the diner is genuinely bad"
+    ]
+   },
+   {
+    "learning_objective": "Uncover use of supplements and home remedies not disclosed to the clinic",
+    "expected_discoveries": [
+     "Daily cranberry extract capsule use",
+     "D-mannose powder used at first sign of symptoms",
+     "Grandmother's corn silk tea remedy"
+    ],
+    "possible_patient_reactions": [
+     "Gets a little quiet or sheepish: 'I mean, it's not like a real medicine, so I didn't think it counted...'",
+     "Once trust is built, launches into a story about her grandmother teaching her the tea recipe"
+    ]
+   },
+   {
+    "learning_objective": "Explore portion sizes and composition of traditional family meals without dismissing cultural value",
+    "expected_discoveries": [
+     "Meals built around rice, beans, and fried sides shared by the whole household",
+     "Sofrito and cooking oil quantities she's never measured",
+     "Her belief that homemade automatically equals healthy"
+    ],
+    "possible_patient_reactions": [
+     "Gets defensive if it feels like criticism of her cooking: 'This is literally how my mom and abuela cooked, it's not like I'm feeding my kid McDonald's'",
+     "Opens up to small tweaks if framed as building on her existing recipes"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change and relapse into old patterns using motivational interviewing",
+    "expected_discoveries": [
+     "She made real changes after her first pregnancy that have since slipped",
+     "Exhaustion and lack of support are the main drivers of the slip",
+     "She still has the knowledge and skill, just not the bandwidth"
+    ],
+    "possible_patient_reactions": [
+     "Deflects first with a joke about being 'too tired to be healthy'",
+     "If asked gently about what changed, may admit, 'Honestly? I just got so tired after the second one, I stopped trying as hard'"
+    ]
+   },
+   {
+    "learning_objective": "Screen for food insecurity and connect to appropriate resources",
+    "expected_discoveries": [
+     "Household reported going without food at times on the social screening",
+     "Tight household income relative to household size",
+     "Possible eligibility for additional food assistance beyond current resources"
+    ],
+    "possible_patient_reactions": [
+     "Brushes it off at first: 'We're fine, we just budget tight some weeks'",
+     "May become more serious and quieter if asked directly about missed meals"
+    ]
+   },
+   {
+    "learning_objective": "Clarify medication adherence patterns and their relationship to weight and infection risk",
+    "expected_discoveries": [
+     "Occasional missed birth control doses followed by doubling up",
+     "Belief that the birth control is the main driver of her weight gain",
+     "No connection made yet between hydration/diet and UTI frequency versus medication"
+    ],
+    "possible_patient_reactions": [
+     "Jokes about the pill being 'the real reason my jeans don't fit'",
+     "Becomes more thoughtful when the student separates medication effects from diet effects"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "The 'patient referral for dental care' and recent pregnancies are background history, not the focus of this nutrition visit",
+   "The Jolivette prescription purpose is inferred as contraception/postpartum family planning given recent pregnancy history",
+   "Partner mentioned in household of 2 is assumed to be minimally helpful with cooking/childcare based on 'very little support' trait",
+   "Household went without food per screening is treated as an active but not overwhelming barrier given full-time employment"
+  ],
+  "optional_details": [
+   "Sonia's diner job gives her access to leftover food, which influences some meals",
+   "She has a toddler and an infant from her two pregnancies, adding to time pressure though not explicitly in the record",
+   "She speaks a language other than English at home, likely Spanish given her ethnicity, though this is not explicitly stated in the record"
+  ]
+ },
+ "source": {
+  "synthea_record": "2155730d",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "cheerful, deflects anything serious with a joke",
+   "communication": "long stories that wander off the question",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "cooks traditional family meals for a full household and eats what everyone eats",
+   "held_back": "takes supplements or home remedies the clinic does not know about",
+   "support": "very little day-to-day support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

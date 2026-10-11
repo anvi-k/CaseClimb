@@ -1,0 +1,304 @@
+{
+ "patient_overview": {
+  "name": "Brendan Frami",
+  "age": 46,
+  "sex": "Male",
+  "description": "Brendan Frami is a 46-year-old married warehouse shift worker from Edison, New Jersey, coming in for a nutrition visit after his wellness exam flagged his weight and his dentist finished treating his gingivitis. He has lived with a curved spine since his teens and has been missing several teeth since his thirties, and he comes across as nervous and quick to apologize, as if he's bracing to be scolded about his eating. He knows his weight and diet need work but feels torn and overwhelmed about where to start, especially with a packed house of seven and a tight budget. He tends to shrug and say 'whatever you think is best' rather than push back, even when something won't actually work for his schedule or wallet.",
+  "keywords": [
+   "obesity",
+   "scoliosis",
+   "tooth loss",
+   "shift work eating",
+   "contemplation stage",
+   "food budget stress",
+   "vending machine diet",
+   "moderate health literacy",
+   "adult child nagging",
+   "ex-smoker"
+  ]
+ },
+ "demographics": {
+  "occupation": "Forklift operator and shift supervisor at a regional distribution warehouse, part-time/temporary hours",
+  "residence": "Edison, New Jersey; household of 7",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Brendan grew up in a working-class New Jersey family where big portions at dinner were a sign of love and nobody talked much about nutrition. He married young, and food in his house has always been about getting everyone fed fast and cheap rather than about any particular tradition. He doesn't see himself as having a 'diet' at all, just a schedule that doesn't leave room for sit-down meals."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [
+   "Adolescent idiopathic scoliosis",
+   "Loss of teeth"
+  ],
+  "medical_history": [
+   "Adolescent idiopathic scoliosis since 1991",
+   "Body mass index 30+ - obesity since 2003",
+   "Loss of teeth since 2003",
+   "Acute viral pharyngitis (2022-12 to 2022-12, resolved)",
+   "Concussion injury of brain (2023-05 to 2023-08, resolved)",
+   "Concussion with no loss of consciousness (2023-05 to 2023-08, resolved)",
+   "Gingivitis (2026-08 to 2026-09, resolved)",
+   "Dental fluoride treatment (2026-09-06)",
+   "Dental plain X-ray bitewing (2026-09-06)",
+   "Examination of gingivae (2026-09-06)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-09-06)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-09-06)",
+   "Dental care (2026-09-06)"
+  ],
+  "current_symptoms": [
+   "Low back and shoulder-blade ache after standing a long shift, which he links to his crooked spine",
+   "Gets short of breath walking up the stairs at the warehouse",
+   "Avoids chewing on the left side where he's missing teeth",
+   "Afternoon energy crashes that he fixes with a vending-machine soda and chips",
+   "Occasional heartburn after late, greasy drive-through dinners"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Visibly carries extra weight through the abdomen, consistent with recorded BMI of 31",
+   "Mild asymmetry of the shoulders and rib cage on observation, consistent with his longstanding adolescent scoliosis",
+   "Several missing posterior teeth visible when he speaks or smiles, with healthy-looking gums post-treatment",
+   "Appears tired and a little fidgety, picking at his sleeve while answering questions"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 189.5 mg/dL (reference < 200; 2026-08-23)",
+   "LDL cholesterol: 137.6 mg/dL (reference < 100; 2026-08-23)",
+   "HDL cholesterol: 30 mg/dL (reference >= 40; 2026-08-23)",
+   "Triglycerides: 109.6 mg/dL (reference < 150; 2026-08-23)",
+   "Haemoglobin: 16.3 g/dL (reference 12.0-17.5; 2026-08-23)",
+   "White cell count: 4.3 10*3/uL (reference 4.0-11.0; 2026-08-23)",
+   "Platelets: 280.2 10*3/uL (reference 150-450; 2026-08-23)"
+  ],
+  "vital_signs": [
+   "BP: 105/74 mmHg",
+   "HR: 67 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-08-23"
+  ],
+  "anthropometrics": [
+   "Height: 179.8 cm",
+   "Weight: 100.1 kg",
+   "BMI: 31 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Tums for heartburn, keeps a roll in his truck",
+   "Men's one-a-day multivitamin his daughter bought him, takes it 'when I remember'",
+   "Ibuprofen for back pain a few times a week"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Irregular, grazing pattern built around shift schedule: vending machine snacks and gas-station coffee during work, fast food on the way home, bigger meal late at night with family",
+  "food_preferences": [
+   "Bacon egg and cheese on a hard roll",
+   "Chicken parm hero",
+   "Honey buns and peanut butter crackers from the vending machine",
+   "Diet soda during the day, regular soda at night",
+   "Meatball subs and pizza on weekends"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How often he skips lunch entirely and 'makes up for it' at 9pm",
+   "Whether he's choosing softer foods because chewing is uncomfortable with missing teeth",
+   "How much of his food budget goes to drive-through versus groceries",
+   "Late-night eating with the kids while watching TV",
+   "Use of soda and energy drinks to get through the second half of his shift"
+  ],
+  "meal_pattern": "No consistent breakfast; grabs something from vending machine or gas station around 10am; often no real lunch; large dinner around 9-9:30pm after his shift ends, sometimes a second smaller meal if he's hungry before bed",
+  "hydration": "Mostly soda and coffee through the day; says he 'forgets' to drink water at work because the only tap is far from his station",
+  "physical_activity": "On his feet most of his shift lifting and moving pallets, but little intentional exercise outside work; back pain from his scoliosis limits weekend activity",
+  "substance_use": "Quit smoking four years ago when his first grandchild was born; drinks a few beers on weekends, audit-c score suggests light-to-moderate drinking",
+  "sleep": "Irregular, 5-6 hours most nights because of rotating shift start times, naps on days off"
+ },
+ "psychosocial_profile": {
+  "personality": "Anxious, apologetic, braces himself for criticism before anyone says anything negative",
+  "communication_style": "Soft-spoken, says 'whatever you think is best' instead of stating a preference, apologizes for taking up the clinician's time, needs direct reassurance that he's not in trouble",
+  "goals": [
+   "Have enough energy to play with his grandchild without getting winded",
+   "Stop his back from aching by the end of a shift",
+   "Get his weight down before his next physical"
+  ],
+  "concerns": [
+   "Being lectured again by his kids about his eating",
+   "That his missing teeth make him look older and unhealthy",
+   "Whether his insurance will cover more dental work if he loses more teeth"
+  ],
+  "beliefs": [
+   "Thinks because he's always been a 'big guy' there's not much he can do about his weight now",
+   "Believes vending machine food is just 'what you eat' when you work shifts, not really a choice",
+   "Worries healthy food costs too much for a family of seven"
+  ],
+  "motivations": [
+   "Wanting to be around and active for his grandchild",
+   "Pressure from his adult children who mean well but lecture him",
+   "Not wanting another scolding at his next check-up"
+  ],
+  "fears": [
+   "Ending up unable to work because of his back",
+   "Losing more teeth and not being able to afford to fix it",
+   "Disappointing his kids by not changing"
+  ],
+  "barriers": [
+   "Rotating shift schedule with no real break for meals",
+   "Tight household budget feeding seven people",
+   "Chewing discomfort from missing teeth limiting food choices",
+   "Chronic back pain from scoliosis limiting activity and standing to cook"
+  ],
+  "strengths": [
+   "Already quit smoking successfully",
+   "Shows up to appointments and follows through on dental care",
+   "Genuinely wants to be healthier for his grandchild",
+   "Open and honest once he feels safe"
+  ],
+  "support_system": "Married, lives with wife and large household including adult children who check in on him but tend to lecture rather than help practically",
+  "readiness_to_change": "Contemplation: aware his eating and weight are problems, feels torn between wanting change and not knowing how to fit it into his schedule or budget"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "Mentions he just finished some dental work for gum disease",
+   "Says his back has ached since he was a teenager because of his scoliosis",
+   "Admits his weight has crept up over the years",
+   "Says he works odd shifts and eats 'whenever he can'"
+  ],
+  "discoverable_information": [
+   "Describes his typical vending-machine and drive-through eating pattern",
+   "Mentions his adult children frequently comment on his weight",
+   "Reveals he quit smoking four years ago when his grandchild was born",
+   "Explains that chewing is harder since he lost some teeth",
+   "Shares that he drinks a few beers most weekends"
+  ],
+  "reluctant_information": [
+   "Admits, if asked gently, that money is tight with seven people in the house and groceries are a stretch some weeks",
+   "Reveals he sometimes skips buying his ibuprofen refill or picks the cheaper store-brand to save a few dollars",
+   "Confides that he's embarrassed his teeth look bad and avoids smiling in photos"
+  ],
+  "hidden_information": [
+   "Brendan has gone without paying a utility bill some months specifically to afford groceries for the household of seven",
+   "He has put off replacing worn-out work boots for over a year because the money went to food instead",
+   "He has considered picking up a second part-time job but is afraid the extra hours will make his eating and back pain worse"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a realistic 24-hour recall from a shift worker and identify timing-related nutrition problems.",
+    "expected_discoveries": [
+     "Long gaps without food followed by a large late dinner",
+     "Heavy reliance on vending machines and drive-throughs during work hours",
+     "Minimal water intake during shifts"
+    ],
+    "possible_patient_reactions": [
+     "'Honestly I don't really eat breakfast, I just grab whatever's in the machine.'",
+     "'I know it's bad, I'm sorry, I just don't have time.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the connection between tooth loss and food choices without judgment.",
+    "expected_discoveries": [
+     "He favors softer, easier-to-chew foods since losing teeth",
+     "He avoids certain vegetables and tougher meats",
+     "He feels self-conscious about his smile"
+    ],
+    "possible_patient_reactions": [
+     "'Yeah, I kind of just avoid the crunchy stuff now.'",
+     "'I didn't think that was connected to my teeth, honestly.'"
+    ]
+   },
+   {
+    "learning_objective": "Use motivational interviewing to meet him in the contemplation stage rather than pushing action.",
+    "expected_discoveries": [
+     "His ambivalence about change despite knowing it matters",
+     "His fear of being lectured, which makes him shut down",
+     "His genuine motivation around his grandchild"
+    ],
+    "possible_patient_reactions": [
+     "'Whatever you think is best, doc.'",
+     "'My kids already tell me this stuff, I don't need another lecture.' said quietly"
+    ]
+   },
+   {
+    "learning_objective": "Gently uncover financial barriers affecting food and health purchases.",
+    "expected_discoveries": [
+     "Tight household budget for seven people",
+     "Trade-offs between groceries and other bills",
+     "Reduced adherence to OTC pain relief due to cost"
+    ],
+    "possible_patient_reactions": [
+     "Initially says money's fine, deflecting with 'we manage'",
+     "Later admits, 'Some months I gotta choose between the electric bill and the grocery run.'"
+    ]
+   },
+   {
+    "learning_objective": "Address musculoskeletal pain (scoliosis-related back pain) as a barrier to activity and meal preparation.",
+    "expected_discoveries": [
+     "Back pain limits standing to cook or grocery shop",
+     "Pain contributes to reliance on convenience food",
+     "Interest in simple, low-effort meal strategies"
+    ],
+    "possible_patient_reactions": [
+     "'By the time I get home my back's killing me, cooking's the last thing I want to do.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify practical, low-cost, shift-friendly nutrition strategies the family can use.",
+    "expected_discoveries": [
+     "Openness to simple swaps like packing food instead of vending machine snacks",
+     "Willingness to involve his wife in meal prep planning",
+     "Budget constraints that rule out some suggestions"
+    ],
+    "possible_patient_reactions": [
+     "'That might work if it's not too much extra cost.'",
+     "'I'll try, but no promises, things get crazy at work.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed his part-time/temporary warehouse work involves rotating or long shifts given the eating pattern trait",
+   "Assumed household income and 'went without utilities' answer translate into real grocery-budget tension",
+   "Assumed adult children living nearby or in the household based on household of 7 and support trait",
+   "No new diagnoses or medications added; empty medication list preserved as recorded"
+  ],
+  "optional_details": [
+   "Has a young grandchild he adores and babysits on days off",
+   "Keeps a NY Giants bumper sticker on his truck",
+   "Enjoys fishing at the Raritan River on rare free weekends",
+   "Nickname at work is 'Big B'"
+  ]
+ },
+ "source": {
+  "synthea_record": "17ed457f",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "anxious and apologetic, expects to be told off",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "contemplation: knows something should change but is torn",
+   "literacy": "moderate health literacy",
+   "eating": "works shifts or long hours and eats at irregular times, often from vending machines or drive-throughs",
+   "held_back": "money worries that affect which food or medicines they buy",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

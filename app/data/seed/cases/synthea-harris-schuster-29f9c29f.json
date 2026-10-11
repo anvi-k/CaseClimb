@@ -1,0 +1,1123 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling for Hypertension and Recent Ischemic Heart Disease Finding in a Precontemplative, Self-Reliant 58-Year-Old Man",
+  "summary": "This case portrays Harris Schuster, a 58-year-old man with new ischemic heart disease and essential hypertension, referred for nutrition counseling while in precontemplation and distrustful of being told what to do. It teaches learners to elicit a grazing, high-sodium eating pattern and uncover undisclosed supplement/home-remedy use and a true antihypertensive adherence gap through patient, nonjudgmental interviewing, then apply motivational interviewing with a proud, self-reliant patient rather than directive advice-giving.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Deptford, New Jersey, sitting at his kitchen counter on a break between maintenance jobs",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Harris Schuster",
+   "age": 58,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Part-time maintenance worker for a local property management company",
+   "language": "English",
+   "appearance": "Stocky, mildly overweight build with weight carried centrally; sits with a guarded posture, turning his whole torso rather than his neck to look at the camera; dressed in a work polo, visible fatigue around the eyes; kitchen counter behind him with a coffee mug and a pill bottle in frame; occasionally shifts stiffly as if his back bothers him.",
+   "portrait": "/portraits/synthea-harris-schuster-29f9c29f.jpg"
+  },
+  "persona": {
+   "personality": "Proud, self-reliant, stoic; measures self-worth by being able to work and not complain; uncomfortable asking for or receiving help, especially around something as personal as eating habits",
+   "communicationStyle": "Short, economical answers; frequently deflects with phrases like 'whatever you think is best'; avoids eye contact or looks away when a topic touches on habits he knows aren't ideal; needs patience and gentle, nonjudgmental follow-up to open up; responds better to being asked than told",
+   "healthLiteracy": "low",
+   "emotionalState": "Mildly guarded and weary; not anxious or distressed, just worn down and slightly resistant to being 'another doctor visit'; softens a little if he doesn't feel lectured",
+   "background": "Harris grew up in a working-class South Jersey family where you went to work, didn't complain, and didn't bother doctors unless something was broken or bleeding. He left school before finishing high school to help his father with odd jobs and has done maintenance and handyman work ever since. He now works part-time for a local property management company, fixing things around rental units. He's married and lives in a full household of six, including his wife and extended family. He keeps a toolbox and a cooler of snacks in his truck for work days, and walks the family dog briefly most evenings, which is about the only intentional exercise he gets. He quit smoking years ago and has maybe one beer on a weekend. Money is tight on his income, so he and his wife shop for whatever stretches furthest at the grocery store.",
+   "speechExamples": [
+    "Whatever you think is best, doc.",
+    "I eat fine, I just don't sit down for it like you're supposed to, I guess.",
+    "Nothing feels broken, so I don't see the problem.",
+    "My kids already tell me this stuff, I don't need to hear it twice.",
+    "I just take what they give me, I don't ask too many questions."
+   ],
+   "concerns": [
+    "Not wanting to be a burden on his wife or kids",
+    "Worried that too many doctor visits mean something is seriously wrong with him",
+    "Mild worry about keeping track of which pill does what",
+    "Doesn't want to be told to stop working or slow down"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition visit with Harris Schuster, a 58-year-old man referred by his physician after a recent heart imaging finding and for ongoing blood pressure management. This is a nutrition follow-up visit. Review his available chart information before the call, then conduct a focused nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Nutrition follow-up referred by physician after a recent heart imaging finding and ongoing blood pressure management",
+   "openingLine": "Hey. Yeah, doc sent me your way after some heart test and this blood pressure thing. I'm not really sure what you need from me, but go ahead.",
+   "tasks": [
+    "Take a focused diet history, including meal pattern, typical foods, and fluid intake",
+    "Review relevant vitals, anthropometrics, and labs already on his chart and relate them to his eating pattern",
+    "Explore medication and supplement use as it relates to his nutrition care, including anything he may not have mentioned to his doctor",
+    "Identify barriers to dietary change given his work schedule, finances, and personal beliefs about diet and health",
+    "Begin a motivational-interviewing-based conversation about his readiness to change, and document your findings in ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition follow-up visit referred by primary care after a recent cardiac imaging finding and ongoing blood pressure management"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. R. Alvarez (Primary Care), Cardiology (consulting), Deptford Family Dental"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic sinusitis (since 2008); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014); Essential hypertension (since 2024); Ischemic heart disease (since 2024); Abnormal findings diagnostic imaging heart+coronary circulat (since 2024)"
+   },
+   {
+    "label": "Medications",
+    "value": "Ibuprofen 400 MG Oral Tablet [Ibu]; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Referred for nutrition counseling following 2024 finding of ischemic heart disease/abnormal cardiac imaging and diagnosis of essential hypertension.",
+    "says": "My doctor sent me here after some heart test and the blood pressure thing. Not really sure why I need to talk to a nutritionist about it, but here I am.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "current symptoms",
+    "chart": "Denies feeling acutely ill; reports feeling generally 'worn down' rather than sick.",
+    "says": "I don't feel sick, really. Just worn down some days, that's all.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "heart finding understanding",
+    "chart": "Limited understanding of the 2024 cardiac imaging finding; recalls only that something was found and medications were started.",
+    "says": "They found something with my heart on a test, I don't remember exactly what. They just gave me more pills after that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "blood pressure understanding",
+    "chart": "Aware of hypertension diagnosis but minimal engagement with ongoing management or numbers.",
+    "says": "They told me my blood pressure's an issue. I take the pills for it, that's about all I know.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies current chest pain or shortness of breath at rest or with exertion.",
+    "says": "No, nothing like chest pain or trouble breathing. I'd tell someone if that happened.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "swelling or edema",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "No swelling that I've noticed in my legs or feet.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "back and neck pain",
+    "chart": "Reports chronic low-grade aching across the lower back, present most days, and stiff neck limiting rotation, especially when backing up his truck.",
+    "says": "My back's just always a little sore, it's there most days. And my neck gets stiff, makes it hard to look over my shoulder when I'm backing up the truck.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "sinus symptoms",
+    "chart": "Reports occasional sinus pressure and post-nasal drip, worse in damp weather.",
+    "says": "My sinuses act up sometimes, especially when it's damp out. Just pressure and drainage.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "dizziness or lightheadedness",
+    "chart": "Denies dizziness, lightheadedness, or fainting.",
+    "says": "No, I don't get dizzy or lightheaded or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "appetite and weight changes",
+    "chart": "Denies recent unintentional weight loss or appetite changes.",
+    "says": "My weight's been about the same. Appetite's fine, I eat all day really.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Denies nausea, vomiting, abdominal pain, or changes in bowel habits.",
+    "says": "No stomach problems or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Reports occasional morning tiredness, attributes it to work and poor sleep from back pain.",
+    "says": "I'm a little tired some mornings, but I figured that's just from the work and my back keeping me up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "heart history",
+    "chart": "Ischemic heart disease and abnormal cardiac imaging finding, diagnosed 2024.",
+    "says": "Yeah, they found something with my heart last year, 2024 I think.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "blood pressure history",
+    "chart": "Essential hypertension, diagnosed 2024.",
+    "says": "The blood pressure thing started around the same time as the heart stuff.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "pain history",
+    "chart": "Chronic pain, chronic low back pain, and chronic neck pain, all since 2014.",
+    "says": "My back and neck have been bad since 2014 or so. Just part of getting older, I figure.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "Chronic sinusitis since 2008, with an episode of acute bacterial sinusitis from August to October 2024, resolved.",
+    "says": "I've had sinus trouble for years, since like 2008. Had a bad flare-up a couple years back that took a while to clear.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of recurrent gingivitis (2023, 2024, 2026) and primary dental caries (2024), most recently treated with dental cleaning and fluoride treatment on 2026-04-25.",
+    "says": "My gums give me trouble sometimes, had them cleaned up at the dentist just last month.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries reported.",
+    "says": "Never had any surgeries, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "blood pressure medications",
+    "chart": "Lisinopril 10 mg once daily and amlodipine 2.5 mg once daily, both in the morning, for essential hypertension.",
+    "says": "I take two pills in the morning for the blood pressure. Not sure why it's two instead of one, but that's what they gave me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "heart medications",
+    "chart": "Clopidogrel 75 mg once daily, kept near the coffee maker as a reminder.",
+    "says": "I take a blood thinner pill too, keep it by the coffee maker so I don't forget it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "cholesterol medication",
+    "chart": "Simvastatin 20 mg once daily in the evening.",
+    "says": "There's a pill I take at night for cholesterol, I think. Never really asked much about it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "heart rate medication",
+    "chart": "Metoprolol succinate ER 100 mg once daily; reports occasional morning tiredness not yet reported to prescriber.",
+    "says": "There's one that makes me a little tired some mornings. Haven't mentioned it to the doctor though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "emergency heart medication",
+    "chart": "Nitroglycerin 0.4 mg spray PRN for chest discomfort, kept in truck; uses infrequently and is uncertain about proper use timing or expiration.",
+    "says": "I've got a spray in the truck for if my chest acts up, but I hardly ever use it. Honestly not sure if it's still good or how I'm even supposed to use it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "pain medication use",
+    "chart": "Reports taking ibuprofen 400 mg several times a week for back and neck pain; admits sometimes taking more than labeled dose and does not track total daily amount.",
+    "says": "I take ibuprofen when my back or neck is really bad. I'll be honest, sometimes I take a few more than the bottle says, it's just ibuprofen though, right?",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I've never had any allergies to anything, far as I know.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "CBC from 2024-03-30 within normal limits (hemoglobin 16 g/dL, WBC 6.1 x10^3/uL, platelets 361.6 x10^3/uL).",
+    "says": "They checked my blood a couple years ago, I think it came back fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "medication adherence pattern",
+    "chart": "Reports taking lisinopril and amlodipine 'most days, no big deal.'",
+    "says": "I take my blood pressure pills most days, no big deal.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h28",
+    "category": "medications",
+    "topic": "end of month gaps",
+    "chart": "Admits to occasionally skipping lisinopril and amlodipine near the end of the month when he forgets or runs low before refill.",
+    "says": "I guess sometimes toward the end of the month I run low, or just forget, and I'll miss a day or two. Doesn't happen all the time though.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with spouse and extended household of six; works part-time maintenance.",
+    "says": "It's a full house, me, my wife, kids and grandkids kind of coming and going. Keeps me busy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time, irregular hours doing maintenance for a property management company.",
+    "says": "I don't have a set schedule, I go where the jobs are. Some days it's six hours, some days it's nothing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "nutrition",
+    "topic": "meal timing",
+    "chart": "Reports no structured meals; eats throughout the day rather than at set times, often not substantial until evening.",
+    "says": "I don't really sit down to eat. I just grab stuff when I'm hungry, and sometimes I don't really eat till late.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "nutrition",
+    "topic": "snack storage habits",
+    "chart": "Keeps a cooler of snacks in his truck for work days.",
+    "says": "I keep a cooler in the truck. Chips, crackers, whatever's cheap and doesn't need a fridge for long.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "beverage habits",
+    "chart": "Drinks several cups of black coffee daily; water intake inconsistent.",
+    "says": "Coffee's what gets me through the day. Water, I probably don't drink enough, honestly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "function",
+    "topic": "daily activity",
+    "chart": "Physical job provides most activity; limited intentional exercise due to chronic pain; walks dog briefly most evenings.",
+    "says": "The job keeps me moving all day. I don't do any extra exercise, my back won't let me, but I walk the dog a little most nights.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Former smoker, quit several years ago.",
+    "says": "I used to smoke but I quit a while back. Haven't touched one in years.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol lightly, about one beer on a weekend.",
+    "says": "Maybe a beer on a Saturday if I'm sitting outside. That's about it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "other",
+    "topic": "home remedies for joint pain",
+    "chart": "Reports using Epsom salt soaks several nights a week for back pain.",
+    "says": "I soak in Epsom salts a few nights a week, helps the back some. Didn't think that was anything to mention.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "other",
+    "topic": "vinegar drink habit",
+    "chart": "Reports drinking apple cider vinegar in water a few times a week, suggested by his daughter.",
+    "says": "My daughter read something online about vinegar being good for you, so I'll drink some in water a couple times a week. Can't say it's done anything.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "other",
+    "topic": "joint supplement use",
+    "chart": "Takes daily glucosamine-chondroitin capsules from a dollar store brand, not documented in his medical record.",
+    "says": "I pick up some glucosamine pills at the dollar store, take those every day for my joints. Never thought to tell the doctor, it's not like it's a real medicine.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "other",
+    "topic": "anti-inflammatory supplement use",
+    "chart": "Takes turmeric and black pepper capsules daily, recommended by a neighbor, for inflammation; not documented in his medical record.",
+    "says": "A neighbor told me turmeric with pepper is supposed to help with inflammation, so I've been taking that too. Never brought it up at the doctor's.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "family",
+    "topic": "family involvement in health",
+    "chart": "Reports adult children frequently comment on his health habits; he dismisses their input.",
+    "says": "My kids are always on me about my health. I just let it go in one ear and out the other.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "attitude toward health advice",
+    "chart": "Expresses low concern about dietary habits, defers decisions with noncommittal responses, denies feeling unwell.",
+    "says": "Whatever you think is best, doc. I don't feel sick, so I don't really see what the big deal is.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "self-reliance and pride",
+    "chart": "Expresses discomfort with being told what to do or asking for help, including around diet.",
+    "says": "I've never been one to ask for help. You just figure it out and keep going.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "priorities for health",
+    "chart": "States his main goals are to keep working and avoid further hospital visits or testing.",
+    "says": "I just want to keep working and not end up back in some hospital getting more tests done.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "psychosocial",
+    "topic": "worry about burdening family",
+    "chart": "Expresses concern about being a burden to his wife and children.",
+    "says": "I don't want my wife or kids worrying about me more than they already do.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "nutrition",
+    "topic": "household food budget",
+    "chart": "Reports a tight household food budget on a limited income, relying on cheap shelf-stable foods.",
+    "says": "Money's tight with this many mouths to feed, so we buy what keeps and what's cheap, not always what's best for me.",
+    "tier": "reluctant",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "24-hour diet recall / usual intake pattern",
+    "aliases": [
+     "Diet history",
+     "Usual intake assessment"
+    ],
+    "result": "Patient reports grazing throughout the day: coffee black (several cups), lunch meat and cheese sandwiches, potato chips, peanut butter crackers, canned soup most days, little to no water, no set meal times; often nothing substantial until late evening.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Sodium-focused food frequency check",
+    "aliases": [
+     "Sodium intake screen",
+     "High-sodium food check"
+    ],
+    "result": "Patient estimates eating canned soup 4-5 times/week and chips or crackers most days; unaware of sodium content of these items, says 'soup's soup.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Fluid intake and hydration pattern review",
+    "aliases": [
+     "Hydration assessment",
+     "Fluid intake review"
+    ],
+    "result": "Reports drinking mostly black coffee during the day, water only 'when he remembers,' no sugar-sweetened beverages, roughly one beer on a weekend.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change screening",
+    "aliases": [
+     "Stage of change assessment",
+     "Motivation screening"
+    ],
+    "result": "Patient states he doesn't see his eating as a problem since he 'doesn't feel sick'; consistent with precontemplation stage on standard readiness assessment.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Barriers-to-change assessment (budget, schedule, literacy)",
+    "aliases": [
+     "Barrier screening",
+     "Social/financial barrier check"
+    ],
+    "result": "Patient reports irregular work hours, tight household budget (household of six on limited income), and difficulty following detailed written diet instructions; prefers simple spoken guidance.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review current problem list and medical history",
+    "aliases": [
+     "Problem list review",
+     "Medical history review"
+    ],
+    "result": "Problem list includes essential hypertension (2024), ischemic heart disease (2024), abnormal cardiac imaging finding (2024), chronic pain/low back/neck pain (2014), chronic sinusitis (2008) with resolved acute bacterial sinusitis (2024), and resolved dental issues (gingivitis, caries) through 2026-04.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Pain and function self-report related to eating behavior",
+    "aliases": [
+     "Pain impact on eating",
+     "Functional pain screen"
+    ],
+    "result": "Patient describes low-grade daily back ache and stiff neck, says pain is 'just part of getting older'; reports pain sometimes interrupts sitting down for meals, contributing to standing/grazing pattern.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Weight history and recent weight change self-report",
+    "aliases": [
+     "Weight history",
+     "Recent weight change check"
+    ],
+    "result": "Patient reports weight has been 'about the same for years,' no recent intentional weight loss or gain noted.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review most recent primary care/cardiology referral note",
+    "aliases": [
+     "Referral note review",
+     "Cardiology note review"
+    ],
+    "result": "Note documents referral to nutrition for dietary management of hypertension and cardiac risk following 2024 ischemic heart disease finding; recommends low-sodium diet education; no mention of supplement use.",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review pharmacy refill history for antihypertensives",
+    "aliases": [
+     "Pharmacy refill review",
+     "Medication refill log"
+    ],
+    "result": "Refill log shows lisinopril and amlodipine refills consistently requested 5-7 days late relative to the 30-day supply schedule over the past four refill cycles.",
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 97/66 mmHg, heart rate 76/min, respiratory rate 15/min, weight 86.1 kg, height 177.7 cm, BMI 27.3 kg/m2 (recorded 2026-04-11).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 134.1 mg/dL; LDL cholesterol 57.9 mg/dL; HDL cholesterol 49.5 mg/dL; Triglycerides 133.2 mg/dL; Haemoglobin 16 g/dL; White cell count 6.1 10*3/uL; Platelets 361.6 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-04-11); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-03-20); zoster vaccine live (2019-03-02); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2019-03-02).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Cardiology/Primary Care Referral Note for Nutrition",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "date": "2026-03-20",
+    "author": "Dr. R. Alvarez, Primary Care",
+    "body": "Mr. Schuster is a 58-year-old man with essential hypertension and a 2024 finding of ischemic heart disease on cardiac imaging. Referring to nutrition services for dietary counseling focused on sodium reduction and cardiovascular risk management. Patient has been informed of findings and advised to follow up with nutrition and continue current cardiac medication regimen. No dietary supplement use documented at this visit."
+   },
+   {
+    "id": "d6",
+    "type": "other",
+    "title": "Pharmacy Refill History - Antihypertensives",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2026-04-01",
+    "author": "Community Pharmacy, Deptford NJ",
+    "table": {
+     "columns": [
+      "Medication",
+      "Fill Date",
+      "Days Supply",
+      "Days Late vs Schedule"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2026-01-12",
+        "30",
+        "6 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg",
+        "2026-01-12",
+        "30",
+        "6 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2026-02-18",
+        "30",
+        "7 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg",
+        "2026-02-18",
+        "30",
+        "7 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2026-03-22",
+        "30",
+        "5 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg",
+        "2026-03-22",
+        "30",
+        "5 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2026-04-28",
+        "30",
+        "6 days late"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg",
+        "2026-04-28",
+        "30",
+        "6 days late"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Dental Visit Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-04-25",
+    "author": "Deptford Family Dental",
+    "body": "Patient presented for routine cleaning. Exam notes mild gingival redness and tenderness at the lower anterior teeth consistent with recurrent gingivitis. Supragingival and subgingival plaque and calculus removed from all teeth. Fluoride treatment applied. Advised to improve home oral hygiene routine. No other findings."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic sinusitis (since 2008)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\nEssential hypertension (since 2024)\nIschemic heart disease (since 2024)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2024)\n\nRECENTLY RESOLVED\nGingivitis (2023-03 to 2023-04)\nGingivitis (2024-03 to 2024-04)\nPrimary dental caries (2024-04 to 2024-04)\nAcute bacterial sinusitis (2024-08 to 2024-10)\nGingivitis (2026-04 to 2026-04)\n\nPROCEDURES\n2026-04-25: Dental fluoride treatment (Gingivitis)\n2026-04-25: Examination of gingivae (Gingivitis)\n2026-04-25: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-04-25: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-04-25: Dental care (Gingivitis)\n2026-04-25: Dental consultation and report (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-04-25 ambulatory: Encounter for check up (Gingivitis)\n2026-04-11 wellness: General examination of patient\n2025-04-19 ambulatory: Encounter for check up (Patient referral for dental care)\n2025-04-05 wellness: General examination of patient\n2024-09-11 ambulatory: Encounter for symptom (Acute bacterial sinusitis)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Lifestyle education regarding hypertension"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ibuprofen 400 MG Oral Tablet [Ibu]",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-04",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "amLODIPine 2.5 MG Oral Tablet",
+        "2026-04",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2024-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2024-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2024-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2024-04",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "134.1",
+        "mg/dL",
+        "< 200",
+        "2026-04-11"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "57.9",
+        "mg/dL",
+        "< 100",
+        "2026-04-11"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "49.5",
+        "mg/dL",
+        ">= 40",
+        "2026-04-11"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "133.2",
+        "mg/dL",
+        "< 150",
+        "2026-04-11"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "16",
+        "g/dL",
+        "12.0-17.5",
+        "2024-03-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-03-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "361.6",
+        "10*3/uL",
+        "150-450",
+        "2024-03-30"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete diet history (meal pattern, typical foods, fluid intake) from a patient who initially minimizes concerns about his eating",
+    "factIds": [
+     "s3",
+     "s4",
+     "s5",
+     "s6"
+    ],
+    "actionIds": [
+     "a2",
+     "a3",
+     "a4"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Relate anthropometric, vital sign, and laboratory data already on the chart to the patient's eating pattern, distinguishing clinically relevant findings from distractors",
+    "factIds": [
+     "h26"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore medication and supplement use relevant to nutrition care, including reluctant and hidden use of OTC analgesics, home remedies, and unreported supplements",
+    "factIds": [
+     "h23",
+     "h24",
+     "s9",
+     "s10",
+     "s11",
+     "s12"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o4",
+    "text": "Identify and reconcile a discrepancy between a patient's self-reported medication adherence and objective pharmacy refill evidence, and recognize when a nutrition finding should be flagged to the referring prescriber",
+    "factIds": [
+     "h27",
+     "h28"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess practical, financial, and health-literacy barriers to dietary change given his irregular work schedule, tight household budget, and limited formal education",
+    "factIds": [
+     "s2",
+     "s18",
+     "s15"
+    ],
+    "actionIds": [
+     "a6"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Apply motivational interviewing principles to engage a patient in precontemplation whose main motivation is continuing to work rather than lab values",
+    "factIds": [
+     "s14",
+     "s16",
+     "s13"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium intake and irregular/grazing meal pattern (NI-1.3/NI-5.10.2 type nutrition diagnosis) in the context of essential hypertension and recent ischemic heart disease finding, in a patient in precontemplation for dietary change",
+   "differential": [
+    "Excessive sodium intake related to reliance on processed convenience foods as evidenced by frequent canned soup, chips, and lunch meat/cheese sandwich intake",
+    "Inconsistent meal pattern/grazing behavior related to irregular work schedule and pain-driven snacking as evidenced by patient report of no sit-down meals and eating standing at counter or in truck",
+    "Inadequate fluid intake related to habitual high coffee consumption as evidenced by patient report of water 'only when he remembers'",
+    "Limited nutrition-related knowledge related to low health literacy as evidenced by patient statements like 'soup's soup, I didn't think about the salt in it'"
+   ],
+   "keyFindings": [
+    "BMI 27.3 kg/m2 (height 177.7 cm, weight 86.1 kg) with central adiposity",
+    "BP 97/66 mmHg on 2026-04-11, HR 76, RR 15 — low-normal BP consistent with effective combination antihypertensive therapy, not a presenting symptom",
+    "Lipid panel 2026-04-11 at goal: total cholesterol 134.1 mg/dL, LDL 57.9 mg/dL, HDL 49.5 mg/dL, triglycerides 133.2 mg/dL, reflecting good statin effect",
+    "2024-03-30 CBC entirely normal (Hgb 16, WBC 6.1, platelets 361.6) — included as a distractor, not clinically relevant to the nutrition visit",
+    "Diet history reveals grazing pattern with no set meals, high reliance on processed/high-sodium foods (chips, canned soup, lunch meat/cheese sandwiches, peanut butter crackers), high coffee intake, low water intake",
+    "Patient initially reports taking lisinopril and amlodipine 'most days, no big deal' but on gentle follow-up admits to skipping both near end of month when he runs low or forgets — a true adherence gap not reflected in the chart's refill-based assumption of regular use",
+    "Reluctant disclosure of taking more ibuprofen than labeled, several times a week, without tracking total daily dose",
+    "Hidden use of daily glucosamine-chondroitin, turmeric/black pepper capsules, Epsom salt soaks several nights a week, and occasional apple cider vinegar in water — none previously documented anywhere in the chart",
+    "Patient is in precontemplation: states he does not feel 'sick' and sees no reason to change eating habits; motivated by continuing to work, not by lab numbers"
+   ],
+   "plan": [
+    "Complete ADIME-format nutrition assessment including diet history (24-hour recall or typical day), meal pattern, fluid intake, and relevant anthropometrics/vitals/labs already on file",
+    "Elicit and document medication and supplement use relevant to nutrition care, including over-the-counter and home remedy use not currently in the chart",
+    "Identify and name the nutrition diagnosis (PES statement) around excessive sodium intake and irregular meal pattern in the context of hypertension/cardiac risk",
+    "Use motivational interviewing to explore ambivalence and precontemplation; avoid directive or lecturing language given his sensitivity to being told what to do",
+    "Offer small, low-burden behavior change options (e.g., rinsing canned soup, choosing lower-sodium alternatives, pairing water with coffee) rather than a full dietary overhaul",
+    "Flag the end-of-month antihypertensive adherence gap and reluctant NSAID overuse pattern for communication back to the referring prescriber/care team, as these are outside dietetics scope to manage directly but relevant to safe care",
+    "Schedule or recommend a follow-up visit to reinforce small changes and reassess readiness to change"
+   ],
+   "redFlags": [
+    "Unreported, frequent supra-label ibuprofen use in a patient on clopidogrel (antiplatelet) and with ischemic heart disease, raising bleeding/cardiovascular risk interaction concerns that should be flagged to the prescribing clinician",
+    "End-of-month gaps in lisinopril/amlodipine adherence in a patient with ischemic heart disease and hypertension, which could contribute to inadequately controlled blood pressure or missed cardiac protection",
+    "Infrequent, uncertain use of nitroglycerin spray for chest discomfort with unclear understanding of when/how to use it or whether it has expired, relevant to his cardiac safety"
+   ],
+   "educationPoints": [
+    "Explain in plain language how processed/convenience foods like canned soup, chips, and deli meat contribute to sodium intake and why this matters for his blood pressure, without using exact numeric sodium targets he may find overwhelming",
+    "Normalize that supplements and home remedies (glucosamine, turmeric, Epsom salt, apple cider vinegar) are worth mentioning to his care team even if they don't feel like 'real medicine'",
+    "Reinforce that his lipid panel being at goal reflects his statin working well, not a sign that diet no longer matters for his heart and blood pressure",
+    "Frame small, practical substitutions (e.g., water instead of some coffee, lower-sodium snack options to keep in the truck) as ways to help him keep working and feeling steady, tying nutrition change to his stated goal of staying on the job rather than to lab numbers he doesn't personally value"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Harris states he takes his lisinopril and amlodipine 'most days, no big deal' (h27)",
+    "recordEvidence": "Pharmacy refill history shows lisinopril and amlodipine refills consistently requested 5-7 days late relative to the 30-day supply schedule over the past four refill cycles (d6/a14)",
+    "teachingPoint": "Self-reported adherence can overstate actual medication-taking behavior; refill timing is an objective adherence signal worth cross-checking and flagging to the care team, especially for cardioprotective/antihypertensive medications.",
+    "factId": "h27",
+    "artifactId": "d6"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 27,
+   "condition": "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "conditionLabel": "58 M · Ischemic heart disease, Essential hypertension, Chronic neck pain +3 · 7 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "29f9c29f",
+   "fingerprint": "10qy6kc"
+  }
+ }
+}

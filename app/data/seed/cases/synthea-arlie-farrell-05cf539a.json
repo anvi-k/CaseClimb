@@ -1,0 +1,1172 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling for Shift-Work Eating in a 72-Year-Old Overnight Security Guard with Ischemic Heart Disease and Hypertension",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment with an anxious, low-health-literacy older adult whose shift-work schedule drives a pattern of skipped meals, heavy vending-machine/fast-food reliance, and inconsistent medication adherence despite reassuringly normal labs. The core teaching points are using motivational interviewing and teach-back to uncover hidden health literacy barriers without shame, recognizing a patient-vs-record mismatch between reported medication adherence and refill history, and building a realistic, culturally-grounded (church-community-leveraging) nutrition care plan for someone in the contemplation stage of change.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Holiday City-Berkeley, New Jersey, seated at his kitchen table before his overnight shift",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Arlie Farrell",
+   "age": 72,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Overnight security guard at a retail distribution warehouse",
+   "language": "English",
+   "appearance": "An older white man calling from his kitchen table, dressed in a worn flannel shirt, sitting with a mild forward-leaning posture. He looks tired with faint dark circles under his eyes, moves slowly and carefully as if his back is stiff, and jingles a set of keys in one hand when he gets nervous. A nasal, slightly hoarse voice is noticeable, and he occasionally sniffles or clears his throat.",
+   "portrait": "/portraits/synthea-arlie-farrell-05cf539a.jpg"
+  },
+  "persona": {
+   "personality": "Anxious, apologetic, and self-effacing; braces for criticism before it comes and tends to downplay his own struggles. Warm underneath the nervousness, especially when talking about his church family.",
+   "communicationStyle": "Soft-spoken, uses plain working-class language with no medical jargon. Apologizes frequently ('sorry, I know that's bad'), changes the subject when something feels too exposing, and jingles his keys when nervous. Responds well to warmth, patience, and simple explanations without numbers or percentages; shuts down or deflects if he feels lectured or rushed.",
+   "healthLiteracy": "low",
+   "emotionalState": "Nervous and a little ashamed going into the visit, worried he's about to be scolded for his eating habits; brightens noticeably when talking about his church community or when treated gently rather than judged.",
+   "background": "Arlie grew up in a working-class family in rural New Jersey and left school after his GED to start working right away, which he's quietly proud of. He never married, has no kids, and has spent most of his adult life in physically demanding jobs, including decades driving a forklift before moving into warehouse security. He's worked overnight security at a retail distribution warehouse for years now, usually an 11pm-to-7am shift. He's single and lives in a household of four in Holiday City-Berkeley, New Jersey, though he doesn't consider the others close family. His real family, as he puts it, is his church congregation of over twenty years - he helps set up the Sunday potluck when his back allows, and a few older members check on him and bring him meals when he's having a bad flare. He keeps a small cooler in his truck for shift snacks, though it's rarely stocked with much beyond soda and old Halloween candy. He talks about his forklift days with a bit of pride when the conversation turns light.",
+   "speechExamples": [
+    "Sorry, I know that's probably bad, huh?",
+    "I just eat whatever's around when I'm on shift, you know how it is.",
+    "Honestly I don't always get what those labels are trying to tell me, but don't tell anybody I said that.",
+    "My church folks, they're like my real family at this point.",
+    "I'm not trying to be difficult, I just... I don't want to mess something up."
+   ],
+   "concerns": [
+    "Worried the student will scold him for his vending machine habits",
+    "Afraid his heart condition will get worse and he'll lose his job",
+    "Embarrassed that he doesn't always understand nutrition labels or his medication instructions"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit with Arlie Farrell, a 72-year-old man referred for help with his eating habits in the context of his heart condition, high blood pressure, and overnight work schedule. This is his first nutrition visit. Review his available health record information before the call, then conduct a diet history and counseling session, and complete an ADIME note afterward.",
+   "chiefComplaint": "Referred for nutrition counseling related to heart disease, blood pressure, and overnight shift-work eating",
+   "openingLine": "Hi, yeah, sorry, I'm here. They told me I should talk to somebody about my eating, with the heart stuff and all. I work nights, so I know my eating's probably not the best.",
+   "tasks": [
+    "Take a focused diet history covering his typical day, meal timing, and food choices, especially around his overnight shift schedule",
+    "Assess his health literacy and comfort with reading nutrition labels and food/medication instructions using a judgment-free, teach-back approach",
+    "Review available anthropometric, vital sign, and laboratory data as part of his nutrition assessment",
+    "Identify realistic, shift-work-friendly meal and snack strategies in partnership with the patient, using motivational interviewing to meet him where he is",
+    "Document an ADIME note that includes a nutrition diagnosis and patient-centered goals, noting any barriers or support systems relevant to his care"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for a nutrition visit to help with eating habits around his heart condition, blood pressure, and overnight work schedule"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician (Dr. Nguyen); referral to Dietetics/Clinical Nutrition"
+   },
+   {
+    "label": "Problem list",
+    "value": "Ischemic heart disease (since 1998); Abnormal findings diagnostic imaging heart+coronary circulat (since 1998); Essential hypertension (since 2000); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic sinusitis (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "Hydrochlorothiazide 25 MG Oral Tablet; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Ibuprofen 400 MG Oral Tablet [Ibu]; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient referred for nutrition counseling related to ischemic heart disease, hypertension, and shift-work eating pattern.",
+    "says": "My doctor sent me to talk to you about my eating, with my heart and blood pressure and all. Working nights makes it hard.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "work schedule",
+    "chart": "Works overnight security shift, approximately 11 PM to 7 AM, full-time.",
+    "says": "I work nights, security over at the warehouse. Eleven to seven, five nights a week.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "heart condition history",
+    "chart": "Ischemic heart disease diagnosed in 1998, managed medically; no prior nutrition counseling reported.",
+    "says": "I've had heart trouble since '98. Nobody's really sat down with me about food before, just pills.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "blood pressure history",
+    "chart": "Essential hypertension diagnosed in 2000, on multiple antihypertensives.",
+    "says": "My blood pressure's been high a long time, since 2000 or so. I take a few different pills for it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "back pain history",
+    "chart": "Chronic low back pain since 2014, worsens with prolonged standing at work.",
+    "says": "My back's been bad since 2014. Standing all night at work really sets it off.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Reports intermittent chest tightness, described as a 'squeeze,' comes and goes.",
+    "says": "Sometimes I get this weird squeeze in my chest. Comes and goes. I figure it's just my heart acting up some.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "recent chest tightness episode",
+    "chart": "Patient reports one emergency department visit in the past year for chest tightness that he did not disclose to his primary care provider.",
+    "says": "...I went to the ER once this past year, middle of the night, chest felt real tight. I never told my regular doctor. Didn't want them thinking I can't handle my job.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "nasal and sinus symptoms",
+    "chart": "Reports morning nasal congestion and post-nasal drip, consistent with chronic sinusitis diagnosed 2025.",
+    "says": "My nose is stuffy most mornings, and I get that drip in the back of my throat. Had sinus trouble since last year.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Reports fatigue, especially toward end of overnight shifts.",
+    "says": "I'm pretty wiped by the end of my shift. Figured that's just getting older and working nights.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "dizziness",
+    "chart": "Reports occasional dizziness, attributes to aging.",
+    "says": "Sometimes I get a little dizzy, but hey, I'm 72, right?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "ankle swelling",
+    "chart": "Reports occasional bilateral ankle swelling, wonders if related to amlodipine.",
+    "says": "My ankles puff up sometimes. I wondered if that little pill ain't working right.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bruising",
+    "chart": "Reports easy bruising, has not mentioned to his physician.",
+    "says": "I bruise kinda easy lately. Haven't said nothin' to the doctor about it though.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "Denies nausea, vomiting, or abdominal pain. Reports occasional stomach discomfort after taking ibuprofen on an empty stomach.",
+    "says": "My stomach's fine mostly, 'cept sometimes after I take one of them ibuprofen without eating nothing first.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "bowel and urinary habits",
+    "chart": "No reported changes in bowel habits; reports increased urinary frequency related to diuretic use.",
+    "says": "Bathroom-wise I'm regular, 'cept that water pill makes me go a lot, which is a pain at work.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "sleep pattern",
+    "chart": "Reports disrupted sleep pattern due to overnight work, 5-6 hours daytime sleep.",
+    "says": "I sleep during the day, maybe five, six hours. It's never great sleep.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "recent infections",
+    "chart": "History of acute bronchitis (2025-07), sinusitis (2025-08 to 2025-11, resolved), and acute cystitis (2025-12, treated with antibiotics).",
+    "says": "I had bronchitis over the summer, then my sinuses acted up for a couple months, and I got a bladder infection back in December. All cleared up now.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of dental caries treated in January 2024, resolved.",
+    "says": "Had a cavity filled a while back, that's about it for my teeth.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "strep throat history",
+    "chart": "History of streptococcal pharyngitis in June 2023, resolved with treatment.",
+    "says": "Had strep throat a couple years back. Got some medicine and it went away.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries reported.",
+    "says": "Never had surgery on anything, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I'm not allergic to nothin' that I know of.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "blood pressure pill timing",
+    "chart": "Reports taking blood pressure medications 'pretty regular.'",
+    "says": "I take my blood pressure pills pretty regular, I try real hard not to miss 'em.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "water pill habits",
+    "chart": "Reports sometimes skipping hydrochlorothiazide before work shifts due to bathroom access concerns.",
+    "says": "Sometimes I skip that water pill before I go in, 'cause I don't want to be running to the bathroom all night at work.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "pain pill confusion",
+    "chart": "Reports occasionally confusing his two opioid-containing pain medications due to similar appearance.",
+    "says": "I'll be honest, sometimes I mix up them two pain pills, the names look kinda the same to me.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "heart pill understanding",
+    "chart": "Reports not understanding the purpose of simvastatin, stating his 'numbers were fine last time.'",
+    "says": "I don't really get why I still gotta take that cholesterol pill, my numbers were fine last time I checked.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Reports inconsistent multivitamin use, keeps saline nasal spray and antacid tablets as needed.",
+    "says": "I got a multivitamin my sister got me, I take it when I remember. And I keep some antacids and a nose spray around too.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h26",
+    "category": "ros",
+    "topic": "appetite changes",
+    "chart": "Denies unintentional weight loss or significant appetite changes.",
+    "says": "My weight's been about the same, I ain't really lost or gained much that I noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time overnight security shifts, approximately 11pm-7am, at a retail warehouse",
+    "says": "I do security overnight at the warehouse, so I'm up all night and crashed out most of the day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "living situation",
+    "chart": "Lives in a household of four; reports limited close contact with family members",
+    "says": "I live with some folks, there's four of us in the house, but it's not like we're close or anything. I mostly keep to myself.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "marital status",
+    "chart": "Never married, no children",
+    "says": "Never got married, never had kids. Just been me, working, mostly.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "church community",
+    "chart": "Describes a 20+ year church community as his primary support system, including potlucks and members who check on him",
+    "says": "My church, they're like my family. Been going there over twenty years. Sunday potlucks are the best meal I get all week, honestly.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "emotional support",
+    "chart": "Reports pastor and congregation members check on him and sometimes bring meals when his back pain is severe",
+    "says": "Pastor calls to check on me sometimes. And a couple of the older ladies, if my back's real bad, they'll drop off a plate.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "goals",
+    "topic": "work goals",
+    "chart": "Goal: continue working as long as his back allows",
+    "says": "I just want to keep working as long as my back lets me. I don't want to be a burden on nobody.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "goals",
+    "topic": "health fears",
+    "chart": "Fears worsening heart condition leading to job loss; cites coworker who had a heart attack on shift",
+    "says": "Guy I worked with, he had a heart attack right there on shift. I think about that. I'm scared it could be me next.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "goals",
+    "topic": "church participation goal",
+    "chart": "Goal: remain well enough to continue helping with Sunday meal setup at church",
+    "says": "I help set up the Sunday meal at church. I'd hate to not be able to do that no more.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "readiness to change",
+    "chart": "Patient-reported readiness to change: contemplation stage; aware eating habits are suboptimal but unsure how to begin",
+    "says": "I know I probably eat terrible. I think about changing it, I just don't know where I'd even start.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "fear of judgment",
+    "chart": "Expresses worry about being criticized for eating habits by healthcare providers",
+    "says": "Sorry, I know this is probably gonna sound bad. I feel like I'm about to get in trouble.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "other",
+    "topic": "reading instructions",
+    "chart": "Reluctantly admits difficulty following written medication instructions, attributing confusion to the directions rather than his own understanding",
+    "says": "Those directions on the bottles, they're just confusing, you know? I don't always get what they mean.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "other",
+    "topic": "understanding written materials",
+    "chart": "Hidden: cannot reliably read nutrition facts panels or medication instructions; has never disclosed this to any provider and typically nods along rather than ask for help",
+    "says": "[If pressed gently] ...honestly, I never was much good at reading all them little numbers. I just kind of guess, or I say I understand so nobody thinks less of me.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "other",
+    "topic": "recent emergency care",
+    "chart": "Hidden: had one ER visit in the past year for chest tightness that was not reported to his primary care provider, due to embarrassment about missing work",
+    "says": "[Reluctantly] There was one time... I went to the ER, chest felt real tight. I never told my regular doctor. Didn't want them thinking I couldn't handle my job.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "function",
+    "topic": "cooking ability",
+    "chart": "Reports chronic back pain limits his ability to stand at the stove and cook meals",
+    "says": "Standing at the stove too long, my back just can't take it most days.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "nutrition",
+    "topic": "grocery habits",
+    "chart": "Reports limited household income makes fresh produce feel unaffordable",
+    "says": "Fresh vegetables and all that, it adds up fast. On my budget it feels like a luxury sometimes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "tobacco and alcohol use",
+    "chart": "Never smoked tobacco; AUDIT-C score 0, does not drink alcohol",
+    "says": "Never smoked a day in my life, and I don't really drink either.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s17",
+    "category": "function",
+    "topic": "physical activity",
+    "chart": "Reports sedentary lifestyle outside of work; walks warehouse floor during shifts but limited exercise on days off due to back pain",
+    "says": "I walk around the warehouse all night, that's about it. On my days off, my back's usually too sore to do much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "pride in work history",
+    "chart": "Mentions pride in having been trained to operate a forklift earlier in his career",
+    "says": "Learned to drive a forklift years back. Still proud of that, if I'm honest.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review medication refill/pharmacy fill history",
+    "aliases": [],
+    "result": "See pharmacy refill record",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review prior nutrition/dietitian referral note",
+    "aliases": [],
+    "result": "See referral note",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient describes: skips breakfast (asleep), small lunch (sandwich or leftovers), large dinner before shift (meat, starch, sometimes canned corn or green beans), then vending machine chips/pretzels/candy bars and 2-3 sodas through the night shift, fast food burger-and-fries on the drive home around 6am; coffee with cream and sugar throughout the day, rarely plain water",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Assess usual meal timing and pattern around work schedule",
+    "aliases": [],
+    "result": "Patient reports sleeping through most mornings, eating a small lunch after waking, a large dinner before his 11pm shift, grazing overnight, and stopping for fast food on the drive home around 6am; says his break schedule at work is unpredictable and limits planning",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess fluid and beverage intake",
+    "aliases": [],
+    "result": "Patient reports several cups of coffee daily with cream and sugar, 2-3 cans of soda per shift, rarely drinks plain water unless reminded",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess physical activity level",
+    "aliases": [],
+    "result": "Patient reports walking the warehouse floor during shifts but otherwise sedentary; says back pain limits exercise on days off",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 0; patient reports essentially no alcohol use, never smoked tobacco",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess food access, budget, and kitchen/cooking barriers",
+    "aliases": [],
+    "result": "Patient reports limited income makes fresh produce feel like a luxury, chronic back pain makes standing at the stove difficult, and he relies on a truck cooler usually stocked with soda and old candy rather than real food",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess health literacy using plain-language teach-back",
+    "aliases": [],
+    "result": "When asked to read a sample nutrition facts label aloud and explain it back, patient becomes quiet, says 'I think I get it,' struggles to identify sodium or sugar content, and visibly relaxes when the label is reviewed together verbally instead of being handed to him to read alone",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen readiness to change using stages-of-change framework",
+    "aliases": [],
+    "result": "Patient endorses knowing his eating habits 'aren't great' and expresses some desire to change but is unsure where to start and voices fear of failing or being judged, consistent with the contemplation stage",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Assess social support and community resources relevant to eating",
+    "aliases": [],
+    "result": "Patient describes his church congregation of over 20 years as his closest support, mentions Sunday potlucks with home-cooked casseroles and baked ham, and says a few older members bring him meals when his back is bad; reports limited contact with biological family",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review problem list and visit history for recent acute illness",
+    "aliases": [],
+    "result": "See acute care/urgent visit history note",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Review understanding of current medication purposes and schedule",
+    "aliases": [],
+    "result": "Patient can name a few pills by appearance ('the water pill,' 'the heart ones') but is unsure what several are for, says the two prescription pain pills 'look about the same to him' on the label, and mentions he sometimes guesses the timing when instructions aren't clear",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 113/80 mmHg, heart rate 74/min, respiratory rate 13/min, weight 83.4 kg, height 173.7 cm, BMI 27.6 kg/m2 (recorded 2026-01-21).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 157.9 mg/dL; LDL cholesterol 82.2 mg/dL; HDL cholesterol 51 mg/dL; Triglycerides 123.7 mg/dL; Haemoglobin 17.4 g/dL; White cell count 5.5 10*3/uL; Platelets 295.3 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2026-01-21); Influenza split virus trivalent PF (2025-07-09); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-09-22); pneumococcal polysaccharide vaccine 23 valent (2020-12-23); Pneumococcal conjugate PCV 13 (2019-12-18).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "other",
+    "title": "Pharmacy Refill History - Last 6 Months",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "date": "2026-01-20",
+    "author": "Community Pharmacy, Holiday City-Berkeley NJ",
+    "table": {
+     "columns": [
+      "Medication",
+      "Days Supply",
+      "Fill Date",
+      "Next Expected Fill",
+      "Gap (days)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg tablet",
+        "30",
+        "2025-08-02",
+        "2025-09-01",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg tablet",
+        "30",
+        "2025-09-19",
+        "2025-10-19",
+        "18"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg tablet",
+        "30",
+        "2025-11-10",
+        "2025-12-10",
+        "22"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg tablet",
+        "30",
+        "2025-12-29",
+        "2026-01-28",
+        "19"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg tablet",
+        "30",
+        "2025-08-01",
+        "2025-08-31",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg tablet",
+        "30",
+        "2025-08-30",
+        "2025-09-29",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg tablet",
+        "30",
+        "2025-09-28",
+        "2025-10-28",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg tablet",
+        "30",
+        "2025-12-01",
+        "2025-12-31",
+        "1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg tablet",
+        "30",
+        "2025-08-05",
+        "2025-09-04",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg tablet",
+        "30",
+        "2025-09-25",
+        "2025-10-25",
+        "16"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg tablet",
+        "30",
+        "2025-11-20",
+        "2025-12-20",
+        "12"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Referral Note - Nutrition Consult",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-01-10",
+    "author": "Primary Care Office, Dr. Nguyen",
+    "body": "72-year-old male with longstanding ischemic heart disease and essential hypertension, referred for outpatient nutrition counseling to address diet-related cardiovascular risk reduction and support given overnight shift work schedule. No prior formal dietitian visits on record. Patient has expressed interest in 'eating better' at recent primary care visit but reports uncertainty about where to begin. Please assess dietary pattern, barriers, and provide individualized education."
+   },
+   {
+    "id": "d3",
+    "type": "note",
+    "title": "Urgent Care Visit Summary",
+    "release": {
+     "when": "action",
+     "ref": "a16"
+    },
+    "date": "2025-12-17",
+    "author": "Holiday City Urgent Care",
+    "body": "Patient presented for evaluation of urinary symptoms. History and physical examination limited. Urinalysis with reflex to microscopy and culture performed; urine specimen collected. Diagnosis: acute infective cystitis. Antibiotic therapy initiated. Discussion about pregnancy noted as not applicable. No cardiac or respiratory complaints documented at this visit."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nIschemic heart disease (since 1998)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 1998)\nEssential hypertension (since 2000)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic sinusitis (since 2025)\n\nRECENTLY RESOLVED\nStreptococcal sore throat (2023-06 to 2023-06)\nPrimary dental caries (2024-01 to 2024-01)\nAcute bronchitis (2025-07 to 2025-07)\nSinusitis (2025-08 to 2025-11)\nAcute infective cystitis (2025-12 to 2025-12)\n\nPROCEDURES\n2025-12-17: Antibiotic therapy\n2025-12-17: Urinalysis with reflex to microscopy and culture\n2025-12-17: Urine specimen collection\n2025-12-17: Discussion about pregnancy\n2025-12-17: Evaluation procedure\n2025-12-17: History and physical examination limited\n\nRECENT ENCOUNTERS\n2026-01-21 wellness: General examination of patient\n2025-12-17 ambulatory: Encounter for symptom (Acute infective cystitis)\n2025-10-31 ambulatory: Encounter for symptom (Sinusitis)\n2025-08-27 ambulatory: Encounter for symptom (Sinusitis)\n2025-07-16 ambulatory: Encounter for symptom (Acute bronchitis)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Lifestyle education regarding hypertension; Therapy"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hydrochlorothiazide 25 MG Oral Tablet",
+        "2026-01",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+        "2026-01",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Ibuprofen 400 MG Oral Tablet [Ibu]",
+        "2026-01",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-01",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "amLODIPine 2.5 MG Oral Tablet",
+        "2026-01",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+        "2014-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "1998-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "1998-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "1998-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "1998-05",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "157.9",
+        "mg/dL",
+        "< 200",
+        "2025-01-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "82.2",
+        "mg/dL",
+        "< 100",
+        "2025-01-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "51",
+        "mg/dL",
+        ">= 40",
+        "2025-01-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "123.7",
+        "mg/dL",
+        "< 150",
+        "2025-01-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "17.4",
+        "g/dL",
+        "12.0-17.5",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "5.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "295.3",
+        "10*3/uL",
+        "150-450",
+        "2026-01-21"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused diet history that captures shift-work-driven meal timing, skipped meals, and reliance on vending machine/fast food, including fluid and caffeine intake.",
+    "factIds": [
+     "h2",
+     "h9",
+     "h15",
+     "s1"
+    ],
+    "actionIds": [
+     "a7",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess health literacy in a judgment-free, teach-back manner to uncover difficulty reading nutrition labels and medication instructions without triggering shame.",
+    "factIds": [
+     "s11",
+     "s12",
+     "s10"
+    ],
+    "actionIds": [
+     "a13",
+     "a17"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate anthropometric, vital sign, and laboratory data into the nutrition assessment, recognizing that normal/controlled labs do not negate dietary risk.",
+    "factIds": [
+     "h3",
+     "h4"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Use motivational interviewing to engage a patient in the contemplation stage, validating effort and addressing fear of judgment to build readiness for change.",
+    "factIds": [
+     "s9",
+     "s10",
+     "s7"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify barriers to healthy eating (chronic pain limiting cooking, limited income, irregular schedule) and existing supports (church community) to inform realistic, patient-centered goals.",
+    "factIds": [
+     "s14",
+     "s15",
+     "s4",
+     "s5",
+     "s8"
+    ],
+    "actionIds": [
+     "a12",
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize discrepancies between patient-reported medication adherence and objective pharmacy records, and consider their relevance to nutrition counseling and interdisciplinary communication.",
+    "factIds": [
+     "h21",
+     "h22"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Undesirable food choices and irregular meal pattern related to overnight shift-work schedule, chronic pain limiting food preparation, and limited health literacy, as evidenced by heavy reliance on vending-machine/fast-food intake, skipped breakfast, high added sugar and sodium intake, and inconsistent antihypertensive adherence.",
+   "differential": [
+    "Nutrition diagnosis: Undesirable food choices (NB-1.7) related to shift-work schedule and limited understanding of label reading",
+    "Nutrition diagnosis: Inconsistent carbohydrate/sodium intake related to irregular meal timing and reliance on convenience foods",
+    "Nutrition-related: Medication/food interaction risk (e.g., antacid or grapefruit-type concerns) - not primary focus here",
+    "Behavioral: Low health literacy affecting ability to self-manage diet and medications (contributing factor, not itself a nutrition diagnosis)",
+    "Psychosocial: Contemplation-stage readiness to change with fear of judgment, a barrier to be addressed via MI rather than a diagnosis"
+   ],
+   "keyFindings": [
+    "BMI 27.6 kg/m2 (overweight)",
+    "Lipid panel and CBC within normal limits despite poor dietary pattern (reassuring but does not reflect intake quality)",
+    "Diet history reveals skipped breakfast, small lunch, large pre-shift dinner, overnight grazing on chips/pretzels/candy/soda, fast food on drive home",
+    "Minimal vegetable intake (only canned corn, green beans tolerated), minimal plain water intake, heavy sweetened coffee intake",
+    "Patient reports taking blood pressure medications 'pretty regular' but refill/adherence record shows gaps in hydrochlorothiazide fills consistent with frequent skipped doses",
+    "Patient reluctantly discloses difficulty reading nutrition labels and medication instructions, previously undisclosed to any provider",
+    "Patient reluctantly discloses an ER visit in the past year for chest tightness never reported to his regular doctor",
+    "Strong church-based social support network with potential to reinforce healthier choices (potlucks, check-ins)"
+   ],
+   "plan": [
+    "Complete ADIME note: Assessment (24-hr/typical day diet history, anthropometrics, labs, medication list, psychosocial/readiness-to-change), Diagnosis (PES statement centered on undesirable food choices related to shift-work schedule and limited health literacy as evidenced by diet history findings), Intervention (plain-language, teach-back based education; practical shift-friendly snack/meal swaps; label-reading support without shame; leverage church potlucks for healthy dish ideas), Monitoring/Evaluation (follow-up diet recall, weight, BP trend, patient-reported confidence/readiness)",
+    "Use teach-back to confirm understanding of any education given rather than handouts with numbers/percentages",
+    "Offer concrete, low-literacy-friendly strategies for the overnight shift: pre-packed cooler swaps (nuts, cheese sticks, fruit, water) instead of soda/candy; a modest pre-shift meal instead of one large heavy dinner; limiting cream/sugar in coffee gradually",
+    "Validate his effort and fear of failure using motivational interviewing; avoid judgmental language about vending machine or fast food habits",
+    "Explore and gently normalize his difficulty with labels; offer to walk through a label together rather than hand him material to read alone",
+    "Identify a referral or communication back to his primary care team regarding the medication adherence gap and the unreported chest tightness/ER visit, since this is outside dietetics scope to manage directly but important to flag",
+    "Discuss the church potluck community as a support system - encourage him to bring a modified-healthier dish and ask about accountability check-ins",
+    "Set one or two small, patient-chosen, realistic goals (e.g., swapping one nightly soda for water, adding a vegetable at dinner) rather than a full overhaul"
+   ],
+   "redFlags": [
+    "Unreported chest tightness and an unreported ER visit for cardiac symptoms - needs communication to his PCP/cardiology team, not managed by dietitian but must be flagged for follow-up",
+    "Inconsistent antihypertensive adherence (HCTZ gaps, amlodipine missed doses) with reported ankle swelling - relevant to overall cardiovascular risk, should be communicated to prescribing provider",
+    "Confusion between two opioid-containing pain medications raising risk of inadvertent overdose - outside nutrition scope but warrants referral/flag to care team",
+    "Low health literacy affecting safe self-management of both diet and medications - needs plain-language approach and possible referral to health literacy or care coordination resources"
+   ],
+   "educationPoints": [
+    "Why consistent meal timing (even on an overnight schedule) helps with energy, blood pressure control, and avoiding the heavy end-of-night vending habit",
+    "Simple, affordable snack swaps that travel well in a truck cooler for overnight shifts (e.g., unsalted nuts, string cheese, fruit, plain crackers, water)",
+    "How to identify high-sodium or high-sugar packaged snacks without needing to read a full nutrition label (e.g., comparing short ingredient lists, choosing recognizable whole foods)",
+    "The role of vegetables he already tolerates (canned corn, green beans) in building toward a more balanced plate, without forcing disliked vegetables",
+    "Gentle reassurance that his lab values look good now, and that building sustainable habits now helps keep them that way, rather than focusing on past 'bad' choices",
+    "Framing small, patient-chosen changes (one soda swapped for water, one vegetable added) as meaningful progress rather than an all-or-nothing overhaul"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking blood pressure medications 'pretty regular' (h21)",
+    "recordEvidence": "Pharmacy refill history shows hydrochlorothiazide refill gaps consistent with frequent missed doses over the past 6 months",
+    "teachingPoint": "Self-reported adherence often overestimates actual medication-taking behavior; reviewing objective refill records can reveal gaps that affect nutrition-medication counseling (e.g., sodium/fluid guidance, timing around diuretic use) and should prompt non-judgmental exploration rather than assumption of full adherence.",
+    "factId": "h21",
+    "artifactId": "d1"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 5,
+   "condition": "Chronic sinusitis",
+   "conditionLabel": "72 M · Chronic sinusitis, Chronic low back pain, Chronic pain +2 · 10 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "05cf539a",
+   "fingerprint": "a0mvss"
+  }
+ }
+}

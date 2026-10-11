@@ -1,0 +1,329 @@
+{
+ "patient_overview": {
+  "name": "Manuel Hilpert",
+  "age": 40,
+  "sex": "Male",
+  "description": "Manuel Hilpert is a 40-year-old divorced warehouse worker from Trenton, New Jersey, living with his sister and her teenage son. He carries a long history of chronic migraine, chronic pain, dependent drug abuse (with a recent overdose in July 2026), unhealthy alcohol use, and newly flagged prediabetes and obesity. He speaks in a careful, numbers-first way—citing dates, doses, and lab values he's memorized from his chart—while agreeing readily with whatever the clinician suggests, though he rarely follows through. He comes across as cooperative and even eager to please, but a student will notice the gap between his nodding agreement and his actual day-to-day habits.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "chronic pain",
+   "dependent drug abuse",
+   "alcohol use",
+   "migraine",
+   "binge eating",
+   "food insecurity",
+   "maintenance stage slipping",
+   "family support minimizing illness"
+  ]
+ },
+ "demographics": {
+  "occupation": "Warehouse order picker at a distribution center near Trenton",
+  "residence": "Trenton, New Jersey; household of 3",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Divorced",
+  "education_level": "Less than high school degree",
+  "insurance": "Private insurance",
+  "cultural_context": "Manuel grew up in a working-class household in Trenton where food was simple, filling, and rarely discussed in terms of health—meals were about getting enough calories to get through a shift, not nutrition. He left school before finishing high school to start working, and he still thinks of doctors' numbers (A1c, blood pressure, milligrams) as the real language of health, something to memorize and recite even when he doesn't fully grasp what they mean. He values being easy to get along with and avoiding conflict, a trait that extends to never pushing back on his family or his doctors, even when he privately disagrees or doesn't follow through."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Chronic intractable migraine without aura",
+   "Impacted molars",
+   "Chronic pain",
+   "Dependent drug abuse",
+   "Unhealthy alcohol drinking behavior",
+   "Body mass index 30+ - obesity"
+  ],
+  "medical_history": [
+   "Chronic intractable migraine without aura since 2000",
+   "Impacted molars since 2000",
+   "Chronic pain since 2001",
+   "Dependent drug abuse since 2007",
+   "Unhealthy alcohol drinking behavior since 2008",
+   "Prediabetes since 2025",
+   "Body mass index 30+ - obesity since 2025",
+   "Disease caused by severe acute respiratory syndrome coronavirus 2 (2021-03 to 2021-05, resolved)",
+   "Overdose (2022-05 to 2022-05, resolved)",
+   "Overdose (2023-09 to 2023-09, resolved)",
+   "Acute bronchitis (2025-12 to 2025-12, resolved)",
+   "Overdose (2026-07 to 2026-07, resolved)",
+   "Rehabilitation therapy (2026-05-31)",
+   "Dental fluoride treatment (2023-02-27)",
+   "Examination of gingivae (2023-02-27)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2023-02-27)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2023-02-27)",
+   "Dental care (2023-02-27)"
+  ],
+  "current_symptoms": [
+   "frequent dull headaches and occasional severe migraines that keep him from eating regular meals",
+   "chronic low back and joint pain that makes standing in the kitchen or at work hard",
+   "fatigue by mid-afternoon",
+   "occasional lightheadedness he attributes to 'low blood sugar' though he isn't sure"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "BMI in the obese range with weight gain of about 1.7 kg since early 2023",
+   "blood pressure elevated at 141/91 at last visit",
+   "mild under-eye puffiness and tired affect consistent with disrupted sleep",
+   "dental wear and old plaque buildup noted at last cleaning, consistent with impacted molars and inconsistent dental care"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.8 % (reference < 5.7; 2025-12-29)",
+   "Glucose: 88 mg/dL (reference 70-99 (fasting); 2025-12-29)",
+   "Total cholesterol: 181.6 mg/dL (reference < 200; 2023-02-13)",
+   "LDL cholesterol: 121.1 mg/dL (reference < 100; 2023-02-13)",
+   "HDL cholesterol: 34.9 mg/dL (reference >= 40; 2023-02-13)",
+   "Triglycerides: 128.4 mg/dL (reference < 150; 2023-02-13)",
+   "Haemoglobin: 13.5 g/dL (reference 12.0-17.5; 2025-12-01)",
+   "White cell count: 4.5 10*3/uL (reference 4.0-11.0; 2025-12-01)",
+   "Platelets: 264.4 10*3/uL (reference 150-450; 2025-12-01)",
+   "Potassium: 4 mmol/L (reference 3.5-5.1; 2025-12-29)",
+   "Sodium: 143.1 mmol/L (reference 135-145; 2025-12-29)",
+   "Urea nitrogen: 10.7 mg/dL (reference 7-20; 2025-12-29)"
+  ],
+  "vital_signs": [
+   "BP: 141/91 mmHg",
+   "HR: 78 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2025-12-29"
+  ],
+  "anthropometrics": [
+   "Height: 181.9 cm",
+   "Weight: 100.8 kg",
+   "BMI: 30.5 kg/m2",
+   "Weight change: +1.7 kg since 2023-02-13"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "dose": "0.3 ML",
+    "frequency": "As-needed, carried for emergency use only",
+    "purpose": "Not recorded",
+    "adherence": "Keeps it in his bag but has never had to use it; unsure of exact indication beyond 'allergic emergency'",
+    "patient_concerns": "Worried it might be expired since he never checked the date; otherwise doesn't think about it much"
+   },
+   {
+    "name": "Astemizole 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Not clearly recalled; patient says 'I think once a day' but isn't certain",
+    "purpose": "Not recorded",
+    "adherence": "Inconsistent; sometimes forgets for a day or two, especially during migraine flares when he can't keep track of pills",
+    "patient_concerns": "Not sure what it's actually treating anymore, says 'the pharmacy just keeps refilling it so I keep taking it'"
+   }
+  ],
+  "supplements_and_otc": [
+   "Generic multivitamin his sister buys in bulk at the dollar store",
+   "Ibuprofen 200mg tablets, takes several at once during migraine or back pain flares",
+   "Occasional melatonin gummies when he can't sleep after a bad pain night"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Whatever his sister Donna cooks—heavy on casseroles, boxed pasta, fried chicken, and large portions meant to stretch across the household budget",
+  "food_preferences": [
+   "meatloaf with ketchup",
+   "fried bologna sandwiches",
+   "Donna's baked ziti",
+   "convenience store coffee with lots of sugar and cream"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "late-night bowls of cereal or chips eaten alone after everyone else is asleep",
+   "finishing his nephew's leftover fast food 'so it doesn't go to waste'",
+   "skipping breakfast most days then overeating at dinner",
+   "drinking several beers on weekends with coworkers"
+  ],
+  "meal_pattern": "Eats whatever Donna puts on the table at dinner, usually skips or grabs a gas-station pastry for breakfast, lunch is whatever is cheap near the warehouse",
+  "hydration": "Mostly sweet tea and soda; says he 'forgets' to drink water during long shifts",
+  "physical_activity": "On his feet all day at the warehouse but no structured exercise; chronic pain limits movement at home",
+  "substance_use": "History of dependent drug abuse with a recent overdose in July 2026; drinks alcohol regularly on weekends, more than he admits to his doctor",
+  "sleep": "Poor and irregular, often disrupted by migraines or pain, worse after a drinking night"
+ },
+ "psychosocial_profile": {
+  "personality": "Agreeable to a fault—says yes to every suggestion from staff, family, or coworkers, rarely voices disagreement, and as a result rarely changes anything about his routine",
+  "communication_style": "Precise and factual, cites exact dates ('since 2007'), doses, and lab numbers he's memorized, but struggles to explain what the numbers mean for his daily choices",
+  "goals": [
+   "Get his A1c back under 5.7 like it was reported in his old chart",
+   "Stop having migraines interfere with work shifts",
+   "Stay clean this time, for real, after the July overdose"
+  ],
+  "concerns": [
+   "Losing his warehouse job if he misses more shifts for migraines or appointments",
+   "Being seen as 'the addict' by his coworkers",
+   "His weight creeping up even though he feels like he 'barely eats all day'"
+  ],
+  "beliefs": [
+   "If the doctor doesn't yell at him about it, it must not be that serious",
+   "Numbers on paper matter more than how he actually feels",
+   "His sister knows best about food because she's always cooked for the family"
+  ],
+  "motivations": [
+   "Wants to prove to his ex-wife and teenage daughter that he can get his life together",
+   "Fear of another overdose landing him back in the ER",
+   "Wants to keep his job and his own small bedroom in Donna's house"
+  ],
+  "fears": [
+   "Dying before his daughter is grown",
+   "Being told he needs to go back to inpatient rehab",
+   "Disappointing Donna after everything she's done for him"
+  ],
+  "barriers": [
+   "No control over what's cooked at home",
+   "Transportation problems that have made him miss medical appointments",
+   "Chronic pain and migraines that disrupt any routine he tries to build",
+   "Food insecurity—reports going without food at times during the month",
+   "Shame about binge or secret eating that he never mentions to providers"
+  ],
+  "strengths": [
+   "Shows up to appointments when transportation allows",
+   "Willing to recite and track his own numbers",
+   "Genuinely wants to stay sober this time",
+   "Good rapport with coworkers, sees people 3-5 times a week socially"
+  ],
+  "support_system": "Lives with his sister Donna and her teenage son; family is present but tends to brush off his prediabetes and weight as 'not a big deal' compared to his addiction history",
+  "readiness_to_change": "Maintenance stage that is slipping—he made real changes a while back (cut back drinking, went to rehab in May 2026) but has been drifting back toward old habits since the July overdose"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States his HbA1c was 5.8% at his last check in December 2025",
+   "Mentions he's been diagnosed with prediabetes and obesity 'since 2025, officially'",
+   "Says his sister Donna does all the cooking at home",
+   "Reports chronic migraines since 2000 and chronic pain since 2001"
+  ],
+  "discoverable_information": [
+   "Describes skipping breakfast most days and grabbing gas station pastries",
+   "Admits he drinks soda and sweet tea instead of water during shifts",
+   "Explains transportation problems have made him miss appointments and medication pickups",
+   "Mentions he went without food at some point this past month due to money"
+  ],
+  "reluctant_information": [
+   "Admits, when asked gently about nighttime habits, that he eats cereal or chips alone after everyone's asleep, 'just to wind down'",
+   "Acknowledges he sometimes finishes his nephew's leftover fast food even when he's not hungry"
+  ],
+  "hidden_information": [
+   "Manuel binged on an entire box of cereal plus a sleeve of cookies the night after his July 2026 overdose, alone in his room, and has never told anyone, including Donna",
+   "He feels deep shame about this and specifically avoids mentioning it because he thinks it will make providers see him as 'out of control' again, like with the drugs"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Apply the Nutrition Care Process to a patient with limited control over home food preparation.",
+    "expected_discoveries": [
+     "Donna controls meal content and portions",
+     "Manuel has little say in what's cooked despite wanting to change",
+     "Budget constraints and food insecurity shape household meals"
+    ],
+    "possible_patient_reactions": [
+     "'Donna's been cooking for us since Mom passed, I don't really ask for anything different.'",
+     "'I eat what's put in front of me, that's just how it works at our house.'"
+    ]
+   },
+   {
+    "learning_objective": "Recognize and gently explore shame-based eating behaviors (binge/comfort eating) without judgment.",
+    "expected_discoveries": [
+     "Nighttime solitary eating episodes",
+     "A specific binge episode tied to emotional distress after the overdose",
+     "Reluctance to discuss these patterns directly"
+    ],
+    "possible_patient_reactions": [
+     "'I don't really think about it, I just eat if I can't sleep.' (deflecting)",
+     "Long pause, then quietly: 'There was one night... I don't really want to get into it.'"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change using a stage model, noting slippage from a previous maintenance phase.",
+    "expected_discoveries": [
+     "Prior successful changes (cut drinking, completed rehab in May 2026)",
+     "Recent regression after the July 2026 overdose",
+     "Ambivalence masked by agreeable surface responses"
+    ],
+    "possible_patient_reactions": [
+     "'Oh yeah, I'll definitely cut back on the soda, no problem.' (said reflexively, unlikely to follow through)",
+     "'I was doing good for a while there, I don't know what happened.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify how family dynamics can undermine chronic disease self-management.",
+    "expected_discoveries": [
+     "Family treats prediabetes/obesity as minor compared to his addiction history",
+     "Donna's cooking choices aren't adjusted for his labs",
+     "Lack of family reinforcement for dietary changes"
+    ],
+    "possible_patient_reactions": [
+     "'Donna says at least I'm not using anymore, so the sugar thing isn't a big deal to her.'",
+     "'Nobody really brings it up at home, honestly.'"
+    ]
+   },
+   {
+    "learning_objective": "Evaluate the impact of social determinants (transportation, income, food insecurity) on nutrition care planning.",
+    "expected_discoveries": [
+     "Missed appointments and medication pickups due to transportation",
+     "Household income near $31,625/year for three people",
+     "Reported episode of going without food in the past month"
+    ],
+    "possible_patient_reactions": [
+     "'The bus doesn't run right by the clinic, so sometimes I just miss it.'",
+     "'There was a week last month we were kind of short, so I skipped some meals.'"
+    ]
+   },
+   {
+    "learning_objective": "Integrate medication and supplement review into a nutrition-focused visit despite the patient's uncertainty about his own regimen.",
+    "expected_discoveries": [
+     "Manuel is unsure of the exact purpose of his daily tablet",
+     "Keeps an unused epinephrine auto-injector without checking expiration",
+     "Takes OTC ibuprofen frequently for pain, which could affect appetite or GI comfort"
+    ],
+    "possible_patient_reactions": [
+     "'I just take whatever's in the bottle, the pharmacy keeps sending it.'",
+     "'I didn't even think to check if the EpiPen expired, is that bad?'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "The two recorded medications (epinephrine auto-injector and astemizole, an antihistamine) are long-standing prescriptions whose original indications Manuel no longer clearly recalls, consistent with moderate health literacy and passive medication management",
+   "Household of 3 is interpreted as Manuel, his sister Donna, and her teenage son, providing the 'family nearby who do not take the condition seriously' dynamic",
+   "The July 2026 overdose is the most recent destabilizing event explaining the slip from maintenance-stage changes made around the May 2026 rehabilitation"
+  ],
+  "optional_details": [
+   "Manuel keeps a small notebook where he writes down lab numbers from his after-visit summaries, though he doesn't always understand what to do with them",
+   "He has a nickname at the warehouse, 'Manny,' and gets along well with his shift crew, which is his main social outlet"
+  ]
+ },
+ "source": {
+  "synthea_record": "25f6ba0e",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "agreeable to a fault, says yes to everything and changes nothing",
+   "communication": "precise and factual, quotes numbers and dates",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "moderate health literacy",
+   "eating": "someone else in the home does all the cooking and decides what is on the plate",
+   "held_back": "eats for comfort or in binges and is ashamed of it",
+   "support": "family nearby who do not take the condition seriously"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

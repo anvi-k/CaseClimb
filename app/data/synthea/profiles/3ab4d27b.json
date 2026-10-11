@@ -1,0 +1,361 @@
+{
+ "patient_overview": {
+  "name": "Gordon Bergnaum",
+  "age": 43,
+  "sex": "Male",
+  "description": "Gordon Bergnaum is a 43-year-old divorced man living in Crestwood Village, New Jersey, who comes in for a nutrition visit tied to his hyperlipidemia and prediabetes follow-up. He's soft-spoken and stoic, tends to downplay his symptoms, and often answers questions with 'whatever you think is best' rather than offering strong opinions of his own. He's decided he's ready to make a change and wants one clear, manageable first step rather than a long list of instructions, though a student will need to gently uncover that he skips meals all day and eats a very large meal late at night, and that he isn't using one of his inhalers the way it was prescribed.",
+  "keywords": [
+   "hyperlipidemia",
+   "prediabetes",
+   "meal timing",
+   "skipped meals",
+   "late-night eating",
+   "medication nonadherence",
+   "asthma controller inhaler",
+   "stoic patient",
+   "social isolation",
+   "preparation stage of change"
+  ]
+ },
+ "demographics": {
+  "occupation": "Former warehouse inventory clerk, now not in the labor force due to disability-related early retirement",
+  "residence": "Crestwood Village, New Jersey; household of 5",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Divorced",
+  "education_level": "More than high school",
+  "insurance": "Medicare",
+  "cultural_context": "Gordon grew up in a working-class New Jersey family where meals were practical and unfussy - meatloaf, canned vegetables, whatever was on sale. He values self-sufficiency and doesn't like making a fuss about his health, a habit reinforced by years of 'just getting on with it' through chronic skin and sinus issues since childhood. Food, for him, has become less about culture or ritual and more about convenience and the one quiet comfort of his day."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Hyperlipidemia",
+  "secondary_diagnoses": [
+   "Atopic dermatitis",
+   "Chronic sinusitis",
+   "Asthma",
+   "Sepsis",
+   "Septic shock",
+   "Prediabetes",
+   "Essential hypertension",
+   "Anemia"
+  ],
+  "medical_history": [
+   "Atopic dermatitis since 1983",
+   "Chronic sinusitis since 1988",
+   "Asthma since 2003",
+   "Sepsis since 2017",
+   "Septic shock since 2017",
+   "Prediabetes since 2017",
+   "Essential hypertension since 2018",
+   "Anemia since 2018",
+   "Hyperlipidemia since 2024",
+   "Gingivitis (2025-02 to 2025-03, resolved)",
+   "Acute viral pharyngitis (2025-03 to 2025-03, resolved)",
+   "Gingivitis (2026-02 to 2026-02, resolved)",
+   "Gingival disease (2026-02 to 2026-02, resolved)",
+   "Dental fluoride treatment (2026-02-20)",
+   "Postoperative care for dental procedure (2026-02-20)",
+   "Gingivectomy or gingivoplasty per tooth (2026-02-20)",
+   "Dental application of desensitizing medicament (2026-02-20)",
+   "Dental surgical procedure (2026-02-20)",
+   "Dental plain X-ray bitewing (2026-02-20)"
+  ],
+  "current_symptoms": [
+   "Feels fine most days, says he 'doesn't really notice anything'",
+   "Gets short of breath walking up the stairs to his apartment",
+   "Nighttime stomach discomfort and bloating after his late dinner",
+   "Occasional itchy, flaky skin on his elbows that he scratches without thinking about it",
+   "Low energy in the late afternoon that he attributes to 'just getting older'"
+  ],
+  "allergies": [
+   "Mold (organism) (Sneezing)",
+   "House dust mite (organism)",
+   "Animal dander (substance) (Rhinoconjunctivitis)",
+   "Grass pollen (substance)",
+   "Sulfamethoxazole / Trimethoprim (Wheal)",
+   "Tree nut (substance) (Anaphylaxis)"
+  ],
+  "clinical_findings": [
+   "Dry, lichenified patches on his forearms and backs of his knees from longstanding atopic dermatitis",
+   "Mild nasal congestion and sounds like he's breathing through a stuffy nose, consistent with his chronic sinusitis",
+   "Slightly overweight build with a soft midsection, waist noticeably fuller than hips",
+   "Faint end-expiratory wheeze audible when he's asked to take a deep breath"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.9 % (reference < 5.7; 2026-02-06)",
+   "Glucose: 93 mg/dL (reference 70-99 (fasting); 2026-02-27)",
+   "eGFR: 67 mL/min/1.73m2 (reference >= 90; 2026-02-27)",
+   "Total cholesterol: 207.7 mg/dL (reference < 200; 2026-02-27)",
+   "LDL cholesterol: 126 mg/dL (reference < 100; 2026-02-27)",
+   "HDL cholesterol: 52.7 mg/dL (reference >= 40; 2026-02-27)",
+   "Triglycerides: 143.4 mg/dL (reference < 150; 2026-02-27)",
+   "Haemoglobin: 12.6 g/dL (reference 12.0-17.5; 2024-01-26)",
+   "White cell count: 3.7 10*3/uL (reference 4.0-11.0; 2024-01-26)",
+   "Platelets: 320.7 10*3/uL (reference 150-450; 2024-01-26)",
+   "Potassium: 5 mmol/L (reference 3.5-5.1; 2026-02-27)",
+   "Sodium: 140.2 mmol/L (reference 135-145; 2026-02-27)",
+   "Urea nitrogen: 13.8 mg/dL (reference 7-20; 2026-02-27)"
+  ],
+  "vital_signs": [
+   "BP: 117/96 mmHg",
+   "HR: 86 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-02-06"
+  ],
+  "anthropometrics": [
+   "Height: 177.9 cm",
+   "Weight: 87.6 kg",
+   "BMI: 27.7 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Simvastatin 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "once daily",
+    "purpose": "Hyperlipidemia",
+    "adherence": "Takes it most days but admits he sometimes forgets for a stretch and doesn't restart until his next refill reminder",
+    "patient_concerns": "Doesn't think much about it; says 'whatever you think is best' when asked if the dose is right"
+   },
+   {
+    "name": "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+    "dose": "0.09 MG/ACTUAT",
+    "frequency": "as needed for wheezing",
+    "purpose": "Childhood asthma",
+    "adherence": "Uses it when he feels tight-chested, which he says is rare",
+    "patient_concerns": "None stated; he's used this inhaler since childhood and is comfortable with it"
+   },
+   {
+    "name": "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+    "dose": "0.044 MG/ACTUAT",
+    "frequency": "twice daily",
+    "purpose": "Childhood asthma",
+    "adherence": "This is the one he does not take as prescribed - he only uses it when he 'feels like he needs it' instead of daily, sometimes going a week without it",
+    "patient_concerns": "Thinks the daily use is overkill if he's 'not having an attack'; hasn't told his children or his doctor he skips it this way"
+   },
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "once daily",
+    "purpose": "Essential hypertension",
+    "adherence": "Consistent, takes it with whatever first food or drink he has that day",
+    "patient_concerns": "None significant; says it's 'just part of the routine'"
+   },
+   {
+    "name": "ferrous sulfate 325 MG Oral Tablet",
+    "dose": "325 MG",
+    "frequency": "once daily",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent, though he sometimes takes it on an empty stomach late at night with his big meal instead of with breakfast",
+    "patient_concerns": "Mentions it upsets his stomach sometimes but hasn't connected that to when he takes it"
+   },
+   {
+    "name": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "as needed, mostly at night",
+    "purpose": "Not recorded",
+    "adherence": "Uses it a few nights a week for itching or to help him sleep",
+    "patient_concerns": "Doesn't see it as a real medication, more like a sleep aid; downplays how often he actually takes it"
+   }
+  ],
+  "supplements_and_otc": [
+   "Diphenhydramine (already captured above, used off-label for sleep/itch)",
+   "Occasional antacid tablets he keeps in the kitchen drawer for his late-night meals",
+   "A tub of plain petroleum jelly he uses on his skin instead of the prescription cream he was once given"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Skips breakfast and lunch most days, then eats one large meal late at night - often after 9pm",
+  "food_preferences": [
+   "Frozen lasagna or meatloaf dinners he can heat up fast",
+   "Deli ham and cheese on white bread",
+   "Potato chips with his nighttime meal",
+   "Coffee, black, several cups starting mid-morning"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Why the big meal is so late - is it work, habit, or loneliness after the divorce",
+   "Whether the skipped daytime meals are about appetite, routine, or just not thinking about food until he's starving",
+   "Portion size at the late meal and whether seconds are typical",
+   "Salt intake from convenience and deli foods given his blood pressure"
+  ],
+  "meal_pattern": "Essentially one meal a day, eaten late, sometimes with a snack of chips or crackers beforehand around 6pm",
+  "hydration": "Mostly coffee during the day, water with his evening meal, says he 'doesn't think about drinking water much'",
+  "physical_activity": "Mostly sedentary; walks to the mailbox and does light chores, no structured exercise since a knee issue a few years back",
+  "substance_use": "Ex-smoker (quit about 8 years ago); drinks alcohol lightly, maybe a beer or two on weekends",
+  "sleep": "Goes to bed late after his big meal, often restless, uses diphenhydramine some nights to fall asleep"
+ },
+ "psychosocial_profile": {
+  "personality": "Stoic and even-keeled; tends to minimize symptoms and treats most problems as 'not a big deal'",
+  "communication_style": "Soft-spoken, brief answers, frequently defers to the student or clinician with phrases like 'whatever you think is best'",
+  "goals": [
+   "Wants one clear, concrete change he can start this week rather than a long list",
+   "Would like to stop feeling so sluggish in the afternoons",
+   "Wants to avoid his health 'becoming a project' his kids have to manage"
+  ],
+  "concerns": [
+   "His cholesterol numbers creeping up",
+   "Being lectured by his children about his habits",
+   "Not wanting to seem like he's falling apart"
+  ],
+  "beliefs": [
+   "Figures his body will tell him when something's really wrong",
+   "Thinks skipping meals during the day isn't a big deal since he 'makes up for it at night'",
+   "Believes his inhaler use should match how he feels, not a fixed schedule"
+  ],
+  "motivations": [
+   "Wants to stay independent and not become a burden on his adult children",
+   "Would like to have more energy to keep up with his grandkids when they visit"
+  ],
+  "fears": [
+   "Ending up back in the hospital like he did with the sepsis in 2017",
+   "Losing his independence"
+  ],
+  "barriers": [
+   "Lives alone part of the week in a household that's otherwise full, feels a bit disconnected at mealtimes",
+   "Limited income makes convenience foods the easy default",
+   "Low motivation to cook for just himself most nights"
+  ],
+  "strengths": [
+   "Has already quit smoking successfully",
+   "Keeps his medical appointments and follow-ups",
+   "Willing to make a specific change if it's simple and clearly explained"
+  ],
+  "support_system": "Adult children who check in and mean well but tend to lecture him about his diet and medication habits, which he tends to tune out",
+  "readiness_to_change": "In preparation - he's decided he wants to change something and is looking for one concrete, manageable first step"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he eats one big meal at night and 'doesn't really do breakfast'",
+   "Mentions his cholesterol was flagged at his last visit",
+   "Says he's divorced and lives in a household of five",
+   "Mentions he quit smoking years ago"
+  ],
+  "discoverable_information": [
+   "Describes his typical late dinner in detail (frozen entrees, chips, sometimes seconds)",
+   "Admits he drinks mostly coffee during the day and not much water",
+   "Shares that his adult children often comment on his eating and medication habits",
+   "Mentions he hasn't exercised regularly since a knee problem"
+  ],
+  "reluctant_information": [
+   "Admits, when asked gently and specifically about his inhalers, that he only uses the daily fluticasone inhaler when he feels like he needs it rather than every day as prescribed",
+   "Acknowledges some nights he eats close to midnight and still has trouble sleeping"
+  ],
+  "hidden_information": [
+   "Reveals, only after rapport is built, that he has gone as long as 10 days without using the Flovent inhaler at all, even during a stretch when his sinuses were worse than usual, and never mentioned it to his pulmonologist",
+   "Shares that he feels lonely eating dinner by himself most nights since the divorce, which is part of why the meal has become the main event of his day"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Identify and address a disordered meal-timing pattern (skipping meals then one large late meal)",
+    "expected_discoveries": [
+     "Patient skips breakfast and lunch, eats one very large meal after 9pm",
+     "Pattern linked to living alone part of the week and lack of routine"
+    ],
+    "possible_patient_reactions": [
+     "'I just never really got hungry during the day, so I eat when I finally sit down at night.'",
+     "'Whatever you think is best - I just don't love making a big deal of it.'"
+    ]
+   },
+   {
+    "learning_objective": "Uncover medication nonadherence using a nonjudgmental approach",
+    "expected_discoveries": [
+     "He only uses his controller inhaler symptomatically rather than daily as prescribed",
+     "He hasn't disclosed this gap to his pulmonologist"
+    ],
+    "possible_patient_reactions": [
+     "Initially says 'I take my inhalers fine' before softening the story",
+     "'I guess I only reach for it when my chest feels tight - didn't think that was wrong.'"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate one concrete, small first step consistent with his readiness to change",
+    "expected_discoveries": [
+     "He responds well to a single specific suggestion rather than a full overhaul",
+     "He wants something he can start immediately, like moving dinner earlier or adding a small daytime snack"
+    ],
+    "possible_patient_reactions": [
+     "'Okay, I can try that - just tell me the one thing to start with.'",
+     "'That sounds doable, I don't want a whole new diet.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the psychosocial context behind his eating pattern (loneliness, divorced household)",
+    "expected_discoveries": [
+     "The late meal is partly about having something to look forward to at the end of a solitary day",
+     "His children's lecturing makes him less likely to bring up struggles"
+    ],
+    "possible_patient_reactions": [
+     "Shrugs it off at first: 'It's fine, I'm used to eating alone.'",
+     "Opens up slightly: 'It's just quieter than I'd like some nights.'"
+    ]
+   },
+   {
+    "learning_objective": "Connect dietary pattern (sodium, late meals, convenience foods) to his hypertension and hyperlipidemia management",
+    "expected_discoveries": [
+     "High reliance on deli meats, chips, and frozen entrees contributes to sodium load",
+     "Late large meals may affect blood pressure readings and sleep quality"
+    ],
+    "possible_patient_reactions": [
+     "'I didn't realize the ham and chips added up like that.'",
+     "'Whatever you think is best, I just buy what's easy.'"
+    ]
+   },
+   {
+    "learning_objective": "Screen for social isolation and household support as it affects nutrition behavior",
+    "expected_discoveries": [
+     "Lives with household of five but describes feeling disconnected at mealtimes",
+     "Social contact is frequent (3-5x/week) but may not include shared meals"
+    ],
+    "possible_patient_reactions": [
+     "'I see people enough, I guess. Just not really at dinner.'",
+     "Minimizes: 'It's not lonely, that's just how it is now.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Household of five includes his ex-wife's shared custody arrangement or adult children/grandchildren living nearby, but Gordon himself experiences much of his week alone, especially at mealtimes",
+   "His 'otherwise unemployed, not seeking work' status reflects a disability-related exit from the workforce rather than retirement by age",
+   "Low white cell count and history of sepsis/septic shock in 2017 are stable historical findings, not currently active acute issues",
+   "His moderate health literacy means he understands basic diet-disease links but doesn't always connect specific food choices to his labs"
+  ],
+  "optional_details": [
+   "Keeps a small vegetable garden in summer that he's proud of but rarely eats much from it fresh",
+   "Has a cat that he feeds on a strict schedule, more consistently than he feeds himself",
+   "His late meal routine started around the time of his divorce and never changed back"
+  ]
+ },
+ "source": {
+  "synthea_record": "3ab4d27b",
+  "condition_group": "hypertension",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "stoic, plays every problem down",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "moderate health literacy",
+   "eating": "skips meals during the day and then eats a very large meal late at night",
+   "held_back": "does not take one of their medicines the way it was prescribed",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

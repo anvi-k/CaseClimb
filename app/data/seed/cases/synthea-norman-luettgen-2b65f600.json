@@ -1,0 +1,962 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for Prediabetes in a Guarded, Health-Literate Patient with Minimized Alcohol Use",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment with a guarded, high-health-literacy patient in the preparation stage of change who minimizes his alcohol intake. The core teaching points are: eliciting an accurate diet and alcohol history without triggering defensiveness, recognizing a patient-vs-chart mismatch (self-reported 'a few beers on weekends' vs. an AUDIT-C score of 4 and an overdue anemia follow-up), and translating high health literacy into one concrete, negotiated nutrition change rather than a generic lecture.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in his apartment in Newark, NJ, during a work break",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Norman Luettgen",
+   "age": 39,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "black, nonhispanic",
+   "occupation": "IT systems administrator for a hospital network",
+   "language": "English",
+   "appearance": "Sits upright at a desk in a small apartment office nook, wearing a collared work shirt with a lanyard still on; a monitor with spreadsheets glows behind him. He is composed and still, hands folded or occasionally gesturing precisely when he makes a point, with mild nasal congestion causing slight mouth-breathing and faint under-eye pallor visible on camera.",
+   "portrait": "/portraits/synthea-norman-luettgen-2b65f600.jpg"
+  },
+  "persona": {
+   "personality": "Reserved, private, and precise; controlled almost to the point of guardedness, but intellectually engaged and quick to test whether the person across the screen actually knows the material before he lets his guard down. Takes pride in solving his own problems and dislikes appearing to need help.",
+   "communicationStyle": "Speaks in short, measured sentences. Frequently answers a question with a question of his own, probing the learner's knowledge before answering personal ones. Uses precise, sometimes clinical vocabulary (he's read the studies). Grows faintly impatient with generic advice or long preambles; wants to get to the actionable part.",
+   "healthLiteracy": "high",
+   "emotionalState": "Composed and focused, with a thin current of urgency underneath — he does not want to end up on medication or like his uncle, but he will not show much of that worry on the surface unless the learner earns some trust.",
+   "background": "Norman is a 39-year-old IT systems administrator for a hospital network in Newark, NJ, divorced with three kids he sees on a regular schedule. His job is deskbound and often on-call, which eats into evenings. He grew up in a working-class Newark household where eating out was a rare treat; now takeaway and restaurant meals are his default because of time and energy, not choice. He has a close neighbor and friend, Dana, who checks in on him most evenings. On weekends he sometimes plays casual basketball with his kids and a few neighborhood dads, though less often than he'd like. He keeps a running list of nutrition articles saved on his phone that he hasn't fully read, and jokes that his weighted blanket is the only thing helping his 'terrible sleep schedule.'",
+   "speechExamples": [
+    "So what's the one thing I should actually change first? Don't give me ten.",
+    "I've already read the general stuff about glycemic index — what's actually new here?",
+    "Why does that matter for my blood sugar?",
+    "I don't have a problem, I just unwind after work.",
+    "Honestly, I figured the multivitamin would handle that."
+   ],
+   "concerns": [
+    "Being told to overhaul his entire life at once instead of getting one clear first step",
+    "Looking weak or undisciplined if the conversation turns toward his drinking",
+    "Running out of time and energy between work and parenting to cook more"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment. The patient is Norman Luettgen, a 39-year-old man referred by his physician after routine labs flagged prediabetes, to discuss diet before considering any medication. This is a first nutrition visit. Review the available chart information before the call, then conduct a focused nutrition assessment, build rapport, and work toward a mutually agreed first step.",
+   "chiefComplaint": "Referred for nutrition counseling after labs showed prediabetes",
+   "openingLine": "Hey. So, my doctor says my blood sugar's running a little high — 'pre-diabetic' is the word she used — and she wanted me to talk to someone about my diet before we go any further with it.",
+   "tasks": [
+    "Take a focused diet, meal pattern, and beverage history, including how takeaway and restaurant meals fit into his week",
+    "Take a focused alcohol use history using a brief, validated approach, exploring gently rather than confronting",
+    "Review available anthropometric data and recent labs with the patient to identify what's relevant to the nutrition diagnosis",
+    "Identify any gaps in follow-up care relevant to nutrition (for example, overdue labs) through chart review and conversation",
+    "Negotiate one specific, concrete, and feasible first nutrition change that fits his routine and readiness to change"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition visit referred after routine labs flagged prediabetes; physician requests diet counseling before considering starting medication"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. A. Reyes (Primary Care); Dietetics (new referral)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic sinusitis (since 2020); Prediabetes (since 2021); Anemia (since 2021); Unhealthy alcohol drinking behavior (since 2021)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient reports referral from physician after routine labs flagged prediabetes, prior to any medication discussion.",
+    "says": "My doctor said my sugar's creeping up — prediabetic, she called it — and wants me to meet with someone about my diet before we talk about pills.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "energy levels",
+    "chart": "Reports occasional mid-afternoon energy crashes, attributed by patient to tiredness.",
+    "says": "Some afternoons around 3pm I just hit a wall. I figured it's just being tired from work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Reports gradual weight gain over past few years, noticed clothes fitting tighter.",
+    "says": "I've put on some weight the last couple years. Nothing dramatic, just... it adds up.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "ros",
+    "topic": "breathing with exertion",
+    "chart": "Reports mild shortness of breath climbing stairs at his apartment, noticed more this year.",
+    "says": "I get a little winded going up to my floor now. Didn't used to.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "sinus symptoms",
+    "chart": "Reports nasal congestion and post-nasal drip flaring a few times monthly, consistent with known chronic sinusitis.",
+    "says": "My sinuses act up a few times a month, stuffy, drippy. Had that for years.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "sleep and fatigue",
+    "chart": "Reports needing a nap most Sunday afternoons; sleeps about 6 hours on weeknights.",
+    "says": "I usually crash for a nap Sunday afternoon. I'm only getting maybe six hours most nights.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain, palpitations, or syncope.",
+    "says": "No, nothing like chest pain or my heart racing or passing out. Nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Denies nausea, vomiting, abdominal pain, or changes in bowel habits.",
+    "says": "Stomach's fine. No pain, nothing weird with... bathroom stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies polyuria, polydipsia, or blurred vision.",
+    "says": "I'm not running to the bathroom all the time or super thirsty or anything. Vision's fine too.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "skin and numbness",
+    "chart": "Denies numbness, tingling, or non-healing sores on feet.",
+    "says": "My feet are fine, no numbness or tingling or sores or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes since 2021, followed by primary care.",
+    "says": "I've been borderline for a few years now, since like 2021. This latest number pushed it a bit higher I guess.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h12",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "History of mild anemia since 2021, last laboratory evaluation 2021-08-12.",
+    "says": "Yeah, I was told I was a little anemic a while back. Haven't really thought about it since.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "Chronic sinusitis since 2020, with an acute bacterial episode 2020-08 to 2021-02 that resolved.",
+    "says": "I had a bad sinus infection a few years back that took forever to clear, and it's just kind of been an on-and-off thing since.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "family diabetes history",
+    "chart": "Reports family history of diabetes complications (uncle, partial foot amputation).",
+    "says": "My uncle ended up losing part of his foot to diabetes. That's... I don't want that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "cardiac history",
+    "chart": "Denies history of heart disease, hypertension diagnosis, or stroke.",
+    "says": "No heart problems, no high blood pressure that I've been told about, nothing like a stroke.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "liver history",
+    "chart": "Denies known liver disease.",
+    "says": "No, nobody's ever said anything about my liver.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "Denies prior surgeries.",
+    "says": "Never had any surgery, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "dental history",
+    "chart": "History of dental fluoride treatment, composite filling, bitewing X-ray, gingival exam and scaling, all performed 2021-03-11.",
+    "says": "I had some dental work done a few years back, filling, cleaning, that kind of thing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "prescription medications",
+    "chart": "Reports taking no prescription medications currently.",
+    "says": "I'm not on any prescription meds right now. Doctor said we'd talk about that depending on what I do with my diet.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "nasal spray use",
+    "chart": "Uses over-the-counter saline nasal spray as needed for sinus flares.",
+    "says": "I use a saline spray when my sinuses act up. Nothing fancy, just the drugstore kind.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Reports taking an over-the-counter multivitamin inconsistently.",
+    "says": "I've got a multivitamin from the Rite Aid. I take it when I remember, which isn't always.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "iron supplement use",
+    "chart": "Reports taking an iron supplement recommended by a friend, inconsistently, for his anemia.",
+    "says": "A buddy told me to take iron for the anemia thing, so I've got a bottle. I take it when I remember.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "medication and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Divorced; shares custody of three children; household of 5 when kids present",
+    "says": "I've got three kids, I'm divorced, they're with me a lot of the week.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time as IT systems administrator for a hospital network; deskbound, on-call hours",
+    "says": "I'm an IT systems administrator for a hospital network, so I'm at a desk all day, and I'm on-call a lot.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "nutrition",
+    "topic": "weekend eating routine",
+    "chart": "Reports weekend meals with friend Marcus at a diner (burgers and fries)",
+    "says": "Weekends, me and my buddy Marcus hit the diner, burgers and fries, that's kind of our thing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "function",
+    "topic": "weekend activity level",
+    "chart": "Reports weekend basketball with his kids and neighborhood dads",
+    "says": "I play ball with my kids and some of the dads from the building on weekends.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "function",
+    "topic": "weekend activity level",
+    "chart": "On further questioning, admits weekend basketball happens less often than initially implied",
+    "says": "...Okay, honestly, it's not every weekend anymore. Been a minute since the last time, actually.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "support person",
+    "chart": "Identifies neighbor Dana as a close support person he talks with most evenings",
+    "says": "My neighbor Dana, we talk most evenings. She's good like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "social",
+    "topic": "support person",
+    "chart": "Dana has directly expressed concern to him about his drinking",
+    "says": "...She's said something to me about it, yeah. Straight to my face. That one stuck with me more than I let on.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol pattern",
+    "chart": "Reports drinking a few beers on weekends",
+    "says": "I drink a few beers on the weekends, nothing crazy.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "substance",
+    "topic": "alcohol pattern",
+    "chart": "Describes alcohol use as social, tied to weekend time with friend Marcus",
+    "says": "It's social. I'm not sitting around drinking alone, it's a hang-out thing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "substance",
+    "topic": "alcohol pattern",
+    "chart": "On further exploration, discloses drinking most weeknights as well, 3-4 beers or a couple mixed drinks while watching sports alone",
+    "says": "Fine — most nights, honestly. I'll have three or four beers, sometimes a mixed drink, watching the game by myself after the kids are down.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "beliefs about drinking",
+    "chart": "Believes his drinking is 'under control' because he frames it as social rather than solitary",
+    "says": "It's not a problem. I'm not drinking alone in some dark corner, I just unwind.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "preference for advice style",
+    "chart": "States he wants one specific, concrete change rather than a general overview",
+    "says": "Just give me one thing to change. Not ten. One.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "attitude toward health information",
+    "chart": "Reports he reads nutrition research himself and is skeptical of generic advice",
+    "says": "I've read the studies. I know what glycemic index means. Don't give me the beginner version.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "goals",
+    "topic": "primary motivation",
+    "chart": "States his main goal is avoiding progression to diabetes like his uncle",
+    "says": "My uncle lost part of his foot to this. I am not trying to end up like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "goals",
+    "topic": "energy for parenting",
+    "chart": "States he wants more energy to keep up with his kids on weekends",
+    "says": "I just want enough energy to actually keep up with my kids, not crash by Sunday afternoon.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "attitude toward asking for help",
+    "chart": "Reports discomfort with needing help or appearing dependent on others",
+    "says": "I like to handle my own stuff. Don't love feeling like I can't.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "anemia follow-up labs",
+    "chart": "Reports he believes his multivitamin probably addressed his anemia and has not seen a reason to repeat labs since 2021",
+    "says": "I figured the vitamin probably handled it. Didn't think I needed to go back in for that.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "adherence",
+    "topic": "anemia follow-up labs",
+    "chart": "Admits he avoided scheduling the repeat anemia bloodwork because he didn't want another appointment",
+    "says": "...Honestly? I just didn't want to deal with booking another appointment. Kept putting it off.",
+    "tier": "hidden",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour diet recall / usual intake interview",
+    "aliases": [],
+    "result": "Patient reports: skips or rushes breakfast most days; lunch irregular depending on meetings, sometimes skipped; dinner is takeaway/restaurant food most nights (jerk chicken, Chinese combo plates, diner burgers and fries), often after 9pm after work calls. Sweetened iced tea with most meals; soda more often than water. No regular vegetable intake identified outside of garnish portions. No breakfast cereal, dairy, or home-cooked staples reported.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score 4/12 (patient-reported: 'a few beers on weekends'). Score of 4 in a male meets threshold for further evaluation of unhealthy drinking.",
+    "importance": "critical",
+    "artifactIds": [
+     "d7"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage-of-change assessment",
+    "aliases": [],
+    "result": "Patient states he has already decided he wants to make a change and asks for 'one specific thing' rather than general advice; consistent with preparation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "24-hour fluid/beverage intake review",
+    "aliases": [],
+    "result": "Reports iced tea and soda daily, rarely plain water. Estimates 1-2 sweetened beverages per day with meals.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review weight history / anthropometric trend",
+    "aliases": [],
+    "result": "Weight up 5.7 kg since 2021-08-05 (from prior documented weight to current 99.7 kg).",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review medication and supplement list",
+    "aliases": [],
+    "result": "No prescription medications. OTC saline nasal spray. Multivitamin, taken inconsistently per patient report. Iron supplement, taken inconsistently per patient report.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review anemia follow-up / lab ordering history",
+    "aliases": [],
+    "result": "No CBC or iron studies on file since 2021-08-12. No repeat anemia labs ordered or completed since that date.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Physical activity level assessment",
+    "aliases": [],
+    "result": "Patient reports mostly sedentary desk-based workday; weekend basketball with his kids and neighborhood dads, which he says happens less often than he'd like.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Sleep pattern assessment",
+    "aliases": [],
+    "result": "Reports about 6 hours of sleep on weeknights, with a long nap on Sunday afternoons.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 127/74 mmHg, heart rate 89/min, respiratory rate 12/min, weight 99.7 kg, height 183.4 cm, BMI 29.6 kg/m2, weight change +5.7 kg since 2021-08-05 (recorded 2024-08-08).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.1 %; Glucose 72.2 mg/dL; Total cholesterol 168.9 mg/dL; LDL cholesterol 110.9 mg/dL; HDL cholesterol 33.1 mg/dL; Triglycerides 124.5 mg/dL; Haemoglobin 11.6 g/dL; White cell count 8.5 10*3/uL; Platelets 398.5 10*3/uL; Potassium 4.8 mmol/L; Sodium 140.9 mmol/L; Urea nitrogen 8.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2024-08-08); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-08-05); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2018-08-02).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Referral Note from Primary Care",
+    "release": {
+     "when": "start"
+    },
+    "date": "2024-08-09",
+    "author": "Dr. A. Reyes, Internal Medicine",
+    "body": "39-year-old male presenting for routine follow-up. Labs drawn 2024-08-08 notable for HbA1c 6.1% (consistent with prediabetes) and weight gain over past several years. Lipid panel shows borderline-low HDL. Patient declines starting medication at this time and prefers to pursue lifestyle changes first. Referring to dietetics for nutrition assessment and counseling. Patient also has history of mild anemia (last documented 2021) and chronic sinusitis; follow-up labs for anemia have not been repeated. Please assess diet, activity, and alcohol use as part of comprehensive nutrition counseling."
+   },
+   {
+    "id": "d7",
+    "type": "form",
+    "title": "AUDIT-C Screening Result",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "date": "2024-08-08",
+    "author": "Primary Care Visit Intake",
+    "body": "AUDIT-C total score: 4/12. Scored during intake questionnaire prior to physician visit. A score of 4 or more in men is considered positive for unhealthy alcohol use and warrants further assessment."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic sinusitis (since 2020)\nPrediabetes (since 2021)\nAnemia (since 2021)\nUnhealthy alcohol drinking behavior (since 2021)\n\nRECENTLY RESOLVED\nAcute bacterial sinusitis (2020-08 to 2021-02)\n\nPROCEDURES\n2021-08-12: Peripheral blood smear interpretation\n2021-03-11: Dental fluoride treatment (Patient referral for dental care)\n2021-03-11: Application of composite dental filling material to dentin of tooth following fracture of tooth (Fractured dental filling)\n2021-03-11: Dental plain X-ray bitewing\n2021-03-11: Examination of gingivae (Patient referral for dental care)\n2021-03-11: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2024-08-08 wellness: General examination of patient\n2021-08-12 ambulatory: Encounter for problem (Anemia)\n2021-08-05 wellness: General examination of patient\n2021-07-08 outpatient: Administration of vaccine to produce active immunity\n2021-03-11 ambulatory: Encounter for check up (Patient referral for dental care)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.1",
+        "%",
+        "< 5.7",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "72.2",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "168.9",
+        "mg/dL",
+        "< 200",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "110.9",
+        "mg/dL",
+        "< 100",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "33.1",
+        "mg/dL",
+        ">= 40",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "124.5",
+        "mg/dL",
+        "< 150",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.6",
+        "g/dL",
+        "12.0-17.5",
+        "2021-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2021-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "398.5",
+        "10*3/uL",
+        "150-450",
+        "2021-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.8",
+        "mmol/L",
+        "3.5-5.1",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.9",
+        "mmol/L",
+        "135-145",
+        "2024-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "8.5",
+        "mg/dL",
+        "7-20",
+        "2024-08-08"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Take a focused diet, meal pattern, and beverage history to characterize a takeaway-centered eating pattern and identify specific substitution opportunities",
+    "factIds": [
+     "h1",
+     "s2",
+     "s3",
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a1",
+     "a4"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Use a brief validated alcohol screening tool and motivational interviewing to elicit a more accurate drinking history from a patient who initially minimizes it",
+    "factIds": [
+     "s8",
+     "s9",
+     "s11",
+     "s10",
+     "s5"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review anthropometric trends and relevant laboratory results (glycemic, lipid, metabolic) to anchor a nutrition diagnosis in objective data",
+    "factIds": [
+     "h11",
+     "h12"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a7",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify a gap in follow-up care for anemia through chart review and reconcile it with the patient's own account of his supplement use and beliefs about his anemia",
+    "factIds": [
+     "h12",
+     "h21",
+     "h22",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a10",
+     "asyn2",
+     "a9"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize how social eating and drinking patterns are intertwined as barriers to change, and how a patient's framing of activity or socializing may understate the underlying pattern",
+    "factIds": [
+     "s4",
+     "s5",
+     "s6",
+     "s7"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Translate a patient's high health literacy and preparation-stage readiness into one specific, negotiated, feasible nutrition change rather than broad general advice",
+    "factIds": [
+     "s12",
+     "s13",
+     "s14",
+     "s15"
+    ],
+    "actionIds": [
+     "a3"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prediabetes (HbA1c 6.1%) with excess weight, in the context of a takeaway-centered diet, inconsistent supplementation, and likely under-reported alcohol intake",
+   "differential": [
+    "Excess energy/carbohydrate intake relative to needs related to frequent restaurant/takeaway meals and sweetened beverages, as evidenced by HbA1c 6.1% and 5.7 kg weight gain since 2021",
+    "Inadequate iron and vitamin C intake related to limited home-cooked, iron-rich meals, as evidenced by history of anemia (Hgb 11.6 g/dL in 2021) and inconsistent iron/multivitamin use",
+    "Excessive alcohol intake related to using drinking as a primary coping/social outlet, as evidenced by AUDIT-C score of 4 and self-report of 'a few beers on weekends'",
+    "Self-monitoring/follow-up gap related to avoidance of medical appointments, as evidenced by no repeat CBC since 2021-08-12 despite known anemia"
+   ],
+   "keyFindings": [
+    "HbA1c 6.1% (ref <5.7), fasting glucose 72.2 mg/dL (normal) on 2024-08-08",
+    "BMI 29.6 kg/m2 (height 183.4 cm, weight 99.7 kg), up 5.7 kg since 2021-08-05",
+    "HDL low at 33.1 mg/dL (ref ≥40); LDL mildly elevated at 110.9 mg/dL (ref <100); triglycerides and total cholesterol otherwise unremarkable",
+    "Last CBC from 2021-08-12 showed Hgb 11.6 g/dL (ref 12.0-17.5) with normal WBC/platelets; no repeat anemia labs since then despite inconsistent iron/multivitamin use",
+    "Diet pattern: skipped/rushed breakfast, irregular lunch, takeaway dinner most nights often after 9pm; sweetened iced tea and soda predominate over water; minimal vegetables outside garnish",
+    "Initial report of 'a few beers on weekends' inconsistent with AUDIT-C score of 4 flagging risky drinking; further history reveals most-weeknight drinking (3-4 beers or a couple mixed drinks) while watching sports alone",
+    "Mild mouth-breathing and nasal congestion consistent with known chronic sinusitis; mild conjunctival pallor consistent with history of anemia; potassium 4.8 mmol/L is high-normal and not clinically significant",
+    "Patient reports weekend basketball with kids 'less often than he'd like,' suggesting reduced activity and possible avoidance behavior"
+   ],
+   "plan": [
+    "Complete a focused diet history (meal timing, typical takeaway orders, portion sizes, beverage choices) and anthropometric review via telehealth-reported measures",
+    "Review available labs (HbA1c, lipid panel, most recent CBC date) and vital signs with the patient to anchor nutrition diagnosis",
+    "Use motivational interviewing to explore alcohol pattern without confrontation; reflect back the gap between self-report and AUDIT-C score; avoid pushing for full disclosure in a single visit",
+    "Negotiate one specific, feasible nutrition change aligned with his stated preference (e.g., a swap within an existing takeaway order, pairing iron-containing foods with a vitamin-C source, replacing one daily sweetened tea with water or unsweetened option)",
+    "Advise scheduling overdue anemia follow-up labs (CBC) with his physician given no repeat testing since 2021-08-12",
+    "Provide brief, non-judgmental education on how alcohol intake can affect blood glucose, weight, and nutrient status, framed as information rather than lecture",
+    "Document encounter in ADIME format; plan follow-up visit to assess uptake of the agreed change and revisit alcohol/labs conversation once rapport is established"
+   ],
+   "redFlags": [
+    "AUDIT-C score of 4 indicating risky drinking that patient is minimizing, with a hidden pattern of near-daily alcohol use",
+    "Overdue anemia follow-up (no CBC since 2021-08-12) despite known Hgb 11.6 g/dL and inconsistent supplementation",
+    "HbA1c trending toward diabetes range (6.1%, just below the 5.7% prediabetes threshold boundary... actually above it) warranting structured follow-up to prevent progression to type 2 diabetes"
+   ],
+   "educationPoints": [
+    "Explain how frequent high-carbohydrate, low-fiber takeaway meals and sweetened beverages can contribute to insulin resistance and elevated HbA1c, using language that matches his health literacy",
+    "Clarify the relationship between alcohol intake, calorie load, and blood glucose/weight without moralizing",
+    "Teach a simple strategy for pairing iron-rich foods with vitamin-C sources to support absorption, tailored to his existing takeaway choices",
+    "Normalize that one small, concrete change (e.g., swapping sweetened tea for water at one meal, or choosing a specific lower-glycemic side at his usual restaurant) is a reasonable and evidence-based starting point",
+    "Encourage reconnecting with his physician for overdue bloodwork, framed as closing a loop rather than a failure on his part"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Norman reports drinking 'a few beers on weekends', framing his alcohol use as social and under control (s8, s9, s11)",
+    "recordEvidence": "AUDIT-C screening score of 4/12, a result that meets the threshold for further evaluation of unhealthy drinking in a male patient",
+    "teachingPoint": "A validated screening score can flag risk that contradicts a patient's own minimized self-report; use MI to gently explore the gap rather than confronting or accepting the stated amount at face value",
+    "factId": "s8",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 28,
+   "condition": "Unhealthy alcohol drinking behavior",
+   "conditionLabel": "39 M · Unhealthy alcohol drinking behavior, Anemia, Prediabetes +1 · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2b65f600",
+   "fingerprint": "1kdeo89"
+  }
+ }
+}

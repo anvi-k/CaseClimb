@@ -1,0 +1,283 @@
+{
+ "patient_overview": {
+  "name": "Norman Luettgen",
+  "age": 39,
+  "sex": "Male",
+  "description": "Norman Luettgen is a 39-year-old divorced father of three living in Newark, NJ, who works full-time in a role that keeps him deskbound and often away from home at mealtimes. He comes in for a nutrition visit tied to his prediabetes, mild anemia, and an AUDIT-C score flagging risky drinking, though he presents as composed, articulate, and guarded about the drinking piece. He's done his homework online about HbA1c and insulin resistance and wants one specific, concrete change to start with rather than a lecture. He tends to answer the student's questions with his own questions, sizing up whether they actually know what they're talking about before he opens up.",
+  "keywords": [
+   "prediabetes",
+   "anemia",
+   "unhealthy alcohol use",
+   "takeaway-centered eating",
+   "high health literacy",
+   "reserved patient",
+   "preparation stage of change",
+   "single father",
+   "AUDIT-C",
+   "social eating"
+  ]
+ },
+ "demographics": {
+  "occupation": "IT systems administrator for a hospital network",
+  "residence": "Newark, New Jersey; household of 5",
+  "ethnicity": "Black",
+  "language": "English",
+  "marital_status": "Divorced",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Norman grew up in Newark in a working-class household where eating out was a treat reserved for birthdays; now, as a divorced father juggling custody of three kids and a demanding on-call job, takeaway and restaurant meals have become his default rather than an indulgence. He values self-sufficiency and doesn't like appearing to need help, which shapes both his guardedness about his drinking and his preference for solving problems with information rather than conversation."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Chronic sinusitis",
+   "Anemia",
+   "Unhealthy alcohol drinking behavior"
+  ],
+  "medical_history": [
+   "Chronic sinusitis since 2020",
+   "Prediabetes since 2021",
+   "Anemia since 2021",
+   "Unhealthy alcohol drinking behavior since 2021",
+   "Acute bacterial sinusitis (2020-08 to 2021-02, resolved)",
+   "Peripheral blood smear interpretation (2021-08-12)",
+   "Dental fluoride treatment (2021-03-11)",
+   "Application of composite dental filling material to dentin of tooth following fracture of tooth (2021-03-11)",
+   "Dental plain X-ray bitewing (2021-03-11)",
+   "Examination of gingivae (2021-03-11)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2021-03-11)"
+  ],
+  "current_symptoms": [
+   "Occasional mid-afternoon energy crashes he attributes to 'just being tired'",
+   "Mild shortness of breath climbing the stairs at his apartment that he's noticed more this year",
+   "Nasal congestion and post-nasal drip that flares a few times a month",
+   "Feels he needs a nap most Sunday afternoons"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Mild pallor of the conjunctiva consistent with his anemia",
+   "Noticeable nasal congestion with some mouth-breathing during conversation",
+   "Waist appears carrying weight centrally, consistent with his BMI and recent weight gain",
+   "Speaks in short, controlled sentences and redirects personal questions back to the interviewer"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.1 % (reference < 5.7; 2024-08-08)",
+   "Glucose: 72.2 mg/dL (reference 70-99 (fasting); 2024-08-08)",
+   "Total cholesterol: 168.9 mg/dL (reference < 200; 2024-08-08)",
+   "LDL cholesterol: 110.9 mg/dL (reference < 100; 2024-08-08)",
+   "HDL cholesterol: 33.1 mg/dL (reference >= 40; 2024-08-08)",
+   "Triglycerides: 124.5 mg/dL (reference < 150; 2024-08-08)",
+   "Haemoglobin: 11.6 g/dL (reference 12.0-17.5; 2021-08-12)",
+   "White cell count: 8.5 10*3/uL (reference 4.0-11.0; 2021-08-12)",
+   "Platelets: 398.5 10*3/uL (reference 150-450; 2021-08-12)",
+   "Potassium: 4.8 mmol/L (reference 3.5-5.1; 2024-08-08)",
+   "Sodium: 140.9 mmol/L (reference 135-145; 2024-08-08)",
+   "Urea nitrogen: 8.5 mg/dL (reference 7-20; 2024-08-08)"
+  ],
+  "vital_signs": [
+   "BP: 127/74 mmHg",
+   "HR: 89 bpm",
+   "RR: 12 breaths/min",
+   "Recorded: 2024-08-08"
+  ],
+  "anthropometrics": [
+   "Height: 183.4 cm",
+   "Weight: 99.7 kg",
+   "BMI: 29.6 kg/m2",
+   "Weight change: +5.7 kg since 2021-08-05"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Over-the-counter saline nasal spray for sinus flares",
+   "A multivitamin he buys at the Rite Aid near his apartment, taken inconsistently",
+   "Occasionally takes an iron supplement a friend recommended, 'when I remember'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Heavy reliance on restaurant and takeaway meals; limited home cooking",
+  "food_preferences": [
+   "Jamaican jerk chicken from a spot near his job",
+   "Burgers and fries from the diner he and his buddy Marcus go to on weekends",
+   "Chinese takeaway combo plates on weeknights when he's too tired to cook",
+   "Sweetened iced tea with most meals"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How often beer or liquor accompanies the takeaway orders",
+   "Portion sizes on combo-plate dinners",
+   "Whether vegetables appear anywhere outside the garnish on his plate",
+   "Late dinners after long work calls that push eating past 9pm"
+  ],
+  "meal_pattern": "Skips or grabs a quick breakfast; irregular lunch depending on meetings; takeaway dinner most nights, often late",
+  "hydration": "Drinks iced tea and soda more than water; says he 'should drink more water' but rarely does",
+  "physical_activity": "Mostly sedentary desk job; occasional weekend basketball with his kids, less often than he'd like",
+  "substance_use": "Reports drinking 'a few beers on weekends' but AUDIT-C score and further questioning suggest more frequent and heavier drinking than initially stated",
+  "sleep": "About 6 hours on weeknights, catches up some on Sunday with a long nap"
+ },
+ "psychosocial_profile": {
+  "personality": "Reserved and private; controlled, measured, gives little away until he trusts the person in front of him",
+  "communication_style": "Answers questions with questions, testing whether the student knows their material before opening up; precise vocabulary, clearly well-read",
+  "goals": [
+   "Get a single, concrete first step rather than a whole overhaul",
+   "Keep his A1c from crossing into diabetes range",
+   "Have more energy to keep up with his three kids on weekends"
+  ],
+  "concerns": [
+   "Being told to overhaul his whole life at once",
+   "Looking weak or undisciplined if the drinking topic comes up",
+   "Running out of time between work and parenting to cook"
+  ],
+  "beliefs": [
+   "He trusts peer-reviewed sources and reads nutrition studies himself",
+   "He believes willpower-based advice without structure doesn't work for him",
+   "He thinks his drinking is 'under control' because it's social, not solitary"
+  ],
+  "motivations": [
+   "Wanting to be around and functional for his kids as they grow up",
+   "Not wanting to end up on medication he associates with 'getting old fast'",
+   "Pride in being someone who solves his own problems"
+  ],
+  "fears": [
+   "Developing full diabetes like his uncle, who lost part of a foot",
+   "Being lectured or treated like he doesn't already know things",
+   "Admitting he can't handle something on his own"
+  ],
+  "barriers": [
+   "Little time or energy to cook most nights",
+   "Takeaway dinners double as his main social outlet with friends",
+   "Drinking is tied into those same social occasions, making it hard to isolate"
+  ],
+  "strengths": [
+   "Highly motivated once he commits to a plan",
+   "Reads and retains health information well",
+   "Has a strong support person in his neighbour Dana who checks in on him"
+  ],
+  "support_system": "His neighbour and close friend Dana, who he talks to most evenings and who has started asking him pointed questions about his drinking",
+  "readiness_to_change": "Preparation stage: has already decided he wants to change something and wants one specific, concrete first step, not a general discussion"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "Name, job, and that he's here because his doctor flagged his blood sugar as 'pre-diabetic'",
+   "States he eats out or orders in most nights because of his schedule",
+   "Mentions he has three kids and is divorced"
+  ],
+  "discoverable_information": [
+   "Describes his typical takeaway orders in detail (jerk chicken, Chinese combo plates, diner burgers)",
+   "Admits he rarely drinks water, mostly iced tea and soda",
+   "Says he's read about glycemic index and wants to know which foods actually matter",
+   "Mentions his neighbour Dana as someone who checks in on him"
+  ],
+  "reluctant_information": [
+   "Acknowledges he drinks 'a few beers on weekends' when asked directly about alcohol",
+   "Admits his weekend basketball with his kids happens less often than he says at first"
+  ],
+  "hidden_information": [
+   "Norman actually drinks most weeknights too, often 3-4 beers or a couple of mixed drinks while watching sports alone, not just 'weekends with friends' as first stated",
+   "Dana has told him directly she's worried about how much he's drinking, which stung more than he admits",
+   "He skipped his anemia follow-up labs because he didn't want to deal with another appointment"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice motivational interviewing with a patient already in the preparation stage of change",
+    "expected_discoveries": [
+     "Norman has already decided he wants to act, not just contemplate",
+     "He wants one specific, actionable step rather than broad advice"
+    ],
+    "possible_patient_reactions": [
+     "\"So what's the one thing I should actually change first? Don't give me ten.\"",
+     "\"I've already read the general stuff, what's new here?\""
+    ]
+   },
+   {
+    "learning_objective": "Elicit a more accurate alcohol history from a patient who minimizes it initially",
+    "expected_discoveries": [
+     "His AUDIT-C score of 4 suggests higher-risk drinking than 'a few beers on weekends'",
+     "He drinks most weeknights, not just socially on weekends"
+    ],
+    "possible_patient_reactions": [
+     "\"Why does that matter for my blood sugar?\"",
+     "\"I don't have a problem, I just unwind after work.\""
+    ]
+   },
+   {
+    "learning_objective": "Translate high health literacy into a workable nutrition plan rather than overwhelming the patient with more information",
+    "expected_discoveries": [
+     "Norman already understands glycemic index and HbA1c conceptually",
+     "He wants practical substitutions within his existing takeaway routine, not a diet overhaul"
+    ],
+    "possible_patient_reactions": [
+     "\"I know what fiber does, just tell me what to order instead.\"",
+     "\"You don't need to explain insulin resistance to me, I've read the papers.\""
+    ]
+   },
+   {
+    "learning_objective": "Address anemia and its nutritional contributors in a patient who has disengaged from follow-up care",
+    "expected_discoveries": [
+     "He hasn't repeated his anemia labs since 2021",
+     "His diet of takeaway meals may be low in iron-rich foods and vitamin C to aid absorption"
+    ],
+    "possible_patient_reactions": [
+     "\"I figured the vitamin would handle that.\"",
+     "\"Honestly I forgot that was even still a thing.\""
+    ]
+   },
+   {
+    "learning_objective": "Identify how social eating and drinking patterns are intertwined and barriers to change",
+    "expected_discoveries": [
+     "Takeaway dinners and drinking are his primary social outlet",
+     "Separating the two will require finding alternative ways to socialize"
+    ],
+    "possible_patient_reactions": [
+     "\"That's literally my social life, what else am I supposed to do?\"",
+     "\"Dana and I just hang out and watch the game, it's not a big thing.\""
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Norman has shared custody or regular weekend time with his three children",
+   "His full-time IT role allows flexible but long hours, often eating at his desk or ordering delivery",
+   "Dana is a neighbour in his apartment building who has known him for several years"
+  ],
+  "optional_details": [
+   "Keeps a running list of nutrition articles saved on his phone he hasn't gotten around to reading fully",
+   "Plays in a casual Sunday basketball league with his kids and a few neighbourhood dads",
+   "Has a weighted blanket he jokes helps with his 'terrible sleep schedule'"
+  ]
+ },
+ "source": {
+  "synthea_record": "2b65f600",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "reserved and private, gives little away at first",
+   "communication": "answers questions with questions",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "eats out or orders takeaway most days, and it is the main social life",
+   "held_back": "drinks more alcohol than they first say",
+   "support": "a close friend or neighbour who is the main support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

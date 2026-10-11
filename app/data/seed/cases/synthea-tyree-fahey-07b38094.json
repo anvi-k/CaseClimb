@@ -1,0 +1,1017 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Maintenance-Phase Weight Regain and Medication Underuse in a Divorced Father Cooking for a Household of Six",
+  "summary": "This case portrays a 41-year-old divorced father of five with maintenance-phase weight regain (BMI 30.1) and chronic sinusitis, seen for a telehealth nutrition follow-up. It teaches learners to take a thorough diet/lifestyle history through a cheerful, deflecting communicant, uncover a medication-adherence mismatch (labeled nightly antihistamine use versus actual reactive/inconsistent dosing), and sensitively surface stress-related eating and an episode of food insecurity, while applying motivational interviewing to help the patient reconnect with previously successful strategies rather than starting over.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Howell, New Jersey, sitting at his kitchen table during a break between errands",
+  "encounterType": "nutrition assessment / follow-up counseling",
+  "difficulty": 3,
+  "patient": {
+   "name": "Tyree Fahey",
+   "age": 41,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Warehouse operations supervisor at a regional distribution center",
+   "language": "English",
+   "appearance": "Heavyset, broad-shouldered man in a company polo, sitting at a cluttered kitchen table with a coffee mug nearby; mouth-breathes slightly when talking at length, mild facial puffiness consistent with sinus congestion; animated hand gestures, grins easily, kitchen visible behind him with dish towels and a bowl of fruit.",
+   "portrait": "/portraits/synthea-tyree-fahey-07b38094.jpg"
+  },
+  "persona": {
+   "personality": "Warm, cheerful, and quick with a one-liner, especially when a question edges toward something uncomfortable; agreeable on the surface and prone to saying 'whatever you think is best' rather than voicing real pushback.",
+   "communicationStyle": "Friendly, chatty, and deflects with humor when topics feel too serious or critical; opens up more if the clinician is patient, non-judgmental, and doesn't rush past his jokes.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Generally upbeat and self-deprecating, but underneath there's some quiet discouragement about habits slipping back and a protectiveness around admitting any financial strain.",
+   "background": "Tyree grew up in central New Jersey in a big, loud household where dinner was the one time everyone had to be at the table, and he's carried that straight into his own life as a divorced dad of five. He works full-time as a warehouse operations supervisor at a regional distribution center, often pulling long or double shifts, and comes home to cook a big from-scratch dinner most nights because that's how he shows up for his kids even when he's exhausted. He coaches his youngest's rec-league baseball team on weekends, has a running joke with coworkers about whose lunch leftovers are best, and keeps a 'toolbox' of hot sauces on the counter because his kids argue over whose food is spiciest. He takes pride in being the reliable, fun parent and uses humor to keep heavy conversations light.",
+   "speechExamples": [
+    "Feeding an army is basically my real job title at this point, doc.",
+    "Eh, I take the allergy stuff when I need it, no big deal, right?",
+    "Whatever you think is best, doc - you're the expert here.",
+    "Stress? Nah, I'm living the dream... mostly.",
+    "I made it, so somebody's gotta finish it off, ha!"
+   ],
+   "concerns": [
+    "Worried the weight is creeping back after he'd gotten it under control before his divorce finalized",
+    "Embarrassed that his adult kids notice and comment on his weight",
+    "Doesn't want to end up on blood pressure medication like his brother, especially after how he reacted to lisinopril before",
+    "Wants to stop the afternoon energy crashes at work without having to overhaul everything"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dietetics student conducting a telehealth follow-up nutrition visit with Tyree Fahey, a 41-year-old man referred for weight management given a BMI of 30.1 and a history of chronic sinusitis. He previously made progress with weight and habits but is being seen now because things have been creeping back. Your job is to complete a nutrition assessment, identify a nutrition diagnosis, and begin patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit for weight management; referred due to BMI 30.1 and history of chronic sinusitis",
+   "openingLine": "Hey doc, good to see you! Feeding an army is basically my real job title these days - between the warehouse and the kids I barely sit down. My sinuses have been acting up again too, and don't even get me started on how my pants fit lately, ha!",
+   "tasks": [
+    "Take a focused diet and weight history, including meal pattern, portion sizes, and beverage intake",
+    "Review available anthropometric, vital sign, and laboratory data relevant to the nutrition assessment",
+    "Assess medication and supplement use as it relates to his nutrition-related symptoms (sleep, energy, reflux)",
+    "Gently explore psychosocial and household factors (stress, cooking for a family of six, financial barriers) that may affect eating patterns",
+    "Formulate a nutrition diagnosis and begin a collaborative, motivational-interviewing-based goal-setting conversation"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for weight management, referred due to BMI 30.1 and history of chronic sinusitis"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; Clinical Nutrition (referring); ENT (historical, chronic sinusitis)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient - not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic sinusitis (since 2003); Body mass index 30+ - obesity (since 2022)"
+   },
+   {
+    "label": "Medications",
+    "value": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism); House dust mite (organism); Animal dander (substance) (Rhinoconjunctivitis, moderate); Grass pollen (substance); Tree pollen (substance); Lisinopril (Dyspnea, moderate)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for follow-up nutrition visit for weight management, referred due to BMI 30.1 and history of chronic sinusitis",
+    "says": "I'm here because my doctor wants me to talk to someone about my weight again - and my pants sure agree with her, ha!",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "weight trend",
+    "chart": "Reports weight regain over the past year after prior intentional weight loss two years ago",
+    "says": "I lost like 20 pounds a couple years back after my divorce, had it under control, but it's been creeping back up on me this past year.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "belt size change",
+    "chart": "Reports belt notched out a size since last visit",
+    "says": "I had to notch my belt out a size, which is never a good sign, right?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "prior weight loss strategies",
+    "chart": "Reports previously using smaller portions, reduced soda, and after-dinner walks to lose weight two years ago",
+    "says": "Last time I did smaller plates, cut back on soda, and walked after dinner. It worked, I just... stopped doing it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "energy levels",
+    "chart": "Reports afternoon energy crashes around 3pm",
+    "says": "Every day around 3 at work I just hit a wall, like somebody pulled my plug.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "heartburn",
+    "chart": "Reports occasional heartburn after large dinners, managed with Tums",
+    "says": "Sometimes after a big dinner I get that burning feeling, so I keep Tums in the truck.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "joint discomfort",
+    "chart": "Reports mild bilateral knee ache climbing stairs at work",
+    "says": "My knees talk to me a little going up the warehouse stairs, nothing crazy though.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "nasal symptoms",
+    "chart": "Reports nasal congestion and post-nasal drip, worse in spring and fall",
+    "says": "My sinuses get pretty stuffed up, especially spring and fall - but that's just allergies, nothing serious.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "snoring and sleep",
+    "chart": "Reports snoring noted by his children and restless, poor-quality sleep much of the year",
+    "says": "My kids tease me about my snoring. I sleep like garbage half the year, honestly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "breathing while talking",
+    "chart": "Reports some mouth-breathing when talking at length, attributed to nasal congestion",
+    "says": "I breathe through my mouth a bit when I talk too long, my sinuses get in the way.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "chest or cardiac symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath at rest",
+    "says": "No, nothing like chest pain or my heart racing or anything like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies change in bowel habits, blood in stool, or unintentional weight loss",
+    "says": "Bathroom stuff is normal, no blood, and I'm not losing weight without trying - trust me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "swelling or leg symptoms",
+    "chart": "Denies leg swelling or calf pain",
+    "says": "No swelling in my legs or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "Chronic sinusitis since 2003",
+    "says": "I've had sinus trouble since way back in 2003, it just comes and goes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "weight classification",
+    "chart": "BMI 30+ (obesity) diagnosed 2022",
+    "says": "They told me a few years back I was officially in the 'obese' category, which was a gut punch to hear.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "past viral illness",
+    "chart": "Viral sinusitis, resolved 2026-09",
+    "says": "Oh, I had some sinus bug last fall but that cleared up on its own.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "gum health history",
+    "chart": "Gingivitis, resolved 2025-08, treated with dental cleaning",
+    "says": "I had some gum stuff going on, got a cleaning done at the dentist last summer, all good now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "past foot injury",
+    "chart": "Laceration of foot, 2021-01, resolved, sutured",
+    "says": "I cut my foot open at work years back, needed stitches, but that's long healed.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "allergy medication use",
+    "chart": "Reports taking diphenhydramine 25 mg for congestion",
+    "says": "I've got this allergy pill, diphenhydramine, I take it for my stuffy nose.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "nasal spray use",
+    "chart": "Reports using Flonase nasal spray intermittently",
+    "says": "I've got a Flonase spray too, I use it on and off, whenever I remember.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Reports a multivitamin, inconsistently taken",
+    "says": "My daughter got me a multivitamin, I take it maybe a couple times a week if I'm honest.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "heartburn remedy",
+    "chart": "Reports using calcium carbonate (Tums) as needed for heartburn",
+    "says": "I keep a roll of Tums in the truck for after dinner, works fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "environmental allergens",
+    "chart": "Documented allergies to mold, house dust mite, animal dander, grass pollen, and tree pollen",
+    "says": "I'm allergic to a bunch of stuff - mold, dust, dogs and cats, grass, trees, you name it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "allergies",
+    "topic": "blood pressure medication reaction",
+    "chart": "Documented dyspnea reaction to lisinopril",
+    "says": "I tried a blood pressure pill once, lisinopril, and it made it hard to breathe - freaked me out.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h25",
+    "category": "ros",
+    "topic": "headaches",
+    "chart": "Denies frequent headaches",
+    "says": "No real headaches to speak of, maybe once in a blue moon.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with all five children; household of six, divorced",
+    "says": "It's me and all five kids under one roof - never a quiet minute, I'll tell you that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "occupation and schedule",
+    "chart": "Works full-time as warehouse operations supervisor, often long shifts",
+    "says": "I'm on my feet all day running the floor at the warehouse, sometimes doubles when they're short-staffed.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "cooking role",
+    "chart": "Cooks a from-scratch family dinner most nights; identifies cooking as his way of parenting",
+    "says": "Feeding an army, that's my real job title. I cook every night, that's just what dads do, right?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "goals",
+    "topic": "weight goal",
+    "chart": "Goal: return to prior weight/fit of clothing from two years ago",
+    "says": "I just want my pants to fit like they did a couple years back, that's really all I want.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "goals",
+    "topic": "energy goal",
+    "chart": "Goal: reduce afternoon energy crashes at work",
+    "says": "If I could just stop crashing around 3 at work, that'd be huge.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "goals",
+    "topic": "activity goal",
+    "chart": "Goal: keep up with kids physically without getting winded",
+    "says": "I want to be able to keep up with my kids without huffing and puffing.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "exercise history",
+    "chart": "Gym membership lapsed about a year ago; no current structured exercise",
+    "says": "Had a gym membership and everything, but that lapsed like a year ago - just never got back to it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks a couple of beers on weekends while watching sports; never smoked",
+    "says": "I'll have a couple beers watching the game on Sunday, nothing crazy. Never smoked a day in my life.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "family",
+    "topic": "adult children feedback",
+    "chart": "Adult children comment on his weight; patient deflects with humor",
+    "says": "My kids give me grief about it, but I just laugh it off - what else am I gonna do?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "weight history and divorce",
+    "chart": "Lost approximately 20 lb around the time of divorce two years ago; weight has crept back over the past year",
+    "says": "After my divorce I actually dropped like 20 pounds, had it together for a while. Lately it's been sneaking back up on me though.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "body image concerns",
+    "chart": "Expresses embarrassment that adult children notice weight regain",
+    "says": "It's a little embarrassing, honestly, having the kids notice. Like I let myself go after everything with the divorce.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "stress level",
+    "chart": "Reports stress as 'very much' on intake survey; eats more when stressed",
+    "says": "Stress? Nah, I'm living the dream... [later] Okay, yeah, it's been a lot lately, and when it piles up I just eat more, I guess.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "fatigue and activity",
+    "chart": "Reports long shifts leave him too tired most nights for physical activity",
+    "says": "Honestly by the time I get home from a shift I'm wiped, I don't have it in me to go walk or anything most nights.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "nutrition",
+    "topic": "food insecurity history",
+    "chart": "Reports periods this past year of skipping his own meals so his five children could eat first due to tight finances",
+    "says": "There were a few weeks this past year where money was real tight, and I just... I'd skip eating so the kids had enough. Didn't tell anybody that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "family",
+    "topic": "brother's health",
+    "chart": "Reports brother takes blood pressure medication",
+    "says": "My brother's on blood pressure pills, and honestly that scares me a little, I don't want to end up like that.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s16",
+    "category": "other",
+    "topic": "weekend activities",
+    "chart": "Coaches his youngest child's recreational baseball team on weekends",
+    "says": "I coach my youngest's rec league baseball team on the weekends, keeps me busy.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s17",
+    "category": "other",
+    "topic": "household running jokes",
+    "chart": "Reports lighthearted household habits such as competing over hot sauce and lunch leftovers with coworkers",
+    "says": "We've got a whole hot sauce lineup on the counter, the kids fight over whose is spiciest. And at work the guys and I argue over whose leftovers are better.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s18",
+    "category": "adherence",
+    "topic": "supplement use pattern",
+    "chart": "Reports inconsistent multivitamin use",
+    "says": "My daughter bought me a multivitamin, but I forget to take the thing most days, if I'm being honest.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review medication list and refill history",
+    "aliases": [],
+    "result": "Diphenhydramine 25 mg tablet labeled 'take nightly during allergy season.' Pharmacy fill history shows refills roughly every 10-12 weeks instead of the expected monthly interval for nightly dosing, with gaps of several weeks between some fills",
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Administer 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: coffee with cream x2-3 (skips breakfast most days), break-room lunch (varies, often sandwich or chips), large family dinner ~6:30pm (pasta with meat sauce, garlic bread, side vegetable), soda with dinner, occasional Tums after. No planned snacks reported between meals aside from 'tasting' while cooking",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Administer brief stress/eating screener",
+    "aliases": [],
+    "result": "Patient rates household stress as 'very much' on intake survey; when asked directly in visit, initially jokes it off before acknowledging increased eating during stressful stretches",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Administer food security screener (Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient initially answers 'rarely true' to both items; closer follow-up in conversation may reveal more detail not captured on the written screener",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports standing/walking throughout 8-10 hour warehouse shifts; no structured exercise; gym membership lapsed about one year ago; used to walk after dinner two years ago but stopped",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess hydration and beverage intake",
+    "aliases": [],
+    "result": "Patient reports minimal plain water intake; several cups of coffee with cream daily during shift; regular soda most nights with dinner",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review problem list / diagnosis history",
+    "aliases": [],
+    "result": "Chronic sinusitis (since 2003); Body mass index 30+ - obesity (since 2022); resolved: laceration of foot (2021), gingivitis (2025), viral sinusitis (2026)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review allergy list",
+    "aliases": [],
+    "result": "Mold, house dust mite, animal dander (rhinoconjunctivitis), grass pollen, tree pollen; Lisinopril (dyspnea reaction)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen for sleep-related symptoms (snoring/sleep quality)",
+    "aliases": [],
+    "result": "Patient reports frequent snoring (kids tease him about it), restless sleep, waking congested, describes sleep as 'garbage half the year' particularly in spring/fall",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review prior nutrition visit note (2 years ago)",
+    "aliases": [],
+    "result": "Prior note documents successful weight loss of approximately 20 lb following reduced portion sizes, decreased soda intake, and a nightly post-dinner walking routine; patient described as motivated at that time",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 113/82 mmHg, heart rate 98/min, respiratory rate 16/min, weight 84.1 kg, height 167.2 cm, BMI 30.1 kg/m2 (recorded 2025-08-14).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 168.3 mg/dL; LDL cholesterol 84.7 mg/dL; HDL cholesterol 53.8 mg/dL; Triglycerides 148.9 mg/dL; Haemoglobin 15 g/dL; White cell count 9.7 10*3/uL; Platelets 322.2 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-08-14); Hep A adult (2025-08-14); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2016-10-20).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Active Medications and Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "date": "Current",
+    "author": "Pharmacy / EHR Medication Reconciliation",
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Labeled Frequency",
+      "Last 4 Fill Dates"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+        "25 MG",
+        "Nightly during allergy season",
+        "2025-02-03, 2025-04-22, 2025-07-18, 2025-09-29"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "form",
+    "title": "Intake Survey - Stress and Food Security Screening",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-08-14",
+    "author": "Self-reported intake form",
+    "table": {
+     "columns": [
+      "Item",
+      "Response"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "In the last 12 months, how much stress have you experienced?",
+        "Very much"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Within the past 12 months, were you worried whether your food would run out before you got money to buy more?",
+        "Sometimes true"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Within the past 12 months, the food you bought just didn't last and you didn't have money to get more.",
+        "Sometimes true"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Nutrition Follow-Up Visit Note (2 years prior)",
+    "release": {
+     "when": "action",
+     "ref": "a15"
+    },
+    "date": "2023-11-02",
+    "author": "Clinical Nutrition",
+    "body": "41 y/o (at time, 39 y/o) male presenting for weight management follow-up amid recent divorce. Patient reports proactively reducing portion sizes at family dinners, cutting soda intake to roughly once a week, and adding a 20-30 minute walk after dinner most nights. Weight down from prior high; patient reports feeling 'back in control' and credits consistency with family routine despite being primary cook for a household of six. Plan: continue current strategies, reassess in 6 months."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic sinusitis (since 2003)\nBody mass index 30+ - obesity (since 2022)\n\nRECENTLY RESOLVED\nLaceration - injury (2021-01 to 2021-01)\nLaceration of foot (2021-01 to 2021-01)\nGingivitis (2025-08 to 2025-08)\nViral sinusitis (2026-09 to 2026-09)\n\nPROCEDURES\n2025-08-28: Examination of gingivae (Gingivitis)\n2025-08-28: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-08-28: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-08-28: Dental care (Gingivitis)\n2025-08-28: Dental consultation and report (Gingivitis)\n2021-01-10: Suture open wound (Laceration of foot)\n\nRECENT ENCOUNTERS\n2026-09-05 ambulatory: Encounter for symptom (Viral sinusitis)\n2025-08-28 ambulatory: Encounter for check up (Gingivitis)\n2025-08-14 wellness: General examination of patient\n2022-10-27 wellness: General examination of patient\n2021-01-10 emergency: Emergency room admission (Laceration - injury)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+        "1986-08",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "168.3",
+        "mg/dL",
+        "< 200",
+        "2022-10-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "84.7",
+        "mg/dL",
+        "< 100",
+        "2022-10-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "53.8",
+        "mg/dL",
+        ">= 40",
+        "2022-10-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "148.9",
+        "mg/dL",
+        "< 150",
+        "2022-10-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "15",
+        "g/dL",
+        "12.0-17.5",
+        "2025-08-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "9.7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-08-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "322.2",
+        "10*3/uL",
+        "150-450",
+        "2025-08-14"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit an honest, nonjudgmental medication-use history for diphenhydramine and recognize when self-report of 'taking it as labeled' conflicts with objective adherence data",
+    "factIds": [
+     "h19",
+     "h20"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Take a focused diet and weight history (meal pattern, portion sizes within a family-style household, beverage intake) and relate findings to anthropometric and weight-trend data",
+    "factIds": [
+     "h2",
+     "h3",
+     "h4",
+     "s3",
+     "s10"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a6",
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Gently explore psychosocial and household barriers - stress-related eating and food insecurity - using a non-judgmental, rapport-based approach appropriate to a reluctant/hidden disclosure pattern",
+    "factIds": [
+     "s12",
+     "s13",
+     "s14"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Review relevant laboratory, vital sign, and problem-list data to confirm there are no acute medical red flags and contextualize the nutrition assessment",
+    "factIds": [
+     "h11",
+     "h12",
+     "h13",
+     "h14",
+     "h15"
+    ],
+    "actionIds": [
+     "asyn2",
+     "a11",
+     "asyn1",
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Connect chronic sinusitis symptoms and sleep quality (snoring, congestion, mouth-breathing) with inconsistent antihistamine use and daytime energy crashes affecting eating behavior",
+    "factIds": [
+     "h8",
+     "h9",
+     "h10",
+     "h5"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Use motivational interviewing to help the patient reconnect with previously successful maintenance strategies rather than proposing an entirely new plan, respecting his agreeable but deflecting communication style",
+    "factIds": [
+     "h4",
+     "s4",
+     "s5",
+     "s6",
+     "s9"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake relative to needs (food- and nutrition-related knowledge/behavior gap) in the context of maintenance-phase weight regain, consistent with obesity (BMI 30.1 kg/m2)",
+   "differential": [
+    "Excessive energy intake related to large self-served portions and nightly family-style dinners, as evidenced by belt size increase and BMI 30.1",
+    "Excessive caloric beverage intake (soda, cream coffee) related to habitual intake and limited plain water intake",
+    "Altered sleep/energy pattern related to inconsistent antihistamine use and untreated nasal congestion, as evidenced by reported snoring, restless sleep, and 3pm energy crashes",
+    "Emotional/stress-related eating related to high reported household stress, as evidenced by self-reported increased intake during stressful periods",
+    "Inconsistent food access/intake related to household financial strain, as evidenced by reported episodes of self-skipped meals this past year"
+   ],
+   "keyFindings": [
+    "BMI 30.1 kg/m2 (height 167.2 cm, weight 84.1 kg), belt notched out a size since last visit",
+    "Lost ~20 lb two years ago; habits (portion control, less soda, post-dinner walking) have lapsed over the past year - maintenance slipping, not a new-onset problem",
+    "Meal pattern: skipped/rushed breakfast, break-room lunch, large from-scratch family dinner nightly around 6:30 with second helpings/leftovers",
+    "Beverage pattern: soda most nights with dinner, multiple creamed coffees daily, minimal plain water",
+    "No structured exercise for ~1 year (lapsed gym membership); on feet all day at warehouse but no dedicated activity",
+    "Chart lists diphenhydramine 25mg labeled nightly in allergy season; history reveals reactive/inconsistent use with occasional dose-doubling and multi-day skips - a mismatch between the labeled regimen and actual use pattern",
+    "Self-reported stress 'very much' on intake survey; eats more under stress once rapport established",
+    "Reluctant disclosure of a past financial stretch when he skipped his own meals so his five children could eat first",
+    "Labs reassuring and stable: lipids (TC 168.3, LDL 84.7, HDL 53.8, TG 148.9 mg/dL, 2022-10-27) and CBC (Hgb 15, WBC 9.7, Plt 322.2, 2025-08-14) all within reference range",
+    "Vitals 2025-08-14: BP 113/82, HR 98, RR 16 - no acute hemodynamic concern",
+    "Documented dyspnea reaction to lisinopril drives his fear of future antihypertensive medication"
+   ],
+   "plan": [
+    "Complete a full ADIME nutrition assessment: diet history (24-hr recall/typical day), portion sizes, meal timing, beverage intake, physical activity, and psychosocial/financial barriers",
+    "Establish nutrition diagnosis (PES statement) centered on excessive energy/beverage intake related to household meal patterns and stress, evidenced by weight trend and self-report",
+    "Use motivational interviewing to reconnect him with previously successful strategies (smaller self-served portions, swapping some soda for water, resuming after-dinner walks) rather than introducing a new plan from scratch",
+    "Collaboratively set one or two small, specific behavior goals (e.g., plate-size portioning before serving kids, replacing one soda/day with water) with his input and timeline",
+    "Gently explore stress eating and screen for food insecurity using open, non-judgmental questions; validate without judgment if disclosed",
+    "Discuss how inconsistent antihistamine dosing may be worsening sleep quality and daytime energy, and encourage him to discuss his medication pattern and grogginess concern with his prescriber",
+    "Provide brief hydration counseling (reducing soda/caffeine, increasing plain water) and relate to reflux/energy symptoms",
+    "Arrange follow-up visit to track weight trend, reinforce goals, and reassess adherence and stress/food-access status",
+    "Document encounter in ADIME format for the health record"
+   ],
+   "redFlags": [
+    "Any reports suggestive of significant unintentional weight loss (not present here) would need prompt medical referral",
+    "Ongoing or worsening food insecurity affecting the children's nutrition would warrant referral to social work/community resources",
+    "Signs of sleep-disordered breathing (e.g., witnessed apneas, excessive daytime sleepiness beyond fatigue) warrant referral for sleep evaluation given snoring and congestion history",
+    "Medication safety: any new reaction symptoms (e.g., dyspnea) given his documented lisinopril intolerance should prompt immediate referral back to prescribing clinician"
+   ],
+   "educationPoints": [
+    "Explain that maintenance of weight loss often slips without it being a personal failure, and that returning to previously successful strategies is more effective than starting over",
+    "Clarify that cooking from scratch is a strength, but portion size and added butter/cheese/bread still matter for calorie balance",
+    "Discuss how liquid calories from soda and creamed coffee add up quickly and offer simple, realistic swaps",
+    "Explain the connection between poor sleep/congestion, inconsistent antihistamine use, and daytime energy crashes and food choices",
+    "Normalize stress-related eating as common and offer practical, low-effort coping alternatives that fit his schedule",
+    "Reinforce that taking the antihistamine as labeled (or discussing an alternative with his prescriber) may improve both sleep and daytime energy, without implying this is prescribing advice",
+    "Encourage open conversation with his adult children about support versus criticism, since he already feels judged"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Tyree reports taking his diphenhydramine 25 mg nightly for congestion during allergy season, as labeled (h19)",
+    "recordEvidence": "Pharmacy refill history shows refills roughly every 10-12 weeks instead of the expected monthly interval for nightly use (a5, d3)",
+    "teachingPoint": "Patients may sincerely believe or report taking a medication 'as directed' while refill patterns reveal markedly inconsistent actual use; reconciling pharmacy records with self-report is essential before attributing symptoms (sleep, energy) to medication effect versus non-adherence.",
+    "factId": "h19",
+    "artifactId": "d3"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Tyree frames his eating and activity as basically fine right now - 'if he's not snacking between meals he's doing fine' and jokes that stress isn't an issue ('Stress? Nah, I'm living the dream'), downplaying how much has slipped since two years ago",
+    "recordEvidence": "Weight trend review shows he lost ~20 lb two years ago to a low of 76.7 kg and has gradually regained up to his current 84.1 kg over the past 12 months (a2, d1)",
+    "teachingPoint": "A patient's cheerful, minimizing self-report can mask a documented pattern of significant regain; objective weight trend data should be reviewed rather than relying solely on verbal reassurance, especially with a deflecting communication style."
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 9,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "41 M · Chronic sinusitis · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "07b38094",
+   "fingerprint": "1t02e1m"
+  }
+ }
+}

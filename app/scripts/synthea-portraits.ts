@@ -46,7 +46,7 @@ const RACE: Record<string, string> = { white: "White", black: "Black", asian: "A
 const NEGATIVE = "text, caption, lettering, watermark, logo, frame, border, cartoon, illustration, 3d render, painting, drawing, deformed hands, extra fingers, distorted face, full body, side view, looking away, phone, laptop";
 
 /** The image model draws adults older than asked, so aim a little younger. */
-const drawnAge = (age: number) => (age >= 76 ? age - 6 : age >= 40 ? age - 10 : age);
+const drawnAge = (age: number) => (age >= 76 ? age - 6 : age >= 40 ? age - 10 : age >= 28 ? age - 5 : age);
 
 export function promptFor(c: CaseProfile, personality: string): string {
   const p = c.patient;
@@ -61,6 +61,7 @@ export function promptFor(c: CaseProfile, personality: string): string {
     : "a hospital patient wearing a pale blue patterned hospital gown, sitting up in a hospital room, with an IV pole and a wall-mounted monitor softly blurred in the background";
   return [
     `Photorealistic portrait photograph of a ${drawnAge(p.age)}-year-old ${race} ${noun}, ${scene}.`,
+    p.age < 30 ? "A young adult: youthful face, smooth skin, full head of hair." : p.age < 45 ? "Looks their age or younger: smooth skin, no grey hair." : "",
     `Shown from the waist up, facing the camera, with ${expression}.`,
     looks,
     "Soft warm window light from one side, shallow depth of field, natural skin texture, candid documentary style, 50mm lens.",
@@ -87,6 +88,16 @@ async function draw(prompt: string): Promise<Buffer> {
 
 async function main() {
   const files = fs.readdirSync(CASES).filter((f) => f.startsWith("synthea-") && f.endsWith(".json")).sort();
+  // A patient that was written again keeps its picture: the file is still there, only the link is missing.
+  for (const f of files) {
+    const slug = f.replace(/\.json$/, "");
+    const data = JSON.parse(fs.readFileSync(path.join(CASES, f), "utf8")) as { profile: CaseProfile };
+    if (!force && !dry && fs.existsSync(path.join(OUT, slug + ".jpg")) && data.profile.patient.portrait !== `/portraits/${slug}.jpg`) {
+      data.profile.patient.portrait = `/portraits/${slug}.jpg`;
+      fs.writeFileSync(path.join(CASES, f), JSON.stringify(data, null, 1));
+      console.log(`linked ${slug}.jpg`);
+    }
+  }
   const todo = files.filter((f) => force || !fs.existsSync(path.join(OUT, f.replace(/\.json$/, ".jpg")))).slice(0, limit);
   console.log(`${files.length} Synthea patients, ${files.length - todo.length} already have a picture or are left for later, ${todo.length} to draw now (${home ? "at home" : "hospital"} style)`);
   const one = async (file: string) => {

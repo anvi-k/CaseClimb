@@ -1,0 +1,994 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling for Obesity in a 46-Year-Old Shift-Worker with Scoliosis and Tooth Loss",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment on a contemplation-stage patient with obesity whose irregular shift-work eating pattern, tooth loss, and tight household budget all converge to shape his food choices. It highlights eliciting an honest 24-hour recall from a guarded, apologetic patient, reconciling a chart-vs-patient discrepancy about meal regularity, and practicing non-judgmental motivational interviewing rather than prescriptive lecturing.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Edison, New Jersey, sitting in a cluttered kitchen on a break between errands",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Brendan Frami",
+   "age": 46,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Forklift operator and shift supervisor at a regional distribution warehouse, part-time/temporary hours",
+   "language": "English",
+   "appearance": "A tired-looking, heavyset man sitting at a kitchen table with dishes stacked behind him; visible mild shoulder/rib asymmetry; missing posterior teeth noticeable when he talks; picks at his sleeve and gives small apologetic smiles, often glancing away before answering.",
+   "portrait": "/portraits/synthea-brendan-frami-17ed457f.jpg"
+  },
+  "persona": {
+   "personality": "Anxious, self-deprecating, and quick to apologize; braces for criticism before any is given; genuinely caring toward his family but feels overwhelmed and a little stuck.",
+   "communicationStyle": "Soft-spoken working-class Jersey speech; plain language, no medical jargon; frequently defers with 'whatever you think is best, doc' rather than stating a clear preference; downplays his own struggles until he feels safe, then opens up more.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Nervous and a little tired, mentally bracing for a lecture; softens and becomes more forthcoming once he senses he isn't being judged.",
+   "background": "Brendan is a 46-year-old forklift operator and shift supervisor at a regional distribution warehouse in Edison, New Jersey, working rotating part-time/temporary hours. He's married with a big household of seven, including adult children and a grandchild he loves babysitting on his days off. He grew up in a working-class Jersey family where big dinners were how you showed love, nobody really talked about nutrition, and food was about getting everyone fed fast and cheap. He quit smoking four years ago when his first grandchild was born and is proud of that. On rare free weekends he likes to fish at the Raritan River, and he's got a NY Giants bumper sticker on his truck. Guys at the warehouse call him 'Big B.'",
+   "speechExamples": [
+    "Honestly I don't really eat breakfast, I just grab whatever's in the machine.",
+    "I know it's bad, I'm sorry, I just don't have time, doc.",
+    "Whatever you think is best, doc, I'll give it a shot.",
+    "My kids already tell me this stuff, I don't need another lecture... sorry, I didn't mean it like that.",
+    "We manage, I mean, it's tight sometimes but we get by."
+   ],
+   "concerns": [
+    "Being lectured again by his kids about his eating",
+    "That his missing teeth make him look older and unhealthy",
+    "Whether his insurance will cover more dental work if he loses more teeth"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition visit with Brendan Frami, a 46-year-old warehouse shift supervisor from Edison, NJ. He was referred for nutrition counseling after his annual wellness exam flagged his weight, and he recently finished dental treatment for gum disease. Your task is to complete a nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Nutrition follow-up after wellness exam flagged weight concerns, referred after completing dental treatment",
+   "openingLine": "Hey, uh, thanks for calling - yeah so my doctor said I should talk to someone about my eating, and I just got done with some dental work for my gums too. My weight's kinda crept up over the years, I guess that's part of why I'm here.",
+   "tasks": [
+    "Take a focused nutrition history, including a detailed 24-hour recall and typical eating pattern around his work shifts",
+    "Review available anthropometric data, vital signs, and laboratory results relevant to his nutrition status",
+    "Explore barriers to healthy eating, including schedule, budget, and any physical factors affecting food choices",
+    "Identify an appropriate nutrition diagnosis based on your assessment findings",
+    "Deliver patient-centered counseling using motivational interviewing techniques that fits his stage of readiness to change"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition follow-up after wellness exam flagged elevated BMI; referred by PCP following completion of dental treatment for gingivitis"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary Care: Dr. Patel; Dentistry: Edison Family Dental Associates; Nutrition: current visit"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Adolescent idiopathic scoliosis (since 1991); Body mass index 30+ - obesity (since 2003); Loss of teeth (since 2003)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient presents for nutrition follow-up after wellness exam flagged BMI 31 and recent completion of dental treatment for gingivitis.",
+    "says": "My doctor sent me here 'cause of my weight at my check-up, and I just finished getting my gums fixed.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "weight history",
+    "chart": "Reports gradual weight gain over the past two decades, since approximately 2003.",
+    "says": "I've been a big guy for a long time, it's just kinda crept up on me over the years.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "back pain pattern",
+    "chart": "Reports chronic low back and shoulder-blade ache after standing long shifts, attributed to longstanding scoliosis.",
+    "says": "My back's been achy since I was a teenager, it's this crooked spine thing I got.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "work schedule and eating",
+    "chart": "Reports working rotating shifts and eating 'whenever he can' around work demands.",
+    "says": "I work odd hours so I just eat whenever I get a chance, you know how it is.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "meal timing self-report",
+    "chart": "Initially reports not skipping meals, just eating later in the day.",
+    "says": "Nah, I don't really skip meals, I just eat kinda late, that's all.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "breathing with exertion",
+    "chart": "Reports shortness of breath when walking up stairs at work.",
+    "says": "I get winded going up the stairs at the warehouse now, which never used to happen.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "afternoon energy",
+    "chart": "Reports afternoon energy crashes managed with vending-machine soda and chips.",
+    "says": "Around 2 or 3pm I just hit a wall, so I grab a soda and some chips from the machine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "heartburn pattern",
+    "chart": "Reports occasional heartburn after late, greasy drive-through dinners.",
+    "says": "Sometimes after a big greasy dinner real late I get heartburn pretty bad.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "chewing and food choice",
+    "chart": "Reports avoiding chewing on the left side due to missing teeth.",
+    "says": "I kinda chew on my right side mostly, left side's got some gaps.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "hpi",
+    "topic": "texture preferences",
+    "chart": "Reports favoring softer foods and avoiding crunchy vegetables and tougher meats; had not previously connected this to tooth loss.",
+    "says": "I guess I do go for the softer stuff... huh, I never really thought about why.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "detailed meal timing",
+    "chart": "24-hour recall reveals no breakfast, no substantial lunch, and a single large dinner around 9-9:30pm, representing roughly 10+ hours without eating most shifts.",
+    "says": "I mean, now that you ask... yeah I guess I don't eat nothin' from like 7am to 9 at night most days.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "chest or cardiac symptoms",
+    "chart": "Denies chest pain, palpitations, or lightheadedness.",
+    "says": "No chest pain or anything like that, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies constipation, diarrhea, or blood in stool.",
+    "says": "Bathroom stuff is normal, no issues there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "swallowing or appetite changes",
+    "chart": "Denies difficulty swallowing or loss of appetite; reports normal, sometimes increased appetite.",
+    "says": "I eat fine once I actually eat, no trouble swallowing or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "sleep and fatigue",
+    "chart": "Reports feeling tired most days, attributed to irregular 5-6 hour sleep from rotating shifts.",
+    "says": "I'm tired a lot, but that's just the schedule, I think.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "spine condition",
+    "chart": "Adolescent idiopathic scoliosis diagnosed in 1991, ongoing.",
+    "says": "Got told I had a curved spine back when I was like 11 or 12.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "weight classification",
+    "chart": "BMI 30+ documented since 2003.",
+    "says": "They've had me down as 'overweight' or whatever on paper for a long time.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of missing posterior teeth since 2003; recently completed gingivitis treatment (scaling, bitewing X-ray, fluoride) on 2026-09-06.",
+    "says": "I lost some back teeth years ago, and I just got my gums cleaned up last month.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "past throat infection",
+    "chart": "History of acute viral pharyngitis, December 2022, resolved.",
+    "says": "I had a bad sore throat thing a couple years back but that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "past head injury",
+    "chart": "History of concussion without loss of consciousness, May-August 2023, resolved.",
+    "says": "I banged my head pretty good at work a while back, but I was okay after a few months.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h21",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries reported.",
+    "says": "Never had surgery on anything, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "prescription medications",
+    "chart": "No current prescription medications.",
+    "says": "I don't take any prescription stuff, no.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "heartburn remedy",
+    "chart": "Uses Tums as needed for heartburn, kept in his truck.",
+    "says": "I keep a roll of Tums in the truck for when my stomach acts up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "vitamin use",
+    "chart": "Reports taking a men's multivitamin daily.",
+    "says": "I take my multivitamin every day, my daughter got it for me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "pain reliever use",
+    "chart": "Reports taking ibuprofen for back pain a few times a week.",
+    "says": "I take ibuprofen for my back, maybe a few times a week.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with spouse and adult children; household of 7, including a grandchild he helps care for",
+    "says": "It's a full house - me, my wife, our kids who are grown now, and my grandbaby. Seven of us under one roof.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works rotating/part-time shifts as forklift operator and shift supervisor at a regional warehouse",
+    "says": "My shifts move around a lot, warehouse don't really care what time it is, I just gotta be there.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "family comments on weight",
+    "chart": "Reports adult children frequently comment on his weight, experienced as nagging rather than support",
+    "says": "My kids are always on me about my weight. They mean well, I guess, but it just makes me not want to talk about it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "States goal of having energy to play with grandchild without becoming short of breath",
+    "says": "I just want to be able to run around with my grandkid without huffing and puffing. That's really what I want.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "goals",
+    "topic": "back pain goal",
+    "chart": "Wants to reduce end-of-shift back pain",
+    "says": "If I could just not be in so much pain by the end of my shift, that'd be huge.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "goals",
+    "topic": "weight goal timing",
+    "chart": "Wants to lose weight before his next physical exam",
+    "says": "I'd like to show some progress before my next checkup, so I don't get the same lecture again.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "self-consciousness about smile",
+    "chart": "Reports feeling self-conscious about his smile due to missing teeth and avoids being photographed",
+    "says": "I kinda hate smiling in pictures now, with the teeth gone. Makes me look older than I am.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "insurance worry",
+    "chart": "Expresses concern about whether insurance will cover further dental work if more teeth are lost",
+    "says": "I worry if I lose more teeth, will the insurance even cover fixing it? That stuff's expensive.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "readiness for change",
+    "chart": "Expresses ambivalence about making dietary changes; describes feeling torn and overwhelmed about where to start",
+    "says": "I know I gotta do something about my eating, I just don't know where to even start, honestly.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "fear of judgment",
+    "chart": "States he feels anxious about being criticized or lectured regarding his diet",
+    "says": "I'm kinda bracing for you to yell at me about my eating, if I'm being honest.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "social",
+    "topic": "household finances",
+    "chart": "Reports household budget is tight feeding a family of seven",
+    "says": "We manage, you know, it's tight but we manage,",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "social",
+    "topic": "household finances",
+    "chart": "Describes having gone without paying a utility bill in some months to afford groceries for the household",
+    "says": "There's been a month or two where I let the electric bill slide so I could get groceries in. Don't tell my wife I told you that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "social",
+    "topic": "work equipment spending",
+    "chart": "Reports delaying replacement of worn-out work boots for over a year, redirecting that money toward groceries",
+    "says": "My boots are falling apart, been meaning to replace 'em over a year now, but the money just goes to food instead.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "second job consideration",
+    "chart": "Reports having considered taking a second part-time job but worries it would worsen his eating pattern and back pain",
+    "says": "I thought about picking up a second job for extra cash, but I'm scared it'll just make my eating worse and my back worse too.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "adherence",
+    "topic": "pain reliever purchases",
+    "chart": "Reports sometimes skipping ibuprofen refills or buying cheaper store-brand to save money",
+    "says": "Sometimes I just don't buy more ibuprofen when I run out, or I get the cheap store brand instead. Gotta save where I can.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "function",
+    "topic": "activity limitations at home",
+    "chart": "Reports chronic back pain limits standing to cook or grocery shop and limits weekend activity",
+    "says": "By the time I'm home my back's killing me, standing around cooking is the last thing I want to do.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Quit smoking 4 years ago, coinciding with birth of first grandchild",
+    "says": "I quit smoking four years back, right when my grandbaby was born. Haven't touched one since.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports drinking a few beers most weekends; denies drinking during the work week",
+    "says": "I'll have a few beers on the weekend with the game on, but not during the week, I gotta drive the forklift.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [
+     "diet history",
+     "food recall"
+    ],
+    "result": "Patient reports: ~10am vending machine honey bun or peanut butter crackers with gas-station coffee; no formal lunch; afternoon soda and chips when energy dips; dinner ~9-9:30pm, bacon-egg-cheese on a hard roll or chicken parm hero, sometimes a second small snack before bed. Diet soda during day, regular soda at night. Minimal water intake during shift.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Usual meal pattern and timing assessment",
+    "aliases": [
+     "meal timing",
+     "eating schedule"
+    ],
+    "result": "Patient describes no consistent breakfast, frequently skips a real midday meal, and eats his largest meal around 9-9:30pm after his shift; on follow-up questioning he estimates going 10 or more hours without eating on most work days.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Chewing/texture food avoidance screen",
+    "aliases": [
+     "texture modification screen",
+     "oral intake barriers"
+    ],
+    "result": "Patient reports favoring softer foods (sandwiches, pasta, ground meats) and avoiding raw vegetables, nuts, and tougher cuts of meat; attributes this to discomfort chewing on his left side where he is missing teeth.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Hydration pattern assessment",
+    "aliases": [
+     "fluid intake assessment"
+    ],
+    "result": "Patient estimates drinking 1-2 glasses of water a day; relies mainly on coffee and soda for fluids during his shift; states the water fountain is far from his work station.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [
+     "stage of change",
+     "motivation assessment"
+    ],
+    "result": "Patient acknowledges his weight and eating are problems but expresses ambivalence about making changes, citing his schedule and budget; consistent with contemplation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Household food resource and budget screen",
+    "aliases": [
+     "food insecurity screen",
+     "budget assessment"
+    ],
+    "result": "Patient initially states the family 'manages okay' on groceries; with further gentle questioning admits some weeks are tight feeding a household of seven and that groceries can be a stretch.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Physical activity and functional barrier assessment",
+    "aliases": [
+     "activity level assessment"
+    ],
+    "result": "Patient reports being on his feet lifting and moving pallets most of his shift but doing little intentional exercise outside work; states his back pain from scoliosis limits weekend activity and standing to cook.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [
+     "alcohol screen"
+    ],
+    "result": "Score consistent with light-to-moderate drinking: a few beers most weekends, rarely more than 2-3 in a sitting, no reported binge pattern.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review PCP wellness exam note",
+    "aliases": [
+     "wellness visit note review"
+    ],
+    "result": "Note dated 2026-08-23 documents BMI 31, vitals as recorded, and states patient reports trying to eat three meals a day.",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review dental treatment summary",
+    "aliases": [
+     "dental record review"
+    ],
+    "result": "Dental record dated 2026-09-06 documents completed gingivitis treatment: scaling and root planing, bitewing X-ray, fluoride treatment, gingiva exam; gums noted as healthy post-treatment; several posterior teeth noted missing.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review supplement and OTC use history",
+    "aliases": [
+     "OTC/supplement history"
+    ],
+    "result": "Patient reports taking Tums as needed for heartburn, a men's multivitamin 'when I remember,' and ibuprofen for back pain a few times a week.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Readiness to involve household in meal changes",
+    "aliases": [
+     "family support assessment"
+    ],
+    "result": "Patient states his wife does most of the cooking and might be willing to help plan easier meals, but adult children tend to comment critically rather than help practically.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 105/74 mmHg, heart rate 67/min, respiratory rate 13/min, weight 100.1 kg, height 179.8 cm, BMI 31 kg/m2 (recorded 2026-08-23).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 189.5 mg/dL; LDL cholesterol 137.6 mg/dL; HDL cholesterol 30 mg/dL; Triglycerides 109.6 mg/dL; Haemoglobin 16.3 g/dL; White cell count 4.3 10*3/uL; Platelets 280.2 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-08-23); Hep A adult (2022-08-14); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2022-08-14); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-02).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Annual Wellness Exam Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-08-23",
+    "author": "Dr. Patel, Primary Care",
+    "body": "46-year-old male presents for annual wellness exam. Height 179.8 cm, weight 100.1 kg, BMI 31 kg/m2. Vitals: BP 105/74, HR 67, RR 13. Patient reports trying to eat three meals a day. No acute complaints. History of adolescent idiopathic scoliosis, no new neurologic deficits. Dentition notable for missing posterior teeth; referred to dentistry for evaluation of gum disease. Referral placed for nutrition counseling given BMI and dietary pattern. Labs drawn today, pending review. Plan: nutrition referral, routine follow-up in 6 months."
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Dental Treatment Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-09-06",
+    "author": "Edison Family Dental Associates",
+    "body": "Patient completed treatment course for gingivitis. Procedures performed: removal of supragingival and subgingival plaque and calculus from all teeth, examination of gingivae, bitewing X-ray, fluoride treatment application. Gingivae appear healthy post-treatment, no bleeding or inflammation noted on exam. Several posterior teeth noted absent (longstanding, since approximately 2003). Patient advised on home oral hygiene. No further dental treatment scheduled at this time."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nAdolescent idiopathic scoliosis (since 1991)\nBody mass index 30+ - obesity (since 2003)\nLoss of teeth (since 2003)\n\nRECENTLY RESOLVED\nAcute viral pharyngitis (2022-12 to 2022-12)\nConcussion injury of brain (2023-05 to 2023-08)\nConcussion with no loss of consciousness (2023-05 to 2023-08)\nGingivitis (2026-08 to 2026-09)\n\nPROCEDURES\n2026-09-06: Dental fluoride treatment (Gingivitis)\n2026-09-06: Dental plain X-ray bitewing\n2026-09-06: Examination of gingivae (Gingivitis)\n2026-09-06: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-09-06: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-09-06: Dental care (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-09-06 ambulatory: Encounter for check up (Gingivitis)\n2026-08-23 wellness: General examination of patient\n2025-06-16 ambulatory: Follow-up encounter (Loss of teeth)\n2025-06-02 ambulatory: Encounter for problem (Loss of teeth)\n2024-08-18 wellness: General examination of patient\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "189.5",
+        "mg/dL",
+        "< 200",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "137.6",
+        "mg/dL",
+        "< 100",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "30",
+        "mg/dL",
+        ">= 40",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "109.6",
+        "mg/dL",
+        "< 150",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "16.3",
+        "g/dL",
+        "12.0-17.5",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.3",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-08-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "280.2",
+        "10*3/uL",
+        "150-450",
+        "2026-08-23"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a realistic 24-hour dietary recall and typical shift-based meal pattern from a shift worker, identifying prolonged daytime fasting followed by a large late-night meal.",
+    "factIds": [
+     "h4",
+     "h5",
+     "h7",
+     "h11"
+    ],
+    "actionIds": [
+     "a1",
+     "a2"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess hydration habits and physical activity/functional barriers (back pain from scoliosis) that affect his ability to prepare food and stay active.",
+    "factIds": [
+     "h3",
+     "s16",
+     "h6"
+    ],
+    "actionIds": [
+     "a4",
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore the connection between tooth loss/chewing discomfort and food texture choices without judgment, uncovering previously unrecognized dietary patterns.",
+    "factIds": [
+     "h9",
+     "h10",
+     "s7"
+    ],
+    "actionIds": [
+     "a3",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Integrate anthropometric data, vital signs, and laboratory results (lipid panel) into the nutrition assessment to characterize obesity and mild dyslipidemia relevant to counseling.",
+    "factIds": [
+     "h1",
+     "h17"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Gently uncover financial and household barriers affecting food access and OTC medication adherence, respecting that these are reluctant/hidden disclosures.",
+    "factIds": [
+     "s11",
+     "s12",
+     "s13",
+     "s15"
+    ],
+    "actionIds": [
+     "a6",
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Apply motivational interviewing techniques to meet the patient in the contemplation stage, addressing his ambivalence, fear of being lectured, and family dynamics, while anchoring counseling to his personal goals.",
+    "factIds": [
+     "s9",
+     "s10",
+     "s3",
+     "s4",
+     "s5",
+     "s6"
+    ],
+    "actionIds": [
+     "a5",
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake / undesirable eating pattern (irregular meal timing with reliance on energy-dense convenience foods) related to shift-work schedule, household food budget constraints, and chewing discomfort from missing teeth, as evidenced by BMI 31 kg/m2, 10+ hour daytime fasting gaps followed by a large late-night meal, and frequent vending-machine/fast-food intake.",
+   "differential": [
+    "Nutrition diagnosis: Excessive energy intake related to shift-work grazing pattern and convenience food reliance",
+    "Nutrition diagnosis: Undesirable food choices (energy-dense, low-fiber, soft-texture foods) related to chewing difficulty from tooth loss",
+    "Nutrition diagnosis: Limited access to healthful food related to household financial constraints (food budget for 7)",
+    "Nutrition-related knowledge deficit regarding link between meal timing, food choices, and weight/energy level",
+    "Not primarily a medical/metabolic disorder (labs show only mild dyslipidemia, no diabetes or thyroid findings reported)"
+   ],
+   "keyFindings": [
+    "BMI 31 kg/m2 (height 179.8 cm, weight 100.1 kg) meeting criteria for obesity",
+    "LDL 137.6 mg/dL (elevated, reference <100) and HDL 30 mg/dL (low, reference >=40); total cholesterol and triglycerides within normal limits",
+    "24-hour recall reveals no breakfast, grabs vending-machine snack ~10am, often no real lunch, large dinner ~9-9:30pm, sometimes a second snack before bed - a fasting gap of 10+ hours followed by one large late meal",
+    "Reports relying on soda/coffee for hydration during shifts; minimal water intake because the tap is far from his station",
+    "Avoids chewing on left side and favors soft, energy-dense foods since losing posterior teeth (missing since 2003); has not connected this to his diet until asked",
+    "Reluctantly discloses household grocery budget is tight for 7 people, with some months requiring trade-offs between bills and food, and cost-driven cutbacks on ibuprofen refills",
+    "PCP wellness note documents 'patient reports trying to eat three meals a day' - inconsistent with the detailed recall he gives the dietetics student, revealing an initial under-report of his irregular pattern",
+    "Contemplation-stage readiness to change: aware of the problem but ambivalent and easily discouraged by family lecturing",
+    "Vital signs and remaining labs (hemoglobin, WBC, platelets) are within normal limits and not clinically relevant to this visit"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment: review anthropometrics (BMI 31), vitals, labs (lipid panel, CBC), and PCP wellness/dental records already on file",
+    "Obtain a detailed 24-hour dietary recall and typical shift-day eating pattern, including hydration habits",
+    "Assess chewing ability and its influence on food texture choices, in a non-judgmental way",
+    "Gently explore financial and schedule barriers affecting food access and OTC medication adherence",
+    "Reconcile the discrepancy between the PCP note ('trying to eat three meals a day') and his own recall, without shaming him",
+    "Formulate a nutrition diagnosis using PES format focused on energy intake pattern, food choice, and food access barriers",
+    "Deliver motivational-interviewing-based counseling anchored to his stated goals (energy for grandchild, less shift-end back pain, weight loss before next physical)",
+    "Offer 2-3 concrete, low-cost, shift-friendly strategies (e.g., packable protein/fiber snacks to replace vending machine items, a refillable water bottle kept at his station, softer high-fiber food swaps that are easier to chew)",
+    "Avoid prescriptive lecturing; use open-ended questions, affirmations, and reflective listening to support his autonomy at the contemplation stage",
+    "Arrange follow-up visit to reassess readiness, meal pattern changes, and reinforce small wins",
+    "Consider referral back to dentist/PCP only if further dental or lipid management is needed (routine follow-up, not urgent)"
+   ],
+   "redFlags": [
+    "None requiring urgent medical escalation at this visit; mild dyslipidemia (low HDL, high LDL) should be flagged for PCP follow-up but is not acute",
+    "Food insecurity indicators (skipped utility payments, delayed purchases to afford groceries) warrant sensitive follow-up and possible referral to community food resources if he becomes more open to it",
+    "Chronic back pain limiting activity and cooking should be monitored but is not an emergent finding"
+   ],
+   "educationPoints": [
+    "Explain how long fasting gaps followed by one large late meal can worsen energy crashes and may affect weight management, framed as information rather than criticism",
+    "Discuss simple, low-cost ways to add a small morning or midday food item that fits his shift break, without requiring major budget changes",
+    "Explain how softer, fiber-containing foods (e.g., canned beans, cooked vegetables, ground meats) can be easier to chew while still supporting nutrition goals",
+    "Describe why swapping some soda for water, even small amounts increased gradually, may help afternoon energy levels",
+    "Normalize that change takes time (contemplation stage) and that small, sustainable steps are more realistic than an all-at-once overhaul",
+    "Reassure him that the visit is not about blame, and that his family's comments, while well-meant, don't have to be the only motivation - his own goals (grandchild, back pain, physical) can guide the plan"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Brendan initially reports (h5) that he doesn't really skip meals, just eats later in the day, and his detailed 24-hour recall (h11) reveals he actually goes without eating for 10+ hours most shifts, skipping both breakfast and lunch before one large dinner around 9-9:30pm",
+    "recordEvidence": "PCP Annual Wellness Exam Note (d2) documents that the patient reports trying to eat three meals a day",
+    "teachingPoint": "Patients may minimize or round up disordered meal timing when first asked in general terms; a structured 24-hour recall often reveals a very different pattern than what is documented in a prior visit note, so learners should probe specifics rather than accept a global self-report at face value.",
+    "factId": "h11",
+    "artifactId": "d2"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 15,
+   "condition": "Loss of teeth",
+   "conditionLabel": "46 M · Loss of teeth, Adolescent idiopathic scoliosis · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "17ed457f",
+   "fingerprint": "eph5fj"
+  }
+ }
+}

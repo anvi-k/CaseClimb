@@ -1,0 +1,286 @@
+{
+ "patient_overview": {
+  "name": "Carlos Tórrez",
+  "age": 25,
+  "sex": "Male",
+  "description": "Carlos Tórrez is a 25-year-old warehouse associate working part-time shifts in South Brunswick, New Jersey, recently flagged with prediabetes at his wellness visit. He's warm, talkative, and eager to be liked, the kind of guy who answers questions with a grin and 'whatever you think is best, doc' even when he's not sure what that means. He's genuinely tried to change his eating in the last few weeks after his doctor talked to him, but the changes feel shaky and easily knocked over by a busy week or a tight paycheck. He comes across as likable and cooperative on the surface, but a student who slows down will notice he nods along to instructions he doesn't fully follow.",
+  "keywords": [
+   "prediabetes",
+   "health literacy",
+   "food insecurity",
+   "food pantry",
+   "weight gain",
+   "action stage fragile",
+   "label reading difficulty",
+   "people pleasing",
+   "budget shopping",
+   "family lecturing"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time warehouse associate at a regional distribution center, picking and packing orders on rotating shifts",
+  "residence": "South Brunswick, New Jersey; household of 2",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Carlos grew up in a bilingual household in central New Jersey where Spanish was spoken at home and English at school; he's more comfortable reading and speaking in Spanish than parsing dense English medical paperwork, though he can get by. Meals growing up were about stretching ingredients for a big family table, and he still associates a 'good meal' with rice, beans, and something fried on the side. He values politeness and not making people feel bad, which shows up in how quickly he agrees with whatever a clinician suggests, whether or not he plans to actually do it."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [],
+  "medical_history": [
+   "Prediabetes since 2026",
+   "Acute bronchitis (2021-06 to 2021-06, resolved)",
+   "Sinusitis (2023-07 to 2023-08, resolved)",
+   "Dental fluoride treatment (2021-07-11)",
+   "Examination of gingivae (2021-07-11)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2021-07-11)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2021-07-11)",
+   "Dental care (2021-07-11)",
+   "Dental consultation and report (2021-07-11)"
+  ],
+  "current_symptoms": [
+   "No real symptoms he notices day to day, says he 'feels fine'",
+   "Occasional afternoon tiredness around 3pm at work",
+   "Clothes fitting tighter than they did a couple years ago",
+   "Gets thirsty more than he used to, especially after salty food"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears a bit heavier through the midsection, consistent with recent weight gain and BMI of 25.2",
+   "Mild acne scarring and slightly oily skin noted on face, no acanthosis nigricans mentioned",
+   "Speaks quickly and smiles often, leans forward and nods a lot while listening",
+   "Squints at the printed handout and holds it at a distance before setting it aside"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.4 % (reference < 5.7; 2026-05-24)",
+   "Glucose: 89.2 mg/dL (reference 70-99 (fasting); 2026-05-24)",
+   "Haemoglobin: 14.3 g/dL (reference 12.0-17.5; 2023-05-21)",
+   "White cell count: 10.4 10*3/uL (reference 4.0-11.0; 2023-05-21)",
+   "Platelets: 429.2 10*3/uL (reference 150-450; 2023-05-21)",
+   "Potassium: 5.1 mmol/L (reference 3.5-5.1; 2026-05-24)",
+   "Sodium: 136.3 mmol/L (reference 135-145; 2026-05-24)",
+   "Urea nitrogen: 8.3 mg/dL (reference 7-20; 2026-05-24)"
+  ],
+  "vital_signs": [
+   "BP: 112/71 mmHg",
+   "HR: 91 bpm",
+   "RR: 12 breaths/min",
+   "Recorded: 2026-05-24"
+  ],
+  "anthropometrics": [
+   "Height: 179.4 cm",
+   "Weight: 81 kg",
+   "BMI: 25.2 kg/m2",
+   "Weight change: +5.5 kg since 2023-05-21"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "A bottle of generic multivitamin gummies he bought at the dollar store, takes them 'most days'",
+   "Tums kept in the glovebox for when he eats too fast"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Budget-driven, carbohydrate-heavy diet built around cheap filling staples; recently trying to add vegetables and cut sugary drinks",
+  "food_preferences": [
+   "Rice and beans most nights",
+   "Fried chicken or pork chops when on sale",
+   "White bread and store-brand peanut butter for quick meals",
+   "Energy drinks and soda, though he says he's 'cutting back'",
+   "Instant ramen as a backup when money is tight"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How often he actually visits the food pantry and what's available there",
+   "Portion sizes at dinner, which tend to be large because food is 'already paid for'",
+   "Reading nutrition labels - he says he 'doesn't really look at those'",
+   "Snacking pattern during overnight or early shifts at the warehouse",
+   "Whether he's swapping soda for juice thinking it's a healthy trade"
+  ],
+  "meal_pattern": "Skips breakfast most days before early shifts, eats a packed lunch (often a sandwich), dinner is the main meal and sometimes late depending on shift",
+  "hydration": "Drinks mostly water now at work but still has 1-2 sodas or energy drinks on days he feels tired",
+  "physical_activity": "On his feet most of his shift walking and lifting, but no structured exercise outside of work; used to play pickup soccer with cousins on weekends but less lately",
+  "substance_use": "Light alcohol use, a beer or two on weekends with friends (AUDIT-C score of 1); never smoked",
+  "sleep": "Sleep is irregular with rotating shifts, sometimes only 5-6 hours before an early shift"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, talkative, eager to please; fills silences with chatter and jokes, genuinely likes people and wants them to think well of him",
+  "communication_style": "Agreeable and deferential, frequently says 'whatever you think is best' or 'you're the expert, I'll do what you say,' even when he hasn't understood the instruction",
+  "goals": [
+   "Not end up like his tío who went on insulin and dialysis",
+   "Lose some of the weight he's put on in the last couple years",
+   "Keep his kids proud of him for 'doing better'",
+   "Feel like he has more energy for his shifts"
+  ],
+  "concerns": [
+   "Worried the changes he started won't stick once life gets busy again",
+   "Afraid of looking foolish if he asks what a label or term means",
+   "Feels guilty when he can't afford the 'healthy' foods his daughter suggests"
+  ],
+  "beliefs": [
+   "Thinks prediabetes means he's 'already got diabetes, just not official yet'",
+   "Believes cutting soda is the main thing that matters and other foods matter less",
+   "Thinks food pantry food is 'not really the healthy stuff' so doesn't expect much from it",
+   "Figures as long as he's not that tired, his blood sugar must be fine"
+  ],
+  "motivations": [
+   "Wants his adult kids to stop worrying about him",
+   "Doesn't want to end up on medications or needles",
+   "Likes the idea of being the 'strong one' in the family again"
+  ],
+  "fears": [
+   "Ending up on insulin shots like his uncle",
+   "Disappointing his children if he backslides",
+   "Being seen as unable to understand simple instructions"
+  ],
+  "barriers": [
+   "Tight food budget and reliance on cheap, filling staples",
+   "Struggles to read and fully understand written nutrition instructions or labels but covers it with agreeableness",
+   "Rotating work shifts disrupt regular meals and sleep",
+   "Family lectures him in a way that makes him want to agree and avoid, rather than really engage"
+  ],
+  "strengths": [
+   "Genuinely motivated and already made some changes in the last few weeks",
+   "Good relationship with his children who check in on him",
+   "Open and easy to talk to, builds rapport quickly",
+   "Willing to try new foods if someone shows him rather than just tells him"
+  ],
+  "support_system": "Lives with his younger brother; two adult children from a previous relationship live nearby and call often, meaning well but tending to lecture him about his health which he says he 'already knows, mostly'",
+  "readiness_to_change": "Action stage but fragile: started swapping soda for water and trying to add vegetables about three weeks ago after his diagnosis, but admits a bad week at work could knock it off track easily"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he was told he has prediabetes at his last check-up",
+   "Says he's been 'doing better' the last few weeks, drinking more water instead of soda",
+   "Mentions he works part-time at a warehouse with rotating shifts",
+   "Says his kids have been on him about his health lately"
+  ],
+  "discoverable_information": [
+   "Describes typical meals: rice and beans, fried chicken, sandwiches for lunch",
+   "Admits he sometimes gets groceries from a food pantry when money is tight",
+   "Shares that his uncle has diabetes and is on dialysis, which scares him",
+   "Mentions his sleep is irregular because of shift work",
+   "Will say 'whatever you think is best' when asked to choose between options, needing gentle redirection to express his own preference"
+  ],
+  "reluctant_information": [
+   "Admits, if asked gently, that he doesn't always finish reading the papers the doctor gives him because the words 'get mixed up'",
+   "Reveals he sometimes nods along in appointments even when he's confused, because he doesn't want to seem slow",
+   "Confides that he feels embarrassed asking his kids to help him read nutrition labels"
+  ],
+  "hidden_information": [
+   "Has never actually read the full 'Diabetes self management plan' handout he was given at the 2026-05-24 visit; it's still in a kitchen drawer unopened",
+   "Pretends to his children that he understands the glycemic index when they explain it, so they'll stop repeating themselves"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Assess health literacy without shaming the patient, recognizing when agreeableness masks confusion",
+    "expected_discoveries": [
+     "Carlos says 'whatever you think is best' instead of expressing a real preference",
+     "He has not actually read the diabetes self-management handout given to him",
+     "He mixes up some basic label terms like 'added sugars' vs 'total sugars'"
+    ],
+    "possible_patient_reactions": [
+     "'Yeah, that sounds good, whatever you think is best, you know more than me'",
+     "'Honestly? I kinda skipped that part, the words got all jumbled up on me'",
+     "Laughs it off: 'I'm better with numbers on a scale than on a label, haha'"
+    ]
+   },
+   {
+    "learning_objective": "Explore budget and food access constraints, including food pantry use, to build a realistic plan",
+    "expected_discoveries": [
+     "He relies on cheap starchy staples like rice, bread, and ramen",
+     "He visits a food pantry occasionally and assumes its food isn't 'the healthy stuff'",
+     "His income is modest and shift work makes meal planning harder"
+    ],
+    "possible_patient_reactions": [
+     "'I go to the pantry sometimes near the end of the month, but it's mostly cans and bread'",
+     "'I'd eat better stuff if it didn't cost double, you know?'"
+    ]
+   },
+   {
+    "learning_objective": "Reinforce early action-stage changes without letting fragile motivation collapse under setbacks",
+    "expected_discoveries": [
+     "He started swapping soda for water and adding vegetables about three weeks ago",
+     "He fears a bad week at work could undo his progress",
+     "He's motivated by not wanting to end up like his uncle on dialysis"
+    ],
+    "possible_patient_reactions": [
+     "'I've been doing good, but I don't know, one bad week and I feel like I'll just go back'",
+     "'My tío's on the dialysis thing now and that scared me straight, kinda'"
+    ]
+   },
+   {
+    "learning_objective": "Address family dynamics where well-meaning adult children lecture rather than support",
+    "expected_discoveries": [
+     "His kids call often and repeat advice he already half-knows",
+     "He pretends to understand concepts like glycemic index to end the lecture",
+     "He feels both grateful for and worn down by their concern"
+    ],
+    "possible_patient_reactions": [
+     "'They mean well, but man, sometimes I just say okay okay so they stop'",
+     "'My daughter sent me this whole article, I didn't read all of it honestly'"
+    ]
+   },
+   {
+    "learning_objective": "Differentiate perceived versus actual understanding of prediabetes and glycemic concepts",
+    "expected_discoveries": [
+     "Carlos believes prediabetes is basically 'already diabetes, unofficial'",
+     "He thinks cutting soda alone will fix things, underestimating other carb sources like rice and bread",
+     "He judges his blood sugar by how tired he feels rather than any real marker"
+    ],
+    "possible_patient_reactions": [
+     "'So wait, I don't got diabetes diabetes yet, right? That's what they told me'",
+     "'I figured as long as I'm not falling asleep at work, I'm probably okay'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Carlos's part-time schedule and modest household income make food pantry use plausible without contradicting private insurance status",
+   "His other household member is assumed to be a younger adult brother given 'household of 2' and his age, consistent with 'not recorded' marital status",
+   "Language other than English at home is interpreted as a bilingual Spanish-English household, fitting his White, Hispanic ethnicity without assuming specific cultural food traditions beyond what's stated",
+   "The uncle with diabetes and dialysis is an invented but plausible family motivator consistent with his fears, not a recorded diagnosis for the patient himself"
+  ],
+  "optional_details": [
+   "He plays pickup soccer with cousins on weekends, though less often lately",
+   "He keeps Tums in his glovebox for when he eats too fast on break"
+  ]
+ },
+ "source": {
+  "synthea_record": "21f1b820",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "warm and talkative, likes to be liked",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "moderate health literacy",
+   "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+   "held_back": "struggles to read labels or written instructions and hides it",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

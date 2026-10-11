@@ -1,0 +1,324 @@
+{
+ "patient_overview": {
+  "name": "Oscar Kihn",
+  "age": 26,
+  "sex": "Male",
+  "description": "Oscar Kihn is a 26-year-old White man from Somerville, NJ, living in a crowded household of seven, who comes in for a nutrition visit tied to his prediabetes care plan. He's got chronic low back pain and a brain injury from 2020, both of which still shape how he moves and feels day to day, plus anemia that leaves him tired. He's warm, chatty, and eager to be liked, cracking jokes and asking the student about themselves, but he visibly steers away from topics that embarrass him, pivoting to something lighter whenever food budget or pain-pill use comes up. He's proud that he started making small changes a few weeks ago, but it's clear the new habits are shaky and could fall apart under stress.",
+  "keywords": [
+   "prediabetes",
+   "chronic pain",
+   "food insecurity",
+   "low health literacy",
+   "brain injury",
+   "anemia",
+   "uninsured",
+   "budget shopping",
+   "faith community",
+   "fragile behavior change"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time stock associate at a hardware store",
+  "residence": "Somerville, New Jersey; household of 7",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "None/uninsured",
+  "cultural_context": "Oscar grew up in a large, noisy household in central New Jersey and still lives in one as an adult, sharing a house with six other family members. He left high school with some additional vocational training but never pursued a four-year degree, something he's a little self-conscious about around people he perceives as more educated. His closest ties are through his church's young adults group, which he describes as \"basically my second family\" — they do potlucks, help each other with rides, and pray for one another when things get hard. He doesn't identify strongly with any particular food tradition from his upbringing; meals at home were whatever stretched the furthest for a big family, and that habit has stuck with him into adulthood."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Chronic pain",
+   "Chronic low back pain",
+   "Traumatic or nontraumatic brain injury",
+   "Anemia"
+  ],
+  "medical_history": [
+   "Chronic pain since 2018",
+   "Chronic low back pain since 2018",
+   "Traumatic or nontraumatic brain injury since 2020",
+   "Prediabetes since 2025",
+   "Anemia since 2026",
+   "Unhealthy alcohol drinking behavior (2023-06 to 2025-10, resolved)",
+   "Gingivitis (2023-06 to 2023-06, resolved)",
+   "Gingival disease (2023-06 to 2023-06, resolved)",
+   "Viral sinusitis (2023-10 to 2023-10, resolved)",
+   "Acute bronchitis (2025-11 to 2025-11, resolved)",
+   "Dental plain X-ray bitewing (2026-07-23)",
+   "Examination of gingivae (2026-07-23)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-07-23)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-07-23)",
+   "Dental care (2026-07-23)",
+   "Dental consultation and report (2026-07-23)"
+  ],
+  "current_symptoms": [
+   "Low back pain that flares up after standing shifts at work",
+   "Headaches and occasional trouble concentrating he links to his old head injury",
+   "Feeling worn out and short of breath walking up stairs",
+   "Craves sweets in the afternoon when his energy crashes",
+   "Occasional dizziness he hasn't mentioned to anyone yet"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Mild pallor of the conjunctiva and nail beds consistent with his anemia",
+   "Appears overweight for his frame with some abdominal fullness",
+   "Mild tenderness and reduced flexion noted on observation of lower back",
+   "Speaks fluently but occasionally loses his train of thought mid-sentence and laughs it off"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.8 % (reference < 5.7; 2026-07-02)",
+   "Glucose: 98.5 mg/dL (reference 70-99 (fasting); 2026-07-02)",
+   "Haemoglobin: 11.3 g/dL (reference 12.0-17.5; 2026-07-09)",
+   "White cell count: 8 10*3/uL (reference 4.0-11.0; 2026-07-09)",
+   "Platelets: 375.8 10*3/uL (reference 150-450; 2026-07-09)",
+   "Potassium: 5 mmol/L (reference 3.5-5.1; 2026-07-02)",
+   "Sodium: 143.6 mmol/L (reference 135-145; 2026-07-02)",
+   "Urea nitrogen: 13.6 mg/dL (reference 7-20; 2026-07-02)"
+  ],
+  "vital_signs": [
+   "BP: 136/90 mmHg",
+   "HR: 78 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-07-02"
+  ],
+  "anthropometrics": [
+   "Height: 181.2 cm",
+   "Weight: 87 kg",
+   "BMI: 26.5 kg/m2",
+   "Weight change: +1.4 kg since 2025-06-26"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Ibuprofen 400 MG Oral Tablet [Ibu]",
+    "dose": "400 MG",
+    "frequency": "As needed, usually a few times a week for back pain",
+    "purpose": "Not recorded",
+    "adherence": "Takes it when the pain is bad, sometimes more than the label says because 'it just doesn't touch it otherwise'",
+    "patient_concerns": "Worried it's hard on his stomach but doesn't know what else to use since he's uninsured and can't see a specialist"
+   },
+   {
+    "name": "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+    "dose": "325 MG",
+    "frequency": "Daily or near-daily, often alongside the ibuprofen",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent but doesn't always track how much he's combining with other pain pills",
+    "patient_concerns": "Doesn't realize combining it with hydrocodone-acetaminophen could add up to too much acetaminophen in a day"
+   },
+   {
+    "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "dose": "300 MG",
+    "frequency": "A few times a month, saved for 'the really bad days'",
+    "purpose": "Not recorded",
+    "adherence": "Rations it carefully because he only has a limited supply and no regular doctor prescribing more",
+    "patient_concerns": "Embarrassed to bring it up, worried the student or dietitian will think he's 'drug-seeking' when really he's just trying to get through a shift"
+   }
+  ],
+  "supplements_and_otc": [
+   "A multivitamin from the dollar store he takes 'most days'",
+   "Iron pills a cousin gave him that he takes 'sometimes' when he feels tired, not the brand his doctor would know about",
+   "A protein powder tub he got on sale that he mixes into milk after work",
+   "Pain-relief menthol patches he buys in bulk from the pharmacy"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Budget-driven, calorie-dense diet heavy in cheap starches, processed meats, and whatever stretches furthest for a big household; some reliance on canned and boxed goods from the food pantry",
+  "food_preferences": [
+   "Spaghetti with jarred sauce and whatever meat is on sale",
+   "Peanut butter sandwiches",
+   "Fried bologna",
+   "Soda with meals because it's cheaper than juice at the store he shops"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at shared family meals where food goes fast",
+   "Afternoon vending-machine snacking at work",
+   "How often he actually gets to the food pantry versus skipping meals",
+   "Use of ibuprofen/acetaminophen around meals and whether he takes them with food"
+  ],
+  "meal_pattern": "Skips breakfast most days before his shift, eats a large shared dinner with the household around 7pm, grazes on snacks in between",
+  "hydration": "Mostly soda and tap water; rarely drinks anything else",
+  "physical_activity": "On his feet for stocking shifts several days a week but otherwise fairly sedentary at home due to back pain",
+  "substance_use": "Rare light drinking now (AUDIT-C score 1), no current tobacco use; history of heavier drinking 2023-2025 that he says he 'got control of' with help from his church group",
+  "sleep": "Inconsistent, often kept up by a noisy household and his own racing thoughts about money"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, talkative, eager to be liked, quick with a joke or compliment",
+  "communication_style": "Chatty and friendly at first, but visibly changes the subject - often to sports, his church group, or asking the student personal questions - when a topic touches on money, pain pills, or his drinking history",
+  "goals": [
+   "Keep his blood sugar from turning into full diabetes",
+   "Lose some weight without having to buy 'special' food he can't afford",
+   "Feel less tired so he can keep up with his stocking shifts"
+  ],
+  "concerns": [
+   "Worried the prediabetes news means he's 'going downhill' like an uncle who lost his foot to diabetes",
+   "Afraid of being judged for using food pantry and buying cheap food",
+   "Nervous about mixing OTC pain meds without really knowing the limits"
+  ],
+  "beliefs": [
+   "Thinks eating 'healthy' mostly means cutting soda, not understanding portion or carb patterns",
+   "Believes supplements and vitamins can make up for a less-than-ideal diet",
+   "Trusts his pastor and small group more than doctors for day-to-day advice"
+  ],
+  "motivations": [
+   "Doesn't want to end up disabled or dependent at a young age",
+   "Wants to set a better example for younger siblings in the house",
+   "Likes positive feedback and wants the care team to be proud of his progress"
+  ],
+  "fears": [
+   "Losing function from his back or head injury and becoming a burden on the household",
+   "Being judged as lazy or irresponsible for his diet or pill use",
+   "That the 'good streak' he started a few weeks ago will fall apart like past attempts"
+  ],
+  "barriers": [
+   "No insurance and no regular doctor to coordinate his pain, anemia, and prediabetes care",
+   "Tight household budget split among seven people",
+   "Low health literacy makes nutrition labels and portion guidance confusing",
+   "Physical pain limits his energy for cooking or meal prep after shifts"
+  ],
+  "strengths": [
+   "Genuinely wants to do better and has already started small changes",
+   "Strong, reliable community support through his church group",
+   "Personable and easy to build rapport with"
+  ],
+  "support_system": "A tight-knit young adults group at his church that provides meals, encouragement, and prayer support; lives with extended family who share food and rides but also strain the household budget",
+  "readiness_to_change": "Action stage but fragile - he cut back soda and started walking some evenings a few weeks ago, proud of it, but admits one bad week could knock him off track"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "I just found out I'm prediabetic so I'm trying to do better.",
+   "I cut way back on soda the last few weeks, I'm pretty proud of that.",
+   "My back's been bad since 2018, I hurt it moving stuff at an old job.",
+   "I go to my church group a lot, they keep me sane."
+  ],
+  "discoverable_information": [
+   "He skips breakfast most days and eats a big dinner with his whole household.",
+   "He shops wherever is cheapest and sometimes uses the food pantry on Fridays.",
+   "He works part-time stocking shelves and it's hard on his back.",
+   "He had a head injury back in 2020 that sometimes makes him lose his train of thought."
+  ],
+  "reluctant_information": [
+   "He takes more ibuprofen than the label says sometimes because the pain is bad and he can't afford to see a specialist.",
+   "He used to drink more heavily between 2023 and 2025 but says his church group helped him get it under control."
+  ],
+  "hidden_information": [
+   "Oscar takes iron pills his cousin gave him, not prescribed, a few times a week when he feels tired, without telling any provider.",
+   "He saves a few hydrocodone-acetaminophen tablets left over from an old prescription and takes one every couple weeks on his worst pain days, afraid to mention it because he thinks he'll be accused of seeking drugs."
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full picture of OTC and unprescribed medication/supplement use given low health literacy and reluctance to disclose.",
+    "expected_discoveries": [
+     "Oscar combines ibuprofen and acetaminophen-containing products without realizing the overlap in dosing.",
+     "He takes unlabeled iron pills from a relative on top of a dollar-store multivitamin.",
+     "He rations leftover hydrocodone-acetaminophen tablets he hasn't told any provider about."
+    ],
+    "possible_patient_reactions": [
+     "He laughs and says 'eh, it's probably nothing' when first asked.",
+     "He changes the subject to ask the student about their own weekend plans.",
+     "If the student is gentle and nonjudgmental, he eventually admits 'I probably shouldn't be taking that stuff without asking someone.'"
+    ]
+   },
+   {
+    "learning_objective": "Assess and support a fragile, recent behavior change (reduced soda, evening walking) using motivational interviewing.",
+    "expected_discoveries": [
+     "Oscar started cutting soda and walking a few weeks ago and is proud but anxious about losing momentum.",
+     "His confidence dips when he talks about past attempts that didn't last.",
+     "He responds well to specific praise and concrete, small next steps."
+    ],
+    "possible_patient_reactions": [
+     "He beams and says 'Yeah I did that myself, nobody made me!' when praised.",
+     "He gets quiet and says 'I don't know, I mess these things up eventually' if change talk feels fragile.",
+     "He asks hopefully 'So you think I'm doing okay so far?'"
+    ]
+   },
+   {
+    "learning_objective": "Explore food access and budget constraints to build a realistic, affordable nutrition plan for prediabetes.",
+    "expected_discoveries": [
+     "Household of seven stretches a limited income, and Oscar sometimes 'went without' food per his screening.",
+     "He relies on cheap starches, processed meats, and occasional food pantry visits.",
+     "He is anxious that healthy eating advice will mean foods he can't afford."
+    ],
+    "possible_patient_reactions": [
+     "He says defensively 'I eat what we can afford, not everybody can buy the fancy stuff.'",
+     "He relaxes and gets specific about pantry hours and store sales once he trusts the student isn't judging him.",
+     "He jokes about his family's spaghetti nights to deflect embarrassment about food insecurity."
+    ]
+   },
+   {
+    "learning_objective": "Connect his chronic low back pain and brain injury history to barriers in meal preparation, work, and daily routine.",
+    "expected_discoveries": [
+     "Standing shifts worsen his back pain, leaving him too tired to cook most nights.",
+     "His 2020 head injury sometimes causes him to lose focus or forget steps in a routine, including medication timing.",
+     "He relies on quick, low-effort meals because of fatigue and pain, not lack of motivation."
+    ],
+    "possible_patient_reactions": [
+     "He shrugs off the brain injury topic at first: 'Oh that's old news, I'm fine now.'",
+     "He opens up more about daily fatigue if asked with curiosity rather than clinical bluntness.",
+     "He jokes 'My brain's got a few potholes' to lighten the mood."
+    ]
+   },
+   {
+    "learning_objective": "Identify and leverage his faith community as a support for sustainable dietary change.",
+    "expected_discoveries": [
+     "His church young adults group does regular potlucks and could be a venue for modeling better food choices.",
+     "He trusts his pastor and small group's encouragement more readily than clinical advice alone.",
+     "Group meals are a source of both support and occasional dietary challenge (shared heavy comfort foods)."
+    ],
+    "possible_patient_reactions": [
+     "He lights up talking about his church group, eager to share stories.",
+     "He may deflect clinical questions by pivoting to a story about a potluck or group activity.",
+     "He responds well if the student asks how to bring healthier dishes to a potluck."
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Oscar's part-time hourly income combined with household income of about $47,694 means tight shared finances despite having housing.",
+   "His anemia is likely multifactorial, possibly related to diet and occasional NSAID use, though no specific cause is recorded.",
+   "His 'went without: Food' screening answer reflects intermittent food insecurity consistent with pantry use.",
+   "Uninsured status explains reliance on OTC pain management and lack of specialist follow-up for his back and head injury."
+  ],
+  "optional_details": [
+   "Oscar enjoys pickup basketball at the church gym on weekends when his back allows.",
+   "He keeps a dog-eared devotional booklet in his truck that his small-group leader gave him.",
+   "He's saving small amounts of cash in a jar for a used car so he doesn't have to borrow his cousin's."
+  ]
+ },
+ "source": {
+  "synthea_record": "13d36647",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "warm and talkative, likes to be liked",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "low health literacy",
+   "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+   "held_back": "takes supplements or home remedies the clinic does not know about",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

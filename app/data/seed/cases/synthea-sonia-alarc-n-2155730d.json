@@ -1,0 +1,904 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Recurrent UTIs and newly flagged obesity in a 23-year-old shift-working mother: nutrition assessment and counseling",
+  "summary": "This case portrays a 23-year-old bilingual shift-working mother referred for nutrition counseling after recurrent UTIs and newly flagged class I obesity, teaching dietetics students to take a culturally sensitive hydration/diet/voiding history, screen for food insecurity, and use motivational interviewing with a patient who is 'maintenance but slipping.' The core teaching points are correcting a patient's misattribution of weight gain to hormonal contraception rather than diet/hydration patterns, and surfacing a chart-versus-patient mismatch in which daily supplement and home-remedy use (cranberry extract, D-mannose, corn silk tea) is undisclosed in the record despite being a near-daily habit.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in West Cape May, New Jersey, on a break between shifts",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Sonia Alarcón",
+   "age": 23,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Line cook and server at a diner in West Cape May, NJ",
+   "language": "Language other than English (bilingual Spanish/English, comfortable in English but switches to Spanish phrases when emotional or joking)",
+   "appearance": "Video calling from her kitchen on a short break, still in her diner apron, hair pulled back; leans in close to the camera, gestures a lot, a toddler's toy is visible on the counter behind her. She looks tired around the eyes but animated and talkative, often laughing before she finishes a sentence.",
+   "portrait": "/portraits/synthea-sonia-alarc-n-2155730d.jpg"
+  },
+  "persona": {
+   "personality": "Warm, quick-witted, and talkative; uses humor and storytelling to deflect anything that feels too heavy or too personal, but is sharp, resourceful, and genuinely wants to feel like herself again",
+   "communicationStyle": "Launches into long, winding stories about her tía's recipe, a diner customer, or her kids before circling back to the original question; needs gentle, warm redirection; quotes things she's read online with confidence; gets briefly defensive if her cooking feels criticized, then warms back up if the student builds on her strengths",
+   "healthLiteracy": "high",
+   "emotionalState": "Tired but animated; stretched thin from shift work and childcare with little support; underneath the jokes is real worry about her kidneys long-term and quiet shame about 'sliding back' into old habits",
+   "background": "Sonia is 23, works full-time as a line cook/server at a diner in West Cape May, NJ, and lives with her partner and their two young children (a toddler and an infant). She grew up in a bicultural household where big family meals - arroz con habichuelas, pernil, sofrito-stewed chicken - were the heart of the day, cooked by her mother and grandmother, and she carries that tradition forward now, taking real pride in cooking from scratch even when exhausted. She's bilingual, comfortable in English but slips into Spanish phrases when she's joking or emotional. Her days are long: an early coffee before her shift, hustling at the diner, then cooking a full traditional dinner for the household most nights even when it's close to midnight. She has very little practical help at home - her partner isn't much involved in cooking or childcare, and while she sees friends a few times a week, it's social, not hands-on support. She's resourceful and does her own research on health topics, but money is tight on Medicaid wages, and there have been stretches where the household has gone without enough food.",
+   "speechExamples": [
+    "Oh honey, it's like clockwork, every couple months, boom, UTI city again!",
+    "You want to know what I eat? Girl, sit down, let me tell you about my abuela's sofrito first.",
+    "Water? If I drank water every time I was supposed to, I'd never leave the bathroom at the diner, I'd just live in there!",
+    "This is literally how my mom and abuela cooked - it's not like I'm feeding my kid McDonald's.",
+    "I mean... it's not like it's real medicine, so I didn't think it counted, you know?"
+   ],
+   "concerns": [
+    "Worried the UTIs mean something is permanently wrong with her and could eventually hurt her kidneys",
+    "Self-conscious about the weight she's gained since her second pregnancy and hasn't lost",
+    "Frustrated that she used to eat and drink better and feels herself sliding back into old habits under stress",
+    "Worried providers will judge her for using home remedies instead of 'real medicine'",
+    "Tired of taking antibiotics and hoping for a more natural, lasting fix for the UTIs"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. The patient is Sonia Alarcón, a 23-year-old woman referred for nutrition counseling after recurrent UTIs and a newly flagged finding of obesity on recent labs/vitals. Review the chart before the call. Your job today is to take a focused nutrition-relevant history, assess barriers, and begin patient-centred counseling.",
+   "chiefComplaint": "Referred for nutrition counseling following recurrent UTIs and a new finding of obesity on recent labs/vitals",
+   "openingLine": "Hi, hi, sorry, one sec - okay! I'm back again for these darn UTIs, it's like clockwork every couple months! And now apparently my weight's a whole 'thing' too since the baby. I work at the diner down the street, you'd think I'd just live there at this point, ha!",
+   "tasks": [
+    "Take a focused diet, hydration, and voiding history relevant to her recurrent UTIs and recent weight findings",
+    "Review her anthropometrics, vital signs, and labs on file and discuss them with her in plain language",
+    "Explore her daily routine, shift-work schedule, household meal patterns, and barriers to change (support, time, budget)",
+    "Screen for food security and any supplement or home-remedy use that may not be documented in her chart",
+    "Begin a culturally respectful, motivational-interviewing-based nutrition counseling conversation and outline next steps"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for nutrition counseling after recurrent UTIs and a new finding of obesity on recent labs/vitals"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. R. Haines, Family Medicine; Dietetics referral pending"
+   },
+   {
+    "label": "Problem list",
+    "value": "Recurrent urinary tract infection (since 2019); Body mass index 30+ - obesity (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "UTI recurrence",
+    "chart": "Presents with recurrent UTIs, now referred for nutrition counseling after new finding of obesity on recent labs/vitals.",
+    "says": "I'm back again for these darn UTIs, it's like clockwork every couple months! And now they're telling me I need to talk to someone about my weight too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "UTI symptom pattern",
+    "chart": "Reports dysuria that comes and goes approximately every 2-3 months, since 2019.",
+    "says": "It burns when I pee, but it's not every day — it comes and goes, every couple months like clockwork.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "urinary urgency",
+    "chart": "Reports urinary frequency and urgency, including feeling the need to urinate immediately after voiding.",
+    "says": "I feel like I gotta go all the time, even right after I just went. It's so annoying.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "pre-flare symptoms",
+    "chart": "Reports pelvic pressure and occasional low back ache preceding UTI flares.",
+    "says": "Right before it gets bad, I get this pressure down there and my lower back starts aching too.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "urine appearance",
+    "chart": "Reports occasionally noticing cloudy or strong-smelling urine, which she tries to catch early.",
+    "says": "Sometimes I notice my pee looks cloudy or smells strong, and that's when I know, uh oh, here we go again.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "fatigue pattern",
+    "chart": "Reports fatigue by the end of double shifts at the diner.",
+    "says": "By the end of a double shift I am wiped out, like I could sleep standing up.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "UTI duration",
+    "chart": "UTI history dates back to 2019.",
+    "says": "This has been going on since like 2019, so a few years now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "weight timeline",
+    "chart": "Reports weight gain since second pregnancy (2023-10 to 2024-05), described as baby weight that never left.",
+    "says": "I've gained a little weight since my second kid — baby weight that just never left, ha!",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "fever or chills",
+    "chart": "Denies fever, chills, or rigors with UTI flares.",
+    "says": "No, I never get fevers or shaking chills with it, thank God.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "blood in urine",
+    "chart": "Denies hematuria.",
+    "says": "No, I've never seen blood in it or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "flank pain",
+    "chart": "Denies significant flank pain; endorses only low back ache described above.",
+    "says": "I don't get real sharp pain in my sides, just that low back ache sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "vaginal symptoms",
+    "chart": "Denies vaginal discharge or itching.",
+    "says": "No weird discharge or itching down there, just the UTI stuff.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "appetite changes",
+    "chart": "Denies significant changes in appetite.",
+    "says": "My appetite's the same as always, I eat fine, maybe too fine, ha!",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies constipation or diarrhea.",
+    "says": "No stomach troubles, bathroom's regular, no issues there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "swelling in legs",
+    "chart": "Denies lower extremity swelling.",
+    "says": "My legs don't swell up or anything, even after standing all shift.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "Two prior normal pregnancies, 2022-04 to 2022-05 and 2023-10 to 2024-05, both resolved without complication.",
+    "says": "I've had two babies, one back in 2022 and the last one in 2024, both normal pregnancies, no issues.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "recurrent bladder infections",
+    "chart": "History of recurrent urinary tract infections since 2019, approximately every 2-3 months.",
+    "says": "I've had these UTIs on and off for years now, every couple months it seems.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "weight classification",
+    "chart": "Newly flagged BMI 31 kg/m2, obesity class I, as of 2025.",
+    "says": "They told me my BMI puts me in the 'obese' category now, which honestly stung a little to hear.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "Recent dental care 2025-01-20 including cleaning, bitewing X-ray, fluoride treatment, and gingival exam; no other surgical history.",
+    "says": "Oh, I just had a big dental cleaning done last month — scraping, X-rays, the whole deal. Nothing surgical though, never had surgery.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "contraceptive pill use",
+    "chart": "Reports taking norethindrone 0.35 mg (Jolivette) one tablet nightly for contraception, mostly consistent.",
+    "says": "I take my birth control pill, Jolivette, every night around the same time, pretty much every day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "missed doses pattern",
+    "chart": "Admits to occasionally missing a dose of norethindrone after a late shift, then doubling up the next day.",
+    "says": "Okay, sometimes if I get home super late from a shift I forget it, and then I just take two the next day to catch up.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with partner; two children (toddler and infant) at home",
+    "says": "It's me, my partner, and my two babies — my toddler and the little one. Full house, let me tell you!",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time as line cook/server at a diner; shifts include doubles with limited bathroom access",
+    "says": "I'm on my feet all day at the diner, sometimes back-to-back shifts, and good luck finding time to even use the bathroom when we're slammed.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "household support",
+    "chart": "Reports partner provides minimal day-to-day help with cooking, childcare, or errands",
+    "says": "My partner's great and all, but when it comes to cooking or the kids' stuff, it's pretty much all on me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "social support",
+    "chart": "Sees friends socially 3-5 times a week; describes this as social rather than practical support",
+    "says": "I do see my girlfriends a few times a week, we laugh a lot, but it's not like they're coming over to help me cook or watch the kids.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "household food access",
+    "chart": "Reports household has gone without food at times due to tight budget, per prior social screening",
+    "says": "We're fine, we just budget tight some weeks, that's all.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s6",
+    "category": "nutrition",
+    "topic": "household food access",
+    "chart": "On direct questioning, confirms there have been stretches when there wasn't quite enough food for everyone in the household",
+    "says": "Okay... yeah, there's been a few weeks where it got real tight and we had to make do with less. I don't love talking about that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "energy and fatigue",
+    "chart": "Reports feeling too tired to engage in structured exercise after double shifts",
+    "says": "After a double I'm not walking anywhere extra, I can barely walk to my own couch.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "other",
+    "topic": "sleep pattern",
+    "chart": "Reports irregular sleep, typically 5-6 hours before early shifts",
+    "says": "Sleep is whatever I can grab, maybe five, six hours if I'm lucky before an early shift.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s9",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports light alcohol use, approximately one beer or mixed drink on a night off; denies tobacco use ever",
+    "says": "I'll have a beer or a drink maybe on my night off, nothing crazy. Never smoked, that's not my thing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "readiness to change",
+    "chart": "Reports making sustained dietary and hydration changes after first pregnancy (more water, less fried food) that have since lapsed under stress and exhaustion",
+    "says": "After my first baby I was really good, drinking tons of water, cutting back the fried stuff. Then round two happened and I just... stopped trying as hard.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "goals",
+    "topic": "weight goal",
+    "chart": "States goal is to return to pre-second-pregnancy weight",
+    "says": "I just want to get back to where I was before baby number two, you know?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "goals",
+    "topic": "infection prevention goal",
+    "chart": "States goal is to stop recurrent UTIs",
+    "says": "Honestly my number one thing is just making these infections stop coming back every couple months.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "goals",
+    "topic": "energy goal",
+    "chart": "States goal is to have enough energy to get through shifts without crashing",
+    "says": "I just want enough energy to get through my shift without wanting to collapse by the end.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "modeling healthy habits for children",
+    "chart": "States motivation includes setting a healthy eating example for her children",
+    "says": "I want my kids to see me eating decent too, not just living off coffee and whatever's left on a plate at the diner.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "cultural food values",
+    "chart": "Values home-cooked traditional meals as an expression of care; becomes mildly defensive if cooking style feels criticized",
+    "says": "This is literally how my mom and abuela cooked, it's not like I'm feeding my kid McDonald's.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "trust in remedies vs providers",
+    "chart": "Expresses concern that providers may dismiss home remedies learned from her grandmother",
+    "says": "I worry if I tell a doctor about my abuela's tea they'll just roll their eyes at me.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "other",
+    "topic": "language and materials",
+    "chart": "Reports some clinic materials are harder to use fully due to a language barrier at home",
+    "says": "Some of the papers they give me are a lot of English words I have to look up later, it's not always easy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "function",
+    "topic": "bathroom access at work",
+    "chart": "Reports limited bathroom access during shifts leads to holding urine for long stretches",
+    "says": "If I drank water every time I was supposed to, I'd never leave the bathroom at work, so I just... hold it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall / typical day eating pattern",
+    "aliases": [],
+    "result": "Patient reports: black coffee with condensed milk before early shifts (little else); diner food or leftovers (fries, mozzarella sticks) on busy days; large home-cooked dinner most nights (rice, beans, stewed meat with sofrito, fried tostones) often eaten close to midnight after closing the diner; portions sized for whole household, same plate size for herself as for others.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Hydration and fluid intake history",
+    "aliases": [],
+    "result": "Patient reports drinking mostly coffee and sweet tea during shifts; says plain water intake is low because bathroom breaks are hard to time at work, so she often holds urine for long stretches during a shift.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Food security screening (Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient initially says 'we just budget tight some weeks' then confirms the household has run out of food before the end of the month at times in the past year.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Physical activity and work shift pattern history",
+    "aliases": [],
+    "result": "Patient reports being on her feet most of the workday with no structured exercise; says she is 'too tired' to walk after a double shift; sleep is irregular, often 5-6 hours before an early shift.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment for diet and hydration goals",
+    "aliases": [],
+    "result": "Patient describes having made real changes after her first pregnancy (more water, less fried food) that she has since drifted away from under exhaustion and lack of household support; she still has the knowledge/skills but limited bandwidth.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Dietary supplement, herbal, and over-the-counter product use history",
+    "aliases": [],
+    "result": "Patient discloses daily cranberry extract capsules (not just during flares), D-mannose powder stirred into water at first sign of UTI symptoms, and her grandmother's boiled corn silk tea (about two cups over a day) at the first sign of bladder pain. None of these had previously been documented in her chart.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review prior nutrition or primary care visit notes",
+    "aliases": [],
+    "result": "Most recent primary care note documents recurrent UTIs and new BMI 31 finding, recommends nutrition referral; no supplement, herbal, or home remedy use is recorded.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Household composition and caregiving/support assessment",
+    "aliases": [],
+    "result": "Patient reports living with her partner and two young children (toddler and infant); partner present but provides little day-to-day help with cooking, childcare, or errands; sees friends 3-5 times a week but describes this as social rather than hands-on support.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review medication adherence / refill pattern for Jolivette",
+    "aliases": [],
+    "result": "Refill history shows pickups at intervals consistent with occasional missed doses followed by makeup dosing; most recent refill picked up 4 days later than the expected interval.",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 136/86 mmHg, heart rate 85/min, respiratory rate 14/min, weight 70.8 kg, height 151.1 cm, BMI 31 kg/m2, weight change +1.2 kg since 2022-01-03 (recorded 2025-01-06).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Haemoglobin 15.3 g/dL; White cell count 7.6 10*3/uL; Platelets 216.5 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-01-06); meningococcal MCV4P (2025-01-06); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2025-01-06); Hep B adult (2025-01-06).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Primary Care Visit Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-01-06",
+    "author": "Dr. R. Haines, Family Medicine",
+    "body": "23-year-old female presents for recurrent urinary tract infections, approximately every 2-3 months since 2019, with dysuria, urinary frequency/urgency, and suprapubic pressure. No fever, no flank pain, no hematuria reported. Exam notable for mild suprapubic tenderness, otherwise unremarkable. BMI newly flagged at 31 kg/m2 (obesity class I) on today's visit; weight has been gradually trending up since 2022. Plan: urine culture sent, continue current contraception, referral to dietetics/nutrition for weight and hydration counseling given recurrent UTI pattern and obesity finding. Medications: Jolivette 0.35 mg one tablet nightly. No current supplement or herbal product use documented. Allergies: none known."
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2025-01",
+    "author": "Retail Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Expected refill interval",
+      "Last 3 fill dates"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Jolivette (norethindrone 0.35 mg) 28-day pack",
+        "0.35 mg nightly",
+        "28 days",
+        "2024-11-02, 2024-12-04, 2025-01-05"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "form",
+    "title": "Social Needs Screening (prior visit)",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "date": "2024-11-14",
+    "author": "Primary Care Clinic",
+    "body": "Hunger Vital Sign screening completed at prior visit: 'Within the past 12 months, we worried whether our food would run out before we got money to buy more' - marked Often true. 'Within the past 12 months, the food we bought just didn't last and we didn't have money to get more' - marked Sometimes true. Result: screens positive for food insecurity risk."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nRecurrent urinary tract infection (since 2019)\nBody mass index 30+ - obesity (since 2025)\n\nRECENTLY RESOLVED\nNormal pregnancy (2022-04 to 2022-05)\nNormal pregnancy (2023-10 to 2024-05)\n\nPROCEDURES\n2025-01-20: Dental fluoride treatment (Patient referral for dental care)\n2025-01-20: Dental plain X-ray bitewing\n2025-01-20: Examination of gingivae (Patient referral for dental care)\n2025-01-20: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2025-01-20: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2025-01-20: Dental care (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-06-21 outpatient: Consultation for treatment (Contraception care)\n2025-01-20 ambulatory: Encounter for check up (Patient referral for dental care)\n2025-01-06 wellness: General examination of patient\n2024-06-24 ambulatory: Postnatal visit\n2024-05-13 emergency: Obstetric emergency hospital admission (Normal pregnancy)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",
+        "2026-06",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Haemoglobin",
+        "15.3",
+        "g/dL",
+        "12.0-17.5",
+        "2025-01-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "7.6",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-01-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "216.5",
+        "10*3/uL",
+        "150-450",
+        "2025-01-06"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused hydration and voiding history to identify low plain-water intake and prolonged urine-holding during shifts as modifiable contributors to recurrent UTIs",
+    "factIds": [
+     "h2",
+     "h3",
+     "h4",
+     "h5",
+     "s2",
+     "s18"
+    ],
+    "actionIds": [
+     "a2",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Review anthropometrics, vital signs, and recent labs on file and discuss them with the patient in plain language, distinguishing normal findings from the nutrition-relevant finding of obesity",
+    "factIds": [
+     "h18",
+     "h8"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Characterize the patient's typical daily eating pattern, including shift-work constraints, household meal portions, and reliance on diner food/leftovers, without dismissing the cultural value of her cooking",
+    "factIds": [
+     "s2",
+     "s15"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Screen for food insecurity using a validated approach and connect findings to appropriate resources, recognizing the patient may initially minimize the issue",
+    "factIds": [
+     "s5",
+     "s6"
+    ],
+    "actionIds": [
+     "a3"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Non-judgmentally elicit use of supplements and home remedies not previously documented in the chart, and discuss their role versus evidence-based hydration/voiding strategies",
+    "factIds": [
+     "s16"
+    ],
+    "actionIds": [
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Assess readiness to change and barriers (support, time, exhaustion) using motivational interviewing to understand relapse from a prior successful hydration/diet pattern",
+    "factIds": [
+     "s10",
+     "s3",
+     "s4",
+     "s7",
+     "s8"
+    ],
+    "actionIds": [
+     "a10",
+     "a13"
+    ]
+   },
+   {
+    "id": "o7",
+    "text": "Clarify medication adherence pattern for Jolivette and address the patient's belief that contraception, rather than diet/hydration, is the primary driver of her weight change",
+    "factIds": [
+     "h20",
+     "h21"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive caloric/sodium/fat intake relative to needs with inadequate fluid intake pattern (low plain-water intake, prolonged voiding intervals) in the context of recurrent UTIs and newly flagged obesity, complicated by shift-work schedule, low household support, and food insecurity",
+   "differential": [
+    "Nutrition diagnosis: Inadequate fluid intake related to limited bathroom access during shifts and preference for coffee/sweet tea, as evidenced by patient report of minimal plain water intake and voiding-holding behavior",
+    "Nutrition diagnosis: Excessive energy/fat intake related to large household-portioned traditional meals and frequent diner-food substitution, as evidenced by diet history of fried sides, bulk-cooked meals, and late-night diner leftovers",
+    "Nutrition-related knowledge deficit regarding fluid-UTI relationship and misattribution of weight change to hormonal contraception rather than diet/activity pattern",
+    "Food/nutrition-related behavioral-environmental issue: limited access to nutritious food related to tight household budget, as evidenced by positive food insecurity screening history",
+    "Not a nutrition diagnosis but relevant for referral: recurrent UTI pattern plausibly linked to behavioral/hydration factors rather than an active infection at this visit (urinary symptoms are intermittent/historical, not acute)"
+   ],
+   "keyFindings": [
+    "BMI 31 kg/m2 (obesity class I) with weight +1.2 kg since 2022; central adiposity on exam",
+    "Reports minimal plain water intake during shifts, relying on coffee and sweet tea, with long intervals between voiding due to limited bathroom access",
+    "Large, household-portioned traditional meals (rice, beans, stewed meats, fried tostones) cooked in bulk; frequent late dinners near midnight; occasional diner-food substitution (fries, mozzarella sticks)",
+    "History of real improvement after first pregnancy (more water, less fried food) that has lapsed under current stress/exhaustion - maintenance stage slipping",
+    "Reluctantly discloses occasional missed/doubled contraceptive pill dosing and belief that the pill, not diet, drives her weight gain",
+    "Mismatch: chart documents no supplement or herbal remedy use, but patient disclosed daily cranberry extract capsules, D-mannose at symptom onset, and grandmother's corn silk tea (~2 cups/day) during flares - none previously reported to clinicians",
+    "Positive food insecurity history (household has gone without food at times) that she initially minimizes",
+    "Labs (Hgb, WBC, platelets) and vitals from 2025-01-06 are within normal limits - reassuring, not drivers of today's nutrition plan"
+   ],
+   "plan": [
+    "Document ADIME note: Assessment (diet/hydration/voiding history, anthropometrics, psychosocial/food security barriers), Diagnosis (PES statements for fluid intake and excessive intake patterns), Intervention (hydration strategy for shift work, portion/oil modification of existing recipes, meal timing adjustment, correcting misattribution of weight gain), Monitoring/Evaluation plan",
+    "Counsel on practical hydration strategies compatible with limited bathroom access (e.g., scheduled sips, carrying a water bottle, timing fluids around breaks) framed around reducing UTI recurrence risk, not just weight",
+    "Collaborate on modest, culturally respectful adjustments to existing family recipes (oil quantity in sofrito, portion plating, more non-fried sides) rather than replacing cultural dishes",
+    "Address diner-leftover and late-night eating pattern with simple swaps (bringing a packed meal, lower-fat diner options) tailored to realistic shift constraints",
+    "Clarify role of hydration/voiding habits versus hormonal contraception in weight and infection risk, correcting the misattribution gently using motivational interviewing",
+    "Explore and non-judgmentally document disclosed supplement/herbal use (cranberry extract, D-mannose, corn silk tea) and advise discussing with prescribing clinician regarding safety/interactions and whether they belong in her medical record",
+    "Screen formally for food insecurity today and provide referral information for food assistance resources (e.g., SNAP, WIC if applicable given young children) given reported history of going without food",
+    "Discuss contraceptive adherence pattern (missed/doubled doses) as a referral point back to prescribing clinician/medical team rather than a dietetics intervention target",
+    "Set one or two small, patient-chosen behavior goals (e.g., one extra cup of plain water per shift, swapping fries for a side salad once a week) consistent with stated readiness-to-change and barriers",
+    "Arrange follow-up telehealth visit to reassess hydration/intake changes and reinforce goals"
+   ],
+   "redFlags": [
+    "Fear of kidney damage from recurrent UTIs - validate and ensure she has recent/ongoing medical follow-up for UTI management, not just nutrition",
+    "Food insecurity with two young children in the household - needs timely connection to food assistance resources",
+    "Possible medication nonadherence pattern (missed/doubled contraceptive doses) - flag for communication with prescribing provider",
+    "Undisclosed supplement/herbal use not in chart - ensure documented and reviewed for interactions with current medication"
+   ],
+   "educationPoints": [
+    "Plain water and regular, timely voiding help reduce UTI recurrence risk more directly than cranberry or D-mannose products alone",
+    "Homemade meals can still be high in oil/sodium/calories even when made from scratch; small tweaks to a cherished recipe (less oil, bigger non-fried portion) preserve culture while supporting health goals",
+    "Hormonal contraception can contribute modestly to fluid retention or appetite changes, but is unlikely to be the sole driver of a 1.2 kg weight change over several years - diet, hydration, and activity patterns also matter",
+    "It's safe and encouraged to tell her care team about supplements and home remedies, even if she doesn't think of them as 'real medicine,' so they can check for interactions and give fuller advice",
+    "Food insecurity screening connects patients to resources without judgment; disclosing a tight food budget can open doors to practical support"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Sonia reports taking Jolivette consistently, 'mostly consistent,' only occasionally missing a dose after a late shift and doubling up the next day (h20, h21)",
+    "recordEvidence": "Pharmacy refill history (d3) shows refill pickup pattern consistent with occasional missed doses and makeup dosing, with the most recent refill picked up 4 days later than expected",
+    "teachingPoint": "Self-reported medication adherence can be optimistic; objective refill/pickup patterns can reveal a more irregular pattern that may affect both contraceptive efficacy and the patient's belief that the pill alone explains her weight change, prompting referral back to the prescribing clinician rather than a dietetics-only fix",
+    "factId": "h21",
+    "artifactId": "d3"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "When asked about supplement or over-the-counter product use, Sonia openly discloses daily cranberry extract capsules, D-mannose powder at symptom onset, and her grandmother's corn silk tea (s16, and discoverable in conversation)",
+    "recordEvidence": "Primary care visit note (d2) documents no supplement, herbal, or home remedy use on record",
+    "teachingPoint": "Patients often do not volunteer or have not previously disclosed herbal/supplement use because they do not view it as 'real medicine'; a nonjudgmental, direct supplement history is essential since these products may affect hydration behavior, interact with medications, or create a false sense of UTI prevention, and should be documented going forward",
+    "factId": "s16",
+    "artifactId": "d2"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 19,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "23 F · Recurrent urinary tract infection · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2155730d",
+   "fingerprint": "1e4safb"
+  }
+ }
+}

@@ -191,8 +191,10 @@ export function stripRestatedRecord(c: CaseProfile, has: { labs: boolean; vitals
   );
   const swap = new Map<string, string | null>();
   for (const a of c.actions) {
-    if (ours.has(a.id) || KEEP_ACTION.test(a.name)) continue;
-    const restates = a.kind === "lab" || a.kind === "vitals" || ((a.kind === "record" || a.kind === "assessment" || a.kind === "exam") && RECORD_ACTION.test(a.name));
+    if (ours.has(a.id)) continue;
+    // A lab or vital-signs action always carries values, so it always comes from the record. Other
+    // kinds are removed only when their name says they restate it.
+    const restates = a.kind === "lab" || a.kind === "vitals" || ((a.kind === "record" || a.kind === "assessment" || a.kind === "exam") && RECORD_ACTION.test(a.name) && !KEEP_ACTION.test(a.name));
     if (!restates) continue;
     const to = /immuni|vaccin/i.test(a.name) ? (has.shots ? SYN.shots : null) : a.kind === "vitals" || /vital|blood pressure|weight|height|bmi|anthropometric/i.test(a.name) ? (has.vitals ? SYN.vitals : null) : /problem list|medication list/i.test(a.name) ? null : has.labs ? SYN.labOrder : null;
     swap.set(a.id, to);

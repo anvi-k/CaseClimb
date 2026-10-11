@@ -1,0 +1,379 @@
+{
+ "patient_overview": {
+  "name": "Gayle Rowe",
+  "age": 53,
+  "sex": "Male",
+  "description": "Gayle Rowe is a 53-year-old man in Cliffside Park, New Jersey, living with his wife and extended family of six, who comes in juggling hypertension, prediabetes, kidney and heart disease, and a mouth still healing from recent dental work. He speaks in short bursts, often trailing off and needing a question asked twice before he answers fully, and he visibly loses track of what he was saying. He knows his doctor wants him to change how he eats but feels buried under pill bottles, appointments, and a diet plan he found on a wellness page a neighbor shared with him. His wife, who is anxious and watchful, usually sits close by and jumps in to fill gaps in his answers.",
+  "keywords": [
+   "hypertension",
+   "prediabetes",
+   "chronic kidney disease stage 2",
+   "diabetic nephropathy",
+   "low health literacy",
+   "contemplation stage",
+   "alcohol underreporting",
+   "self-directed diet",
+   "edentulism",
+   "denture adjustment"
+  ]
+ },
+ "demographics": {
+  "occupation": "Former warehouse inventory clerk, now not working due to disability",
+  "residence": "Cliffside Park, New Jersey; household of 6",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Gayle grew up in a working-class household in northern New Jersey where big Sunday dinners were the one time the whole family sat down together, a habit he still misses now that chewing is hard and money is tight. He takes pride in having gone further in school than his parents did, but says numbers and medical words \"swim\" for him, and he relies on his wife or his phone to explain things back to him in plain terms."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Disorder of kidney due to diabetes mellitus",
+  "secondary_diagnoses": [
+   "Sepsis",
+   "Essential hypertension",
+   "Prediabetes",
+   "Anemia",
+   "Ischemic heart disease",
+   "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "Chronic kidney disease stage 2",
+   "Microalbuminuria due to type 2 diabetes mellitus",
+   "Loss of teeth"
+  ],
+  "medical_history": [
+   "Sepsis since 2007",
+   "Essential hypertension since 2013",
+   "Prediabetes since 2013",
+   "Anemia since 2014",
+   "Ischemic heart disease since 2014",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2014",
+   "Chronic kidney disease stage 2 since 2015",
+   "Disorder of kidney due to diabetes mellitus since 2015",
+   "Microalbuminuria due to type 2 diabetes mellitus since 2015",
+   "Loss of teeth since 2026",
+   "Gingivitis (2024-08 to 2024-08, resolved)",
+   "Gingivitis (2025-07 to 2025-07, resolved)",
+   "Gingivitis (2026-07 to 2026-07, resolved)",
+   "Infection of tooth (2026-07 to 2026-07, resolved)",
+   "Primary dental caries (2026-07 to 2026-07, resolved)",
+   "Fitting of denture (2026-08-23)",
+   "Dental plain X-ray bitewing (2026-08-02)",
+   "Take oral or dental impression (2026-08-02)",
+   "Dental consultation and report (2026-08-02)",
+   "Restoration of tooth with coverage of all cusps using dental filling material (2026-07-26)",
+   "Examination of gingivae (2026-07-26)"
+  ],
+  "current_symptoms": [
+   "Low energy most afternoons",
+   "Occasional dizziness when standing up quickly",
+   "Mouth soreness that makes chewing tough foods uncomfortable",
+   "Mild swelling in his feet by evening",
+   "Trouble sleeping through the night"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Several missing teeth and a new partial denture noted on exam, with some difficulty forming words clearly",
+   "Mild gum redness and tenderness around a recently filled tooth",
+   "Looks fatigued, with slightly puffy ankles visible above his socks",
+   "Pauses and loses his train of thought mid-sentence, needing questions repeated"
+  ],
+  "laboratory_data": [
+   "HbA1c: 3.4 % (reference < 5.7; 2026-07-12)",
+   "Glucose: 86.4 mg/dL (reference 70-99 (fasting); 2026-07-12)",
+   "eGFR: 68.2 mL/min/1.73m2 (reference >= 90; 2026-07-12)",
+   "Total cholesterol: 171.1 mg/dL (reference < 200; 2026-07-12)",
+   "LDL cholesterol: 89 mg/dL (reference < 100; 2026-07-12)",
+   "HDL cholesterol: 60.1 mg/dL (reference >= 40; 2026-07-12)",
+   "Triglycerides: 110.3 mg/dL (reference < 150; 2026-07-12)",
+   "Haemoglobin: 12.4 g/dL (reference 12.0-17.5; 2023-06-25)",
+   "White cell count: 8.4 10*3/uL (reference 4.0-11.0; 2023-06-25)",
+   "Platelets: 199.7 10*3/uL (reference 150-450; 2023-06-25)",
+   "Potassium: 5 mmol/L (reference 3.5-5.1; 2026-07-12)",
+   "Sodium: 142.6 mmol/L (reference 135-145; 2026-07-12)",
+   "Urea nitrogen: 16.3 mg/dL (reference 7-20; 2026-07-12)"
+  ],
+  "vital_signs": [
+   "BP: 83/70 mmHg",
+   "HR: 82 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2026-07-12"
+  ],
+  "anthropometrics": [
+   "Height: 174.1 cm",
+   "Weight: 79 kg",
+   "BMI: 26.1 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "insulin isophane  human 70 UNT/ML / insulin  regular  human 30 UNT/ML Injectable Suspension [Humulin]",
+    "dose": "70 UNT/ML",
+    "frequency": "Twice daily, before breakfast and dinner",
+    "purpose": "Prediabetes",
+    "adherence": "Inconsistent; sometimes skips the evening dose when he forgets to eat on schedule",
+    "patient_concerns": "Worried about the needles and unsure how much to draw up some days"
+   },
+   {
+    "name": "Hydrochlorothiazide 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "Once daily in the morning",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent",
+    "patient_concerns": "Says it makes him urinate a lot and he avoids taking it before errands"
+   },
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent",
+    "patient_concerns": "Mentions a dry cough but hasn't brought it up to his doctor"
+   },
+   {
+    "name": "amLODIPine 2.5 MG Oral Tablet",
+    "dose": "2.5 MG",
+    "frequency": "Once daily",
+    "purpose": "Essential hypertension",
+    "adherence": "Consistent",
+    "patient_concerns": "No major complaints, though he sometimes mixes up which pill is which"
+   },
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Worries about bruising easily since starting it"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily at night",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent",
+    "patient_concerns": "Heard from a friend that statins 'wreck your liver' and feels uneasy about it"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Inconsistent; misses doses on days he feels foggy or overwhelmed",
+    "patient_concerns": "Feels tired and slow, unsure if it's the medicine or something else"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest discomfort",
+    "purpose": "Not recorded",
+    "adherence": "Uses rarely; keeps it in a drawer and sometimes forgets where he put it",
+    "patient_concerns": "Nervous about using it 'wrong' and afraid of what it means if he needs it"
+   }
+  ],
+  "supplements_and_otc": [
+   "A multivitamin his wife picks up at the pharmacy",
+   "Cinnamon capsules a friend told him help with blood sugar",
+   "Occasional antacid tablets for heartburn"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "A loosely followed 'clean eating' plan he saw shared on social media by a neighbor, built around smoothies, avoiding anything labeled sugar, and cutting out most bread, though he doesn't follow it consistently",
+  "food_preferences": [
+   "Soft foods now because of his mouth, like mashed potatoes and oatmeal",
+   "Frozen fruit smoothies with yogurt",
+   "Canned soups he can heat up fast",
+   "Deli turkey sandwiches when his teeth allow it"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How much sodium is in the canned soups and deli meats he leans on",
+   "Portion sizes and timing of meals relative to insulin dosing",
+   "Hidden sugar in flavored protein powders he adds to smoothies",
+   "How often he eats out of boredom or stress versus hunger"
+  ],
+  "meal_pattern": "Irregular; sometimes skips breakfast, grazes through the day, then a large dinner with the household",
+  "hydration": "Drinks mostly water during the day but says little about evening drinks",
+  "physical_activity": "Mostly sedentary; short walks around the block a few times a week when he feels up to it",
+  "substance_use": "Reports drinking 'just a beer or two' on weekends but minimizes further detail",
+  "sleep": "Fragmented sleep, waking several times a night, sometimes due to needing the bathroom"
+ },
+ "psychosocial_profile": {
+  "personality": "Overwhelmed and scattered, easily loses the thread of a conversation, seems to be carrying too many instructions at once",
+  "communication_style": "Gives short, clipped answers at first; opens up more if a question is gently repeated or rephrased a second time",
+  "goals": [
+   "Keep his teeth situation from getting worse",
+   "Avoid needing dialysis down the line",
+   "Have enough energy to help his grandkids with homework"
+  ],
+  "concerns": [
+   "Confused about which foods are actually bad for his kidneys versus his blood sugar",
+   "Worried the dental work means he can't eat like he used to",
+   "Feels like there are too many diets and rules to keep track of"
+  ],
+  "beliefs": [
+   "Thinks 'natural' and 'sugar-free' labels mean a food is automatically fine for him",
+   "Believes his smoothie diet is healthy because a lot of people online use it",
+   "Thinks skipping a pill once in a while 'balances out' if he eats better that day"
+  ],
+  "motivations": [
+   "Wanting to still be around for his grandchildren",
+   "Not wanting his wife to worry more than she already does",
+   "Avoiding another hospital stay like the sepsis scare years back"
+  ],
+  "fears": [
+   "Needing dialysis",
+   "Having a heart attack like the ones his imaging keeps hinting at",
+   "Losing more teeth and not being able to eat with the family"
+  ],
+  "barriers": [
+   "Low health literacy makes instructions hard to retain",
+   "Household stress and crowding make quiet meal planning hard",
+   "Limited income relative to a household of six",
+   "Mouth pain limits what he can actually chew"
+  ],
+  "strengths": [
+   "Genuinely wants to do better for his family",
+   "Willing to try structured plans if explained simply",
+   "Has a partner who helps him remember appointments"
+  ],
+  "support_system": "Wife is present and attentive but anxious, often answering for him or hovering nearby during visits, which sometimes helps and sometimes adds pressure",
+  "readiness_to_change": "Contemplation; aware something needs to shift but torn between wanting to stick with his social-media diet and the recommendations which hasn't been feeling results."
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "Says he's 'doing a clean eating thing' he saw online",
+   "Mentions his new dentures and that eating is still an adjustment",
+   "States he takes 'a bunch of pills' but isn't sure what they're all for"
+  ],
+  "discoverable_information": [
+   "Describes his smoothie and soft-food routine in more detail when asked twice",
+   "Admits he skips his evening insulin dose sometimes when meals run late",
+   "Reveals he lives with his wife, kids, and grandkids in one house, which gets loud at mealtimes",
+   "Mentions he worries about the housing situation and money being tight"
+  ],
+  "reluctant_information": [
+   "Admits, only when asked gently a second time, that he has 'a beer or two' most nights, not just weekends",
+   "Acknowledges he sometimes has more like four or five beers when he's stressed about the household",
+   "States he hasn't told his cardiologist about this because he didn't think it mattered with his heart medicine"
+  ],
+  "hidden_information": [
+   "Gayle Rowe has, on at least three occasions this month, finished half a six-pack alone after his wife went to bed",
+   "He stopped filling his metoprolol refill on time twice this year because he 'forgot', not only due to feeling foggy",
+   "He feels embarrassed that he picked his diet plan from a stranger's video rather than from any doctor and avoids admitting this directly"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit an accurate, non-judgmental alcohol history despite initial minimization",
+    "expected_discoveries": [
+     "Gayle's reported 'beer or two on weekends' expands to nightly drinking under gentle follow-up",
+     "Connection between alcohol, blood pressure medications, and fluid balance"
+    ],
+    "possible_patient_reactions": [
+     "Gives a vague answer first ('not much, really')",
+     "Opens up more if asked a second time in a calm, curious tone",
+     "May look to his wife before answering"
+    ]
+   },
+   {
+    "learning_objective": "Assess understanding of a self-directed, social-media-based diet and correct misconceptions using plain language",
+    "expected_discoveries": [
+     "Belief that 'sugar-free' and 'natural' labels guarantee suitability",
+     "Gaps between his smoothie plan and his actual sodium and potassium needs for CKD stage 2"
+    ],
+    "possible_patient_reactions": [
+     "Defends the diet at first ('it's working for other people')",
+     "Becomes curious when shown simple visual comparisons"
+    ]
+   },
+   {
+    "learning_objective": "Explore the impact of tooth loss and new dentures on dietary intake and texture modification needs",
+    "expected_discoveries": [
+     "Reduced intake of fibrous vegetables and whole grains due to chewing difficulty",
+     "Reliance on soft, processed foods that may be higher in sodium"
+    ],
+    "possible_patient_reactions": [
+     "Expresses frustration about not being able to eat family meals the same way",
+     "Relieved to learn about soft, nutrient-dense alternatives"
+    ]
+   },
+   {
+    "learning_objective": "Identify medication adherence gaps and link them to nutrition and lifestyle counseling",
+    "expected_discoveries": [
+     "Inconsistent insulin and metoprolol dosing tied to meal timing and forgetfulness",
+     "Opportunity to simplify routines around household meal chaos"
+    ],
+    "possible_patient_reactions": [
+     "Admits confusion about which pill does what",
+     "Appreciates simple pairing of medication timing with meals"
+    ]
+   },
+   {
+    "learning_objective": "Apply motivational interviewing to a patient in contemplation who feels overwhelmed",
+    "expected_discoveries": [
+     "Ambivalence between loyalty to his online diet and willingness to try evidence-based changes",
+     "Underlying motivation tied to grandchildren and avoiding dialysis"
+    ],
+    "possible_patient_reactions": [
+     "Loses the thread mid-answer, needs gentle redirection",
+     "Responds well when his own words are reflected back to him"
+    ]
+   },
+   {
+    "learning_objective": "Recognize the role of an anxious, hovering partner in the nutrition interview and involve them appropriately",
+    "expected_discoveries": [
+     "Wife fills in details Gayle forgets but may also speak over him",
+     "Opportunity to coach the couple on supportive communication"
+    ],
+    "possible_patient_reactions": [
+     "Gayle defers to his wife repeatedly",
+     "Wife looks relieved when asked directly for her observations"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Household of six includes Gayle, his wife, at least one adult child, and grandchildren, contributing to noise and limited budget for individualized meals",
+   "Private insurance covers his many specialist visits but out-of-pocket costs for dental work have strained finances",
+   "His 'otherwise unemployed, not seeking work' status reflects disability from his cardiac and kidney conditions rather than choice"
+  ],
+  "optional_details": [
+   "Keeps a half-used bag of cinnamon capsules on the kitchen windowsill 'just in case'",
+   "Likes watching old game shows in the afternoon when he feels too tired to do much else",
+   "His wife labels his pill organizer with sticky notes because he mixes up the amlodipine and lisinopril"
+  ]
+ },
+ "source": {
+  "synthea_record": "217875f1",
+  "condition_group": "diabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "overwhelmed and scattered, loses the thread",
+   "communication": "short answers until asked a second time",
+   "readiness": "contemplation: knows something should change but is torn",
+   "literacy": "low health literacy",
+   "eating": "follows a self-directed diet picked up from social media or a friend",
+   "held_back": "drinks more alcohol than they first say",
+   "support": "a partner who is supportive but anxious and hovers"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

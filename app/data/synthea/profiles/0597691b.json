@@ -1,0 +1,354 @@
+{
+ "patient_overview": {
+  "name": "Darby Cole",
+  "age": 26,
+  "sex": "Female",
+  "description": "Darby Cole is a 26-year-old pregnant woman from Midland Park, New Jersey, living in a bustling six-person household, who comes in for a prenatal nutrition visit while also managing chronic back and neck pain, asthma, and hypertension. She is warm and eager to please, agreeing with nearly every suggestion a clinician makes, though she rarely changes anything about her actual eating once she leaves the room. She answers many questions with questions of her own, often pulling from health articles she's read online, and she doesn't do the cooking at home — her mother, who runs the kitchen for the whole family, decides what lands on everyone's plate. She comes across as pleasant, informed, and a little evasive about her drinking, which is more than she first lets on.</description>\n<parameter name=\"keywords\">[\"normal pregnancy\", \"chronic pain\", \"hypertension in pregnancy\", \"asthma\", \"people-pleasing patient\", \"alcohol under-reporting\", \"household cooking by someone else\", \"high health literacy\", \"maintenance slipping\"]"
+ },
+ "demographics": {
+  "occupation": "Dental office front-desk coordinator",
+  "residence": "Midland Park, New Jersey; household of 6",
+  "ethnicity": "White, Hispanic",
+  "language": "English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Darby grew up in the same house she lives in now, a multigenerational home where her mother has always run the kitchen — \"my mom cooks, I just show up and eat,\" she says with a laugh. Meals are a shared, noisy affair with grandparents, siblings, and now Darby's own pregnancy folded into the routine. She was raised to be agreeable and not make extra work for her mother, a habit that extended into how she handles medical advice: she nods along with whatever a provider suggests, genuinely intending to follow through, but the family's established food routines rarely bend for one person's preferences."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Normal pregnancy",
+  "secondary_diagnoses": [
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic neck pain",
+   "Asthma",
+   "Essential hypertension"
+  ],
+  "medical_history": [
+   "Chronic pain since 2018",
+   "Chronic low back pain since 2018",
+   "Chronic neck pain since 2018",
+   "Asthma since 2020",
+   "Essential hypertension since 2020",
+   "Normal pregnancy since 2026",
+   "Acute viral pharyngitis (2025-01 to 2025-01, resolved)",
+   "Normal pregnancy (2025-06 to 2025-07, resolved)",
+   "Viral sinusitis (2026-02 to 2026-03, resolved)",
+   "Gingivitis (2026-04 to 2026-05, resolved)",
+   "Viral sinusitis (2026-05 to 2026-06, resolved)",
+   "Evaluation of uterine fundal height (2026-09-15)",
+   "Auscultation of the fetal heart (2026-09-15)",
+   "Hemogram automated with red blood cells white blood cells hemoglobin hematocrit indices platelet count and manual white blood cell differential (2026-08-18)",
+   "Administration of vaccine product containing only Bordetella pertussis and Clostridium tetani and Corynebacterium diphtheriae antigens (2026-08-18)",
+   "Dental fluoride treatment (2026-06-02)",
+   "Dental plain X-ray bitewing (2026-06-02)"
+  ],
+  "current_symptoms": [
+   "Ongoing dull ache across the low back and neck most days, worse by late afternoon",
+   "Occasional shortness of breath/wheeze, especially around her sister-in-law's cats",
+   "Mild heartburn and swelling in her ankles that she attributes to the pregnancy",
+   "Feels tired but says 'everyone's tired, that's just life with a big family'"
+  ],
+  "allergies": [
+   "Mold (organism)",
+   "House dust mite (organism)",
+   "Animal dander (substance) (Cough)",
+   "Grass pollen (substance)",
+   "Tree pollen (substance)",
+   "Wheat (substance) (Eruption of skin)"
+  ],
+  "clinical_findings": [
+   "Visibly pregnant abdomen consistent with second/third trimester, moves carefully when getting up from a chair, mentions guarding her low back",
+   "Mild intermittent wheeze noted when she describes 'catching her breath' climbing the stairs at work",
+   "Fidgets with her phone and pulls up an article mid-conversation to show the student something she read",
+   "Neck held slightly stiff, rubs the back of her neck when discussing stress"
+  ],
+  "laboratory_data": [
+   "Haemoglobin: 14.4 g/dL (reference 12.0-17.5; 2026-04-21)",
+   "White cell count: 10 10*3/uL (reference 4.0-11.0; 2026-04-21)",
+   "Platelets: 229.2 10*3/uL (reference 150-450; 2026-04-21)"
+  ],
+  "vital_signs": [
+   "BP: 122/94 mmHg",
+   "HR: 74 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-05-19"
+  ],
+  "anthropometrics": [
+   "Height: 172 cm",
+   "Weight: 65.1 kg",
+   "BMI: 22 kg/m2",
+   "Weight change: +1.3 kg since 2025-04-15"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "dose": "325 MG",
+    "frequency": "As needed, taken a few times a week for back and neck flare-ups",
+    "purpose": "Not recorded",
+    "adherence": "Takes it when pain is bad, tries to space doses out more than prescribed since finding out she's pregnant",
+    "patient_concerns": "Worried about taking it while pregnant but says her OB knows and 'said it's fine for now'; deflects with 'isn't acetaminophen the safe one anyway?'"
+   },
+   {
+    "name": "Hydrochlorothiazide 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "Once daily, mornings",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent, occasionally forgets on busy workdays",
+    "patient_concerns": "Read online that diuretics can affect electrolytes in pregnancy and wonders aloud if she should still be on it"
+   },
+   {
+    "name": "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+    "dose": "0.044 MG/ACTUAT",
+    "frequency": "Twice daily, maintenance inhaler",
+    "purpose": "Childhood asthma",
+    "adherence": "Inconsistent; uses it more in spring when pollen is bad, skips it when she feels fine",
+    "patient_concerns": "Doesn't love using a steroid inhaler while pregnant, asks the clinician 'do you think it's really necessary every day?'"
+   },
+   {
+    "name": "NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]",
+    "dose": "0.09 MG/ACTUAT",
+    "frequency": "As needed for wheeze or shortness of breath",
+    "purpose": "Childhood asthma",
+    "adherence": "Carries it but says she rarely needs more than once a week",
+    "patient_concerns": "None significant; comfortable with this one, calls it her 'backup'"
+   },
+   {
+    "name": "amLODIPine 2.5 MG Oral Tablet",
+    "dose": "2.5 MG",
+    "frequency": "Once daily, with breakfast",
+    "purpose": "Essential hypertension",
+    "adherence": "Fairly consistent, taken alongside the hydrochlorothiazide",
+    "patient_concerns": "Asks whether this one is 'the pregnancy-safe blood pressure pill' since she read some aren't"
+   },
+   {
+    "name": "Meperidine Hydrochloride 50 MG Oral Tablet",
+    "dose": "50 MG",
+    "frequency": "As needed, rarely used",
+    "purpose": "Not recorded",
+    "adherence": "Has not filled this recently; keeps a few old pills from a past flare for emergencies",
+    "patient_concerns": "Hesitant to mention she still has old pills at home; downplays how often she's used it"
+   },
+   {
+    "name": "Loratadine 5 MG Chewable Tablet",
+    "dose": "5 MG",
+    "frequency": "As needed for seasonal allergies",
+    "purpose": "Not recorded",
+    "adherence": "Takes it most days in spring and fall",
+    "patient_concerns": "None, considers it harmless and 'basically candy'"
+   },
+   {
+    "name": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "dose": "0.3 ML",
+    "frequency": "Carried at all times, not routinely used",
+    "purpose": "Not recorded",
+    "adherence": "Keeps it in her bag; has never had to use it but checks the expiration date occasionally",
+    "patient_concerns": "Mild anxiety about the wheat allergy risk now that her mother cooks for everyone and sometimes uses flour-based thickeners"
+   }
+  ],
+  "supplements_and_otc": [
+   "Prenatal multivitamin with folic acid",
+   "Occasional calcium-magnesium chews for leg cramps",
+   "Tums for heartburn, taken a few times a week"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Family-style home cooking heavy on rice, beans, fried proteins, and bread, prepared entirely by her mother; portions and menu are not Darby's choice",
+  "food_preferences": [
+   "Her mother's arroz con pollo",
+   "Buttered rolls from the local bakery",
+   "Iced tea sweetened by her mother, not Darby",
+   "Fruit when it's already cut and in the fridge, otherwise she won't bother"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Sodium load from her mother's cooking given her hypertension",
+   "Low independent intake of vegetables unless mother serves them",
+   "Snacking on crackers at the front desk between patients, often skipping a real lunch",
+   "Pattern of 'yesing' nutrition advice without actually changing what's served at home"
+  ],
+  "meal_pattern": "Breakfast skipped or rushed; lunch is often crackers or a granola bar at work; big shared family dinner in the evening",
+  "hydration": "Drinks water inconsistently, relies on sweetened iced tea with dinner",
+  "physical_activity": "Mostly sedentary at her desk job; avoids exercise because of back and neck pain, occasional short walks with a neighbor",
+  "substance_use": "Reports 'maybe one glass of wine on weekends' but screening score and later conversation suggest closer to 3-4 drinks most weekends, sometimes a midweek glass to 'take the edge off'",
+  "sleep": "Fragmented sleep, blames the baby's kicking and her neck pain, averages 6 hours"
+ },
+ "psychosocial_profile": {
+  "personality": "Agreeable to a fault — smiles, nods, and says 'yes, that makes sense' to nearly every suggestion, but rarely follows through because the household routine doesn't change for her",
+  "communication_style": "Tends to answer questions with questions ('Isn't that what the article said too?' 'Wouldn't more protein help with that?'), which can make it hard to pin down her actual habits",
+  "goals": [
+   "Have a healthy baby",
+   "Keep her blood pressure under control through the pregnancy",
+   "Not be 'a burden' by asking her mother to cook differently"
+  ],
+  "concerns": [
+   "Whether her pain medications are safe for the baby",
+   "Her blood pressure readings creeping up at visits",
+   "Feeling guilty for not moving more because of her back"
+  ],
+  "beliefs": [
+   "If she read it on a reputable site, it must apply to her",
+   "Changing her diet means asking her mom to change, which feels unfair to ask",
+   "A glass of wine 'isn't really drinking' if it's just on weekends"
+  ],
+  "motivations": [
+   "Protecting the pregnancy",
+   "Keeping the peace at home",
+   "Appearing informed and on top of her health to providers"
+  ],
+  "fears": [
+   "Her blood pressure getting worse and needing more medication",
+   "Being judged for still having pain medication from before pregnancy",
+   "That her asthma could flare during delivery"
+  ],
+  "barriers": [
+   "No control over home meal planning or cooking",
+   "Chronic pain limiting her ability to exercise or stand to cook herself",
+   "Minimizes her own drinking out of embarrassment",
+   "Says yes to recommendations she has no real path to implementing"
+  ],
+  "strengths": [
+   "Reads health information proactively and retains it well",
+   "Has a strong, trusted support person she talks to regularly",
+   "Genuinely wants to do right by the pregnancy"
+  ],
+  "support_system": "Her neighbor and close friend Priya, who she talks to almost daily and who 'keeps her honest,' more than family in some ways",
+  "readiness_to_change": "Maintenance that's slipping — she made real changes around when her hypertension was diagnosed in 2020, but weekend wine and skipped lunches have crept back in over the last year"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "She is 26, pregnant, works full time at a dental office front desk",
+   "She has chronic back and neck pain since 2018 and takes medication for it",
+   "Her mom does all the cooking at home for the household of six"
+  ],
+  "discoverable_information": [
+   "She often skips breakfast and lunch is usually crackers at her desk",
+   "Her blood pressure medications are hydrochlorothiazide and amlodipine",
+   "She reads a lot of pregnancy and nutrition articles online and brings them up often",
+   "Her asthma inhaler use is inconsistent, more in spring"
+  ],
+  "reluctant_information": [
+   "She has old meperidine tablets at home from a past flare that she still takes occasionally without telling her OB",
+   "She drinks more than 'one glass of wine on weekends' — closer to 3-4 drinks on a weekend night, plus sometimes a midweek glass",
+   "She feels she can't ask her mother to change what's cooked, even though she knows the sodium is a problem for her blood pressure"
+  ],
+  "hidden_information": [
+   "Darby has told her OB she 'basically doesn't drink' during this pregnancy, which isn't fully accurate",
+   "She has quietly cut her Flovent use because she's scared of steroids while pregnant, without discussing it with her prescriber",
+   "She feels isolated at home despite the full house, and leans on her neighbor Priya more than anyone in her family for honest conversations"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Recognize how household meal control affects an agreeable patient's actual intake versus stated intentions",
+    "expected_discoveries": [
+     "Darby's mother decides and cooks all meals",
+     "Darby agrees to dietary changes she has no real ability to implement",
+     "Sodium-heavy family meals conflict with her hypertension management"
+    ],
+    "possible_patient_reactions": [
+     "'Oh, that sounds great, I'll try that!' without any real plan",
+     "'I could ask my mom, but she's got enough on her plate already'"
+    ]
+   },
+   {
+    "learning_objective": "Use non-judgmental screening to uncover underreported alcohol use during pregnancy",
+    "expected_discoveries": [
+     "Her stated 'one glass on weekends' expands to 3-4 drinks under careful questioning",
+     "She feels embarrassed and minimizes further if pushed too directly"
+    ],
+    "possible_patient_reactions": [
+     "'I mean, it's really just wine, that's not a big deal, right?'",
+     "Gets quiet and changes subject back to the baby's growth"
+    ]
+   },
+   {
+    "learning_objective": "Explore medication-food interactions and adherence patterns for pain, asthma, and hypertension medications in pregnancy",
+    "expected_discoveries": [
+     "Inconsistent Flovent and old meperidine use not disclosed to her OB",
+     "Confusion about which blood pressure medication is 'pregnancy safe'"
+    ],
+    "possible_patient_reactions": [
+     "'Wait, is that one not okay to take anymore?'",
+     "Deflects with another question about an article she read"
+    ]
+   },
+   {
+    "learning_objective": "Practice motivational interviewing with a patient whose readiness to change is slipping from maintenance",
+    "expected_discoveries": [
+     "She made real changes at hypertension diagnosis but has drifted",
+     "Her stress score and anxiety score hint at underlying strain she downplays"
+    ],
+    "possible_patient_reactions": [
+     "'I used to be so much better about this, I don't know what happened'",
+     "Agrees enthusiastically with a new plan but offers no concrete steps"
+    ]
+   },
+   {
+    "learning_objective": "Identify and leverage the patient's actual support system in a nutrition care plan",
+    "expected_discoveries": [
+     "Her neighbor Priya is a bigger confidante than her family",
+     "Family support exists in volume (6 people) but not necessarily in nutrition-specific help"
+    ],
+    "possible_patient_reactions": [
+     "'Priya would probably come to an appointment with me if you think that'd help'",
+     "Lights up when talking about Priya versus vague answers about family"
+    ]
+   },
+   {
+    "learning_objective": "Differentiate between high health literacy and actual behavior change",
+    "expected_discoveries": [
+     "She can cite specific nutrient facts from articles but doesn't apply them at mealtimes",
+     "She answers questions with questions, often citing something she read rather than her own experience"
+    ],
+    "possible_patient_reactions": [
+     "'Isn't folate supposed to be higher this trimester anyway?'",
+     "Pulls out her phone to show an article mid-visit"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Household of six includes Darby, her mother who cooks, and other family members not individually specified by the record",
+   "Marital status not recorded is treated as not relevant to the scenario and left unaddressed",
+   "Darby's hypertension and asthma predate pregnancy and are being monitored alongside prenatal care per the care plans listed"
+  ],
+  "optional_details": [
+   "Keeps a running list of pregnancy articles saved on her phone under a folder called 'baby stuff'",
+   "Her desk at the dental office has a jar of butterscotch candies she picks at between patients",
+   "Goes on short evening walks with Priya a few times a week, more for company than exercise"
+  ]
+ },
+ "source": {
+  "synthea_record": "0597691b",
+  "condition_group": "hypertension",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "agreeable to a fault, says yes to everything and changes nothing",
+   "communication": "answers questions with questions",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "someone else in the home does all the cooking and decides what is on the plate",
+   "held_back": "drinks more alcohol than they first say",
+   "support": "a close friend or neighbour who is the main support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

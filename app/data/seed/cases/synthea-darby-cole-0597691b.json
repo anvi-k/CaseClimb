@@ -1,0 +1,919 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Prenatal Nutrition Counseling in an Agreeable Patient with a Mother-Controlled Kitchen and Underreported Alcohol Use",
+  "summary": "A 26-year-old pregnant dental office coordinator with chronic pain, asthma, and hypertension presents for prenatal nutrition counseling. She is highly agreeable and health-literate but has no control over her household's cooking, which is run entirely by her mother, and under careful questioning discloses alcohol intake well above what she initially reported or told her OB. The case teaches dietetics students to assess real-world locus of control over food choices, use motivational interviewing with a patient whose change readiness has slipped, and non-judgmentally uncover a patient-chart mismatch around alcohol use during pregnancy.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Midland Park, New Jersey, seated at the kitchen table with household activity audible in the background",
+  "encounterType": "nutrition assessment / counseling",
+  "difficulty": 3,
+  "patient": {
+   "name": "Darby Cole",
+   "age": 26,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Dental office front-desk coordinator",
+   "language": "English",
+   "appearance": "Visibly pregnant, second/third trimester, sitting at a kitchen table at home with some household noise audible in the background. Moves carefully when adjusting position, occasionally rubs the back of her neck. Has her phone nearby and glances at it periodically.",
+   "portrait": "/portraits/synthea-darby-cole-0597691b.jpg"
+  },
+  "persona": {
+   "personality": "Warm, agreeable, eager to please, intelligent and well-read but avoidant of conflict, especially regarding her mother and her own habits she feels embarrassed about.",
+   "communicationStyle": "Frequently answers questions with questions, often referencing online articles; smiles and nods along with suggestions; becomes vaguer or changes subject when conversation nears sensitive topics like alcohol or old medications.",
+   "healthLiteracy": "high",
+   "emotionalState": "Generally upbeat and cooperative, with underlying mild anxiety about blood pressure and medication safety; brief flashes of guilt or deflection when sensitive topics arise.",
+   "background": "Grew up and still lives in a busy multigenerational home in Midland Park, NJ, where her mother has always run the kitchen. Works full time at a dental office front desk. Leans on her neighbor and close friend Priya for honest, judgment-free conversation more than she does her own family.",
+   "speechExamples": [
+    "Oh that makes total sense, I'll definitely try that!",
+    "Wait, isn't that what the article said too?",
+    "I mean, it's just wine, that's not really drinking, right?",
+    "My mom's got enough going on, I don't want to add to her plate.",
+    "Priya would probably come with me if you think that'd help."
+   ],
+   "concerns": [
+    "Whether her pain medications are safe for the baby",
+    "Her blood pressure readings creeping up at visits",
+    "Feeling guilty for not moving more because of her back pain"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are meeting with Darby Cole, a 26-year-old pregnant patient (approximately 28 weeks), for a telehealth prenatal nutrition counseling visit. She has chronic back/neck pain, asthma, and hypertension, and was referred for nutrition assessment and counseling. Review the available chart information before the visit.",
+   "chiefComplaint": "Referral for prenatal nutrition assessment and counseling",
+   "openingLine": "Hi! My doctor's office set this up, I think it's just to go over what I'm eating since I'm pregnant.",
+   "tasks": [
+    "Take a focused nutrition history including meal pattern, food sources, and household food environment",
+    "Assess relevant barriers to behavior change and the patient's actual support system",
+    "Screen for substance use in a non-judgmental, structured way and compare findings with the chart",
+    "Identify a nutrition diagnosis using the PES format and document using the ADIME framework",
+    "Collaboratively set one or two realistic, patient-generated goals using motivational interviewing techniques"
+   ],
+   "timeLimitMin": 30
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Prenatal nutrition assessment, second/third trimester"
+   },
+   {
+    "label": "Care team",
+    "value": "OB/GYN: Dr. R. Fenwick; PCP for hypertension/asthma management; Dietetics referral for prenatal nutrition counseling"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic pain (since 2018); Chronic low back pain (since 2018); Chronic neck pain (since 2018); Asthma (since 2020); Essential hypertension (since 2020); Normal pregnancy (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; Hydrochlorothiazide 25 MG Oral Tablet; 120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]; NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]; amLODIPine 2.5 MG Oral Tablet; Meperidine Hydrochloride 50 MG Oral Tablet; Loratadine 5 MG Chewable Tablet; NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism); House dust mite (organism); Animal dander (substance) (Cough, moderate); Grass pollen (substance); Tree pollen (substance); Wheat (substance) (Eruption of skin, moderate)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "26-year-old pregnant patient presenting for prenatal nutrition counseling visit.",
+    "says": "Hi! My doctor's office set this up, I think it's just to go over what I'm eating since I'm pregnant.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f2",
+    "category": "pmh",
+    "topic": "pain history",
+    "chart": "Reports chronic low back and neck pain since 2018, managed with medication.",
+    "says": "I've had back and neck pain since like 2018, it's just part of life at this point.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "social",
+    "topic": "household cooking",
+    "chart": "Reports mother does all meal planning and cooking for household of six.",
+    "says": "My mom does all the cooking, honestly I just show up and eat whatever she's made.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works full time as dental office front-desk coordinator.",
+    "says": "I'm up front at a dental office, so it's a lot of sitting and phone calls.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "meal timing",
+    "chart": "Reports skipping or rushing breakfast most days; lunch is usually crackers or a granola bar at desk.",
+    "says": "Breakfast kind of doesn't happen most days, and lunch is whatever's in my drawer, usually crackers.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "medications",
+    "topic": "blood pressure medications",
+    "chart": "Reports taking hydrochlorothiazide 25mg daily and amlodipine 2.5mg daily for hypertension.",
+    "says": "I take the water pill and the other blood pressure one every morning, mostly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "other",
+    "topic": "health information sources",
+    "chart": "Reports frequently reading pregnancy and nutrition articles online and referencing them in conversation.",
+    "says": "I read a lot, I have this whole folder on my phone called 'baby stuff' with articles.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f8",
+    "category": "medications",
+    "topic": "inhaler use pattern",
+    "chart": "Reports inconsistent use of maintenance inhaler, more frequent in spring pollen season.",
+    "says": "I use my inhaler more in spring when the pollen's bad, otherwise I kind of forget it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "nutrition",
+    "topic": "typical dinner",
+    "chart": "Reports family dinner typically includes rice, beans, fried protein, and buttered bread.",
+    "says": "Dinner's usually rice and beans and some kind of fried chicken or meat, with bread from the bakery down the street.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "nutrition",
+    "topic": "vegetable intake",
+    "chart": "Reports low independent vegetable intake unless mother serves pre-prepared fruit.",
+    "says": "I'll eat fruit if it's already cut up in the fridge, but I don't really go looking for vegetables myself.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "nutrition",
+    "topic": "beverage choices",
+    "chart": "Reports drinking sweetened iced tea with dinner most nights, inconsistent plain water intake.",
+    "says": "My mom makes this iced tea, it's sweet, and that's basically what I drink with dinner. Water is hit or miss.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "function",
+    "topic": "physical activity",
+    "chart": "Reports mostly sedentary job, avoids exercise due to back/neck pain, occasional short walks with neighbor.",
+    "says": "I don't really exercise, my back makes it hard, but I'll walk with my neighbor Priya sometimes in the evening.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "psychosocial",
+    "topic": "support system",
+    "chart": "Identifies neighbor Priya as primary confidante, talks to her almost daily.",
+    "says": "Priya's next door, we talk basically every day, she keeps me honest about stuff.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "family",
+    "topic": "household size",
+    "chart": "Lives in multigenerational household of six.",
+    "says": "It's a full house, me, my mom, grandparents, siblings, it's never quiet.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "psychosocial",
+    "topic": "asking for changes at home",
+    "chart": "Reports feeling unable to ask mother to change cooking given mother's workload.",
+    "says": "I could ask my mom to change things but she's already got so much on her plate, I don't want to be a bother.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "substance",
+    "topic": "drinking pattern",
+    "chart": "Initially reports drinking about one glass of wine on weekends.",
+    "says": "Oh, I maybe have like one glass of wine on the weekend, that's about it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "substance",
+    "topic": "drinking pattern detail",
+    "chart": "With further questioning, reports 3-4 drinks on weekend nights, occasionally a midweek drink.",
+    "says": "I mean... okay, it's probably more like 3 or 4 on a Saturday night, and sometimes I'll have one in the middle of the week too if it's been a lot.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "beliefs about wine",
+    "chart": "States belief that weekend wine does not count as significant drinking.",
+    "says": "It's just wine though, and it's the weekend, that's not really drinking-drinking, right?",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "medications",
+    "topic": "pain medication use",
+    "chart": "Reports taking acetaminophen/oxycodone a few times a week for pain flares, tries to space doses out since learning of pregnancy.",
+    "says": "I take the Percocet when my back's really bad, a few times a week maybe, I've been trying to space it out more now that I'm pregnant.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "medications",
+    "topic": "old pain medication",
+    "chart": "Reports keeping and occasionally taking old meperidine tablets from a prior flare without informing OB.",
+    "says": "I've got some old pills from a flare a while back, meperidine I think, I don't tell my doctor every time I take one.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f21",
+    "category": "other",
+    "topic": "OB disclosure accuracy",
+    "chart": "Has told her OB she basically does not drink during this pregnancy.",
+    "says": "I told my doctor I basically don't drink right now, since, you know, it's not like every day.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f22",
+    "category": "adherence",
+    "topic": "inhaler discontinuation",
+    "chart": "Has quietly reduced fluticasone inhaler use due to fear of steroid use in pregnancy, without informing prescriber.",
+    "says": "Honestly I kind of stopped using the steroid inhaler as much, I just didn't love the idea of a steroid every day with the baby, I didn't really tell anyone.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f23",
+    "category": "psychosocial",
+    "topic": "feeling at home",
+    "chart": "Reports feeling isolated at home despite large household, relies more on neighbor than family for honest conversation.",
+    "says": "It's weird, with six people in the house I still feel kind of alone sometimes, Priya gets it more than my family does.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "goals",
+    "topic": "pregnancy priorities",
+    "chart": "States primary goal of having a healthy baby and keeping blood pressure controlled.",
+    "says": "I just want a healthy baby and to keep my blood pressure where it should be.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "not wanting to burden mother",
+    "chart": "States goal of not being a burden by asking mother to cook differently.",
+    "says": "I don't want to be a burden, my mom already does so much for everyone.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "ros",
+    "topic": "swelling and heartburn",
+    "chart": "Reports mild ankle swelling and heartburn attributed to pregnancy.",
+    "says": "My ankles swell a bit and I get heartburn, but I figure that's just pregnancy stuff.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Reports fatigue, attributes to having a large family and normal life demands.",
+    "says": "I'm tired, but honestly everyone in my family is tired, that's just life with a big household.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "respiratory symptoms",
+    "chart": "Reports occasional shortness of breath/wheeze especially around cats.",
+    "says": "I get a little wheezy sometimes, especially if I'm around my sister-in-law's cats.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "psychosocial",
+    "topic": "readiness to change history",
+    "chart": "Reports having made real dietary/lifestyle changes around the time of hypertension diagnosis in 2020 but drifting back over the past year.",
+    "says": "When I first got told I had high blood pressure back in 2020 I was so on top of it, I don't know what happened, it kind of crept back.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "nutrition",
+    "topic": "snacking at work",
+    "chart": "Reports snacking on butterscotch candies at desk between patients.",
+    "says": "There's this jar of butterscotch candies at my desk, I pick at those between patients.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "allergies",
+    "topic": "wheat allergy concern",
+    "chart": "Reports wheat allergy with skin eruption, mild concern about mother using flour-based thickeners.",
+    "says": "I'm allergic to wheat, breaks me out, I worry a little since my mom sometimes thickens things with flour.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f32",
+    "category": "other",
+    "topic": "blood pressure medication confusion",
+    "chart": "Expresses uncertainty about which antihypertensive is considered safer in pregnancy.",
+    "says": "Is amlodipine the one that's supposed to be the pregnancy-safe blood pressure pill? I read something about that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "other",
+    "topic": "sleep pattern",
+    "chart": "Reports fragmented sleep averaging 6 hours, attributes to fetal movement and neck pain.",
+    "says": "I'm sleeping maybe 6 hours, broken up, between the baby kicking and my neck.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f34",
+    "category": "other",
+    "topic": "dental visit history",
+    "chart": "Reports recent dental fluoride treatment and bitewing X-ray earlier this year.",
+    "says": "I had a cleaning and some X-rays done at work, perks of working at a dental office I guess.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [],
+    "result": "Breakfast: skipped most days, sometimes a few crackers. Lunch: crackers or a granola bar at her desk. Dinner: family-style meal prepared by mother - rice, beans, fried chicken, buttered roll, sweetened iced tea. Snacks: butterscotch candies at desk, fruit only if pre-cut and visible in fridge.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [],
+    "result": "Patient verbalizes agreement with all suggestions, describes having made changes around the time of hypertension diagnosis in 2020 but reports gradual drift back to prior habits over the past year; endorses wanting to change but cannot name a concrete next step.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score consistent with 'maybe one glass of wine on weekends' as initially reported; score 3 based on stated frequency and quantity (does not reflect amounts disclosed later in interview).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Household food environment / meal preparation assessment",
+    "aliases": [],
+    "result": "Patient reports her mother plans and cooks all meals for a household of six; patient has no role in menu planning, grocery shopping, or seasoning; portions and foods served are not within patient's control.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review OB prenatal note for substance use documentation",
+    "aliases": [],
+    "result": "OB prenatal note dated this trimester states patient reports minimal to no alcohol use during pregnancy.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review pharmacy fill history",
+    "aliases": [],
+    "result": "Hydrochlorothiazide 25mg and amlodipine 2.5mg show regular monthly fills. Fluticasone (Flovent) inhaler shows a single fill 4 months ago with no refills since, despite twice-daily prescribed dosing.",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Fluid/hydration intake assessment",
+    "aliases": [],
+    "result": "Patient reports inconsistent plain water intake, relies on sweetened iced tea with dinner most nights; does not track daily ounces.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Sodium-focused diet screening questions",
+    "aliases": [],
+    "result": "Patient identifies family dinners (rice, beans, fried proteins) and bakery bread/rolls as regular items; unable to estimate sodium content; states she does not add salt herself but does not know what her mother adds during cooking.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 122/94 mmHg, heart rate 74/min, respiratory rate 13/min, weight 65.1 kg, height 172 cm, BMI 22 kg/m2, weight change +1.3 kg since 2025-04-15 (recorded 2026-05-19).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Haemoglobin 14.4 g/dL; White cell count 10 10*3/uL; Platelets 229.2 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-04-21); Hep B adult (2022-03-29); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-07-20); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2021-03-23); meningococcal MCV4P (2021-03-23).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Pharmacy Fill History (Last 6 Months)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-09-10",
+    "author": "Retail Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Strength",
+      "Last Fill Date",
+      "Days Supply",
+      "Fills in Last 6 Months"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hydrochlorothiazide",
+        "25 MG",
+        "2026-08-28",
+        "30",
+        "5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine",
+        "2.5 MG",
+        "2026-08-28",
+        "30",
+        "5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Fluticasone propionate MDI (Flovent)",
+        "0.044 MG/ACTUAT",
+        "2026-05-02",
+        "30",
+        "1"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Albuterol MDI (ProAir)",
+        "0.09 MG/ACTUAT",
+        "2026-06-15",
+        "1 inhaler",
+        "2"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen/Oxycodone (Percocet)",
+        "325/10 MG",
+        "2026-07-20",
+        "20 tablets",
+        "3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Loratadine",
+        "5 MG",
+        "2026-04-01",
+        "30",
+        "2"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Prenatal Visit Note - OB/GYN",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-08-18",
+    "author": "Dr. R. Fenwick, OB/GYN",
+    "body": "26yo G2P1 at approximately 28 weeks gestation presents for routine prenatal visit. Fundal height and fetal heart auscultation performed, both appropriate for gestational age. Blood pressure stable on current antihypertensive regimen (hydrochlorothiazide, amlodipine). Patient reports minimal to no alcohol use during pregnancy. Denies tobacco or illicit drug use. Reports occasional use of prescribed pain medication for chronic back/neck pain, states OB aware and approves continued use as needed. Tdap administered this visit. Continue current medications, follow up in 4 weeks."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Anthropometric Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-09-10",
+    "author": "Prenatal Clinic",
+    "body": "Height: 172 cm. Weight: 65.1 kg (most recent clinic weight, 2026-08-18). Pre-pregnancy BMI: 22 kg/m2. Weight change: +1.3 kg since 2025-04-15 baseline."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic pain (since 2018)\nChronic low back pain (since 2018)\nChronic neck pain (since 2018)\nAsthma (since 2020)\nEssential hypertension (since 2020)\nNormal pregnancy (since 2026)\n\nRECENTLY RESOLVED\nAcute viral pharyngitis (2025-01 to 2025-01)\nNormal pregnancy (2025-06 to 2025-07)\nViral sinusitis (2026-02 to 2026-03)\nGingivitis (2026-04 to 2026-05)\nViral sinusitis (2026-05 to 2026-06)\n\nPROCEDURES\n2026-09-15: Evaluation of uterine fundal height (Normal pregnancy)\n2026-09-15: Auscultation of the fetal heart (Normal pregnancy)\n2026-08-18: Hemogram automated with red blood cells white blood cells hemoglobin hematocrit indices platelet count and manual white blood cell differential (Normal pregnancy)\n2026-08-18: Administration of vaccine product containing only Bordetella pertussis and Clostridium tetani and Corynebacterium diphtheriae antigens (Normal pregnancy)\n2026-06-02: Dental fluoride treatment (Patient referral for dental care)\n2026-06-02: Dental plain X-ray bitewing\n\nRECENT ENCOUNTERS\n2026-09-15 ambulatory: Prenatal visit (Normal pregnancy)\n2026-08-18 ambulatory: Prenatal visit (Normal pregnancy)\n2026-08-15 ambulatory: Asthma follow-up (Asthma)\n2026-07-21 ambulatory: Prenatal visit (Normal pregnancy)\n2026-06-23 ambulatory: Prenatal visit (Normal pregnancy)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Asthma self management; Lifestyle education regarding hypertension; Routine antenatal care; Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+        "2026-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25 MG Oral Tablet",
+        "2026-05",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+        "2026-05",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "NDA021457 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [ProAir]",
+        "2026-05",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "amLODIPine 2.5 MG Oral Tablet",
+        "2026-05",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Meperidine Hydrochloride 50 MG Oral Tablet",
+        "2013-03",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Loratadine 5 MG Chewable Tablet",
+        "2000-10",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+        "2000-10",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Haemoglobin",
+        "14.4",
+        "g/dL",
+        "12.0-17.5",
+        "2026-04-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "10",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-04-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "229.2",
+        "10*3/uL",
+        "150-450",
+        "2026-04-21"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize how household meal control affects an agreeable patient's actual intake versus stated intentions, and adapt the nutrition care plan to the realistic locus of control.",
+    "factIds": [
+     "f3",
+     "f9",
+     "f10",
+     "f15",
+     "f25"
+    ],
+    "actionIds": [
+     "a4",
+     "a1"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Use non-judgmental, structured screening to uncover underreported alcohol use during pregnancy and compare it against documentation elsewhere in the chart.",
+    "factIds": [
+     "f16",
+     "f17",
+     "f18",
+     "f21"
+    ],
+    "actionIds": [
+     "a3",
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore medication-food interactions and self-directed adherence changes (pain, asthma, hypertension medications) relevant to nutrition counseling and interprofessional communication.",
+    "factIds": [
+     "f6",
+     "f19",
+     "f20",
+     "f22",
+     "f32"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Apply motivational interviewing techniques with a patient whose readiness to change has slipped from a prior maintenance stage, eliciting a concrete, patient-generated action step rather than passive agreement.",
+    "factIds": [
+     "f29",
+     "f24"
+    ],
+    "actionIds": [
+     "a2"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify and incorporate the patient's actual support system (neighbor Priya) into a feasible nutrition care plan, rather than defaulting to assumptions about family support.",
+    "factIds": [
+     "f13",
+     "f23"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o6",
+    "text": "Differentiate high health literacy and information-seeking behavior from actual dietary behavior change, and tailor counseling accordingly.",
+    "factIds": [
+     "f7",
+     "f32"
+    ],
+    "actionIds": []
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prenatal nutrition assessment in a patient with excess sodium intake relative to hypertension, irregular meal pattern, and underreported alcohol use during pregnancy",
+   "differential": [
+    "Nutrition diagnosis: Excessive sodium intake related to lack of control over home meal preparation as evidenced by reported high-sodium family meals and known hypertension diagnosis",
+    "Nutrition diagnosis: Inconsistent meal/snack pattern related to work schedule and chronic pain limiting self-prepared meals as evidenced by skipped breakfast and crackers-only lunches",
+    "Nutrition diagnosis: Limited independent fruit/vegetable intake related to lack of control over household food selection as evidenced by reliance on mother to pre-prepare produce",
+    "Behavioral concern: Alcohol intake during pregnancy exceeding patient's initial self-report and OB documentation, warranting referral/communication with OB team",
+    "Medication-related concern: self-directed discontinuation of maintenance asthma inhaler, outside nutrition scope but relevant for interprofessional referral"
+   ],
+   "keyFindings": [
+    "Mother controls all meal planning/cooking for household of six; patient has no independent control over menu, portions, or sodium content",
+    "Breakfast frequently skipped; lunch typically crackers/granola bar at desk; large shared dinner heavy in rice, beans, fried protein, and bread",
+    "Sweetened iced tea is primary dinner beverage; plain water intake inconsistent",
+    "Initial report of 'one glass of wine on weekends' expands under further questioning to 3-4 drinks most weekend nights plus occasional midweek drinking",
+    "OB chart documentation states minimal to no alcohol use, inconsistent with more detailed disclosure to dietitian",
+    "Pharmacy fill history shows only one Flovent fill in 6 months versus consistent hydrochlorothiazide/amlodipine fills, consistent with patient's own report of quietly reducing steroid inhaler use",
+    "Patient's readiness to change has slipped from an earlier maintenance stage (2020 hypertension diagnosis) with no concrete current action plan despite verbal agreement with suggestions",
+    "Neighbor Priya identified as primary support/confidante, more so than household family members"
+   ],
+   "plan": [
+    "Document ADIME note capturing household food environment, meal pattern, and sodium exposure as primary nutrition diagnosis",
+    "Collaboratively identify one or two small, feasible changes that do not require the mother to overhaul family cooking (e.g., patient-controlled beverage swap at her own place setting, bringing a piece of fruit to work)",
+    "Use motivational interviewing to elicit a specific, patient-generated next step rather than accepting passive agreement; consider involving Priya as an accountability partner given patient's stated support system",
+    "Communicate alcohol use discrepancy and inhaler nonadherence findings back to the OB/prenatal care team per clinic protocol for coordinated care (with patient's awareness), as these are outside dietetics' direct scope to manage but relevant to overall pregnancy risk",
+    "Schedule follow-up nutrition visit to assess whether identified small changes were implemented and to reassess readiness to change",
+    "Provide education on sodium and blood pressure in pregnancy, hydration, and balanced meal timing framed around what the patient herself can control"
+   ],
+   "redFlags": [
+    "Alcohol use during pregnancy exceeding initial self-report, with discrepant documentation in the OB chart",
+    "Self-directed discontinuation of a prescribed maintenance asthma medication without informing the prescriber",
+    "Undisclosed intermittent use of an old opioid (meperidine) outside of OB's awareness"
+   ],
+   "educationPoints": [
+    "Sodium and blood pressure management strategies that work within a shared family meal structure rather than requiring the cook to change",
+    "Realistic goal-setting distinguishing verbal agreement from actionable, patient-controlled steps",
+    "Safe hydration and limiting sugar-sweetened beverages in pregnancy",
+    "Role of consistent meal timing (not skipping breakfast/lunch) in energy, blood pressure, and appetite regulation at dinner",
+    "Clarification that alcohol use during pregnancy carries risk regardless of perceived quantity ('just wine' / 'just weekends') and the importance of accurate disclosure to the full care team"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Darby states she told her OB she basically doesn't drink during this pregnancy, and separately reports to the dietitian a weekend pattern that, under direct questioning, amounts to 3-4 drinks most weekend nights plus occasional midweek drinking.",
+    "recordEvidence": "OB prenatal visit note documents 'patient reports minimal to no alcohol use during pregnancy.'",
+    "teachingPoint": "Self-reported substance use can vary by context and audience; triangulating patient report across visits and using structured, non-judgmental screening tools can surface clinically significant underreporting that affects fetal risk counseling.",
+    "factId": "f21",
+    "artifactId": "d4"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Darby reports she quietly cut back on her Flovent (fluticasone) inhaler because of fear of steroid use during pregnancy, without telling her prescriber.",
+    "recordEvidence": "Pharmacy fill history shows only one Flovent fill in the last 6 months despite a twice-daily prescribed regimen, versus five consistent fills each for hydrochlorothiazide and amlodipine over the same period.",
+    "teachingPoint": "Pregnancy-related medication fears can lead to silent nonadherence; refill patterns can reveal gaps in self-reported adherence that patients may not volunteer, and this has downstream relevance for respiratory status and overall counseling approach even within a nutrition-focused visit.",
+    "factId": "f22",
+    "artifactId": "d2"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 4,
+   "condition": "Normal pregnancy",
+   "conditionLabel": "26 F · Normal pregnancy, Essential hypertension, Asthma +3 · 8 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "0597691b",
+   "fingerprint": "k5eks8"
+  }
+ }
+}

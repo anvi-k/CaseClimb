@@ -1,0 +1,377 @@
+{
+ "patient_overview": {
+  "name": "Arlie Farrell",
+  "age": 72,
+  "sex": "Male",
+  "description": "Arlie Farrell is a 72-year-old white man who still works full-time doing overnight security shifts, living with ischemic heart disease, high blood pressure, and chronic low back pain. He's anxious and quick to apologize, often bracing himself as if he's about to be scolded for his eating habits or missed doses. He tends to steer the conversation away from anything that makes him feel exposed, especially around reading labels or following written instructions. A dietetics student will need patience and gentleness to get past his deflections and reach what's really going on with his day-to-day eating.",
+  "keywords": [
+   "ischemic heart disease",
+   "hypertension",
+   "chronic low back pain",
+   "shift work eating",
+   "low health literacy",
+   "contemplation stage",
+   "vending machine diet",
+   "faith community support",
+   "polypharmacy",
+   "anxious patient"
+  ]
+ },
+ "demographics": {
+  "occupation": "Overnight security guard at a retail distribution warehouse",
+  "residence": "Holiday City-Berkeley, New Jersey; household of 4",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Single",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicare",
+  "cultural_context": "Arlie grew up in a working-class family in rural New Jersey and left school after his GED to start working right away, a point of quiet pride for him. He never married and has spent much of his adult life in physically demanding jobs where eating was something squeezed in between tasks, not planned around. His church community, which he's attended for over twenty years, is the closest thing he has to family, and the potluck dinners there are some of the only home-cooked meals he gets."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Ischemic heart disease",
+  "secondary_diagnoses": [
+   "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "Essential hypertension",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic sinusitis"
+  ],
+  "medical_history": [
+   "Ischemic heart disease since 1998",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 1998",
+   "Essential hypertension since 2000",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic sinusitis since 2025",
+   "Streptococcal sore throat (2023-06 to 2023-06, resolved)",
+   "Primary dental caries (2024-01 to 2024-01, resolved)",
+   "Acute bronchitis (2025-07 to 2025-07, resolved)",
+   "Sinusitis (2025-08 to 2025-11, resolved)",
+   "Acute infective cystitis (2025-12 to 2025-12, resolved)",
+   "Antibiotic therapy (2025-12-17)",
+   "Urinalysis with reflex to microscopy and culture (2025-12-17)",
+   "Urine specimen collection (2025-12-17)",
+   "Discussion about pregnancy (2025-12-17)",
+   "Evaluation procedure (2025-12-17)",
+   "History and physical examination limited (2025-12-17)"
+  ],
+  "current_symptoms": [
+   "Dull, aching low back pain that flares after standing for long stretches at work",
+   "Occasional chest tightness he describes as 'a weird squeeze' that comes and goes",
+   "Stuffy nose and post-nasal drip most mornings",
+   "Fatigue, especially toward the end of his overnight shifts",
+   "Occasional dizziness he attributes to 'just getting older'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Mild forward-leaning posture and slow, careful movements consistent with chronic low back pain",
+   "Appears tired, with faint dark circles, consistent with irregular shift-work sleep",
+   "Nasal congestion and mouth breathing with a slightly hoarse voice from chronic sinusitis",
+   "Mild midsection fullness consistent with BMI in overweight range"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 157.9 mg/dL (reference < 200; 2025-01-15)",
+   "LDL cholesterol: 82.2 mg/dL (reference < 100; 2025-01-15)",
+   "HDL cholesterol: 51 mg/dL (reference >= 40; 2025-01-15)",
+   "Triglycerides: 123.7 mg/dL (reference < 150; 2025-01-15)",
+   "Haemoglobin: 17.4 g/dL (reference 12.0-17.5; 2026-01-21)",
+   "White cell count: 5.5 10*3/uL (reference 4.0-11.0; 2026-01-21)",
+   "Platelets: 295.3 10*3/uL (reference 150-450; 2026-01-21)"
+  ],
+  "vital_signs": [
+   "BP: 113/80 mmHg",
+   "HR: 74 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-01-21"
+  ],
+  "anthropometrics": [
+   "Height: 173.7 cm",
+   "Weight: 83.4 kg",
+   "BMI: 27.6 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Hydrochlorothiazide 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "Once daily, morning",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent, but admits he sometimes forgets on busy shift days",
+    "patient_concerns": "Worried it makes him need the bathroom too often during his shift, so he sometimes skips it before work"
+   },
+   {
+    "name": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "dose": "325 MG",
+    "frequency": "As needed for pain, up to twice a day",
+    "purpose": "Not recorded",
+    "adherence": "Takes it sparingly because he's afraid of 'getting hooked' and only uses it when the back pain is unbearable",
+    "patient_concerns": "Scared of the stories he's heard about painkillers like this one, keeps asking if he's taking too much"
+   },
+   {
+    "name": "Ibuprofen 400 MG Oral Tablet [Ibu]",
+    "dose": "400 MG",
+    "frequency": "As needed, usually with meals when his back flares",
+    "purpose": "Not recorded",
+    "adherence": "Fairly regular when pain is bad, otherwise skips it",
+    "patient_concerns": "Worries it's hurting his stomach since he sometimes takes it on an empty stomach from the vending machine run"
+   },
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily, morning",
+    "purpose": "Essential hypertension",
+    "adherence": "Consistent, keeps it next to his coffee maker as a reminder",
+    "patient_concerns": "None stated"
+   },
+   {
+    "name": "amLODIPine 2.5 MG Oral Tablet",
+    "dose": "2.5 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Essential hypertension",
+    "adherence": "Inconsistent; forgets evening dose often when working late shifts",
+    "patient_concerns": "Mentions his ankles sometimes swell and wonders if the pill is 'not working right'"
+   },
+   {
+    "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "dose": "300 MG",
+    "frequency": "As needed for pain",
+    "purpose": "Not recorded",
+    "adherence": "Uses only on his worst back pain days, tries to avoid it because he confuses it with the other narcotic pill",
+    "patient_concerns": "Afraid of taking the wrong pain pill combination and overdosing by accident"
+   },
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily, morning",
+    "purpose": "Not recorded",
+    "adherence": "High; takes it with his lisinopril because 'the nurse told me to pair them'",
+    "patient_concerns": "Worries about bruising easily but hasn't mentioned it to his doctor"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent",
+    "patient_concerns": "Doesn't understand why he needs it since 'my numbers were fine last time'"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily, extended release",
+    "purpose": "Not recorded",
+    "adherence": "Consistent on days off, less so during long shift stretches when he loses track of time",
+    "patient_concerns": "Feels more tired since starting it and isn't sure if that's normal"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest tightness",
+    "purpose": "Not recorded",
+    "adherence": "Carries it in his jacket pocket but rarely uses it, afraid of 'setting something off' by using it wrong",
+    "patient_concerns": "Nervous about spraying it incorrectly since the instructions on the box are hard for him to follow"
+   }
+  ],
+  "supplements_and_otc": [
+   "Store-brand antacid tablets kept in his truck",
+   "Saline nasal spray for his sinus congestion",
+   "A multivitamin his sister bought him that he takes 'when I remember'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Irregular, driven by overnight shift schedule; heavy reliance on vending machines, gas station food, and fast food drive-throughs between midnight and 6 AM",
+  "food_preferences": [
+   "Likes salty snacks like pretzels and chips because they're 'easy and don't go bad'",
+   "Enjoys his church's potluck casseroles and baked ham on Sundays",
+   "Prefers coffee loaded with cream and sugar to stay awake on shift",
+   "Dislikes most vegetables except canned corn and green beans"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Frequent purchases of candy bars and sugary soda from the break room machine during overnight shifts",
+   "Skips meals during the day then eats a large, heavy dinner before his shift starts",
+   "Relies on fast food value menus (burgers, fries) on the drive home at 6 AM",
+   "Rarely reads nutrition labels on packaged snacks, often guessing at sodium or sugar content"
+  ],
+  "meal_pattern": "Skips breakfast most days since he sleeps through mid-morning; small lunch; large dinner before his overnight shift; grazes on vending machine snacks through the night",
+  "hydration": "Drinks a lot of coffee and some soda; rarely drinks plain water unless reminded",
+  "physical_activity": "Walks the warehouse floor during shifts but otherwise sedentary; back pain limits exercise on days off",
+  "substance_use": "Never smoked tobacco; audit-C alcohol score of 0, essentially does not drink",
+  "sleep": "Disrupted, irregular daytime sleep due to overnight work schedule, often only 5-6 hours"
+ },
+ "psychosocial_profile": {
+  "personality": "Anxious, apologetic, braces for criticism before it comes, tends to downplay his own struggles",
+  "communication_style": "Soft-spoken, apologizes frequently ('sorry, I know that's bad'), changes the subject when a topic feels too uncomfortable, especially around reading or understanding instructions",
+  "goals": [
+   "Keep working as long as his back allows",
+   "Avoid another trip to the ER for his heart",
+   "Feel less tired during his shifts",
+   "Stay in good standing at his church, including helping with the Sunday meal setup"
+  ],
+  "concerns": [
+   "Worried the student or dietitian will scold him for his vending machine habits",
+   "Afraid his heart condition will get worse and he'll lose his job",
+   "Embarrassed that he doesn't always understand nutrition labels or his medication instructions"
+  ],
+  "beliefs": [
+   "Thinks pain pills and heart pills are the 'real' treatment and food is just extra",
+   "Believes he should already know how to eat better at his age and feels ashamed he doesn't",
+   "Thinks his tiredness is just a normal part of being 72 and working nights"
+  ],
+  "motivations": [
+   "Wants to keep working to support himself and not depend on anyone",
+   "Wants to stay active enough to keep helping at his church",
+   "Fear of ending up like a coworker who had a heart attack on the job"
+  ],
+  "fears": [
+   "Having a heart attack during a shift and being found too late",
+   "Being seen as 'not smart enough' to understand his own care",
+   "Losing his place at church if he becomes too sick to attend",
+   "Being lectured or judged for his eating habits"
+  ],
+  "barriers": [
+   "Overnight shift schedule limits access to fresh food",
+   "Chronic back pain makes cooking and standing at a stove difficult",
+   "Low health literacy makes labels and instructions confusing, which he hides out of embarrassment",
+   "Limited household income makes fresh produce feel like a luxury"
+  ],
+  "strengths": [
+   "Shows up reliably for work despite pain and fatigue",
+   "Deeply committed to his church community and its potlucks",
+   "Willing to listen when something is explained simply and without judgment",
+   "Has gone this long without smoking or drinking, showing capacity for discipline"
+  ],
+  "support_system": "A close-knit church congregation he's been part of for over twenty years, including a pastor who checks in on him and a few older members who bring him meals when his back is bad; limited contact with family",
+  "readiness_to_change": "Contemplation; knows his eating and medication habits aren't ideal and sometimes feels scared enough to want to change, but isn't sure where to start and worries he'll fail"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "He works nights as a security guard and eats 'whatever's around' during his shift",
+   "He has heart trouble and high blood pressure and takes 'a bunch of pills'",
+   "His back pain has been going on since 2014 and sometimes it's really bad",
+   "He mentions his church family a few times, says they're 'like my people'"
+  ],
+  "discoverable_information": [
+   "With gentle questions, he'll describe his vending machine and drive-through habits in more detail",
+   "He'll admit he skips breakfast most days because he's asleep",
+   "He'll mention he drinks a lot of coffee to stay awake on shift",
+   "He'll say he sometimes forgets his evening blood pressure pill when work runs long"
+  ],
+  "reluctant_information": [
+   "If asked directly and kindly, he'll admit he gets confused by the directions on his pill bottles and sometimes just guesses the timing",
+   "He'll reluctantly share that he mixes up his two pain medications sometimes because the names look similar to him"
+  ],
+  "hidden_information": [
+   "Arlie cannot reliably read the nutrition facts panel on packaged food and has never told any provider this; he nods along and pretends to understand rather than ask",
+   "He has gone to the ER once in the past year for chest tightness he never reported to his regular doctor because he was embarrassed about missing work"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Assess health literacy and adapt nutrition education materials accordingly",
+    "expected_discoveries": [
+     "Arlie struggles to read nutrition labels and medication instructions but hides this through nodding and deflection",
+     "He prefers verbal, simple explanations over handouts with numbers and percentages"
+    ],
+    "possible_patient_reactions": [
+     "He gets quiet and says 'I think I get it' without really understanding",
+     "He changes the subject to his back pain when asked to read something aloud",
+     "He visibly relaxes when the student offers to go through a label together instead of handing it to him"
+    ]
+   },
+   {
+    "learning_objective": "Explore shift-work eating patterns and identify realistic meal timing strategies",
+    "expected_discoveries": [
+     "His biggest nutrition risks come from the overnight vending machine runs and the heavy pre-shift dinner",
+     "He has little control over his break schedule, limiting meal planning"
+    ],
+    "possible_patient_reactions": [
+     "He laughs nervously and says 'I know it's not great, I'm sorry'",
+     "He brightens when asked what snacks might work better for his truck or locker",
+     "He worries aloud that any changes will be 'too much to keep up with' on his schedule"
+    ]
+   },
+   {
+    "learning_objective": "Use motivational interviewing to meet him in the contemplation stage without triggering shame",
+    "expected_discoveries": [
+     "He wants to change but is scared of failing and being judged",
+     "His church community could be a source of support and accountability if invited in gently"
+    ],
+    "possible_patient_reactions": [
+     "He apologizes repeatedly before admitting he's scared about his heart",
+     "He opens up more when the student validates his effort instead of listing problems",
+     "He mentions wanting to ask his pastor for support once he feels less ashamed"
+    ]
+   },
+   {
+    "learning_objective": "Reconcile a complex polypharmacy regimen with nutrition and lifestyle counseling",
+    "expected_discoveries": [
+     "He confuses his two opioid-containing pain medications and sometimes doubles up unintentionally",
+     "He takes hydrochlorothiazide inconsistently due to bathroom access concerns during shifts"
+    ],
+    "possible_patient_reactions": [
+     "He looks embarrassed and says 'I probably shouldn't tell you that'",
+     "He asks if the student can write things down in simpler terms for him",
+     "He expresses fear about taking too much pain medication by accident"
+    ]
+   },
+   {
+    "learning_objective": "Identify and strengthen the patient's existing support systems for behavior change",
+    "expected_discoveries": [
+     "His church potlucks and congregation members who check on him are a significant source of both food and emotional support",
+     "He has limited contact with biological family, making the church his primary support network"
+    ],
+    "possible_patient_reactions": [
+     "He lights up talking about church, a clear contrast to his anxious tone elsewhere",
+     "He says he'd be willing to bring healthier dishes to potlucks if someone showed him how",
+     "He worries his church friends would judge him if they knew how he really eats at work"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Arlie's ischemic heart disease and hypertension are longstanding and managed primarily through medication with limited past nutrition counseling",
+   "His full-time overnight work is physically tolerated despite his age and back pain due to financial necessity",
+   "The household of four likely includes roommates or family members he does not consider close support, consistent with his limited social contact score",
+   "His chronic pain management with both ibuprofen and two opioid combination medications suggests a complex, possibly poorly coordinated pain regimen"
+  ],
+  "optional_details": [
+   "He keeps a small cooler in his truck for snacks but rarely stocks it with anything beyond soda and leftover Halloween candy",
+   "He was taught to drive a forklift decades ago and still mentions it with pride",
+   "He has a habit of jingling his keys when he's nervous during conversations"
+  ]
+ },
+ "source": {
+  "synthea_record": "05cf539a",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "anxious and apologetic, expects to be told off",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "contemplation: knows something should change but is torn",
+   "literacy": "low health literacy",
+   "eating": "works shifts or long hours and eats at irregular times, often from vending machines or drive-throughs",
+   "held_back": "struggles to read labels or written instructions and hides it",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}
