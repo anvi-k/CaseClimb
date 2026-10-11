@@ -75,7 +75,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
   return (
     <>
       <PageHeader
-        title="Patient Studio"
+        title="Patients"
         subtitle="Build, review and publish simulated patients. Students only see patients you have published."
         action={<LinkButton href="/faculty/cases/new">New patient</LinkButton>}
       />
@@ -108,9 +108,9 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
           </Link>
         </Empty>
       ) : (
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           {shown.map((c) => (
-            <li key={c.id} className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm">
+            <li key={c.id} className="rounded-2xl border border-slate-200 bg-white px-7 py-5">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="min-w-0 flex-1">
                   <div className="mb-1 flex flex-wrap items-center gap-1.5">

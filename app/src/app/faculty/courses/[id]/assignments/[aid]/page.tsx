@@ -96,7 +96,7 @@ export default async function AssignmentPage({ params }: { params: Promise<{ id:
         <Stat label="Feedback" value={held ? "Held" : "Released"} note={a.settings.feedbackRelease === "manual" ? "Released by you" : "Shown as soon as a visit is scored"} />
       </div>
 
-      <h2 className="mb-2 mt-6 text-sm font-semibold text-slate-900">What to reteach</h2>
+      <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">What to reteach</h2>
       {insights.scored === 0 ? (
         <Card>
           <p className="px-4 py-6 text-sm text-slate-500">The class summary appears once the first visit has been scored. It shows which rubric domains are weakest and which findings students most often miss.</p>
@@ -160,7 +160,7 @@ export default async function AssignmentPage({ params }: { params: Promise<{ id:
         </div>
       )}
 
-      <h2 className="mb-2 mt-6 text-sm font-semibold text-slate-900">Gradebook</h2>
+      <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">Gradebook</h2>
       <Card>
         {g.rows.length === 0 ? (
           <p className="px-4 py-6 text-sm text-slate-500">No students are enrolled in this course yet. Share the join code from the course page.</p>

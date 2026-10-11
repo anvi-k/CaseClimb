@@ -107,6 +107,10 @@ body {
 .hover\:bg-brand-700:hover {
   color: #06324a;
 }
+/* The current header link glows like the reference pill. */
+.nav-current {
+  box-shadow: 0 6px 22px rgba(95, 220, 174, 0.35);
+}
 /* Surfaces that were written as dark stay dark, and what sits on them stays light. */
 [class~="bg-slate-900"],
 [class~="bg-slate-800"],

@@ -93,7 +93,7 @@ export default async function FacultyJourney({ params }: { params: Promise<{ id:
           </div>
         </div>
       </Card>
-      <h2 className="mb-2 text-sm font-semibold text-slate-900">Edit this journey</h2>
+      <h2 className="mb-3 text-[26px] font-semibold text-slate-900">Edit this journey</h2>
       <JourneyBuilder {...builderOptions()} initial={{ id: j.row.id, title: j.row.title, summary: j.spec.summary, caseId: j.row.case_id, status: j.row.status, stages: j.stages }} />
     </AppShell>
   );

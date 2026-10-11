@@ -53,10 +53,10 @@ export default async function FacultyHome({ searchParams }: { searchParams: Prom
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <LinkButton href={`/faculty/courses/${course.id}/assignments/new`} size="lg" className="!rounded-xl !px-7 !py-3.5 !text-[19px] !font-semibold">
+            <LinkButton href={`/faculty/courses/${course.id}/assignments/new`} size="lg" className="!rounded-full !px-7 !py-3.5 !text-[19px] !font-semibold">
               Assign patients
             </LinkButton>
-            <LinkButton href="/faculty/cases/new" variant="secondary" size="lg" className="!rounded-xl !px-7 !py-3.5 !text-[19px] !font-semibold">
+            <LinkButton href="/faculty/cases/new" variant="secondary" size="lg" className="!rounded-full !px-7 !py-3.5 !text-[19px] !font-semibold">
               Create a patient
             </LinkButton>
           </div>

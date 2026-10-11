@@ -148,7 +148,7 @@ export default async function StudentHome() {
         )}
 
         <p className="mt-9">
-          <Link href="/student/practice" className="inline-flex rounded-xl border border-slate-300 bg-white px-7 py-3.5 text-[19px] font-semibold text-slate-900 hover:bg-slate-50">
+          <Link href="/student/practice" className="inline-flex rounded-full border border-slate-300 bg-white px-7 py-3.5 text-[19px] font-semibold text-slate-900 hover:bg-slate-50">
             Practice with an extra patient
           </Link>
         </p>

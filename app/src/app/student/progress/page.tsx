@@ -151,7 +151,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
         </div>
       )}
 
-      <h2 className="mb-2 mt-6 text-sm font-semibold text-slate-900">Attempts by patient</h2>
+      <h2 className="mb-3 mt-10 text-[26px] font-semibold text-slate-900">Attempts by patient</h2>
       {heldCount > 0 && <p className="mb-2 text-xs text-slate-500">{heldCount} submitted visit{heldCount === 1 ? " is" : "s are"} not shown because your instructor has not released the feedback yet.</p>}
       {perCase.length === 0 ? (
         <Empty>Nothing scored yet. Each patient you practice with will appear here with every attempt and what changed between them.</Empty>

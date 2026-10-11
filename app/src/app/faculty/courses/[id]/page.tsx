@@ -7,7 +7,6 @@ import { Badge, Card, CardHeader, Empty, LinkButton, PageHeader } from "@/compon
 import { requireUser } from "@/lib/auth";
 import { all } from "@/lib/db";
 import { assignmentOverviews, courseFor, describeSettings, TYPE_LABEL } from "@/lib/courses";
-import { profession } from "@/lib/professions";
 
 export default async function CoursePage({ params }: { params: Promise<{ id: string }> }) {
   const user = await requireUser("faculty");
@@ -39,7 +38,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
       </div>
       <PageHeader
         title={course.name}
-        subtitle={course.profession_id ? `Students are training as ${profession(course.profession_id).name}.` : "Mixed / interprofessional course."}
+        subtitle={`${roster.length} student${roster.length === 1 ? "" : "s"} · Join code ${course.join_code}`}
         action={<LinkButton href={`/faculty/courses/${course.id}/assignments/new`}>New assignment</LinkButton>}
       />
 
@@ -60,7 +59,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
             ) : (
               <ul className="divide-y divide-slate-100">
                 {assignments.map(({ a, roster: n, submitted, inProgress }) => (
-                  <li key={a.id} className="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+                  <li key={a.id} className="flex flex-wrap items-center justify-between gap-3 px-6 py-3">
                     <div className="min-w-0">
                       <Link href={`/faculty/courses/${course.id}/assignments/${a.id}`} className="text-sm font-medium text-slate-900 hover:text-brand-700">
                         {a.title}
@@ -96,13 +95,13 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           <Card>
             <CardHeader title="Gradebook" subtitle="Best score per student for each assignment. A dash means nothing has been scored yet." />
             {roster.length === 0 || assignments.length === 0 ? (
-              <p className="px-4 py-6 text-sm text-slate-500">{roster.length === 0 ? "No students have joined yet." : "Add an assignment to start the gradebook."}</p>
+              <p className="px-6 py-6 text-sm text-slate-500">{roster.length === 0 ? "No students have joined yet." : "Add an assignment to start the gradebook."}</p>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-slate-200 text-left text-xs text-slate-500">
-                      <th className="sticky left-0 bg-white px-4 py-2 font-medium">Student</th>
+                      <th className="sticky left-0 bg-white px-6 py-2 font-medium">Student</th>
                       {assignments.map(({ a }) => (
                         <th key={a.id} className="max-w-[10rem] px-3 py-2 text-right font-medium">
                           <Link href={`/faculty/courses/${course.id}/assignments/${a.id}`} className="line-clamp-2 hover:text-brand-700" title={a.title}>
@@ -115,7 +114,7 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
                   <tbody className="divide-y divide-slate-100">
                     {roster.map((u) => (
                       <tr key={u.id}>
-                        <td className="sticky left-0 whitespace-nowrap bg-white px-4 py-2 font-medium text-slate-900">{u.name}</td>
+                        <td className="sticky left-0 whitespace-nowrap bg-white px-6 py-2 font-medium text-slate-900">{u.name}</td>
                         {assignments.map(({ a }) => {
                           const s = best.get(u.id + ":" + a.id);
                           return (
@@ -143,15 +142,15 @@ export default async function CoursePage({ params }: { params: Promise<{ id: str
           <Card>
             <CardHeader title={`Roster (${roster.length})`} />
             {roster.length === 0 ? (
-              <p className="px-4 py-6 text-sm text-slate-500">No students yet. Share the join code.</p>
+              <p className="px-6 py-6 text-sm text-slate-500">No students yet. Share the join code.</p>
             ) : (
               <ul className="divide-y divide-slate-100">
                 {roster.map((u) => (
-                  <li key={u.id} className="flex items-center justify-between gap-2 px-4 py-2.5">
+                  <li key={u.id} className="flex items-center justify-between gap-2 px-6 py-2.5">
                     <div className="min-w-0">
                       <div className="truncate text-sm font-medium text-slate-900">{u.name}</div>
                       <div className="truncate text-xs text-slate-500">
-                        {u.email} · {profession(u.profession_id).name}
+                        {u.email}
                       </div>
                     </div>
                     <RemoveStudent courseId={course.id} userId={u.id} name={u.name} />

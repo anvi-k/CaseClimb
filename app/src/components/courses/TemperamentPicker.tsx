@@ -63,7 +63,7 @@ export default function TemperamentPicker() {
         <p className="text-[22px] font-semibold text-slate-900">{chosen.name}</p>
         <p className="text-slate-600">{chosen.about}</p>
       </div>
-      <button onClick={start} disabled={busy} className="rounded-xl bg-brand-600 px-7 py-3.5 text-[19px] font-semibold text-white hover:bg-brand-700 disabled:bg-slate-300">
+      <button onClick={start} disabled={busy} className="rounded-full bg-brand-600 px-7 py-3.5 text-[19px] font-semibold text-white hover:bg-brand-700 disabled:bg-slate-300">
         {busy ? "Finding a patient…" : "Start practice visit"}
       </button>
       {error && <p className="mt-3 text-[15px] text-rose-700">{error}</p>}
