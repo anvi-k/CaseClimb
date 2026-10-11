@@ -9,8 +9,8 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
   if (u) redirect(next || (u.role === "student" ? "/student" : "/faculty"));
   return (
     <>
-      <h2 className="mb-1 text-xl font-semibold">Sign in</h2>
-      <p className="mb-6 text-sm text-slate-600">{next ? "Sign in to continue to the page you asked for." : "Welcome back."}</p>
+      <h1 className="mb-1 text-[40px] font-semibold leading-tight text-slate-900">Sign in</h1>
+      <p className="mb-7 text-slate-600">{next ? "Sign in to continue to the page you asked for." : "Welcome back."}</p>
       <AuthForm mode="login" next={next} />
       <div className="mt-6 rounded-md border border-slate-200 bg-white p-3 text-xs text-slate-600">
         <div className="mb-1 font-medium text-slate-800">Demo accounts</div>

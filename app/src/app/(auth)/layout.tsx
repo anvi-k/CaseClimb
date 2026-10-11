@@ -15,7 +15,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         <p className="text-xs text-brand-200">Synthetic patients for education only. Not for clinical use.</p>
       </div>
       <div className="flex items-center justify-center p-6">
-        <div className="w-full max-w-sm">
+        <div className="w-full max-w-md">
           <div className="mb-6 lg:hidden">
             <Logo />
           </div>
