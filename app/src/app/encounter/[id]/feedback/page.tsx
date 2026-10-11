@@ -129,8 +129,29 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       {header}
 
       {f.needsReview && (
-        <div className="mb-4 rounded-lg border border-rose-300 bg-rose-50 px-4 py-3 text-sm text-rose-900">
-          <span className="font-semibold">Flagged for instructor review:</span> {f.reviewReasons.join("; ")}. An instructor should look at this visit whatever the total score.
+        <div className="mb-4 rounded-2xl border border-rose-300 bg-rose-50 px-6 py-5 text-rose-900">
+          <p className="text-lg font-bold">Flagged for instructor review</p>
+          <p className="mt-0.5 text-sm">An instructor should look at this visit whatever the total score.</p>
+          <ul className="mt-3 divide-y divide-rose-200 border-t border-rose-200 text-sm">
+            {f.reviewReasons.map((r, i) => {
+              // "Domain 6 (Clinical reasoning and synthesis) scored 1." is shown as number, name and score.
+              const d = /^Domain (\d+) \((.+)\) scored (\d+)\.?$/.exec(r.trim());
+              return (
+                <li key={i} className="flex flex-wrap items-center justify-between gap-3 py-2.5">
+                  {d ? (
+                    <>
+                      <span>
+                        <span className="font-semibold">Domain {d[1]}</span> · {d[2]}
+                      </span>
+                      <span className="rounded-full bg-rose-200 px-3 py-0.5 font-semibold">Scored {d[3]} of 4</span>
+                    </>
+                  ) : (
+                    <span>{r.trim().replace(/\.$/, "")}</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
         </div>
       )}
       {review.faculty_note && (
