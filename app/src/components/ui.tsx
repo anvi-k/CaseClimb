@@ -13,10 +13,10 @@ const SIZE = { sm: "px-3.5 py-1 text-xs", md: "px-5 py-2 text-sm", lg: "px-7 py-
 type BtnProps = { variant?: keyof typeof BTN; size?: keyof typeof SIZE };
 
 export function Button({ variant = "primary", size = "md", className, ...p }: ComponentProps<"button"> & BtnProps) {
-  return <button {...p} className={cx("inline-flex items-center justify-center gap-1.5 rounded-full font-semibold transition-colors disabled:cursor-not-allowed", BTN[variant], SIZE[size], className)} />;
+  return <button {...p} className={cx("inline-flex items-center justify-center gap-1.5 rounded-full font-bold transition-colors disabled:cursor-not-allowed", BTN[variant], SIZE[size], className)} />;
 }
 export function LinkButton({ variant = "primary", size = "md", className, ...p }: ComponentProps<typeof Link> & BtnProps) {
-  return <Link {...p} className={cx("inline-flex items-center justify-center gap-1.5 rounded-full font-semibold transition-colors", BTN[variant], SIZE[size], className)} />;
+  return <Link {...p} className={cx("inline-flex items-center justify-center gap-1.5 rounded-full font-bold transition-colors", BTN[variant], SIZE[size], className)} />;
 }
 export function Card({ className, ...p }: ComponentProps<"div">) {
   return <div {...p} className={cx("rounded-2xl border border-slate-200 bg-white shadow-sm", className)} />;

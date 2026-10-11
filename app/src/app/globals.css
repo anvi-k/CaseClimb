@@ -107,6 +107,20 @@ body {
 .hover\:bg-brand-700:hover {
   color: #06324a;
 }
+/* Headings: heavy display face, tight tracking. */
+h1,
+h2 {
+  font-family: var(--font-display), var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+h1 {
+  font-weight: 900;
+}
+/* The dropdown under the three-bar button. */
+.user-menu {
+  background: linear-gradient(180deg, #131a33 0%, #0f1730 100%);
+}
 /* The current header link glows like the reference pill. */
 .nav-current {
   box-shadow: 0 6px 22px rgba(95, 220, 174, 0.35);

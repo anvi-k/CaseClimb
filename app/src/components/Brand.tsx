@@ -13,7 +13,7 @@ export function Logo({ inverse = false, compact = false, large = false }: { inve
   return (
     <span className={`flex items-center ${large ? "gap-3" : "gap-2"} ${inverse ? "text-white" : "text-brand-700"}`}>
       <BrandMark className={compact ? "h-6 w-6" : large ? "h-10 w-10" : "h-7 w-7"} />
-      <span className={`${compact ? "text-sm" : large ? "text-[24px]" : "text-[16px]"} font-semibold tracking-[-0.02em]`}>poscere</span>
+      <span className={`${compact ? "text-sm" : large ? "text-[24px]" : "text-[16px]"} font-extrabold tracking-[-0.02em]`} style={{ fontFamily: "var(--font-display)" }}>poscere</span>
     </span>
   );
 }

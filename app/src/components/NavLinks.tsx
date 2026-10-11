@@ -9,7 +9,7 @@ export default function NavLinks({ nav }: { nav: { href: string; label: string }
   // The longest matching address wins, so "/faculty/cases" does not also light up "/faculty".
   const current = nav.filter((n) => path === n.href || path.startsWith(n.href + "/")).sort((a, b) => b.href.length - a.href.length)[0]?.href;
   return (
-    <nav className="flex flex-1 items-center justify-center gap-1 overflow-x-auto text-[17px] font-semibold">
+    <nav className="flex flex-1 items-center justify-center gap-1 overflow-x-auto text-[17px] font-bold">
       {nav.map((n) => (
         <Link
           key={n.href}

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { logout } from "@/app/(auth)/actions";
 import { Logo } from "@/components/Brand";
 import NavLinks from "@/components/NavLinks";
+import UserMenu from "@/components/UserMenu";
 import { isFaculty } from "@/lib/auth";
 import type { User } from "@/lib/types";
 
@@ -15,6 +15,19 @@ const FACULTY_NAV = [
 const STUDENT_NAV = [
   { href: "/student", label: "My patients" },
   { href: "/student/practice", label: "Practice" },
+];
+
+// The three-bar menu holds the pages that are used less often.
+const FACULTY_MENU = [
+  { href: "/faculty", label: "My class" },
+  { href: "/faculty/cases", label: "Patients" },
+  { href: "/faculty/cases/new", label: "Create a patient" },
+  { href: "/faculty/courses", label: "Gradebook" },
+];
+const STUDENT_MENU = [
+  { href: "/student", label: "My patients" },
+  { href: "/student/practice", label: "Practice" },
+  { href: "/student/progress", label: "My progress" },
 ];
 
 export default function AppShell({ user, children, wide }: { user: User; children: ReactNode; wide?: boolean }) {
@@ -30,12 +43,10 @@ export default function AppShell({ user, children, wide }: { user: User; childre
           <NavLinks nav={nav} />
           <div className="flex flex-none items-center gap-4 text-base">
             <div className="hidden text-right leading-tight sm:block">
-              <div className="font-semibold text-slate-900">{user.name}</div>
+              <div className="font-bold text-slate-900">{user.name}</div>
               <div className="text-sm text-slate-600">{faculty ? "Instructor" : "Student"}</div>
             </div>
-            <form action={logout}>
-              <button className="rounded-full border border-slate-400 px-4 py-2 font-semibold text-slate-900 transition-colors hover:bg-white/10">Sign out</button>
-            </form>
+            <UserMenu links={faculty ? FACULTY_MENU : STUDENT_MENU} />
           </div>
         </div>
       </header>
