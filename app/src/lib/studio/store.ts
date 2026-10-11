@@ -68,7 +68,7 @@ export interface LibraryItem extends CaseMeta {
 }
 
 /** "Reserved, private, and practical. Measures..." becomes "Reserved, private". */
-function temperamentOf(p: Partial<CaseProfile>): string {
+export function temperamentOf(p: Partial<CaseProfile>): string {
   const first = String(p.persona?.personality || "").split(/[.;:]| - | — /)[0];
   const parts = first.split(/,|\band\b|\bbut\b|\bwith\b/).map((w) => w.trim());
   const words = parts.filter((w) => w && w.split(" ").length <= 2 && !/ly$|^(a|an|the|very|to)\b/i.test(w.split(" ")[0])).slice(0, 2);
@@ -80,7 +80,7 @@ function temperamentOf(p: Partial<CaseProfile>): string {
 const FOCUS = /diabet|heart|ischemic|coronary|hypertens|obes|body mass|lipid|cholesterol|kidney|renal|an(a)?emia|osteopor|stroke|malnutri|weight/i;
 
 /** The problem the visit is most likely about: the first nutrition-related entry on the chart's problem list, else the first entry. */
-function mainIssueOf(p: Partial<CaseProfile>): string {
+export function mainIssueOf(p: Partial<CaseProfile>): string {
   const list = (p.chartAtStart || []).find((c) => /problem/i.test(c.label))?.value || "";
   const items = list.split(";").map((i) => i.replace(/\s*\([^)]*\)/g, "").split(",")[0].trim()).filter(Boolean);
   const pick = items.find((i) => FOCUS.test(i)) || items[0] || "";
