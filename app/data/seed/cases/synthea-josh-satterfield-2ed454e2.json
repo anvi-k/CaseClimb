@@ -1,0 +1,997 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Weight Management Counseling in a 60-Year-Old Man on Chronic Opioids with Self-Directed Low-Carb Diet and Recurrent UTIs",
+  "summary": "This case teaches dietetics students to conduct a structured nutrition assessment with a scattered, numbers-anchored patient whose sincere belief in his self-directed 'carnivore-ish' diet's success is contradicted by his unchanged documented weight/BMI over the past year - a mismatch the learner must uncover through record review rather than being told. It also builds skills in recognizing medication-nutrition interactions (NSAID without food, possible acetaminophen overlap needing referral), applying motivational interviewing with a contemplation-stage patient, and sensitively surfacing a hidden fear (his mother's disability trajectory) only through strong rapport.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Woodcliff Lake, New Jersey",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Josh Satterfield",
+   "age": 60,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "asian, nonhispanic",
+   "occupation": "Part-time hardware store associate (stocking and register shifts)",
+   "language": "English",
+   "appearance": "Calling from a cluttered kitchen table in a shared household, Josh sits slightly favoring his right leg even seated, water bottle and a small spiral notebook calendar in front of him. He has a flat affect that brightens into rapid, almost rehearsed speech whenever he cites a date, dose, or lab number, then goes quiet and scattered when asked how things feel day to day.",
+   "portrait": "/portraits/synthea-josh-satterfield-2ed454e2.jpg"
+  },
+  "persona": {
+   "personality": "Overwhelmed and scattered but polite and detail-oriented in a self-protective way; anchors himself in exact numbers and dates because they feel safe, while daily-life and emotional questions make him lose his train of thought.",
+   "communicationStyle": "Speaks in a precise, almost clinical way when citing labs, doses, or dates from memory or his notebook, then trails off or says 'wait, what were we talking about' when asked to connect those facts to how he actually feels or eats day to day. Polite, a little guarded, uses plain working-class vocabulary peppered with diet-culture phrases like 'basically carnivore' or 'clean eating days.'",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious and defensive under a calm surface; frustrated that his weight 'won't budge' despite effort, and quietly worried that no one -including his own family- takes his pain or his weight seriously.",
+   "background": "Josh is 60 and works part-time stocking shelves and running the register at a hardware store in Woodcliff Lake, New Jersey. He never went to college, has worked a string of retail and warehouse jobs over the years, and prides himself on being self-sufficient. He lives in a household of six with adult siblings, a niece, and a nephew, where meals have always been big, meat-and-potatoes, everyone-at-the-table affairs - showing love meant piling someone's plate high. He keeps a small spiral notebook where he logs his patch changes and appointment dates, and has a loyalty card at the warehouse club where he buys deli meat and glucosamine in bulk. In his 40s he volunteered briefly at a local food pantry, which he still brings up when the subject of food costs comes up.",
+   "speechExamples": [
+    "Let me check my notebook - yeah, I changed the patch on the 21st, right on schedule, like clockwork.",
+    "It's basically carnivore, but I still have some vegetables, so it's not that extreme.",
+    "Wait, sorry, what were we talking about? I lost the thread there.",
+    "Russ at work lost like twenty pounds doing this, so I figured it couldn't hurt to try.",
+    "I take the naproxen at 8 and at 6, same as my coffee, so I don't really forget it."
+   ],
+   "concerns": [
+    "Confused about whether his low-carb approach is actually helping or if his weight is barely moving",
+    "Worried the pain medications are messing with his appetite and his gut",
+    "Feels like no one in the house takes his pain or his weight seriously"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit with Josh Satterfield, a 60-year-old man referred for weight management counseling related to chronic back, neck, and knee pain and recurrent urinary tract infections. He has been trying a self-directed low-carb, high-protein eating pattern for a few months. Your job is to gather a focused nutrition history, review relevant records, identify nutrition-related problems, and begin patient-centered counseling.",
+   "chiefComplaint": "Weight management counseling referral tied to chronic pain and recurrent UTIs",
+   "openingLine": "Hi, yeah, so - I'm Josh. They set this up because of my weight, I guess, and all the pain stuff. I've actually been doing this low-carb thing for a few months now, basically carnivore, so I'm not sure what else there is to go over, but okay.",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including meal pattern, hydration, and household eating environment",
+    "Review the weight/vitals history and compare it with the patient's own account of how his diet is going",
+    "Review the medication list for any food-related or safety concerns relevant to nutrition counseling",
+    "Identify one or more nutrition diagnoses based on the assessment",
+    "Use patient-centered counseling techniques to explore the patient's readiness to change and begin collaborative goal-setting"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Weight management counseling referral tied to chronic back, neck, and knee pain and recurrent UTIs"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; referral to dietetics/clinical nutrition for weight management counseling"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 1988); Recurrent urinary tract infection (since 1998); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014); Osteoarthritis of knee (since 2018)"
+   },
+   {
+    "label": "Medications",
+    "value": "72 HR Fentanyl 0.025 MG/HR Transdermal System; tramadol hydrochloride 50 MG Oral Tablet; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Naproxen sodium 220 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "Presents for weight management nutrition counseling, referred for obesity management in context of chronic pain and recurrent UTIs.",
+    "says": "I'm here because they want me to work on my weight, I guess tied to my back and my knee and the UTI stuff.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "current weight and BMI",
+    "chart": "Patient states current weight 97.2 kg and BMI 30.2 kg/m2 from memory, consistent with today's measurement.",
+    "says": "I'm 97.2 kilos, BMI 30.2 — I checked it on the portal this morning.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "diet approach duration",
+    "chart": "Reports following a self-directed low-carbohydrate, high-protein eating pattern ('basically carnivore but I still have some vegetables') for a few months.",
+    "says": "I've been doing this low-carb, high-protein thing, basically carnivore, for a few months now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "perceived diet result",
+    "chart": "Believes his weight is down 'a few pounds' since starting the diet, based on how his clothes fit rather than regular weigh-ins.",
+    "says": "I think I'm down a few pounds, my pants feel looser, so it's gotta be working.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "weighing habits",
+    "chart": "Admits he has not weighed himself consistently since starting the diet.",
+    "says": "I haven't really been stepping on the scale regular, honestly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "knee stair symptoms",
+    "chart": "Reports stiffness in the right knee going up stairs.",
+    "says": "My right knee gets stiff going up the stairs, every time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "back pain pattern",
+    "chart": "Low back pain worse by end of work shift.",
+    "says": "By the end of my shift my back is killing me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "urinary symptoms frequency",
+    "chart": "Reports intermittent burning and urgency with urination, estimated 4-5 episodes per year; last episode approximately February.",
+    "says": "I get that burning, gotta-go feeling maybe four or five times a year, last time was back in February I think.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "fatigue",
+    "chart": "Reports fatigue, attributes it to aging.",
+    "says": "I'm tired a lot, but I figure that's just getting older.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Reports occasional constipation, which he attributes to his pain medications.",
+    "says": "I get constipated sometimes, I figure it's from the pain pills.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "dry mouth",
+    "chart": "Reports dry mouth, observed reaching for water bottle repeatedly during visit.",
+    "says": "My mouth gets dry a lot, that's why I keep sipping water.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "GI symptoms with NSAID",
+    "chart": "Reports stomach upset when naproxen is taken without food, occurring about 3 times in the past month.",
+    "says": "If I forget to eat before the naproxen my stomach gets upset — happened like three times last month.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "appetite changes",
+    "chart": "Reports variable appetite, some days eating less and other days overeating, which he attributes to the fentanyl patch.",
+    "says": "Some days I barely eat, other days I'm binging — I wonder if the patch does that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "chest and cardiac symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "No chest pain or anything like that, no trouble breathing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "swallowing and dental symptoms",
+    "chart": "Denies current dental or swallowing problems; recent dental work completed and resolved.",
+    "says": "My teeth are fine now, I just had a filling and cleaning done last month.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "weight history since young adulthood",
+    "chart": "Obesity since 1988.",
+    "says": "I've been heavier than I should be since I was in my 20s, honestly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "recurring bladder infections",
+    "chart": "History of recurrent urinary tract infection since 1998.",
+    "says": "I've been getting these bladder infections on and off since the late 90s.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "long-standing pain conditions",
+    "chart": "Chronic pain, chronic low back pain, and chronic neck pain since 2014.",
+    "says": "My back and neck pain started back in 2014 and never really went away.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "knee joint diagnosis",
+    "chart": "Osteoarthritis of the right knee since 2018.",
+    "says": "They told me in 2018 it's arthritis in my knee.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "past viral illness",
+    "chart": "History of COVID-19 infection, May 2021, resolved.",
+    "says": "I had COVID back in May 2021, but I was fine after a couple weeks.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h21",
+    "category": "psh",
+    "topic": "recent dental procedures",
+    "chart": "Underwent dental filling, bitewing X-ray, gingival exam, and scaling/root planing in May 2025 for gingivitis and dental caries, both resolved.",
+    "says": "I had a cavity filled and my gums cleaned up back in May, no issues since.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "opioid patch regimen",
+    "chart": "Fentanyl 0.025 mg/hr transdermal patch, changed every 72 hours; reports consistent adherence tracked on a notebook calendar.",
+    "says": "I change my patch every third day like clockwork, I write it on my calendar.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "breakthrough pain pill use",
+    "chart": "Tramadol 50 mg oral tablet taken as needed, usually once daily and up to twice on bad days; adherence inconsistent as he saves it for severe pain.",
+    "says": "I take tramadol when it's bad, usually one, maybe two on a rough day. I try to save it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "combination pain pill use",
+    "chart": "Acetaminophen/hydrocodone 300/5 mg tablet taken as needed for breakthrough pain, roughly 2-3 times per week.",
+    "says": "I take the hydrocodone one maybe two or three times a week when I really need it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "doubling up on acetaminophen",
+    "chart": "Acknowledges occasionally taking acetaminophen/hydrocodone and Tylenol PM in the same day without recognizing the overlapping acetaminophen content.",
+    "says": "I didn't realize the Tylenol PM has the same stuff in it as the other pill... I think I've taken both the same night before.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "knee anti-inflammatory use",
+    "chart": "Naproxen sodium 220 mg taken twice daily with food for knee osteoarthritis; mostly consistent but occasionally taken without food.",
+    "says": "I take it at 8 and at 6, same as my coffee, but sometimes I forget to eat first.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "joint supplement use",
+    "chart": "Takes glucosamine chondroitin 1500 mg tablets regularly, uncertain of benefit.",
+    "says": "I take the glucosamine from the warehouse club, 1500 milligrams. Not sure it does anything but it can't hurt, right?",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "medications",
+    "topic": "sleep aid use",
+    "chart": "Uses Tylenol PM several nights per week for sleep.",
+    "says": "I take Tylenol PM a few nights a week so I can actually sleep.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h29",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I don't have any allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a household of 6 (adult siblings, niece, nephew); single, never married",
+    "says": "It's me, my brother and sister, my sister's two kids, and my other sister. Six of us under one roof.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time at a hardware store, stocking and register shifts, irregular hours",
+    "says": "I'm part-time at the hardware store down the road. Stocking, register, whatever they need. Hours bounce around week to week.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "nutrition",
+    "topic": "meal timing pattern",
+    "chart": "Skips breakfast on workdays; eats a large meal mid-afternoon after shift, then grazes in the evening",
+    "says": "On work days I don't really eat breakfast, I just go. Then when I get home around 3 or 4 I eat a big meal. After that I kind of just pick at stuff all night.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "nutrition",
+    "topic": "household meal structure",
+    "chart": "Household eats family-style meals with no coordinated portion control; patient reports eating whatever is served",
+    "says": "Nobody plans anything, it's just whatever's on the stove and everyone piles their plate. I eat what's in front of me, same as everyone else.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "diet source",
+    "chart": "Reports he adopted the low-carb/high-protein eating pattern after a coworker named Russ recommended it",
+    "says": "Guy I work with, Russ, he lost like twenty pounds doing this. He told me cut the carbs, eat more meat and eggs, so I figured I'd try it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "nutrition",
+    "topic": "beverage habits",
+    "chart": "Drinks 3-4 diet sodas daily; minimal plain water intake, approximately one glass with dinner",
+    "says": "I probably have three, four diet sodas a day. Water, honestly, maybe one glass with dinner if I remember.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "evening pain and eating",
+    "chart": "Reports nighttime snacking on chips when pain wakes him around 2-3am",
+    "says": "When the back pain wakes me up around 2, 3 in the morning, I end up in the kitchen eating chips. Can't help it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "nutrition",
+    "topic": "weekly diet break",
+    "chart": "Reports a weekly departure from the low-carb pattern on Fridays with a meatball sub",
+    "says": "Fridays I get a meatball sub from the place by work. I know it's not exactly 'clean' but it's my one thing.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "function",
+    "topic": "activity level",
+    "chart": "Sedentary at home outside of work shifts; avoids stairs due to knee pain",
+    "says": "At work I'm on my feet, standing, light lifting. At home I just sit, honestly, and I try to avoid the stairs when I can because of my knee.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "family",
+    "topic": "family response to concerns",
+    "chart": "Reports that his household dismisses his pain and weight concerns, attributing them to normal aging",
+    "says": "When I bring up my knee or the diet, my siblings just roll their eyes. They say I'm just getting old, that's all it is.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "social contact outside home",
+    "chart": "Reports social contact outside the household less than once a week",
+    "says": "Outside the house I don't really see anybody, maybe once a week if that. There's nobody really to talk this stuff through with.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "adherence",
+    "topic": "tracking his weight",
+    "chart": "Has not weighed himself regularly since starting the diet; estimates progress by how clothes fit",
+    "says": "I haven't really gotten on a scale since I started. I just go by how my pants feel, and I think they're a little looser.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "goals",
+    "topic": "weight and knee goal",
+    "chart": "States goal is to lower his weight so his knee stops hurting on stairs",
+    "says": "I just want the number to go down enough that my knee stops killing me every time I take the stairs at work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "goals",
+    "topic": "diet certainty",
+    "chart": "States he wants confirmation of whether his self-directed diet is effective rather than continued guessing",
+    "says": "I just want someone to tell me straight if this diet I made up is actually doing anything, or if I'm wasting my time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "other",
+    "topic": "financial habits",
+    "chart": "Reports buying glucosamine and deli meat in bulk using a warehouse club membership",
+    "says": "I've got a card at the warehouse club, I get the glucosamine and the deli meat in bulk there, it's cheaper that way.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s16",
+    "category": "other",
+    "topic": "past volunteer work",
+    "chart": "Reports brief volunteer work at a local food pantry in his 40s",
+    "says": "Years back, in my 40s, I volunteered at a food pantry for a bit. Funny to think about now I guess.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s17",
+    "category": "family",
+    "topic": "mother's health history",
+    "chart": "Discloses, when rapport is established, that his mother spent her final years wheelchair-bound due to severe osteoarthritis and uncontrolled weight; has not previously told any clinician this",
+    "says": "My mom... she ended up in a wheelchair, the last years of her life. Arthritis and her weight just got away from her. I've never told a doctor that. I don't want that to be me, starting with my knee.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "alcohol and smoking history",
+    "chart": "Ex-smoker, quit approximately 9 years ago; drinks a beer or two on weekends",
+    "says": "I quit smoking about nine years ago, give or take. I'll have a beer or two on the weekend, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review weight history / prior wellness visit records",
+    "aliases": [],
+    "result": "Weight history flowsheet shows 2025 annual wellness visit weight 96.8 kg (BMI 30.0) and 2026 current weight 97.2 kg (BMI 30.2) — change of +0.4 kg over the past year.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review current medication list and refill/adherence notes",
+    "aliases": [],
+    "result": "Fentanyl 0.025 mg/hr transdermal patch q72h; tramadol 50 mg PRN; acetaminophen/hydrocodone 300/5 mg PRN; naproxen 220 mg BID with food. OTC: glucosamine chondroitin 1500 mg, Tylenol PM several nights/week, greens powder most mornings.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: skips breakfast on workdays; large mid-afternoon meal after shift (often steak and eggs or deli ham/provolone roll-ups with cheese); evening grazing including chips at night when pain wakes him; minimal vegetables; Friday meatball sub; beverages are 3-4 diet sodas and coffee, about one glass of water with dinner.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Assess usual meal pattern and household eating context",
+    "aliases": [],
+    "result": "Patient describes an irregular retail schedule disrupting meal timing, and a household of six that eats 'family style' with no coordinated portions, making it hard to control what food is in the house.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess fluid intake pattern",
+    "aliases": [],
+    "result": "Patient reports 3-4 diet sodas/day, coffee in the morning, and about one glass of plain water with dinner.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Screen for GI symptoms related to medication-food timing",
+    "aliases": [],
+    "result": "Patient reports naproxen taken without food on multiple occasions in the past month, each time followed by stomach upset; also reports occasional constipation attributed to pain medication.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Review supplement and OTC use",
+    "aliases": [],
+    "result": "Patient reports glucosamine chondroitin 1500 mg daily, Tylenol PM several nights a week for sleep, and a greens powder mixed into water most mornings.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage of change",
+    "aliases": [],
+    "result": "Patient states he knows 'something probably needs to change' but is unsure whether to stick with his own diet or try a structured plan; cites his own numbers as evidence without being sure what they mean.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports standing and light lifting during work shifts, otherwise mostly sedentary at home, and avoids stairs when possible because of knee pain.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen for social support and food access barriers",
+    "aliases": [],
+    "result": "Patient reports social contact outside the household less than once a week, no one to problem-solve meal planning with, and shops in bulk at a warehouse club for staples like deli meat and glucosamine.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review problem list / diagnosis history",
+    "aliases": [],
+    "result": "Obesity (since 1988), recurrent urinary tract infection (since 1998), chronic pain, chronic low back pain, chronic neck pain (since 2014), osteoarthritis of knee (since 2018). Resolved: COVID-19 (2021), gingivitis and dental caries (2025, treated).",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 114/89 mmHg, heart rate 96/min, respiratory rate 15/min, weight 97.2 kg, height 179.4 cm, BMI 30.2 kg/m2 (recorded 2026-04-24).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 143.9 mg/dL; LDL cholesterol 64 mg/dL; HDL cholesterol 56.9 mg/dL; Triglycerides 114.8 mg/dL; Haemoglobin 16.1 g/dL; White cell count 9 10*3/uL; Platelets 401.2 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-04-24); zoster vaccine live (2018-03-09); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2018-03-09).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 1988)\nRecurrent urinary tract infection (since 1998)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\nOsteoarthritis of knee (since 2018)\n\nRECENTLY RESOLVED\nDisease caused by severe acute respiratory syndrome coronavirus 2 (2021-05 to 2021-05)\nGingivitis (2025-04 to 2025-05)\nPrimary dental caries (2025-05 to 2025-05)\n\nPROCEDURES\n2025-05-02: Restoration of tooth with coverage of all cusps using dental filling material (Primary dental caries)\n2025-05-02: Dental plain X-ray bitewing\n2025-05-02: Examination of gingivae (Gingivitis)\n2025-05-02: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-05-02: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-05-02: Dental care (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-04-24 wellness: General examination of patient\n2025-05-02 ambulatory: Encounter for check up (Gingivitis)\n2025-04-18 wellness: General examination of patient\n2024-04-12 wellness: General examination of patient\n2023-04-07 wellness: General examination of patient\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Musculoskeletal care; Therapy; Weight management program"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "72 HR Fentanyl 0.025 MG/HR Transdermal System",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "tramadol hydrochloride 50 MG Oral Tablet",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Naproxen sodium 220 MG Oral Tablet",
+        "2018-07",
+        "Osteoarthritis of knee"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "143.9",
+        "mg/dL",
+        "< 200",
+        "2025-04-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "64",
+        "mg/dL",
+        "< 100",
+        "2025-04-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "56.9",
+        "mg/dL",
+        ">= 40",
+        "2025-04-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "114.8",
+        "mg/dL",
+        "< 150",
+        "2025-04-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "16.1",
+        "g/dL",
+        "12.0-17.5",
+        "2023-04-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "9",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-04-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "401.2",
+        "10*3/uL",
+        "150-450",
+        "2023-04-07"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and organize a structured diet, meal pattern, and hydration history from a patient who communicates best through concrete numbers and dates, including household eating context as a barrier to change.",
+    "factIds": [
+     "s3",
+     "s4",
+     "s6",
+     "s7",
+     "s8",
+     "s9"
+    ],
+    "actionIds": [
+     "a7",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Compare the patient's self-reported perception of dietary success against objective weight/BMI history to identify a nutrition-relevant mismatch, and address it using patient-centered communication rather than confrontation.",
+    "factIds": [
+     "h2",
+     "h4",
+     "h5",
+     "s12"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review the medication and supplement list for food-related safety concerns relevant to nutrition counseling, including NSAID-food timing and potential acetaminophen overlap requiring referral back to the prescriber.",
+    "factIds": [
+     "h12",
+     "h24",
+     "h25",
+     "h26",
+     "h27",
+     "h28"
+    ],
+    "actionIds": [
+     "a3",
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Formulate an appropriate nutrition diagnosis based on integrated assessment data (diet history, anthropometrics, labs, medication review).",
+    "factIds": [
+     "h3",
+     "s3",
+     "s4",
+     "s6"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a7",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Use motivational interviewing techniques to explore the patient's ambivalence about changing his self-directed diet, consistent with a contemplation stage of readiness to change.",
+    "factIds": [
+     "s13",
+     "s14",
+     "h4"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize social isolation and lack of household support as barriers to sustained dietary change, and build sufficient rapport to allow deeper disclosures relevant to the patient's motivation.",
+    "factIds": [
+     "s10",
+     "s11",
+     "s17"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake and inadequate dietary variety/fiber related to self-directed high-protein/low-carbohydrate ('carnivore-ish') eating pattern in a patient with obesity (BMI 30.2), chronic pain on opioids/NSAID, and recurrent UTI, as evidenced by minimal vegetable/fiber intake, high processed meat and cheese intake, inadequate hydration, and unchanged weight/BMI over the past year despite patient's belief the diet is working.",
+   "differential": [
+    "Nutrition diagnosis: Excessive oral intake related to large portion sizes and family-style household meals as evidenced by unchanged weight year-over-year",
+    "Nutrition diagnosis: Inadequate fiber intake related to minimal vegetable/produce consumption as evidenced by diet history",
+    "Nutrition diagnosis: Inadequate fluid intake related to reliance on diet soda/coffee over water as evidenced by diet history",
+    "Nutrition diagnosis: Food- and nutrition-related knowledge deficit related to self-sourced low-carb diet information as evidenced by inability to explain rationale or track outcomes",
+    "Not primarily a diagnosis issue but a safety flag: possible unintentional acetaminophen overlap (hydrocodone/APAP tablet plus Tylenol PM) requiring referral back to prescriber/PCP"
+   ],
+   "keyFindings": [
+    "Weight 97.2 kg, height 179.4 cm, BMI 30.2 kg/m2 (obesity), essentially unchanged from prior annual wellness visit weight despite patient reporting a few months of low-carb dieting",
+    "Diet pattern: skipped breakfast, large mid-afternoon meal, evening grazing on chips, heavy reliance on processed/deli meats, cheese, and eggs with minimal vegetables",
+    "Hydration pattern: 3-4 diet sodas/day, coffee, roughly one glass of water with dinner",
+    "Household of six eats family-style with no portion coordination, undermining Josh's control over intake",
+    "NSAID (naproxen 220 mg BID) occasionally taken without food, with reported GI upset on at least 3 occasions in the past month",
+    "Reported inconsistent tramadol use and PRN hydrocodone/APAP use; reluctant admission of occasionally also taking Tylenol PM, raising risk of unrecognized acetaminophen overlap",
+    "Patient sincerely believes his low-carb diet is working based on how clothes feel, not on measured weight; chart weight history shows no meaningful change, a direct mismatch between patient belief and documented data",
+    "Readiness to change: contemplation stage - recognizes a need for change but ambivalent about committing to a structured plan",
+    "Social isolation: contact with others outside the household less than once a week, family dismissive of his pain/weight concerns",
+    "Labs reassuring and not contributing to current symptoms: lipid panel and CBC within normal limits",
+    "Hidden fear (only emerges with strong rapport): his mother's wheelchair-bound decline from arthritis and uncontrolled weight, which Josh has never disclosed to a clinician"
+   ],
+   "plan": [
+    "Complete a structured nutrition-focused physical finding and 24-hour recall/usual intake history anchored to dates/numbers Josh is comfortable with",
+    "Review weight/vitals history record and gently reconcile the documented lack of change with Josh's belief that his diet is working, without confrontation",
+    "Review current medication list for food-related interactions: counsel on taking naproxen with food consistently; flag the acetaminophen overlap (hydrocodone/APAP + Tylenol PM) for communication to the prescribing clinician",
+    "Assess diet adequacy and safety of the self-directed low-carb/high-protein pattern: identify low fiber/produce intake, high processed meat/sodium/saturated fat exposure, and inadequate free-water intake",
+    "Use motivational interviewing to explore ambivalence about changing his eating pattern; avoid directive confrontation; support autonomy and reflect his own stated goals (knee pain, staying mobile for work)",
+    "Discuss practical, low-burden strategies for a shared/family-style household (e.g., building his own plate first, simple produce additions, swapping some diet soda for water) tailored to his schedule and literacy",
+    "Explore and validate social isolation and lack of household support as a barrier; discuss low-cost problem-solving resources (e.g., community/senior nutrition programs) if he is open to it",
+    "Document encounter in ADIME format; communicate acetaminophen overlap concern to referring/primary provider for medication reconciliation",
+    "Schedule follow-up to re-assess weight trend objectively and reinforce any changes attempted"
+   ],
+   "redFlags": [
+    "Possible unintentional acetaminophen overlap between acetaminophen/hydrocodone tablets and Tylenol PM - needs prompt communication to prescribing clinician, not a dietetics-managed issue",
+    "Chronic opioid use with reported fluctuating appetite and occasional constipation - monitor nutrition impact but medical management is outside dietetics scope",
+    "Recurrent UTIs and chronic pain history are longstanding and not acutely emergent during this visit, but should be noted for care team awareness"
+   ],
+   "educationPoints": [
+    "Clarify that a 'low-carb' approach modeled on diabetes advice is not automatically the right fit for his individual goals, and that cutting carbs without attention to total intake, portions, and fiber may not produce the results he's hoping for",
+    "Explain the value of regular, consistent weigh-ins or another objective tracking method instead of relying on how clothes feel, to know whether a dietary change is actually working",
+    "Discuss simple ways to add fiber/vegetables within a food pattern he's comfortable with, without framing it as abandoning his approach entirely",
+    "Explain why taking naproxen with food consistently helps prevent the stomach upset he's noticed",
+    "Explain the importance of checking all medications and OTC products (like Tylenol PM) for overlapping acetaminophen content, and encourage him to discuss this with his prescriber",
+    "Normalize that eating in a shared household makes portion control harder, and offer concrete, low-conflict strategies that don't require the whole household to change"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m2",
+    "patientClaim": "Josh reports taking naproxen 220 mg twice daily 'with food, as directed' and describes a consistent routine ('I take it at 8 and at 6, same as my coffee') (h26)",
+    "recordEvidence": "On direct screening he discloses naproxen taken without food on multiple occasions in the past month, each followed by stomach upset (a10, h12)",
+    "teachingPoint": "Patients often describe their medication routine as more consistent than it actually is; targeted screening questions (not just open-ended adherence questions) can reveal real-world deviations relevant to GI risk and nutrition counseling around medication-food timing."
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 30,
+   "condition": "Osteoarthritis of knee",
+   "conditionLabel": "60 M · Osteoarthritis of knee, Chronic neck pain, Chronic low back pain +2 · 4 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2ed454e2",
+   "fingerprint": "1h9fpxu"
+  }
+ }
+}

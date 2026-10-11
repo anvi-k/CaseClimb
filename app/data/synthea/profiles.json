@@ -626,6 +626,372 @@
  },
  {
   "patient_overview": {
+   "name": "Morgan Gottlieb",
+   "age": 69,
+   "sex": "Male",
+   "description": "Morgan Gottlieb is a 69-year-old man living in Woodbury, New Jersey, with a household of five, who comes in for help managing knee osteoarthritis pain alongside his history of heart disease and bypass surgery. He is quiet and matter-of-fact, tends to minimize his pain and symptoms, and often answers questions with 'whatever you think is best' rather than offering his own preferences. He works full-time despite his knee pain and a long-standing struggle with opioid dependence, and he is motivated to take one clear, concrete step rather than overhaul his whole life at once.",
+   "keywords": [
+    "osteoarthritis",
+    "ischemic heart disease",
+    "opioid dependence",
+    "meal skipping",
+    "late-night eating",
+    "moderate health literacy",
+    "stoic personality",
+    "preparation stage",
+    "food insecurity",
+    "transportation barriers"
+   ]
+  },
+  "demographics": {
+   "occupation": "Warehouse shipping clerk",
+   "residence": "Woodbury, New Jersey; household of 5",
+   "ethnicity": "White",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "High school diploma or GED",
+   "insurance": "Not recorded",
+   "cultural_context": "Morgan grew up working-class in South Jersey and has always measured himself by whether he can still show up for his shift. He left school after high school and went straight into physical labor jobs, which shaped a 'tough it out' attitude toward pain and illness. Food in his house was always simple and filling rather than planned around health, and that habit has stuck with him into his later years, especially now that money is tight and getting to appointments or the store isn't always easy."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Osteoarthritis of knee",
+   "secondary_diagnoses": [
+    "Impacted molars",
+    "Chronic intractable migraine without aura",
+    "Dependent drug abuse",
+    "Chronic pain",
+    "Chronic low back pain",
+    "Ischemic heart disease",
+    "Abnormal findings diagnostic imaging heart+coronary circulat",
+    "History of coronary artery bypass grafting"
+   ],
+   "medical_history": [
+    "Impacted molars since 1990",
+    "Chronic intractable migraine without aura since 1990",
+    "Dependent drug abuse since 1990",
+    "Osteoarthritis of knee since 2000",
+    "Chronic pain since 2014",
+    "Chronic low back pain since 2014",
+    "Ischemic heart disease since 2021",
+    "Abnormal findings diagnostic imaging heart+coronary circulat since 2021",
+    "History of coronary artery bypass grafting since 2021",
+    "Overdose (2023-06 to 2023-06, resolved)",
+    "Acute viral pharyngitis (2023-12 to 2023-12, resolved)",
+    "Fracture of bone (2024-02 to 2024-05, resolved)",
+    "Fracture of clavicle (2024-02 to 2024-05, resolved)",
+    "Overdose (2024-04 to 2024-04, resolved)",
+    "Rehabilitation therapy (2026-10-09)",
+    "Bone density scan (2024-02-28)",
+    "Plain X-ray of clavicle (2024-02-28)",
+    "Admission to orthopedic department (2024-02-28)",
+    "Examination of gingivae (2023-08-04)",
+    "Removal of subgingival plaque and calculus from all teeth using dental instrument (2023-08-04)"
+   ],
+   "current_symptoms": [
+    "Aching and stiffness in the right knee that is worse by evening",
+    "Occasional chest tightness that eases with rest or his spray",
+    "Low back pain that he describes as 'just part of getting old'",
+    "Fatigue in the afternoon that he attributes to not eating enough during the day",
+    "Occasional lightheadedness he brushes off as 'low blood pressure, nothing new'"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears older than stated age, with slow, careful movements favoring the right knee when he stands up from a chair",
+    "Visible scar line on the chest consistent with prior bypass surgery",
+    "Mild swelling and crepitus noted around the right knee on observation",
+    "Flat, understated affect when describing pain; downplays discomfort with a shrug"
+   ],
+   "laboratory_data": [
+    "HbA1c: 5.4 % (reference < 5.7; 2021-08-08)",
+    "Glucose: 77.1 mg/dL (reference 70-99 (fasting); 2021-08-20)",
+    "eGFR: 5.7 mL/min/1.73m2 (reference >= 90; 2021-08-20)",
+    "Total cholesterol: 126.6 mg/dL (reference < 200; 2025-08-01)",
+    "LDL cholesterol: 41.8 mg/dL (reference < 100; 2025-08-01)",
+    "HDL cholesterol: 56.5 mg/dL (reference >= 40; 2025-08-01)",
+    "Triglycerides: 141.7 mg/dL (reference < 150; 2025-08-01)",
+    "Haemoglobin: 16 g/dL (reference 12.0-17.5; 2024-07-26)",
+    "White cell count: 6.7 10*3/uL (reference 4.0-11.0; 2024-07-26)",
+    "Platelets: 252.3 10*3/uL (reference 150-450; 2024-07-26)",
+    "Potassium: 4.8 mmol/L (reference 3.5-5.1; 2021-08-20)",
+    "Sodium: 142.7 mmol/L (reference 135-145; 2021-08-20)",
+    "Urea nitrogen: 9.6 mg/dL (reference 7-20; 2021-08-20)"
+   ],
+   "vital_signs": [
+    "BP: 110/51 mmHg",
+    "HR: 92 bpm",
+    "RR: 15 breaths/min",
+    "Recorded: 2026-08-07"
+   ],
+   "anthropometrics": [
+    "Height: 169.4 cm",
+    "Weight: 77.8 kg",
+    "BMI: 27.1 kg/m2"
+   ]
+  },
+  "medication_profile": {
+   "medications": [
+    {
+     "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+     "dose": "300 MG",
+     "frequency": "As needed for pain, per patient report",
+     "purpose": "Not recorded",
+     "adherence": "Takes it when the knee or back pain is bad, tries to space it out because he worries about taking too much",
+     "patient_concerns": "Doesn't like being on it long-term given his past with drug dependence, feels uneasy discussing it and tends to say 'it's handled'"
+    },
+    {
+     "name": "Clopidogrel 75 MG Oral Tablet",
+     "dose": "75 MG",
+     "frequency": "Once daily",
+     "purpose": "Not recorded",
+     "adherence": "Takes it every morning without fail, says it's 'part of the routine' since his bypass",
+     "patient_concerns": "No real complaints; sees it as non-negotiable after his heart surgery"
+    },
+    {
+     "name": "Simvastatin 20 MG Oral Tablet",
+     "dose": "20 MG",
+     "frequency": "Once daily, evening",
+     "purpose": "Not recorded",
+     "adherence": "Mostly consistent, occasionally forgets if he eats very late and falls asleep",
+     "patient_concerns": "Not worried about it, says his cholesterol numbers are good so 'it must be working'"
+    },
+    {
+     "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+     "dose": "100 MG",
+     "frequency": "Once daily",
+     "purpose": "Not recorded",
+     "adherence": "Takes it regularly, has learned to take it with food after some early stomach upset",
+     "patient_concerns": "Mentions feeling tired some afternoons but isn't sure if it's the medication or just his schedule"
+    },
+    {
+     "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+     "dose": "0.4 MG/ACTUAT",
+     "frequency": "As needed for chest tightness",
+     "purpose": "Not recorded",
+     "adherence": "Carries it with him, uses it rarely and often downplays how often he actually needs it",
+     "patient_concerns": "Reluctant to admit how often he reaches for it, doesn't want to 'make a big deal' out of chest symptoms"
+    },
+    {
+     "name": "Naproxen sodium 220 MG Oral Tablet",
+     "dose": "220 MG",
+     "frequency": "Twice daily with food",
+     "purpose": "Osteoarthritis of knee",
+     "adherence": "Takes it fairly consistently for knee pain, sometimes skips if he's forgotten to eat and doesn't want it on an empty stomach",
+     "patient_concerns": "Vague worry about it affecting his stomach or heart but doesn't bring it up unless asked directly"
+    }
+   ],
+   "supplements_and_otc": [
+    "Glucosamine chondroitin capsules a coworker recommended for his knee",
+    "Turmeric capsules he buys at the pharmacy counter",
+    "A topical menthol rub he uses at night on his knee and back",
+    "Occasional magnesium tablets his daughter dropped off 'for cramps'"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Skips breakfast and often lunch due to work schedule and low appetite during the day, then eats one large meal late at night after getting home, typically something heavy like a meat-and-starch plate or leftovers reheated",
+   "food_preferences": [
+    "Meatloaf and mashed potatoes",
+    "Fried chicken from the gas station near work",
+    "Buttered white bread",
+    "Canned vegetables rather than fresh, mostly for convenience"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Going most of the day without eating then eating a very large portion right before bed",
+    "Reliance on convenience and canned foods due to limited transportation to a full grocery store",
+    "Possible use of home remedies or supplements alongside prescribed medications",
+    "Low fluid intake during work hours"
+   ],
+   "meal_pattern": "Essentially one large meal a day, eaten late in the evening; coffee in the morning but no real breakfast; lunch is frequently skipped or replaced by a snack from a vending machine",
+   "hydration": "Mostly coffee during the day, water in the evening with his big meal; doesn't drink much during work shifts",
+   "physical_activity": "On his feet for shifts at the warehouse but limited by knee pain; no structured exercise; avoids stairs when he can",
+   "substance_use": "Ex-smoker; history of dependent drug abuse under active management; drinks alcohol rarely if at all",
+   "sleep": "Reports sleep is 'okay' but admits the late heavy meal sometimes leaves him uncomfortable or restless at night"
+  },
+  "psychosocial_profile": {
+   "personality": "Stoic, even-keeled, tends to minimize pain and health problems; doesn't like to be fussed over",
+   "communication_style": "Brief, defers often with phrases like 'whatever you think is best'; needs direct, specific questions to open up rather than open-ended ones",
+   "goals": [
+    "Wants one clear, manageable change he can actually stick to",
+    "Wants to keep working without the knee pain getting worse",
+    "Wants to avoid another hospital visit tied to his heart"
+   ],
+   "concerns": [
+    "Worried that his knee will get bad enough to threaten his job",
+    "Quietly worried about relying on pain medication again",
+    "Concerned about money being tight for food and medical costs"
+   ],
+   "beliefs": [
+    "Believes pain is just something you push through if you want to keep working",
+    "Thinks supplements and home remedies are 'natural' and therefore separate from his real medications",
+    "Believes his heart is 'fixed' since the bypass and doesn't need much more attention"
+   ],
+   "motivations": [
+    "Keeping his job and providing for the household",
+    "Avoiding becoming a burden on his adult children",
+    "Staying out of the hospital"
+   ],
+   "fears": [
+    "Fear of becoming dependent on pain medication again",
+    "Fear of losing his ability to work",
+    "Fear of his children's lectures turning into real worry or anger"
+   ],
+   "barriers": [
+    "Limited transportation making it hard to get to appointments or a good grocery store",
+    "Tight household budget with food insecurity reported",
+    "Work schedule that discourages regular meals",
+    "Reluctance to disclose supplement use or how much pain medication he actually takes"
+   ],
+   "strengths": [
+    "Reliable and disciplined about showing up for work and taking his heart medications",
+    "Open to a single concrete action step",
+    "Has family nearby, even if their approach grates on him"
+   ],
+   "support_system": "Married, lives with a household of five including adult children who check in often but tend to lecture him about his health, which he tolerates quietly rather than welcomes",
+   "readiness_to_change": "Preparation stage: he has already decided something needs to change and is looking for one specific, doable first step rather than a broad overhaul"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States he's here about his knee because it's been bothering him more at work",
+    "Mentions he had bypass surgery a few years back and takes medication for his heart",
+    "Says he doesn't eat much during the day because of his schedule"
+   ],
+   "discoverable_information": [
+    "Describes eating one very large meal late at night after his shift",
+    "Admits he skips lunch most days because the warehouse doesn't give much break time",
+    "Mentions his adult children often tell him he needs to eat better or slow down",
+    "Reports going without enough food some months due to tight finances"
+   ],
+   "reluctant_information": [
+    "Admits, when asked gently about pain management, that he sometimes takes more of his prescribed pain pills than planned on bad days",
+    "Acknowledges some worry about depending on pain medication again given his history"
+   ],
+   "hidden_information": [
+    "Has been taking glucosamine chondroitin and turmeric capsules daily for his knee that he never mentioned to his care team",
+    "Uses a magnesium supplement his daughter gave him for leg cramps without telling his doctor",
+    "Rubs a store-bought menthol liniment on his knee and back most nights, a habit from his father he's never brought up at appointments"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Elicit a full picture of meal timing and its link to knee pain, energy, and heart health using open but specific questions.",
+     "expected_discoveries": [
+      "Patient skips breakfast and lunch, eats one large late meal",
+      "Late heavy meals may contribute to discomfort and poor sleep",
+      "Work schedule is the main driver of the pattern"
+     ],
+     "possible_patient_reactions": [
+      "'I just eat when I get home, whatever's there.'",
+      "'Never really thought about it being a problem, it's just how my day goes.'"
+     ]
+    },
+    {
+     "learning_objective": "Build enough trust to uncover undisclosed supplement and home remedy use.",
+     "expected_discoveries": [
+      "Daily glucosamine chondroitin and turmeric capsule use",
+      "Magnesium tablets from his daughter",
+      "Nightly menthol rub routine"
+     ],
+     "possible_patient_reactions": [
+      "'Didn't think that counted as a medicine, so I didn't mention it.'",
+      "'My daughter gave it to me, figured it couldn't hurt.'"
+     ]
+    },
+    {
+     "learning_objective": "Explore pain medication use carefully given his history of dependent drug abuse without triggering defensiveness.",
+     "expected_discoveries": [
+      "Occasional overuse of prescribed acetaminophen/hydrocodone on bad pain days",
+      "Underlying fear of relapse into dependence",
+      "Reluctance to bring up pain levels because he minimizes them"
+     ],
+     "possible_patient_reactions": [
+      "'It's handled, I don't want to make a thing of it.'",
+      "'I take a little extra sometimes, but I'm careful, I promise.'"
+     ]
+    },
+    {
+     "learning_objective": "Negotiate one small, concrete first step consistent with his preparation stage of readiness.",
+     "expected_discoveries": [
+      "Patient is receptive to a single specific change rather than a full diet overhaul",
+      "He prefers structure handed to him rather than open brainstorming",
+      "A simple idea like a packed lunch or a mid-shift snack could fit his routine"
+     ],
+     "possible_patient_reactions": [
+      "'Just tell me what to do and I'll try it.'",
+      "'Whatever you think is best, I'll give it a shot.'"
+     ]
+    },
+    {
+     "learning_objective": "Address food insecurity and transportation barriers affecting his nutrition.",
+     "expected_discoveries": [
+      "Household went without enough food at times",
+      "Transportation issues have caused missed appointments and medication pickups",
+      "Reliance on nearby convenience foods due to limited grocery access"
+     ],
+     "possible_patient_reactions": [
+      "'Some months it's tight, we make it work.'",
+      "'Getting to the store isn't always easy, so we get what's close.'"
+     ]
+    },
+    {
+     "learning_objective": "Recognize family dynamics and how well-meaning lectures from adult children affect his engagement with care.",
+     "expected_discoveries": [
+      "Children frequently comment on his eating and health habits",
+      "He tunes out lectures but may be more receptive to practical, non-judgmental suggestions",
+      "Possible opportunity to involve family in a supportive, non-nagging way"
+     ],
+     "possible_patient_reactions": [
+      "'They mean well, but I've heard it a hundred times.'",
+      "'Maybe if you told them, they'd back off a little.'"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Morgan's full-time warehouse job limits structured breaks, reinforcing his skip-then-binge eating pattern",
+    "His history of dependent drug abuse is in active outpatient management given frequent recent ambulatory encounters for the problem",
+    "His low blood pressure and heart rate pattern reflect his cardiac medication regimen rather than acute instability",
+    "Food insecurity reported in the social survey directly shapes his reliance on cheap, calorie-dense convenience foods"
+   ],
+   "optional_details": [
+    "Enjoys watching baseball with his grandchildren on weekends when his knee allows him to sit through a game",
+    "Keeps a worn, reliable lunch cooler in his truck that he almost never actually uses"
+   ]
+  },
+  "source": {
+   "synthea_record": "050d5b74",
+   "condition_group": "heart",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "stoic, plays every problem down",
+    "communication": "defers with 'whatever you think is best'",
+    "readiness": "preparation: has decided and wants a concrete first step",
+    "literacy": "moderate health literacy",
+    "eating": "skips meals during the day and then eats a very large meal late at night",
+    "held_back": "takes supplements or home remedies the clinic does not know about",
+    "support": "adult children who mean well and lecture"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
    "name": "Darby Cole",
    "age": 26,
    "sex": "Female",
@@ -1638,6 +2004,279 @@
     "eating": "cooks well and enjoys it, but portions are large and food is how the family shows love",
     "held_back": "a fear that a relative's illness will repeat itself in them",
     "support": "family nearby who do not take the condition seriously"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
+   "name": "Brooks Little",
+   "age": 43,
+   "sex": "Male",
+   "description": "Brooks Little is a 43-year-old warehouse-shift forklift operator working part-time, living in East Orange with his wife, kids, and in-laws in a crowded household of seven. He comes to the visit for a routine check tied to his BMI but makes it clear he thinks the whole thing is a formality, launching into long tangents about his job, his truck, and articles he's read online rather than answering directly. He's proud of being the kind of guy who 'figures things out himself' and bristles at anything that sounds like being told what to do, though underneath the bravado there are real money pressures shaping what ends up in his stomach.</description>\n<parameter name=\"keywords\">[\"obesity\", \"precontemplation\", \"grazing/snacking pattern\", \"food cost barriers\", \"health literacy\", \"autonomy/pride\", \"low support\", \"sedentary shift work\"]"
+  },
+  "demographics": {
+   "occupation": "Part-time forklift operator at a regional warehouse distribution center",
+   "residence": "East Orange, New Jersey; household of 7",
+   "ethnicity": "Asian",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "High school diploma or GED",
+   "insurance": "Medicaid",
+   "cultural_context": "Brooks grew up in a working-class East Orange household where meals were whatever stretched furthest, and he carried that practical, no-frills attitude toward food into adulthood. He values self-sufficiency and being the one who 'figures it out' rather than asking for help, a trait reinforced by years of hourly warehouse work and now a crowded multigenerational household he feels responsible for provisioning. Food, to him, is fuel to get through a long shift, not something to fuss over, and he's wary of outside advice that doesn't account for the real cost of groceries on a tight budget."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Body mass index 30+ - obesity",
+   "secondary_diagnoses": [],
+   "medical_history": [
+    "Body mass index 30+ - obesity since 2025",
+    "Acute viral pharyngitis (2025-11 to 2025-12, resolved)",
+    "Examination of gingivae (2020-12-10)",
+    "Removal of subgingival plaque and calculus from all teeth using dental instrument (2020-12-10)",
+    "Removal of supragingival plaque and calculus from all teeth using dental instrument (2020-12-10)",
+    "Dental care (2020-12-10)",
+    "Dental consultation and report (2020-12-10)",
+    "Face mask (physical object) (2020-08-16)"
+   ],
+   "current_symptoms": [
+    "No chest pain or shortness of breath that he reports",
+    "Says his energy is 'fine, same as always'",
+    "Occasional heartburn after late-night eating, which he brushes off",
+    "Mentions his pants fitting tighter but says it's 'just getting older'"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears solidly built with weight carried mostly around the midsection",
+    "Mild gum recession and some tartar buildup noted on brief oral check, consistent with inconsistent dental visits",
+    "No edema or acute distress; moves around the exam room restlessly, picking things up and talking",
+    "Breath sounds clear, no distress climbing onto the exam table despite his size"
+   ],
+   "laboratory_data": [
+    "Total cholesterol: 204.2 mg/dL (reference < 200; 2025-09-18)",
+    "LDL cholesterol: 131.7 mg/dL (reference < 100; 2025-09-18)",
+    "HDL cholesterol: 49.2 mg/dL (reference >= 40; 2025-09-18)",
+    "Triglycerides: 116.7 mg/dL (reference < 150; 2025-09-18)",
+    "Haemoglobin: 14.7 g/dL (reference 12.0-17.5; 2023-09-14)",
+    "White cell count: 6.3 10*3/uL (reference 4.0-11.0; 2023-09-14)",
+    "Platelets: 357.9 10*3/uL (reference 150-450; 2023-09-14)"
+   ],
+   "vital_signs": [
+    "BP: 118/87 mmHg",
+    "HR: 80 bpm",
+    "RR: 14 breaths/min",
+    "Recorded: 2025-09-18"
+   ],
+   "anthropometrics": [
+    "Height: 180 cm",
+    "Weight: 97.4 kg",
+    "BMI: 30.1 kg/m2",
+    "Weight change: +2.5 kg since 2023-09-14"
+   ]
+  },
+  "medication_profile": {
+   "medications": [],
+   "supplements_and_otc": [
+    "A big tub of generic multivitamins he bought at the dollar store 'just in case'",
+    "Tums for heartburn, kept in his truck",
+    "Occasional store-brand ibuprofen for his back after shifts"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "No fixed meals; grazes throughout the day on whatever is quick, cheap, and filling - chips, cold cuts straight from the fridge, leftover rice, gas-station snacks between warehouse shifts",
+   "food_preferences": [
+    "Fried chicken from the spot near his job",
+    "Honey buns and other individually wrapped pastries he keeps in his truck",
+    "Big bags of store-brand tortilla chips",
+    "Sweetened iced tea, half-gallon jugs"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Skips sit-down meals most days, eats standing up or driving",
+    "Buys whatever is cheapest per ounce regardless of nutrition, tracks unit prices carefully",
+    "Finishes kids' leftover plates at night so food doesn't go to waste",
+    "Says he 'doesn't really do breakfast,' coffee with sugar instead",
+    "Portions seem large when he does eat a full plate, often seconds"
+   ],
+   "meal_pattern": "No set breakfast, lunch, or dinner; eats small amounts frequently across a 14-16 hour day, with one larger meal late at night after the household settles down",
+   "hydration": "Mostly sweet tea and soda from the corner store; says water 'doesn't fill him up'",
+   "physical_activity": "On his feet operating a forklift during shifts but otherwise sedentary at home; no structured exercise, says work is 'enough exercise'",
+   "substance_use": "Never smoked; drinks a couple of beers on weekends with brothers-in-law, denies heavy drinking",
+   "sleep": "Irregular, 5-6 hours, broken up by late shifts and a noisy house"
+  },
+  "psychosocial_profile": {
+   "personality": "Proud, self-reliant, doesn't like being told what to do; covers insecurity with confidence and long stories",
+   "communication_style": "Talks in long, winding anecdotes - starts answering a question about food and ends up on a story about his truck's transmission or a coworker's drama; hard to pin down to a direct answer",
+   "goals": [
+    "Wants to stay strong enough to keep working his job",
+    "Wants people to stop 'nagging' him about his weight",
+    "Would like to not get winded carrying furniture for his father-in-law"
+   ],
+   "concerns": [
+    "Doesn't want to be lectured",
+    "Worried a diet 'thing' will cost money he doesn't have",
+    "Mildly annoyed that a 'number on a chart' (BMI) is driving this whole visit"
+   ],
+   "beliefs": [
+    "Thinks he's 'not that big,' plenty of guys at work are bigger",
+    "Believes diets are a scam and 'everybody's body is different'",
+    "Trusts what he reads on forums and YouTube over what a dietitian says",
+    "Thinks as long as he's not diabetic yet, there's nothing really wrong"
+   ],
+   "motivations": [
+    "Being able to keep working without his knees or back giving out",
+    "Not wanting his wife to worry",
+    "Pride in providing for a big household"
+   ],
+   "fears": [
+    "Losing work hours if his health declines",
+    "Being seen as weak or needing help",
+    "Admitting money is tight in front of a stranger"
+   ],
+   "barriers": [
+    "Precontemplation - doesn't see weight as a problem needing action",
+    "Tight household budget, buys cheapest calories",
+    "No real support system to help him plan or cook differently",
+    "Irregular work hours make any 'meal plan' feel pointless to him",
+    "Pride makes him resist suggestions, even reasonable ones"
+   ],
+   "strengths": [
+    "Resourceful, good at stretching a tight budget",
+    "Physically active at work",
+    "Reads a lot, genuinely curious about health topics in his own way",
+    "No tobacco use, limited alcohol"
+   ],
+   "support_system": "Lives with wife, kids, and in-laws in a crowded house, but says everyone's 'doing their own thing' - little actual day-to-day help with cooking, errands, or health follow-through",
+   "readiness_to_change": "Precontemplation; doesn't believe his weight is currently a problem worth addressing, dismisses the visit's relevance"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States he feels 'fine, same as always' and doesn't see why the BMI number matters",
+    "Mentions he works part-time at a warehouse operating a forklift",
+    "Launches into a story about his truck or a coworker when asked about his diet",
+    "Says he eats 'whenever, whatever's around' - no real meal schedule"
+   ],
+   "discoverable_information": [
+    "Describes typical snack foods and drinks in detail once he's talking about his day",
+    "Reveals he reads a lot of health stuff online and has strong opinions about diets being 'scams'",
+    "Mentions the house has seven people and is 'always chaos' at mealtimes",
+    "Admits he doesn't really do breakfast and relies on sugared coffee"
+   ],
+   "reluctant_information": [
+    "Hints that money is tight some weeks, deflects with a joke before changing subject",
+    "Mentions buying the cheapest food 'per ounce' when pressed on specific choices",
+    "Admits he sometimes skips picking up a medicine or OTC item at the pharmacy to save money that week"
+   ],
+   "hidden_information": [
+    "He has gone without seeing a dentist or doctor for non-urgent issues because he and his wife prioritize the kids' and in-laws' medical and dental needs over his own, given the household income of about $16,700/year",
+    "He has quietly started buying a cheaper, larger bag of chips and off-brand cold cuts in bulk because name-brand versions no longer fit the week's grocery budget",
+    "He feels embarrassed that at 43 he still can't put together a 'real meal' for his family and masks it with jokes about being 'too busy'"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Practice motivational interviewing with a patient in precontemplation who denies any problem exists",
+     "expected_discoveries": [
+      "Patient minimizes BMI finding and compares himself favorably to coworkers",
+      "Patient resists direct advice and redirects conversation",
+      "Patient shows some underlying motivation tied to work capacity and family pride"
+     ],
+     "possible_patient_reactions": [
+      "'Man, half the guys on my shift are bigger than me, why's this a big deal?'",
+      "'I didn't come here for a lecture, doc.'",
+      "'I guess... I don't want to be the reason I can't carry stuff for my wife's dad.'"
+     ]
+    },
+    {
+     "learning_objective": "Elicit a grazing, no-fixed-meal eating pattern and translate it into assessable intake",
+     "expected_discoveries": [
+      "Snack-based calorie intake spread across a long day",
+      "Large late-night meal after work",
+      "Reliance on sweetened beverages for hydration"
+     ],
+     "possible_patient_reactions": [
+      "'I don't really sit down to eat, I just grab stuff as I go.'",
+      "'Dinner's whenever the house finally quiets down, like 10, 11 at night.'"
+     ]
+    },
+    {
+     "learning_objective": "Uncover hidden financial barriers affecting food and health care choices without triggering shame",
+     "expected_discoveries": [
+      "Household income near $16,700/year supporting seven people",
+      "History of going without medical or dental care",
+      "Food purchasing driven by unit price rather than nutrition quality"
+     ],
+     "possible_patient_reactions": [
+      "'We're fine, we manage.' (deflecting)",
+      "'Okay, yeah, sometimes it's tight, but I handle it - always have.'"
+     ]
+    },
+    {
+     "learning_objective": "Navigate a patient who self-educates online and may hold strong, sometimes inaccurate, nutrition beliefs",
+     "expected_discoveries": [
+      "Specific claims from forums or videos he repeats as fact",
+      "Skepticism toward dietitian recommendations",
+      "Opening for collaborative, evidence-based conversation that respects his autonomy"
+     ],
+     "possible_patient_reactions": [
+      "'I read that calorie counting is a myth, it's all about something else.'",
+      "'I'm not trying to be rude, but I probably know more about this than you'd think.'"
+     ]
+    },
+    {
+     "learning_objective": "Address limited social support in planning any nutrition intervention",
+     "expected_discoveries": [
+      "Household is large but no one actively helps him cook or plan meals",
+      "He is the one who feels responsible for everyone else first",
+      "Any plan needs to be self-directed and low-effort given his schedule"
+     ],
+     "possible_patient_reactions": [
+      "'Nobody's got time to sit and plan meals in my house, it's chaos.'",
+      "'I'm the one who's supposed to have it together, not the other way around.'"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Household income of $16,681/year for seven people implies significant food and healthcare budget constraints despite patient's reluctance to discuss this directly",
+    "Part-time employment with irregular shift hours contributes to the grazing eating pattern and poor sleep",
+    "No care plans on record and precontemplation stage suggest this is likely his first real nutrition conversation about weight"
+   ],
+   "optional_details": [
+    "Owns an older pickup truck he's proud of fixing himself",
+    "Enjoys watching DIY and conspiracy-adjacent YouTube channels in his downtime",
+    "Has three kids plus in-laws living in the house, so the kitchen is rarely quiet",
+    "Nickname at work is 'Little' despite being the biggest guy on his shift - he finds this funny"
+   ]
+  },
+  "source": {
+   "synthea_record": "069da380",
+   "condition_group": "weight",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "proud and self-reliant, dislikes being advised",
+    "communication": "long stories that wander off the question",
+    "readiness": "precontemplation: does not see a reason to change",
+    "literacy": "high health literacy, reads a lot online",
+    "eating": "has no set meals and grazes on snacks through the day",
+    "held_back": "money worries that affect which food or medicines they buy",
+    "support": "very little day-to-day support"
    },
    "from_synthea": [
     "patient_overview.name, age, sex",
@@ -8888,6 +9527,641 @@
  },
  {
   "patient_overview": {
+   "name": "Josh Satterfield",
+   "age": 60,
+   "sex": "Male",
+   "description": "Josh Satterfield is a 60-year-old man living in Woodcliff Lake, NJ, who comes in for weight management counseling tied to chronic back, neck, and knee pain plus recurrent UTIs. He speaks in a precise, almost clinical way\u2014citing exact dates and numbers from his chart\u2014but gets visibly scattered when asked to connect the dots between his pain, his weight, and his diet. He's heard of a \"carnivore-ish\" eating plan from a guy at his part-time job and has been trying pieces of it, unsure if it's helping or just confusing him further.",
+   "keywords": [
+    "obesity",
+    "chronic pain",
+    "osteoarthritis knee",
+    "recurrent uti",
+    "opioid use",
+    "self-directed diet",
+    "contemplation stage",
+    "social isolation",
+    "moderate health literacy",
+    "family illness fear"
+   ]
+  },
+  "demographics": {
+   "occupation": "Part-time hardware store associate (stocking and register shifts)",
+   "residence": "Woodcliff Lake, New Jersey; household of 6",
+   "ethnicity": "Asian",
+   "language": "English",
+   "marital_status": "Single",
+   "education_level": "High school diploma or GED",
+   "insurance": "Private insurance",
+   "cultural_context": "Josh grew up in a working-class household in northern New Jersey where meals were large, meat-and-potatoes affairs eaten together, and showing affection often meant piling someone's plate high. He never went to college and has worked a string of retail and warehouse jobs; he values being self-sufficient and distrusts anything that sounds like a fad, even as he tries fads himself. His current household of six (adult siblings, a niece, and nephew) treats mealtimes as a free-for-all rather than something coordinated, which makes it hard for him to control what's in the house."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Body mass index 30+ - obesity",
+   "secondary_diagnoses": [
+    "Recurrent urinary tract infection",
+    "Chronic pain",
+    "Chronic low back pain",
+    "Chronic neck pain",
+    "Osteoarthritis of knee"
+   ],
+   "medical_history": [
+    "Body mass index 30+ - obesity since 1988",
+    "Recurrent urinary tract infection since 1998",
+    "Chronic pain since 2014",
+    "Chronic low back pain since 2014",
+    "Chronic neck pain since 2014",
+    "Osteoarthritis of knee since 2018",
+    "Disease caused by severe acute respiratory syndrome coronavirus 2 (2021-05 to 2021-05, resolved)",
+    "Gingivitis (2025-04 to 2025-05, resolved)",
+    "Primary dental caries (2025-05 to 2025-05, resolved)",
+    "Restoration of tooth with coverage of all cusps using dental filling material (2025-05-02)",
+    "Dental plain X-ray bitewing (2025-05-02)",
+    "Examination of gingivae (2025-05-02)",
+    "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-05-02)",
+    "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-05-02)",
+    "Dental care (2025-05-02)"
+   ],
+   "current_symptoms": [
+    "Burning and urgency when urinating that comes and goes, 'maybe four or five times a year'",
+    "Low back pain that is worse by the end of a work shift",
+    "Stiffness in the right knee going up stairs",
+    "Fatigue he attributes to 'just getting older'",
+    "Occasional constipation he thinks is from the pain pills"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Antalgic, slightly favoring the right leg when walking into the room",
+    "Mild swelling around the right knee on observation",
+    "Flat affect that shifts to rapid, detail-heavy speech when discussing lab numbers",
+    "Dry mouth noted while talking, reaches for water bottle repeatedly"
+   ],
+   "laboratory_data": [
+    "Total cholesterol: 143.9 mg/dL (reference < 200; 2025-04-18)",
+    "LDL cholesterol: 64 mg/dL (reference < 100; 2025-04-18)",
+    "HDL cholesterol: 56.9 mg/dL (reference >= 40; 2025-04-18)",
+    "Triglycerides: 114.8 mg/dL (reference < 150; 2025-04-18)",
+    "Haemoglobin: 16.1 g/dL (reference 12.0-17.5; 2023-04-07)",
+    "White cell count: 9 10*3/uL (reference 4.0-11.0; 2023-04-07)",
+    "Platelets: 401.2 10*3/uL (reference 150-450; 2023-04-07)"
+   ],
+   "vital_signs": [
+    "BP: 114/89 mmHg",
+    "HR: 96 bpm",
+    "RR: 15 breaths/min",
+    "Recorded: 2026-04-24"
+   ],
+   "anthropometrics": [
+    "Height: 179.4 cm",
+    "Weight: 97.2 kg",
+    "BMI: 30.2 kg/m2"
+   ]
+  },
+  "medication_profile": {
+   "medications": [
+    {
+     "name": "72 HR Fentanyl 0.025 MG/HR Transdermal System",
+     "dose": "0.025 MG",
+     "frequency": "Transdermal patch, changed every 72 hours",
+     "purpose": "Not recorded",
+     "adherence": "Says he changes it 'like clockwork, every third day, I write it on the calendar'",
+     "patient_concerns": "Worried about becoming 'one of those patch people' and asks if it affects his appetite, since he's noticed he eats less some days and binges other days"
+    },
+    {
+     "name": "tramadol hydrochloride 50 MG Oral Tablet",
+     "dose": "50 MG",
+     "frequency": "Takes as needed, 'usually one tablet, maybe twice on a bad day'",
+     "purpose": "Not recorded",
+     "adherence": "Inconsistent; skips it when pain is tolerable to 'save it for when I really need it'",
+     "patient_concerns": "Mentions it makes him foggy and he's afraid of taking it before driving to work"
+    },
+    {
+     "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+     "dose": "300 MG",
+     "frequency": "As needed for breakthrough pain, roughly 2-3 times a week",
+     "purpose": "Not recorded",
+     "adherence": "Takes it sparingly because he's read online that it's 'basically the same as the fentanyl patch, just weaker'",
+     "patient_concerns": "Worried about his liver because he knows it has acetaminophen in it, and he also sometimes takes Tylenol separately without realizing it overlaps"
+    },
+    {
+     "name": "Naproxen sodium 220 MG Oral Tablet",
+     "dose": "220 MG",
+     "frequency": "Twice daily with food, as directed for the knee",
+     "purpose": "Osteoarthritis of knee",
+     "adherence": "Fairly consistent, says 'I take it at 8 and at 6, same as my coffee'",
+     "patient_concerns": "Complains it upsets his stomach if he forgets to eat first, mentions this happened '3 times last month'"
+    }
+   ],
+   "supplements_and_otc": [
+    "Glucosamine chondroitin tablets, 'the ones from the warehouse club, 1500 mg'",
+    "Tylenol PM a few nights a week for sleep",
+    "A greens powder a coworker recommended, mixed into water most mornings"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Self-directed, high-protein/low-carb approach picked up from a coworker and some YouTube videos \u2014 he calls it 'basically carnivore but I still have some vegetables.' Mostly eggs, bacon, deli meat, steak when it's on sale, and cheese, with carbs cut way down on 'good days' and abandoned entirely by Friday takeout night.",
+   "food_preferences": [
+    "Steak and eggs breakfast on days off",
+    "Deli ham and provolone roll-ups",
+    "String cheese as a snack",
+    "Diet soda, several a day",
+    "Occasional meatball sub from the place near work on Fridays"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Skips vegetables most days, says 'lettuce doesn't fill me up'",
+    "Drinks very little plain water, relies on diet soda and coffee",
+    "Portions are large at dinner because the household cooks 'family style' and he eats what's put out",
+    "Nighttime snacking on chips when pain keeps him up",
+    "Hasn't tracked whether the low-carb approach is actually changing his weight"
+   ],
+   "meal_pattern": "Skips breakfast on work days, has a large mid-afternoon meal when he gets home from his shift, then grazes in the evening",
+   "hydration": "3-4 diet sodas a day, coffee in the morning, maybe one glass of water with dinner",
+   "physical_activity": "Standing and light lifting during work shifts, otherwise mostly sedentary at home; avoids stairs when he can because of the knee",
+   "substance_use": "Ex-smoker, quit roughly 'nine years ago, give or take'; light alcohol use, a beer or two on weekends",
+   "sleep": "Fragmented, wakes around 2 or 3 am most nights from back pain, naps on his days off"
+  },
+  "psychosocial_profile": {
+   "personality": "Overwhelmed and scattered; starts answering a question and drifts into a tangent about a lab value or an appointment date, then has to be gently redirected",
+   "communication_style": "Precise and factual when discussing numbers he's memorized \u2014 exact dates, dosages, lab results \u2014 but loses the thread when asked about feelings or daily patterns, often saying 'wait, what were we talking about'",
+   "goals": [
+    "Get his weight down from 97.2 kg so his knee stops aching on stairs",
+    "Figure out if the diet he's doing is 'actually working or just something I made up'",
+    "Avoid another urinary tract infection before his next wellness exam on 2026-04-24"
+   ],
+   "concerns": [
+    "Confused about whether his low-carb approach is helping or if his weight is barely moving",
+    "Worried the pain medications are messing with his appetite and his gut",
+    "Feels like no one in the house takes his pain or his weight seriously"
+   ],
+   "beliefs": [
+    "Believes cutting carbs is 'basically what doctors tell diabetics so it has to be good for me too'",
+    "Thinks his chronic pain and his weight are two separate problems that don't talk to each other",
+    "Isn't sure supplements like glucosamine do anything but 'figures it can't hurt'"
+   ],
+   "motivations": [
+    "Wants to still be able to work his retail shifts standing up without his knee giving out",
+    "Doesn't want to end up needing a cane or worse",
+    "Wants a clear answer instead of guessing with internet diets"
+   ],
+   "fears": [
+    "Fears repeating what happened to a close relative who went through a long, debilitating illness tied to weight and joints, though he avoids naming this directly"
+   ],
+   "barriers": [
+    "Household of six eats 'family style' with no coordination, so controlling portions or ingredients is hard",
+    "Part-time, irregular retail schedule disrupts meal timing",
+    "Low social contact \u2014 less than once a week \u2014 leaves him without anyone to problem-solve with",
+    "Moderate health literacy makes it hard to connect dots between symptoms, labs, and diet"
+   ],
+   "strengths": [
+    "Detail-oriented and good at tracking numbers once he's shown how",
+    "Willing to try new approaches, even if self-directed",
+    "Shows up consistently to his wellness exams, 2023, 2024, 2025, 2026"
+   ],
+   "support_system": "Household of six family members nearby, but they brush off his pain and weight concerns as 'just getting older'; social contact outside the house is less than once a week",
+   "readiness_to_change": "Contemplation \u2014 recognizes something needs to change, cites his own numbers as proof, but is torn between sticking with his self-made diet and trusting a professional plan"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States his age, weight (97.2 kg), and BMI (30.2) from memory",
+    "Mentions he's been on a 'low-carb, high-protein thing' for a few months",
+    "Lists his four pain medications by name and roughly how often he takes each one",
+    "Mentions his last UTI was 'a few months back, maybe February'"
+   ],
+   "discoverable_information": [
+    "Admits he skips breakfast most days and eats his biggest meal mid-afternoon",
+    "Reveals he drinks 3-4 diet sodas a day and barely touches water",
+    "Describes the household eating 'family style' with no portion control",
+    "Mentions he got his diet idea from a coworker named Russ at the hardware store",
+    "Admits he's not sure the diet is actually working because he hasn't weighed himself consistently"
+   ],
+   "reluctant_information": [
+    "Admits, when asked gently about family support, that his siblings 'just roll their eyes' when he brings up his knee or his diet",
+    "Acknowledges he sometimes doubles up on acetaminophen without meaning to, between the hydrocodone tablet and Tylenol PM"
+   ],
+   "hidden_information": [
+    "His mother spent her last years in a wheelchair from severe osteoarthritis and uncontrolled weight, and Josh has never told anyone he's terrified the same thing is happening to him, starting with his own knee"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Elicit and organize a scattered patient's dietary history using structured, factual anchors (dates, numbers) he already uses.",
+     "expected_discoveries": [
+      "24-hour recall reveals skipped breakfast, large afternoon meal, evening grazing",
+      "Diet soda and low water intake pattern",
+      "Family-style household meals undermine portion control"
+     ],
+     "possible_patient_reactions": [
+      "'Let me check my phone, I think I wrote down what I ate on the 12th'",
+      "'Wait, sorry, what did you ask me again?'"
+     ]
+    },
+    {
+     "learning_objective": "Assess understanding of and evaluate a self-directed, internet/coworker-sourced diet for safety and adequacy.",
+     "expected_discoveries": [
+      "Diet is low in fiber and vegetables, heavy in processed meats and cheese",
+      "Patient unsure if diet is producing results since he doesn't track weight regularly",
+      "Patient conflates diabetic low-carb advice with his own needs"
+     ],
+     "possible_patient_reactions": [
+      "'Russ said it worked for him, he lost like twenty pounds'",
+      "'I didn't think about the fiber part, honestly'"
+     ]
+    },
+    {
+     "learning_objective": "Reconcile opioid and NSAID/acetaminophen regimen with nutrition counseling, flagging acetaminophen overlap risk.",
+     "expected_discoveries": [
+      "Patient takes hydrocodone/acetaminophen and separately takes Tylenol PM, risking acetaminophen overlap",
+      "Naproxen taken without food several times, causing GI upset",
+      "Opioid-related constipation and appetite changes affecting intake"
+     ],
+     "possible_patient_reactions": [
+      "'Oh, I didn't realize Tylenol PM counts the same as the other one'",
+      "'I just take the naproxen whenever, I forget to eat first sometimes'"
+     ]
+    },
+    {
+     "learning_objective": "Use motivational interviewing to explore ambivalence (contemplation stage) around changing diet and pain management.",
+     "expected_discoveries": [
+      "Patient recognizes his weight is tied to knee pain but hasn't committed to a structured plan",
+      "Patient's family dismisses his concerns, reducing his motivation",
+      "Patient fears a worse outcome but hasn't named why"
+     ],
+     "possible_patient_reactions": [
+      "'I know I should probably change something, I just don't know what yet'",
+      "'Everyone at home tells me I'm fine, so I don't know who's right'"
+     ]
+    },
+    {
+     "learning_objective": "Build rapport carefully enough to surface the hidden fear of repeating a relative's illness trajectory, and connect it to current goals.",
+     "expected_discoveries": [
+      "With trust, patient discloses his mother's wheelchair-bound years from arthritis and weight",
+      "Patient's fear reframes his urgency about his knee and weight as more than cosmetic"
+     ],
+     "possible_patient_reactions": [
+      "Deflects at first: 'It's not really about anyone else, just me'",
+      "If rapport is strong: 'My mom... she ended up in a wheelchair. I don't want that. I never told the doctor that.'"
+     ]
+    },
+    {
+     "learning_objective": "Address social isolation and lack of household support as barriers to sustained dietary change.",
+     "expected_discoveries": [
+      "Social contact less than once a week outside the house",
+      "Family eats together but doesn't coordinate or support his goals",
+      "Patient has no one to problem-solve meal planning with"
+     ],
+     "possible_patient_reactions": [
+      "'My sister just says I worry too much'",
+      "'It's not like I have anyone to talk this through with, really'"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Household income reflects combined family earnings, not Josh's personal income, consistent with part-time work and living with five others",
+    "Josh's part-time retail job provides enough structure to create an irregular but trackable meal pattern",
+    "The 'close relative' in his hidden fear is his mother, implied but written to allow flexibility",
+    "Low social contact score is reconciled with 'family nearby' by specifying the family dismisses rather than engages with his concerns"
+   ],
+   "optional_details": [
+    "Josh keeps a small notebook calendar where he logs patch changes and appointment dates",
+    "He has a loyalty card at the warehouse club where he buys glucosamine and deli meat in bulk",
+    "He was a volunteer at a local food pantry briefly in his 40s, which he brings up when discussing food costs"
+   ]
+  },
+  "source": {
+   "synthea_record": "2ed454e2",
+   "condition_group": "weight",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "overwhelmed and scattered, loses the thread",
+    "communication": "precise and factual, quotes numbers and dates",
+    "readiness": "contemplation: knows something should change but is torn",
+    "literacy": "moderate health literacy",
+    "eating": "follows a self-directed diet picked up from social media or a friend",
+    "held_back": "a fear that a relative's illness will repeat itself in them",
+    "support": "family nearby who do not take the condition seriously"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
+   "name": "Audrey Grimes",
+   "age": 18,
+   "sex": "Female",
+   "description": "Audrey Grimes is an 18-year-old new mother in Palisades Park, New Jersey, recently flagged with prediabetes at her postnatal checkup. She's warm, chatty, and clearly has done her homework online, but her stories tend to wander far from the original question before circling back. She started making real changes to her eating a few weeks ago after the diagnosis scared her, though the new habits feel shaky and easy to knock over. A dietetics student will like her immediately, but will need patience to steer the conversation and gentle curiosity to find the money worries she's not volunteering.",
+   "keywords": [
+    "prediabetes",
+    "postpartum",
+    "young adult",
+    "food budget",
+    "food pantry",
+    "health literacy",
+    "fragile behavior change",
+    "low support",
+    "anemia history",
+    "action stage"
+   ]
+  },
+  "demographics": {
+   "occupation": "Currently unemployed, previously worked part-time as a cashier at a dollar store before her pregnancy",
+   "residence": "Palisades Park, New Jersey; household of 4",
+   "ethnicity": "Asian",
+   "language": "English",
+   "marital_status": "Not recorded",
+   "education_level": "More than high school",
+   "insurance": "Medicaid",
+   "cultural_context": "Audrey grew up in Palisades Park in a crowded apartment with her mother and younger siblings, and food stretching was just a fact of life \u2014 generic cereal, whatever was on sale, and a lot of pasta. She finished some college coursework but had to pause when she became pregnant. She's proud of being a reader and a planner, the kind of person who prints out meal charts from websites, but her actual kitchen reality is a shared fridge, a tiny stipend, and a six-month-old who doesn't nap long enough for her to cook anything complicated."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Prediabetes",
+   "secondary_diagnoses": [],
+   "medical_history": [
+    "Prediabetes since 2026",
+    "Primary dental caries (2025-05 to 2025-05, resolved)",
+    "Normal pregnancy (2025-08 to 2026-03, resolved)",
+    "Anemia (2025-08 to 2026-03, resolved)",
+    "Acute viral pharyngitis (2025-08 to 2025-08, resolved)",
+    "Gingival disease (2026-06 to 2026-06, resolved)",
+    "Dental fluoride treatment (2026-06-02)",
+    "Postoperative care for dental procedure (2026-06-02)",
+    "Gingivectomy or gingivoplasty per tooth (2026-06-02)",
+    "Dental application of desensitizing medicament (2026-06-02)",
+    "Dental surgical procedure (2026-06-02)",
+    "Dental plain X-ray bitewing (2026-06-02)"
+   ],
+   "current_symptoms": [
+    "Occasional afternoon energy crashes, especially if she skips lunch",
+    "Feels shaky and irritable if she goes too long without eating",
+    "Some nights she's up with the baby and feels groggy and starving by morning",
+    "Mild sweet cravings in the evening after the baby finally goes to sleep"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears a bit tired but animated and smiling, makes eye contact and chats easily",
+    "Mild gum tenderness still visible from recent dental work, speaks carefully on that side of her mouth",
+    "Slightly soft midsection weight gain consistent with recent postpartum body changes",
+    "No edema or acute distress noted; skin and nails look healthy"
+   ],
+   "laboratory_data": [
+    "HbA1c: 6 % (reference < 5.7; 2026-05-19)",
+    "Glucose: 68.3 mg/dL (reference 70-99 (fasting); 2026-05-19)",
+    "Haemoglobin: 11.1 g/dL (reference 12.0-17.5; 2025-08-12)",
+    "White cell count: 10 10*3/uL (reference 4.0-11.0; 2025-08-12)",
+    "Platelets: 415 10*3/uL (reference 150-450; 2025-08-12)",
+    "Potassium: 3.9 mmol/L (reference 3.5-5.1; 2026-05-19)",
+    "Sodium: 142 mmol/L (reference 135-145; 2026-05-19)",
+    "Urea nitrogen: 17.5 mg/dL (reference 7-20; 2026-05-19)"
+   ],
+   "vital_signs": [
+    "BP: 107/76 mmHg",
+    "HR: 87 bpm",
+    "RR: 13 breaths/min",
+    "Recorded: 2026-05-19"
+   ],
+   "anthropometrics": [
+    "Height: 157 cm",
+    "Weight: 59.4 kg",
+    "BMI: 24.1 kg/m2",
+    "Weight change: +7.0 kg since 2025-05-13"
+   ]
+  },
+  "medication_profile": {
+   "medications": [],
+   "supplements_and_otc": [
+    "Prenatal multivitamin left over from pregnancy, taken 'when I remember'",
+    "Generic iron tablets from the drugstore, started again after her anemia came back on radar",
+    "Occasional Tums for heartburn"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Budget-driven, carb-heavy pattern built around cheap filling staples (rice, pasta, bread, eggs) with vegetables and lean protein added in when money and pantry stock allow; she's been swapping white bread for whole wheat and cutting the sugary cereal since her diagnosis",
+   "food_preferences": [
+    "Loves spaghetti with butter and parmesan",
+    "Eggs any way, especially scrambled with hot sauce",
+    "Bananas and apples when they're on sale",
+    "Chicken thighs over breast because they're cheaper",
+    "Iced tea, usually sweetened"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "How often she visits the Palisades Park food pantry and what she actually takes home versus what she wishes she could get",
+    "Portion sizes of pasta and rice at dinner",
+    "Whether she's skipping her own meals to make sure the baby's formula budget is covered",
+    "Late-night snacking pattern after the baby sleeps",
+    "Reliance on convenience foods like ramen or boxed mac and cheese toward the end of the month"
+   ],
+   "meal_pattern": "Breakfast is often skipped or just coffee with creamer; lunch is whatever's fastest between baby care; dinner is the real meal, usually a starchy base with a protein if she has one",
+   "hydration": "Mostly sweet tea and water; cut back on soda recently but still has one occasionally",
+   "physical_activity": "Walks the baby in a stroller most days, no structured exercise, says she's 'too wiped out' for anything else",
+   "substance_use": "Light alcohol use, a drink or two at a family gathering here and there; never smoked",
+   "sleep": "Fragmented, 4-6 hours interrupted by night feedings, naps when the baby naps if she can"
+  },
+  "psychosocial_profile": {
+   "personality": "Warm, chatty, eager to be liked and to be seen as doing well; brightens when praised",
+   "communication_style": "Talks in long looping stories \u2014 starts answering a question about breakfast and ends up telling you about her cousin's wedding \u2014 but will circle back if gently redirected",
+   "goals": [
+    "Get her blood sugar numbers back to normal before her next labs",
+    "Have more energy to keep up with the baby",
+    "Feel like a 'together' mom who has her health handled"
+   ],
+   "concerns": [
+    "Worried the prediabetes could turn into full diabetes like her aunt has",
+    "Scared of needing medication she can't afford",
+    "Anxious about not having anyone to watch the baby so she can rest or cook properly"
+   ],
+   "beliefs": [
+    "Reading enough online articles means she should already know what to do, so she feels embarrassed when she slips up",
+    "Thinks carbs are 'the enemy' now and sometimes cuts them too drastically before swinging back",
+    "Believes the food pantry food is 'not really healthy' so sometimes skips picking up what's available"
+   ],
+   "motivations": [
+    "Wants to be a strong, healthy example for her daughter",
+    "Scared straight by her aunt's diabetes complications",
+    "Liked the feeling of being complimented by the postnatal nurse for 'already making changes'"
+   ],
+   "fears": [
+    "Ending up on insulin or needing expensive medication",
+    "Not being able to afford healthy food even if she wanted it",
+    "Being judged as a bad mother for her diet or for using the food pantry"
+   ],
+   "barriers": [
+    "Very tight household income limits food choices",
+    "No reliable childcare or help, which eats into time and energy for cooking",
+    "Fragile new habits that haven't survived a hard week yet",
+    "Fatigue from interrupted sleep undermining motivation"
+   ],
+   "strengths": [
+    "Reads nutrition information online and can speak the language of carbs, fiber, glycemic index",
+    "Already made real changes in the last few weeks",
+    "Talkative and open, builds rapport easily",
+    "Genuinely wants to do right by her daughter"
+   ],
+   "support_system": "Lives with her mother and siblings but her mother works long shifts and can't help much with the baby or cooking; no partner support mentioned; very little day-to-day help",
+   "readiness_to_change": "Action stage \u2014 she's three to four weeks into real changes, proud of them, but admits (if asked kindly) that one bad week could knock it all over"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States she was told she has prediabetes at her postnatal visit and it scared her",
+    "Says she's been reading a lot online about carbs and glycemic index",
+    "Mentions she switched to whole wheat bread and cut out her sugary cereal a few weeks ago",
+    "Talks about her six-month-old daughter and how tired she is"
+   ],
+   "discoverable_information": [
+    "Describes her actual meals in detail once asked directly, revealing heavy reliance on pasta and rice",
+    "Admits she skips breakfast most days",
+    "Mentions she sometimes uses the food pantry when asked about where she shops",
+    "Reveals she has very little help at home with her mother working long shifts"
+   ],
+   "reluctant_information": [
+    "Only admits when asked gently that she sometimes picks the cheapest option even when she knows it's not the best choice, like white rice instead of brown because it's a dollar cheaper",
+    "Reveals, if asked about her iron pills, that she doesn't always buy them that month because formula comes first",
+    "Shares that she feels embarrassed using the food pantry and sometimes tells people she 'just didn't need groceries that week' instead"
+   ],
+   "hidden_information": [
+    "Audrey has, twice in the past month, skipped her own dinner entirely so there would be enough food for her younger siblings and the baby's formula, something she has not told any provider",
+    "She has considered selling some of her unused prenatal vitamin samples or trading them with a friend for diapers, but is ashamed to bring this up"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Practice redirecting a warm, tangential storyteller back to focused nutrition assessment without shutting down rapport.",
+     "expected_discoveries": [
+      "Audrey's actual meal pattern and food sources once gently refocused",
+      "Her real barriers around time and fatigue"
+     ],
+     "possible_patient_reactions": [
+      "Launches into a story about her cousin's baby shower when asked about snacks",
+      "Laughs and says 'oh I'm doing it again, aren't I' when redirected",
+      "Comes back on topic easily if asked a warm, specific follow-up"
+     ]
+    },
+    {
+     "learning_objective": "Assess fragile new behavior changes and identify what could cause relapse.",
+     "expected_discoveries": [
+      "She's only three to four weeks into her changes",
+      "One hard week with the baby could derail her new habits",
+      "She feels shame rather than resilience when she slips"
+     ],
+     "possible_patient_reactions": [
+      "Admits proudly to her recent changes at first",
+      "Looks worried when asked what happens on a bad week",
+      "Opens up if reassured that slips are normal, not failure"
+     ]
+    },
+    {
+     "learning_objective": "Uncover food insecurity and budget constraints affecting food choices, using non-judgmental questions.",
+     "expected_discoveries": [
+      "She shops based on what's cheapest and filling",
+      "She uses a food pantry but feels embarrassed about it",
+      "She sometimes skips her own meals to stretch food for her siblings and baby"
+     ],
+     "possible_patient_reactions": [
+      "Deflects at first with a joke about 'budgeting like a pro'",
+      "Becomes quieter and more serious if asked directly and kindly about going without food",
+      "May tear up slightly when admitting she's skipped meals for her baby's sake"
+     ]
+    },
+    {
+     "learning_objective": "Explore and correct health literacy gaps despite her confidence from online reading.",
+     "expected_discoveries": [
+      "She has some accurate knowledge of carbs and glycemic index but overgeneralizes 'carbs are bad'",
+      "She sometimes swings between extremes (cutting too much, then overcorrecting)"
+     ],
+     "possible_patient_reactions": [
+      "Proudly cites something she read online, sometimes slightly wrong",
+      "Receptive to correction if framed as 'building on what you already know'",
+      "Mildly embarrassed if corrected bluntly"
+     ]
+    },
+    {
+     "learning_objective": "Identify practical, budget-conscious strategies that fit her real resources (pantry use, bulk staples, simple swaps).",
+     "expected_discoveries": [
+      "Specific affordable swaps she could make, like brown rice in bulk or beans instead of some meat",
+      "Her resistance to pantry food due to feeling it's 'not healthy'"
+     ],
+     "possible_patient_reactions": [
+      "Lights up at concrete, doable suggestions",
+      "Expresses doubt that healthy food can really fit her budget",
+      "Appreciates being told pantry staples like beans and canned vegetables are legitimate healthy choices"
+     ]
+    },
+    {
+     "learning_objective": "Assess support system and connect to resources (WIC, community health workers, childcare support) given her very limited day-to-day help.",
+     "expected_discoveries": [
+      "She has no reliable childcare or help cooking",
+      "She may be unaware of other benefit programs beyond Medicaid"
+     ],
+     "possible_patient_reactions": [
+      "Surprised and interested if told about additional resources",
+      "Slightly defensive if it feels like pity",
+      "Grateful if offered concretely and respectfully"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Audrey's household of four includes her mother, herself, a younger sibling, and her infant daughter",
+    "Her unemployment is tied to recent childbirth and lack of childcare rather than inability to work",
+    "Her high health literacy comes from self-directed online reading rather than formal nutrition education"
+   ],
+   "optional_details": [
+    "Keeps a secondhand baby stroller she's proud of getting for free from a neighbor",
+    "Follows a few nutrition and 'mom life' accounts on social media",
+    "Dreams of eventually finishing her college coursework in early childhood education"
+   ]
+  },
+  "source": {
+   "synthea_record": "342d9466",
+   "condition_group": "prediabetes",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "warm and talkative, likes to be liked",
+    "communication": "long stories that wander off the question",
+    "readiness": "action: started changing in the last few weeks and it is fragile",
+    "literacy": "high health literacy, reads a lot online",
+    "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+    "held_back": "money worries that affect which food or medicines they buy",
+    "support": "very little day-to-day support"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
    "name": "Lilia Galindo",
    "age": 52,
    "sex": "Female",
@@ -9544,6 +10818,592 @@
     "eating": "skips meals during the day and then eats a very large meal late at night",
     "held_back": "does not take one of their medicines the way it was prescribed",
     "support": "adult children who mean well and lecture"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
+   "name": "Margarita Emmerich",
+   "age": 33,
+   "sex": "Female",
+   "description": "Margarita Emmerich is a 33-year-old married woman in Orange, New Jersey, living with her husband and her elderly mother-in-law, whom she cares for daily. She was flagged for prediabetes and anemia on recent labs, and she already knows the clinical details cold because she researches everything online, yet her numbers have crept the wrong way since she first got serious about her diet two years ago. She's warm, eager to please, and agrees with every suggestion a clinician makes, but a student will notice she rarely follows through, deflecting with a question of her own whenever asked how things are actually going at home.",
+   "keywords": [
+    "prediabetes",
+    "anemia",
+    "caregiver_burden",
+    "health_literacy",
+    "maintenance_relapse",
+    "agreeableness",
+    "someone_else_cooks",
+    "chronic_pain",
+    "deflection"
+   ]
+  },
+  "demographics": {
+   "occupation": "Currently unemployed; previously worked as a dental hygienist before leaving the job to help care for her husband's mother",
+   "residence": "City of Orange, New Jersey; household of 3",
+   "ethnicity": "Black",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "More than high school",
+   "insurance": "Private insurance",
+   "cultural_context": "Margarita grew up in a tight-knit household where the kitchen belonged to whoever was the most senior woman in the home \u2014 first her own mother, now her mother-in-law, who has lived with her and her husband since 2022. Meals are planned and cooked by her mother-in-law as a matter of pride and routine, and Margarita was raised to see it as disrespectful to critique or take over someone else's cooking. She values harmony in the household above almost everything else, which shapes how much she's willing to push back on food choices, medical advice, or her own needs."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Prediabetes",
+   "secondary_diagnoses": [
+    "Chronic pain",
+    "Chronic low back pain",
+    "History of tubal ligation",
+    "Anemia"
+   ],
+   "medical_history": [
+    "Chronic pain since 2014",
+    "Chronic low back pain since 2014",
+    "History of tubal ligation since 2018",
+    "Prediabetes since 2022",
+    "Anemia since 2022",
+    "Acute bronchitis (2024-11 to 2024-11, resolved)",
+    "Gingivitis (2024-11 to 2024-11, resolved)",
+    "Acute viral pharyngitis (2026-08 to 2026-08, resolved)",
+    "Viral sinusitis (2026-08 to 2026-09, resolved)",
+    "Acute infective cystitis (2026-09 to 2026-09, resolved)",
+    "Prescription of drug (2026-09-17)",
+    "Discussion about treatment (2026-09-17)",
+    "Patient informed - test result (2026-09-17)",
+    "Urinalysis with reflex to microscopy and culture (2026-09-15)",
+    "Urine specimen collection (2026-09-15)",
+    "Referral for laboratory tests (2026-09-14)"
+   ],
+   "current_symptoms": [
+    "Low energy most afternoons, especially around 3-4pm",
+    "Occasional dull ache in the low back after standing too long",
+    "Gets short of breath walking up the stairs to her apartment",
+    "Craves ice chips sometimes, which she finds odd",
+    "Trouble falling asleep when her mind is racing about the next day's errands"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears tired with faint dark circles under the eyes, consistent with mild anemia",
+    "Conjunctiva look slightly pale on inspection",
+    "Mild tenderness noted on palpation of the lower lumbar region when she shifts in her chair",
+    "Fidgets with her phone and checks it frequently, as if waiting for a message"
+   ],
+   "laboratory_data": [
+    "HbA1c: 5.9 % (reference < 5.7; 2024-11-10)",
+    "Glucose: 96 mg/dL (reference 70-99 (fasting); 2024-11-10)",
+    "Total cholesterol: 133 mg/dL (reference < 200; 2024-09-29)",
+    "LDL cholesterol: 57.2 mg/dL (reference < 100; 2024-09-29)",
+    "HDL cholesterol: 50.1 mg/dL (reference >= 40; 2024-09-29)",
+    "Triglycerides: 128.6 mg/dL (reference < 150; 2024-09-29)",
+    "Haemoglobin: 11.9 g/dL (reference 12.0-17.5; 2022-12-04)",
+    "White cell count: 4.3 10*3/uL (reference 4.0-11.0; 2022-12-04)",
+    "Platelets: 241.3 10*3/uL (reference 150-450; 2022-12-04)",
+    "Potassium: 4.6 mmol/L (reference 3.5-5.1; 2024-11-10)",
+    "Sodium: 143.7 mmol/L (reference 135-145; 2024-11-10)",
+    "Urea nitrogen: 8.9 mg/dL (reference 7-20; 2024-11-10)"
+   ],
+   "vital_signs": [
+    "BP: 118/85 mmHg",
+    "HR: 89 bpm",
+    "RR: 15 breaths/min",
+    "Recorded: 2024-11-10"
+   ],
+   "anthropometrics": [
+    "Height: 161 cm",
+    "Weight: 75.4 kg",
+    "BMI: 29.1 kg/m2",
+    "Weight change: +3.1 kg since 2022-11-20"
+   ]
+  },
+  "medication_profile": {
+   "medications": [],
+   "supplements_and_otc": [
+    "Over-the-counter ibuprofen for back pain flare-ups",
+    "A gummy multivitamin she buys at Walgreens because 'it's easier than pills'",
+    "Iron supplement she started after her 2022 anemia diagnosis, now takes 'on and off'"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Mixed home-cooked diet prepared entirely by her mother-in-law; heavy on stews, rice, and bread with vegetables added inconsistently",
+   "food_preferences": [
+    "Enjoys her mother-in-law's lentil soup",
+    "Prefers mild, savory flavors over sweet",
+    "Likes citrus fruit when it's in the house",
+    "Not fond of leafy salads, finds them unsatisfying"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Portion sizes at dinner, which is plated for her rather than self-served",
+    "Frequency of white bread and refined starches at breakfast and lunch",
+    "Snacking patterns during late-night caregiving hours",
+    "Whether she asks for substitutions or just eats what's served",
+    "Iron-rich food intake relative to her anemia"
+   ],
+   "meal_pattern": "Breakfast around 7am (toast or pastry with coffee), lunch around 1pm (whatever is left from dinner), dinner around 7pm (main cooked meal, decided and served by mother-in-law)",
+   "hydration": "Drinks coffee in the morning, otherwise mostly water; admits she sometimes forgets to drink much during the day while busy with caregiving tasks",
+   "physical_activity": "Used to walk 30 minutes most evenings with a neighbor but has let it slide over the past several months; now mostly sedentary aside from housework and lifting her mother-in-law",
+   "substance_use": "Never smoked; audit-c score of 0, essentially does not drink alcohol",
+   "sleep": "Reports 6 hours or less most nights, frequently interrupted by her mother-in-law needing help overnight"
+  },
+  "psychosocial_profile": {
+   "personality": "Agreeable to a fault \u2014 she nods along, says 'yes, absolutely' to every suggestion, and rarely pushes back, even when something doesn't fit her life",
+   "communication_style": "Tends to answer questions with questions of her own ('Do you think that's really the issue though?' or 'What would you do in my situation?'), which can make it hard to pin down what she actually thinks or feels",
+   "goals": [
+    "Get her HbA1c back down to where it was two years ago",
+    "Have enough energy to get through the day without crashing",
+    "Keep her mother-in-law comfortable and well cared for"
+   ],
+   "concerns": [
+    "Worried the prediabetes will progress to full diabetes like her aunt had",
+    "Concerned her anemia is making her caregiving harder",
+    "Afraid she's losing the progress she made before"
+   ],
+   "beliefs": [
+    "Believes she already knows what to do since she's read so much about it",
+    "Believes bringing up her own needs would seem selfish given her mother-in-law's needs",
+    "Believes change should look like one big successful overhaul, not small steps"
+   ],
+   "motivations": [
+    "Wants to set a good example of health for her own future kids",
+    "Doesn't want to end up dependent on others the way her mother-in-law is now",
+    "Her neighbor Denise checking in on her is a steady source of accountability"
+   ],
+   "fears": [
+    "Fear of becoming a burden like she sometimes feels her mother-in-law has become",
+    "Fear of conflict if she asks her mother-in-law to cook differently",
+    "Fear that admitting she's overwhelmed will be seen as ungrateful"
+   ],
+   "barriers": [
+    "No control over what's cooked or how it's portioned at home",
+    "Caregiving duties leave little time or energy for her own health",
+    "Reluctant to ask for changes in the household kitchen out of respect",
+    "Chronic back pain limits how much she can resume walking"
+   ],
+   "strengths": [
+    "Highly informed about nutrition and her own conditions",
+    "Has previously succeeded in improving her labs through diet and walking",
+    "Has a strong, trusted support person in her neighbor Denise",
+    "Genuinely wants to do right by her health and her family"
+   ],
+   "support_system": "Her closest support is her neighbor Denise, who checks in several times a week, walks with her when she can, and is 'the only one who really asks how I'm doing.' Her husband is present but works long hours; her mother-in-law requires most of her daily attention.",
+   "readiness_to_change": "Maintenance slipping into relapse \u2014 she made real changes around 2022-2023 (better labs, regular walks) but has quietly lost ground over the last year under the weight of caregiving, without fully acknowledging the backslide"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States she was told her blood sugar is 'borderline' and her iron is a little low",
+    "Mentions she read a lot about prediabetes online and knows the general diet advice",
+    "Says things have been 'pretty good, pretty much the same as always' when asked how she's doing",
+    "Mentions her mother-in-law lives with her and her husband"
+   ],
+   "discoverable_information": [
+    "Her mother-in-law does all the cooking and meal planning in the house",
+    "She used to walk in the evenings with her neighbor Denise but hasn't in months",
+    "Her sleep is frequently broken up overnight",
+    "She agrees quickly with every suggestion a clinician makes, often before they've finished explaining it"
+   ],
+   "reluctant_information": [
+    "She rarely eats breakfast that isn't just toast or a pastry because that's what's already out",
+    "She feels she can't ask her mother-in-law to change how meals are cooked without causing tension",
+    "Her stress level has been 'very much' lately but she downplays it when asked directly"
+   ],
+   "hidden_information": [
+    "She spends most nights helping her mother-in-law to the bathroom or settling her when she's confused, which leaves Margarita only a few hours of real sleep",
+    "She has not had a single morning to herself in over four months and has stopped mentioning this to anyone but Denise",
+    "She skipped her last two self-care walks because she felt guilty leaving her mother-in-law alone, even for 20 minutes"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Recognize when a patient's agreeable communication style masks lack of actual behavior change",
+     "expected_discoveries": [
+      "Margarita verbally agrees with every suggestion but her labs and habits haven't shifted",
+      "Her answers are vague about specifics ('pretty much the same as always')"
+     ],
+     "possible_patient_reactions": [
+      "'Yeah, that makes sense, I should probably do that' without concrete follow-through",
+      "Turning the question back: 'What do you think I should prioritize first?'"
+     ]
+    },
+    {
+     "learning_objective": "Identify who actually controls food preparation in the household and adapt counseling accordingly",
+     "expected_discoveries": [
+      "Her mother-in-law cooks and plates every dinner",
+      "Margarita rarely requests substitutions or different portions"
+     ],
+     "possible_patient_reactions": [
+      "'Oh, I just eat what's put in front of me, that's how it's always been'",
+      "Hesitating before admitting she wouldn't feel comfortable asking for changes"
+     ]
+    },
+    {
+     "learning_objective": "Uncover hidden caregiving burden affecting her own health behaviors through rapport-building",
+     "expected_discoveries": [
+      "She provides most overnight care for her mother-in-law",
+      "Her sleep and self-care time have nearly disappeared over the last several months"
+     ],
+     "possible_patient_reactions": [
+      "Initially minimizing: 'It's fine, everyone's tired, right?'",
+      "Opening up once trust is built: 'Honestly, I can't remember the last morning that was just mine'"
+     ]
+    },
+    {
+     "learning_objective": "Explore the relapse from maintenance to backsliding stage of change using a nonjudgmental approach",
+     "expected_discoveries": [
+      "She had notably better labs and a walking routine in 2022-2023",
+      "The walking routine and some dietary habits have quietly lapsed over the past year"
+     ],
+     "possible_patient_reactions": [
+      "Deflecting with a question: 'Isn't it normal for things to slip a little?'",
+      "Showing a flicker of worry when confronted with the comparison to her earlier labs"
+     ]
+    },
+    {
+     "learning_objective": "Leverage her existing high health literacy to co-create a realistic, caregiver-compatible plan",
+     "expected_discoveries": [
+      "She can accurately describe glycemic index and iron-absorption concepts from her reading",
+      "She struggles to translate that knowledge into achievable action given her home situation"
+     ],
+     "possible_patient_reactions": [
+      "Engaging eagerly with technical detail: 'I read that pairing iron with vitamin C helps, right?'",
+      "Becoming overwhelmed if asked to add complex new routines on top of caregiving"
+     ]
+    },
+    {
+     "learning_objective": "Identify her neighbor Denise as an underused support resource for accountability and small changes",
+     "expected_discoveries": [
+      "Denise is her main source of check-ins and occasional walks",
+      "Margarita hasn't asked Denise for more structured support despite the relationship being strong"
+     ],
+     "possible_patient_reactions": [
+      "'Denise would probably walk with me if I just asked her again'",
+      "Slight embarrassment that she hasn't leaned on this support more"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Assumed Margarita's unemployment is connected to taking on caregiving duties for her mother-in-law, consistent with the 'went without: Child care' survey flag and household structure",
+    "Assumed the third household member is her mother-in-law rather than a child, to align with the caregiving-duties trait while keeping household size at 3",
+    "Assumed her prior improved labs around 2022-2023 to construct the maintenance-slipping-to-relapse narrative, consistent with her prediabetes/anemia onset dates",
+    "Assumed private insurance is maintained through her husband's employment given her own unemployment"
+   ],
+   "optional_details": [
+    "Keeps a running list of nutrition articles saved on her phone that she rarely has time to act on",
+    "Has a small herb pot on the windowsill, one of the few food-related things she controls herself",
+    "Denise sometimes drops off a plate of something different when she senses Margarita needs a break from the usual meals"
+   ]
+  },
+  "source": {
+   "synthea_record": "3b73704f",
+   "condition_group": "prediabetes",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "agreeable to a fault, says yes to everything and changes nothing",
+    "communication": "answers questions with questions",
+    "readiness": "maintenance: changed a while ago and is starting to slip",
+    "literacy": "high health literacy, reads a lot online",
+    "eating": "someone else in the home does all the cooking and decides what is on the plate",
+    "held_back": "caring duties for someone else that leave no time for their own health",
+    "support": "a close friend or neighbour who is the main support"
+   },
+   "from_synthea": [
+    "patient_overview.name, age, sex",
+    "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+    "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+    "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+    "medication_profile.medications: name, dose, purpose"
+   ],
+   "from_model": [
+    "patient_overview.description, keywords",
+    "demographics.occupation, cultural_context",
+    "clinical_profile.current_symptoms, clinical_findings",
+    "medication_profile.medications: frequency, adherence, patient_concerns",
+    "medication_profile.supplements_and_otc",
+    "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+   ]
+  }
+ },
+ {
+  "patient_overview": {
+   "name": "Kasey Haley",
+   "age": 56,
+   "sex": "Male",
+   "description": "Kasey Haley is a 56-year-old warehouse shift supervisor in Millburn, New Jersey, married with a busy household of four, who comes in for a wellness visit flagged for obesity and climbing cholesterol. He's polite almost to a fault, apologizing before the student even asks a question, as if bracing to be scolded about his weight. He deflects by cracking jokes or changing topics whenever the conversation turns to his eating habits, and he leans hard on his church community for support even though he hasn't told them much about his health numbers.",
+   "keywords": [
+    "obesity",
+    "high cholesterol",
+    "shift work eating",
+    "low health literacy",
+    "contemplation stage",
+    "vending machine diet",
+    "faith community support",
+    "hidden supplement use",
+    "gingivitis",
+    "weight management"
+   ]
+  },
+  "demographics": {
+   "occupation": "Warehouse shift supervisor at a regional distribution center",
+   "residence": "Millburn, New Jersey; household of 4",
+   "ethnicity": "Black",
+   "language": "English",
+   "marital_status": "Married",
+   "education_level": "More than high school",
+   "insurance": "Private insurance",
+   "cultural_context": "Kasey grew up in a working-class household where big portions at family gatherings were a sign of love and plenty, and he still associates second helpings with belonging. He's been part of the same community church for over twenty years, attending potlucks and men's breakfast groups, where food is central to fellowship and turning down a plate can feel like turning down a friend. He values hard work and providing for his family above almost everything else, which is part of why he's reluctant to admit he feels unwell or out of control around food."
+  },
+  "clinical_profile": {
+   "primary_diagnosis": "Body mass index 30+ - obesity",
+   "secondary_diagnoses": [],
+   "medical_history": [
+    "Body mass index 30+ - obesity since 2007",
+    "Gingivitis (2023-05 to 2023-05, resolved)",
+    "Gingivitis (2024-05 to 2024-05, resolved)",
+    "Gingival disease (2024-05 to 2024-05, resolved)",
+    "Gingivitis (2025-05 to 2025-05, resolved)",
+    "Acute viral pharyngitis (2025-05 to 2025-05, resolved)",
+    "Dental fluoride treatment (2025-05-24)",
+    "Dental plain X-ray bitewing (2025-05-24)",
+    "Examination of gingivae (2025-05-24)",
+    "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-05-24)",
+    "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-05-24)",
+    "Dental care (2025-05-24)"
+   ],
+   "current_symptoms": [
+    "Feels tired by mid-afternoon, especially on long shifts",
+    "Occasional heartburn after eating fast food late at night",
+    "Notices his pants fitting tighter over the past year",
+    "Gets winded going up the stairs at the warehouse"
+   ],
+   "allergies": [
+    "No known allergies"
+   ],
+   "clinical_findings": [
+    "Appears mildly overweight with central adiposity consistent with recorded BMI",
+    "Mild gum redness/tenderness along gumline, consistent with history of recurrent gingivitis",
+    "Fidgets and avoids eye contact when discussing weight, shifts in seat",
+    "Slightly breathless after walking from waiting room to exam room"
+   ],
+   "laboratory_data": [
+    "Total cholesterol: 299.1 mg/dL (reference < 200; 2026-05-23)",
+    "LDL cholesterol: 206.7 mg/dL (reference < 100; 2026-05-23)",
+    "HDL cholesterol: 65.9 mg/dL (reference >= 40; 2026-05-23)",
+    "Triglycerides: 132.6 mg/dL (reference < 150; 2026-05-23)",
+    "Haemoglobin: 12.8 g/dL (reference 12.0-17.5; 2022-04-30)",
+    "White cell count: 7.1 10*3/uL (reference 4.0-11.0; 2022-04-30)",
+    "Platelets: 324.8 10*3/uL (reference 150-450; 2022-04-30)"
+   ],
+   "vital_signs": [
+    "BP: 136/84 mmHg",
+    "HR: 81 bpm",
+    "RR: 15 breaths/min",
+    "Recorded: 2026-05-23"
+   ],
+   "anthropometrics": [
+    "Height: 179.2 cm",
+    "Weight: 97.3 kg",
+    "BMI: 30.3 kg/m2",
+    "Weight change: +2.3 kg since 2025-05-17"
+   ]
+  },
+  "medication_profile": {
+   "medications": [],
+   "supplements_and_otc": [
+    "A relative's homemade 'metabolism tea' blend he drinks most mornings, never mentioned to his doctor",
+    "Over-the-counter fish oil capsules taken inconsistently",
+    "A cinnamon capsule supplement a coworker recommended for blood sugar, taken a few times a week",
+    "Occasional antacid tablets for heartburn after late dinners"
+   ]
+  },
+  "nutrition_profile": {
+   "dietary_pattern": "Irregular, shift-driven eating heavy in convenience and fast foods with inconsistent meal timing",
+   "food_preferences": [
+    "Fried chicken sandwiches from the drive-through near the warehouse",
+    "Honey buns and chips from the vending machine during breaks",
+    "Sweet tea or soda to stay awake on overnight shifts",
+    "His wife's baked ziti and garlic bread on Sundays after church"
+   ],
+   "foods_or_behaviors_to_explore": [
+    "Frequency and portion size of fast-food meals during work shifts",
+    "Use of vending machine snacks as meal substitutes",
+    "Late-night eating after closing shift around 11pm",
+    "Hidden supplement and 'metabolism tea' use not disclosed to providers",
+    "Soda intake pattern across the workday"
+   ],
+   "meal_pattern": "Skips or delays breakfast most days, grabs fast food for lunch between shift tasks, eats a large dinner late at night after getting home, frequent vending machine snacking during breaks",
+   "hydration": "Relies mostly on sweetened iced tea and soda during shifts; drinks little plain water",
+   "physical_activity": "On his feet much of the shift but otherwise sedentary; no structured exercise, says he's 'too tired' after work",
+   "substance_use": "Never smoked tobacco; drinks alcohol rarely, audit-C score of 0",
+   "sleep": "Sleep disrupted by rotating shift schedule; naps during the day, often eats a heavy meal right before bed"
+  },
+  "psychosocial_profile": {
+   "personality": "Anxious, apologetic, quick to assume he's about to be criticized; uses humor to deflect discomfort",
+   "communication_style": "Changes the subject when a topic feels too close to home, often pivoting to talk about work, his kids, or his church group instead of answering directly",
+   "goals": [
+    "Lower his cholesterol numbers without having to give up all his favorite foods",
+    "Have more energy to keep up with his two teenagers",
+    "Avoid being put on medication if he can help it"
+   ],
+   "concerns": [
+    "Worried the doctor will just tell him to 'eat less and move more' without understanding his schedule",
+    "Afraid his weight will become a bigger health problem like it did for his father",
+    "Embarrassed about how much fast food he actually eats"
+   ],
+   "beliefs": [
+    "Thinks his weight gain is mostly just 'getting older' and can't be helped much",
+    "Believes natural remedies and teas passed down in his family are safer than anything a pharmacy sells",
+    "Feels that admitting he needs help with food is a personal failing"
+   ],
+   "motivations": [
+    "Wants to be around and healthy for his kids' milestones",
+    "Wants to keep working full shifts without feeling exhausted",
+    "Values being seen as reliable and strong by his coworkers and church friends"
+   ],
+   "fears": [
+    "Fear of being lectured or shamed about his weight",
+    "Fear of a major diagnosis like his father's heart disease",
+    "Fear that changing his diet will make him stand out or seem weak to his crew at work"
+   ],
+   "barriers": [
+    "Rotating shift schedule limits access to home-cooked meals",
+    "Limited knowledge of nutrition labels or portion sizes",
+    "Vending machines and drive-throughs are the most convenient options near work",
+    "Reluctance to bring up supplement use for fear of being told to stop"
+   ],
+   "strengths": [
+    "Shows up consistently to appointments despite a busy schedule",
+    "Strong desire to be a good role model for his children",
+    "Has a trusted community that could support healthier habits if engaged"
+   ],
+   "support_system": "Married with two teenage children at home; deeply involved in a local church community with weekly men's breakfast and frequent potlucks, though he hasn't shared his health concerns openly with them",
+   "readiness_to_change": "Contemplation: aware his weight and cholesterol are problems and feels torn about changing his routine, but hasn't committed to specific steps yet"
+  },
+  "information_disclosure": {
+   "initial_information": [
+    "States he's here for his yearly check-up and the doctor wanted him to talk to someone about his weight",
+    "Mentions he works long shifts at the warehouse and it's hard to eat right",
+    "Says he knows he 'should probably eat better' but laughs it off"
+   ],
+   "discoverable_information": [
+    "Describes typical shift meals: drive-through lunch, vending machine snacks, late dinner after 11pm",
+    "Admits he drinks soda or sweet tea most of the day instead of water",
+    "Mentions his father had heart problems and high cholesterol too",
+    "Says he doesn't get much exercise beyond standing at work"
+   ],
+   "reluctant_information": [
+    "Admits he feels embarrassed talking about his eating habits because he knows it's 'not great'",
+    "Reveals he's worried the student or doctor will be disappointed in him, like previous visits made him feel",
+    "Shares that he sometimes eats a whole bag of chips in the breakroom because he's starving and tired"
+   ],
+   "hidden_information": [
+    "Drinks a homemade 'metabolism tea' from a family recipe most mornings, never told any provider about it",
+    "Takes cinnamon capsules a coworker gave him a few times a week hoping it helps his blood sugar",
+    "Has looked into stopping these home remedies secretly because he read something concerning online but is scared to ask about it directly"
+   ]
+  },
+  "learning_opportunities": {
+   "opportunities": [
+    {
+     "learning_objective": "Elicit a full 24-hour recall from a shift worker with irregular eating patterns",
+     "expected_discoveries": [
+      "Pattern of skipped breakfast, fast-food lunch, vending machine snacking, and late heavy dinner",
+      "Heavy reliance on sugary beverages during shifts"
+     ],
+     "possible_patient_reactions": [
+      "He laughs and says 'I probably shouldn't tell you what I really eat'",
+      "He changes subject to talk about his son's baseball game when asked about dinner timing"
+     ]
+    },
+    {
+     "learning_objective": "Build trust to uncover undisclosed supplement and home remedy use",
+     "expected_discoveries": [
+      "Daily 'metabolism tea' use",
+      "Occasional cinnamon capsule use suggested by a coworker"
+     ],
+     "possible_patient_reactions": [
+      "He hesitates and asks if he's 'in trouble' for not mentioning it sooner",
+      "He downplays it: 'It's just tea, my aunt makes it, it's nothing medical'"
+     ]
+    },
+    {
+     "learning_objective": "Assess readiness to change using motivational interviewing rather than directive advice",
+     "expected_discoveries": [
+      "He is aware of the problem but feels torn between convenience at work and wanting to improve",
+      "He fears judgment, which has previously made him avoid bringing up habits honestly"
+     ],
+     "possible_patient_reactions": [
+      "He becomes apologetic: 'I know, I know, I should do better'",
+      "He opens up more if the student validates the difficulty of his work schedule"
+     ]
+    },
+    {
+     "learning_objective": "Explore the role of his faith community as a support for behavior change",
+     "expected_discoveries": [
+      "Weekly potlucks and men's breakfast events are central to his social life and tied to food",
+      "He hasn't told his church friends about his health numbers"
+     ],
+     "possible_patient_reactions": [
+      "He lights up talking about his church group but gets quiet when asked if they know about his cholesterol",
+      "He wonders aloud if he could get the group to try healthier potluck dishes"
+     ]
+    },
+    {
+     "learning_objective": "Identify low health literacy and tailor nutrition education accordingly",
+     "expected_discoveries": [
+      "Confusion about what LDL versus HDL cholesterol means",
+      "Uncertainty about reading nutrition labels at the vending machine or drive-through"
+     ],
+     "possible_patient_reactions": [
+      "He admits 'I never really understood what those numbers mean, honestly'",
+      "He asks the student to explain things 'like I'm five' with an embarrassed laugh"
+     ]
+    }
+   ]
+  },
+  "metadata": {
+   "assumptions": [
+    "Weight gain of 2.3 kg since last year reflects ongoing shift-work eating patterns rather than a new acute issue",
+    "Low mood and anxiety scores (PHQ-2:1, GAD-7:3) suggest mild baseline anxiety consistent with the apologetic personality trait rather than a clinical mood disorder",
+    "Household income of $180,038 and private insurance suggest financial barriers are minimal; barriers are more about time and convenience",
+    "No medications are recorded, so all supplement use is patient-driven and undisclosed rather than clinician-prescribed"
+   ],
+   "optional_details": [
+    "Kasey has worked at the same distribution center for over 15 years and recently moved into a supervisor role with more irregular hours",
+    "His two teenage children play school sports, and he tries to attend games despite fatigue",
+    "He occasionally brings a cooler with snacks to work but it mostly holds soda rather than healthier food"
+   ]
+  },
+  "source": {
+   "synthea_record": "3e9ca627",
+   "condition_group": "weight",
+   "written_by_model": "us.anthropic.claude-sonnet-5",
+   "assigned_traits": {
+    "personality": "anxious and apologetic, expects to be told off",
+    "communication": "changes the subject when uncomfortable",
+    "readiness": "contemplation: knows something should change but is torn",
+    "literacy": "low health literacy",
+    "eating": "works shifts or long hours and eats at irregular times, often from vending machines or drive-throughs",
+    "held_back": "takes supplements or home remedies the clinic does not know about",
+    "support": "a faith or community group that matters a great deal"
    },
    "from_synthea": [
     "patient_overview.name, age, sex",

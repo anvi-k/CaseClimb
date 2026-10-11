@@ -1,0 +1,982 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Prediabetes and Anemia Follow-up Nutrition Counseling in a 33-Year-Old Caregiver Experiencing Maintenance Relapse",
+  "summary": "This case portrays a 33-year-old caregiver with prediabetes (rising HbA1c) and iron-deficiency anemia whose highly agreeable, deflecting communication style masks a quiet relapse from an earlier period of successful self-management. It trains dietetics students to look past verbal agreement to actual behavior, uncover household and caregiving barriers to dietary change through rapport-building, and spot a patient-versus-record mismatch (stated daily iron adherence versus a pharmacy refill record showing inconsistent fills) while negotiating one small, sustainable change rather than a full overhaul.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Orange, New Jersey, seated in her kitchen with occasional background noise from her mother-in-law's room",
+  "encounterType": "nutrition follow-up / counseling",
+  "difficulty": 4,
+  "patient": {
+   "name": "Margarita Emmerich",
+   "age": 33,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "black, nonhispanic",
+   "occupation": "Currently unemployed; previously a dental hygienist before leaving her job to care for her husband's mother",
+   "language": "English",
+   "appearance": "Appears tired with faint dark circles under her eyes, conjunctiva slightly pale on close video inspection; sits in a tidy kitchen, phone nearby that she checks frequently as if waiting for a message; shifts in her chair occasionally, wincing slightly and rubbing her lower back; dressed neatly, warm and quick to smile.",
+   "portrait": "/portraits/synthea-margarita-emmerich-3b73704f.jpg"
+  },
+  "persona": {
+   "personality": "Warm, eager to please, highly agreeable — she affirms suggestions readily ('Yes, absolutely, that makes sense') but rarely pushes back or admits when something won't work for her. Deflects personal questions with a question of her own.",
+   "communicationStyle": "Articulate and above-average health literacy from her own research and dental hygiene background; uses some technical terms correctly (e.g., glycemic index, iron absorption). Tends to answer 'how are you doing' with vague reassurance ('pretty much the same as always') and turns questions back on the clinician rather than giving direct personal detail.",
+   "healthLiteracy": "high",
+   "emotionalState": "Outwardly upbeat and cooperative, but visibly tired (dark circles, pale conjunctiva on close look, frequent phone-checking) with an undercurrent of worry she downplays when asked directly about stress.",
+   "background": "Margarita is a 33-year-old former dental hygienist in Orange, New Jersey, who left her job in 2022 to help care for her husband's mother, who moved in with them that year. She grew up believing the kitchen belongs to whichever woman is most senior in the household, so she doesn't feel it's her place to direct what's cooked or how it's portioned. Her closest support is her neighbor Denise, who checks in several times a week and used to walk with her in the evenings. She keeps a running list of nutrition articles saved on her phone she rarely has time to act on, and tends a small herb pot on the windowsill — one of the few food-related things that's entirely hers.",
+   "speechExamples": [
+    "Yes, absolutely, that makes a lot of sense — I should probably do that.",
+    "Things have been pretty good, pretty much the same as always, honestly.",
+    "What would you do if you were in my situation, though?",
+    "I read that pairing iron with vitamin C helps absorption, right? I try to remember that.",
+    "Oh, I just eat what's put in front of me — that's kind of how it's always been in this house."
+   ],
+   "concerns": [
+    "Worried the prediabetes will progress to full diabetes like it did for her aunt",
+    "Concerned her anemia is making the caregiving harder on her",
+    "Afraid she's losing the progress she made a couple of years ago"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Margarita Emmerich, a 33-year-old woman being followed for prediabetes and anemia. She was flagged on recent labs for blood sugar and iron trending in the wrong direction. Your job is to complete a nutrition assessment and provide patient-centered counseling using motivational interviewing. You do not yet know the details of her home situation, her actual eating pattern, or how consistently she is following prior recommendations — you'll need to draw these out.",
+   "chiefComplaint": "Follow-up for prediabetes and anemia; labs show blood sugar and iron trending the wrong way since she last made progress on her diet about two years ago.",
+   "openingLine": "Hi, thanks for seeing me again — they told me my blood sugar's kind of borderline now and my iron's a little low, but honestly things have been pretty good, pretty much the same as always.",
+   "tasks": [
+    "Take a focused nutrition and diet history, including who prepares and controls meals in the household",
+    "Review relevant anthropometric and laboratory trends with the patient to understand how her status has changed over time",
+    "Assess physical activity history and any recent changes",
+    "Clarify current supplement use and routine, comparing what the patient reports with available records",
+    "Identify one small, realistic, caregiver-compatible change to co-create with the patient using motivational interviewing, and document findings in ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for prediabetes and anemia management after recent labs showed blood sugar and iron trending the wrong way"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; Dietetics/Clinical Nutrition (referral for prediabetes and anemia nutrition management)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic pain (since 2014); Chronic low back pain (since 2014); History of tubal ligation (since 2018); Prediabetes (since 2022); Anemia (since 2022)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "follow-up visit reason",
+    "chart": "Patient presents for nutrition follow-up after recent labs showed worsening glycemic and iron status.",
+    "says": "My doctor said my blood sugar is kind of borderline now and my iron's a little low, so they wanted me to talk to a nutritionist.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "energy levels",
+    "chart": "Reports low energy most afternoons, particularly 3-4pm.",
+    "says": "By like 3 or 4 in the afternoon I just hit a wall, I can barely keep my eyes open.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "unusual cravings",
+    "chart": "Reports occasional craving for ice chips, which she finds unusual.",
+    "says": "This is going to sound weird, but sometimes I just really want to chew on ice. I don't even know why.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "shortness of breath",
+    "chart": "Reports shortness of breath climbing stairs to her apartment.",
+    "says": "Walking up the stairs to my place gets me more winded than it used to.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "blood sugar trend",
+    "chart": "States her HbA1c has risen compared to two years ago; expresses concern about progression to diabetes.",
+    "says": "My numbers were so much better two years ago. I'm worried I'm heading toward full-blown diabetes like my aunt had.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "iron supplement use",
+    "chart": "Reports taking iron supplement daily as prescribed since 2022 diagnosis.",
+    "says": "Oh yeah, I take my iron every day like I'm supposed to.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "sleep difficulty",
+    "chart": "Reports occasional difficulty falling asleep due to racing thoughts about next day's tasks.",
+    "says": "Sometimes my mind just won't shut off at night, I'm thinking about everything I have to do the next day.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "back pain pattern",
+    "chart": "Reports dull ache in low back after prolonged standing.",
+    "says": "If I'm on my feet too long my lower back just starts aching.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "Denies nausea, vomiting, abdominal pain, or changes in bowel habits.",
+    "says": "No, nothing like that going on, my stomach's fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain or palpitations.",
+    "says": "No chest pain or anything like that, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "My legs don't swell up or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies current urinary frequency, urgency, or burning.",
+    "says": "No, nothing going on down there right now, that cleared up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "excessive thirst or urination",
+    "chart": "Denies polyuria or polydipsia.",
+    "says": "I'm not running to the bathroom more than usual or super thirsty, no.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes diagnosed 2022.",
+    "says": "I found out about the prediabetes back in 2022.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "low iron history",
+    "chart": "Anemia diagnosed 2022.",
+    "says": "They told me I was anemic back in 2022 too, around the same time.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "back condition history",
+    "chart": "Chronic low back pain since 2014.",
+    "says": "My back's been an issue since like 2014, comes and goes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "recent minor illnesses",
+    "chart": "History of acute bronchitis, gingivitis, viral pharyngitis, viral sinusitis, and acute cystitis in the past two years, all resolved.",
+    "says": "I've had some stuff come up here and there, a bad cold, bronchitis, a bladder infection, but all of that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "prior surgery",
+    "chart": "History of tubal ligation, 2018.",
+    "says": "I had my tubes tied back in 2018.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "current prescriptions",
+    "chart": "No current prescription medications.",
+    "says": "I'm not on any prescription meds right now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "pain reliever use",
+    "chart": "Uses over-the-counter ibuprofen as needed for back pain flares.",
+    "says": "I'll take some ibuprofen when my back is really acting up.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Takes an over-the-counter gummy multivitamin daily.",
+    "says": "I take a gummy multivitamin every morning, it's just easier than swallowing pills.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I've never had an allergic reaction to anything, medicine or food.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with husband and mother-in-law (moved in 2022); patient is primary caregiver for mother-in-law",
+    "says": "It's me, my husband, and his mom — she moved in with us back in 2022.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "employment history",
+    "chart": "Unemployed; previously worked as a dental hygienist, left job to provide caregiving",
+    "says": "I used to be a dental hygienist, but I stepped away from that to help take care of my mother-in-law.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "nutrition",
+    "topic": "meal preparation control",
+    "chart": "Reports mother-in-law does all cooking and meal planning in the household",
+    "says": "My mother-in-law does all the cooking — it's her kitchen, really. I just eat what's put in front of me.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "requesting meal changes",
+    "chart": "States she rarely requests substitutions or different portions at meals out of respect for household hierarchy",
+    "says": "I wouldn't really ask her to change how she makes things — that's just not how it's done in our house.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "function",
+    "topic": "evening walking routine",
+    "chart": "Previously walked 30 minutes most evenings with neighbor; has not done so in several months",
+    "says": "I used to walk with my neighbor Denise every evening, but it's been a while since we've gone.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "reason for stopping walks",
+    "chart": "Attributes lapse in walking to guilt about leaving mother-in-law alone and to chronic back pain",
+    "says": "I feel bad leaving her by herself, even for twenty minutes, and my back's been acting up too.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "sleep quality",
+    "chart": "Reports sleep of 6 hours or less most nights, frequently interrupted overnight",
+    "says": "I probably get six hours, maybe less, some nights she needs help in the middle of the night.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "function",
+    "topic": "overnight caregiving duties",
+    "chart": "Provides most overnight care for mother-in-law, including bathroom assistance and settling confusion episodes, resulting in only a few hours of real sleep most nights",
+    "says": "Honestly? Most nights I'm up helping her to the bathroom or calming her down when she's confused. I don't think I've had a real full night's sleep in... I don't even know.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "personal time",
+    "chart": "Reports no morning to herself in over four months; has only disclosed this to her neighbor",
+    "says": "I can't remember the last morning that was just mine. I haven't really told anyone that except Denise.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "social",
+    "topic": "support system",
+    "chart": "Identifies neighbor Denise as primary support, checking in several times weekly and occasionally walking with her",
+    "says": "Denise is really the only one who asks how I'm doing. She checks on me a few times a week.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "reaching out for support",
+    "chart": "Has not asked Denise for more structured accountability despite strong relationship",
+    "says": "I guess I could just ask her to walk again, I just... haven't gotten around to it.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "stress level",
+    "chart": "Reports stress has been high recently but minimizes when asked directly",
+    "says": "It's fine, everyone's tired, right? I mean, it's been a lot, but I'm managing.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "goals",
+    "topic": "health goals",
+    "chart": "States goals are to lower HbA1c back to prior level, regain energy, and keep caring well for mother-in-law",
+    "says": "I just want my numbers to go back down to where they were, and enough energy to get through the day — and to keep her comfortable.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "fear of being a burden",
+    "chart": "Expresses fear of becoming dependent on others, similar to her perception of her mother-in-law's situation",
+    "says": "I don't want to end up needing someone to take care of me the way she needs me now.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "approach to change",
+    "chart": "Believes meaningful change requires one big overhaul rather than small incremental steps",
+    "says": "I feel like if I'm going to do this, I should really do it right, you know, all in.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "adherence",
+    "topic": "iron supplement routine",
+    "chart": "Reports taking iron supplement daily as prescribed since 2022 diagnosis",
+    "says": "Oh yeah, I take my iron every day, like I'm supposed to.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "other",
+    "topic": "personal food control",
+    "chart": "Grows herbs on windowsill as one of the few food-related things within her control",
+    "says": "I've got a little herb pot on the windowsill — that's about the only thing in the kitchen that's really mine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "psychosocial",
+    "topic": "answering questions about herself",
+    "chart": "Tends to deflect personal questions back to the interviewer rather than answer directly",
+    "says": "What would you do if you were in my shoes?",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review problem list and chronic condition history",
+    "aliases": [],
+    "result": "Prediabetes (since 2022), anemia (since 2022), chronic low back pain (since 2014), history of tubal ligation (2018); several resolved acute illnesses 2024-2026 (bronchitis, gingivitis, pharyngitis, sinusitis, cystitis) unrelated to nutrition concern",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review pharmacy refill history for iron supplement",
+    "aliases": [],
+    "result": "Iron supplement 325 mg: 2 of the last 6 monthly fills picked up at pharmacy; most recent fill over 2 months ago",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Breakfast ~7am: toast or pastry with coffee. Lunch ~1pm: leftovers from prior night's dinner. Dinner ~7pm: mother-in-law's cooked meal (stew, rice, bread, vegetables added inconsistently), portion already plated when she sits down. Occasional snacking during overnight caregiving hours. No consistent iron-rich food pairing with vitamin C noted.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Reports prior routine of 30-minute evening walks with neighbor several times weekly; states activity has 'slowed down' over recent months; currently mostly sedentary aside from housework and assisting her mother-in-law with transfers",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess sleep pattern and quality",
+    "aliases": [],
+    "result": "Reports 6 hours or less most nights, frequently interrupted; attributes this to mother-in-law needing help overnight",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 0",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "exam",
+    "name": "Guided visual inspection of conjunctiva via camera",
+    "aliases": [],
+    "result": "Conjunctiva appear slightly pale on close video inspection; no scleral icterus",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "exam",
+    "name": "Guided self-report of fingernail appearance",
+    "aliases": [],
+    "result": "Patient reports nails appear normal, no spooning or brittleness noted on her own inspection",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review current medication and supplement list",
+    "aliases": [],
+    "result": "No prescription medications. OTC ibuprofen PRN for back pain; gummy multivitamin; iron supplement (started 2022)",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Screen for food security and household meal control",
+    "aliases": [],
+    "result": "Reports food is always available in the home; meals are planned, prepared, and portioned entirely by her mother-in-law; patient rarely requests substitutions",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 118/85 mmHg, heart rate 89/min, respiratory rate 15/min, weight 75.4 kg, height 161 cm, BMI 29.1 kg/m2, weight change +3.1 kg since 2022-11-20 (recorded 2024-11-10).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.9 %; Glucose 96 mg/dL; Total cholesterol 133 mg/dL; LDL cholesterol 57.2 mg/dL; HDL cholesterol 50.1 mg/dL; Triglycerides 128.6 mg/dL; Haemoglobin 11.9 g/dL; White cell count 4.3 10*3/uL; Platelets 241.3 10*3/uL; Potassium 4.6 mmol/L; Sodium 143.7 mmol/L; Urea nitrogen 8.9 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2024-11-10); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2024-09-29); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-08-15).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d5",
+    "type": "other",
+    "title": "Pharmacy Refill History – Iron Supplement (Ferrous Sulfate 325 mg)",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "date": "2026-09-20",
+    "author": "Orange Pharmacy Services",
+    "table": {
+     "columns": [
+      "Fill date",
+      "Days supply",
+      "Quantity dispensed"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "2026-04-02",
+        "30 days",
+        "30 tablets"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2026-06-15",
+        "30 days",
+        "30 tablets"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Nutrition Follow-up Visit Note (prior, 2023-01-18)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2023-01-18",
+    "author": "Dietetics Service, Orange Family Medicine Associates",
+    "body": "Patient seen for follow-up of prediabetes/anemia nutrition management. Reports regular evening walks 4-5x/week with neighbor and improved breakfast habits with less refined starch. HbA1c at that time improved from prior baseline. Plan: continue current routine, reinforce iron-rich food intake, follow up in 6 months."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nHistory of tubal ligation (since 2018)\nPrediabetes (since 2022)\nAnemia (since 2022)\n\nRECENTLY RESOLVED\nAcute bronchitis (2024-11 to 2024-11)\nGingivitis (2024-11 to 2024-11)\nAcute viral pharyngitis (2026-08 to 2026-08)\nViral sinusitis (2026-08 to 2026-09)\nAcute infective cystitis (2026-09 to 2026-09)\n\nPROCEDURES\n2026-09-17: Prescription of drug\n2026-09-17: Discussion about treatment\n2026-09-17: Patient informed - test result\n2026-09-15: Urinalysis with reflex to microscopy and culture\n2026-09-15: Urine specimen collection\n2026-09-14: Referral for laboratory tests\n\nRECENT ENCOUNTERS\n2026-09-17 virtual: Indirect encounter (Acute infective cystitis)\n2026-09-15 ambulatory: Encounter for problem (Acute infective cystitis)\n2026-09-14 virtual: Videotelephony encounter\n2026-08-28 ambulatory: Encounter for symptom (Viral sinusitis)\n2026-08-13 ambulatory: Encounter for symptom (Acute viral pharyngitis)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.9",
+        "%",
+        "< 5.7",
+        "2024-11-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "96",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2024-11-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "133",
+        "mg/dL",
+        "< 200",
+        "2024-09-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "57.2",
+        "mg/dL",
+        "< 100",
+        "2024-09-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "50.1",
+        "mg/dL",
+        ">= 40",
+        "2024-09-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "128.6",
+        "mg/dL",
+        "< 150",
+        "2024-09-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.9",
+        "g/dL",
+        "12.0-17.5",
+        "2022-12-04"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.3",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-12-04"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "241.3",
+        "10*3/uL",
+        "150-450",
+        "2022-12-04"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.6",
+        "mmol/L",
+        "3.5-5.1",
+        "2024-11-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143.7",
+        "mmol/L",
+        "135-145",
+        "2024-11-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "8.9",
+        "mg/dL",
+        "7-20",
+        "2024-11-10"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused diet history that identifies who actually prepares, plans, and portions meals in the household, and how this shapes the patient's real dietary intake.",
+    "factIds": [
+     "s3",
+     "s4",
+     "h1"
+    ],
+    "actionIds": [
+     "a9",
+     "a17"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Review anthropometric and laboratory trends over time (weight/BMI, HbA1c, hemoglobin) to characterize the trajectory of glycemic and iron status rather than relying on a single value.",
+    "factIds": [
+     "h5",
+     "h14",
+     "h15"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Assess current and past physical activity patterns to identify a lapsed routine and the barriers (caregiving guilt, chronic back pain) contributing to its decline.",
+    "factIds": [
+     "s5",
+     "s6",
+     "h8",
+     "h16"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Clarify actual supplement adherence by comparing the patient's self-report with pharmacy refill records, and connect findings such as pagophagia to possible ongoing iron deficiency.",
+    "factIds": [
+     "h6",
+     "s16",
+     "h3"
+    ],
+    "actionIds": [
+     "a8",
+     "a15"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize how an agreeable, deflecting communication style and caregiving burden can mask lack of behavior change, and build rapport to surface hidden stress and sleep disruption.",
+    "factIds": [
+     "s18",
+     "s7",
+     "s8",
+     "s9",
+     "s12"
+    ],
+    "actionIds": [
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Apply motivational interviewing principles to co-create one small, caregiver-compatible nutrition or activity change that respects household dynamics, leveraging existing supports such as her neighbor Denise.",
+    "factIds": [
+     "s10",
+     "s11",
+     "s15",
+     "s13"
+    ],
+    "actionIds": [
+     "a9",
+     "a17"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prediabetes (HbA1c 5.9%, trending up from a lower baseline two years ago) and persistent iron-deficiency anemia (Hgb 11.9 g/dL) in the context of inconsistent dietary control, lapsed physical activity, and probable inconsistent iron supplement adherence, occurring during a maintenance-to-relapse shift driven by unacknowledged caregiving burden.",
+   "differential": [
+    "Excess intake of refined starches/added sugars relative to needs contributing to rising HbA1c",
+    "Inadequate dietary iron and vitamin-C pairing plus inconsistent supplement adherence contributing to persistent anemia",
+    "Insufficient physical activity (lapsed walking routine) contributing to weight gain and glycemic trend",
+    "Psychosocial/caregiving stress and sleep disruption affecting self-care capacity and reinforcing an all-or-nothing change belief",
+    "Low self-perceived control over household meal planning limiting ability to implement dietary changes"
+   ],
+   "keyFindings": [
+    "HbA1c 5.9% (up from an earlier, better value ~2022-2023), fasting glucose 96 mg/dL",
+    "Hgb 11.9 g/dL (ref 12.0-17.5), with pagophagia (ice craving) reported as 'odd' but unconnected by patient",
+    "BMI 29.1 kg/m2 (161 cm, 75.4 kg), +3.1 kg since 2022-11-20",
+    "Diet entirely planned/cooked/plated by mother-in-law; low vegetable consistency, frequent refined-starch breakfasts (toast/pastry)",
+    "Previously walked 30 min evenings with neighbor Denise; has quietly stopped over several months",
+    "Sleep 6 hours or less, interrupted overnight by caregiving duties; patient minimizes stress when asked directly",
+    "Patient states she takes her iron supplement 'every day like I'm supposed to,' but pharmacy refill record shows only 2 of the last 6 monthly fills (patient-vs-chart mismatch)",
+    "Highly agreeable communication style ('yes, absolutely') with vague follow-through and frequent deflection via counter-questions"
+   ],
+   "plan": [
+    "Complete nutrition assessment (ADIME) including diet history, 24-hour recall anchored to actual meals cooked by mother-in-law, and anthropometric trend review",
+    "Clarify actual iron supplement adherence by reviewing pharmacy refill pattern and reconciling with patient's stated adherence; discuss pagophagia as a possible sign of ongoing iron deficiency",
+    "Negotiate one small, caregiver-compatible nutrition change (e.g., adding a vitamin-C-paired iron-rich side at dinner, or a lower-glycemic-index breakfast swap she can source herself) rather than a full overhaul",
+    "Explore re-engaging neighbor Denise for short, guilt-manageable walks as a step toward restoring prior activity level",
+    "Use motivational interviewing to gently surface the gap between stated agreement and actual follow-through, and to validate caregiving strain without pathologizing it",
+    "Document nutrition diagnosis and plan in ADIME format; schedule follow-up to recheck HbA1c and hemoglobin trend and reassess adherence",
+    "Encourage non-confrontational strategies for requesting small meal adjustments that preserve respect for mother-in-law's role in the kitchen"
+   ],
+   "redFlags": [
+    "Worsening anemia trend with pagophagia could indicate ongoing or worsening iron deficiency warranting medical/lab follow-up beyond nutrition counseling",
+    "Rising HbA1c trajectory toward diabetes range if current pattern continues",
+    "Caregiver burnout risk given minimal sleep, no personal time in four months, and reluctance to disclose stress"
+   ],
+   "educationPoints": [
+    "Explain how pairing iron-rich foods with vitamin C sources (e.g., citrus she already likes) can improve absorption",
+    "Explain in plain terms what the HbA1c number means and why the trend (not just the single value) matters",
+    "Clarify that small, sustainable changes (e.g., one swapped breakfast item or short walks) are more realistic and effective than an all-or-nothing overhaul, especially given caregiving demands",
+    "Discuss that occasional ice craving can be a sign of low iron and is worth tracking rather than dismissing as odd",
+    "Reinforce that asking for small meal adjustments at home does not have to mean criticizing or taking over her mother-in-law's cooking"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking iron supplement daily as prescribed since 2022 diagnosis (h6/s16)",
+    "recordEvidence": "Pharmacy refill history shows only 2 of the last 6 monthly iron supplement fills, with the most recent fill over 2 months ago (d5)",
+    "teachingPoint": "Stated adherence should be cross-checked against objective records like pharmacy refill history; discrepancies may explain persistent lab abnormalities such as unresolved anemia, and should be explored non-judgmentally rather than taken at face value.",
+    "factId": "h6",
+    "artifactId": "d5"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 34,
+   "condition": "Anemia",
+   "conditionLabel": "33 F · Anemia, Prediabetes, History of tubal ligation +2 · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "3b73704f",
+   "fingerprint": "f67k4t"
+  }
+ }
+}

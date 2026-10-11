@@ -1,0 +1,908 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Shift-Work Eating Pattern and Dyslipidemia in a 56-Year-Old Warehouse Supervisor Referred for Weight Management Counseling",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment for a shift-worker with obesity (BMI 30.3) and marked LDL/total cholesterol elevation, emphasizing a full 24-hour recall, non-judgmental motivational interviewing in a contemplation-stage patient, and low-literacy nutrition education. The core teaching point is uncovering a patient-vs-chart mismatch: Kasey never discloses his daily homemade 'metabolism tea' or intermittent cinnamon capsule use to any provider (the record shows no supplements), and this hidden information only emerges if the learner asks broadly about teas/home remedies, not just medications. Dental history and old normal CBC values are included as clinical red herrings to test the learner's ability to prioritize the actual nutrition diagnosis.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Millburn, New Jersey, sitting at his kitchen table during a break between shifts",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Kasey Haley",
+   "age": 56,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "black, nonhispanic",
+   "occupation": "Warehouse shift supervisor at a regional distribution center",
+   "language": "English",
+   "appearance": "Appears mildly overweight with central adiposity. On camera he's in a company polo, sitting in a cluttered kitchen with a soda can visible on the counter. He fidgets, avoids sustained eye contact when weight comes up, and shifts in his seat; he seems a little winded when he first sits down after walking in from the garage.",
+   "portrait": "/portraits/synthea-kasey-haley-3e9ca627.jpg"
+  },
+  "persona": {
+   "personality": "Warm, polite almost to a fault, and quick to apologize before being asked anything, as if bracing for criticism; uses self-deprecating humor and jokes to deflect when conversation gets close to uncomfortable topics",
+   "communicationStyle": "Talks in plain, everyday language with no clinical jargon; often pivots to talk about his kids' sports or his church group when a question feels too close to home; needs explicit reassurance before opening up about sensitive habits",
+   "healthLiteracy": "low",
+   "emotionalState": "Mix of warmth and low-grade anxiety; worried about being lectured or judged the way he feels he has been before, torn between wanting to feel better and not wanting to give up the foods and routines that feel comforting",
+   "background": "Kasey has worked at the same regional distribution center for over 15 years and recently moved into a supervisor role, which means more irregular, rotating hours than before. He's married with two teenagers who play school sports, and he tries to make it to as many games as he can despite being tired. He's been part of the same church for more than twenty years, where he looks forward to the weekly men's breakfast and the potlucks, and food is a big part of how that community shows love and connects with each other. He grew up in a working-class household where seconds at the table meant you were loved and there was enough to go around, and some of that still shapes how he eats today.",
+   "speechExamples": [
+    "Oh man, don't tell me you're gonna lecture me about the honey buns too, doc already got me on that one.",
+    "I mean, I know I should probably eat better, everybody says that, right? *laughs*",
+    "Sorry, sorry — I know you just asked me a simple question, I just start talking about my kid's baseball and forget where I was.",
+    "It's not that bad, really, it's just... okay, maybe it is kind of that bad.",
+    "My aunt's been making that tea for years, it's not like it's some pill from a store or nothing."
+   ],
+   "concerns": [
+    "Worried the student will just tell him to 'eat less and move more' without understanding how crazy his shift schedule is",
+    "Afraid his cholesterol and weight will turn into something serious like what happened with his dad's heart",
+    "Embarrassed about how much fast food and vending machine food he actually eats during his shifts"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. The patient, Kasey Haley, is a 56-year-old warehouse shift supervisor who was referred by his physician after his annual wellness exam flagged obesity and worsening cholesterol numbers. This is his first visit with you. Review his available health record before the call, then conduct a nutrition assessment and counseling conversation.",
+   "chiefComplaint": "Referred for nutrition counseling after wellness exam showed obesity and elevated cholesterol",
+   "openingLine": "Hey, how's it going? So, yeah, my doctor said I should talk to somebody about my weight and my cholesterol numbers — figured I'd better show up before I get in trouble for skipping it! *laughs* Not really sure what you need from me though.",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including a full 24-hour recall of his typical shift-day eating pattern",
+    "Review his recent weight trend and lipid panel and explain the findings to him in plain language",
+    "Ask about all substances he takes to manage his health, including any teas, home remedies, or supplements, not just prescribed medications",
+    "Assess his readiness and barriers to dietary change using a non-judgmental, motivational-interviewing approach",
+    "Document your assessment and plan in ADIME format, including a nutrition diagnosis statement"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred by primary care for nutrition assessment and counseling after annual wellness exam flagged obesity and elevated cholesterol"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. A. Chen, MD (Primary Care); Community Dental Associates (Dental)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code / not applicable - outpatient telehealth visit"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 2007)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for nutrition follow-up after annual wellness exam flagged obesity and dyslipidemia.",
+    "says": "My doctor said I needed to talk to someone about my weight and my cholesterol numbers after my check-up.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "work schedule and eating",
+    "chart": "Reports rotating shift schedule limits regular meal timing.",
+    "says": "I work a lot of different shifts, so it's hard to eat on any kind of normal schedule.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports fatigue by mid-afternoon, especially on long shifts.",
+    "says": "By like 2 or 3 in the afternoon I'm just dragging, especially on the long shifts.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "ros",
+    "topic": "heartburn pattern",
+    "chart": "Reports occasional heartburn after eating fast food late at night.",
+    "says": "Sometimes after I eat late, especially fast food, I get that burning feeling in my chest.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "clothing fit",
+    "chart": "Notes pants fitting tighter over the past year.",
+    "says": "My pants have been fitting tighter this past year, that's for sure.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "exertion tolerance",
+    "chart": "Reports becoming winded going up stairs at the warehouse.",
+    "says": "I get winded going up the stairs at work now, which never used to happen.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "chest pain",
+    "chart": "Denies chest pain, palpitations, or pressure.",
+    "says": "No, nothing like chest pain or my heart racing, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "shortness of breath at rest",
+    "chart": "Denies shortness of breath at rest or when lying flat.",
+    "says": "No, I'm fine just sitting around, it's only when I'm moving a lot.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "My legs or feet don't swell up or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies change in bowel habits, abdominal pain, or blood in stool.",
+    "says": "My stomach's fine, no issues going to the bathroom or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, frequent urination, or unexplained weight loss.",
+    "says": "I'm not drinking a ton of water or running to the bathroom all the time, no.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "gum symptoms",
+    "chart": "Reports mild gum tenderness, consistent with history of recurrent gingivitis.",
+    "says": "My gums get a little sore sometimes, but I just had them cleaned not too long ago.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports disrupted sleep related to rotating shift schedule.",
+    "says": "My sleep is all over the place with these shifts, I nap during the day sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "Body mass index 30+ (obesity) since 2007.",
+    "says": "I've been carrying extra weight since my 30s, if I'm honest.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "recurring dental issue",
+    "chart": "Recurrent gingivitis diagnosed and resolved in 2023, 2024, and 2025.",
+    "says": "I've had gum trouble a few years in a row now, but the dentist always clears it up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "recent illness",
+    "chart": "Acute viral pharyngitis, resolved May 2025.",
+    "says": "I had a bad sore throat earlier this year but that cleared up on its own.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "family heart history",
+    "chart": "Reports father with history of heart disease and high cholesterol.",
+    "says": "My dad had heart problems and high cholesterol too, that's part of what scares me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "other chronic conditions",
+    "chart": "Denies history of diabetes, hypertension diagnosis, or prior heart disease.",
+    "says": "No, nobody's ever told me I have diabetes or heart disease or high blood pressure, far as I know.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "Denies any prior surgeries.",
+    "says": "Never had any surgeries, no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "Underwent dental cleaning, fluoride treatment, and bitewing X-rays in May 2025 for gingivitis management.",
+    "says": "I just went in and got my teeth cleaned up good last year for that gum thing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "prescribed medications",
+    "chart": "Takes no prescription medications.",
+    "says": "I'm not on any medicines from the doctor, no pills or anything like that.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "father's health history",
+    "chart": "Reports father had history of heart disease and high cholesterol",
+    "says": "My dad had heart problems and his cholesterol was bad too. I don't want to end up like him, but here I am I guess, huh?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Married, lives with spouse and two teenage children",
+    "says": "It's me, my wife, and our two teenagers at home - never a quiet moment, that's for sure.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Warehouse shift supervisor, rotating shifts over 15 years, recently promoted with more irregular hours",
+    "says": "I've been at the warehouse over fifteen years now, just moved up to supervisor, which sounds great but my hours are all over the place.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "church community",
+    "chart": "Active member of local church for 20+ years; attends weekly men's breakfast and frequent potlucks",
+    "says": "My church is my rock, honestly. Been going there over twenty years. We've got a men's breakfast every week and potlucks all the time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "church disclosure",
+    "chart": "Has not discussed his weight or cholesterol numbers with his church community",
+    "says": "Nah, I haven't really told them about my numbers or any of that. They just see me as the guy who's always good for seconds, you know?",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "cultural food meaning",
+    "chart": "Describes large portions at family gatherings as a cultural sign of love and plenty growing up",
+    "says": "Where I grew up, if you didn't go back for seconds, people thought something was wrong with you. Food is love, that's just how it is.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "nutrition",
+    "topic": "beverage choices at work",
+    "chart": "Keeps a cooler at work that mostly contains soda rather than food",
+    "says": "I bring a cooler to work every shift. Mostly it's just soda in there if I'm being honest, ha.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "function",
+    "topic": "exercise capacity",
+    "chart": "No structured exercise; reports feeling too fatigued after shifts to be physically active",
+    "says": "I'm on my feet all shift, so I figure that counts, right? By the time I get home I'm just too wiped to do anything else.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "function",
+    "topic": "sleep pattern",
+    "chart": "Sleep disrupted by rotating shift schedule; naps during the day and often eats a heavy meal shortly before bed",
+    "says": "My sleep's a mess with these rotating shifts. I nap when I can and then eat a big dinner right before I crash.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol rarely, AUDIT-C score 0",
+    "says": "Alcohol? Nah, that's really not my thing, maybe a sip at a wedding or something.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s11",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Never smoked tobacco",
+    "says": "Never smoked a day in my life.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "attitude toward being asked about diet",
+    "chart": "Reports anticipatory anxiety about being judged or lectured about his eating, referencing past healthcare visits",
+    "says": "I'm sorry, I know what you're probably gonna say. I feel like every time I come in somewhere, I'm about to get a talking-to.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "breakroom eating",
+    "chart": "Admits to sometimes eating an entire bag of chips in the breakroom when very hungry or exhausted",
+    "says": "Sometimes I'll just... eat a whole bag of chips in the breakroom. I know, I know. I'm just so hungry and tired by that point.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "other",
+    "topic": "undisclosed home remedy use",
+    "chart": "Reports drinking a relative's homemade 'metabolism tea' blend most mornings; has never mentioned this to any provider",
+    "says": "Okay, there's... there's this tea. My aunt makes it, it's a family thing, supposed to help your metabolism. I drink it most mornings. I never told anybody about it 'cause it's not really medicine, you know?",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "other",
+    "topic": "undisclosed home remedy use",
+    "chart": "Reports taking cinnamon capsules recommended by a coworker a few times a week for blood sugar",
+    "says": "A guy I work with gave me these cinnamon pills, said they help with blood sugar. I take 'em maybe a few times a week.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "concern about home remedies",
+    "chart": "Reports having privately researched stopping the tea after reading something concerning online, but has not raised it with a provider due to fear",
+    "says": "Honestly... I looked something up online about that tea and it kind of scared me a little. I've been wondering if I should stop, but I didn't want to ask anybody about it.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "goals",
+    "topic": "what he wants from this visit",
+    "chart": "Wants to lower his cholesterol numbers without giving up his favorite foods and avoid starting medication if possible",
+    "says": "I just want my numbers to come down without having to give up everything I like, and if I can stay off medication, even better.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "Expresses motivation to have more energy to keep up with his teenage children's activities and milestones",
+    "says": "My kids are into sports, and I want to be able to keep up with them, not be the dad huffing and puffing on the sidelines.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s19",
+    "category": "psychosocial",
+    "topic": "belief about weight gain",
+    "chart": "Believes his weight gain is mainly a normal part of aging that can't be helped much",
+    "says": "I figure this is just what happens when you get older, right? Can't really fight it too much.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s20",
+    "category": "psychosocial",
+    "topic": "openness to church-based change",
+    "chart": "Open to the idea of encouraging healthier dishes at church potlucks once more comfortable discussing his health",
+    "says": "Maybe down the line I could get the guys to bring something a little healthier to the potluck. I don't know, might be worth a try.",
+    "tier": "reluctant",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review problem list / medical history",
+    "aliases": [],
+    "result": "Obesity (BMI 30+) since 2007; recurrent gingivitis (2023, 2024, 2025, each resolved); acute viral pharyngitis (2025-05, resolved); no cardiovascular, diabetes, or renal diagnoses listed",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review allergy record",
+    "aliases": [],
+    "result": "No known allergies",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: skips/delays breakfast most days; fast-food fried chicken sandwich for lunch; vending machine honey bun or chips during afternoon break; sweet tea or soda sipped through the shift; large dinner (e.g., baked ziti and garlic bread, or late fast food) after getting home around 11pm",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess hydration pattern",
+    "aliases": [],
+    "result": "Patient reports relying mainly on sweetened iced tea and soda during shifts, drinking little plain water",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess physical activity level",
+    "aliases": [],
+    "result": "Patient reports being on his feet during shifts but no structured exercise outside of work; describes feeling 'too tired' after long shifts to exercise",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 0 - reports drinking alcohol rarely",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess readiness to change (stage of change)",
+    "aliases": [],
+    "result": "Patient expresses awareness that his weight and cholesterol are problems but has not committed to specific changes; consistent with contemplation stage",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review dental/oral health record",
+    "aliases": [],
+    "result": "Gingivitis treated in 2023, 2024, and 2025 (each resolved); dental cleaning, fluoride treatment, and bitewing X-ray performed 2025-05-24",
+    "importance": "minor",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Observe mealtime/snack environment via camera (kitchen and cooler contents)",
+    "aliases": [],
+    "result": "Camera shows a cluttered kitchen with a soda can on the counter; patient mentions a cooler he brings to work that mostly holds soda",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 136/84 mmHg, heart rate 81/min, respiratory rate 15/min, weight 97.3 kg, height 179.2 cm, BMI 30.3 kg/m2, weight change +2.3 kg since 2025-05-17 (recorded 2026-05-23).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 299.1 mg/dL; LDL cholesterol 206.7 mg/dL; HDL cholesterol 65.9 mg/dL; Triglycerides 132.6 mg/dL; Haemoglobin 12.8 g/dL; White cell count 7.1 10*3/uL; Platelets 324.8 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-05-23); zoster vaccine live (2021-04-24); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-04-24); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2021-04-24).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Dental Visit Note - 2025-05-24",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2025-05-24",
+    "author": "Community Dental Associates",
+    "body": "Patient presented for routine dental care. Examination of gingivae noted mild redness and tenderness consistent with recurrent gingivitis (documented 2023, 2024, 2025, each episode resolved with treatment). Supragingival and subgingival plaque/calculus removed from all teeth. Fluoride treatment applied. Bitewing X-ray obtained, no new carious lesions. Patient advised on daily flossing. Follow-up recommended at routine interval."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Primary Care Referral Note for Nutrition Visit",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-05-23",
+    "author": "Dr. A. Chen, MD (Primary Care)",
+    "body": "56-year-old male presenting for annual wellness exam. BMI 30.3 (up from prior year), lipid panel notable for elevated total and LDL cholesterol. No current prescription medications. Patient denies tobacco use, reports rare alcohol use. Referring to dietetics for nutrition assessment and counseling given obesity and dyslipidemia. No supplement or over-the-counter product use documented in chart at this time."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 2007)\n\nRECENTLY RESOLVED\nGingivitis (2023-05 to 2023-05)\nGingivitis (2024-05 to 2024-05)\nGingival disease (2024-05 to 2024-05)\nGingivitis (2025-05 to 2025-05)\nAcute viral pharyngitis (2025-05 to 2025-05)\n\nPROCEDURES\n2025-05-24: Dental fluoride treatment (Gingivitis)\n2025-05-24: Dental plain X-ray bitewing\n2025-05-24: Examination of gingivae (Gingivitis)\n2025-05-24: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-05-24: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2025-05-24: Dental care (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-05-23 wellness: General examination of patient\n2025-05-24 ambulatory: Encounter for check up (Gingivitis)\n2025-05-17 wellness: General examination of patient\n2025-05-10 ambulatory: Encounter for symptom (Acute viral pharyngitis)\n2025-05-03 outpatient: Encounter for check up\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "299.1",
+        "mg/dL",
+        "< 200",
+        "2026-05-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "206.7",
+        "mg/dL",
+        "< 100",
+        "2026-05-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "65.9",
+        "mg/dL",
+        ">= 40",
+        "2026-05-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "132.6",
+        "mg/dL",
+        "< 150",
+        "2026-05-23"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.8",
+        "g/dL",
+        "12.0-17.5",
+        "2022-04-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "7.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-04-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "324.8",
+        "10*3/uL",
+        "150-450",
+        "2022-04-30"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete 24-hour dietary recall from a shift worker, capturing irregular meal timing, fast-food and vending-machine reliance, sugary beverage intake, and late-night eating.",
+    "factIds": [
+     "h2",
+     "s3",
+     "s7",
+     "s9"
+    ],
+    "actionIds": [
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Use non-judgmental, trust-building questioning to uncover undisclosed use of home remedies, teas, and supplements that would not appear on a standard medication list.",
+    "factIds": [
+     "s14",
+     "s15",
+     "s16",
+     "s12"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate anthropometric trends and lipid panel results into a plain-language explanation of the patient's cardiovascular/metabolic risk.",
+    "factIds": [
+     "h5",
+     "h14",
+     "h17"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Assess the patient's stage of readiness to change using a motivational interviewing approach rather than directive advice, and identify barriers and fears tied to his work schedule and social context.",
+    "factIds": [
+     "s12",
+     "s17",
+     "s19",
+     "s2"
+    ],
+    "actionIds": [
+     "a11",
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Explore the patient's faith community and family/cultural food traditions as a potential source of support for behavior change, while recognizing he has not yet disclosed his health numbers to that community.",
+    "factIds": [
+     "s4",
+     "s5",
+     "s6",
+     "s20"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Differentiate clinically relevant findings (obesity, dyslipidemia) from incidental or resolved findings (recurrent gingivitis, prior pharyngitis, normal older CBC) when forming a nutrition diagnosis.",
+    "factIds": [
+     "h15",
+     "h16",
+     "h12"
+    ],
+    "actionIds": [
+     "asyn2",
+     "a6",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy and saturated fat intake related to shift-work eating pattern, reliance on convenience/fast foods, and limited nutrition knowledge, as evidenced by elevated LDL (206.7 mg/dL) and total cholesterol (299.1 mg/dL), BMI 30.3 kg/m2, and self-reported 24-hour diet recall",
+   "differential": [
+    "Excessive energy intake related to irregular shift-work meal timing and vending-machine/fast-food reliance, as evidenced by weight gain of 2.3 kg over the past year and BMI 30.3",
+    "Limited food/nutrition-related knowledge related to low health literacy around lipid panels and nutrition labels, as evidenced by patient's own report of not understanding LDL/HDL",
+    "Undesirable food choices related to use of unregulated home remedies (metabolism tea, cinnamon capsules) in place of or alongside dietary changes, as evidenced by patient report once disclosed",
+    "Not a primary nutrition diagnosis but a tempting distractor: gingival disease — dental history is unrelated to the weight/lipid presentation and should not be coded as the nutrition problem"
+   ],
+   "keyFindings": [
+    "BMI 30.3 kg/m2 (97.3 kg at 179.2 cm), up 2.3 kg from 95.0 kg one year ago",
+    "Total cholesterol 299.1 mg/dL and LDL 206.7 mg/dL, both well above reference range; HDL 65.9 mg/dL and triglycerides 132.6 mg/dL are within normal range",
+    "BP 136/84 mmHg, mildly elevated; HR 81, RR 15, all otherwise unremarkable",
+    "24-hour recall reveals skipped/delayed breakfast, fast-food lunch, vending-machine snacking, minimal water intake with heavy reliance on sweet tea/soda, and a large late-night dinner after close-of-shift",
+    "No prescribed medications; problem list and medication record do not capture any supplement use",
+    "Patient initially omits daily use of a homemade 'metabolism tea' and intermittent cinnamon capsule use; this surfaces only through direct, non-judgmental questioning about teas/home remedies/supplements, not just pharmacy medications",
+    "Patient is in the contemplation stage of change, torn between wanting improvement and fear of judgment or disrupting work/social routines",
+    "Older CBC values (2022) are normal and not clinically relevant to the current nutrition diagnosis",
+    "History of recurrent treated gingivitis (2023-2025) is a resolved dental issue, not related to the current nutrition problem"
+   ],
+   "plan": [
+    "Complete a structured 24-hour diet recall and typical shift-day eating pattern, including beverage intake and breakroom/vending behaviors",
+    "Directly and non-judgmentally ask about use of any teas, home remedies, or supplements (not only prescribed medications) to uncover undisclosed intake",
+    "Review available anthropometric trend (weight change over the past year) and most recent lipid panel with the patient in plain language",
+    "Assess readiness to change using motivational interviewing; avoid prescriptive 'eat less, move more' messaging",
+    "Collaboratively identify one or two feasible, low-literacy-friendly changes tied to his existing routine (e.g., swapping one sugary beverage for water on shift, choosing a lower-saturated-fat vending option) rather than a full diet overhaul",
+    "Explore the church community (men's breakfast, potlucks) as a potential support for sustainable change rather than a barrier",
+    "Document findings and plan using the ADIME format, including the nutrition diagnosis statement and any disclosed supplement use for the referring clinician to review",
+    "Advise that any decision about stopping the tea or cinnamon capsules should be discussed with his physician, since dietitians counsel on diet/supplement use but medical safety review is outside this visit's scope"
+   ],
+   "redFlags": [
+    "LDL 206.7 mg/dL and total cholesterol 299.1 mg/dL are significantly elevated and warrant physician follow-up for possible lipid-lowering therapy",
+    "Family history of heart disease (father) combined with his own rising lipids and central adiposity raises cardiovascular risk that should be flagged back to the referring provider",
+    "Undisclosed daily supplement/tea use is a patient-safety consideration that should be communicated to the medical team, especially since the patient has quietly wondered about stopping it after reading something concerning online"
+   ],
+   "educationPoints": [
+    "Explain in plain language what LDL and HDL mean and why his LDL/total cholesterol numbers matter, avoiding jargon",
+    "Clarify that occasional treats or Sunday dinners are not the core problem; the pattern of frequent fast food, sugary drinks, and skipped meals during shifts is the main driver to work on",
+    "Normalize disclosing supplement/home remedy use to the care team as being about safety and getting better guidance, not about getting in trouble",
+    "Offer simple, shift-compatible strategies: packing a quick protein/fiber snack for breaks instead of relying on vending machines, swapping soda/sweet tea for water or an unsweetened option during part of the shift",
+    "Reassure him that this is a gradual, collaborative process (consistent with contemplation stage) rather than an all-or-nothing fix"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 35,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "56 M ·  · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "3e9ca627",
+   "fingerprint": "1wq5yr2"
+  }
+ }
+}

@@ -70,13 +70,16 @@ export function promptFor(c: CaseProfile, personality: string): string {
     .join(" ");
 }
 
-async function draw(prompt: string): Promise<Buffer> {
+/** What must not appear, by age: the image model ages people unless told not to. */
+const tooOld = (age: number) => (age < 30 ? "middle-aged, elderly, wrinkles, grey hair, white hair, balding, " : age < 50 ? "elderly, old, deep wrinkles, grey hair, white hair, " : age < 65 ? "very old, frail, white hair, " : "");
+
+async function draw(prompt: string, age = 99): Promise<Buffer> {
   const res = await client.send(
     new InvokeModelCommand({
       modelId: MODEL,
       contentType: "application/json",
       accept: "application/json",
-      body: JSON.stringify({ prompt, negative_prompt: NEGATIVE, mode: "text-to-image", aspect_ratio: "2:3", output_format: "png" }),
+      body: JSON.stringify({ prompt, negative_prompt: tooOld(age) + NEGATIVE, mode: "text-to-image", aspect_ratio: "2:3", output_format: "png" }),
     }),
     { abortSignal: AbortSignal.timeout(90000) },
   );
@@ -114,11 +117,11 @@ async function main() {
     try {
       let image: Buffer;
       try {
-        image = await draw(prompt);
+        image = await draw(prompt, data.profile.patient.age);
       } catch (e) {
         // The content filter sometimes trips on the free-text appearance; try once without it.
         if (!/declined/.test((e as Error).message)) throw e;
-        image = await draw(promptFor({ ...data.profile, patient: { ...data.profile.patient, appearance: "" } }, personality));
+        image = await draw(promptFor({ ...data.profile, patient: { ...data.profile.patient, appearance: "" } }, personality), data.profile.patient.age);
       }
       const slug = file.replace(/\.json$/, "");
       const png = path.join(OUT, `.${slug}.tmp.png`);

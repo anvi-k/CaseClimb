@@ -1,0 +1,928 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Early Behavior Change in a Postpartum 18-Year-Old with Newly Diagnosed Prediabetes",
+  "summary": "An 18-year-old postpartum mother on Medicaid with newly diagnosed prediabetes (HbA1c 6%) is three to four weeks into fragile, well-intentioned dietary changes but has not disclosed significant household food insecurity, including skipping her own meals to stretch food for her sibling and infant. The case teaches learners to redirect a warm, tangential storyteller, gently uncover hidden food insecurity and inconsistent supplement adherence (a stated-vs-actual mismatch around her iron pills), correct carbohydrate overgeneralization, and deliver budget-realistic, destigmatizing nutrition counseling with appropriate resource referral.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Palisades Park, New Jersey (shared apartment, household of 4)",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Audrey Grimes",
+   "age": 18,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "asian, nonhispanic",
+   "occupation": "Currently unemployed, previously worked part-time as a cashier at a dollar store before her pregnancy",
+   "language": "English",
+   "appearance": "Appears a bit tired but animated and smiling, calling from a shared living room with a secondhand stroller visible nearby; makes good eye contact and chats easily; mild gum tenderness visible from recent dental work, speaks carefully on that side of her mouth; slightly soft midsection consistent with recent postpartum body changes; no edema or acute distress",
+   "portrait": "/portraits/synthea-audrey-grimes-342d9466.jpg"
+  },
+  "persona": {
+   "personality": "Warm, chatty, eager to please and be seen as a 'together' young mom; brightens visibly with praise; proud of her self-directed research but quick to feel embarrassed when she thinks she's gotten something wrong or when money comes up",
+   "communicationStyle": "Talks in long, looping stories - a question about breakfast might end up at her cousin's wedding before she circles back on her own or with a gentle nudge. Peppers in nutrition buzzwords (carbs, glycemic index, fiber) picked up from online reading, sometimes slightly off. Jokes or deflects lightly when conversation nears money or going without food, then can open up if met with warmth instead of alarm.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious under a cheerful surface - scared the prediabetes could become 'real diabetes' like her aunt's, proud of her recent changes but secretly afraid they're fragile, and carrying some quiet shame about money and the food pantry that she works hard to keep hidden",
+   "background": "Audrey is 18, six months postpartum with her daughter, living in a crowded Palisades Park apartment with her mother and younger sibling. She grew up stretching food - generic cereal, whatever was on sale, lots of pasta - and finished some college coursework in early childhood education before pausing for her pregnancy. She used to cashier part-time at a dollar store. She's the kind of person who prints out meal charts from websites and follows mom-life accounts on social media, proud of a free secondhand stroller a neighbor gave her, and dreams of finishing school someday. Her mother works long shifts and can't help much with the baby or cooking, so Audrey is mostly on her own managing a six-month-old who doesn't nap long enough for her to do much in the kitchen.",
+   "speechExamples": [
+    "Oh my gosh, okay so breakfast - well, actually, okay, funny story, my cousin just had her wedding and the cake had NO sugar in it, like none, and I was like wait, that's genius, but anyway - no I didn't eat breakfast today, I never really do, is that bad?",
+    "I've been reading SO much about glycemic index, like I feel like I should basically know this by now, which is embarrassing because clearly I still messed something up since my sugar's high, right?",
+    "Oh, the pantry? Yeah, I mean, sometimes, it's not a big deal, I just didn't really need groceries some weeks, you know how it is.",
+    "I take my iron pills, like, I mean - okay, honestly? Some months I just... don't get around to buying them. Formula's not cheap.",
+    "My aunt has diabetes and it's bad, like really bad, and I just - I don't want that to be me, you know? I have a daughter now."
+   ],
+   "concerns": [
+    "Worried the prediabetes could turn into full diabetes like her aunt has",
+    "Scared of needing medication she can't afford",
+    "Anxious about not having anyone to watch the baby so she can rest or cook properly",
+    "Embarrassed that despite all her reading, her labs still came back abnormal"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. The patient is Audrey Grimes, an 18-year-old new mother, six months postpartum, recently told at her postnatal checkup that she has prediabetes. She is calling in from home and wants help getting her blood sugar numbers back to normal. Review her available health record information before the call.",
+   "chiefComplaint": "Follow-up nutrition visit after being told she has prediabetes at her postnatal checkup; wants help getting her blood sugar back to normal",
+   "openingLine": "Hi! Thanks for calling me back - so basically they told me at my after-baby checkup that I'm like, prediabetic now? And it kind of freaked me out, so I've been trying to fix my eating, but I don't really know if I'm doing it right.",
+   "tasks": [
+    "Take a focused diet history covering her typical meal pattern, food sources, and recent changes, gently redirecting if the conversation wanders",
+    "Assess her readiness for change and identify what could put her recent habits at risk",
+    "Screen sensitively for food security and household resource barriers affecting her eating pattern",
+    "Review her relevant anthropometrics and labs and relate them to her nutrition diagnosis",
+    "Identify at least one practical, budget-conscious nutrition strategy and one additional support resource to offer her"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after being told at her postnatal checkup that she has prediabetes, wanting help getting her blood sugar back to normal"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Patel (Family Medicine, PCP); Dietetics referral pending"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable, outpatient)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for nutrition follow-up after being told at her 6-week postnatal visit that she has prediabetes; wants help getting her blood sugar back to normal before next labs.",
+    "says": "They told me at my checkup that I have prediabetes and it kind of scared me, so I want to get my numbers back to normal before my next test.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "timeline of diagnosis",
+    "chart": "Diagnosed with prediabetes at postnatal checkup on 2026-05-19 (HbA1c 6%).",
+    "says": "They found this out at my 6-week checkup after I had the baby, back in May.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "recent diet changes",
+    "chart": "Reports initiating dietary changes approximately 3-4 weeks prior to visit, including switching white bread for whole wheat and discontinuing sugary breakfast cereal.",
+    "says": "A few weeks ago I switched to whole wheat bread and I cut out that sugary cereal I used to eat.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "energy fluctuations",
+    "chart": "Reports occasional afternoon energy crashes, particularly when lunch is skipped.",
+    "says": "Sometimes in the afternoon I just crash, especially on days I don't get to eat lunch.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "symptoms with fasting",
+    "chart": "Reports feeling shaky and irritable if she goes too long without eating.",
+    "says": "If I go too long without food I get shaky and kind of snappy.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "morning symptoms",
+    "chart": "Reports waking groggy and very hungry after nights with frequent infant feedings.",
+    "says": "Some nights I'm up a lot with the baby and by morning I feel groggy and starving.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "evening cravings",
+    "chart": "Reports mild sweet cravings in the evening after the infant falls asleep.",
+    "says": "Once the baby's finally down I get this little urge for something sweet.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "family diabetes history concern",
+    "chart": "Expresses concern about progression to type 2 diabetes, citing an aunt with diabetic complications.",
+    "says": "I'm worried this could turn into full diabetes like my aunt has — she's had a hard time with it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "dental discomfort",
+    "chart": "Mild residual gum tenderness on one side following recent dental procedures; eating slightly more carefully on that side.",
+    "says": "My gums are still a little sore from some dental work I had done, so I chew carefully on that side.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "heartburn",
+    "chart": "Reports occasional heartburn, managed with as-needed Tums.",
+    "says": "I get heartburn sometimes, I just pop a Tums when it happens.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "bowel and GI symptoms",
+    "chart": "Denies nausea, vomiting, diarrhea, or constipation.",
+    "says": "No, my stomach's fine other than the heartburn sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "swelling or vision changes",
+    "chart": "Denies swelling in legs/feet, vision changes, excessive thirst, or frequent urination.",
+    "says": "No swelling, nothing weird with my eyes, and I'm not drinking or peeing way more than usual.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "alcohol-related symptoms",
+    "chart": "Light alcohol use, a drink or two at family gatherings; denies regular or heavy drinking.",
+    "says": "I'll have a drink or two at a family thing sometimes, but that's really it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "Normal pregnancy, resolved 2025-08 to 2026-03; delivered 6 months prior to visit.",
+    "says": "My pregnancy was pretty normal overall, and now my daughter's 6 months old.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "anemia history",
+    "chart": "History of anemia during pregnancy (resolved 2025-08 to 2026-03); hemoglobin 11.1 g/dL on 2025-08-12 CBC.",
+    "says": "I was anemic when I was pregnant, so I had to take iron pills back then.",
+    "tier": "initial",
+    "importance": "important",
+    "distractor": true
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "recent throat illness",
+    "chart": "History of acute viral pharyngitis, 2025-08, resolved.",
+    "says": "I had a bad sore throat thing last summer but that cleared up on its own.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of dental caries (2025-05, resolved) and gingival disease (2026-06, resolved) with recent dental procedures including gingivectomy, fluoride treatment, desensitizing medicament application, and bitewing X-ray on 2026-06-02.",
+    "says": "I had some cavities a while back, and then just this month I had a bunch of dental work done on my gums.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No major surgical history other than recent dental procedures (gingivectomy, 2026-06-02); no history of cesarean section (vaginal delivery).",
+    "says": "I haven't had any real surgeries, just that dental stuff recently. I had my daughter the regular way, no C-section or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "prescription medications",
+    "chart": "No current prescription medications.",
+    "says": "I'm not on any prescription medicine right now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "iron supplement use",
+    "chart": "Reports taking generic OTC iron tablets consistently now that her anemia is 'back on radar.'",
+    "says": "I always take my iron pills now, since the anemia thing came back up.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "iron supplement consistency",
+    "chart": "On further questioning, reports inconsistent iron tablet use, going without some months when budget is tight.",
+    "says": "I mean... okay, honestly, some months I don't buy them because the formula has to come first.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "prenatal vitamin use",
+    "chart": "Reports taking leftover prenatal multivitamin inconsistently, described as 'when I remember.'",
+    "says": "I still have some prenatal vitamins left over, I take those when I remember, which isn't always.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "heartburn medication",
+    "chart": "Takes occasional over-the-counter Tums as needed for heartburn.",
+    "says": "Just the Tums here and there when my chest burns a little.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I'm not allergic to anything that I know of.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with mother and younger sibling plus 6-month-old daughter; household of 4.",
+    "says": "It's me, my mom, my little brother, and my baby girl all packed into one apartment.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "family support availability",
+    "chart": "Reports mother works long shifts and is unable to help with childcare or cooking; no partner support.",
+    "says": "My mom's working all the time so it's really just me with the baby most of the day.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family diabetes history",
+    "chart": "Reports a maternal aunt with diabetes and related complications.",
+    "says": "My aunt has diabetes and it got really bad for her, that's part of why this scared me so much.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "housing and income",
+    "chart": "Reports household income is very limited; on Medicaid.",
+    "says": "Money's tight, like really tight, but we manage somehow.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "employment status",
+    "chart": "Currently unemployed; previously worked part-time as a cashier at a dollar store before pregnancy.",
+    "says": "I used to work at the dollar store but I haven't gone back since the baby.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "food shopping location",
+    "chart": "Reports sometimes using the Palisades Park food pantry when asked where she gets groceries.",
+    "says": "Sometimes I go to the food pantry near us when things are slow.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s7",
+    "category": "social",
+    "topic": "food pantry feelings",
+    "chart": "Reports feeling embarrassed using the food pantry and sometimes tells others she did not need groceries that week rather than disclosing pantry use.",
+    "says": "I kind of hate telling people I go there, so sometimes I just say I didn't need to shop that week.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "social",
+    "topic": "grocery budgeting choices",
+    "chart": "Reports sometimes purchasing the cheapest option even when aware it is less nutritious, such as white rice over brown rice for cost.",
+    "says": "I know brown rice is better but sometimes it's a dollar more and that dollar matters.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "nutrition",
+    "topic": "skipping own meals",
+    "chart": "Discloses that she has skipped her own dinner twice in the past month to preserve food for her younger sibling and infant's formula.",
+    "says": "There's been a couple nights I just didn't eat so there'd be enough for my brother and the baby's formula.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "function",
+    "topic": "childcare demands on cooking",
+    "chart": "Reports her 6-month-old does not nap long enough for her to prepare complex meals.",
+    "says": "She barely naps long enough for me to boil water, let alone cook something real.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "function",
+    "topic": "sleep and fatigue",
+    "chart": "Reports fragmented sleep of 4-6 hours nightly due to night feedings, contributing to daytime fatigue.",
+    "says": "I'm up every couple hours with her, so I'm basically running on fumes.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports light alcohol use, a drink or two at family gatherings; denies tobacco use.",
+    "says": "I'll have a drink at like a family party, but that's maybe once a month if that. Never smoked.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "shame around slipping",
+    "chart": "Reports feeling embarrassed rather than resilient when she deviates from her new eating changes.",
+    "says": "When I slip up I feel so dumb, like I read all this stuff online so I should just know better.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "fear of future treatment cost",
+    "chart": "Expresses fear of eventually needing medication she cannot afford.",
+    "says": "I'm scared if this gets worse they're gonna put me on some medicine I can't even pay for.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "goals",
+    "topic": "health goals",
+    "chart": "States goals of normalizing blood sugar before next labs, having more energy for her daughter, and feeling like a 'together' mom.",
+    "says": "I just want my numbers to look good next time and to have enough energy to keep up with her.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "adherence",
+    "topic": "iron supplement consistency",
+    "chart": "States she now consistently takes her iron tablets since her anemia came back on the radar.",
+    "says": "Oh yeah, I take my iron pills now, every day, I'm on top of it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "supplement purchase pattern",
+    "chart": "On further questioning, reports not always buying iron tablets some months, prioritizing formula purchases instead.",
+    "says": "Okay, honestly, some months I don't even buy them because the formula money has to come first.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "unused prenatal vitamin samples",
+    "chart": "Has considered selling or trading unused prenatal vitamin samples for diapers but has not acted on this.",
+    "says": "I've got all these leftover prenatal vitamin samples just sitting there... I've thought about trading them for diapers, but I'd be so embarrassed to actually ask anyone.",
+    "tier": "hidden",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Calculate BMI and weight history",
+    "aliases": [],
+    "result": "Height 157 cm, weight 59.4 kg, BMI 24.1 kg/m2. Weight change +7.0 kg since 2025-05-13 (pre-pregnancy baseline).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review problem list and visit history",
+    "aliases": [],
+    "result": "Problem list includes prediabetes (since 2026), resolved pregnancy and anemia (2025-08 to 2026-03), resolved acute viral pharyngitis (2025-08), resolved dental caries (2025-05), and a cluster of dental procedures in June 2026 (gingival disease, gingivectomy, fluoride treatment, desensitizing medicament, surgical procedure, bitewing X-ray).",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review current medication and supplement list",
+    "aliases": [],
+    "result": "No prescription medications. Supplements/OTC: prenatal multivitamin (leftover from pregnancy), taken 'when I remember'; generic OTC iron tablets, restarted for anemia; occasional Tums for heartburn.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Conduct 24-hour diet recall / usual intake assessment",
+    "aliases": [],
+    "result": "Patient reports: breakfast often skipped or just coffee with creamer; lunch is whatever's fastest; dinner is the main meal, typically pasta, rice, or bread with protein added when affordable (chicken thighs, eggs). Favorite foods include spaghetti with butter and parmesan, scrambled eggs with hot sauce, bananas/apples when on sale. Drinks mostly sweetened iced tea and water, recently cut back on soda.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage of change",
+    "aliases": [],
+    "result": "Patient reports making real dietary changes (switched to whole wheat bread, cut sugary cereal) starting approximately 3-4 weeks ago, consistent with action stage. States she is proud of the changes but acknowledges they feel fragile.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Screen for food insecurity (Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient initially reports 'budgeting like a pro' and denies trouble affording food; with gentle follow-up, discloses occasional use of a local food pantry and selecting cheaper options (e.g., white rice over brown) to save money.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports walking the baby in a stroller most days; no structured exercise; describes feeling 'too wiped out' for more.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Screen alcohol use (brief screen)",
+    "aliases": [],
+    "result": "Patient reports light alcohol use, approximately one to two drinks at occasional family gatherings; denies tobacco use.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess sleep pattern and fatigue",
+    "aliases": [],
+    "result": "Patient reports fragmented sleep of 4-6 hours nightly due to night feedings; naps when possible when the baby naps.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Review camera-guided self-exam of gums/mouth",
+    "aliases": [],
+    "result": "Patient shows mild gum tenderness and redness on one side, consistent with recent dental procedure; no oral lesions or signs of nutrient deficiency noted.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 107/76 mmHg, heart rate 87/min, respiratory rate 13/min, weight 59.4 kg, height 157 cm, BMI 24.1 kg/m2, weight change +7.0 kg since 2025-05-13 (recorded 2026-05-19).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6 %; Glucose 68.3 mg/dL; Haemoglobin 11.1 g/dL; White cell count 10 10*3/uL; Platelets 415 10*3/uL; Potassium 3.9 mmol/L; Sodium 142 mmol/L; Urea nitrogen 17.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-05-19); meningococcal MCV4P (2024-05-07); COVID-19 vaccine vector-nr rS-Ad26 PF 0.5 mL (2021-05-25); HPV quadrivalent (2021-04-20); Tdap (2019-04-09).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Postnatal Checkup Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-05-19",
+    "author": "Dr. Patel, Family Medicine",
+    "body": "18-year-old female, 6 months postpartum, presents for postnatal follow-up. Reports feeling generally well, caring for 6-month-old daughter at home. Labs obtained today notable for HbA1c 6% consistent with prediabetes; patient counseled on diagnosis and referred to nutrition for dietary counseling. BP, HR, RR within normal limits. No edema noted. Mild gum tenderness noted, attributed to recent dental procedure per patient report; no acute oral findings. Plan: nutrition referral, recheck HbA1c in 3-6 months, continue iron supplementation for history of pregnancy-related anemia, continue routine postpartum care."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 2026)\n\nRECENTLY RESOLVED\nPrimary dental caries (2025-05 to 2025-05)\nNormal pregnancy (2025-08 to 2026-03)\nAnemia (2025-08 to 2026-03)\nAcute viral pharyngitis (2025-08 to 2025-08)\nGingival disease (2026-06 to 2026-06)\n\nPROCEDURES\n2026-06-02: Dental fluoride treatment (Patient referral for dental care)\n2026-06-02: Postoperative care for dental procedure\n2026-06-02: Gingivectomy or gingivoplasty per tooth (Gingival disease)\n2026-06-02: Dental application of desensitizing medicament (Gingival disease)\n2026-06-02: Dental surgical procedure (Gingival disease)\n2026-06-02: Dental plain X-ray bitewing\n\nRECENT ENCOUNTERS\n2026-06-02 ambulatory: Encounter for check up (Patient referral for dental care)\n2026-05-19 wellness: General examination of patient\n2026-04-28 ambulatory: Postnatal visit\n2026-03-17 emergency: Obstetric emergency hospital admission (Normal pregnancy)\n2026-03-10 ambulatory: Prenatal visit (Normal pregnancy)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6",
+        "%",
+        "< 5.7",
+        "2026-05-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "68.3",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-05-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.1",
+        "g/dL",
+        "12.0-17.5",
+        "2025-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "10",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "415",
+        "10*3/uL",
+        "150-450",
+        "2025-08-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "3.9",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-05-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "142",
+        "mmol/L",
+        "135-145",
+        "2026-05-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "17.5",
+        "mg/dL",
+        "7-20",
+        "2026-05-19"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Take a focused diet history, redirecting a warm but tangential storyteller back to meal pattern, food sources, and recent changes without damaging rapport.",
+    "factIds": [
+     "h3",
+     "h4",
+     "h5",
+     "h6",
+     "h7"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess stage/readiness for change and identify what could put her recent, fragile dietary changes at risk of relapse.",
+    "factIds": [
+     "h3",
+     "s11",
+     "s13"
+    ],
+    "actionIds": [
+     "a9",
+     "a13"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Screen sensitively for food insecurity and household resource barriers, moving beyond an initial confident denial to uncover pantry use, cheapest-option substitution, and skipped meals.",
+    "factIds": [
+     "s4",
+     "s6",
+     "s7",
+     "s8",
+     "s9"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Review relevant anthropometrics and laboratory data and relate them to a nutrition diagnosis of prediabetes with a carbohydrate/eating pattern altered by limited food access.",
+    "factIds": [
+     "h2",
+     "h15"
+    ],
+    "actionIds": [
+     "a2",
+     "asyn2",
+     "asyn1"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify and correct an overgeneralized belief about carbohydrates using her existing health literacy as a foundation, and propose at least one practical, budget-conscious nutrition strategy.",
+    "factIds": [
+     "h3",
+     "s8"
+    ],
+    "actionIds": [
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize gaps in supplement adherence (iron, prenatal vitamin) tied to budget prioritization and connect her to an additional support resource beyond Medicaid.",
+    "factIds": [
+     "h20",
+     "h21",
+     "s16",
+     "s17",
+     "s2"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Nutrition-related knowledge deficit and fragile early behavior change in the context of newly diagnosed prediabetes, complicated by unaddressed household food insecurity (NI/NB nutrition diagnosis: altered carbohydrate/eating pattern related to limited access to food and competing household resource demands, as evidenced by skipped meals, cheapest-option substitutions, and self-reported dinner-skipping to stretch food for siblings/infant formula)",
+   "differential": [
+    "Simple fragile new behavior change without food insecurity (ruled in part by probing)",
+    "Disordered eating / restriction pattern unrelated to budget (less likely given clear budget-driven triggers)",
+    "Iron-deficiency anemia relapse requiring medical follow-up (resolved per chart, but supplement adherence is inconsistent and worth flagging)",
+    "Normal postpartum fatigue without nutritional contribution (unlikely given skipped breakfast and irregular meal timing)"
+   ],
+   "keyFindings": [
+    "HbA1c 6% (prediabetic range, ref <5.7), fasting glucose 68.3 mg/dL (ref 70-99) on 2026-05-19",
+    "BMI 24.1 kg/m2 (healthy weight range), +7.0 kg since pre-pregnancy baseline (2025-05-13), consistent with normal postpartum weight retention",
+    "Skips breakfast most days; carb-heavy, budget-driven dinner pattern (pasta/rice/bread) with protein added inconsistently",
+    "Only 3-4 weeks into recent dietary changes (whole wheat swap, cutting sugary cereal) - action stage but fragile, admits one hard week could derail it",
+    "Uses Palisades Park food pantry but feels embarrassed and sometimes avoids taking available food because she believes it's 'not healthy'",
+    "Mismatch: states she 'always takes' her iron tablets now, but on closer questioning admits she doesn't buy them some months because formula costs come first - inconsistent/irregular supplement use, not the confident adherence first reported",
+    "Hidden food insecurity: has skipped her own dinner twice in the past month so siblings and baby's formula are covered - not previously disclosed to any provider",
+    "Overgeneralized belief that 'carbs are the enemy,' leading to swings between over-restriction and reverting to old habits",
+    "Resolved mild anemia (Hgb 11.1 g/dL, 2025-08-12, pregnancy-era) is not a current active issue but explains ongoing OTC iron use",
+    "Current chem panel (K 3.9, Na 142, BUN 17.5, all 2026-05-19) is normal, no renal or electrolyte concern",
+    "Light alcohol use (occasional 1-2 drinks at gatherings) - pertinent negative, not a nutrition concern",
+    "Mild gum tenderness from June 2026 dental procedures - explains eating-side guardedness, not nutrition-diagnostic"
+   ],
+   "plan": [
+    "Document findings in ADIME format: Assessment (diet history, anthropometrics, labs, psychosocial/food security screen), Diagnosis (NI-5.8 or similar altered CHO/eating pattern related to limited food resources as evidenced by skipped meals and cheapest-option substitution), Intervention (education + goal-setting + resource referral), Monitoring/Evaluation plan",
+    "Gently screen for food insecurity using a non-judgmental, normalized approach (e.g., Hunger Vital Sign-style questions) and document findings respectfully without judgmental language",
+    "Correct the 'carbs are the enemy' overgeneralization constructively: build on her existing knowledge of glycemic index/fiber rather than contradicting her",
+    "Offer concrete, budget-conscious swaps that fit her real resources: bulk brown rice/oats, dried or canned beans, frozen vegetables, reframing pantry staples as legitimate healthy choices",
+    "Address breakfast skipping with low-effort, low-cost options compatible with infant care demands (e.g., overnight oats, hard-boiled eggs prepped in batches)",
+    "Normalize fragile behavior change: validate the 3-4 week progress, discuss relapse-proofing for hard weeks without shame framing",
+    "Explore and validate her inconsistent iron supplement use without judgment; encourage consistent use and discuss affordable sourcing (WIC, generic options already in use)",
+    "Screen tactfully for whether she is skipping her own meals to prioritize others' food, and if disclosed, respond with support rather than alarm; document only what she discloses",
+    "Connect her to additional resources beyond Medicaid: WIC (she may already qualify given infant and recent pregnancy), community health worker or home visiting program, local food pantry navigation support, possible childcare assistance to free time for meal prep",
+    "Set one or two small, specific, achievable goals collaboratively (patient-centered, action-stage appropriate) rather than a full dietary overhaul",
+    "Plan follow-up visit timed with her next HbA1c recheck to reinforce changes and monitor for relapse"
+   ],
+   "redFlags": [
+    "Self-reported skipping of her own meals (twice in past month) to preserve food for her baby and sibling - a food security safety concern requiring sensitive follow-up and resource connection, not an emergency but should not be ignored",
+    "Inconsistent iron supplementation given anemia history - worth a gentle nudge back to medical/OB follow-up if symptomatic (fatigue, which she already has from other causes, could mask recurrence)",
+    "Embarrassment and avoidance of pantry resources due to stigma, which could worsen food insecurity if not addressed with destigmatizing counseling"
+   ],
+   "educationPoints": [
+    "All carbohydrates are not 'the enemy' - type, portion, and pairing with fiber/protein matter more than total avoidance, especially for her mildly elevated HbA1c",
+    "Pantry and generic/store-brand staples (beans, canned vegetables, bulk rice, generic cereal) can be nutritionally sound and budget-appropriate; cost does not equal poor quality",
+    "Skipping breakfast can contribute to the afternoon energy crashes and shakiness she describes; small, low-effort breakfast options can help stabilize energy without requiring extra time she doesn't have",
+    "Fragile new habits are normal at 3-4 weeks; a single hard week or slip does not erase progress and does not need to trigger starting over from scratch",
+    "Consistent iron intake matters for her anemia history, and there are low-cost ways to maintain supply (WIC, generic equivalents) if cost is a barrier",
+    "She may qualify for additional support programs (WIC, community health worker, childcare resources) that can ease both food budget and time/energy barriers without replacing her Medicaid coverage"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m2",
+    "patientClaim": "Early in the visit she frames her food situation as being handled, saying she's 'budgeting like a pro' and denying trouble affording food",
+    "recordEvidence": "Postnatal checkup note and her own supply pattern show a household on Medicaid with very limited income (s4), and on gentle follow-up she discloses food pantry use and cheapest-option substitutions (d5)",
+    "teachingPoint": "A patient's confident, upbeat framing can obscure underlying food insecurity; sensitive, repeated, non-judgmental screening (e.g., Hunger Vital Sign) is needed to surface the fuller picture already hinted at in the social/insurance record.",
+    "factId": "s4",
+    "artifactId": "d5"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 31,
+   "condition": "Prediabetes",
+   "conditionLabel": "18 F · Prediabetes · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "342d9466",
+   "fingerprint": "15mybul"
+  }
+ }
+}

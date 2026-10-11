@@ -1,0 +1,300 @@
+{
+ "patient_overview": {
+  "name": "Audrey Grimes",
+  "age": 18,
+  "sex": "Female",
+  "description": "Audrey Grimes is an 18-year-old new mother in Palisades Park, New Jersey, recently flagged with prediabetes at her postnatal checkup. She's warm, chatty, and clearly has done her homework online, but her stories tend to wander far from the original question before circling back. She started making real changes to her eating a few weeks ago after the diagnosis scared her, though the new habits feel shaky and easy to knock over. A dietetics student will like her immediately, but will need patience to steer the conversation and gentle curiosity to find the money worries she's not volunteering.",
+  "keywords": [
+   "prediabetes",
+   "postpartum",
+   "young adult",
+   "food budget",
+   "food pantry",
+   "health literacy",
+   "fragile behavior change",
+   "low support",
+   "anemia history",
+   "action stage"
+  ]
+ },
+ "demographics": {
+  "occupation": "Currently unemployed, previously worked part-time as a cashier at a dollar store before her pregnancy",
+  "residence": "Palisades Park, New Jersey; household of 4",
+  "ethnicity": "Asian",
+  "language": "English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "Medicaid",
+  "cultural_context": "Audrey grew up in Palisades Park in a crowded apartment with her mother and younger siblings, and food stretching was just a fact of life — generic cereal, whatever was on sale, and a lot of pasta. She finished some college coursework but had to pause when she became pregnant. She's proud of being a reader and a planner, the kind of person who prints out meal charts from websites, but her actual kitchen reality is a shared fridge, a tiny stipend, and a six-month-old who doesn't nap long enough for her to cook anything complicated."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [],
+  "medical_history": [
+   "Prediabetes since 2026",
+   "Primary dental caries (2025-05 to 2025-05, resolved)",
+   "Normal pregnancy (2025-08 to 2026-03, resolved)",
+   "Anemia (2025-08 to 2026-03, resolved)",
+   "Acute viral pharyngitis (2025-08 to 2025-08, resolved)",
+   "Gingival disease (2026-06 to 2026-06, resolved)",
+   "Dental fluoride treatment (2026-06-02)",
+   "Postoperative care for dental procedure (2026-06-02)",
+   "Gingivectomy or gingivoplasty per tooth (2026-06-02)",
+   "Dental application of desensitizing medicament (2026-06-02)",
+   "Dental surgical procedure (2026-06-02)",
+   "Dental plain X-ray bitewing (2026-06-02)"
+  ],
+  "current_symptoms": [
+   "Occasional afternoon energy crashes, especially if she skips lunch",
+   "Feels shaky and irritable if she goes too long without eating",
+   "Some nights she's up with the baby and feels groggy and starving by morning",
+   "Mild sweet cravings in the evening after the baby finally goes to sleep"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears a bit tired but animated and smiling, makes eye contact and chats easily",
+   "Mild gum tenderness still visible from recent dental work, speaks carefully on that side of her mouth",
+   "Slightly soft midsection weight gain consistent with recent postpartum body changes",
+   "No edema or acute distress noted; skin and nails look healthy"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6 % (reference < 5.7; 2026-05-19)",
+   "Glucose: 68.3 mg/dL (reference 70-99 (fasting); 2026-05-19)",
+   "Haemoglobin: 11.1 g/dL (reference 12.0-17.5; 2025-08-12)",
+   "White cell count: 10 10*3/uL (reference 4.0-11.0; 2025-08-12)",
+   "Platelets: 415 10*3/uL (reference 150-450; 2025-08-12)",
+   "Potassium: 3.9 mmol/L (reference 3.5-5.1; 2026-05-19)",
+   "Sodium: 142 mmol/L (reference 135-145; 2026-05-19)",
+   "Urea nitrogen: 17.5 mg/dL (reference 7-20; 2026-05-19)"
+  ],
+  "vital_signs": [
+   "BP: 107/76 mmHg",
+   "HR: 87 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-05-19"
+  ],
+  "anthropometrics": [
+   "Height: 157 cm",
+   "Weight: 59.4 kg",
+   "BMI: 24.1 kg/m2",
+   "Weight change: +7.0 kg since 2025-05-13"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Prenatal multivitamin left over from pregnancy, taken 'when I remember'",
+   "Generic iron tablets from the drugstore, started again after her anemia came back on radar",
+   "Occasional Tums for heartburn"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Budget-driven, carb-heavy pattern built around cheap filling staples (rice, pasta, bread, eggs) with vegetables and lean protein added in when money and pantry stock allow; she's been swapping white bread for whole wheat and cutting the sugary cereal since her diagnosis",
+  "food_preferences": [
+   "Loves spaghetti with butter and parmesan",
+   "Eggs any way, especially scrambled with hot sauce",
+   "Bananas and apples when they're on sale",
+   "Chicken thighs over breast because they're cheaper",
+   "Iced tea, usually sweetened"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How often she visits the Palisades Park food pantry and what she actually takes home versus what she wishes she could get",
+   "Portion sizes of pasta and rice at dinner",
+   "Whether she's skipping her own meals to make sure the baby's formula budget is covered",
+   "Late-night snacking pattern after the baby sleeps",
+   "Reliance on convenience foods like ramen or boxed mac and cheese toward the end of the month"
+  ],
+  "meal_pattern": "Breakfast is often skipped or just coffee with creamer; lunch is whatever's fastest between baby care; dinner is the real meal, usually a starchy base with a protein if she has one",
+  "hydration": "Mostly sweet tea and water; cut back on soda recently but still has one occasionally",
+  "physical_activity": "Walks the baby in a stroller most days, no structured exercise, says she's 'too wiped out' for anything else",
+  "substance_use": "Light alcohol use, a drink or two at a family gathering here and there; never smoked",
+  "sleep": "Fragmented, 4-6 hours interrupted by night feedings, naps when the baby naps if she can"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, chatty, eager to be liked and to be seen as doing well; brightens when praised",
+  "communication_style": "Talks in long looping stories — starts answering a question about breakfast and ends up telling you about her cousin's wedding — but will circle back if gently redirected",
+  "goals": [
+   "Get her blood sugar numbers back to normal before her next labs",
+   "Have more energy to keep up with the baby",
+   "Feel like a 'together' mom who has her health handled"
+  ],
+  "concerns": [
+   "Worried the prediabetes could turn into full diabetes like her aunt has",
+   "Scared of needing medication she can't afford",
+   "Anxious about not having anyone to watch the baby so she can rest or cook properly"
+  ],
+  "beliefs": [
+   "Reading enough online articles means she should already know what to do, so she feels embarrassed when she slips up",
+   "Thinks carbs are 'the enemy' now and sometimes cuts them too drastically before swinging back",
+   "Believes the food pantry food is 'not really healthy' so sometimes skips picking up what's available"
+  ],
+  "motivations": [
+   "Wants to be a strong, healthy example for her daughter",
+   "Scared straight by her aunt's diabetes complications",
+   "Liked the feeling of being complimented by the postnatal nurse for 'already making changes'"
+  ],
+  "fears": [
+   "Ending up on insulin or needing expensive medication",
+   "Not being able to afford healthy food even if she wanted it",
+   "Being judged as a bad mother for her diet or for using the food pantry"
+  ],
+  "barriers": [
+   "Very tight household income limits food choices",
+   "No reliable childcare or help, which eats into time and energy for cooking",
+   "Fragile new habits that haven't survived a hard week yet",
+   "Fatigue from interrupted sleep undermining motivation"
+  ],
+  "strengths": [
+   "Reads nutrition information online and can speak the language of carbs, fiber, glycemic index",
+   "Already made real changes in the last few weeks",
+   "Talkative and open, builds rapport easily",
+   "Genuinely wants to do right by her daughter"
+  ],
+  "support_system": "Lives with her mother and siblings but her mother works long shifts and can't help much with the baby or cooking; no partner support mentioned; very little day-to-day help",
+  "readiness_to_change": "Action stage — she's three to four weeks into real changes, proud of them, but admits (if asked kindly) that one bad week could knock it all over"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she was told she has prediabetes at her postnatal visit and it scared her",
+   "Says she's been reading a lot online about carbs and glycemic index",
+   "Mentions she switched to whole wheat bread and cut out her sugary cereal a few weeks ago",
+   "Talks about her six-month-old daughter and how tired she is"
+  ],
+  "discoverable_information": [
+   "Describes her actual meals in detail once asked directly, revealing heavy reliance on pasta and rice",
+   "Admits she skips breakfast most days",
+   "Mentions she sometimes uses the food pantry when asked about where she shops",
+   "Reveals she has very little help at home with her mother working long shifts"
+  ],
+  "reluctant_information": [
+   "Only admits when asked gently that she sometimes picks the cheapest option even when she knows it's not the best choice, like white rice instead of brown because it's a dollar cheaper",
+   "Reveals, if asked about her iron pills, that she doesn't always buy them that month because formula comes first",
+   "Shares that she feels embarrassed using the food pantry and sometimes tells people she 'just didn't need groceries that week' instead"
+  ],
+  "hidden_information": [
+   "Audrey has, twice in the past month, skipped her own dinner entirely so there would be enough food for her younger siblings and the baby's formula, something she has not told any provider",
+   "She has considered selling some of her unused prenatal vitamin samples or trading them with a friend for diapers, but is ashamed to bring this up"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice redirecting a warm, tangential storyteller back to focused nutrition assessment without shutting down rapport.",
+    "expected_discoveries": [
+     "Audrey's actual meal pattern and food sources once gently refocused",
+     "Her real barriers around time and fatigue"
+    ],
+    "possible_patient_reactions": [
+     "Launches into a story about her cousin's baby shower when asked about snacks",
+     "Laughs and says 'oh I'm doing it again, aren't I' when redirected",
+     "Comes back on topic easily if asked a warm, specific follow-up"
+    ]
+   },
+   {
+    "learning_objective": "Assess fragile new behavior changes and identify what could cause relapse.",
+    "expected_discoveries": [
+     "She's only three to four weeks into her changes",
+     "One hard week with the baby could derail her new habits",
+     "She feels shame rather than resilience when she slips"
+    ],
+    "possible_patient_reactions": [
+     "Admits proudly to her recent changes at first",
+     "Looks worried when asked what happens on a bad week",
+     "Opens up if reassured that slips are normal, not failure"
+    ]
+   },
+   {
+    "learning_objective": "Uncover food insecurity and budget constraints affecting food choices, using non-judgmental questions.",
+    "expected_discoveries": [
+     "She shops based on what's cheapest and filling",
+     "She uses a food pantry but feels embarrassed about it",
+     "She sometimes skips her own meals to stretch food for her siblings and baby"
+    ],
+    "possible_patient_reactions": [
+     "Deflects at first with a joke about 'budgeting like a pro'",
+     "Becomes quieter and more serious if asked directly and kindly about going without food",
+     "May tear up slightly when admitting she's skipped meals for her baby's sake"
+    ]
+   },
+   {
+    "learning_objective": "Explore and correct health literacy gaps despite her confidence from online reading.",
+    "expected_discoveries": [
+     "She has some accurate knowledge of carbs and glycemic index but overgeneralizes 'carbs are bad'",
+     "She sometimes swings between extremes (cutting too much, then overcorrecting)"
+    ],
+    "possible_patient_reactions": [
+     "Proudly cites something she read online, sometimes slightly wrong",
+     "Receptive to correction if framed as 'building on what you already know'",
+     "Mildly embarrassed if corrected bluntly"
+    ]
+   },
+   {
+    "learning_objective": "Identify practical, budget-conscious strategies that fit her real resources (pantry use, bulk staples, simple swaps).",
+    "expected_discoveries": [
+     "Specific affordable swaps she could make, like brown rice in bulk or beans instead of some meat",
+     "Her resistance to pantry food due to feeling it's 'not healthy'"
+    ],
+    "possible_patient_reactions": [
+     "Lights up at concrete, doable suggestions",
+     "Expresses doubt that healthy food can really fit her budget",
+     "Appreciates being told pantry staples like beans and canned vegetables are legitimate healthy choices"
+    ]
+   },
+   {
+    "learning_objective": "Assess support system and connect to resources (WIC, community health workers, childcare support) given her very limited day-to-day help.",
+    "expected_discoveries": [
+     "She has no reliable childcare or help cooking",
+     "She may be unaware of other benefit programs beyond Medicaid"
+    ],
+    "possible_patient_reactions": [
+     "Surprised and interested if told about additional resources",
+     "Slightly defensive if it feels like pity",
+     "Grateful if offered concretely and respectfully"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Audrey's household of four includes her mother, herself, a younger sibling, and her infant daughter",
+   "Her unemployment is tied to recent childbirth and lack of childcare rather than inability to work",
+   "Her high health literacy comes from self-directed online reading rather than formal nutrition education"
+  ],
+  "optional_details": [
+   "Keeps a secondhand baby stroller she's proud of getting for free from a neighbor",
+   "Follows a few nutrition and 'mom life' accounts on social media",
+   "Dreams of eventually finishing her college coursework in early childhood education"
+  ]
+ },
+ "source": {
+  "synthea_record": "342d9466",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "warm and talkative, likes to be liked",
+   "communication": "long stories that wander off the question",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+   "held_back": "money worries that affect which food or medicines they buy",
+   "support": "very little day-to-day support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

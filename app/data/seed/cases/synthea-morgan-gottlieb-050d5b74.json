@@ -1,0 +1,1020 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for Meal-Skipping and Late-Night Eating in a 69-Year-Old Man with Knee Osteoarthritis and Ischemic Heart Disease",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment with a stoic, under-reporting patient whose skip-then-binge eating pattern intersects with chronic pain, cardiac history, and a history of dependent drug abuse. It teaches gentle elicitation of hidden supplement/OTC use and pain-medication overuse without triggering shame, screening for food insecurity and transportation barriers, and negotiating one small, concrete behavior change consistent with his preparation stage of readiness. A deliberately irrelevant chart artifact (an implausible eGFR amid otherwise normal same-day renal labs) is included to build the skill of noticing documentation inconsistencies without being derailed by them.\"}",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Woodbury, New Jersey, seated at his kitchen table before an evening shift",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Morgan Gottlieb",
+   "age": 69,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Warehouse shipping clerk",
+   "language": "English",
+   "appearance": "Appears older than his stated age, sitting stiffly at a kitchen table in a worn work polo, visible chest scar at the open collar from prior bypass surgery; moves slowly and favors his right knee when he shifts in his chair; flat, matter-of-fact affect, gives short answers and often shrugs off discomfort.",
+   "portrait": "/portraits/synthea-morgan-gottlieb-050d5b74.jpg"
+  },
+  "persona": {
+   "personality": "Stoic, even-keeled, matter-of-fact; takes pride in toughing things out and showing up for work no matter what; doesn't like being fussed over or lectured",
+   "communicationStyle": "Speaks in short, plain sentences; frequently defers with phrases like 'whatever you think is best'; opens up more with direct, specific questions than open-ended ones; downplays pain and symptoms with a shrug",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Calm on the surface but quietly worried underneath — concerned about his knee threatening his job, uneasy about pain medication given his history, and tired of his kids' lectures even though he knows they mean well",
+   "background": "Morgan grew up working-class in South Jersey, finished high school, and went straight into physical labor jobs. He's been a warehouse shipping clerk for decades and measures himself by whether he can still show up for his shift. He's married with a household of five, including adult kids who check in often. On weekends when his knee cooperates, he likes sitting through a baseball game with his grandchildren. He keeps a lunch cooler in his truck that he almost never actually uses.",
+   "speechExamples": [
+    "It's fine. Just the knee acting up again, nothing new.",
+    "Whatever you think is best, I'll give it a shot.",
+    "I eat when I get home, whatever's there. Never really thought about it being a problem.",
+    "It's handled. I don't want to make a thing out of it.",
+    "My daughter gave it to me, figured it couldn't hurt."
+   ],
+   "concerns": [
+    "Worried the knee will get bad enough to cost him his job",
+    "Quietly worried about relying on pain medication again after his history",
+    "Money being tight for food and medical costs",
+    "Wishes his kids would ease up on the lectures, even though he knows they're trying to help"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit with Morgan Gottlieb, a 69-year-old warehouse shipping clerk in Woodbury, NJ. He was referred for help managing his eating pattern in the context of knee osteoarthritis and a history of ischemic heart disease with prior bypass surgery. He is at home at his kitchen table before an evening shift. Conduct a focused nutrition assessment, build rapport given his reserved style, and work toward one concrete, feasible next step.",
+   "chiefComplaint": "Here for help managing worsening right knee pain affecting his ability to keep up at his warehouse job",
+   "openingLine": "It's my knee, mostly. Been bothering me more at work lately. I had the heart surgery a few years back too, take pills for that, but it's really the knee that's slowing me down.",
+   "tasks": [
+    "Take a focused diet and meal-pattern history, including timing, portion, and composition of meals and fluid intake during work hours",
+    "Review relevant vitals, anthropometrics, and available labs to inform your nutrition assessment",
+    "Ask about all medications, supplements, and home remedies he uses, including ones he may not think to mention",
+    "Screen for food insecurity and barriers to accessing food (transportation, budget, schedule)",
+    "Negotiate one small, specific, and feasible change to his eating pattern that fits his daily routine and readiness to change"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Here for help managing worsening right knee pain affecting ability to keep up at warehouse job; referred for nutrition assessment."
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Woodbury Family Health. Orthopedics: Dr. R. Alvarez. Nutrition consult requested by orthopedics."
+   },
+   {
+    "label": "Problem list",
+    "value": "Impacted molars (since 1990); Chronic intractable migraine without aura (since 1990); Dependent drug abuse (since 1990); Osteoarthritis of knee (since 2000); Chronic pain (since 2014); Chronic low back pain (since 2014); Ischemic heart disease (since 2021); Abnormal findings diagnostic imaging heart+coronary circulat (since 2021); History of coronary artery bypass grafting (since 2021)"
+   },
+   {
+    "label": "Medications",
+    "value": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray; Naproxen sodium 220 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "knee pain",
+    "chart": "Reports worsening right knee pain affecting ability to keep up with warehouse job duties",
+    "says": "My knee's been giving me more trouble at work lately. That's really why I'm here.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "knee pain pattern",
+    "chart": "Right knee aching and stiffness, worse by evening, consistent with known osteoarthritis since 2000",
+    "says": "It aches and gets stiff, mostly by the end of the day. Been that way a long time now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "cardiac history",
+    "chart": "History of ischemic heart disease and coronary artery bypass grafting in 2021",
+    "says": "I had the bypass surgery back in '21. Heart's fixed now, mostly.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "eating schedule",
+    "chart": "Reports not eating much during the day due to work schedule",
+    "says": "I don't eat much during the day, the job doesn't really leave time for it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Reports occasional chest tightness that eases with rest or nitroglycerin spray",
+    "says": "Sometimes I get a little tightness in my chest, but it goes away if I sit a minute or use my spray.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "back pain",
+    "chart": "Reports chronic low back pain, longstanding, attributed to aging",
+    "says": "My back's been achy for years. That's just part of getting old, I figure.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "afternoon energy",
+    "chart": "Reports afternoon fatigue, attributes to not eating enough during the day",
+    "says": "By mid-afternoon I'm dragging. Probably 'cause I haven't eaten much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "lightheadedness",
+    "chart": "Reports occasional lightheadedness, attributes to his usual low blood pressure",
+    "says": "Every now and then I get a little dizzy standing up. My blood pressure runs low, always has.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "sleep comfort",
+    "chart": "Reports sleep as 'okay' but admits late heavy evening meal sometimes causes nighttime discomfort or restlessness",
+    "says": "Sleep's okay I guess. Sometimes after I eat that big meal late I feel kind of uncomfortable laying down.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "headache history",
+    "chart": "History of chronic intractable migraine without aura since 1990, not currently discussed as active complaint",
+    "says": "I've had bad headaches since way back, the '90s. Not here about that today though.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "swelling or edema",
+    "chart": "Denies leg or ankle swelling, denies shortness of breath at rest",
+    "says": "No swelling in my legs or anything like that, and I'm not short of breath just sitting around.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "gi symptoms",
+    "chart": "Denies nausea, vomiting, or abdominal pain",
+    "says": "No stomach problems, no throwing up or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "knee osteoarthritis",
+    "chart": "Osteoarthritis of right knee since 2000",
+    "says": "My knee's been bad since way back, 2000 or so.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "heart disease timeline",
+    "chart": "Ischemic heart disease and abnormal cardiac imaging findings since 2021, status post coronary artery bypass grafting",
+    "says": "Found out something was wrong with my heart in 2021, had the bypass done then.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "chronic pain history",
+    "chart": "Chronic pain and chronic low back pain since 2014",
+    "says": "I've had chronic pain, mostly my back, since around 2014.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "substance history",
+    "chart": "Dependent drug abuse since 1990, under active outpatient management, with documented overdoses in June 2023 and April 2024",
+    "says": "I've had trouble with pain pills going way back. I'm managing it now, seeing someone about it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of impacted molars since 1990",
+    "says": "I've had bad teeth issues, impacted molars, forever.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "bypass surgery",
+    "chart": "Status post coronary artery bypass grafting, 2021",
+    "says": "They did the bypass surgery on me in 2021.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "fracture history",
+    "chart": "History of clavicle fracture and bone fracture, February to May 2024, resolved, with orthopedic admission and imaging on 2024-02-28",
+    "says": "I broke my collarbone a couple years back, had to go to the hospital for it. All healed up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "heart medication routine",
+    "chart": "Reports taking clopidogrel 75mg once daily every morning without missed doses since bypass surgery",
+    "says": "I take that blood thinner every morning, never miss it. Part of the routine since the surgery.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "cholesterol medication",
+    "chart": "Reports taking simvastatin 20mg once daily in the evening, mostly consistent, occasionally missed if he eats very late and falls asleep",
+    "says": "I take a cholesterol pill at night, mostly don't forget it, unless I eat real late and just conk out.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "knee pain medication",
+    "chart": "Reports taking naproxen 220mg twice daily with food for knee osteoarthritis, fairly consistent, sometimes skips dose when he hasn't eaten",
+    "says": "I take a pill for my knee twice a day with food, but if I haven't eaten I'll skip it rather than take it on an empty stomach.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "strong pain medication use",
+    "chart": "Reports taking acetaminophen/hydrocodone combination tablets as needed for pain, says he tries to space doses out",
+    "says": "I take the stronger pain pill when my knee or back is really bad, I try to spread it out so I'm not taking too much.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies",
+    "says": "No, I'm not allergic to anything that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household setup",
+    "chart": "Lives with spouse and household of five total, including adult children",
+    "says": "It's me, my wife, and a couple of the kids still at home. Full house.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time as a warehouse shipping clerk; limited scheduled breaks",
+    "says": "I'm on my feet all shift at the warehouse. We don't get much of a break to sit down and eat.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "transportation access",
+    "chart": "Reports limited transportation affecting access to a full grocery store and some appointments/medication pickups",
+    "says": "Getting out to a real grocery store isn't always easy for us. We go to what's close by.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "nutrition",
+    "topic": "grocery resources",
+    "chart": "Reports relying on canned vegetables and convenience foods due to transportation barriers",
+    "says": "We mostly do canned stuff, it's just easier to get to and keeps longer.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "food budget",
+    "chart": "Household reports food insecurity in some months, tight budget for food and medical costs",
+    "says": "Some months it's tight. We make it work, but there's not a lot extra for food.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s6",
+    "category": "nutrition",
+    "topic": "unused lunch supplies",
+    "chart": "Keeps a lunch cooler in his truck that he rarely uses",
+    "says": "I've got a cooler in the truck. Mostly just sits there empty.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "family",
+    "topic": "family feedback on eating",
+    "chart": "Adult children frequently comment on his eating habits and health; patient tolerates but tunes it out",
+    "says": "My kids are always on me about eating better. I hear it, I just don't always listen.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "attitude toward lectures",
+    "chart": "Describes tolerating family's health-related comments without welcoming them",
+    "says": "They mean well. I've just heard it a hundred times already.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "approach to pain and work",
+    "chart": "States he pushes through pain to keep working rather than slow down",
+    "says": "You push through it if you want to keep your job. That's just how it is.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "goals",
+    "topic": "preferred type of change",
+    "chart": "Prefers one specific, concrete recommendation rather than a broad plan; defers to clinician",
+    "says": "Just tell me one thing to do and I'll try it. Whatever you think is best.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "goals",
+    "topic": "main motivation",
+    "chart": "States main goals are keeping his job, not burdening his adult children, and staying out of the hospital",
+    "says": "I just want to keep working and not end up back in the hospital. Don't want to be a burden on my kids either.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports drinking alcohol rarely, if at all",
+    "says": "I don't really drink. Maybe a beer once in a blue moon.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Ex-smoker",
+    "says": "I quit smoking years back.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "other",
+    "topic": "home remedy for joints",
+    "chart": "Reports using a store-bought menthol liniment on knee and back most nights, a habit learned from his father, not previously disclosed to care team",
+    "says": "I rub some of that menthol stuff on my knee and back most nights. My dad always used it, never thought to mention it, didn't seem like a real medicine.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "other",
+    "topic": "joint supplement use",
+    "chart": "Reports taking glucosamine chondroitin and turmeric capsules daily for his knee, not previously disclosed to care team",
+    "says": "A guy at work told me to try glucosamine and turmeric for my knee. I take those every day, didn't think it counted as a real medicine.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "other",
+    "topic": "cramp remedy",
+    "chart": "Reports taking a magnesium tablet given by his daughter for leg cramps, not previously disclosed to care team",
+    "says": "My daughter dropped off some magnesium pills for my leg cramps. I take one sometimes.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "psychosocial",
+    "topic": "relaxation activity",
+    "chart": "Reports enjoying watching baseball with grandchildren on weekends when knee allows sitting through a game",
+    "says": "When my knee lets me, I like sitting through a ballgame with my grandkids on the weekend.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s18",
+    "category": "function",
+    "topic": "evening comfort after meals",
+    "chart": "Reports occasional discomfort and restless sleep after his late large evening meal",
+    "says": "Sometimes after that big plate at night I don't settle down easy, feel kind of uncomfortable in bed.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour diet recall / meal pattern assessment",
+    "aliases": [],
+    "result": "Patient reports: black coffee x2-3 in the morning, no breakfast; usually skips lunch or has vending machine snack (chips or crackers) during shift; one large meal late evening after work, typically a meat-and-starch plate (e.g., meatloaf and mashed potatoes, or fried chicken from gas station) with buttered white bread and canned vegetables; limited water intake during work hours, more water in evening with meal.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Nutrition-focused physical exam (via video)",
+    "aliases": [],
+    "result": "Appears older than stated age; sits stiffly, favors right knee when shifting position. Visible well-healed midline chest scar consistent with prior CABG. No visible muscle wasting of face/temples or hand interossei. No peripheral edema visualized. Oral mucosa appears intact on camera; patient reports no chewing difficulty with current diet.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review problem list / medical history",
+    "aliases": [],
+    "result": "Osteoarthritis of knee (2000); chronic low back pain (2014); chronic intractable migraine without aura (1990); impacted molars (1990); dependent drug abuse (1990, active management); ischemic heart disease (2021); history of CABG (2021); abnormal cardiac imaging finding (2021); overdose episodes 2023-06 and 2024-04 (resolved); clavicle/bone fracture 2024-02 to 2024-05 (resolved).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Food security screen (Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient endorses: 'Within the past 12 months we worried whether our food would run out before we got money to buy more' as sometimes true. Household reports some months are tight; relies on nearby convenience/canned foods.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage assessment",
+    "aliases": [],
+    "result": "Patient states he knows something needs to change and is looking for one specific, doable step rather than a full overhaul; defers preferences with phrases like 'whatever you think is best.' Consistent with preparation stage of change.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Barriers assessment (transportation, access, work schedule)",
+    "aliases": [],
+    "result": "Patient reports limited transportation to a full grocery store, relies on what's close (convenience store, gas station food); warehouse job gives little break time, discouraging regular meals; keeps a lunch cooler in his truck he rarely uses.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Hydration assessment",
+    "aliases": [],
+    "result": "Patient reports mostly coffee during work hours, minimal water during shifts, more water in the evening with his meal. No reported dizziness tied specifically to fluid intake beyond occasional lightheadedness he attributes to 'low blood pressure, nothing new.'",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Pain and function screen (self-reported, knee-related)",
+    "aliases": [],
+    "result": "Patient reports right knee aching and stiffness worse by evening, mild swelling noted on self-observation; describes low back pain as 'just part of getting old'; rates pain as manageable most days, 'nothing I can't work through.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 110/51 mmHg, heart rate 92/min, respiratory rate 15/min, weight 77.8 kg, height 169.4 cm, BMI 27.1 kg/m2 (recorded 2026-08-07).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.4 %; Glucose 77.1 mg/dL; eGFR 5.7 mL/min/1.73m2; Total cholesterol 126.6 mg/dL; LDL cholesterol 41.8 mg/dL; HDL cholesterol 56.5 mg/dL; Triglycerides 141.7 mg/dL; Haemoglobin 16 g/dL; White cell count 6.7 10*3/uL; Platelets 252.3 10*3/uL; Potassium 4.8 mmol/L; Sodium 142.7 mmol/L; Urea nitrogen 9.6 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-08-07); pneumococcal polysaccharide vaccine 23 valent (2023-07-21); Pneumococcal conjugate PCV 13 (2022-07-15); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-05-07); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2018-06-22).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Orthopedic Referral Note for Nutrition Consult",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-07-30",
+    "author": "Dr. R. Alvarez, Orthopedics",
+    "body": "69-year-old male with longstanding right knee osteoarthritis, now reporting increased difficulty keeping up with physical demands of warehouse job. Patient also carries history of ischemic heart disease status post CABG (2021). Referring to nutrition for assessment of dietary pattern and weight management given overweight BMI, with goal of supporting joint health and overall cardiometabolic status. Patient has been reluctant to discuss pain medication use in detail during visits; recommend gentle, nonjudgmental approach given history of dependent drug abuse."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Social Determinants of Health Screening Survey",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-07-15",
+    "author": "Woodbury Family Health (intake coordinator)",
+    "body": "Household screening survey completed by patient prior to visit. In response to the Hunger Vital Sign screening item 'Within the past 12 months, we worried whether our food would run out before we got money to buy more,' patient marked 'sometimes true.' In response to transportation screening item 'In the past 12 months, has lack of transportation kept you from medical appointments, meetings, work, or getting things needed for daily living?' patient marked 'yes, it has kept me from getting food or other necessities.'"
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Pharmacy Refill History - Acetaminophen/Hydrocodone",
+    "release": {
+     "when": "start"
+    },
+    "date": "Last 90 days",
+    "author": "Woodbury Pharmacy Services",
+    "body": "Prescription: Acetaminophen 300mg/Hydrocodone 5mg tablets, quantity 60 per fill, directions 'take 1 tablet every 6-8 hours as needed for pain' (expected to last approximately 30-40 days at prescribed as-needed dosing). Refill log shows fills requested at 22-day and 19-day intervals over the last two refill cycles, both approved with prescriber override for early refill citing 'breakthrough pain.' No refill delays or missed pickups recorded."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nImpacted molars (since 1990)\nChronic intractable migraine without aura (since 1990)\nDependent drug abuse (since 1990)\nOsteoarthritis of knee (since 2000)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nIschemic heart disease (since 2021)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2021)\nHistory of coronary artery bypass grafting (since 2021)\n\nRECENTLY RESOLVED\nOverdose (2023-06 to 2023-06)\nAcute viral pharyngitis (2023-12 to 2023-12)\nFracture of bone (2024-02 to 2024-05)\nFracture of clavicle (2024-02 to 2024-05)\nOverdose (2024-04 to 2024-04)\n\nPROCEDURES\n2026-10-09: Rehabilitation therapy (Dependent drug abuse)\n2024-02-28: Bone density scan (Fracture of clavicle)\n2024-02-28: Plain X-ray of clavicle\n2024-02-28: Admission to orthopedic department (Fracture of clavicle)\n2023-08-04: Examination of gingivae (Patient referral for dental care)\n2023-08-04: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-10-09 ambulatory: Encounter for problem (Dependent drug abuse)\n2026-09-09 ambulatory: Encounter for problem (Dependent drug abuse)\n2026-08-10 ambulatory: Encounter for problem (Dependent drug abuse)\n2026-08-07 wellness: General examination of patient\n2026-07-11 ambulatory: Encounter for problem (Dependent drug abuse)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Care plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+        "2026-08",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2021-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2021-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2021-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2021-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Naproxen sodium 220 MG Oral Tablet",
+        "2000-04",
+        "Osteoarthritis of knee"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.4",
+        "%",
+        "< 5.7",
+        "2021-08-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "77.1",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2021-08-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "5.7",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2021-08-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "126.6",
+        "mg/dL",
+        "< 200",
+        "2025-08-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "41.8",
+        "mg/dL",
+        "< 100",
+        "2025-08-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "56.5",
+        "mg/dL",
+        ">= 40",
+        "2025-08-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "141.7",
+        "mg/dL",
+        "< 150",
+        "2025-08-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "16",
+        "g/dL",
+        "12.0-17.5",
+        "2024-07-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-07-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "252.3",
+        "10*3/uL",
+        "150-450",
+        "2024-07-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.8",
+        "mmol/L",
+        "3.5-5.1",
+        "2021-08-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "142.7",
+        "mmol/L",
+        "135-145",
+        "2021-08-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "9.6",
+        "mg/dL",
+        "7-20",
+        "2021-08-20"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a complete diet and meal-timing history, including fasting during the day and a large late-night meal, and link this pattern to reported fatigue and nighttime discomfort",
+    "factIds": [
+     "h4",
+     "h7",
+     "h9",
+     "s18"
+    ],
+    "actionIds": [
+     "a1",
+     "a13"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Integrate anthropometric data and relevant laboratory results, including recognizing an internally inconsistent eGFR value, into the nutrition assessment",
+    "factIds": [
+     "h3",
+     "h14"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Build sufficient rapport to uncover supplement, herbal, and topical remedy use that the patient does not initially consider part of his medication regimen",
+    "factIds": [
+     "s14",
+     "s15",
+     "s16"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o4",
+    "text": "Sensitively explore pain medication use and its relationship to eating patterns and appetite, given the patient's history of dependent drug abuse, without provoking shame or defensiveness",
+    "factIds": [
+     "h16",
+     "h22",
+     "h23"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Screen for food insecurity and transportation/access barriers and connect findings to his reliance on convenience and canned foods",
+    "factIds": [
+     "s3",
+     "s4",
+     "s5"
+    ],
+    "actionIds": [
+     "a10",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Negotiate one small, concrete, feasible change to his eating pattern that matches his preparation-stage readiness and his preference for direct recommendations",
+    "factIds": [
+     "s9",
+     "s10",
+     "s11"
+    ],
+    "actionIds": [
+     "a11",
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Altered eating/meal pattern (inadequate energy/nutrient intake pattern) related to work-schedule constraints and chronic pain, evidenced by skipping breakfast and lunch and consuming one large, calorie-dense meal late at night",
+   "differential": [
+    "Normal variant of shift-work eating pattern without clinical significance",
+    "Appetite suppression from opioid/NSAID use rather than schedule alone",
+    "Early satiety or GI discomfort from late large meals mimicking a separate GI disorder",
+    "Food insecurity as primary driver rather than schedule/preference"
+   ],
+   "keyFindings": [
+    "BMI 27.1 kg/m2 (overweight) with weight 77.8 kg, height 169.4 cm",
+    "Reports skipping breakfast and usually lunch, then one large late-night meal (meatloaf and mashed potatoes, gas-station fried chicken, buttered white bread, canned vegetables)",
+    "Low fluid intake during work shifts, mostly coffee during the day",
+    "Afternoon fatigue attributed to not eating during the day",
+    "Late heavy meals associated with nighttime discomfort/restless sleep",
+    "Reports pain medication use as 'handled' and spaced out, but on direct nonjudgmental questioning admits sometimes taking more acetaminophen/hydrocodone than planned on bad pain days",
+    "Discloses, once trust is built, daily unlisted use of glucosamine chondroitin and turmeric capsules, an occasional magnesium tablet from his daughter, and nightly menthol liniment — none previously on his medication list",
+    "Reports household food insecurity in tight months and transportation barriers limiting access to a full grocery store",
+    "Chart shows an eGFR of 5.7 mL/min/1.73m2 (2021-08-20) that is inconsistent with the same-day normal BUN 9.6 mg/dL, sodium 142.7 mmol/L, and potassium 4.8 mmol/L, and with his ambulatory, non-dialysis clinical picture",
+    "Lipid panel (2025-08-01) and HbA1c (2021-08-08) are at goal, so cardiometabolic labs do not explain his fatigue or weight pattern",
+    "Readiness to change: preparation stage, wants one small concrete step and defers with 'whatever you think is best'"
+   ],
+   "plan": [
+    "Document findings in ADIME format: Assessment of current meal pattern, anthropometrics, labs, barriers, and medication/supplement use; Diagnosis statement on altered eating pattern related to schedule and chronic pain barriers as evidenced by meal timing and composition; Intervention of patient-centered education and negotiated behavior change; Monitoring/Evaluation plan for follow-up",
+    "Negotiate one small, concrete, feasible first step consistent with preparation stage (e.g., a packed protein-containing mid-shift snack or lunch using his truck cooler) rather than a full diet overhaul",
+    "Review medication list and reconcile with patient-reported pain medication use and newly disclosed supplements (glucosamine chondroitin, turmeric, magnesium, menthol liniment) for communication back to the prescribing team",
+    "Screen for food insecurity and transportation barriers and connect to appropriate community resources (e.g., food assistance programs, transportation support) within scope of a telehealth nutrition visit",
+    "Gently flag the pain medication use pattern and his fear of relapse to the care team for follow-up, without delivering a diagnosis or judgment during this visit",
+    "Note the eGFR/BUN discrepancy for the medical record so it can be addressed or corrected by the ordering clinician; this is not the focus of nutrition counseling",
+    "Schedule a follow-up visit to reassess adherence to the agreed-upon small change and revisit meal pattern and supplement disclosure"
+   ],
+   "redFlags": [
+    "Chest tightness relieved by nitroglycerin spray, with possible underreporting of true frequency of use — warrants communication to his cardiology/primary team rather than management within the nutrition visit",
+    "Self-reported occasional overuse of prescribed acetaminophen/hydrocodone beyond planned dosing, in a patient with a history of dependent drug abuse and prior overdoses — requires sensitive follow-up and care-team communication",
+    "Household food insecurity reported in tight months, affecting both nutrition and medication adherence",
+    "Undisclosed eGFR of 5.7 mL/min/1.73m2 in the chart that is physiologically inconsistent with same-day normal renal/electrolyte labs and his clinical presentation; should be flagged for clarification rather than acted upon as a true critical renal value"
+   ],
+   "educationPoints": [
+    "Explain how prolonged daytime fasting followed by a large late meal can contribute to afternoon fatigue, nighttime discomfort, and difficulty maintaining steady energy for his work shift",
+    "Clarify that over-the-counter supplements, herbal capsules, and topical rubs can interact with prescribed medications or mask symptoms, so all products should be shared with his care team even if they feel 'natural'",
+    "Normalize that taking a bit more pain medication on a bad day is common but worth mentioning to his prescriber given his history, framed without judgment to reduce shame and encourage disclosure",
+    "Offer a concrete example of a portable, inexpensive mid-shift snack or lunch (e.g., using his existing truck cooler) that fits his schedule and budget rather than suggesting a full dietary overhaul",
+    "Reassure him that one small, specific change is a reasonable and valid starting point consistent with where he is in his readiness to change",
+    "Provide practical, low-cost ideas for improving fluid intake during work shifts given his reliance on coffee and limited breaks"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking acetaminophen/hydrocodone as needed for pain, saying he tries to space doses out and that it's 'handled'",
+    "recordEvidence": "Pharmacy refill history shows refills being requested earlier than the prescribed schedule would allow",
+    "teachingPoint": "Self-reported adherence can under-represent actual use; refill timing is an objective check on reported pain-medication intake, especially important given his history of dependent drug abuse",
+    "factId": "h23",
+    "artifactId": "d6"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "States his weight has been 'about the same' for a while",
+    "recordEvidence": "Weight trend record shows a measurable increase from a prior documented weight to the current 77.8 kg",
+    "teachingPoint": "Patients may not perceive gradual weight changes, especially with an altered meal pattern (skipping meals then eating one large late meal); objective weight trend data should be used to verify self-reported stability"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 3,
+   "condition": "History of coronary artery bypass grafting",
+   "conditionLabel": "69 M · History of coronary artery bypass grafting, Ischemic heart disease, Chronic low back pain +5 · 6 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "050d5b74",
+   "fingerprint": "1gzc3v8"
+  }
+ }
+}
