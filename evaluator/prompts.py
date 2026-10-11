@@ -39,7 +39,7 @@ Every score and every claim about what the student did must point at the moment 
 
 Voice
 
-Write feedback to the student as "you". Be concrete about what they did and what to try instead, and be kind about it: this is practice. No scolding, no generic advice that could apply to any encounter.
+Write all feedback in the third person, about "the student" (never "you" or "your"): the same text is read by the student and by their instructor. Debrief questions are the one exception, because they are put to the student directly. Be concrete about what they did and what to try instead, and be kind about it: this is practice. No scolding, no generic advice that could apply to any encounter.
 
 Debrief questions
 
