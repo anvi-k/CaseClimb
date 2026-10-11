@@ -18,6 +18,10 @@ export interface SyntheaRecord {
   ethnicity: string;
   marital: string;
   city: string;
+  /** Which kind of nutrition-relevant condition got the record selected. */
+  group?: string;
+  /** Answers to Synthea's social-needs survey and screening questionnaires. */
+  survey?: Record<string, string>;
   problems: { name: string; since: string }[];
   past: { name: string; from: string; to: string }[];
   medications: { name: string; started: string; reason: string }[];
@@ -52,6 +56,7 @@ const vitalsText = (r: SyntheaRecord) => {
     v.weight_kg ? `weight ${v.weight_kg} kg` : "",
     v.height_cm ? `height ${v.height_cm} cm` : "",
     v.bmi ? `BMI ${v.bmi} kg/m2` : "",
+    v.weight_change ? `weight change ${v.weight_change}` : "",
   ]
     .filter(Boolean)
     .join(", ");
@@ -73,6 +78,7 @@ Most recent vital signs (${r.vitals.recorded || "date not recorded"}): ${vitalsT
 Most recent laboratory results:
 ${list(r.labs.map((l) => `${l.test} ${l.value} ${l.units} (${l.date})`))}
 Smoking status: ${r.smoking || "not recorded"}
+Social survey and screening answers: ${Object.entries(r.survey || {}).map(([k, v]) => `${k.replace(/_/g, " ")}: ${v}`).join("; ") || "none recorded"}
 Social and other findings on record:
 ${list(r.social)}
 Recent encounters:

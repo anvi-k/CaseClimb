@@ -84,18 +84,46 @@ after the model has drafted the rest, and both are recorded on the case as `data
 
 [Synthea](https://github.com/synthetichealth/synthea) builds synthetic patient histories from
 published disease statistics and care guidelines, with no language model. `data/synthea/records.json`
-holds 120 adult records generated with it.
+holds 100 adult records generated with it, chosen for conditions a nutrition visit can work with
+(diabetes, prediabetes, hypertension, lipids, heart and kidney disease, weight, bone, anemia) and
+spread across sexes and age bands.
 
-- Taken from the record: name, age, sex, problem list, recent history, medications, allergies,
-  vital signs, laboratory results, immunisations. They become the chart summary, the documents
-  "Problem list and history", "Medication list" and "Laboratory results", and the actions "Vital
-  signs", "Recent laboratory results" and "Immunisation record" (`src/lib/synthea.ts`).
-- Written by the model: the reason for today's visit, personality, how the patient talks, what they
-  hold back, mismatches, objectives and the answer key.
-- The consistency check raises a high-severity issue if anything taken from the record is edited.
+**One patient at a time.** In **New patient**, pick a record under **Clinical data source**.
+
+**A whole library.** `scripts/synthea-patients.ts` turns the records into library patients in two
+resumable stages:
+
+1. *Profiles.* For each record, code fills the fields the record supplies (identity, demographics,
+   diagnoses, history, allergies, labs, vital signs, measurements, medication names and doses), and
+   the model fills the rest in the organisers' sample format: nutrition, psychosocial, information
+   disclosure, learning opportunities, plus symptoms, exam findings and how each medicine is taken.
+   Variety is not left to the model: `traitsFor()` in `src/lib/syntheaProfiles.ts` assigns each
+   patient a personality, way of talking, readiness to change, health literacy, eating pattern,
+   held-back topic and support system, cycling through the options so each is used about equally
+   and no two patients share a combination. Two of the organisers' sample profiles are shown to the
+   model as format examples when `data/private/sample_patients.json` is present. Output:
+   `data/synthea/profiles/<id>.json` and `data/synthea/profiles.json`, each profile with a `source`
+   section saying which fields came from Synthea and which from the model.
+2. *Cases.* Each profile goes through the app's own case generator, then the record is written into
+   the case by code (`applySynthea`). Output: `data/seed/cases/synthea-<name>-<id>.json`, loaded
+   into the library on the next start, labelled AI-drafted and unreviewed, for the dietetics role.
+
+```
+npx tsx --env-file=.env.local scripts/synthea-patients.ts all 2      # try two first
+npx tsx --env-file=.env.local scripts/synthea-patients.ts all        # the rest; safe to re-run
+```
+
+What comes from where in a finished patient:
+
+- From the record, written by code: name, age, sex, problem list, recent history, medications,
+  allergies, vital signs, laboratory results, immunisations. They are the chart summary, the
+  documents "Problem list and history", "Medication list" and "Laboratory results", and the actions
+  "Vital signs", "Recent laboratory results" and "Immunisation record" (`src/lib/synthea.ts`).
+- From the model: everything else. The consistency check raises a high-severity issue if anything
+  taken from the record is edited, but it does not check the model's text against the record.
 - Synthea gives no reference ranges; the ones shown are standard adult ranges added by
   `scripts/synthea_records.py`. Records are plausible, not clinically curated: a problem list can
-  disagree with the latest numbers (for example "obesity" beside a BMI under 30).
+  disagree with the latest numbers (for example type 2 diabetes on insulin beside an HbA1c of 4%).
 - To rebuild the records: download `synthea-with-dependencies.jar` from Synthea's releases, run the
   command in the header of `scripts/synthea_records.py`, then run that script.
 
