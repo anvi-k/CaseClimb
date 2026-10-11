@@ -1,0 +1,366 @@
+{
+ "patient_overview": {
+  "name": "Morgan Gottlieb",
+  "age": 69,
+  "sex": "Male",
+  "description": "Morgan Gottlieb is a 69-year-old man living in Woodbury, New Jersey, with a household of five, who comes in for help managing knee osteoarthritis pain alongside his history of heart disease and bypass surgery. He is quiet and matter-of-fact, tends to minimize his pain and symptoms, and often answers questions with 'whatever you think is best' rather than offering his own preferences. He works full-time despite his knee pain and a long-standing struggle with opioid dependence, and he is motivated to take one clear, concrete step rather than overhaul his whole life at once.",
+  "keywords": [
+   "osteoarthritis",
+   "ischemic heart disease",
+   "opioid dependence",
+   "meal skipping",
+   "late-night eating",
+   "moderate health literacy",
+   "stoic personality",
+   "preparation stage",
+   "food insecurity",
+   "transportation barriers"
+  ]
+ },
+ "demographics": {
+  "occupation": "Warehouse shipping clerk",
+  "residence": "Woodbury, New Jersey; household of 5",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Not recorded",
+  "cultural_context": "Morgan grew up working-class in South Jersey and has always measured himself by whether he can still show up for his shift. He left school after high school and went straight into physical labor jobs, which shaped a 'tough it out' attitude toward pain and illness. Food in his house was always simple and filling rather than planned around health, and that habit has stuck with him into his later years, especially now that money is tight and getting to appointments or the store isn't always easy."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Osteoarthritis of knee",
+  "secondary_diagnoses": [
+   "Impacted molars",
+   "Chronic intractable migraine without aura",
+   "Dependent drug abuse",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Ischemic heart disease",
+   "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "History of coronary artery bypass grafting"
+  ],
+  "medical_history": [
+   "Impacted molars since 1990",
+   "Chronic intractable migraine without aura since 1990",
+   "Dependent drug abuse since 1990",
+   "Osteoarthritis of knee since 2000",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Ischemic heart disease since 2021",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2021",
+   "History of coronary artery bypass grafting since 2021",
+   "Overdose (2023-06 to 2023-06, resolved)",
+   "Acute viral pharyngitis (2023-12 to 2023-12, resolved)",
+   "Fracture of bone (2024-02 to 2024-05, resolved)",
+   "Fracture of clavicle (2024-02 to 2024-05, resolved)",
+   "Overdose (2024-04 to 2024-04, resolved)",
+   "Rehabilitation therapy (2026-10-09)",
+   "Bone density scan (2024-02-28)",
+   "Plain X-ray of clavicle (2024-02-28)",
+   "Admission to orthopedic department (2024-02-28)",
+   "Examination of gingivae (2023-08-04)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2023-08-04)"
+  ],
+  "current_symptoms": [
+   "Aching and stiffness in the right knee that is worse by evening",
+   "Occasional chest tightness that eases with rest or his spray",
+   "Low back pain that he describes as 'just part of getting old'",
+   "Fatigue in the afternoon that he attributes to not eating enough during the day",
+   "Occasional lightheadedness he brushes off as 'low blood pressure, nothing new'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears older than stated age, with slow, careful movements favoring the right knee when he stands up from a chair",
+   "Visible scar line on the chest consistent with prior bypass surgery",
+   "Mild swelling and crepitus noted around the right knee on observation",
+   "Flat, understated affect when describing pain; downplays discomfort with a shrug"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.4 % (reference < 5.7; 2021-08-08)",
+   "Glucose: 77.1 mg/dL (reference 70-99 (fasting); 2021-08-20)",
+   "eGFR: 5.7 mL/min/1.73m2 (reference >= 90; 2021-08-20)",
+   "Total cholesterol: 126.6 mg/dL (reference < 200; 2025-08-01)",
+   "LDL cholesterol: 41.8 mg/dL (reference < 100; 2025-08-01)",
+   "HDL cholesterol: 56.5 mg/dL (reference >= 40; 2025-08-01)",
+   "Triglycerides: 141.7 mg/dL (reference < 150; 2025-08-01)",
+   "Haemoglobin: 16 g/dL (reference 12.0-17.5; 2024-07-26)",
+   "White cell count: 6.7 10*3/uL (reference 4.0-11.0; 2024-07-26)",
+   "Platelets: 252.3 10*3/uL (reference 150-450; 2024-07-26)",
+   "Potassium: 4.8 mmol/L (reference 3.5-5.1; 2021-08-20)",
+   "Sodium: 142.7 mmol/L (reference 135-145; 2021-08-20)",
+   "Urea nitrogen: 9.6 mg/dL (reference 7-20; 2021-08-20)"
+  ],
+  "vital_signs": [
+   "BP: 110/51 mmHg",
+   "HR: 92 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-08-07"
+  ],
+  "anthropometrics": [
+   "Height: 169.4 cm",
+   "Weight: 77.8 kg",
+   "BMI: 27.1 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "dose": "300 MG",
+    "frequency": "As needed for pain, per patient report",
+    "purpose": "Not recorded",
+    "adherence": "Takes it when the knee or back pain is bad, tries to space it out because he worries about taking too much",
+    "patient_concerns": "Doesn't like being on it long-term given his past with drug dependence, feels uneasy discussing it and tends to say 'it's handled'"
+   },
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it every morning without fail, says it's 'part of the routine' since his bypass",
+    "patient_concerns": "No real complaints; sees it as non-negotiable after his heart surgery"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent, occasionally forgets if he eats very late and falls asleep",
+    "patient_concerns": "Not worried about it, says his cholesterol numbers are good so 'it must be working'"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it regularly, has learned to take it with food after some early stomach upset",
+    "patient_concerns": "Mentions feeling tired some afternoons but isn't sure if it's the medication or just his schedule"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest tightness",
+    "purpose": "Not recorded",
+    "adherence": "Carries it with him, uses it rarely and often downplays how often he actually needs it",
+    "patient_concerns": "Reluctant to admit how often he reaches for it, doesn't want to 'make a big deal' out of chest symptoms"
+   },
+   {
+    "name": "Naproxen sodium 220 MG Oral Tablet",
+    "dose": "220 MG",
+    "frequency": "Twice daily with food",
+    "purpose": "Osteoarthritis of knee",
+    "adherence": "Takes it fairly consistently for knee pain, sometimes skips if he's forgotten to eat and doesn't want it on an empty stomach",
+    "patient_concerns": "Vague worry about it affecting his stomach or heart but doesn't bring it up unless asked directly"
+   }
+  ],
+  "supplements_and_otc": [
+   "Glucosamine chondroitin capsules a coworker recommended for his knee",
+   "Turmeric capsules he buys at the pharmacy counter",
+   "A topical menthol rub he uses at night on his knee and back",
+   "Occasional magnesium tablets his daughter dropped off 'for cramps'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Skips breakfast and often lunch due to work schedule and low appetite during the day, then eats one large meal late at night after getting home, typically something heavy like a meat-and-starch plate or leftovers reheated",
+  "food_preferences": [
+   "Meatloaf and mashed potatoes",
+   "Fried chicken from the gas station near work",
+   "Buttered white bread",
+   "Canned vegetables rather than fresh, mostly for convenience"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Going most of the day without eating then eating a very large portion right before bed",
+   "Reliance on convenience and canned foods due to limited transportation to a full grocery store",
+   "Possible use of home remedies or supplements alongside prescribed medications",
+   "Low fluid intake during work hours"
+  ],
+  "meal_pattern": "Essentially one large meal a day, eaten late in the evening; coffee in the morning but no real breakfast; lunch is frequently skipped or replaced by a snack from a vending machine",
+  "hydration": "Mostly coffee during the day, water in the evening with his big meal; doesn't drink much during work shifts",
+  "physical_activity": "On his feet for shifts at the warehouse but limited by knee pain; no structured exercise; avoids stairs when he can",
+  "substance_use": "Ex-smoker; history of dependent drug abuse under active management; drinks alcohol rarely if at all",
+  "sleep": "Reports sleep is 'okay' but admits the late heavy meal sometimes leaves him uncomfortable or restless at night"
+ },
+ "psychosocial_profile": {
+  "personality": "Stoic, even-keeled, tends to minimize pain and health problems; doesn't like to be fussed over",
+  "communication_style": "Brief, defers often with phrases like 'whatever you think is best'; needs direct, specific questions to open up rather than open-ended ones",
+  "goals": [
+   "Wants one clear, manageable change he can actually stick to",
+   "Wants to keep working without the knee pain getting worse",
+   "Wants to avoid another hospital visit tied to his heart"
+  ],
+  "concerns": [
+   "Worried that his knee will get bad enough to threaten his job",
+   "Quietly worried about relying on pain medication again",
+   "Concerned about money being tight for food and medical costs"
+  ],
+  "beliefs": [
+   "Believes pain is just something you push through if you want to keep working",
+   "Thinks supplements and home remedies are 'natural' and therefore separate from his real medications",
+   "Believes his heart is 'fixed' since the bypass and doesn't need much more attention"
+  ],
+  "motivations": [
+   "Keeping his job and providing for the household",
+   "Avoiding becoming a burden on his adult children",
+   "Staying out of the hospital"
+  ],
+  "fears": [
+   "Fear of becoming dependent on pain medication again",
+   "Fear of losing his ability to work",
+   "Fear of his children's lectures turning into real worry or anger"
+  ],
+  "barriers": [
+   "Limited transportation making it hard to get to appointments or a good grocery store",
+   "Tight household budget with food insecurity reported",
+   "Work schedule that discourages regular meals",
+   "Reluctance to disclose supplement use or how much pain medication he actually takes"
+  ],
+  "strengths": [
+   "Reliable and disciplined about showing up for work and taking his heart medications",
+   "Open to a single concrete action step",
+   "Has family nearby, even if their approach grates on him"
+  ],
+  "support_system": "Married, lives with a household of five including adult children who check in often but tend to lecture him about his health, which he tolerates quietly rather than welcomes",
+  "readiness_to_change": "Preparation stage: he has already decided something needs to change and is looking for one specific, doable first step rather than a broad overhaul"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he's here about his knee because it's been bothering him more at work",
+   "Mentions he had bypass surgery a few years back and takes medication for his heart",
+   "Says he doesn't eat much during the day because of his schedule"
+  ],
+  "discoverable_information": [
+   "Describes eating one very large meal late at night after his shift",
+   "Admits he skips lunch most days because the warehouse doesn't give much break time",
+   "Mentions his adult children often tell him he needs to eat better or slow down",
+   "Reports going without enough food some months due to tight finances"
+  ],
+  "reluctant_information": [
+   "Admits, when asked gently about pain management, that he sometimes takes more of his prescribed pain pills than planned on bad days",
+   "Acknowledges some worry about depending on pain medication again given his history"
+  ],
+  "hidden_information": [
+   "Has been taking glucosamine chondroitin and turmeric capsules daily for his knee that he never mentioned to his care team",
+   "Uses a magnesium supplement his daughter gave him for leg cramps without telling his doctor",
+   "Rubs a store-bought menthol liniment on his knee and back most nights, a habit from his father he's never brought up at appointments"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full picture of meal timing and its link to knee pain, energy, and heart health using open but specific questions.",
+    "expected_discoveries": [
+     "Patient skips breakfast and lunch, eats one large late meal",
+     "Late heavy meals may contribute to discomfort and poor sleep",
+     "Work schedule is the main driver of the pattern"
+    ],
+    "possible_patient_reactions": [
+     "'I just eat when I get home, whatever's there.'",
+     "'Never really thought about it being a problem, it's just how my day goes.'"
+    ]
+   },
+   {
+    "learning_objective": "Build enough trust to uncover undisclosed supplement and home remedy use.",
+    "expected_discoveries": [
+     "Daily glucosamine chondroitin and turmeric capsule use",
+     "Magnesium tablets from his daughter",
+     "Nightly menthol rub routine"
+    ],
+    "possible_patient_reactions": [
+     "'Didn't think that counted as a medicine, so I didn't mention it.'",
+     "'My daughter gave it to me, figured it couldn't hurt.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore pain medication use carefully given his history of dependent drug abuse without triggering defensiveness.",
+    "expected_discoveries": [
+     "Occasional overuse of prescribed acetaminophen/hydrocodone on bad pain days",
+     "Underlying fear of relapse into dependence",
+     "Reluctance to bring up pain levels because he minimizes them"
+    ],
+    "possible_patient_reactions": [
+     "'It's handled, I don't want to make a thing of it.'",
+     "'I take a little extra sometimes, but I'm careful, I promise.'"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate one small, concrete first step consistent with his preparation stage of readiness.",
+    "expected_discoveries": [
+     "Patient is receptive to a single specific change rather than a full diet overhaul",
+     "He prefers structure handed to him rather than open brainstorming",
+     "A simple idea like a packed lunch or a mid-shift snack could fit his routine"
+    ],
+    "possible_patient_reactions": [
+     "'Just tell me what to do and I'll try it.'",
+     "'Whatever you think is best, I'll give it a shot.'"
+    ]
+   },
+   {
+    "learning_objective": "Address food insecurity and transportation barriers affecting his nutrition.",
+    "expected_discoveries": [
+     "Household went without enough food at times",
+     "Transportation issues have caused missed appointments and medication pickups",
+     "Reliance on nearby convenience foods due to limited grocery access"
+    ],
+    "possible_patient_reactions": [
+     "'Some months it's tight, we make it work.'",
+     "'Getting to the store isn't always easy, so we get what's close.'"
+    ]
+   },
+   {
+    "learning_objective": "Recognize family dynamics and how well-meaning lectures from adult children affect his engagement with care.",
+    "expected_discoveries": [
+     "Children frequently comment on his eating and health habits",
+     "He tunes out lectures but may be more receptive to practical, non-judgmental suggestions",
+     "Possible opportunity to involve family in a supportive, non-nagging way"
+    ],
+    "possible_patient_reactions": [
+     "'They mean well, but I've heard it a hundred times.'",
+     "'Maybe if you told them, they'd back off a little.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Morgan's full-time warehouse job limits structured breaks, reinforcing his skip-then-binge eating pattern",
+   "His history of dependent drug abuse is in active outpatient management given frequent recent ambulatory encounters for the problem",
+   "His low blood pressure and heart rate pattern reflect his cardiac medication regimen rather than acute instability",
+   "Food insecurity reported in the social survey directly shapes his reliance on cheap, calorie-dense convenience foods"
+  ],
+  "optional_details": [
+   "Enjoys watching baseball with his grandchildren on weekends when his knee allows him to sit through a game",
+   "Keeps a worn, reliable lunch cooler in his truck that he almost never actually uses"
+  ]
+ },
+ "source": {
+  "synthea_record": "050d5b74",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "stoic, plays every problem down",
+   "communication": "defers with 'whatever you think is best'",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "moderate health literacy",
+   "eating": "skips meals during the day and then eats a very large meal late at night",
+   "held_back": "takes supplements or home remedies the clinic does not know about",
+   "support": "adult children who mean well and lecture"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

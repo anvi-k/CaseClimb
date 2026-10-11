@@ -1,4 +1,4 @@
-"""Original nonclinical conversation profiles; never clinical published cases."""
+"""Legacy conversation snapshots and shared synthetic personality source."""
 
 import copy
 from typing import Literal

@@ -1,0 +1,1040 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Post-hospitalization Nutrition Follow-up in a 58-Year-Old Man with Ischemic Heart Disease and Slipping Cardiac-Diet Habits",
+  "summary": "This case portrays a 58-year-old man with ischemic heart disease, obesity, and dyslipidemia presenting for a telehealth nutrition follow-up shortly after an unrelated hospitalization for a whiplash injury. It teaches learners to look past an agreeable, minimizing communication style to uncover slipping cardiac-diet habits, a spouse-controlled food environment, low health literacy, and a patient-versus-chart mismatch around medication adherence and symptom reporting, all while practicing motivational interviewing and ADIME documentation.\"",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Toms River, New Jersey, seated at the kitchen table",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Alec Barton",
+   "age": 58,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Part-time warehouse inventory associate at a home-goods distribution center",
+   "language": "English",
+   "appearance": "Overweight man carrying extra weight around his midsection, seated at his kitchen table in a work polo shirt. He turns his head slowly and carefully due to lingering neck stiffness, breathes a bit through his mouth with mild nasal congestion, and has a faint pallor but otherwise looks comfortable. A NASCAR mug sits nearby; he occasionally glances off-screen toward the kitchen where his wife can be heard moving around.",
+   "portrait": "/portraits/synthea-alec-barton-17e83865.jpg"
+  },
+  "persona": {
+   "personality": "Unfailingly polite, agreeable, and non-confrontational; tends to defer to perceived experts and avoid rocking the boat. Not evasive out of mistrust, just low engagement with his own care and a habit of minimizing.",
+   "communicationStyle": "Gives short, clipped answers at first - 'fine,' 'okay,' 'not bad' - and only opens up with a second, gently persistent, specific question. Uses plain non-technical language. Rarely volunteers information unprompted. Occasionally glances off-screen toward the kitchen where his wife can be heard.",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly calm and even-tempered, but carrying quiet underlying anxiety about his heart and his father's history that he keeps tightly contained unless real rapport is built.",
+   "background": "Alec grew up in a working-class South Jersey family where big weekend dinners were how the family showed love and finishing your plate was a point of pride. He never went to college and has always deferred to 'the experts' - doctors, bosses, and now his wife in the kitchen. He's been married 32 years, has two grown kids who live nearby and visit often, and once coached his son's youth baseball team, which he still likes to mention. He works part-time doing inventory at a home-goods distribution warehouse, keeps a NASCAR mug at his locker, and talks racing with coworkers when he loosens up. He used to walk the neighborhood loop most evenings after his 2021 heart diagnosis but that habit, like his attention to portions, has quietly faded since a car accident this past spring.",
+   "speechExamples": [
+    "Fine, I guess. Nothing new really.",
+    "Oh, I don't know, whatever she makes, I just eat it.",
+    "The doctor just said to take it, so I take it.",
+    "Well... actually, there was this one morning, but it wasn't a big deal.",
+    "Sure, sounds good, I can try that."
+   ],
+   "concerns": [
+    "Not wanting to be a bother to the care team or take up too much of their time",
+    "Worried the neck injury might slow him down at work permanently",
+    "Doesn't like talking about his heart in much detail"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dietetics student conducting a telehealth nutrition follow-up visit with Alec Barton, a 58-year-old man with ischemic heart disease and obesity, who was recently discharged after a hospital stay for a neck injury from a car accident. This is a routine nutrition follow-up visit. Review his available health record before the call, then conduct a video visit to assess his current eating pattern, activity, and readiness for change, and provide patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit after recent hospitalization, in the context of ongoing heart disease",
+   "openingLine": "Hey, yeah, I'm doing okay. The neck thing from the accident wasn't really a big deal, just need to keep up with my check-ins I guess.",
+   "tasks": [
+    "Take a focused diet and activity history, including who prepares meals and how food decisions are made at home",
+    "Review available anthropometric and laboratory data relevant to his cardiac and weight status",
+    "Assess his current stage of readiness to change around diet and physical activity",
+    "Identify barriers to healthy eating and activity, including household and health-literacy factors",
+    "Deliver patient-centered nutrition education and counseling using a motivational interviewing approach, and document your encounter in ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after recent hospitalization for a neck injury, in the context of ongoing heart disease"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Priya Nair, Primary Care; Cardiology (last seen 2021); Dietetics (new referral)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 2012); Chronic sinusitis (since 2017); Ischemic heart disease (since 2021); Abnormal findings diagnostic imaging heart+coronary circulat (since 2021)"
+   },
+   {
+    "label": "Medications",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for routine telehealth nutrition follow-up after recent hospitalization for neck injury, in context of ischemic heart disease",
+    "says": "I'm here for the follow-up appointment about my diet, I guess, after everything that happened.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent hospitalization",
+    "chart": "Reports recent hospital stay for neck injury was uneventful",
+    "says": "Oh, the hospital thing? Wasn't a big deal. I'm fine now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "heart condition history",
+    "chart": "Reports history of heart disease diagnosed in 2021",
+    "says": "Yeah, I had some heart trouble a few years back, in 2021. Doctor's been keeping an eye on it since.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "exertional chest symptoms",
+    "chart": "Reports occasional chest tightness when climbing stairs quickly at work",
+    "says": "Sometimes if I go up the stairs too fast at the warehouse, my chest gets kind of tight.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "morning breathing symptoms",
+    "chart": "Reports shortness of breath some mornings walking from the parking lot, not yet reported to physician",
+    "says": "Yeah... some mornings walking in from the lot I get a little winded. I haven't really mentioned it to the doctor though.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "nitroglycerin use pattern",
+    "chart": "Reports using nitroglycerin spray only a couple of times; carries it but often does not use it when symptomatic",
+    "says": "I've only used that spray maybe twice. Mostly I just sit down for a bit if my chest feels funny, feels silly spraying it in front of the guys.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "neck stiffness",
+    "chart": "Reports residual neck stiffness since motor vehicle accident, improving slowly",
+    "says": "My neck's still a little stiff some days since the accident, but it's getting better.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports mid-afternoon fatigue",
+    "says": "By the afternoon I'm just kind of dragging, honestly.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "sinus symptoms",
+    "chart": "Reports intermittent sinus pressure and congestion, worse in humid weather",
+    "says": "My sinuses act up sometimes, especially when it's humid out.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest pain at rest",
+    "chart": "Denies chest pain at rest",
+    "says": "No, it doesn't happen just sitting around, only when I push myself a bit.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Denies leg or ankle swelling",
+    "says": "No swelling in my legs or feet that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Denies palpitations or racing heart",
+    "says": "My heart doesn't feel like it's racing or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "dizziness or fainting",
+    "chart": "Denies dizziness, lightheadedness, or fainting episodes",
+    "says": "No, I haven't gotten dizzy or passed out or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "leg cramping with activity",
+    "chart": "Reports mild leg achiness several months ago, not reported to physician at the time",
+    "says": "My legs felt a little achy a while back, but I never said anything to the doctor about it, didn't think it was a big deal.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "appetite and weight change",
+    "chart": "Denies recent unintentional weight loss or appetite change",
+    "says": "My eating's been about the same, nothing's really changed there, far as I know.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "heart disease diagnosis",
+    "chart": "Ischemic heart disease, diagnosed 2021, with abnormal cardiac imaging findings same year",
+    "says": "They found something with my heart back in 2021 when they did the scan.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "Obesity, BMI 30+ since 2012",
+    "says": "I've been carrying extra weight for a long while now, since around 2012 I think.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "Chronic sinusitis since 2017, with resolved viral sinusitis episodes in 2023, 2024, and January 2026",
+    "says": "I've had sinus trouble on and off for years, flares up now and then but it goes away.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "recent neck injury care",
+    "chart": "Status post whiplash/neck injury from motor vehicle accident, April-May 2026, with physical therapy and inpatient care, resolved",
+    "says": "I got whiplash in a car accident this past April. Had some physical therapy for it and I'm doing a lot better now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "heart medication adherence",
+    "chart": "Reports taking cardiac medications pretty much every day",
+    "says": "I take my heart pills pretty much every day, yeah.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "clopidogrel adherence detail",
+    "chart": "Reports occasionally missing clopidogrel dose when work schedule changes, such as late shifts",
+    "says": "Well... if I'm asked again, I guess I do forget that one sometimes, like when I pull a late shift and my routine's off.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "medication purpose understanding",
+    "chart": "Reports not knowing the purpose of three of his four prescribed medications beyond 'the heart thing'",
+    "says": "Honestly I don't really know what most of these pills do, the doctor just said take 'em so I take 'em.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "statin timing",
+    "chart": "Reports taking simvastatin nightly, pills set out by spouse",
+    "says": "That one I take every night before bed, my wife sets it out for me so I don't forget.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "beta-blocker side effect concern",
+    "chart": "Reports concern that metoprolol may contribute to afternoon fatigue, not raised with physician",
+    "says": "I take that one every morning with my coffee. Sometimes I wonder if it's part of why I get so tired in the afternoon, but I never brought it up at my appointments.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Takes men's multivitamin irregularly and fish oil capsules daily, both at spouse's suggestion",
+    "says": "I take a multivitamin when I remember, and some fish oil pills my wife got after reading an article.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h26",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies",
+    "says": "No, I've never had an allergy to anything that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household cooking roles",
+    "chart": "Reports wife prepares all meals and plates his portions at home",
+    "says": "Oh, that's really her department. I just eat what she puts in front of me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "family support at home",
+    "chart": "Lives with wife of 32 years; two adult children live nearby and visit regularly",
+    "says": "Been married to her 32 years now. Kids live close, they come around a lot.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "function",
+    "topic": "daily walking routine",
+    "chart": "Previously walked neighborhood loop most evenings after 2021 cardiac diagnosis; has not resumed since April 2026 motor vehicle accident",
+    "says": "I used to walk every night after they told me about my heart. Haven't really gotten back to it since the accident.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "function",
+    "topic": "current activity level",
+    "chart": "Current activity limited to warehouse shifts; no structured exercise",
+    "says": "Mostly just whatever I do at work these days, I guess.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "view of own diet changes",
+    "chart": "Believes he already made necessary diet changes a few years ago and considers himself fine now",
+    "says": "I already fixed my eating a couple years back, so I figure I'm doing okay.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s6",
+    "category": "other",
+    "topic": "work schedule",
+    "chart": "Works part-time as a warehouse inventory associate; shifts sometimes run late",
+    "says": "Part-time at the warehouse, but some days turn into longer shifts than planned.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "financial pressures",
+    "chart": "Reports increased financial stress related to reduced work hours",
+    "says": "Money's been a little tight lately, with the hours I've been getting.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "spouse's worry level",
+    "chart": "Describes wife as attentive but anxious, tends to hover over his health",
+    "says": "She worries. A lot. I try not to add to it if I can help it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "disclosing symptoms to spouse",
+    "chart": "Admits he avoids telling his wife about symptoms to keep her from worrying further",
+    "says": "If I tell her every little thing, she'd be a wreck. So I just... don't always say.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "family",
+    "topic": "father's health history",
+    "chart": "Father, Walter, had a major myocardial infarction at age 61, never returned to work, died at 67",
+    "says": "My dad... he had a bad heart attack when he was 61. Never really worked again after that. Passed when he was 67.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "fear about health trajectory",
+    "chart": "Expresses fear of repeating his father's decline after cardiac diagnosis",
+    "says": "I don't want to end up like him. Sitting around, not able to do anything. That scares me more than I let on.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "goals",
+    "topic": "main health priorities",
+    "chart": "States goals as staying out of the hospital and continuing to work without limitation",
+    "says": "I just want to stay out of the hospital and keep doing my job.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "goals",
+    "topic": "motivation for family",
+    "chart": "Reports wanting to remain healthy enough to be present for his children and grandchildren",
+    "says": "I want to be around for my kids, maybe grandkids one day. That's a big part of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "deference to authority figures",
+    "chart": "Tends to defer to healthcare providers' recommendations without raising his own concerns or questions",
+    "says": "If the doctor doesn't bring it up, I figure it's not that big a deal.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "social",
+    "topic": "workplace social connections",
+    "chart": "Reports positive peer relationships at work, discusses auto racing with coworkers",
+    "says": "Guys at work and I talk NASCAR sometimes. Keeps things light.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s16",
+    "category": "function",
+    "topic": "past coaching activity",
+    "chart": "Previously coached his son's youth baseball team years ago",
+    "says": "Used to coach my son's Little League team, way back. Good times.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s17",
+    "category": "nutrition",
+    "topic": "reasons for stopping evening walks",
+    "chart": "Attributes stopping evening walks to disruption from neck injury recovery and subsequent loss of routine",
+    "says": "After the accident my neck was stiff, I just got out of the habit of walking and never picked it back up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "adherence",
+    "topic": "follow-through on suggestions",
+    "chart": "Tends to agree readily with recommendations in appointments but does not consistently change behavior afterward",
+    "says": "Sure, sounds good. ...I mean, I usually mean to do it, but then it just doesn't happen.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a4",
+    "kind": "record",
+    "name": "Review hospital discharge summary (April 2026)",
+    "aliases": [],
+    "result": "Discharged 2026-04-18 after motor-vehicle whiplash/neck injury; received PT 2026-04-12, H&P and care plan 2026-04-10, nursing/ancillary services 2026-04-17. Medications reviewed, adherence reported as good. No nutrition consult documented during admission.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review cardiology problem history",
+    "aliases": [],
+    "result": "Ischemic heart disease diagnosed 2021, with abnormal findings on cardiac/coronary imaging the same year. No subsequent cardiology note on file since diagnosis year.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review sinusitis/ENT history",
+    "aliases": [],
+    "result": "Chronic sinusitis since 2017. Recurrent self-limited viral sinusitis episodes: May 2023 (resolved), Aug-Sep 2024 (resolved), Jan 2026 (resolved). No current treatment.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review current medication list and refill history",
+    "aliases": [],
+    "result": "Clopidogrel 75mg daily - last three refills picked up 10-14 days late each time. Simvastatin 20mg nightly - refills on schedule. Metoprolol succinate ER 100mg each morning - refills on schedule. Nitroglycerin 0.4mg spray PRN - same canister dispensed over a year ago, no refill requested since.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "24-hour dietary recall / diet history",
+    "aliases": [],
+    "result": "Patient reports: coffee and a muffin before work; lunch packed by wife or fast food on busy shifts, soda with lunch most days; dinner is wife's home cooking (pot roast, meatloaf with ketchup glaze, buttered rolls) with second helpings offered and taken; vanilla ice cream most nights; salts food at the table before tasting; chips or crackers while watching TV in the evening; modest plain water intake.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage-of-change interview",
+    "aliases": [],
+    "result": "Patient states he 'already fixed his diet a couple years ago' and feels he is maintaining; reports walking most evenings stopped after April car accident and has not resumed; describes himself as currently doing fine with no specific plan to change further.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Household food environment assessment",
+    "aliases": [],
+    "result": "Patient reports his wife plans, shops for, cooks, and plates nearly all meals; he has little input into recipes, portion sizes, or seasoning; describes himself as 'just eating what's put in front of him.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Patient reports walking a neighborhood loop most evenings after his 2021 heart diagnosis; stopped after the April 2026 motor vehicle accident and neck injury and has not resumed; current activity limited to warehouse shift duties.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Health literacy / medication-purpose teach-back check",
+    "aliases": [],
+    "result": "Patient can name his four medications by appearance but cannot state the purpose of three of them beyond 'for the heart'; does not know what LDL cholesterol means when asked to explain it back.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Waist circumference self-measurement (camera-guided)",
+    "aliases": [],
+    "result": "Patient reports waist circumference approximately 42 inches (107 cm) when measured at the navel per guided instruction.",
+    "importance": "minor",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Alcohol and caffeine intake screen",
+    "aliases": [],
+    "result": "Patient reports 1-2 beers on weekends only, never smoked; caffeine intake is coffee in the morning plus a couple of sodas during the day.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 95/68 mmHg, heart rate 62/min, respiratory rate 16/min, weight 90.7 kg, height 173.5 cm, BMI 30.1 kg/m2 (recorded 2026-08-27).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 233.3 mg/dL; LDL cholesterol 177.4 mg/dL; HDL cholesterol 31.7 mg/dL; Triglycerides 120.5 mg/dL; Haemoglobin 17.3 g/dL; White cell count 8.1 10*3/uL; Platelets 192.3 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-08-27); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-04-22); zoster vaccine live (2019-07-18); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2019-07-18).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Hospital Discharge Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-04-18",
+    "author": "Toms River Community Hospital, Hospital Medicine",
+    "body": "58-year-old male admitted following motor vehicle accident with whiplash/neck injury. History and physical examination completed 2026-04-10; individualized plan of care developed same date. Physical therapy provided 2026-04-12. Skilled nursing and supplementary surveillance services provided 2026-04-17 prior to discharge. Patient tolerated recovery well, ambulatory at discharge with mild residual neck stiffness. Cardiac history of ischemic heart disease (dx 2021) noted as stable during admission; no acute cardiac events during stay. Medications reviewed with patient and spouse at bedside; adherence reported as good. No nutrition consultation requested during this admission. Discharged home 2026-04-18 with instructions for outpatient physical therapy and follow-up with primary care and cardiology."
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "date": "2026-08-20",
+    "author": "Community Pharmacy Services",
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Last 3 refill dates",
+      "Days late vs. expected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Clopidogrel 75 mg tablet",
+        "75 mg",
+        "Once daily",
+        "2026-06-02, 2026-07-05, 2026-08-08",
+        "12, 14, 10"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Simvastatin 20 mg tablet",
+        "20 mg",
+        "Once daily, evening",
+        "2026-06-15, 2026-07-15, 2026-08-14",
+        "on time"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Metoprolol succinate ER 100 mg tablet",
+        "100 mg",
+        "Once daily, morning",
+        "2026-06-10, 2026-07-10, 2026-08-09",
+        "on time"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 mg/actuation mucosal spray",
+        "0.4 mg/actuation",
+        "As needed",
+        "2025-05-02",
+        "no refill in 15 months"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Primary Care Visit Note (most recent, prior to hospitalization)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-03-02",
+    "author": "Dr. Priya Nair, Primary Care Associates of Toms River",
+    "body": "58-year-old male with ischemic heart disease (dx 2021), obesity, and chronic sinusitis presents for routine follow-up. Patient reports feeling generally well, denies chest pain or dyspnea at rest. Medications continued without change: clopidogrel 75mg daily, simvastatin 20mg nightly, metoprolol succinate ER 100mg daily, nitroglycerin spray PRN. Adherence reported as good. Encouraged continued dietary moderation and regular walking as previously discussed. Plan: continue current regimen, lipid panel and follow-up in 6 months, referral to dietetics for nutrition follow-up given ongoing cardiac risk."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 2012)\nChronic sinusitis (since 2017)\nIschemic heart disease (since 2021)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2021)\n\nRECENTLY RESOLVED\nViral sinusitis (2023-05 to 2023-05)\nViral sinusitis (2024-08 to 2024-09)\nViral sinusitis (2026-01 to 2026-01)\nInjury of neck (2026-04 to 2026-05)\nWhiplash injury to neck (2026-04 to 2026-05)\n\nPROCEDURES\n2026-04-18: Discharge from hospital\n2026-04-17: Nursing care/supplementary surveillance\n2026-04-17: Professional / ancillary services care\n2026-04-12: Physical therapy procedure\n2026-04-10: History AND physical examination\n2026-04-10: Development of individualized plan of care\n\nRECENT ENCOUNTERS\n2026-08-27 wellness: General examination of patient\n2026-04-10 emergency: Emergency room admission (Injury of neck)\n2026-04-10 snf: Hospital admission (Patient transfer to skilled nursing facility)\n2026-01-19 ambulatory: Encounter for symptom (Viral sinusitis)\n2025-08-21 wellness: General examination of patient\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2021-08",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2021-08",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2021-08",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2021-08",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "233.3",
+        "mg/dL",
+        "< 200",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "177.4",
+        "mg/dL",
+        "< 100",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "31.7",
+        "mg/dL",
+        ">= 40",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "120.5",
+        "mg/dL",
+        "< 150",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "17.3",
+        "g/dL",
+        "12.0-17.5",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-08-15"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "192.3",
+        "10*3/uL",
+        "150-450",
+        "2024-08-15"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused diet and physical activity history from a patient who gives brief, minimizing initial answers, using follow-up questions to surface more detail about household eating patterns and activity decline",
+    "factIds": [
+     "h1",
+     "h2",
+     "s1",
+     "s3",
+     "s4",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a8",
+     "a11",
+     "a10"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Integrate anthropometric and laboratory data with the diet and activity history to characterize cardiovascular and weight-related nutrition risk",
+    "factIds": [
+     "h16",
+     "h17",
+     "s3"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Assess the patient's stage of readiness to change, recognizing relapse from a prior maintenance stage of diet and activity change precipitated by a stressful life event",
+    "factIds": [
+     "s5",
+     "s3",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a9",
+     "a11"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify household and health-literacy barriers to healthy eating, including spousal control of food preparation and the patient's limited understanding of his own medications and lab values",
+    "factIds": [
+     "s1",
+     "s14",
+     "h22",
+     "h25"
+    ],
+    "actionIds": [
+     "a10",
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize a discrepancy between the patient's reported medication adherence and objective refill data, and determine how to communicate this gap to the medical team within dietetics scope",
+    "factIds": [
+     "h20",
+     "h21",
+     "h6"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Apply motivational interviewing techniques to explore ambivalence, uncover reluctant disclosures (unreported exertional symptoms, financial stress, caregiver dynamics), and set patient-centered behavioral goals, documenting findings in ADIME format",
+    "factIds": [
+     "h5",
+     "s7",
+     "s9",
+     "s11"
+    ],
+    "actionIds": [
+     "a9",
+     "a10"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium and saturated fat intake with sedentary relapse in a patient with ischemic heart disease and obesity, complicated by low health literacy, spousal control of food environment, and relapse from a prior maintenance stage of change",
+   "differential": [
+    "Nutrition-related: excessive sodium/saturated fat intake (NI-5.4/NI-5.6.2 pattern) related to household eating pattern and limited nutrition knowledge, evidenced by diet history and dyslipidemia labs",
+    "Nutrition-related: physical inactivity relative to cardiac risk, evidenced by self-report of stopped walking since April 2026",
+    "Not primarily a medication-adherence case for the dietitian to manage, but adherence gaps are a relevant barrier to flag to the medical team",
+    "Not a sinusitis or neck-injury case for nutrition purposes - these are peripheral/red herring findings"
+   ],
+   "keyFindings": [
+    "BMI 30.1 kg/m2 (obesity class I); weight 90.7 kg, height 173.5 cm",
+    "Lipid panel from 2024-08-15 showing total cholesterol 233.3 mg/dL, LDL 177.4 mg/dL, HDL 31.7 mg/dL, triglycerides 120.5 mg/dL - dyslipidemia pattern consistent with cardiac risk",
+    "Diet history reveals high-sodium, high-saturated-fat pattern entirely planned/cooked by spouse: pot roast, meatloaf, buttered rolls, nightly ice cream, salting without tasting, soda with lunch, occasional fast food, evening snacking",
+    "Physical activity has regressed: stopped evening walking after April 2026 car accident, has not resumed; patient misperceives himself as still 'doing fine' from changes made in 2021",
+    "Patient reports taking heart medications 'pretty much every day' and minimizes the hospitalization, while gentle follow-up reveals inconsistent clopidogrel adherence and nitroglycerin spray left unused in his jacket most days out of embarrassment - a discrepancy from the chart's 'adherence reported as good' documentation",
+    "Low health literacy: does not know what three of four medications treat or what LDL means",
+    "Reluctantly discloses morning exertional dyspnea walking from the parking lot, not yet reported to his physician"
+   ],
+   "plan": [
+    "Document findings in ADIME format: Assessment (diet history, anthropometrics, labs, activity, medication/adherence context relevant to nutrition, psychosocial/stage-of-change), Diagnosis (PES statement centered on excess sodium/saturated fat intake and inactivity relative to cardiac risk), Intervention (patient-centered counseling using motivational interviewing, teach-back education on cardiac-healthy eating, involving spouse in meal planning), Monitoring/Evaluation (follow-up weight, lipid recheck timing, activity resumption, readiness-to-change reassessment)",
+    "Use motivational interviewing to explore ambivalence about resuming walking and portion awareness rather than prescribing a rigid diet",
+    "Assess readiness-to-change stage explicitly - identify relapse from maintenance (2021 changes) to contemplation/action-needed, and normalize relapse as part of the change process",
+    "Invite spouse's involvement in a follow-up or joint counseling session given her central role in meal preparation",
+    "Provide simple, concrete, teach-back-friendly education on sodium reduction, portion sizes, and swapping saturated fats, avoiding clinical jargon like 'LDL' without plain-language explanation",
+    "Flag reluctantly disclosed morning shortness of breath and medication adherence/nitroglycerin-use gaps to the referring medical provider for follow-up, as these are outside dietetics scope to manage directly but relevant to coordinate care",
+    "Set one or two small, specific, patient-chosen behavioral goals (e.g., resuming short evening walks, swapping soda for water at lunch) rather than a full diet overhaul"
+   ],
+   "redFlags": [
+    "Unreported exertional morning shortness of breath walking from the parking lot",
+    "Unused nitroglycerin spray with patient reporting he 'sits down and waits out' chest tightness instead of using it as directed",
+    "Inconsistent clopidogrel adherence in a patient with ischemic heart disease and recent cardiac imaging abnormality",
+    "Unreported mild leg achiness while on simvastatin"
+   ],
+   "educationPoints": [
+    "Explain in plain language what a cardiac-healthy eating pattern looks like (lower sodium, swapping saturated fats, portion awareness) using foods already in his household repertoire where possible",
+    "Clarify in simple terms why his cholesterol numbers matter for his heart, without assuming prior understanding of lipid terminology",
+    "Normalize that habits can slip after a stressful life event (the accident) and that this is common, not a personal failure",
+    "Explain the value of involving his wife in small, collaborative changes to meal preparation rather than framing it as taking over her role",
+    "Encourage him to mention his morning shortness of breath and medication concerns to his doctor, framing this as protecting his independence and ability to keep working"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Alec says he takes his heart pills 'pretty much every day' (h20) and that the hospital stay 'wasn't a big deal' (h2), only admitting on gentle follow-up to occasionally missing clopidogrel when his work schedule changes (h21) and rarely using his nitroglycerin spray despite symptoms (h6)",
+    "recordEvidence": "Pharmacy refill history shows the last three clopidogrel refills were picked up 10-14 days late each time",
+    "teachingPoint": "Self-reported medication adherence is often overestimated; cross-checking refill records (and gently re-asking) can reveal gaps relevant to the nutrition and cardiac risk picture, even though adjusting the regimen itself is outside dietetics scope.",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 14,
+   "condition": "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "conditionLabel": "58 M · Ischemic heart disease, Chronic sinusitis · 4 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "17e83865",
+   "fingerprint": "bg7l8l"
+  }
+ }
+}

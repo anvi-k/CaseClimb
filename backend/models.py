@@ -73,6 +73,8 @@ class VoiceDelivery(StrictModel):
 
 
 class CaseDraft(StrictModel):
+    learning_focus: Literal["clinical_history", "communication"] = "clinical_history"
+    presentation_key: Literal["clinical", "alex", "maya", "jordan", "evelyn"] = "clinical"
     title: str = Field(min_length=1, max_length=160)
     patient_name: str = Field(min_length=1, max_length=100)
     age: int = Field(ge=0, le=120)
@@ -113,3 +115,7 @@ class Turn(StrictModel):
 
 class SpeechRequest(StrictModel):
     event_id: str = Field(min_length=1, max_length=100)
+
+
+class StreamCancel(StrictModel):
+    request_id: str = Field(min_length=1, max_length=100, pattern=r"^[a-zA-Z0-9_-]+$")

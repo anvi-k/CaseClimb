@@ -1,0 +1,1052 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for Prediabetes/Hyperlipidemia in a Precontemplative, Deflecting 79-Year-Old Working Full-Time",
+  "summary": "This case features a 79-year-old, highly health-literate, precontemplative patient with longstanding prediabetes and hyperlipidemia whose labs are only mildly abnormal, testing the learner's ability to use motivational interviewing rather than fear-based messaging. The core teaching points are eliciting a convenience-food-heavy, irregular diet history in a busy multigenerational household, noticing the mismatch between her self-reported 'fine' galantamine adherence and the medication record's evidence of inconsistent dosing, and recognizing deflection/fear around her new Alzheimer's diagnosis (tied to her mother's rapid decline) without pursuing it beyond acknowledgment, since it is outside the nutrition visit's scope.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Paterson, New Jersey, on a short break between getting ready and leaving for work",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Guillermina Holguín",
+   "age": 79,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Front-desk coordinator at a medical billing office, full-time",
+   "language": "Language other than English (bilingual; comfortable in English for appointments and work)",
+   "appearance": "Sharp-eyed and upright on camera but slightly disheveled today — hair not quite set, blouse a bit wrinkled. She's calling from a cluttered kitchen counter, coffee mug in hand, glancing at a wall clock. Dry, faintly scratched patches visible on one forearm. Her voice is hoarse and congested-sounding, and she occasionally mouth-breathes between sentences.",
+   "portrait": "/portraits/synthea-guillermina-holgu-n-2274ac85.jpg"
+  },
+  "persona": {
+   "personality": "Blunt, impatient, intelligent, and quick to size people up; dislikes being talked down to and tests whether the student actually knows their material before engaging further",
+   "communicationStyle": "Answers questions with questions ('Why do you need to know that?' 'Does it matter if I eat breakfast?'), expects brisk, evidence-based answers, gets irritated by vague or overly gentle phrasing, and goes clipped and redirects fast if conversation nears her memory or diagnosis",
+   "healthLiteracy": "high",
+   "emotionalState": "Faintly amused and mildly impatient on the surface, humoring an obligation she didn't ask for; underneath, guarded and quick to deflect when conversation edges toward memory, forgetfulness, or her diagnosis",
+   "background": "Guillermina works full-time as a front-desk coordinator at a medical billing office in Paterson, New Jersey, and has done so for decades. She lives in a six-person household with her husband and others, schedules rarely aligning for shared meals. She grew up speaking a language other than English at home and still prefers it for anything emotionally important, switching easily to English for work and appointments. She was raised to see cooking as a daily duty tied to caring for family, but now that her adult children mostly fend for themselves, she finds little motivation to cook 'just because.' She keeps a small notebook of printed health articles from reputable sites and has a standing Sunday phone call with a close neighbor-friend that she protects fiercely as her main source of emotional support.",
+   "speechExamples": [
+    "I'm only here because the doctor's office put this on my calendar, not because I asked for it.",
+    "So go on, what exactly do you think is wrong with my numbers?",
+    "Why would I change anything? My numbers aren't even bad.",
+    "I don't have time to cook a separate thing just for me every night.",
+    "Show me the actual study, not just a brochure."
+   ],
+   "concerns": [
+    "Being told she has to give up foods she likes for a 'maybe' benefit",
+    "Losing her independence at work",
+    "Being lectured instead of informed",
+    "Why this appointment was even scheduled when she feels fine"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment with Guillermina Holguín, 79, referred by her primary care office after recent labs showed prediabetes and hyperlipidemia. This is her first nutrition visit. She did not request the referral and may be skeptical about its value. Review her chart before the call.",
+   "chiefComplaint": "Scheduled nutrition visit referred by PCP following recent labs showing prediabetes and hyperlipidemia",
+   "openingLine": "Look, I'm only here because the doctor's office put this on my calendar — I didn't ask for it. So go on, what exactly do you think is wrong with my numbers?",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including meal pattern, food choices, and eating context within her household",
+    "Review relevant anthropometrics and lab values with the patient in plain, non-judgmental language",
+    "Use motivational interviewing techniques to engage a patient in precontemplation without lecturing",
+    "Explore medication and supplement use as it relates to her nutrition and daily routine",
+    "Collaboratively identify one or two realistic, patient-chosen next steps and document a nutrition assessment note"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Scheduled nutrition visit referred by PCP office following recent labs showing prediabetes and hyperlipidemia"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. R. Castillo (Primary Care); Referral to Dietetics/Clinical Nutrition for current visit"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 1972); Past pregnancy history of miscarriage (since 1975); Chronic sinusitis (since 1982); Hyperlipidemia (since 2010); Alzheimer's disease (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "Simvastatin 10 MG Oral Tablet; Galantamine 4 MG Oral Tablet; Hydrocortisone 10 MG/ML Topical Cream"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism) (Cutaneous hypersensitivity, mild)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for scheduled nutrition visit referred by PCP after recent labs showing prediabetes and hyperlipidemia.",
+    "says": "I didn't ask for this appointment, my doctor's office just put it on my calendar. So go ahead, tell me — what exactly is wrong with my numbers?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "blood sugar history",
+    "chart": "Reports longstanding history of borderline blood sugar, first noted decades ago, without close monitoring until recent labs.",
+    "says": "They've been telling me my sugar is 'borderline' since I was practically a kid. It's never gone anywhere.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "cholesterol history",
+    "chart": "Reports diagnosis of hyperlipidemia around 2010, started on statin therapy at that time.",
+    "says": "I've been on that cholesterol pill for years now. My numbers were never that scary to begin with, if you ask me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "ros",
+    "topic": "sinus symptoms",
+    "chart": "Reports facial pressure and post-nasal drip most mornings, chronic.",
+    "says": "My sinuses are a mess most mornings, pressure right here across my face, and I'm always clearing my throat.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "energy level",
+    "chart": "Reports afternoon fatigue most days.",
+    "says": "By two or three in the afternoon I'm dragging. Just how it is at my age, I figure.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "dizziness episodes",
+    "chart": "Reports occasional dizziness, attributes to 'low blood pressure days,' not further characterized.",
+    "says": "Some days I get a little dizzy standing up, I just chalk it up to a low blood pressure day. Nothing I write down or anything.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "eating and memory",
+    "chart": "Occasionally forgets whether she has already eaten a meal.",
+    "says": "Once in a while I'll ask my husband if I already ate lunch. Who hasn't done that when they're busy?",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "digestive symptoms",
+    "chart": "Reports mild bloating after some ready meals.",
+    "says": "Some of those microwave dinners sit funny on me, a little bloated after, but it passes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "skin symptoms",
+    "chart": "Reports dry, itchy patches on forearm, occasionally scratched.",
+    "says": "My arm gets these dry patches, itches like crazy sometimes, I scratch it without thinking.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "sleep pattern",
+    "chart": "Reports occasional difficulty falling asleep, otherwise sleep adequate.",
+    "says": "Some nights I just can't fall asleep, don't know why. Most nights I'm fine though.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "appetite",
+    "chart": "Denies loss of appetite or unintentional weight loss.",
+    "says": "My appetite's fine, I eat plenty, I'm not losing weight or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "Denies nausea, vomiting, or diarrhea.",
+    "says": "No throwing up, no stomach trouble beyond the occasional bloat. Nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "swallowing and dental status",
+    "chart": "Denies current difficulty chewing or swallowing; recent dental cleaning done.",
+    "says": "I can eat whatever I want, no trouble chewing. Just had my teeth cleaned a few months back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "blood sugar diagnosis",
+    "chart": "Prediabetes since 1972.",
+    "says": "They've called it prediabetes for years. Not diabetes, just the warning version.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "cholesterol diagnosis",
+    "chart": "Hyperlipidemia since 2010.",
+    "says": "High cholesterol, since about 2010 or so.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "sinus condition",
+    "chart": "Chronic sinusitis since 1982.",
+    "says": "My sinuses have been bad since I was young, forever basically.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "memory diagnosis",
+    "chart": "Early Alzheimer's disease diagnosed 2025.",
+    "says": "They put a label on it last year. I don't really see why we need to talk about that here — this is about my diet, isn't it?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "History of a pregnancy loss in 1975.",
+    "says": "I lost a pregnancy a long time ago, back in '75. Not something that comes up much anymore.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "past anxiety",
+    "chart": "History of severe anxiety with panic symptoms, 2019-2025, resolved.",
+    "says": "I went through a rough patch with panic a few years back, but that's settled down now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "recent dental work",
+    "chart": "Dental cleaning, X-rays, and gum exam completed April 2025 for mild gingivitis, resolved.",
+    "says": "Had a deep cleaning done on my teeth earlier this year, gums were a little inflamed but all fine now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "cholesterol medication use",
+    "chart": "Reports taking simvastatin 10 mg once daily most days.",
+    "says": "I take that little white statin pill most mornings, I keep it right by the coffee maker so I don't forget.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "memory medication use",
+    "chart": "Reports taking galantamine 4 mg once daily as prescribed.",
+    "says": "I take it when I remember, is that so wrong? It's not like I'm skipping it on purpose.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "skin cream use",
+    "chart": "Reports using hydrocortisone cream only when rash is visibly bothersome.",
+    "says": "I only put that cream on when my arm's really acting up. It's greasy, I skip it most days.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "allergies",
+    "topic": "environmental allergy",
+    "chart": "Documented allergy to mold with cutaneous hypersensitivity reaction.",
+    "says": "I'm allergic to mold, my skin breaks out something awful if I'm around it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "allergies",
+    "topic": "food and drug allergies",
+    "chart": "Denies any known food or drug allergies.",
+    "says": "No food allergies, no medicine allergies that I know of. Never had a reaction to anything like that.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a six-person household with husband and other family members; schedules are mismatched.",
+    "says": "There's six of us under one roof, but between work and school nobody's ever home at the same time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time as a front-desk coordinator at a medical billing office; this visit was scheduled by her PCP's office, not requested by her.",
+    "says": "I didn't ask for this appointment, your office set it up. I've got maybe fifteen minutes before I have to leave for work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "function",
+    "topic": "daily routine pace",
+    "chart": "Reports no time for structured meal preparation due to full-time work demands.",
+    "says": "I don't have time to fuss over food, I've got a job to get to.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "nutrition",
+    "topic": "meal timing pattern",
+    "chart": "Skips a full lunch most days; eats a granola bar at her desk instead.",
+    "says": "Lunch? I grab a granola bar at my desk if I'm lucky. Does it matter if I eat a real lunch?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "eating alone vs household",
+    "chart": "Often eats dinner alone despite living with five others, due to mismatched schedules.",
+    "says": "Half the time I'm eating by myself even with five other people in the house. Everybody's coming and going.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "attitude toward cooking",
+    "chart": "Views cooking for herself as not worth the effort now that her children are grown; relies on convenience foods.",
+    "says": "Why would I cook a whole meal just for me? Not worth the trouble anymore.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "reason for not cooking",
+    "chart": "When gently pressed, acknowledges she avoids cooking most nights because it highlights feeling alone even in a full house.",
+    "says": "...fine. Cooking just reminds me I'm by myself even when the house is full. Happy now?",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "goals",
+    "topic": "priorities for care",
+    "chart": "States her goals are to keep working full-time without interruption and avoid hospitalization.",
+    "says": "I just want to keep working and stay out of the hospital. That's it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "view of dietary advice",
+    "chart": "Expresses skepticism that dietary changes will meaningfully affect her health; cites her own online research to challenge recommendations.",
+    "says": "I read plenty online. Show me an actual study, not some pamphlet telling me to eat kale.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "perceived urgency of labs",
+    "chart": "Does not perceive her lab values as concerning or urgent.",
+    "says": "My numbers aren't even bad. Why are we talking about this like it's an emergency?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "preference for directness",
+    "chart": "States she dislikes being lectured and prefers brief, evidence-based explanations.",
+    "says": "Just tell me straight, don't dance around it. I don't have patience for a long speech.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "social",
+    "topic": "support system",
+    "chart": "Identifies a close neighbor and friend, rather than her husband, as her main source of emotional support, with a standing weekly phone call.",
+    "says": "My neighbor and I talk every Sunday without fail. She's the one who actually listens.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "memory and daily tasks",
+    "chart": "Occasionally forgets whether she has eaten or taken medication; attributes this to being busy rather than memory changes.",
+    "says": "Sometimes I can't remember if I already ate. I'm just busy, that's all it is.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "adherence",
+    "topic": "supplement use",
+    "chart": "Self-directs use of fish oil capsules and a multivitamin, taken most days, based on her own research rather than clinician recommendation.",
+    "says": "I take fish oil for my heart and a multivitamin most days. I picked those out myself, I know what I'm doing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s15",
+    "category": "family",
+    "topic": "family illness history",
+    "chart": "Deflects direct questions about her own diagnosis; with strong rapport, discloses her mother had Alzheimer's in her seventies with rapid decline over three years before death, and fears repeating that course.",
+    "says": "Why are we talking about that, I thought this was about my diet... (if trust built) ...my mother went the same way. Three years and she was gone. I don't like to think about it.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "independence concerns",
+    "chart": "Expresses fear of losing independence at work and becoming a burden on her household.",
+    "says": "I don't want to end up a burden on anybody. I need to keep working.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "function",
+    "topic": "physical activity level",
+    "chart": "Sedentary aside from walking to and from the bus stop for work; reports no time for structured exercise.",
+    "says": "I walk to the bus stop and back, that's about it. I don't have time for a gym.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "alcohol and tobacco use",
+    "chart": "Does not smoke; essentially does not drink alcohol (AUDIT-C 0).",
+    "says": "I don't smoke, and I barely touch alcohol. Never saw the appeal.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review medication list and refill/adherence history",
+    "aliases": [],
+    "result": "Simvastatin 10mg daily - refill pattern on time; Galantamine 4mg daily - pharmacy refill record shows gaps consistent with missed doses over several months; Hydrocortisone cream applied PRN",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall / diet history interview",
+    "aliases": [],
+    "result": "Patient reports: coffee through the morning, granola bar at desk skipping a real lunch, rotisserie chicken or frozen rice/bean bowl or canned soup with hot sauce for dinner (often eaten alone), buttered crackers as evening snack, bakery pastry on weekends, a glass of juice most days, water intake inconsistent",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Screen readiness to change (stage-of-change assessment)",
+    "aliases": [],
+    "result": "Patient stage-rated as precontemplation: does not perceive her eating pattern as a problem and does not express intent to change in the next 6 months",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess household/meal environment and social support for eating",
+    "aliases": [],
+    "result": "Patient reports living with five other household members but eating dinner alone most nights due to mismatched schedules; identifies a close neighbor/friend as her main regular support contact, separate from household",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Review supplement and OTC use relevant to nutrition",
+    "aliases": [],
+    "result": "Patient reports self-directed daily fish oil capsule 'for the heart', a multivitamin taken most days, saline nasal spray, and occasional melatonin gummies; no prescribed vitamin/mineral supplementation on the medication list",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review prior PCP referral note for this visit",
+    "aliases": [],
+    "result": "PCP referral note: patient referred for nutrition counseling following labs showing HbA1c 6.3% and lipid panel near-normal; reason listed as prediabetes and hyperlipidemia dietary management",
+    "importance": "important",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 0 (does not drink alcohol)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Review sodium content of patient's typical convenience foods (label review with patient)",
+    "aliases": [],
+    "result": "Patient-reported typical items (frozen rice/bean bowl, canned soup, buttered crackers) run 600-900 mg sodium per labeled serving; patient states she 'doesn't usually check' the label beyond calories",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 149/71 mmHg, heart rate 85/min, respiratory rate 13/min, weight 86.8 kg, height 174.6 cm, BMI 28.5 kg/m2 (recorded 2026-01-20).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.3 %; Glucose 96.9 mg/dL; eGFR 84.6 mL/min/1.73m2; Total cholesterol 175.7 mg/dL; LDL cholesterol 80.8 mg/dL; HDL cholesterol 53.3 mg/dL; Triglycerides 120.9 mg/dL; Haemoglobin 12.5 g/dL; White cell count 8.7 10*3/uL; Platelets 173.7 10*3/uL; Potassium 5 mmol/L; Sodium 140.1 mmol/L; Urea nitrogen 16.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-03-18); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-11-16); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2018-12-11).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "PCP Referral Note for Nutrition Visit",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-01-22",
+    "author": "Dr. R. Castillo, Internal Medicine",
+    "body": "79 y/o F referred for outpatient nutrition counseling following routine labs showing HbA1c 6.3% (prediabetes range) and lipid panel within near-normal limits on simvastatin 10mg daily. BP mildly elevated at 149/71 on last visit. BMI 28.5. Patient has history of chronic sinusitis, hyperlipidemia, and was diagnosed with early Alzheimer's disease in 2025, currently on galantamine 4mg daily. Patient continues to work full-time and lives in a multigenerational household. Request nutrition assessment and counseling regarding glycemic control and cardiovascular risk reduction. No acute concerns at this time."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Pharmacy Refill and Adherence Record",
+    "release": {
+     "when": "action",
+     "ref": "a6"
+    },
+    "date": "2026-01-15",
+    "author": "Community Pharmacy - Automated Refill Log",
+    "table": {
+     "columns": [
+      "Medication",
+      "Prescribed frequency",
+      "Days supply per fill",
+      "Expected refill interval",
+      "Actual refill pattern (last 6 months)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Simvastatin 10 MG Oral Tablet",
+        "Once daily",
+        "90 days",
+        "~90 days",
+        "Refilled on schedule each cycle"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Galantamine 4 MG Oral Tablet",
+        "Once daily",
+        "30 days",
+        "~30 days",
+        "Refills delayed 5-10 days beyond expected interval on 3 of last 4 cycles, consistent with missed doses"
+       ],
+       "flag": "A"
+      },
+      {
+       "cells": [
+        "Hydrocortisone 10 MG/ML Topical Cream",
+        "Applied as needed",
+        "30 g tube",
+        "Variable",
+        "One refill in past 6 months"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 1972)\nPast pregnancy history of miscarriage (since 1975)\nChronic sinusitis (since 1982)\nHyperlipidemia (since 2010)\nAlzheimer's disease (since 2025)\n\nRECENTLY RESOLVED\nSevere anxiety (panic) (2019-12 to 2025-01)\nViral sinusitis (2022-10 to 2022-11)\nPrimary dental caries (2023-01 to 2023-01)\nGingivitis (2025-01 to 2025-01)\nStreptococcal sore throat (2025-03 to 2025-03)\n\nPROCEDURES\n2025-04-01: Dental plain X-ray bitewing\n2025-04-01: Examination of gingivae (Patient referral for dental care)\n2025-04-01: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2025-04-01: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2025-04-01: Dental care (Patient referral for dental care)\n2025-04-01: Dental consultation and report (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-01-21 ambulatory: Follow-up encounter (Hyperlipidemia)\n2026-01-20 wellness: General examination of patient\n2025-04-01 ambulatory: Encounter for check up (Patient referral for dental care)\n2025-03-25 outpatient: Encounter for check up\n2025-03-18 urgentcare: Urgent care clinic (environment)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Dementia management; Diabetes self management plan (record artifact); Hyperlipidemia clinical management plan (record artifact); Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Simvastatin 10 MG Oral Tablet",
+        "2026-01",
+        "Hyperlipidemia"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Galantamine 4 MG Oral Tablet",
+        "2025-01",
+        "Alzheimer's disease"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrocortisone 10 MG/ML Topical Cream",
+        "1969-11",
+        "Contact dermatitis"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.3",
+        "%",
+        "< 5.7",
+        "2026-01-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "96.9",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "84.6",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "175.7",
+        "mg/dL",
+        "< 200",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "80.8",
+        "mg/dL",
+        "< 100",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "53.3",
+        "mg/dL",
+        ">= 40",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "120.9",
+        "mg/dL",
+        "< 150",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.5",
+        "g/dL",
+        "12.0-17.5",
+        "2025-01-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-01-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "173.7",
+        "10*3/uL",
+        "150-450",
+        "2025-01-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.1",
+        "mmol/L",
+        "135-145",
+        "2026-01-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "16.5",
+        "mg/dL",
+        "7-20",
+        "2026-01-21"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a diet and lifestyle history that reveals skipped meals, convenience-food reliance, and the mismatch between a six-person household and largely solitary eating.",
+    "factIds": [
+     "s1",
+     "s3",
+     "s4",
+     "s5",
+     "s6",
+     "h4",
+     "h8"
+    ],
+    "actionIds": [
+     "a7",
+     "a9",
+     "a14"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Interpret anthropometric and laboratory data (BMI, HbA1c, lipid panel, renal panel) in plain, non-judgmental language appropriate for a patient in precontemplation.",
+    "factIds": [
+     "h2",
+     "h3",
+     "h14",
+     "h15"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a12"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Apply motivational interviewing techniques to engage a patient in precontemplation who deflects with rhetorical questions and challenges advice with her own research, without lecturing.",
+    "factIds": [
+     "s9",
+     "s10",
+     "s11",
+     "s8"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explore medication and self-directed supplement use as it relates to nutrition and daily routine, including recognizing reluctance to disclose nonadherence.",
+    "factIds": [
+     "h21",
+     "h22",
+     "h23",
+     "s13",
+     "s14"
+    ],
+    "actionIds": [
+     "a6",
+     "a10"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Build sufficient rapport to approach emotionally sensitive territory (fear related to her Alzheimer's diagnosis and family history) without pursuing the diagnosis itself, and identify her support system for the care plan.",
+    "factIds": [
+     "h17",
+     "s12",
+     "s15",
+     "s16"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Collaboratively identify one or two realistic, patient-chosen nutrition changes and document findings in an ADIME-formatted nutrition assessment note.",
+    "factIds": [
+     "s2",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a13",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Nutrition-related prediabetes and hyperlipidemia in a precontemplative patient with a convenience-food-heavy, irregular meal pattern",
+   "differential": [
+    "Excessive sodium intake related to convenience/processed food reliance as evidenced by frequent frozen meals, canned soups, and crackers",
+    "Inconsistent carbohydrate/meal timing related to skipped lunches and solitary evening eating as evidenced by diet history",
+    "Self-directed supplement use (fish oil, multivitamin) not guided by nutrition assessment, as evidenced by patient report",
+    "Suboptimal food-medication engagement related to inconsistent galantamine adherence intersecting with routine/meal structure"
+   ],
+   "keyFindings": [
+    "BMI 28.5 kg/m2 (overweight), weight 86.8 kg, height 174.6 cm",
+    "HbA1c 6.3% (prediabetes range), fasting glucose 96.9 mg/dL (normal)",
+    "Lipid panel near-normal on simvastatin: total cholesterol 175.7, LDL 80.8, HDL 53.3, triglycerides 120.9 mg/dL",
+    "BP 149/71 mmHg at visit date, HR 85, RR 13",
+    "Diet history reveals skipped lunches, heavy reliance on sodium-dense convenience foods, inconsistent hydration, and mostly solitary meals despite 6-person household",
+    "Patient reports galantamine adherence as 'fine' while gently probing reveals she sometimes forgets doses; medication record shows inconsistent refill/dosing pattern reflecting under-reported nonadherence",
+    "Patient is in precontemplation and does not perceive her labs as urgent",
+    "AUDIT-C 0, nonsmoker, no alcohol-related nutrition concerns"
+   ],
+   "plan": [
+    "Complete nutrition-focused physical findings review (grooming, skin, hydration cues) in context of overall assessment",
+    "Reconcile reported medication/supplement use against the medication record, noting the adherence mismatch supportively without confrontation",
+    "Use motivational interviewing to explore her own stated goals (staying independent, staying out of hospital) as the entry point rather than lecturing on labs",
+    "Collaboratively identify one or two realistic, patient-chosen swaps (e.g., lower-sodium soup, pairing dinner with a household member's schedule) rather than a full diet overhaul",
+    "Explore the role of her neighbor-friend as a potential accountability or meal-planning support, with her permission",
+    "Document ADIME note reflecting nutrition diagnosis(es) tied to excessive sodium/convenience food intake and inconsistent meal pattern",
+    "Flag emotional cues around her Alzheimer's diagnosis for the care team without pursuing the diagnosis itself in this visit",
+    "Schedule follow-up to reassess readiness to change and revisit small goals set collaboratively"
+   ],
+   "redFlags": [
+    "BP 149/71 mmHg (elevated systolic) noted but not the focus of this nutrition visit; relay to PCP if not already followed up",
+    "Potassium 5.0 mmol/L (upper-normal) — not independently actionable but worth noting if trend continues",
+    "Reports of forgetfulness about eating/medications warrant gentle follow-up given early Alzheimer's diagnosis, coordinated with the medical team rather than managed in nutrition visit alone"
+   ],
+   "educationPoints": [
+    "Frame prediabetes and lipid findings in terms of her own stated goals (independence, avoiding hospitalization) rather than abstract risk",
+    "Provide concrete, evidence-based information on sodium content of common convenience foods she already uses, with label-reading tips rather than a 'cut it all out' message",
+    "Validate that cooking fatigue in a large household is common and does not require all-or-nothing solutions",
+    "Avoid directly addressing her Alzheimer's diagnosis; acknowledge any emotional disclosure briefly and supportively, then redirect to nutrition goals as scoped for this visit",
+    "Reinforce that small, patient-chosen changes (e.g., one swapped meal, pairing dinner with a household member) are more sustainable than wholesale dietary change for someone in precontemplation"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking galantamine 4 mg once daily as prescribed (h22)",
+    "recordEvidence": "Pharmacy refill/adherence record shows gaps in galantamine refills consistent with missed doses over several months (d2, a6)",
+    "teachingPoint": "Patients, especially those with early memory changes, may sincerely under-report nonadherence by reframing missed doses as 'being busy' rather than forgetting; cross-checking refill records against self-report helps the clinician address adherence supportively rather than confrontationally, and flags a concern to relay to the care team.",
+    "factId": "h22",
+    "artifactId": "d2"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "States she lives in a six-person household and frames her convenience-food reliance mainly around full-time work demands and lack of time (s3), not mentioning any emotional component",
+    "recordEvidence": "When gently pressed, she discloses she avoids cooking most nights because it highlights feeling alone even in a full house (s7)",
+    "teachingPoint": "An initial, surface-level explanation for a dietary pattern (lack of time) can mask a deeper psychosocial driver (loneliness); skilled, non-judgmental follow-up questioning can reveal barriers that are essential to designing a realistic, sustainable nutrition plan.",
+    "factId": "s3",
+    "artifactId": "d1"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 22,
+   "condition": "Alzheimer's disease",
+   "conditionLabel": "79 F · Alzheimer's disease, Hyperlipidemia, Chronic sinusitis +1 · 3 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2274ac85",
+   "fingerprint": "7ct6d4"
+  }
+ }
+}

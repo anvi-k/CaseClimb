@@ -1,0 +1,308 @@
+{
+ "patient_overview": {
+  "name": "Velda Schuster",
+  "age": 31,
+  "sex": "Female",
+  "description": "Velda Schuster is a 31-year-old Black, Hispanic woman from Union, New Jersey, currently pregnant and also managing prediabetes she's had since 2017, following a second-trimester miscarriage in 2023. She is warm, chatty, and clearly wants the student to like her, often answering a simple question with a ten-minute story that loops back around eventually. She has done real research online about gestational diabetes risk and prediabetes, and in the last few weeks has started genuinely trying to change how she eats, though the change feels new and shaky given how little daily support she has running a household of eight on a part-time income.",
+  "keywords": [
+   "prediabetes",
+   "normal pregnancy",
+   "history of miscarriage",
+   "food insecurity",
+   "food pantry use",
+   "action stage fragile",
+   "high health literacy",
+   "low support",
+   "budget shopping",
+   "medication nonadherence"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time receptionist at a dental office",
+  "residence": "Union, New Jersey; household of 8",
+  "ethnicity": "Black, Hispanic",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Velda grew up in Union, New Jersey, in a big extended family where meals were always stretched to feed whoever showed up, and she carries that same instinct now with her own household of eight. She identifies as Black and Hispanic and says food in her house was always \"whatever filled the pot\" rather than tied to one specific cuisine — rice, beans, chicken thighs, pasta, whatever was on sale. She values being the one people can lean on, which makes it hard for her to ask for help even when she's stretched thin herself."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Normal pregnancy",
+  "secondary_diagnoses": [
+   "Prediabetes",
+   "Past pregnancy history of miscarriage"
+  ],
+  "medical_history": [
+   "Prediabetes since 2017",
+   "Past pregnancy history of miscarriage since 2019",
+   "Normal pregnancy since 2026",
+   "Normal pregnancy (2023-07 to 2023-09, resolved)",
+   "Miscarriage in second trimester (2023-08 to 2023-09, resolved)",
+   "Complication occurring during pregnancy (2023-08 to 2023-09, resolved)",
+   "Viral sinusitis (2025-04 to 2025-04, resolved)",
+   "Evaluation of uterine fundal height (2026-09-18)",
+   "Auscultation of the fetal heart (2026-09-18)",
+   "Fetal anatomy study (2026-08-21)",
+   "Alpha-fetoprotein test - antenatal (2026-08-21)",
+   "Standard pregnancy test (2026-06-26)",
+   "Ultrasound scan for fetal viability (2026-06-26)"
+  ],
+  "current_symptoms": [
+   "Occasional lightheadedness in the late afternoon if she skips lunch",
+   "Fatigue most days, worse by evening after a full day of errands and kids",
+   "Mild heartburn after bigger dinners",
+   "Occasional swelling in her feet by end of day",
+   "Sugar cravings mid-afternoon, especially around 3-4pm"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears tired but animated, with dark circles under her eyes consistent with disrupted sleep in a full household",
+   "Mild ankle swelling noted when seated, legs often crossed/elevated for comfort",
+   "Skin and lips slightly dry; reports forgetting her water bottle most days",
+   "Speaks rapidly and gestures a lot, loses her thread mid-sentence then circles back to the original point"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.9 % (reference < 5.7; 2026-06-05)",
+   "Glucose: 77.3 mg/dL (reference 70-99 (fasting); 2026-06-05)",
+   "Total cholesterol: 211 mg/dL (reference < 200; 2026-06-05)",
+   "LDL cholesterol: 133.3 mg/dL (reference < 100; 2026-06-05)",
+   "HDL cholesterol: 49.4 mg/dL (reference >= 40; 2026-06-05)",
+   "Triglycerides: 141.8 mg/dL (reference < 150; 2026-06-05)",
+   "Haemoglobin: 17.3 g/dL (reference 12.0-17.5; 2023-06-02)",
+   "White cell count: 4.7 10*3/uL (reference 4.0-11.0; 2023-06-02)",
+   "Platelets: 211.7 10*3/uL (reference 150-450; 2023-06-02)",
+   "Potassium: 4.4 mmol/L (reference 3.5-5.1; 2026-06-05)",
+   "Sodium: 140.4 mmol/L (reference 135-145; 2026-06-05)",
+   "Urea nitrogen: 19.5 mg/dL (reference 7-20; 2026-06-05)"
+  ],
+  "vital_signs": [
+   "BP: 135/88 mmHg",
+   "HR: 93 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-06-05"
+  ],
+  "anthropometrics": [
+   "Height: 152.6 cm",
+   "Weight: 69.8 kg",
+   "BMI: 30 kg/m2",
+   "Weight change: +5.3 kg since 2023-06-02"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Prenatal vitamin (take-home sample from her OB, takes most days)",
+   "Occasional Tums for heartburn",
+   "Ginger chews she keeps in her purse for nausea"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Budget-driven mixed diet, heavy on starches and whatever stretches furthest for eight people; recently trying to add vegetables and protein at breakfast",
+  "food_preferences": [
+   "Rice and beans",
+   "Chicken thighs (whole packs, cheaper than breasts)",
+   "Pasta with jarred sauce",
+   "Oatmeal with cinnamon (new addition)",
+   "Frozen mixed vegetables",
+   "Eggs when on sale"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at dinner when everyone eats together",
+   "Use of the Union food pantry near her church and what's actually available there",
+   "Juice and soda intake for the kids that she ends up finishing",
+   "Late-night snacking after everyone else is asleep",
+   "Skipping her own lunch to make sure the younger kids eat first"
+  ],
+  "meal_pattern": "Eats on the run most days; grabs toast or skips breakfast if rushed, bigger family dinner in the evening, sometimes nothing between",
+  "hydration": "Mostly water now but still drinks sweet tea some afternoons; says she 'forgets' to drink water at work",
+  "physical_activity": "Walks to and from the bus stop and up three flights of stairs at home; no formal exercise, says she's 'always moving but never exercising'",
+  "substance_use": "Ex-smoker (quit a few years ago); audit-c score of 1, drinks occasionally, maybe a glass of wine at a family gathering",
+  "sleep": "Fragmented, 5-6 hours most nights, kids and household noise wake her, naps are rare"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, talkative, eager to be liked and seen as capable; brings humor into hard topics",
+  "communication_style": "Tells long, winding stories that start on-topic and drift into family anecdotes before circling back; needs gentle redirecting but isn't offended by it",
+  "goals": [
+   "Keep her blood sugar numbers good through the pregnancy",
+   "Avoid another miscarriage",
+   "Model better eating for her kids without making a big deal of it",
+   "Lose the baby weight sensibly after delivery, not through a crash plan"
+  ],
+  "concerns": [
+   "That her prediabetes will turn into something worse after this baby",
+   "That she's not resting enough to keep her blood pressure down",
+   "That she won't be able to keep up the changes she just started once things get busy again"
+  ],
+  "beliefs": [
+   "She believes carbs 'in the right form' like oats and beans are fine, it's the sugary extras that hurt her",
+   "She believes her body let her down with the 2023 miscarriage and watches for any sign of trouble",
+   "She believes asking for help makes her look like she can't manage her own house"
+  ],
+  "motivations": [
+   "This pregnancy after the loss in 2023",
+   "Wanting energy to keep up with the other kids",
+   "Pride in being the one who holds the family together"
+  ],
+  "fears": [
+   "Losing this pregnancy the way she lost the one in 2023",
+   "Her prediabetes becoming diabetes and needing insulin",
+   "Not having anyone to call if something goes wrong at home"
+  ],
+  "barriers": [
+   "Very little day-to-day support with eight people in the household",
+   "Tight budget that limits fresh produce and lean protein",
+   "Part-time, inconsistent work hours that disrupt meal timing",
+   "Fatigue that undercuts her motivation some days"
+  ],
+  "strengths": [
+   "Reads up on gestational diabetes and prediabetes on her own and asks informed questions",
+   "Already started real changes in the last few weeks: oatmeal breakfasts, more water, smaller dinner portions",
+   "Resourceful with the food pantry and sales flyers",
+   "Social and well-connected, sees people often even if they aren't hands-on help"
+  ],
+  "support_system": "Husband works long hours and is not very hands-on with meals or appointments; older kids help some with younger siblings but it's inconsistent; sees friends often socially but has almost no one she can call for practical day-to-day help",
+  "readiness_to_change": "Action stage but fragile - started real changes a few weeks ago and is proud of them, but admits one bad week could undo it"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "She's pregnant and has had prediabetes since 2017",
+   "She lost a pregnancy in 2023 in the second trimester and is nervous about this one",
+   "She's started eating oatmeal and drinking more water the last few weeks",
+   "She has eight people in her household and does most of the cooking"
+  ],
+  "discoverable_information": [
+   "She shops with sales flyers and sometimes uses the food pantry near her church",
+   "Her husband works long hours and isn't involved in meal planning",
+   "She skips her own lunch some days so the younger kids eat first",
+   "She reads a lot about gestational diabetes and prediabetes online",
+   "Her sleep is broken most nights because of the kids and the house noise"
+  ],
+  "reluctant_information": [
+   "She admits, when asked gently about her prenatal vitamin, that she sometimes 'forgets' it for a few days in a row because it makes her nauseous on an empty stomach",
+   "She hesitates before saying she doesn't always take it with food the way the clinic told her to, which is why it bothers her stomach"
+  ],
+  "hidden_information": [
+   "Velda has not told anyone, including her OB, that she stopped taking her prenatal vitamin for an entire week in August 2026 because the nausea got bad and she was scared to mention it in case they'd lecture her",
+   "She worries privately that her weight gain since 2023 means she somehow caused the miscarriage, though she's never said this out loud to a provider"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full dietary history despite a wandering communication style",
+    "expected_discoveries": [
+     "Household meal patterns for eight people",
+     "Use of the food pantry and sales-driven shopping",
+     "Her own skipped meals to prioritize the kids"
+    ],
+    "possible_patient_reactions": [
+     "She launches into a story about her mother-in-law's cooking before circling back to answer",
+     "She laughs and says 'sorry, I do that, ask me again'"
+    ]
+   },
+   {
+    "learning_objective": "Explore medication/supplement adherence with a non-judgmental approach",
+    "expected_discoveries": [
+     "She sometimes skips her prenatal vitamin due to nausea",
+     "She has never told her OB about a full week without it"
+    ],
+    "possible_patient_reactions": [
+     "She deflects at first with a joke",
+     "She tears up slightly when admitting she was scared to bring it up",
+     "She asks if she's 'in trouble' for it"
+    ]
+   },
+   {
+    "learning_objective": "Support a fragile action-stage behavior change with practical reinforcement",
+    "expected_discoveries": [
+     "Her recent oatmeal breakfast and water habit are new and could lapse under stress",
+     "She has no one to help her maintain changes day to day"
+    ],
+    "possible_patient_reactions": [
+     "She lights up describing her small wins",
+     "She admits she's scared one bad week will undo everything"
+    ]
+   },
+   {
+    "learning_objective": "Assess health literacy and correct misinformation gently, since she reads extensively online",
+    "expected_discoveries": [
+     "She has accurate information about gestational diabetes risk but some overgeneralized beliefs about 'good carbs'",
+     "She is open to specifics if given credit for what she already knows"
+    ],
+    "possible_patient_reactions": [
+     "She cites a specific article or forum she read",
+     "She pushes back a little if she feels talked down to, then warms up again"
+    ]
+   },
+   {
+    "learning_objective": "Identify low-support, high-demand household stressors affecting nutrition and glucose control",
+    "expected_discoveries": [
+     "Minimal practical help from her husband or extended family",
+     "Her tendency to self-sacrifice meals for her children",
+     "Her fear tied to the 2023 miscarriage and possible self-blame"
+    ],
+    "possible_patient_reactions": [
+     "She brushes off concern at first ('I'm used to it')",
+     "She becomes quieter and more honest if the student stays patient and doesn't rush her"
+    ]
+   },
+   {
+    "learning_objective": "Develop a realistic, budget-conscious meal plan that fits a household of eight and pantry access",
+    "expected_discoveries": [
+     "What foods are actually available at her pantry",
+     "Which cheap staples she can build balanced meals around",
+     "Practical portion strategies for family-style dinners"
+    ],
+    "possible_patient_reactions": [
+     "She's enthusiastic and offers her own ideas",
+     "She worries a 'fancy' plan won't survive contact with her actual week"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "The record lists no prescribed medications, so her nonadherence trait is applied to her prenatal vitamin/supplement regimen as directed by her OB rather than to a prescription drug",
+   "Her part-time work and large household income total are consistent with tight but not catastrophic budgeting, fitting food pantry use as a supplement rather than sole food source",
+   "Her high health literacy is self-taught through online reading given her education level of 'more than high school'"
+  ],
+  "optional_details": [
+   "She keeps a running list on her phone of 'good swaps' she's read about online",
+   "She has a sister two towns over she talks to on the phone most days but who can't help in person",
+   "Her kids range widely in age, with the oldest helping babysit sometimes",
+   "She has a favorite grocery store (a local ShopRite) she times visits to for markdown produce"
+  ]
+ },
+ "source": {
+  "synthea_record": "021d485a",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "warm and talkative, likes to be liked",
+   "communication": "long stories that wander off the question",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "shops on a tight budget, buys what is cheap and filling, sometimes uses a food pantry",
+   "held_back": "does not take one of their medicines the way it was prescribed",
+   "support": "very little day-to-day support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

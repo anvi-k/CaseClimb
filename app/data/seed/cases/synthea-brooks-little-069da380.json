@@ -1,0 +1,933 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Precontemplative obesity nutrition assessment in a budget-constrained warehouse worker",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment with a precontemplative, financially-strained patient whose BMI of 30.1 kg/m2 and grazing/no-fixed-meal eating pattern mask underlying food insecurity and health-avoidance behaviors he is reluctant to disclose. The core teaching points are motivational interviewing with a resistant, pride-driven patient; eliciting an irregular grazing diet history and translating it into an assessable nutrition diagnosis; and recognizing a patient-vs-chart mismatch (he implies he is 'due' for a dental visit when the record shows his last cleaning was five years ago) as a cue to gently probe deferred self-care tied to household financial constraints.\"}",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in East Orange, NJ, sitting in his parked pickup truck in the driveway for quiet",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Brooks Little",
+   "age": 43,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "asian, nonhispanic",
+   "occupation": "Part-time forklift operator at a regional warehouse distribution center",
+   "language": "English",
+   "appearance": "Solidly built, weight carried mostly around the midsection, calling from the driver's seat of an older pickup truck parked outside his crowded house. Restless on camera - picks up objects, gestures a lot, leans in and out of frame while telling stories.",
+   "portrait": "/portraits/synthea-brooks-little-069da380.jpg"
+  },
+  "persona": {
+   "personality": "Proud, self-reliant, talkative and restless; covers insecurity with confidence, bravado, and long rambling stories. Doesn't like being told what to do and is quick to deflect anything that feels like a lecture, but softens when he feels respected rather than corrected.",
+   "communicationStyle": "Winding, anecdotal - starts answering a direct question and ends up telling a story about his truck's transmission or a coworker's drama. Hard to pin down to a straight answer. Uses plain, working-class language, no medical terms, and repeats things he's read on forums/YouTube as settled fact. Jokes to deflect when a topic (money, health gaps) gets close to home.",
+   "healthLiteracy": "low",
+   "emotionalState": "Mildly annoyed and defensive about the visit being 'about a number,' underneath some quiet embarrassment he covers with humor and bluster",
+   "background": "Brooks is 43, works part-time as a forklift operator at a regional warehouse distribution center, and lives in East Orange, NJ in a crowded house of seven - him, his wife, three kids, and his in-laws. He's proud of his old pickup truck, which he fixes himself, and spends downtime watching DIY and conspiracy-adjacent YouTube channels. At work, guys call him 'Little' as a joke since he's actually the biggest guy on his shift, which he finds funny. He grew up working-class in East Orange where food was whatever stretched furthest, and that practical, no-frills attitude toward eating stuck with him - food is fuel to get through a long shift, not something to fuss over.",
+   "speechExamples": [
+    "Man, you sound like my cousin who's into all that keto stuff - I read that's basically a scam too.",
+    "I don't really sit down to eat, I just grab whatever's around and keep moving.",
+    "Half the guys on my shift are bigger than me, so I don't know why this is such a big deal.",
+    "Dinner's whenever the house finally quiets down - could be ten, eleven at night, whenever.",
+    "I didn't come here for a lecture, doc - I mean, uh, whatever you are. No offense."
+   ],
+   "concerns": [
+    "Doesn't want to be lectured or told what to do",
+    "Worried any 'diet thing' will cost money he doesn't have",
+    "Mildly annoyed that a number on a chart is driving the whole visit",
+    "Wants to stay strong enough to keep working his job",
+    "Would like to not get winded carrying furniture for his father-in-law",
+    "Wants people, especially his wife, to stop worrying about his weight"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dietetics student conducting a telehealth nutrition assessment with Brooks Little, a 43-year-old man referred after a BMI flag at his last physical. This is a first nutrition visit. Review his available chart information before the call, then conduct the video visit to complete a nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Referred for nutrition assessment due to BMI flag at last physical",
+   "openingLine": "Yeah, hey - so my doctor's office said I had to do this nutrition call because of some number on my chart. I feel fine, honestly, not really sure what we're supposed to talk about.",
+   "tasks": [
+    "Take a focused diet history, including meal pattern, typical foods/beverages, and timing of intake across a full day",
+    "Review available anthropometric and laboratory data and relate them to the nutrition assessment",
+    "Explore the patient's readiness to change and his personal goals using patient-centered interviewing techniques",
+    "Identify barriers to healthy eating, including any financial, household, or scheduling factors, without pressuring the patient to disclose more than he's comfortable with",
+    "Compare what the patient reports about his health/dental follow-up with what is documented in the record, and gently explore any discrepancy",
+    "Document a nutrition assessment note in ADIME format with an appropriate nutrition diagnosis and plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Routine nutrition check referred due to BMI flag (30.1 kg/m2) at 2025-09-18 physical"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care clinic, East Orange NJ; referred to dietetics/nutrition for telehealth assessment"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for telehealth nutrition assessment after BMI flag of 30.1 at physical on 2025-09-18.",
+    "says": "They told me I gotta do this nutrition thing 'cause of some number on a chart. I feel fine, so I don't really get it, but here I am.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports energy as unchanged from baseline.",
+    "says": "Energy's fine, same as always. I'm out there working forklift shifts, I'm not dragging around.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "clothing fit",
+    "chart": "Reports pants fitting tighter, attributes to aging.",
+    "says": "Yeah, pants are a little snugger I guess, but that's just getting older, happens to everybody.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain or shortness of breath.",
+    "says": "No chest pain, no trouble breathing, nothing like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "heartburn pattern",
+    "chart": "Reports occasional heartburn after late-night eating.",
+    "says": "Sometimes I get a little heartburn after I eat late, but it's nothing, I just pop a Tums.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Reports he hasn't noticed significant weight change recently.",
+    "says": "I don't really weigh myself, man, I feel about the same as I always have.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Denies fatigue.",
+    "says": "I'm not tired more than usual, no.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "joint symptoms",
+    "chart": "Denies joint pain other than occasional back soreness after shifts.",
+    "says": "My back gets sore after a long shift sometimes, that's about it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "No lower extremity swelling.",
+    "says": "My feet and legs don't swell up or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, urination, or unexplained weight loss.",
+    "says": "I'm not drinking a ton of water or running to the bathroom all the time, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "headaches/vision",
+    "chart": "Denies headaches or vision changes.",
+    "says": "No headaches, my eyes are fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "dental symptoms",
+    "chart": "Reports no current tooth pain or bleeding gums noticed.",
+    "says": "My mouth's fine far as I know, nothing hurting.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "recent illness",
+    "chart": "Acute viral pharyngitis, November-December 2025, resolved.",
+    "says": "I had a nasty sore throat thing last month, but that cleared up on its own.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "BMI 30+ documented since 2025; weight 97.4 kg on 2025-09-18, up from 94.9 kg on 2023-09-14.",
+    "says": "I guess I've put on a few pounds the last couple years, but ain't everybody?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "diabetes screening",
+    "chart": "No history of diabetes diagnosis.",
+    "says": "I ain't diabetic, so I figure I'm good.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "heart or blood pressure history",
+    "chart": "No history of hypertension or cardiac diagnosis.",
+    "says": "Never been told I got high blood pressure or heart trouble or anything.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "Dental cleaning, exam, and plaque/calculus removal performed 2020-12-10; no dental visits documented since.",
+    "says": "I'm due for a cleaning, just haven't gotten around to it, probably been a few months.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries.",
+    "says": "Never had surgery on anything, no.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "prescription medications",
+    "chart": "Takes no prescription medications.",
+    "says": "I don't take any pills from a doctor or nothing like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "supplements",
+    "chart": "Takes a generic multivitamin from a discount store, intermittently.",
+    "says": "I got this big tub of multivitamins from the dollar store, take 'em when I remember.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "heartburn remedy",
+    "chart": "Uses Tums as needed for heartburn, kept in truck.",
+    "says": "I keep a roll of Tums in the truck for when my stomach acts up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "pain relief",
+    "chart": "Uses ibuprofen occasionally for back soreness after shifts.",
+    "says": "Sometimes I take an ibuprofen if my back's killing me after work.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "ros",
+    "topic": "blood count history",
+    "chart": "CBC from 2023-09-14 within normal limits (Hgb 14.7 g/dL, WBC 6.3 x10^3/uL, platelets 357.9 x10^3/uL).",
+    "says": "They checked my blood a while back, doc said everything looked normal.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h25",
+    "category": "ros",
+    "topic": "recent infection symptoms",
+    "chart": "No current fever, sore throat, or respiratory symptoms.",
+    "says": "I'm all better from that throat thing, no fever or nothing now.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a household of 7 (wife, three kids, in-laws) in East Orange, NJ",
+    "says": "It's me, my wife, our three kids, and her folks all under one roof. Place is never quiet, I'll tell you that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time as a forklift operator at a regional warehouse distribution center, irregular shift hours",
+    "says": "I run a forklift part-time over at the warehouse. Hours bounce all over - sometimes nights, sometimes doubles.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "view of weight concern",
+    "chart": "Minimizes BMI finding; compares self favorably to coworkers' size",
+    "says": "Man, half the guys on my shift are bigger than me. I don't get why this number's such a big deal.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "reaction to advice",
+    "chart": "Expresses resistance to being told what to do; bristles at perceived lecturing",
+    "says": "I didn't come here for a lecture, doc. I can figure stuff out myself.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "nutrition information sources",
+    "chart": "Reports relying on online forums and YouTube videos for health information, skeptical of dietitian advice",
+    "says": "I read a lot of this stuff online - forums, videos. I probably know more about it than you'd think.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "function",
+    "topic": "physical activity at work vs home",
+    "chart": "Physically active on feet during shifts operating a forklift; sedentary at home with no structured exercise",
+    "says": "I'm on my feet all shift running that forklift. That's plenty of exercise, I don't need to be doing more at home.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "carrying furniture goal",
+    "chart": "Reports goal of being able to help father-in-law move furniture without getting winded",
+    "says": "I just want to not be gasping for air when I'm helping my wife's dad move furniture around.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "goals",
+    "topic": "work capacity goal",
+    "chart": "States goal of staying strong enough to keep working his job",
+    "says": "Long as I can keep doing my job and not break down, that's all that matters to me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "goals",
+    "topic": "wife's concern",
+    "chart": "States goal of not wanting his wife to worry about his health",
+    "says": "I don't want my wife up at night worrying about me, you know? That's the last thing I need.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "social",
+    "topic": "household help with meals",
+    "chart": "Reports household has little day-to-day support for meal planning or cooking despite large size",
+    "says": "Seven people in that house and nobody's got time to sit down and plan a meal together. Everybody's doing their own thing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "social",
+    "topic": "financial strain",
+    "chart": "Hints that household finances are tight some weeks, deflects when pressed",
+    "says": "Eh, some weeks it's tighter than others, you know how it is - hey, speaking of tight, you believe what they're charging for gas now?",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "nutrition",
+    "topic": "grocery purchasing habits",
+    "chart": "Reports buying the cheapest food available per ounce regardless of nutritional content",
+    "says": "I'm the guy checking price per ounce in the aisle. Whatever stretches the furthest, that's what goes in the cart.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "adherence",
+    "topic": "OTC purchase habits",
+    "chart": "Admits sometimes skipping picking up an OTC item at the pharmacy to save money that week",
+    "says": "Sometimes I just skip grabbing something at the pharmacy that week if money's funny. It's not a big deal, I make do.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "other",
+    "topic": "healthcare priorities in household",
+    "chart": "Reports he and his wife prioritize children's and in-laws' medical and dental needs over his own given limited household income",
+    "says": "Look, when it comes down to it, the kids and her folks get seen first. I'll get around to my own stuff eventually.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "nutrition",
+    "topic": "grocery brand choices",
+    "chart": "Reports recently switching to cheaper bulk chips and off-brand cold cuts as grocery budget tightened",
+    "says": "I started grabbing the bigger bag of the store-brand chips and the no-name cold cuts instead. Nobody's noticed, it's fine.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "psychosocial",
+    "topic": "feelings about cooking role",
+    "chart": "Reports embarrassment about not being able to prepare a full home-cooked meal for his family, masks it with humor",
+    "says": "Honestly? Kind of embarrassing, man, forty-three years old and I still can't throw together a real dinner for my own family. I just joke about being too busy so nobody asks.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks a couple of beers on weekends with brothers-in-law, denies heavy drinking",
+    "says": "I'll have a couple beers with my brothers-in-law on the weekend, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "family",
+    "topic": "truck as hobby",
+    "chart": "Reports fixing up an older pickup truck himself as a hobby, source of pride",
+    "says": "This truck right here, I've fixed up almost everything on it myself. That's my thing.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review weight history/trend",
+    "aliases": [],
+    "result": "Weight 94.9 kg on 2023-09-14 vs 97.4 kg on 2025-09-18, a gain of 2.5 kg over about 2 years",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review problem list and recent visit history",
+    "aliases": [],
+    "result": "Problem list: BMI 30+ - obesity (since 2025). Recent encounters: acute viral pharyngitis Nov-Dec 2025 (resolved); dental cleaning/exam/consultation 2020-12-10; no other visits on record since.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review medication and supplement list",
+    "aliases": [],
+    "result": "No prescription medications. OTC/supplements: generic multivitamin, Tums (as needed for heartburn), occasional ibuprofen (as needed for back soreness)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall / typical day intake assessment",
+    "aliases": [],
+    "result": "Patient reports: no breakfast, sugared coffee instead; grazes on chips, cold cuts, leftover rice, and gas-station snacks through a 14-16 hour day; fried chicken a few times a week; large late meal around 10-11pm often finishing kids' leftovers with seconds; drinks mostly sweet tea and soda, minimal water",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Screen for food security / household resources",
+    "aliases": [],
+    "result": "Patient initially says 'we manage fine,' then acknowledges some weeks are tight and he shops by lowest price per ounce regardless of brand; household of 7 on Medicaid",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess readiness to change (stage-of-change screening)",
+    "aliases": [],
+    "result": "Patient does not identify weight as a problem requiring action; minimizes BMI finding by comparing himself to larger coworkers; consistent with precontemplation",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Screen alcohol use (brief use pattern check)",
+    "aliases": [],
+    "result": "Reports a couple of beers on weekends with brothers-in-law, denies daily or heavy drinking, no history of alcohol-related problems",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Review physical activity pattern",
+    "aliases": [],
+    "result": "On his feet operating a forklift during work shifts; sedentary at home with no structured exercise; reports 'work is enough exercise'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review oral/dental exam note",
+    "aliases": [],
+    "result": "Last dental visit 2020-12-10: exam showed mild gum recession and tartar buildup; cleaning performed; no dental visits on record since",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess sleep pattern",
+    "aliases": [],
+    "result": "Reports 5-6 hours per night, broken sleep due to irregular shift hours and a noisy household",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 118/87 mmHg, heart rate 80/min, respiratory rate 14/min, weight 97.4 kg, height 180 cm, BMI 30.1 kg/m2, weight change +2.5 kg since 2023-09-14 (recorded 2025-09-18).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 204.2 mg/dL; LDL cholesterol 131.7 mg/dL; HDL cholesterol 49.2 mg/dL; Triglycerides 116.7 mg/dL; Haemoglobin 14.7 g/dL; White cell count 6.3 10*3/uL; Platelets 357.9 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-09-18); Hep A adult (2025-09-18); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2025-09-18); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-06-03).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Visit History Summary",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-12-02",
+    "author": "Primary Care Clinic, East Orange NJ",
+    "body": "Encounter history on file:\n- 2025-11-18 to 2025-12-02: Acute viral pharyngitis, resolved with supportive care.\n- 2025-09-18: Routine physical exam. BMI flagged at 30.1 kg/m2; referral placed for telehealth nutrition assessment. Vitals BP 118/87, HR 80, RR 14. Lipid panel drawn same day (see lab report).\n- 2020-12-10: Dental visit - examination of gingivae; removal of supragingival and subgingival plaque/calculus; dental consultation and report. Findings: mild gum recession, tartar buildup. No dental follow-up visits documented since this date.\n- 2020-08-16: Face mask (physical object) dispensed, COVID-era visit, no other findings.\nNo other encounters on file. No prior nutrition or weight-management visits documented."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 2025)\n\nRECENTLY RESOLVED\nAcute viral pharyngitis (2025-11 to 2025-12)\n\nPROCEDURES\n2020-12-10: Examination of gingivae (Gingivitis)\n2020-12-10: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2020-12-10: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2020-12-10: Dental care (Gingivitis)\n2020-12-10: Dental consultation and report (Gingivitis)\n2020-08-16: Face mask (physical object) (Suspected disease caused by Severe acute respiratory coronavirus 2)\n\nRECENT ENCOUNTERS\n2025-11-29 ambulatory: Encounter for symptom (Acute viral pharyngitis)\n2025-09-18 wellness: General examination of patient\n2023-09-14 wellness: General examination of patient\n2021-06-03 outpatient: Administration of vaccine to produce active immunity\n2021-05-13 outpatient: Administration of vaccine to produce active immunity\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: None recorded"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "204.2",
+        "mg/dL",
+        "< 200",
+        "2025-09-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "131.7",
+        "mg/dL",
+        "< 100",
+        "2025-09-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "49.2",
+        "mg/dL",
+        ">= 40",
+        "2025-09-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "116.7",
+        "mg/dL",
+        "< 150",
+        "2025-09-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "14.7",
+        "g/dL",
+        "12.0-17.5",
+        "2023-09-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.3",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-09-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "357.9",
+        "10*3/uL",
+        "150-450",
+        "2023-09-14"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Apply motivational interviewing techniques to engage a patient in precontemplation who denies his weight is a problem, using his own stated goals as motivational levers rather than direct advice-giving",
+    "factIds": [
+     "s3",
+     "s4",
+     "s7",
+     "s8",
+     "s9"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Elicit a detailed diet history from a patient with an irregular grazing pattern and translate scattered intake across a long day into an assessable eating pattern",
+    "factIds": [
+     "h5",
+     "s6"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate anthropometric data and laboratory results into a nutrition assessment, distinguishing clinically relevant findings from normal/incidental results",
+    "factIds": [
+     "h14",
+     "h24"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a3",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explore financial, household, and scheduling barriers to healthy eating in a patient who is reluctant to disclose economic strain, using sensitive, non-judgmental questioning",
+    "factIds": [
+     "s10",
+     "s11",
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify a discrepancy between a patient's self-reported health follow-through and the documented record, and address it respectfully without shaming the patient",
+    "factIds": [
+     "h17"
+    ],
+    "actionIds": [
+     "a13",
+     "a6"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Document a complete nutrition assessment using the ADIME format, culminating in an appropriate nutrition diagnosis grounded in diet history, anthropometrics, labs, and psychosocial barriers",
+    "factIds": [
+     "h14",
+     "s6",
+     "s10"
+    ],
+    "actionIds": [
+     "a8",
+     "a9",
+     "a12",
+     "asyn1",
+     "asyn2"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake related to irregular grazing pattern, large late-night meal, and frequent sugar-sweetened beverage intake, as evidenced by BMI 30.1 kg/m2 (up from 29.3 kg/m2 two years ago), self-reported skipping of fixed meals, reliance on energy-dense convenience foods, and sweetened beverages as primary hydration source",
+   "differential": [
+    "Excessive energy intake (grazing/snacking pattern, nutrition diagnosis)",
+    "Undesirable food choices (saturated fat/refined carbohydrate heavy pattern) contributing to elevated LDL",
+    "Limited access to healthy food/beverages related to financial resource constraints",
+    "Not ready for diet/lifestyle change (precontemplation stage) impacting readiness for nutrition intervention"
+   ],
+   "keyFindings": [
+    "BMI 30.1 kg/m2 (height 180 cm, weight 97.4 kg), up from BMI 29.3 kg/m2 (94.9 kg) in 2023 - a +2.5 kg gain over ~2 years",
+    "Total cholesterol 204.2 mg/dL (ref <200) and LDL 131.7 mg/dL (ref <100) mildly elevated; HDL 49.2 mg/dL and triglycerides 116.7 mg/dL both within normal range",
+    "No fixed meal schedule; grazes across a 14-16 hour day on chips, cold cuts, leftover rice, gas-station snacks, fried chicken, honey buns",
+    "Skips breakfast; relies on sugared coffee",
+    "One large meal late at night (10-11pm), often finishing children's leftover plates, frequently takes seconds",
+    "Hydration almost entirely sweet tea and soda; reports water 'doesn't fill him up'",
+    "Sedentary at home despite active forklift shifts; no structured exercise",
+    "Household of 7 on ~$16,700/year income, Medicaid-insured; buys cheapest food per unit cost",
+    "Reports being 'due' for a dental cleaning, implying a recent visit, but dental record shows last cleaning/exam was December 2020 - about five years prior",
+    "Precontemplation stage: minimizes BMI relevance, compares self favorably to coworkers, resists direct advice, distrusts dietitian guidance in favor of online sources"
+   ],
+   "plan": [
+    "Build rapport and use motivational interviewing (open-ended questions, reflective listening, affirmations) rather than direct advice-giving, given precontemplation stage",
+    "Elicit and document a 24-hour recall / typical day intake to quantify grazing pattern and late-night meal portions",
+    "Explore readiness to change using his own stated motivators (keeping up with work, not getting winded helping father-in-law, not worrying his wife) rather than imposing external goals",
+    "Gently explore financial barriers to food and healthcare access using non-judgmental, open-ended questions; validate without probing further if he deflects",
+    "Offer low-cost, low-effort swaps aligned with his existing routine if he shows any openness (e.g., unsweetened/lower-sugar beverage options, pairing a protein with existing snack choices) - framed as his choice, not prescription",
+    "Correct inaccurate nutrition beliefs (e.g., 'diets are a scam') gently and collaboratively, without directly contradicting him, offering evidence-based information as one more input alongside what he's read",
+    "Document ADIME note: Assessment (diet history, anthropometrics, labs, psychosocial/financial barriers), Diagnosis (excessive energy intake related to grazing pattern as evidenced by BMI 30.1 and dietary recall), Intervention (education/counseling offered, patient's response), Monitoring/Evaluation plan (follow-up visit, re-weigh, reassess readiness to change)",
+    "Recommend follow-up telehealth visit to reassess readiness and revisit any small changes attempted",
+    "Flag the dental care gap (last visit 2020) for the primary care team as a care-coordination note, without turning this visit into a dental lecture"
+   ],
+   "redFlags": [
+    "Weight trending upward over two years without a clear plateau or reversal",
+    "Mild dyslipidemia (elevated total cholesterol and LDL) that could progress without any lifestyle shift",
+    "Household food insecurity dynamics affecting both nutrition and healthcare utilization (skipping OTC pickups, deferring his own dental/medical care)",
+    "Low readiness to change combined with no support system for meal planning or cooking, increasing risk of continued or worsening weight trend"
+   ],
+   "educationPoints": [
+    "Explain BMI as one piece of a bigger picture (muscle mass, fat distribution, labs) rather than a single verdict, to reduce defensiveness",
+    "Normalize that eating patterns shaped by shift work and tight budgets are common and not a personal failing",
+    "Introduce the idea of 'swaps' rather than restriction - keeping familiar, affordable foods but adjusting frequency, portion, or pairing (e.g., protein with chips) to work within his existing routine",
+    "Clarify the difference between hydration needs and feeling full, and offer low-cost alternatives to sweetened beverages (e.g., unsweetened iced tea, infused water) without insisting he give up soda entirely",
+    "Briefly explain how a late, large meal plus limited daytime structure can affect how full/hungry he feels, inviting him to notice this rather than telling him it's wrong",
+    "Reinforce his autonomy and the fact that any changes are his choice, tying potential benefits directly to his stated goals (work stamina, keeping up with family, not worrying his wife)"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Brooks implies he's 'due' for a dental cleaning and hasn't been in just a few months, minimizing the gap when asked about dental follow-up",
+    "recordEvidence": "Dental exam, cleaning, and plaque/calculus removal performed 2020-12-10, with no dental visits documented since - a gap of about five years",
+    "teachingPoint": "Patients may minimize gaps in self-care follow-through, especially when embarrassed; cross-checking visit history against patient report helps the clinician gently surface care-coordination needs without confrontation",
+    "factId": "h17",
+    "artifactId": "d2"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Brooks says his weight is basically unchanged and he hasn't noticed significant change recently, framing tighter pants as just getting older",
+    "recordEvidence": "Weight trend shows 94.9 kg on 2023-09-14 versus 97.4 kg on 2025-09-18, a 2.5 kg gain over about two years, corresponding to a BMI increase to 30.1 kg/m2",
+    "teachingPoint": "Patients in precontemplation may genuinely underperceive gradual weight change; comparing current anthropometrics to documented trend data provides objective evidence to anchor a non-judgmental conversation about the nutrition diagnosis"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 7,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "43 M ·  · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "069da380",
+   "fingerprint": "1ovycv9"
+  }
+ }
+}

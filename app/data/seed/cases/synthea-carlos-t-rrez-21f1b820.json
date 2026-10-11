@@ -1,0 +1,931 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Fragile Early Action-Stage Behavior Change in a 25-Year-Old with Newly Diagnosed Prediabetes",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment for a 25-year-old with newly diagnosed prediabetes whose outward agreeableness ('whatever you think is best, doc') masks low health literacy, unaddressed food insecurity, and a misunderstanding that cutting soda alone will resolve his risk. The core teaching point is a patient-chart mismatch: Carlos sincerely believes he's following the diabetes self-management handout, but the visit record shows no teach-back was documented, and he reluctantly admits the handout is still unopened in a drawer — requiring the learner to use teach-back rather than written materials and to protect his fragile three-week-old behavior change without shaming him. Several labs and vitals (potassium, sodium, BUN, old CBC) are deliberately normal red herrings to test whether students stay focused on nutrition-relevant findings.\"}",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in South Brunswick, New Jersey, calling from his kitchen on a break before an evening warehouse shift",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Carlos Tórrez",
+   "age": 25,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, hispanic",
+   "occupation": "Part-time warehouse associate at a regional distribution center, picking and packing orders on rotating shifts",
+   "language": "Bilingual Spanish-English; more comfortable speaking and reading in Spanish than parsing dense English medical paperwork",
+   "appearance": "A heavier-set young man with mild acne scarring and slightly oily skin, sitting in a small kitchen with a soda can and a bottle of multivitamin gummies visible on the counter behind him. He leans toward the camera, smiles often, and nods along энергично even before questions are finished; at one point he picks up a printed handout, squints at it, holds it at arm's length, then sets it face-down out of frame.",
+   "portrait": "/portraits/synthea-carlos-t-rrez-21f1b820.jpg"
+  },
+  "persona": {
+   "personality": "Warm, talkative, eager to please; fills silences with jokes and chatter, genuinely likes people and wants them to think well of him. Covers insecurity about reading/understanding with humor and quick agreement.",
+   "communicationStyle": "Agreeable and deferential, frequently defers with phrases like 'whatever you think is best, doc' or 'you're the expert, I'll do what you say' rather than stating his own preference; needs gentle, specific questions and teach-back prompts to reveal his real understanding and habits. Mixes in occasional Spanish words/phrases. Speaks quickly, smiles and nods a lot on camera.",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly upbeat and friendly, but underneath feels anxious about backsliding and quietly embarrassed about his reading/comprehension struggles; fears being seen as 'slow' by clinicians and family.",
+   "background": "Carlos is 25, works part-time rotating shifts as a warehouse associate picking and packing orders at a regional distribution center in South Brunswick, NJ. He lives with his younger brother. He grew up in a bilingual Spanish-English household in central New Jersey, more comfortable speaking and reading Spanish than parsing dense English paperwork, though he gets by fine in conversation. He has two adult kids from a previous relationship who live nearby and call often. He used to play pickup soccer with his cousins on weekends but does that less now with his schedule. He likes making people laugh and tends to agree quickly rather than cause friction.",
+   "speechExamples": [
+    "Whatever you think is best, doc, you're the expert here!",
+    "Honestly? I'm better with numbers on a scale than numbers on a label, haha.",
+    "My tío's on the dialysis thing now, that kinda scared me straight.",
+    "They mean well, my kids, but sometimes I just say okay okay so they stop.",
+    "Yeah yeah, water instead of soda, I been doing that, mostly."
+   ],
+   "concerns": [
+    "Worried the changes he started a few weeks ago won't stick once work gets busy or money gets tight again",
+    "Afraid of looking foolish if he asks what a label or medical term means",
+    "Feels guilty when he can't afford the 'healthy' foods his daughter suggests",
+    "Scared of ending up like his uncle, on insulin and dialysis"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. The patient, Carlos Tórrez, is a 25-year-old part-time warehouse associate recently told he has prediabetes at a wellness visit, now referred to you for diet counseling and follow-up. Review his chart before the call, then connect with him by video while he's on a break in his kitchen before his evening shift.",
+   "chiefComplaint": "Follow-up nutrition visit after being told he has prediabetes at a recent wellness check, referred for diet counseling",
+   "openingLine": "Hey hey, how's it going? Yeah so my doctor told me I got this prediabetes thing a few weeks back, said I should talk to someone like you about my eating. I've been trying to do better, I think!",
+   "tasks": [
+    "Take a focused diet history including meal pattern, typical foods, portion sizes, and recent changes",
+    "Assess barriers to healthy eating such as budget, food access, work schedule, and material/instruction comprehension",
+    "Review relevant anthropometric and laboratory data from the chart in the context of the nutrition assessment",
+    "Clarify the patient's understanding of his condition and any nutrition guidance already given, using teach-back",
+    "Deliver patient-centered counseling that reinforces existing progress and sets one realistic, collaborative next step"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after being told he has prediabetes at a recent wellness check, referred for diet counseling"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care clinic (South Brunswick, NJ); referred to outpatient dietetics for nutrition counseling"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not clinically applicable, outpatient)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Prediabetes (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for follow-up nutrition counseling after being newly diagnosed with prediabetes at wellness visit.",
+    "says": "So yeah, my doctor said I got the pre-diabetes thing, and she wanted me to talk to someone about my eating.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent diagnosis timing",
+    "chart": "Reports diagnosis of prediabetes made at wellness visit on 2026-05-24.",
+    "says": "It was like three weeks ago, end of May, when they called me with the blood work.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "recent dietary changes",
+    "chart": "Reports initiating dietary changes approximately 3 weeks ago, including replacing soda with water and adding vegetables.",
+    "says": "Since then I've been drinking a lot more water instead of soda, and trying to put some veggies on my plate.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "energy levels",
+    "chart": "Reports occasional afternoon fatigue around 3pm during work shifts.",
+    "says": "I get kinda tired around 3 o'clock at work, but I figure that's just the job, you know?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "weight change over time",
+    "chart": "Reports clothes fitting tighter than a couple years ago.",
+    "says": "My pants are tighter than they used to be, for sure, maybe the last couple years.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "thirst pattern",
+    "chart": "Reports increased thirst, particularly after eating salty foods.",
+    "says": "I do get thirsty more now, especially after I eat something salty.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "self-assessment of blood sugar",
+    "chart": "States he judges his glucose control by whether he feels tired rather than any objective measure.",
+    "says": "As long as I'm not falling asleep at work, I figure my sugar's probably fine.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "understanding of diagnosis",
+    "chart": "States belief that prediabetes means he already has diabetes, just not officially diagnosed.",
+    "says": "So I basically got diabetes already, right? Just not official yet, that's what I think they said.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurry vision.",
+    "says": "My eyes are fine, no blurry vision or nothing.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "urination pattern",
+    "chart": "Denies increased urinary frequency.",
+    "says": "I'm not running to the bathroom more than usual.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness or tingling in hands or feet.",
+    "says": "No tingling or numb feeling in my hands or feet, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "wound healing",
+    "chart": "Denies slow-healing cuts or sores.",
+    "says": "Cuts and stuff heal up normal for me, no problems there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "appetite changes",
+    "chart": "Denies unintentional weight loss or appetite loss; notes weight gain instead.",
+    "says": "I haven't lost weight or lost my appetite, if anything I been eating fine, maybe too much.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "digestive symptoms",
+    "chart": "Reports occasional indigestion after eating quickly, relieved with antacid.",
+    "says": "Sometimes if I eat too fast my stomach gets upset, that's why I keep the Tums in the car.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "skin changes",
+    "chart": "No darkening or thickening of skin noted at neck or skin folds by patient report.",
+    "says": "I haven't noticed anything weird with my skin, like dark patches or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "past respiratory illness",
+    "chart": "History of acute bronchitis in June 2021, resolved.",
+    "says": "I had bronchitis a few years back, like 2021, but that cleared up fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "past sinus illness",
+    "chart": "History of sinusitis from July to August 2023, resolved.",
+    "says": "I had a sinus infection a couple summers ago, took some meds, went away.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "chronic conditions",
+    "chart": "No history of diabetes, hypertension, or hyperlipidemia prior to current prediabetes diagnosis.",
+    "says": "Before this, I never had any health problems like that, no high blood pressure or nothing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "dental history",
+    "chart": "History of routine dental cleaning and fluoride treatment in July 2021, no complications.",
+    "says": "I had my teeth cleaned a few years back, nothing crazy, just a regular cleaning.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No surgical history reported.",
+    "says": "I never had any surgeries or operations, nope.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "prescribed medications",
+    "chart": "No prescribed medications currently.",
+    "says": "I'm not on any prescription meds or anything like that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "over the counter products",
+    "chart": "Reports taking an over-the-counter multivitamin gummy most days and keeping calcium carbonate antacid tablets available for occasional use.",
+    "says": "I take one of them gummy vitamins from the dollar store most days, and I got Tums in the glovebox for when I eat too fast.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household makeup",
+    "chart": "Lives with younger adult brother, household of 2",
+    "says": "It's just me and my brother at the apartment right now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time at warehouse with rotating shifts, picking and packing orders",
+    "says": "I'm at the warehouse part-time, but the shifts rotate so some weeks I'm up at 4am and some weeks I'm there till midnight.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family health history",
+    "chart": "Reports uncle with diabetes, now on insulin and dialysis",
+    "says": "My tío, he's on the dialysis thing now, started with the sugar and then the insulin shots and now his kidneys. That scares me, man.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "adult children involvement",
+    "chart": "Reports adult children frequently call to check in and offer health advice",
+    "says": "My kids, they call me like every other day, 'Dad did you eat your veggies, Dad did you check this out,' they mean well.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "decision-making style",
+    "chart": "Frequently defers to clinician preference rather than stating own choice when offered options",
+    "says": "Whatever you think is best, doc, you're the expert, I'll do what you say.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "goals",
+    "topic": "health goals",
+    "chart": "States goal of losing weight gained in recent years and avoiding insulin/dialysis like his uncle",
+    "says": "I just don't want to end up like my tío, you know, on the needles and the machine. I want to lose some of this weight too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s7",
+    "category": "goals",
+    "topic": "motivation source",
+    "chart": "Motivated by wanting children to stop worrying and to be seen as 'doing better'",
+    "says": "My kids keep checking on me, I want them to see I'm doing better, not worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "function",
+    "topic": "daily activity level",
+    "chart": "Reports being on feet most of shift walking and lifting; no structured exercise outside work",
+    "says": "I'm walking around all shift, lifting boxes, so I feel like that's exercise, but I don't do anything extra after.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "function",
+    "topic": "recreational activity",
+    "chart": "Used to play pickup soccer with cousins on weekends, now less often",
+    "says": "Me and my cousins used to play soccer on Sundays but lately I'm either too tired or working.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s10",
+    "category": "social",
+    "topic": "sleep pattern",
+    "chart": "Sleep irregular due to rotating shifts, averages 5-6 hours before early shifts",
+    "says": "Some nights I'm only getting like 5, 6 hours before I gotta be up for an early one.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s11",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks 1-2 beers on weekends with friends, AUDIT-C score 1; never smoked",
+    "says": "I'll have a beer or two with the guys on the weekend, that's about it. Never smoked, nah.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "social",
+    "topic": "financial constraints",
+    "chart": "Reports tight food budget on part-time income affecting food choices",
+    "says": "Money's tight some weeks, so I buy what fills us up, you know, not always what's the healthiest.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "social",
+    "topic": "food assistance use",
+    "chart": "Occasionally uses food pantry near end of month when money is short",
+    "says": "Sometimes toward the end of the month I'll go to the food pantry, when things get tight.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "paperwork and reading comfort",
+    "chart": "Reports more comfort speaking and reading in Spanish than parsing English medical paperwork",
+    "says": "I speak Spanish at home, so sometimes the English papers from the doctor, the words get all mixed up on me.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "appointment behavior",
+    "chart": "Admits sometimes nods along during appointments despite confusion to avoid appearing slow",
+    "says": "Sometimes I just nod and say okay okay even when I'm not totally following, I don't want to seem slow, you know?",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "family",
+    "topic": "explaining concepts to family",
+    "chart": "Admits pretending to understand glycemic index when children explain it so they stop repeating it",
+    "says": "Honestly when my daughter starts explaining the glycemic thing, I just say I get it so she stops, even if I don't really.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "psychosocial",
+    "topic": "asking for help with labels",
+    "chart": "Embarrassed to ask children for help reading nutrition labels",
+    "says": "I don't really ask my kids to help me with the labels, I'd feel kinda dumb asking that.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "adherence",
+    "topic": "handout follow-through",
+    "chart": "Reports he reviewed the diabetes self-management handout and is following it, actual engagement with document uncertain",
+    "says": "Yeah I looked that over, I'm doing what it says pretty much.",
+    "tier": "hidden",
+    "importance": "critical"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review 2026-05-24 wellness visit summary",
+    "aliases": [],
+    "result": "See Visit Summary 2026-05-24 document: HbA1c 6.4%, fasting glucose 89.2 mg/dL, prediabetes diagnosed; 'Diabetes self-management plan' handout given to patient; no documented teach-back or follow-up questions recorded.",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: skips breakfast most days before early shifts; packed sandwich (white bread, store-brand peanut butter) for lunch; dinner is rice and beans most nights, sometimes fried chicken or pork chops when on sale; large dinner portions; 1-2 sodas or energy drinks on tired days; mostly water otherwise; occasional instant ramen when money is tight.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage of change",
+    "aliases": [],
+    "result": "Patient reports starting to swap soda for water and add vegetables about three weeks ago, after being told about prediabetes. States he worries a bad week at work could knock him off track.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Screen food security and access (e.g., Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient reports occasionally running out of food money before the end of the month and visiting a food pantry a few times; says pantry food is 'mostly cans and bread' and he doesn't expect much from it.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess health literacy / teach-back on handout content",
+    "aliases": [],
+    "result": "Patient initially states he read the handout and is following it. When asked to explain glycemic index or point to the 'added sugars' line on a label, he hesitates, laughs it off, and eventually admits the handout 'is still in a drawer' and he hasn't opened it; says the words 'get all jumbled up' when he tries to read medical papers.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports being on his feet most of his shift walking and lifting, but no structured exercise outside work; used to play pickup soccer with cousins on weekends, now less often.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 1; reports 1-2 beers on weekends with friends, never smoked.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess sleep pattern",
+    "aliases": [],
+    "result": "Patient reports irregular sleep due to rotating shifts, typically 5-6 hours before early shifts.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review medication and supplement list",
+    "aliases": [],
+    "result": "No prescribed medications. OTC: generic multivitamin gummies 'most days'; Tums kept in glovebox for fast eating.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Assess family/social support around eating habits",
+    "aliases": [],
+    "result": "Patient reports his two adult children call often and remind him about his health; he says 'they mean well' and that he 'already knows, mostly' what they tell him.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 112/71 mmHg, heart rate 91/min, respiratory rate 12/min, weight 81 kg, height 179.4 cm, BMI 25.2 kg/m2, weight change +5.5 kg since 2023-05-21 (recorded 2026-05-24).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.4 %; Glucose 89.2 mg/dL; Haemoglobin 14.3 g/dL; White cell count 10.4 10*3/uL; Platelets 429.2 10*3/uL; Potassium 5.1 mmol/L; Sodium 136.3 mmol/L; Urea nitrogen 8.3 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-05-24); meningococcal MCV4P (2023-05-21); Hep B adult (2023-05-21); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2023-05-21); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-09-19).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Visit Summary - Wellness Visit 2026-05-24",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "date": "2026-05-24",
+    "author": "Primary Care Clinic, South Brunswick NJ",
+    "body": "25yo M presents for routine wellness visit. New diagnosis: Prediabetes based on HbA1c 6.4% and fasting glucose 89.2 mg/dL. BMI 25.2, up from prior documented weight in 2023. Reviewed general dietary recommendations verbally. 'Diabetes Self-Management Plan' handout (English/Spanish bilingual print) given to patient to take home. Advised to reduce sugar-sweetened beverage intake and increase physical activity. Referral placed to outpatient dietetics for nutrition counseling. No teach-back documented. Follow-up labs recommended in 6 months."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPrediabetes (since 2026)\n\nRECENTLY RESOLVED\nAcute bronchitis (2021-06 to 2021-06)\nSinusitis (2023-07 to 2023-08)\n\nPROCEDURES\n2021-07-11: Dental fluoride treatment (Patient referral for dental care)\n2021-07-11: Examination of gingivae (Patient referral for dental care)\n2021-07-11: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2021-07-11: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2021-07-11: Dental care (Patient referral for dental care)\n2021-07-11: Dental consultation and report (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-05-24 wellness: General examination of patient\n2023-07-16 ambulatory: Encounter for symptom (Sinusitis)\n2023-05-21 wellness: General examination of patient\n2021-09-19 outpatient: Administration of vaccine to produce active immunity\n2021-08-29 outpatient: Administration of vaccine to produce active immunity\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.4",
+        "%",
+        "< 5.7",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "89.2",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "14.3",
+        "g/dL",
+        "12.0-17.5",
+        "2023-05-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "10.4",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-05-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "429.2",
+        "10*3/uL",
+        "150-450",
+        "2023-05-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "5.1",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "136.3",
+        "mmol/L",
+        "135-145",
+        "2026-05-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "8.3",
+        "mg/dL",
+        "7-20",
+        "2026-05-24"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Obtain a focused diet history (meal pattern, typical foods, portion sizes, recent changes) to identify total carbohydrate load beyond sugar-sweetened beverages.",
+    "factIds": [
+     "h3",
+     "s12"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess barriers to healthy eating including budget, food pantry access, rotating shift work, and written-material comprehension without shaming the patient.",
+    "factIds": [
+     "s12",
+     "s13",
+     "s14",
+     "s17",
+     "s10"
+    ],
+    "actionIds": [
+     "a9",
+     "a10",
+     "asyn2",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review relevant anthropometric and laboratory data in context, distinguishing findings pertinent to the nutrition diagnosis from normal/incidental values.",
+    "factIds": [
+     "h2"
+    ],
+    "actionIds": [
+     "asyn1",
+     "a2",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Use teach-back to clarify the patient's actual understanding of prediabetes, glycemic concepts, and prior nutrition guidance, recognizing when agreeableness masks confusion.",
+    "factIds": [
+     "h8",
+     "h7",
+     "s15",
+     "s16",
+     "s18"
+    ],
+    "actionIds": [
+     "a10",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Reinforce fragile early action-stage behavior change and explore family dynamics that may undermine or support sustained progress.",
+    "factIds": [
+     "h3",
+     "s3",
+     "s4",
+     "s6",
+     "s7"
+    ],
+    "actionIds": [
+     "a8",
+     "a17"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Elicit pertinent negatives and psychosocial context (symptoms, substance use, activity, sleep) to complete a holistic nutrition assessment.",
+    "factIds": [
+     "h9",
+     "h10",
+     "h11",
+     "h12",
+     "h15",
+     "s8",
+     "s9",
+     "s11"
+    ],
+    "actionIds": [
+     "a12",
+     "a13",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prediabetes with excessive carbohydrate/energy intake relative to needs, driven by budget-limited food access, shift-work disrupted meal pattern, and fragile early action-stage behavior change (nutrition diagnosis: NI-5.8 Excessive carbohydrate intake / NB-1.1 Food- and nutrition-related knowledge deficit)",
+   "differential": [
+    "Prediabetes due to excess refined carbohydrate and portion size (primary)",
+    "Low health literacy limiting comprehension of written diabetes self-management materials (contributing factor, not a separate diagnosis)",
+    "Food insecurity / inconsistent access to preferred foods (contributing factor)",
+    "Irregular meal timing from rotating shift work (contributing factor)"
+   ],
+   "keyFindings": [
+    "HbA1c 6.4% (ref <5.7%, 2026-05-24) and fasting glucose 89.2 mg/dL (ref 70-99) consistent with prediabetes",
+    "BMI 25.2 kg/m2 with +5.5 kg weight gain since 2023-05-21",
+    "Diet pattern: skips breakfast, large late dinners (rice/beans, fried meats, white bread/peanut butter, ramen), believes cutting soda alone is sufficient",
+    "Started swapping soda for water and adding vegetables ~3 weeks ago (fragile action-stage change)",
+    "Occasional food pantry use near month's end; assumes pantry food 'isn't the healthy stuff'",
+    "Reluctantly admits he nods along when confused and has not actually read/followed the Diabetes self-management handout from 2026-05-24, despite initially stating he 'read it over' and is 'doing what it says' — mismatch with Visit Summary 2026-05-24 noting handout given with no documented teach-back",
+    "Potassium 5.1 mmol/L, sodium 136.3 mmol/L, BUN 8.3 mg/dL (2026-05-24) and hemoglobin 14.3 g/dL, WBC 10.4, platelets 429.2 (2023-05-21) all within normal limits — red herrings not relevant to the nutrition plan",
+    "No acanthosis nigricans documented; vitals BP 112/71, HR 91, RR 12 unremarkable"
+   ],
+   "plan": [
+    "Confirm understanding using teach-back rather than relying on written handouts; verify he can restate 2-3 concrete action items in his own words",
+    "Clarify misconception that soda is the only carbohydrate source that matters; introduce the concept of total carbohydrate load including rice, bread, and starchy staples using plate-method or portion visuals rather than numeric label literacy",
+    "Explore food pantry inventory and timing to identify realistic, affordable swaps (e.g., canned beans/vegetables, whole-grain bread if available) without implying pantry food is inadequate",
+    "Reinforce and praise the 3-week soda-to-water swap and vegetable additions to protect fragile motivation; problem-solve one small added goal rather than overhauling the whole diet",
+    "Address meal timing around rotating shifts (quick breakfast option, consistent lunch, moderating late large dinner portions)",
+    "Offer to walk through label reading together live on the call (teach-back) rather than sending another written handout; consider a translated or picture-based resource given Spanish-language comfort",
+    "Screen gently for health literacy barriers in a nonjudgmental way; avoid phrasing that could embarrass him in front of family",
+    "Document ADIME note; recommend follow-up visit in 4-6 weeks to reassess adherence and weight trend; no need to act on potassium/sodium/BUN or 2023 CBC values as they are normal"
+   ],
+   "redFlags": [
+    "None acutely; potassium 5.1 mmol/L is at the upper reference limit and should be noted but not acted upon in a nutrition visit (no diuretic/ACEi use, no symptoms) — recommend routine recheck at next labs rather than urgent referral",
+    "Weight gain trajectory (+5.5 kg in ~3 years) and HbA1c of 6.4% warrant continued monitoring for progression to type 2 diabetes if unaddressed"
+   ],
+   "educationPoints": [
+    "Prediabetes means blood sugar is higher than normal but not yet in the diabetes range; it is reversible with sustained changes to diet and activity, not an inevitable path to insulin or dialysis like his uncle",
+    "All carbohydrate sources — not just sugary drinks — affect blood sugar, including rice, bread, and starchy staples he already relies on; portioning these matters as much as cutting soda",
+    "Feeling fine or not tired is not a reliable way to judge blood sugar control; routine lab monitoring is still needed",
+    "Budget and food pantry use are not barriers to be ashamed of; pantry staples like canned beans and vegetables can fit into a prediabetes-friendly plate with simple pairing strategies",
+    "It's okay to ask a clinician to re-explain something or to request materials in Spanish; confusion about labels or handouts is common and nothing to feel embarrassed about",
+    "Small, sustained changes (like the soda-to-water swap he already made) matter more than perfect adherence to a written plan, and one difficult week does not erase that progress"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Carlos states he read over the 'Diabetes self-management plan' handout given at his wellness visit and is following it (h18).",
+    "recordEvidence": "Visit Summary 2026-05-24 (d1) documents the handout was given to the patient with no follow-up questions or teach-back completed.",
+    "teachingPoint": "Agreeable patients may overstate adherence to written materials to please the clinician; use teach-back rather than taking self-report at face value, especially when health literacy barriers are suspected.",
+    "factId": "h18",
+    "artifactId": "d1"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Carlos reports he's cut soda and believes that's the main dietary change that matters for his blood sugar (part of h3/discoverable belief about soda).",
+    "recordEvidence": "24-hour dietary recall (a7) and label-reading assessment (a11) reveal large nightly portions of rice and beans, white bread, and other starchy staples that contribute significant carbohydrate load beyond soda alone.",
+    "teachingPoint": "A patient's stated progress (soda reduction) can mask an incomplete understanding of total carbohydrate intake; a thorough diet history uncovers carbohydrate sources the patient does not recognize as relevant.",
+    "factId": "h3",
+    "artifactId": "d1"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 21,
+   "condition": "Prediabetes",
+   "conditionLabel": "25 M · Prediabetes · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "21f1b820",
+   "fingerprint": "1gofphd"
+  }
+ }
+}

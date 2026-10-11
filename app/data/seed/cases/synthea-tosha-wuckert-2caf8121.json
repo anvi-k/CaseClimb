@@ -1,0 +1,1212 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition counseling follow-up for a 71-year-old breast cancer survivor with prediabetes, obesity, and relapse to prior habits — hidden alcohol intake, medication misreading, and lapsed exercise",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment and MI-based counseling session with a cheerful, deflecting breast cancer survivor who has relapsed from prior post-diagnosis gains into nightly wine, skipped breakfast, large family dinners, and lapsed exercise. The core teaching points are detecting a patient-vs-screening mismatch in alcohol intake via AUDIT-C, recognizing low health literacy hidden behind humor, negotiating family-style meal modifications instead of an individual diet, and flagging medication-safety concerns (alendronic acid administration technique, possible opioid dose overlap) to the broader care team.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Ridgefield Park, New Jersey, sitting at her kitchen table",
+  "encounterType": "nutrition assessment and counseling (follow-up)",
+  "difficulty": 4,
+  "patient": {
+   "name": "Tosha Wuckert",
+   "age": 71,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Front desk coordinator at a dental office in Hackensack, NJ (full-time, 20+ years)",
+   "language": "English",
+   "appearance": "A heavier-set woman with a BMI in the obese range, sitting at her kitchen table with a mug of coffee nearby. She moves carefully in her chair, shifting to keep weight off her lower back, and there's mild guarding and stiffness visible in her neck and shoulders. Her breath has a faint minty-gum smell. A slight tremor is visible in her hands when she picks up a sheet of paper to 'read' from, and she pushes paperwork toward her husband, who is just offscreen, to finish for her. She's dressed neatly, smiling broadly, with reading glasses pushed up on her head that she never actually puts on.",
+   "portrait": "/portraits/synthea-tosha-wuckert-2caf8121.jpg"
+  },
+  "persona": {
+   "personality": "Warm, cheerful, quick with a joke, the type who makes everyone else feel at ease while quietly deflecting attention away from herself",
+   "communicationStyle": "Chatty and friendly, answers hard questions with a story about someone else, humor thins and she goes quiet for a beat when pressed on alcohol, pain pills, or exercise before bouncing back with another joke; calls her labs 'my numbers' and medications 'my pills'",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly cheerful and upbeat, underneath quietly worried about cancer recurrence, her drinking, and slipping back into old habits; a little embarrassed about not finishing school and about not being able to read small print easily",
+   "background": "Tosha has worked the front desk at the same Hackensack dental office for over twenty years and prides herself on remembering every patient's name. She's been the family cook since she was a teenager helping her mother, and Sunday dinners around a full table are, to her, what love looks like. She sings alto in her Lutheran church choir and has for fifteen years, and Wednesday choir practice and Sunday potluck are the anchors of her week. Her husband is a retired postal worker who does the weekend grocery run with her, and they share the house with two other family members. She has two grown kids and is hoping for grandchildren soon.",
+   "speechExamples": [
+    "Oh honey, you know how it is — I just eyeball things when I cook, been doing it so long I don't need a measuring cup!",
+    "A little wine never hurt anybody, my grandmother lived to ninety-five on a glass of sherry every night!",
+    "Here, let my husband fill that part out, his eyes are better than mine these days, ha!",
+    "I guess I got a little comfortable again — old habits, you know? Anyway, did I tell you about my grandbaby that's on the way?",
+    "Oh, I take my pills just fine, don't you worry about me."
+   ],
+   "concerns": [
+    "Worried the cancer could come back",
+    "Quietly scared her drinking has crept up more than she lets on",
+    "Afraid of becoming dependent on her pain medication",
+    "Doesn't want to feel like she's being told to stop cooking for her family the way she always has"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are joining a telehealth video visit as the dietetics student. The patient is Tosha Wuckert, a 71-year-old woman referred for nutrition counseling follow-up as part of her ongoing care after breast cancer surveillance, prediabetes, and obesity. Review the chart before the call. Your job is to complete a nutrition assessment, identify a nutrition diagnosis, and begin patient-centred counseling using motivational interviewing.",
+   "chiefComplaint": "Referral for nutrition counseling follow-up to help manage prediabetes and weight as part of ongoing survivorship care",
+   "openingLine": "Hi hi, come on in! I'm Tosha — well, you can probably see I'm not going anywhere fast today, ha! They sent me your way to talk food, I guess, on account of my numbers and all this extra I'm carrying. Fire away, honey, I'm an open book... mostly!",
+   "tasks": [
+    "Take a focused diet and lifestyle history, including meal pattern, portion sizes, and beverage intake",
+    "Screen for alcohol use with a structured tool and gently explore any gap between what she reports and what the screening suggests",
+    "Assess her health literacy and adapt your explanations and any materials accordingly",
+    "Explore her current physical activity and any changes from what she has done in the past",
+    "Negotiate at least one realistic, family-meal-friendly change using motivational interviewing rather than prescribing an individual diet"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for nutrition counseling follow-up as part of ongoing care after breast cancer surveillance and for help managing prediabetes and weight"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider; Oncology surveillance team; Pharmacy; Referring provider for nutrition counseling"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Past pregnancy history of miscarriage (since 1986); Body mass index 30+ - obesity (since 1999); Malignant neoplasm of breast (since 1999); Prediabetes (since 2007); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014); Osteoporosis (since 2025); Unhealthy alcohol drinking behavior (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule; Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet; Alendronic acid 10 MG Oral Tablet; Vitamin B12 5 MG/ML Injectable Solution"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for nutrition counseling follow-up as part of ongoing care after breast cancer surveillance, for management of prediabetes and obesity.",
+    "says": "They sent me to talk to you about my eating and my weight, I guess, since my numbers came back a little high.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "cancer survivorship",
+    "chart": "Breast cancer survivor, diagnosed 1999, currently in surveillance. Recent mammogram, pelvic exam, and complete physical done 2026-01-03; colonoscopy scheduled 2026-06-29.",
+    "says": "I'm a breast cancer survivor, over 25 years now! Just had my mammogram and all my checkups in January, everything looked fine, thank the Lord.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "back and neck pain",
+    "chart": "Reports chronic low back and neck pain since 2014, attributed to years of standing at work; pain flares with prolonged standing, such as cooking.",
+    "says": "I've got some back and neck trouble from all my years on my feet at the dentist's office. Standing at the stove too long and oh, I feel it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "morning stiffness",
+    "chart": "Reports morning neck stiffness that improves by midday.",
+    "says": "My neck's stiff as a board when I wake up, but it loosens up once I get moving.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "fatigue",
+    "chart": "Reports general fatigue, attributes to aging.",
+    "says": "I'm tired a lot but honestly, who isn't at 71? I just figure that's getting old.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "heartburn after meals",
+    "chart": "Reports occasional heartburn after large family dinners, uses antacids as needed.",
+    "says": "Sometimes after a big dinner I get that burning feeling, but a couple of Tums and I'm good.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "sleep quality",
+    "chart": "Reports some nights of poor sleep, attributes to pain or stress.",
+    "says": "Some nights I just can't settle down, too much on my mind or my back's acting up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "ros_h8",
+    "category": "ros",
+    "topic": "energy and appetite",
+    "chart": "Denies unintentional weight loss or loss of appetite.",
+    "says": "My appetite's just fine, if anything too fine!",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies change in bowel habits, blood in stool, or abdominal pain.",
+    "says": "Everything down there works the way it's supposed to, no complaints.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, urination, or blurry vision.",
+    "says": "No, I'm not running to the bathroom all the time or seeing things funny.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "My heart's fine as far as I know, no fluttering or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "swelling or numbness",
+    "chart": "Denies leg swelling, numbness, or tingling.",
+    "says": "No swelling in my legs or anything going numb.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "falls or balance",
+    "chart": "Denies recent falls; reports occasional unsteadiness attributed to back stiffness.",
+    "says": "I haven't fallen or anything, just a little creaky getting up sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes since 2007; HbA1c 5.9% and fasting glucose 86 mg/dL on 2025-10-08.",
+    "says": "They've been telling me my sugar's borderline for years now. Not diabetes, but close, they say.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "Obesity since 1999, BMI 30.2 kg/m2, height 173.9 cm, weight 91.2 kg.",
+    "says": "I've carried extra weight since my cancer year, honestly. It's just always been like this for me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "bone health",
+    "chart": "Osteoporosis diagnosed 2025 following bone density scan on 2025-10-08.",
+    "says": "They told me last year my bones are getting thin, osteoporosis they called it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "chronic pain diagnosis",
+    "chart": "Chronic pain, chronic low back pain, and chronic neck pain since 2014.",
+    "says": "My back and neck pain's been going on since about 2014, it just never really went away.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "History of miscarriage, 1986.",
+    "says": "I lost a pregnancy a long, long time ago, back in the eighties. That's old news now.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "minor dental or sinus issues",
+    "chart": "History of resolved gingivitis/gingival disease (2021, 2022, 2024) and viral sinusitis (2025-02), all resolved.",
+    "says": "I've had some gum trouble over the years and a sinus thing earlier this year, but that all cleared up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "recent screening procedures",
+    "chart": "Recent screening procedures: mammography, manual pelvic exam, Pap smear preparation, and complete physical exam all performed 2026-01-03; colonoscopy scheduled 2026-06-29.",
+    "says": "I just did all my yearly check-off things in January, the mammogram, the lady-parts exam, all of it. Colonoscopy's coming up this summer.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "pain medication regimen",
+    "chart": "Takes extended-release hydrocodone 10 mg every 12 hours for chronic pain; reports taking it fairly regularly, sometimes stretches doses when finances are tight.",
+    "says": "I've got my regular pain pill, the long-acting one, every 12 hours. Sometimes I stretch it out a little longer if money's tight, make the bottle last.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "breakthrough pain medication",
+    "chart": "Takes acetaminophen 300mg/hydrocodone 5mg tablets as needed for breakthrough pain, a few times a week; adherence inconsistent, occasionally takes extra doses without checking against her other hydrocodone.",
+    "says": "On the real bad days I take one of my other pills too, the little white one. Sometimes I take an extra if it's really bad, I don't always do the math on it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "osteoporosis medication",
+    "chart": "Takes alendronic acid 10 mg weekly for osteoporosis.",
+    "says": "I take a bone pill once a week for the osteoporosis.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "B12 injections",
+    "chart": "Receives monthly B12 injection at physician's office; adherent to this appointment.",
+    "says": "I go in once a month for my B12 shot, never miss that one, the nurse is a hoot.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "over the counter use",
+    "chart": "Reports use of calcium chewables inconsistently, Tylenol PM on rough nights, turmeric capsules recommended by a friend, and Tums as needed.",
+    "says": "I take calcium chews sometimes, Tylenol PM on bad nights, some turmeric my friend from church swears by, and Tums are always in my purse.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h26",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with husband and two other household members in a 4-person home.",
+    "says": "It's a full house — me, my husband, and two of our family under one roof. Never a quiet moment!",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works full-time as a front desk coordinator at a dental office, 20+ years.",
+    "says": "I've been at that dental office so long I remember every patient's name before they even sit down.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "faith community",
+    "chart": "Active in Lutheran church community, including choir and weekly potluck/prayer group.",
+    "says": "My church is my second family — choir on Wednesdays, potluck Sundays, the whole shebang.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "family cooking role",
+    "chart": "Has been primary household cook since adolescence; cooks large traditional meals for family of four nightly.",
+    "says": "I've been cooking for people since I was a teenager helping my mother — it's just what I do.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "husband's role",
+    "chart": "Husband is a retired postal worker who assists with grocery shopping on weekends.",
+    "says": "My husband does the grocery runs on Saturdays — bless him, he knows exactly what I like.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s6",
+    "category": "family",
+    "topic": "grandchildren hopes",
+    "chart": "Has two grown children; hoping for grandchildren.",
+    "says": "No grandbabies yet, but I keep hoping — I want to be around to spoil them rotten.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "goals",
+    "topic": "eating pattern goal",
+    "chart": "Goal: return to eating pattern from a few years ago, before habits slipped.",
+    "says": "I just want to get back to how I was eating a few years back, before things kind of slipped.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "goals",
+    "topic": "family cooking continuity",
+    "chart": "Goal: continue cooking for her family in her usual style.",
+    "says": "Whatever we do, I don't want to stop cooking for my family the way I always have.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "goals",
+    "topic": "independence and health",
+    "chart": "Goal: stay out of the hospital and remain active enough to keep up with future grandchildren.",
+    "says": "I just want to stay out of the hospital and keep enough spring in my step to chase after grandkids someday.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "communication style",
+    "chart": "Tends to deflect serious or technical questions with humor or stories about others.",
+    "says": "Oh, you know how it is — hey, did I tell you what my choir director said last week?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "function",
+    "topic": "exercise class attendance",
+    "chart": "Reports attending water aerobics at the Y 'when I can' since starting it after her cancer diagnosis.",
+    "says": "I still do my water aerobics at the Y when I can fit it in.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "function",
+    "topic": "exercise class attendance",
+    "chart": "Has not attended her water aerobics class in three months and has not told her husband, to avoid worrying him.",
+    "says": "...honestly? I haven't been in a few months. Please don't tell my husband, he'll just fuss over me.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "nutrition",
+    "topic": "reading printed materials",
+    "chart": "Prefers verbal explanations over written handouts; avoids reading printed instructions aloud.",
+    "says": "Oh, I don't need the fine print, I just know what I'm doing! Why don't you just tell me instead?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "function",
+    "topic": "reading small print",
+    "chart": "Has difficulty reading small print on labels and instruction sheets, which she conceals with humor.",
+    "says": "These labels get smaller every year, I swear. My eyes just aren't what they used to be, ha.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "substance",
+    "topic": "evening wine amount",
+    "chart": "Reports drinking 'just one glass, maybe two' of wine most evenings.",
+    "says": "Oh, just a glass of wine with dinner, maybe two if it's a long day.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "evening wine amount",
+    "chart": "AUDIT-C screening on file is consistent with heavier intake than reported, closer to 3-4 drinks some evenings, more on weekends.",
+    "says": "...okay, some nights it's more like three or four glasses, especially on weekends when everyone's around. It just kind of crept up on me.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "substance",
+    "topic": "reasons for drinking",
+    "chart": "Uses wine in the evening to help with pain and stress, though minimizes this role.",
+    "says": "A little wine relaxes the nerves, that's all — my grandmother lived to 95 on a glass a night!",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Former smoker; quit years ago.",
+    "says": "I quit smoking a long time ago, thank goodness.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s19",
+    "category": "psychosocial",
+    "topic": "housing concerns",
+    "chart": "Expresses worry about her housing, which reflects dissatisfaction with the home's condition rather than financial strain, despite adequate household income.",
+    "says": "This house just gets to me sometimes, the state it's in — but don't worry, money's not really the issue.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s20",
+    "category": "psychosocial",
+    "topic": "cancer recurrence worry",
+    "chart": "Expresses ongoing worry about breast cancer recurrence despite being in surveillance.",
+    "says": "Every time I go in for a scan I hold my breath a little, you know? Scared it'll come back.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s21",
+    "category": "psychosocial",
+    "topic": "self-image around health",
+    "chart": "Fears being seen as 'slipping' by people who respected her for 'having it together.'",
+    "says": "Folks always said I had it all together — I don't want them seeing me as someone who's falling apart.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s22",
+    "category": "nutrition",
+    "topic": "food as caretaking",
+    "chart": "Believes food is an expression of love; views reducing her own portions as depriving her family.",
+    "says": "Cooking is how I show I love them. Cutting back feels like I'm taking something away from everybody.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s23",
+    "category": "adherence",
+    "topic": "church gatherings and food",
+    "chart": "Church potlucks and prayer group are a source of rich, calorie-dense food as well as emotional support.",
+    "says": "Our potlucks are a sight to see — coffee cake, casseroles, you name it. Hard to say no when everyone's digging in.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s24",
+    "category": "other",
+    "topic": "support involving church community",
+    "chart": "Open to involving pastor or church friends in accountability for change if approached respectfully.",
+    "says": "Maybe the ladies at church would get a kick out of trying something healthier together — a healthy potluck, imagine that!",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s25",
+    "category": "family",
+    "topic": "husband handling paperwork",
+    "chart": "Pushes paperwork and forms toward her husband to complete rather than filling them out herself.",
+    "says": "Here, honey, you fill that part in, you're better with the little boxes than I am.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score 7/12 (Q1: 4 or more times a week; Q2: typically 3-4 drinks on a drinking day; Q3: 4 or more times a week has 3+ drinks on one occasion). Score consistent with high-risk/unhealthy alcohol use.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "24-hour dietary recall / usual intake interview",
+    "aliases": [],
+    "result": "Breakfast: skipped or a donut from office break room with coffee. Lunch: cafeteria entree with soda or iced tea. Dinner (~6:30pm): large portion of home-cooked meal (e.g., pot roast with gravy, mashed potatoes, buttered egg noodles), bread, dessert most nights. Wine most evenings per patient report ('one glass, maybe two'). Minimal fruit/vegetable intake outside of dinner side dishes.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [],
+    "result": "Patient describes having made significant diet and activity changes a few years ago after her cancer diagnosis, states goal is to 'get back to how I was eating before,' endorses having drifted from those changes recently; consistent with maintenance stage with relapse.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Health literacy screen (brief, e.g., ask patient to read a sample label aloud)",
+    "aliases": [],
+    "result": "Patient hesitates, laughs, says she 'doesn't need the fine print,' pushes paper toward husband off-screen to read instead; unable to read small-print sample label aloud without difficulty.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Physical activity assessment / exercise history",
+    "aliases": [],
+    "result": "Patient reports attending a water aerobics class at the local Y 'when I can,' describes it as part of her routine since her cancer diagnosis; no further detail volunteered without follow-up.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Pain and functional status self-report",
+    "aliases": [],
+    "result": "Patient reports chronic low back and neck pain, worse with prolonged standing at work and at the stove; rates pain as manageable most days with her medication; denies falls.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review bone density (DEXA) scan report",
+    "aliases": [],
+    "result": "Bone density scan dated 2025-10-08 confirms osteoporosis diagnosis.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review current medication list and refill/fill history",
+    "aliases": [],
+    "result": "Includes extended-release hydrocodone 10mg q12h, acetaminophen/hydrocodone 300mg/5mg PRN, alendronic acid 10mg weekly, monthly B12 injection. Pharmacy fill pattern for the PRN acetaminophen/hydrocodone tablets shows refill requests slightly earlier than the expected supply interval on several occasions over the past year.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review oncology surveillance / cancer survivorship note",
+    "aliases": [],
+    "result": "Breast cancer (1999), currently in surveillance. Mammography, pelvic exam, and complete physical exam performed 2026-01-03, all noted as part of routine surveillance; colonoscopy scheduled 2026-06-29.",
+    "importance": "minor",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review exercise program referral/enrollment record",
+    "aliases": [],
+    "result": "Record shows enrollment in a water aerobics program at a local YMCA, referred following cancer diagnosis, start date logged; no attendance data recorded in this system.",
+    "importance": "minor",
+    "artifactIds": [
+     "d8"
+    ]
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Social support and household meal pattern assessment",
+    "aliases": [],
+    "result": "Patient describes cooking dinner nightly for a household of four (herself, husband, and two other family members), cites church potluck involvement weekly, describes food as central to showing care for her family.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "record",
+    "name": "Review housing/social needs screening on file",
+    "aliases": [],
+    "result": "Screening on file flags 'housing concern' marked as dissatisfaction with condition of current residence; no indication of inability to afford housing or utility costs.",
+    "importance": "minor",
+    "artifactIds": [
+     "d9"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 108/72 mmHg, heart rate 87/min, respiratory rate 15/min, weight 91.2 kg, height 173.9 cm, BMI 30.2 kg/m2 (recorded 2025-10-08).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.9 %; Glucose 86 mg/dL; Total cholesterol 123.1 mg/dL; LDL cholesterol 42.4 mg/dL; HDL cholesterol 55.7 mg/dL; Triglycerides 125 mg/dL; Haemoglobin 14.6 g/dL; White cell count 7.2 10*3/uL; Platelets 306.4 10*3/uL; Potassium 4.8 mmol/L; Sodium 140.2 mmol/L; Urea nitrogen 13.3 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-10-08); pneumococcal polysaccharide vaccine 23 valent (2021-09-15); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-26); Pneumococcal conjugate PCV 13 (2020-09-09).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d5",
+    "type": "imaging",
+    "title": "Bone Density (DEXA) Scan Report - 2025-10-08",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "date": "2025-10-08",
+    "author": "Radiology, Imaging Center",
+    "body": "DEXA scan performed 2025-10-08. Findings consistent with osteoporosis. Recommend weight-bearing exercise as tolerated, adequate calcium and vitamin D intake, and continuation of current pharmacologic therapy. Correlate with clinical fall-risk assessment."
+   },
+   {
+    "id": "d6",
+    "type": "medication_list",
+    "title": "Current Medications and Pharmacy Fill History",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "Current",
+    "author": "Pharmacy / EHR medication reconciliation",
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Last fill date",
+      "Days supply",
+      "Next expected fill"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hydrocodone Bitartrate ER",
+        "10 mg",
+        "Every 12 hours",
+        "2026-02-01",
+        "30 days",
+        "2026-03-03"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 300mg/Hydrocodone 5mg",
+        "1 tablet PRN",
+        "Up to several times weekly",
+        "2026-02-10",
+        "30 tablets",
+        "2026-03-12"
+       ],
+       "flag": "A"
+      },
+      {
+       "cells": [
+        "Alendronic acid",
+        "10 mg",
+        "Once weekly",
+        "2026-01-15",
+        "12 weeks supply",
+        "2026-04-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Vitamin B12",
+        "5 mg/mL",
+        "Monthly injection (in-office)",
+        "2026-02-05",
+        "1 month",
+        "2026-03-05"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Oncology Survivorship Surveillance Note",
+    "release": {
+     "when": "action",
+     "ref": "a15"
+    },
+    "date": "2026-01-03",
+    "author": "Oncology / Primary Care",
+    "body": "71-year-old female with history of breast cancer (1999), currently in long-term surveillance. Visit for routine surveillance: complete physical examination performed, mammography performed, manual pelvic examination and cytopathology smear preparation performed. No new concerning findings documented. Colonoscopy scheduled for 2026-06-29. Patient to continue routine surveillance per standard interval."
+   },
+   {
+    "id": "d8",
+    "type": "form",
+    "title": "Community Exercise Referral and Program Enrollment",
+    "release": {
+     "when": "action",
+     "ref": "a16"
+    },
+    "date": "Logged after 1999 diagnosis",
+    "author": "Care coordination",
+    "body": "Patient referred to and enrolled in a water aerobics class at a local YMCA following breast cancer diagnosis, intended as low-impact exercise appropriate for chronic back/neck pain and bone health. Enrollment active in system. No attendance log maintained by this record system."
+   },
+   {
+    "id": "d9",
+    "type": "form",
+    "title": "Social Needs Screening",
+    "release": {
+     "when": "action",
+     "ref": "a18"
+    },
+    "date": "2026-01-03",
+    "author": "Front desk intake / care coordination",
+    "body": "Social needs screening completed at intake. Housing domain: patient endorsed concern, specified as dissatisfaction with current living space/condition. Food security domain: no concern endorsed. Transportation domain: no concern endorsed. Financial strain domain: no concern endorsed."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nPast pregnancy history of miscarriage (since 1986)\nBody mass index 30+ - obesity (since 1999)\nMalignant neoplasm of breast (since 1999)\nPrediabetes (since 2007)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\nOsteoporosis (since 2025)\nUnhealthy alcohol drinking behavior (since 2025)\n\nRECENTLY RESOLVED\nGingival disease (2021-09 to 2021-09)\nGingivitis (2022-09 to 2022-10)\nGingivitis (2024-10 to 2024-10)\nGingival disease (2024-10 to 2024-10)\nViral sinusitis (2025-02 to 2025-02)\n\nPROCEDURES\n2026-06-29: Colonoscopy\n2026-01-03: Cytopathology procedure preparation of smear genital source (Malignant neoplasm of breast)\n2026-01-03: Manual pelvic examination (Malignant neoplasm of breast)\n2026-01-03: Mammography (Malignant neoplasm of breast)\n2026-01-03: Physical examination complete (Malignant neoplasm of breast)\n2025-10-08: Bone density scan\n\nRECENT ENCOUNTERS\n2026-06-29 ambulatory: Encounter for check up (Screening for malignant neoplasm of colon)\n2026-01-03 ambulatory: Gynecology service (qualifier value) (Malignant neoplasm of breast)\n2026-01-03 ambulatory: Screening surveillance (Malignant neoplasm of breast)\n2026-01-03 ambulatory: Postoperative follow-up visit (Malignant neoplasm of breast)\n2025-10-08 wellness: General examination of patient\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Diabetes self management plan (record artifact); Therapy"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule",
+        "2025-10",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+        "2025-10",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Alendronic acid 10 MG Oral Tablet",
+        "2025-10",
+        "Osteoporosis"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Vitamin B12 5 MG/ML Injectable Solution",
+        "1989-02",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.9",
+        "%",
+        "< 5.7",
+        "2025-10-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "86",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2025-10-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "123.1",
+        "mg/dL",
+        "< 200",
+        "2023-09-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "42.4",
+        "mg/dL",
+        "< 100",
+        "2023-09-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "55.7",
+        "mg/dL",
+        ">= 40",
+        "2023-09-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "125",
+        "mg/dL",
+        "< 150",
+        "2023-09-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "14.6",
+        "g/dL",
+        "12.0-17.5",
+        "2022-09-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "7.2",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-09-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "306.4",
+        "10*3/uL",
+        "150-450",
+        "2022-09-21"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.8",
+        "mmol/L",
+        "3.5-5.1",
+        "2025-10-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.2",
+        "mmol/L",
+        "135-145",
+        "2025-10-08"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "13.3",
+        "mg/dL",
+        "7-20",
+        "2025-10-08"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Take a focused diet and lifestyle history (meal pattern, portions, beverage intake) to identify nutrition-related problems in a patient with prediabetes and obesity",
+    "factIds": [
+     "h14",
+     "h15",
+     "s4",
+     "s7",
+     "s8",
+     "s15"
+    ],
+    "actionIds": [
+     "a2",
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Screen for unhealthy alcohol use with a structured tool (AUDIT-C) and gently reconcile any gap between the patient's self-report and the screening result",
+    "factIds": [
+     "s15",
+     "s16",
+     "s17"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Assess health literacy and adapt nutrition education methods (verbal, visual, teach-back) rather than relying on printed handouts",
+    "factIds": [
+     "s13",
+     "s14",
+     "s25"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explore current physical activity and identify lapses from a previously established exercise routine, recognizing relapse in the maintenance stage of change",
+    "factIds": [
+     "s11",
+     "s12",
+     "s7"
+    ],
+    "actionIds": [
+     "a5",
+     "a16",
+     "a3"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Negotiate at least one realistic, family-meal-friendly change using motivational interviewing, respecting the patient's role as household cook and the cultural/emotional meaning of food",
+    "factIds": [
+     "s4",
+     "s8",
+     "s22",
+     "s23",
+     "s24"
+    ],
+    "actionIds": [
+     "a17"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize nutrition-adjacent medication safety concerns (opioid dose overlap, alendronic acid administration technique) that fall outside dietetics scope to treat directly but warrant flagging to the care team",
+    "factIds": [
+     "h21",
+     "h22",
+     "h23"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive caloric/fat intake and relapse to prior dietary and activity patterns (nutrition diagnosis) in a patient with prediabetes and obesity, complicated by unhealthy alcohol use and low health literacy",
+   "differential": [
+    "Food- and nutrition-related knowledge deficit tied to low health literacy",
+    "Excessive alcohol intake contributing to caloric excess and possible interaction with pain medication",
+    "Physical inactivity related to chronic pain and lapsed exercise routine",
+    "Self-monitoring/medication-timing deficit (alendronic acid administration) that is nutrition-adjacent but outside dietetics scope to treat directly"
+   ],
+   "keyFindings": [
+    "BMI 30.2 kg/m2 (height 173.9 cm, weight 91.2 kg) consistent with obesity",
+    "HbA1c 5.9% (ref <5.7%) and fasting glucose 86 mg/dL on 2025-10-08, consistent with prediabetes",
+    "Reports 'just one glass, maybe two' of wine most nights, but AUDIT-C screening score on file is consistent with heavier intake, closer to 3-4 drinks some evenings and more on weekends",
+    "Skips breakfast on workdays (grabs a donut at work), large rich home-cooked dinners nightly for a household of four with heavy butter/cream-soup/gravy use and dessert most nights",
+    "Reports attending water aerobics 'when I can'; further questioning reveals she stopped three months ago and has not told her husband",
+    "Visible difficulty reading small print (pushes paperwork to husband, reading glasses unused) suggesting low health literacy affecting ability to follow written nutrition and medication instructions",
+    "Takes alendronic acid lying down right after breakfast rather than upright on an empty stomach, which she minimizes as 'close enough'",
+    "Reports sometimes doubling up on breakthrough acetaminophen/hydrocodone tablets without accounting for her extended-release dose"
+   ],
+   "plan": [
+    "Document findings in ADIME format: nutrition-focused assessment of intake, anthropometrics, labs, and behavioral/psychosocial barriers",
+    "Administer and document AUDIT-C screening; reconcile the gap between her verbal report and the screening result using a non-judgmental, curiosity-based approach rather than confrontation",
+    "Identify a nutrition diagnosis (e.g., excessive alcohol/caloric intake related to stress coping and family meal pattern, as evidenced by nightly wine intake above stated amount and skipped breakfast with high-calorie substitution)",
+    "Negotiate realistic family-meal modifications (lower-sodium/lower-fat gravy base, measured portions, added vegetable side) that preserve her role as family cook rather than prescribing an individual diet",
+    "Use motivational interviewing to explore the relapse from her post-diagnosis gains (wine, portions, lapsed water aerobics) and elicit her own reasons for change tied to her stated goals (seeing grandchildren, staying independent)",
+    "Adapt education to low literacy: verbal, teach-back, and visual/portion-based methods instead of handouts with small print",
+    "Flag medication-timing (alendronic acid administration technique) and possible breakthrough-dose overlap to the prescribing clinician/pharmacist for follow-up, as these are outside dietetics scope to resolve directly but relevant to safety",
+    "Schedule follow-up to reassess alcohol intake, breakfast pattern, and physical activity status"
+   ],
+   "redFlags": [
+    "Possible unrecognized excess alcohol intake relative to self-report, warranting referral/communication with primary care",
+    "Potential opioid dose-stacking (breakthrough tablets on top of extended-release dosing) without full understanding of overlap, warranting prescriber notification",
+    "Incorrect administration of alendronic acid (not upright/empty stomach) risking reduced efficacy or esophageal irritation, warranting pharmacist/prescriber follow-up",
+    "Underlying low health literacy that may affect safe self-management across multiple domains, not just nutrition"
+   ],
+   "educationPoints": [
+    "Explain prediabetes in plain terms and what modest, sustainable changes (not elimination of favorite foods) can do for her numbers",
+    "Teach practical breakfast options she can grab quickly on workdays instead of skipping or defaulting to a donut",
+    "Discuss how alcohol contributes calories and can interact with pain medications, framed around her own goal of staying sharp for her grandchildren rather than as a lecture",
+    "Offer family-meal modification ideas (gravy made with less butter/cream, measuring the starch portion, adding a vegetable) that let her keep cooking for everyone",
+    "Normalize that maintenance-stage slips are common and reversible, reinforcing the real changes she made before as evidence she can do it again",
+    "Encourage her to loop in her care team about the water aerobics gap and medication questions in a way that feels supportive, not like getting in trouble"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m2",
+    "patientClaim": "Tosha describes attending her water aerobics class at the Y 'when I can,' implying ongoing participation since her cancer diagnosis",
+    "recordEvidence": "Exercise program enrollment record shows she was referred and enrolled in water aerobics after her cancer diagnosis but contains no attendance data for the past three months, and she later discloses she stopped attending three months ago without telling her husband",
+    "teachingPoint": "A vague but affirmative answer about an established health behavior can mask relapse; absence of corroborating attendance data should prompt gentle, specific follow-up rather than acceptance at face value.",
+    "factId": "s11",
+    "artifactId": "d8"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 29,
+   "condition": "Unhealthy alcohol drinking behavior",
+   "conditionLabel": "71 F · Unhealthy alcohol drinking behavior, Osteoporosis, Chronic neck pain +4 · 4 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "2caf8121",
+   "fingerprint": "e047go"
+  }
+ }
+}

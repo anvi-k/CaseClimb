@@ -133,3 +133,95 @@ class LiveSpeechConversation {
   sessionEnded() { this.stop("session-ended"); }
   pageHidden() { this.stop("page-hidden"); }
 }
+
+// A single Scribe capture stays open during reply playback. The server still
+// receives only committed phrases; partials provide captions and interruption.
+class StreamingSpeechConversation {
+  constructor({ createTranscriber, sendFinal, speakReply, stopPlayback, availability,
+    onState = () => {}, onTranscript = () => {}, idFactory = () => crypto.randomUUID() }) {
+    Object.assign(this, { createTranscriber, sendFinal, speakReply, stopPlayback, availability, onState, onTranscript, idFactory });
+    this.state = "off"; this.reason = ""; this.enabled = false; this.consent = false;
+    this.generation = 0; this.transcriber = null; this.operation = null; this.queued = null; this.partialText = "";
+  }
+  changed(state, reason = "") { this.state = state; this.reason = reason; this.onState({ state, reason, enabled: this.enabled }); }
+  current(generation) { return this.enabled && generation === this.generation; }
+  available() {
+    const value = this.availability();
+    if (!value.sessionActive) return "session-ended";
+    if (!value.recognition) return "recognition-unavailable";
+    if (!value.voice) return "voice-unavailable";
+    if (value.busy) return "turn-pending";
+    return "";
+  }
+  stop(reason = "paused") {
+    this.enabled = false; ++this.generation; this.queued = null; this.partialText = "";
+    this.transcriber?.stop(); this.transcriber = null;
+    this.operation?.controller.abort(); this.operation = null;
+    this.stopPlayback(); this.onTranscript({ text: "", final: false }); this.changed("stopped", reason);
+  }
+  fail(reason) { this.stop(reason); this.changed("error", reason); }
+  async start({ consented = false, openingReply = null } = {}) {
+    if (!consented && !this.consent) { this.changed("off", "consent-required"); return false; }
+    if (this.enabled) return true;
+    this.consent = true;
+    const reason = this.available(); if (reason) { this.changed("unavailable", reason); return false; }
+    this.enabled = true; const generation = ++this.generation; this.changed("starting");
+    const transcriber = this.createTranscriber({
+      onPartial: (text) => { if (this.current(generation)) this.partial(text); },
+      onCommitted: (text) => { if (this.current(generation)) this.committed(text, generation); },
+      onError: (error) => { if (this.current(generation)) this.fail(error); },
+    });
+    this.transcriber = transcriber;
+    const started = await transcriber.start();
+    if (!this.current(generation)) return false;
+    if (!started) { this.fail("recognition-network"); return false; }
+    this.changed("listening");
+    if (openingReply && !this.operation) await this.perform(() => this.speakReply(openingReply, { signal: this.operation.controller.signal }), generation, true);
+    return this.current(generation);
+  }
+  partial(text) {
+    const trimmed = text.trim(); this.onTranscript({ text: trimmed, final: false });
+    if (trimmed && trimmed !== this.partialText && this.operation && !this.operation.interrupted) {
+      this.operation.interrupted = true; this.operation.controller.abort(); this.stopPlayback();
+      this.changed("listening", "interrupted");
+    }
+    this.partialText = trimmed;
+  }
+  committed(text, generation) {
+    if (!this.current(generation) || !this.availability().sessionActive) { this.stop("session-ended"); return; }
+    const value = text.trim(); this.partialText = "";
+    if (!value) return;
+    if (value.length > 2000) { this.fail("phrase-too-long"); return; }
+    this.onTranscript({ text: value, final: true });
+    if (this.operation) {
+      if (this.queued) { this.fail("turn-pending"); return; }
+      this.queued = value;
+      if (!this.operation.interrupted) { this.operation.interrupted = true; this.operation.controller.abort(); this.stopPlayback(); }
+      return;
+    }
+    this.submit(value, generation);
+  }
+  submit(text, generation) {
+    if (!this.current(generation)) return;
+    const reason = this.available(); if (reason) { this.fail(reason); return; }
+    this.perform(() => this.sendFinal(text, { requestId: this.idFactory(), signal: this.operation.controller.signal }), generation);
+  }
+  async perform(work, generation, opening = false) {
+    const operation = { controller: new AbortController(), interrupted: false }; this.operation = operation;
+    this.changed(opening ? "speaking" : "submitting");
+    try {
+      await work();
+      if (this.current(generation) && !this.availability().sessionActive) this.stop("session-ended");
+    } catch (error) {
+      if (this.current(generation) && !operation.interrupted) this.fail(error.kind === "pending" ? "turn-pending" : opening ? "playback-error" : "turn-error");
+    } finally {
+      if (this.operation === operation) this.operation = null;
+      if (!this.current(generation)) return;
+      const queued = this.queued; this.queued = null;
+      if (queued) this.submit(queued, generation); else this.changed("listening");
+    }
+  }
+  replySpeaking() { if (this.enabled && this.operation && !this.operation.interrupted) this.changed("speaking"); }
+  sessionEnded() { this.stop("session-ended"); }
+  pageHidden() { this.stop("page-hidden"); }
+}

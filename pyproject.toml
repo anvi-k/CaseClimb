@@ -12,8 +12,13 @@ dependencies = [
   "uvicorn==0.34.2",
 ]
 
+[project.optional-dependencies]
+# The rubric evaluator in evaluator/. Kept out of the API's own dependencies so the
+# Lambda package does not grow; install with `uv sync --extra evaluator`.
+evaluator = ["anthropic[bedrock]>=1.0", "jsonschema>=4.18"]
+
 [dependency-groups]
-dev = ["pytest==8.3.5"]
+dev = ["pytest==8.3.5", "jsonschema>=4.18"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,0 +1,1072 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Preparation-Stage Prediabetes Counseling in a Stoic Patient with Night-Eating Pattern and Food/Transportation Barriers",
+  "summary": "This case teaches dietetics students to conduct a patient-centered nutrition assessment with a stoic, low-health-literacy patient in the Preparation stage of change for newly flagged prediabetes and obesity. It emphasizes eliciting an honest 24-hour recall despite minimizing answers, gently uncovering financial and transportation barriers behind a reported-versus-actual adherence mismatch (B12 appointments, intentional meal-skipping), and negotiating a single small, sustainable first step using motivational interviewing, with ADIME documentation.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Newark, New Jersey, on her lunch break before an evening shift",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Lesli Armstrong",
+   "age": 43,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Part-time receptionist at a dental office",
+   "language": "English",
+   "appearance": "Calling from her small apartment kitchen on a break, still in her dental-office polo shirt; sits upright but with a visible mild shoulder/waistline asymmetry from longstanding scoliosis; looks tired around the eyes; keeps answers short and polite, arms sometimes crossed, glancing at the clock as if mindful of time.",
+   "portrait": "/portraits/synthea-lesli-armstrong-25dc432a.jpg"
+  },
+  "persona": {
+   "personality": "Stoic, matter-of-fact, prides herself on not complaining or being a burden; private about money and personal struggle; warms up once she feels safe and not judged",
+   "communicationStyle": "Gives short, minimizing answers at first; deflects or changes subject when money, transportation, or coping comes up; uses plain everyday language, gets confused by medical/lab terms; opens up with concrete, homely phrases once rapport builds",
+   "healthLiteracy": "low",
+   "emotionalState": "Mildly anxious under a calm surface; wants to 'do something' about her blood sugar but feels overwhelmed by jargon and doesn't want a long list of changes; glances at the clock, mindful of her lunch break",
+   "background": "Lesli has worked the front desk at the same Newark dental office for about seven years and knows the regular patients by name. She grew up in a working-class Newark household where you didn't make a fuss about aches and pains, and that stuck with her. She's attended a small Baptist congregation for over a decade; Wednesday potluck and prayer group are the fixed, trusted points of her week. She lives with one roommate who works nights, so they rarely eat together. She keeps a little devotional book in her purse for bus rides and reads it to pass the time.",
+   "speechExamples": [
+    "It's really not that much, I just eat dinner late, that's all.",
+    "I don't know, I never really measured it out or anything.",
+    "So is that the diabetes or not? I get confused.",
+    "As long as it's not shots every day, I guess I'm okay.",
+    "Some weeks it's rent or real food, so... yeah.",
+    "I don't want a whole plan, just tell me one thing to start."
+   ],
+   "concerns": [
+    "Worried the prediabetes will get worse and she'll end up on daily medication like her aunt",
+    "Doesn't want to be seen as a burden, including by her church friends",
+    "Embarrassed she doesn't really understand what the HbA1c number means",
+    "Wants to keep enough energy to get through her double shifts without crashing"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment visit. Your patient is Lesli Armstrong, a 43-year-old woman recently flagged with prediabetes and obesity at her last wellness checkup. She is calling from home on her lunch break before an evening shift at the dental office where she works part-time. She wants help understanding what's going on with her blood sugar and is hoping for one clear first step. Review her chart before the call.",
+   "chiefComplaint": "Follow-up nutrition visit after being told her blood sugar is 'a little high'; wants one clear first step to keep it from getting worse",
+   "openingLine": "Hi, yeah, so they told me at my last checkup my sugar's a little high. I don't really have a lot of time today, but I figured I'd see what you all think I should do.",
+   "tasks": [
+    "Take a focused 24-hour diet and meal-pattern history, including fluids and timing of meals",
+    "Review relevant anthropometrics, vital signs, and laboratory results and relate them to her nutrition status in plain language",
+    "Explore barriers to consistent eating, medication adherence, and appointment attendance using non-judgmental, open-ended questions",
+    "Assess her understanding of her diagnosis and correct any gaps in plain, low-literacy-friendly language",
+    "Negotiate one small, specific, sustainable first-step change consistent with her stated readiness, and document the visit in ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after being told her blood sugar is 'a little high'; patient requests one clear first step"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. R. Okafor, Family Medicine (referring provider); Dietetics/Nutrition (current visit)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Adolescent idiopathic scoliosis (since 1993); Past pregnancy history of miscarriage (since 2015); History of tubal ligation (since 2018); Body mass index 30+ - obesity (since 2022); Prediabetes (since 2023)"
+   },
+   {
+    "label": "Medications",
+    "value": "Vitamin B12 5 MG/ML Injectable Solution"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for nutrition follow-up after being told blood sugar was elevated at last wellness visit; wants one concrete first step.",
+    "says": "They told me my sugar's a little high, so I figured I'd better do something about it before it gets worse.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "blood sugar history",
+    "chart": "Reports being told approximately one year ago that her blood sugar was borderline high; unclear on diagnosis terminology.",
+    "says": "I don't remember exactly when, but they said something about my sugar being borderline. I'm not totally sure what that means.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "daytime eating pattern",
+    "chart": "Reports coffee only in the morning, typically nothing eaten at lunch most days.",
+    "says": "Mornings it's just coffee, and most days I don't eat anything till I get home.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "evening meal timing",
+    "chart": "Reports one large meal around 9-10pm after work shift.",
+    "says": "By the time I get home it's like 9, sometimes later, and that's when I finally sit down and eat.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "afternoon symptoms",
+    "chart": "Reports feeling shaky and very hungry by the end of her shift, along with low afternoon energy.",
+    "says": "By the end of the day I'm shaking a little and starving, and I just feel wiped out.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "sleep pattern",
+    "chart": "Reports trouble falling asleep after late dinner, with restless sleep totaling 6-7 hours nightly.",
+    "says": "After I eat that late I have trouble drifting off, and I don't sleep great, maybe six, seven hours if I'm lucky.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "reason for skipped meals",
+    "chart": "Initially attributes skipped breakfast/lunch to losing track of time during busy shifts rather than intentional restriction.",
+    "says": "I just lose track of time, it's not like I'm doing it on purpose or anything.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "meal timing intent",
+    "chart": "With gentle questioning, admits sometimes skips breakfast and lunch intentionally to stretch her grocery budget.",
+    "says": "Okay... some weeks I guess I do skip on purpose, just to make the food last longer.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "back discomfort",
+    "chart": "Reports occasional lower back ache attributed to longstanding scoliosis.",
+    "says": "My back aches sometimes, but that's just my crooked spine, nothing new.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "hpi",
+    "topic": "understanding of diagnosis",
+    "chart": "Patient has limited understanding of what HbA1c or prediabetes means and confuses it with diabetes requiring daily injections.",
+    "says": "So is that the diabetes already, or not? I get mixed up on all that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurred vision.",
+    "says": "No, my eyes are fine, no blurriness or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "urination frequency",
+    "chart": "Denies increased urinary frequency or excessive thirst.",
+    "says": "I'm not running to the bathroom more than usual, and I'm not any thirstier than normal either.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness or tingling in hands or feet.",
+    "says": "No tingling or numb feeling in my hands or feet, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "heartburn symptoms",
+    "chart": "Reports occasional heartburn after late dinners, managed with Tums.",
+    "says": "Sometimes I get heartburn after eating that late, so I'll pop a Tums.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "chest pain or shortness of breath",
+    "chart": "Denies chest pain or shortness of breath.",
+    "says": "No chest pains or trouble breathing or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "spine condition",
+    "chart": "History of adolescent idiopathic scoliosis since 1993, with mild visible shoulder/waistline asymmetry.",
+    "says": "I've had a crooked back since I was a teenager, scoliosis they called it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "blood sugar diagnosis timeline",
+    "chart": "Diagnosed with prediabetes in 2023; most recent HbA1c 6.4% and fasting glucose 85.4 mg/dL on 2024-12-10.",
+    "says": "They've been checking my blood work for a while now, I think since last year or so.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "BMI 30 or greater documented since 2022, consistent with obesity classification.",
+    "says": "I've carried extra weight for a while now, probably a few years.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "History of one miscarriage in 2015.",
+    "says": "I had a miscarriage a while back, in 2015.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "reproductive surgery history",
+    "chart": "History of tubal ligation in 2018.",
+    "says": "I had my tubes tied back in 2018, so that's done and over with.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "pmh",
+    "topic": "recent minor illnesses",
+    "chart": "History of resolved acute bronchitis (October 2023) and resolved viral sinusitis (May 2025); no ongoing symptoms.",
+    "says": "I had some bronchitis a while back and a sinus thing more recently, but both cleared up fine.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "psh",
+    "topic": "dental procedure history",
+    "chart": "History of dental filling placement and periodontal cleaning in December 2022; no ongoing dental issues.",
+    "says": "I had a filling and my teeth cleaned at work's dental office a couple years back, nothing wrong now.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "B12 injection",
+    "chart": "Reports monthly Vitamin B12 5 mg/mL injection given at her doctor's office; unsure of indication.",
+    "says": "I get a B12 shot once a month at the doctor's, they said my levels were low, I don't really know more than that.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "B12 adherence pattern",
+    "chart": "Reports attending her B12 injection appointments consistently.",
+    "says": "I pretty much always make it to my shot appointments.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "missed B12 appointments",
+    "chart": "With further questioning, admits to missing one or two B12 appointments when transportation fell through.",
+    "says": "I guess I've missed one or two when I couldn't get a ride, but that's rare.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "over-the-counter supplement use",
+    "chart": "Reports inconsistent use of a dollar-store multivitamin.",
+    "says": "I take a cheap multivitamin when I remember, which isn't always.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "heartburn remedy",
+    "chart": "Reports occasional Tums use for heartburn after late dinners.",
+    "says": "I'll take a Tums if my stomach's acting up after dinner.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "allergies",
+    "topic": "known allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "I don't have any allergies that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with one roommate; reports minimal shared mealtimes due to roommate's night shift schedule",
+    "says": "I've got a roommate, but she works nights, so it's not like we sit down together or anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time as a dental office receptionist for approximately 7 years; shifts sometimes run long into the evening",
+    "says": "I've been at the front desk at the dental office about seven years now. Some days it's a double, so I'm there late.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "faith community",
+    "chart": "Attends a small Baptist congregation most Sundays; Wednesday potluck and prayer group are primary social contact",
+    "says": "Church is pretty much my people. We do a potluck every Wednesday, been going for years.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "family health history",
+    "chart": "Reports maternal aunt with history of insulin-dependent diabetes and dialysis",
+    "says": "My aunt, she ended up on insulin and then dialysis. I really don't want that to be me.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "reproductive history",
+    "chart": "History of one miscarriage (2015); history of tubal ligation (2018); no children currently",
+    "says": "I had a miscarriage back in 2015, and I had my tubes tied a few years after that. No kids.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "disclosure to church friends",
+    "chart": "Has not disclosed prediabetes diagnosis to church community",
+    "says": "I haven't really told anybody at church about the sugar thing. I don't want everybody up in my business about it at the potluck.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "personality and coping style",
+    "chart": "Describes self as not one to complain; downplays symptoms and stress",
+    "says": "I don't really make a fuss. Growing up you just dealt with stuff.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "goals",
+    "topic": "desired change approach",
+    "chart": "States preference for one specific, manageable change rather than a comprehensive plan",
+    "says": "Just give me one thing to start with, not a whole big list. I don't do good with a whole overhaul.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "goals",
+    "topic": "blood sugar concern",
+    "chart": "States goal of preventing progression to diabetes",
+    "says": "I just don't want this turning into full-blown diabetes.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "goals",
+    "topic": "energy level",
+    "chart": "States goal of improved energy to complete work shifts",
+    "says": "I'd really just like to make it through a double without feeling like I'm about to pass out.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "fear of injections",
+    "chart": "Expresses fear of needing daily injections if condition progresses",
+    "says": "Long as it's not shots every day, I guess I'm okay with it for now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "work and independence concerns",
+    "chart": "Worries about losing work hours or being perceived as unable to manage her own health",
+    "says": "I can't afford to lose hours over this. And I don't want people thinking I can't handle my own stuff.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "social",
+    "topic": "transportation",
+    "chart": "Reports unreliable transportation that has affected appointment and pharmacy access",
+    "says": "Getting a ride isn't always easy, so sometimes I just miss stuff.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "social",
+    "topic": "finances and groceries",
+    "chart": "Reports that limited part-time income affects food purchasing some weeks",
+    "says": "Money's tight some weeks, it is what it is.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "adherence",
+    "topic": "skipped meals reason",
+    "chart": "Initially attributes skipped breakfast and lunch to losing track of time during shifts; with rapport, admits meals are sometimes skipped intentionally to stretch grocery budget",
+    "says": "At first I'd say I just lose track of time... but yeah, okay, some weeks I skip breakfast and lunch on purpose so the groceries last.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "adherence",
+    "topic": "grocery choices",
+    "chart": "Admits to purchasing lower-cost frozen meals over fresh food during financially tight weeks, particularly after rent",
+    "says": "Some weeks it's rent or real food, so... yeah, I get the cheap frozen stuff.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "other medication cost tradeoffs",
+    "chart": "Reports twice in the past year not refilling an unrelated allergy medication due to needing funds for groceries that week",
+    "says": "There's been a couple times I didn't get my allergy pills refilled because I needed that money for food instead. Didn't think it was a big deal.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "alcohol and tobacco use",
+    "chart": "Ex-smoker, quit approximately 6 years ago; drinks alcohol rarely, about one drink on an occasional weekend",
+    "says": "I quit smoking about six years back. I'll have a drink every once in a blue moon, not really a regular thing.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [
+     "diet recall",
+     "food recall"
+    ],
+    "result": "Patient reports: black coffee on waking; nothing at lunch most days; dinner around 9-10 PM after shift consisting of fried chicken or a frozen entrée (Salisbury steak/lasagna) with white rice and gravy; sweet tea and soda through the day; saltine crackers with peanut butter some nights before bed. Denies regular daytime snacking.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Usual meal pattern and timing assessment",
+    "aliases": [
+     "meal timing history",
+     "meal pattern"
+    ],
+    "result": "Patient describes a consistent pattern of skipping breakfast and lunch, with one large meal 9-10 PM, roughly a 14-hour gap between the prior night's dinner and the next evening's meal. States this is because she 'loses track of time' during shifts, not an intentional choice.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Hunger/satiety and symptom pattern screen",
+    "aliases": [
+     "hunger-satiety screen"
+    ],
+    "result": "Patient reports feeling shaky and very hungry by the end of her shift, low energy in the afternoons, and trouble falling asleep after her late dinner, sleeping about 6-7 hours with some restlessness.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Fluid and beverage intake assessment",
+    "aliases": [
+     "hydration assessment",
+     "beverage recall"
+    ],
+    "result": "Patient reports sweet tea and a couple of cans of soda most days as her main fluids, says she 'forgets' to drink water, minimal plain water intake reported.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Physical activity level assessment",
+    "aliases": [
+     "activity assessment"
+    ],
+    "result": "Patient reports mostly sedentary days, standing and walking short distances at the front desk, no structured exercise.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Weight history and trend review",
+    "aliases": [
+     "weight trend"
+    ],
+    "result": "No prior documented weights available for comparison before 2024; current weight 85.3 kg consistent with chart.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review B12 injection appointment/adherence record",
+    "aliases": [
+     "B12 adherence record",
+     "injection record"
+    ],
+    "result": "Clinic scheduling record shows four missed monthly B12 injection appointments in the past 12 months, three of which are annotated 'rescheduled - transportation.' Patient had reported only missing 'one or two' appointments when asked directly.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review grocery/food budget self-report log",
+    "aliases": [
+     "food budget log"
+    ],
+    "result": "No structured food budget log on file; information available only through patient interview.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [
+     "stage of change",
+     "readiness assessment"
+    ],
+    "result": "Patient states she has already decided she wants to work on her blood sugar and is asking for one specific, manageable first step rather than a full overhaul, consistent with the Preparation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Health literacy / understanding of diagnosis check",
+    "aliases": [
+     "health literacy check",
+     "diagnosis understanding"
+    ],
+    "result": "Patient states she was told her 'sugar is a little high' but is unsure what HbA1c means or whether prediabetes is 'the diabetes,' and is unclear why she needs the monthly B12 injection beyond 'the doctor said my levels were low.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review problem list and visit history",
+    "aliases": [
+     "problem list review"
+    ],
+    "result": "Problem list includes prediabetes (since 2023), obesity BMI 30+ (since 2022), adolescent idiopathic scoliosis (since 1993); resolved items include dental caries (2022-12), acute bronchitis (2023-10), and viral sinusitis (2025-05).",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 130/92 mmHg, heart rate 88/min, respiratory rate 12/min, weight 85.3 kg, height 167.1 cm, BMI 30.6 kg/m2 (recorded 2024-12-10).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.4 %; Glucose 85.4 mg/dL; Total cholesterol 140.8 mg/dL; LDL cholesterol 70.5 mg/dL; HDL cholesterol 50.2 mg/dL; Triglycerides 100.8 mg/dL; Haemoglobin 14.9 g/dL; White cell count 6.1 10*3/uL; Platelets 150.8 10*3/uL; Potassium 4.2 mmol/L; Sodium 143 mmol/L; Urea nitrogen 7.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2024-12-10); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2024-12-10); Hep A adult (2023-10-10); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-04).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Scheduling and Injection Adherence Record - Vitamin B12 Monthly Injection",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "date": "2024-11-30",
+    "author": "Newark Family Health Associates - Nursing Staff",
+    "body": "Monthly Vitamin B12 5 mg/mL IM injection, ordered for ongoing monitoring. Past 12-month attendance: Jan - attended; Feb - attended; Mar - no-show, rescheduled (reason: transportation); Apr - attended; May - no-show, rescheduled (reason: transportation); Jun - attended; Jul - attended; Aug - no-show, patient called to reschedule, reason not documented; Sep - attended; Oct - attended; Nov - no-show, rescheduled (reason: transportation); Dec - attended. Total missed/rescheduled appointments in past 12 months: 4."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Wellness Visit Note - Prediabetes and Obesity Flag",
+    "release": {
+     "when": "start"
+    },
+    "date": "2023-12-18",
+    "author": "Dr. R. Okafor, Family Medicine",
+    "body": "43-year-old female presenting for annual wellness visit. HbA1c trending into prediabetic range; discussed lifestyle modification including diet and activity. BMI consistent with obesity. Patient reports she 'feels fine' and is reluctant to discuss stress or finances in detail during visit. Referral placed for outpatient nutrition counseling. Continue monthly B12 injections for previously identified low B12 level; recheck levels at next physical."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nAdolescent idiopathic scoliosis (since 1993)\nPast pregnancy history of miscarriage (since 2015)\nHistory of tubal ligation (since 2018)\nBody mass index 30+ - obesity (since 2022)\nPrediabetes (since 2023)\n\nRECENTLY RESOLVED\nPrimary dental caries (2022-12 to 2022-12)\nAcute bronchitis (2023-10 to 2023-10)\nViral sinusitis (2025-05 to 2025-05)\n\nPROCEDURES\n2022-12-20: Application of composite dental filling material to dentin of tooth following fracture of tooth (Primary dental caries)\n2022-12-20: Dental plain X-ray bitewing\n2022-12-20: Examination of gingivae (Patient referral for dental care)\n2022-12-20: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2022-12-20: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2022-12-20: Dental care (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2025-05-14 ambulatory: Encounter for symptom (Viral sinusitis)\n2024-12-10 wellness: General examination of patient\n2023-10-17 outpatient: Encounter for check up\n2023-10-10 urgentcare: Urgent care clinic (environment)\n2023-10-01 ambulatory: Encounter for symptom (Acute bronchitis)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Vitamin B12 5 MG/ML Injectable Solution",
+        "2008-09",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.4",
+        "%",
+        "< 5.7",
+        "2024-12-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "85.4",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2024-12-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "140.8",
+        "mg/dL",
+        "< 200",
+        "2023-10-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "70.5",
+        "mg/dL",
+        "< 100",
+        "2023-10-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "50.2",
+        "mg/dL",
+        ">= 40",
+        "2023-10-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "100.8",
+        "mg/dL",
+        "< 150",
+        "2023-10-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "14.9",
+        "g/dL",
+        "12.0-17.5",
+        "2022-12-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-12-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "150.8",
+        "10*3/uL",
+        "150-450",
+        "2022-12-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.2",
+        "mmol/L",
+        "3.5-5.1",
+        "2024-12-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143",
+        "mmol/L",
+        "135-145",
+        "2024-12-10"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "7.5",
+        "mg/dL",
+        "7-20",
+        "2024-12-10"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit an accurate 24-hour diet and meal-pattern history, including fluid intake and timing, despite the patient's tendency to minimize and give short answers.",
+    "factIds": [
+     "h3",
+     "h4",
+     "h5",
+     "h6",
+     "h7",
+     "h8"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a4"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Relate anthropometric, vital sign, and laboratory findings to the patient's nutrition status and explain HbA1c/prediabetes in plain, low-health-literacy-friendly language, correcting her confusion with diabetes requiring daily injections.",
+    "factIds": [
+     "h10",
+     "h17",
+     "h18",
+     "s11"
+    ],
+    "actionIds": [
+     "a6",
+     "asyn1",
+     "asyn2",
+     "a15"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore financial, transportation, and appointment-adherence barriers to consistent eating and medication access using non-judgmental, open-ended questioning.",
+    "factIds": [
+     "h23",
+     "h24",
+     "h25",
+     "s13",
+     "s14",
+     "s15",
+     "s16",
+     "s17"
+    ],
+    "actionIds": [
+     "a12",
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Assess readiness to change and negotiate one small, specific, sustainable first-step change consistent with the patient's stated preference for a single manageable step rather than a full overhaul.",
+    "factIds": [
+     "s8",
+     "s9",
+     "s10",
+     "s12"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify the patient's faith community as a potential support for behavior change while respecting her reluctance to disclose her diagnosis to church friends.",
+    "factIds": [
+     "s3",
+     "s6"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Elicit pertinent negatives and relevant medical/psychosocial history (hyperglycemia symptoms, family history, reproductive history, substance use) to complete a focused nutrition-relevant history.",
+    "factIds": [
+     "h11",
+     "h12",
+     "h13",
+     "h15",
+     "s4",
+     "s5",
+     "s18"
+    ],
+    "actionIds": [
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Prediabetes with disordered meal timing (prolonged daytime fasting / night-eating pattern) in the context of obesity, food insecurity, and transportation barriers",
+   "differential": [
+    "Excessive caloric intake concentrated in evening meal contributing to impaired glucose metabolism (primary nutrition diagnosis)",
+    "Inadequate fluid intake / excess sugar-sweetened beverage intake",
+    "Food- and medication-access limitations related to financial resources",
+    "Mismatch between reported and actual adherence to recommended follow-up (B12 appointments) suggesting broader pattern of under-reporting barriers",
+    "Low health literacy regarding diagnosis and lab values affecting self-management capacity"
+   ],
+   "keyFindings": [
+    "HbA1c 6.4% (2024-12-10) consistent with prediabetes; fasting glucose 85.4 mg/dL same date",
+    "BMI 30.6 kg/m2 (height 167.1 cm, weight 85.3 kg) consistent with obesity",
+    "BP 130/92 mmHg today, patient attributes to 'white coat stuff'",
+    "Dietary pattern: no breakfast or lunch most days, one large meal ~9-10pm; primary beverages sweet tea/soda, minimal water",
+    "Reports shakiness and extreme hunger by end of workday, afternoon low energy, restless sleep after late meal",
+    "States she 'always makes' B12 shots and only occasionally runs low on groceries; record/history reveals more frequent missed B12 appointments tied to transportation and a pattern of stretching food budget by skipping meals on purpose, not just losing track of time",
+    "Has not disclosed prediabetes diagnosis to her church community despite potluck being a weekly predictable food event",
+    "In Preparation stage of change; wants one small, concrete first step rather than a full plan"
+   ],
+   "plan": [
+    "Document nutrition assessment in ADIME format: diet history (24-hr recall), anthropometrics, relevant labs, psychosocial/financial barriers",
+    "Provide plain-language explanation of HbA1c and prediabetes distinct from diabetes, addressing her fear of daily injections",
+    "Explore cost and transportation barriers to food and medication access using non-judgmental, open-ended questioning",
+    "Negotiate and agree on one small, specific, sustainable first step tied to her existing routine (e.g., a modest daytime snack during work break, or shifting part of her evening meal earlier)",
+    "Discuss hydration swap (water or unsweetened option in place of some sweet tea/soda) as a secondary low-burden suggestion only if she has bandwidth",
+    "Explore potential to leverage the Wednesday potluck constructively without requiring disclosure of her diagnosis to her church friends",
+    "Arrange follow-up nutrition visit to reassess adherence to the agreed first step and revisit barriers",
+    "Communicate with referring clinician/team as appropriate regarding missed B12 appointments and transportation barrier (per scope of practice)"
+   ],
+   "redFlags": [
+    "Elevated BP (130/92) today warrants documentation and routine follow-up with medical provider, not dismissal as isolated white-coat effect",
+    "Pattern of skipping meals specifically to stretch grocery budget indicates food insecurity requiring resource referral (e.g., food assistance, social work)",
+    "Missed medication/appointment pattern tied to transportation and cost tradeoffs (including the unrelated allergy medication) suggests broader access barriers beyond nutrition that may need interdisciplinary follow-up"
+   ],
+   "educationPoints": [
+    "Prediabetes is a reversible stage, distinct from diabetes; consistent small changes can reduce progression risk and this does not necessarily lead to insulin or daily injections",
+    "Prolonged daytime fasting followed by one large nighttime meal can contribute to blood sugar swings, hunger/shakiness, and poor sleep; spreading intake more evenly can help",
+    "Sweet tea and soda contribute meaningful sugar intake even without 'snacking'; small swaps can add up without a full diet overhaul",
+    "One small, concrete, sustainable change (not a complete overhaul) fits her stated readiness and routine, and is more likely to succeed than a long list",
+    "Existing supports (church potluck, work breaks) can be used as practical anchors for change without requiring her to disclose her diagnosis to others"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports attending her B12 injection appointments consistently (h24)",
+    "recordEvidence": "Clinic scheduling record shows four missed monthly B12 injection appointments in the past 12 months, three annotated 'rescheduled - transportation' (d4, a12)",
+    "teachingPoint": "Patients, especially stoic ones who downplay struggles, may initially minimize missed appointments; reviewing adherence records alongside the interview can reveal transportation and access barriers that need gentle, non-judgmental exploration rather than confrontation.",
+    "factId": "h24",
+    "artifactId": "d4"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Initially attributes skipped breakfast and lunch to losing track of time during busy shifts rather than intentional restriction (h7, s15)",
+    "recordEvidence": "Wellness Visit Note documents prediabetes and obesity flag in the context of a dietary pattern consistent with prolonged daytime fasting; with rapport the patient admits meals are sometimes skipped intentionally to stretch her grocery budget (h8, s16)",
+    "teachingPoint": "Initial framing of a behavior as unintentional ('losing track of time') may mask an underlying food-insecurity-driven coping strategy; building rapport before probing financial barriers is essential to surface the true driver of the eating pattern and identify an appropriate nutrition diagnosis and intervention.",
+    "factId": "h7",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 23,
+   "condition": "Prediabetes",
+   "conditionLabel": "43 F · Prediabetes, History of tubal ligation, Adolescent idiopathic scoliosis · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "25dc432a",
+   "fingerprint": "173i6zr"
+  }
+ }
+}

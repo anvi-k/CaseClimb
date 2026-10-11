@@ -88,6 +88,51 @@ class ElevenLabsTTS:
             raise ValueError("Expected PCM16 mono samples")
         return audio
 
+    def stream_plan(self, plan: SpeechPlan, *, chunk_bytes=8192):
+        """Yield bounded PCM24 frames while the provider is still generating.
+
+        The context remains owned by this generator. Closing it on interruption
+        closes the upstream response, including when a caller stops mid-frame.
+        """
+        if not 2 <= chunk_bytes <= 8192 or chunk_bytes % 2:
+            raise ValueError("PCM frame size must be a bounded whole sample")
+        voice = plan.voice_id or self.voice_id
+        if not voice:
+            raise ValueError("Voice is not configured")
+        transport = self.client or httpx
+        received, carry = 0, b""
+        with transport.stream(
+            "POST", f"https://api.elevenlabs.io/v1/text-to-speech/{voice}/stream",
+            headers={"xi-api-key": self.key, "Accept": "application/octet-stream"},
+            json={"text": plan.text, "model_id": plan.model_id, "voice_settings": plan.voice_settings},
+            params={"output_format": "pcm_24000"},
+            timeout=httpx.Timeout(8, connect=3, write=3, pool=3),
+        ) as response:
+            response.raise_for_status()
+            for data in response.iter_bytes(chunk_size=chunk_bytes):
+                received += len(data)
+                if received > 1_440_000:
+                    raise ValueError("Audio exceeds the bounded response size")
+                data = carry + data
+                end = len(data) - len(data) % 2
+                carry = data[end:]
+                for offset in range(0, end, chunk_bytes):
+                    yield data[offset:min(end, offset + chunk_bytes)]
+            if carry or not received:
+                raise ValueError("Expected nonempty PCM16 mono samples")
+
+    def realtime_token(self):
+        """Only a short-lived token may leave the server; never the API key."""
+        response = (self.client or httpx).post(
+            "https://api.elevenlabs.io/v1/single-use-token/realtime_scribe",
+            headers={"xi-api-key": self.key}, timeout=8,
+        )
+        response.raise_for_status()
+        token = response.json().get("token")
+        if not isinstance(token, str) or not 1 <= len(token) <= 4096:
+            raise ValueError("Speech token response incomplete")
+        return token
+
     def _convert(self, text, voice_id, output_format, max_bytes, model_id=None, voice_settings=None):
         voice = voice_id or self.voice_id
         if not voice:

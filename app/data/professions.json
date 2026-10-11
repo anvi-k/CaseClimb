@@ -1,0 +1,2274 @@
+[
+  {
+    "id": "medicine",
+    "name": "Medicine (MD/DO student)",
+    "group": "Physician",
+    "roleTitle": "medical student",
+    "scope": "Takes a focused or complete history, performs a physical examination, orders and interprets investigations, forms a differential diagnosis and a management plan under supervision.",
+    "encounterTypes": [
+      "diagnostic interview",
+      "follow-up visit",
+      "breaking difficult news",
+      "counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record"
+    ],
+    "noteFormat": "SOAP",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient",
+        "placeholder": "e.g. 59M with HFrEF presenting with early satiety and weight loss..."
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "History taking, clinical reasoning, differential diagnosis, safe management, shared decision making."
+  },
+  {
+    "id": "family-medicine",
+    "name": "Family Medicine",
+    "group": "Physician",
+    "roleTitle": "family medicine resident",
+    "scope": "Provides first-contact and continuing care for patients of all ages by video: undifferentiated complaints, chronic disease follow-up, preventive care and screening, medication management, and coordination of referrals. Decides what can be managed remotely and what needs an in-person visit.",
+    "encounterTypes": [
+      "acute undifferentiated complaint",
+      "chronic disease follow-up",
+      "preventive care visit",
+      "medication review",
+      "counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, health maintenance, safety-netting and follow-up"
+      }
+    ],
+    "rubricEmphasis": "Whole-person history, prioritising multiple problems, preventive care, shared decision making, safety-netting, continuity."
+  },
+  {
+    "id": "internal-medicine",
+    "name": "Internal Medicine / Hospital Medicine",
+    "group": "Physician",
+    "roleTitle": "internal medicine resident",
+    "scope": "Evaluates adults with complex or multi-system illness, reconciles medications, interprets investigations, and manages transitions of care. By video this is typically a post-discharge follow-up, a pre-admission evaluation or a complex chronic disease visit.",
+    "encounterTypes": [
+      "diagnostic interview",
+      "post-discharge follow-up",
+      "complex chronic disease review",
+      "medication reconciliation"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Problem-based assessment (each active problem with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan by problem: investigations, treatment changes, follow-up and return precautions"
+      }
+    ],
+    "rubricEmphasis": "Clinical reasoning across multiple problems, medication reconciliation, interpretation of results, safe transitions of care."
+  },
+  {
+    "id": "emergency-medicine",
+    "name": "Emergency Medicine",
+    "group": "Physician",
+    "roleTitle": "emergency medicine resident",
+    "scope": "Runs virtual urgent-care and tele-triage visits: rapidly identifies or excludes life-threatening conditions, risk-stratifies, and decides disposition (self-care, urgent in-person assessment, or call an ambulance now). Gives clear return precautions.",
+    "encounterTypes": [
+      "tele-triage of an acute complaint",
+      "virtual urgent care visit",
+      "disposition and return-precautions counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "ED note (focused HPI, MDM, disposition)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Medical decision making: must-not-miss diagnoses considered and how each was addressed"
+      },
+      {
+        "id": "disposition",
+        "label": "Disposition (home, in-person today, EMS) with reasoning"
+      },
+      {
+        "id": "plan",
+        "label": "Treatment and return precautions given"
+      }
+    ],
+    "rubricEmphasis": "Recognition of red flags, focused efficient history, risk stratification, safe disposition, explicit return precautions."
+  },
+  {
+    "id": "pediatrics",
+    "name": "Pediatrics",
+    "group": "Physician",
+    "roleTitle": "pediatrics resident",
+    "scope": "Cares for infants, children and adolescents by video with a parent or caregiver present: acute illness, growth and development, feeding, behaviour, immunisation and anticipatory guidance. Takes history from the caregiver and, where age-appropriate, the child; offers confidential time to adolescents.",
+    "encounterTypes": [
+      "acute illness visit",
+      "well-child / developmental concern",
+      "adolescent visit",
+      "parent counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP (with growth, development and immunization status)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential, including growth, development and hydration status where relevant"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, weight-based treatment, caregiver education, return precautions"
+      }
+    ],
+    "rubricEmphasis": "Caregiver-inclusive history, developmental and growth assessment, weight-based dosing, safeguarding awareness, clear advice for parents."
+  },
+  {
+    "id": "cardiology",
+    "name": "Cardiology",
+    "group": "Physician",
+    "roleTitle": "cardiology fellow",
+    "scope": "Assesses and follows patients with heart disease by video: chest pain and dyspnoea evaluation, heart failure, arrhythmia, hypertension, lipid and risk-factor management. Reviews ECGs, echocardiograms, device and home-monitoring data and titrates guideline-directed therapy.",
+    "encounterTypes": [
+      "new consultation",
+      "heart failure follow-up",
+      "arrhythmia / device review",
+      "risk-factor counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Cardiac assessment: diagnosis, functional class, risk stratification and reasoning"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: testing, medication titration, lifestyle advice, follow-up and warning signs"
+      }
+    ],
+    "rubricEmphasis": "Symptom characterisation, cardiovascular risk stratification, ECG/echo interpretation, guideline-directed therapy, adherence counselling."
+  },
+  {
+    "id": "oncology",
+    "name": "Medical Oncology",
+    "group": "Physician",
+    "roleTitle": "oncology fellow",
+    "scope": "Discusses cancer diagnoses, staging and treatment options, monitors patients on systemic therapy for toxicity, and leads goals-of-care conversations. Tele-visits include results disclosure, treatment planning, on-treatment toxicity checks and survivorship follow-up.",
+    "encounterTypes": [
+      "breaking difficult news",
+      "treatment planning discussion",
+      "on-treatment toxicity check",
+      "survivorship follow-up"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Oncology consult / progress note",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Oncologic assessment: diagnosis, stage, performance status, treatment toxicity and urgent issues"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: treatment decisions, supportive care, what the patient was told and understood, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Delivering serious news (SPIKES), toxicity grading, recognising oncologic emergencies, eliciting values, shared decision making."
+  },
+  {
+    "id": "hematology",
+    "name": "Hematology",
+    "group": "Physician",
+    "roleTitle": "hematology fellow",
+    "scope": "Evaluates and manages blood disorders: anaemia, abnormal counts, bleeding and clotting disorders, anticoagulation, sickle cell disease and haematologic malignancy follow-up. By video the work is history, interpretation of blood counts and smears reported in the record, and treatment decisions.",
+    "encounterTypes": [
+      "new consultation for abnormal blood count",
+      "anticoagulation review",
+      "chronic blood disorder follow-up"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Bleeding and thrombosis history, systematic CBC interpretation, anticoagulation safety, family history, explaining results clearly."
+  },
+  {
+    "id": "neurology",
+    "name": "Neurology",
+    "group": "Physician",
+    "roleTitle": "neurology resident",
+    "scope": "Assesses headache, seizure, weakness, tremor, memory and sensory complaints. Localises the lesion from history and a camera-guided neurological examination, recognises emergencies such as stroke, and manages chronic conditions such as epilepsy, migraine, MS and Parkinson disease.",
+    "encounterTypes": [
+      "new consultation",
+      "seizure / headache follow-up",
+      "cognitive assessment",
+      "medication review"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Neurology consult note (history, exam, localisation, plan)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Localisation, differential diagnosis and reasoning"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, driving/safety advice, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Precise symptom timeline, remote neurological examination, localisation, recognising stroke and other emergencies, safety counselling."
+  },
+  {
+    "id": "psychiatry",
+    "name": "Psychiatry",
+    "group": "Physician",
+    "roleTitle": "psychiatry resident",
+    "scope": "Conducts psychiatric interviews and mental status examinations, assesses risk of harm to self or others, formulates a diagnosis, and plans treatment with medication and psychotherapy referral. Telepsychiatry includes intake evaluations, medication management and crisis assessment.",
+    "encounterTypes": [
+      "psychiatric intake evaluation",
+      "medication management follow-up",
+      "risk assessment",
+      "crisis assessment"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Psychiatric evaluation (HPI, MSE, risk assessment, formulation, plan)",
+    "wrapUp": [
+      {
+        "id": "mse",
+        "label": "Mental status examination: key findings"
+      },
+      {
+        "id": "risk",
+        "label": "Risk assessment (suicide, harm to others, self-neglect) and safety plan"
+      },
+      {
+        "id": "formulation",
+        "label": "Diagnostic formulation and differential"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: medication, psychotherapy, monitoring, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Therapeutic alliance, mental status examination, direct and sensitive suicide risk assessment, biopsychosocial formulation, safety planning."
+  },
+  {
+    "id": "obgyn",
+    "name": "Obstetrics and Gynecology",
+    "group": "Physician",
+    "roleTitle": "obstetrics and gynecology resident",
+    "scope": "Provides prenatal and postpartum care, contraception and preconception counselling, and evaluation of gynaecologic complaints such as abnormal bleeding, pelvic pain and menopausal symptoms. By video, identifies which concerns need same-day in-person assessment.",
+    "encounterTypes": [
+      "prenatal visit",
+      "postpartum visit",
+      "contraception counseling",
+      "gynecologic complaint evaluation"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP (with obstetric and gynecologic history)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential (include gestational age / obstetric history where relevant)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Sensitive sexual and reproductive history, obstetric warning signs, trauma-informed and non-judgmental counselling, patient autonomy."
+  },
+  {
+    "id": "general-surgery",
+    "name": "General Surgery",
+    "group": "Physician",
+    "roleTitle": "general surgery resident",
+    "scope": "Evaluates surgical problems and operative candidacy, obtains informed consent, and follows patients after operations. Tele-visits are pre-operative consultations, post-operative wound and recovery checks, and triage of possible complications.",
+    "encounterTypes": [
+      "pre-operative consultation",
+      "informed consent discussion",
+      "post-operative check"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Surgical consult / post-operative note",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Surgical assessment: diagnosis, indication or post-operative course, complications considered"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: operative or non-operative management, consent points discussed, wound care, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Operative risk assessment, informed consent, recognising post-operative complications, camera-guided wound assessment, clear instructions."
+  },
+  {
+    "id": "orthopedics",
+    "name": "Orthopedic Surgery",
+    "group": "Physician",
+    "roleTitle": "orthopedic surgery resident",
+    "scope": "Assesses musculoskeletal injury and joint disease, reviews imaging, and advises on operative versus non-operative treatment. By video: mechanism-of-injury history, patient-performed range-of-motion and special tests, fracture and post-operative follow-up.",
+    "encounterTypes": [
+      "new musculoskeletal consultation",
+      "fracture follow-up",
+      "pre-operative discussion",
+      "post-operative check"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "imaging",
+      "lab",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Orthopedic consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: imaging, operative vs non-operative treatment, weight-bearing and activity advice, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Mechanism of injury, guided remote musculoskeletal examination, imaging interpretation, neurovascular red flags, functional goals."
+  },
+  {
+    "id": "anesthesiology",
+    "name": "Anesthesiology",
+    "group": "Physician",
+    "roleTitle": "anesthesiology resident",
+    "scope": "Performs pre-anaesthesia assessment by video: medical and anaesthetic history, airway and cardiopulmonary risk, functional capacity, medication and fasting instructions, and discussion of the anaesthetic plan and its risks.",
+    "encounterTypes": [
+      "pre-anesthesia assessment",
+      "anesthetic plan and consent discussion",
+      "post-procedure pain follow-up"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Pre-anesthesia evaluation",
+    "wrapUp": [
+      {
+        "id": "risk",
+        "label": "Risk assessment: ASA class, airway, cardiopulmonary and other anaesthetic risks"
+      },
+      {
+        "id": "plan",
+        "label": "Anaesthetic plan and alternatives discussed"
+      },
+      {
+        "id": "instructions",
+        "label": "Pre-operative instructions: fasting, which medications to hold or continue, further testing"
+      }
+    ],
+    "rubricEmphasis": "Systematic pre-operative risk assessment, airway history, perioperative medication management, plain-language consent."
+  },
+  {
+    "id": "radiology",
+    "name": "Radiology",
+    "group": "Physician",
+    "roleTitle": "radiology resident",
+    "scope": "Patient-facing radiology consultation: explains imaging findings and what they do and do not mean, reviews appropriateness of requested imaging, screens for contrast and procedure risks, and consents patients for image-guided procedures. Does not take over management from the referring clinician.",
+    "encounterTypes": [
+      "imaging results explanation",
+      "pre-procedure consultation and consent",
+      "contrast / imaging safety review"
+    ],
+    "actionKinds": [
+      "record",
+      "imaging",
+      "lab",
+      "assessment"
+    ],
+    "noteFormat": "Radiology consult note / structured report impression",
+    "wrapUp": [
+      {
+        "id": "findings",
+        "label": "Key imaging findings and impression in your own words"
+      },
+      {
+        "id": "communication",
+        "label": "What you told the patient and how you checked understanding"
+      },
+      {
+        "id": "plan",
+        "label": "Recommendations: further imaging or procedure, safety precautions, communication to the referring clinician"
+      }
+    ],
+    "rubricEmphasis": "Explaining findings without jargon, communicating uncertainty and incidental findings, contrast and radiation safety, consent."
+  },
+  {
+    "id": "pathology",
+    "name": "Pathology",
+    "group": "Physician",
+    "roleTitle": "pathology resident",
+    "scope": "Patient-facing pathology consultation: explains a biopsy, cytology or laboratory report (what was examined, what the diagnosis and its terms mean, what remains uncertain) and transfusion or blood-bank issues. Coordinates with the treating team and does not make treatment recommendations beyond scope.",
+    "encounterTypes": [
+      "pathology report explanation",
+      "transfusion medicine consultation",
+      "specimen / second-opinion discussion"
+    ],
+    "actionKinds": [
+      "record",
+      "lab",
+      "test"
+    ],
+    "noteFormat": "Pathology consult note",
+    "wrapUp": [
+      {
+        "id": "findings",
+        "label": "Diagnosis and key report elements in your own words"
+      },
+      {
+        "id": "communication",
+        "label": "What the patient understood and the questions they asked"
+      },
+      {
+        "id": "plan",
+        "label": "Additional testing recommended and communication back to the treating team"
+      }
+    ],
+    "rubricEmphasis": "Translating technical reports into plain language, honesty about uncertainty, staying within scope, handing back to the treating clinician."
+  },
+  {
+    "id": "dermatology",
+    "name": "Dermatology",
+    "group": "Physician",
+    "roleTitle": "dermatology resident",
+    "scope": "Evaluates rashes, lesions, hair and nail disorders by video and submitted photographs: lesion history, camera-guided skin inspection, recognising lesions that need in-person dermoscopy or biopsy, and managing chronic conditions such as acne, eczema and psoriasis.",
+    "encounterTypes": [
+      "new rash or lesion evaluation",
+      "chronic skin disease follow-up",
+      "biopsy result discussion"
+    ],
+    "actionKinds": [
+      "exam",
+      "imaging",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Dermatology note (SOAP with lesion morphology)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment: morphology described, differential diagnosis and reasoning"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Describing morphology, limits of teledermatology, skin cancer red flags, treatment vehicle and quantity instructions, quality-of-life impact."
+  },
+  {
+    "id": "endocrinology",
+    "name": "Endocrinology",
+    "group": "Physician",
+    "roleTitle": "endocrinology fellow",
+    "scope": "Manages diabetes, thyroid, adrenal, pituitary, bone and other hormonal disorders. Tele-visits centre on reviewing glucose data and laboratory trends, adjusting insulin and other therapy, and counselling on self-management.",
+    "encounterTypes": [
+      "diabetes follow-up",
+      "new endocrine consultation",
+      "medication titration",
+      "self-management counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: therapy adjustment (with doses), monitoring, hypoglycaemia safety, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Interpreting glucose and hormone data, safe dose titration, hypoglycaemia awareness, self-management support."
+  },
+  {
+    "id": "gastroenterology",
+    "name": "Gastroenterology and Hepatology",
+    "group": "Physician",
+    "roleTitle": "gastroenterology fellow",
+    "scope": "Evaluates digestive and liver complaints: reflux, abdominal pain, altered bowel habit, GI bleeding, abnormal liver tests, inflammatory bowel disease. By video, takes the history, reviews labs and endoscopy or imaging reports, and decides on endoscopy and treatment.",
+    "encounterTypes": [
+      "new consultation",
+      "IBD or liver disease follow-up",
+      "pre-endoscopy discussion",
+      "results discussion"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Alarm-feature screening, bowel and dietary history taken without embarrassment, interpreting liver tests, endoscopy indications."
+  },
+  {
+    "id": "nephrology",
+    "name": "Nephrology",
+    "group": "Physician",
+    "roleTitle": "nephrology fellow",
+    "scope": "Manages chronic kidney disease, electrolyte disorders, hypertension, glomerular disease and dialysis planning. Tele-visits review kidney function trends, blood pressure logs and medications, and prepare patients for kidney replacement decisions.",
+    "encounterTypes": [
+      "CKD follow-up",
+      "new consultation for abnormal kidney function",
+      "dialysis modality counseling"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: medication changes (renal dosing, nephrotoxin avoidance), monitoring, kidney replacement planning, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Interpreting eGFR and albuminuria trends, nephrotoxin review, blood pressure and volume assessment, modality education."
+  },
+  {
+    "id": "pulmonology",
+    "name": "Pulmonology and Critical Care",
+    "group": "Physician",
+    "roleTitle": "pulmonary and critical care fellow",
+    "scope": "Evaluates cough, breathlessness, asthma, COPD, interstitial lung disease, sleep-disordered breathing and lung nodules, and follows patients after critical illness. Reviews spirometry, imaging and home oximetry, and optimises inhaled therapy.",
+    "encounterTypes": [
+      "new consultation",
+      "asthma / COPD follow-up",
+      "post-ICU recovery visit",
+      "lung nodule discussion"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Dyspnoea characterisation, exposure and smoking history, spirometry interpretation, inhaler technique, exacerbation action plans."
+  },
+  {
+    "id": "infectious-disease",
+    "name": "Infectious Disease",
+    "group": "Physician",
+    "roleTitle": "infectious disease fellow",
+    "scope": "Evaluates complex or recurrent infections, fever, and HIV, hepatitis and travel-related illness; oversees antimicrobial selection and outpatient IV antibiotic therapy. Takes detailed exposure, travel and sexual histories.",
+    "encounterTypes": [
+      "new consultation",
+      "HIV / PrEP visit",
+      "outpatient antibiotic therapy follow-up",
+      "travel or exposure assessment"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, antimicrobial choice with dose and duration, monitoring, prevention and follow-up"
+      }
+    ],
+    "rubricEmphasis": "Exposure and sexual history without judgment, antimicrobial stewardship, adherence, confidentiality and stigma awareness."
+  },
+  {
+    "id": "rheumatology",
+    "name": "Rheumatology",
+    "group": "Physician",
+    "roleTitle": "rheumatology fellow",
+    "scope": "Evaluates joint pain, autoimmune and inflammatory disease, and monitors immunosuppressive therapy. By video: pattern-of-joint-involvement history, patient-guided joint examination, interpretation of serologies and safety laboratory monitoring.",
+    "encounterTypes": [
+      "new consultation for joint pain",
+      "inflammatory arthritis follow-up",
+      "immunosuppressant monitoring"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Inflammatory versus mechanical pattern, extra-articular features, serology interpretation, DMARD safety monitoring, function."
+  },
+  {
+    "id": "geriatrics",
+    "name": "Geriatric Medicine",
+    "group": "Physician",
+    "roleTitle": "geriatrics fellow",
+    "scope": "Performs comprehensive geriatric assessment of older adults, often with a family caregiver on the call: cognition, mood, falls, function, continence, polypharmacy and goals of care. Prioritises what matters most to the patient.",
+    "encounterTypes": [
+      "comprehensive geriatric assessment",
+      "memory concern evaluation",
+      "falls review",
+      "polypharmacy review"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Comprehensive geriatric assessment (4Ms: what Matters, Medication, Mentation, Mobility)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Geriatric assessment: cognition, mood, function, falls, medications, what matters to the patient"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: deprescribing, safety measures, caregiver support, referrals, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Functional and cognitive assessment, deprescribing, involving caregivers while respecting autonomy, goals-aligned care."
+  },
+  {
+    "id": "palliative-care",
+    "name": "Palliative Care",
+    "group": "Physician",
+    "roleTitle": "palliative care fellow",
+    "scope": "Assesses and treats pain and other symptoms in serious illness, explores understanding of illness, values and goals, supports advance care planning and caregivers. Tele-visits are symptom reviews, goals-of-care conversations and family meetings.",
+    "encounterTypes": [
+      "goals-of-care conversation",
+      "symptom management visit",
+      "advance care planning",
+      "family meeting"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "record"
+    ],
+    "noteFormat": "Palliative care consult note",
+    "wrapUp": [
+      {
+        "id": "symptoms",
+        "label": "Symptom assessment (pain and other symptoms, severity, current regimen)"
+      },
+      {
+        "id": "goals",
+        "label": "Patient's understanding of illness, values, goals and stated preferences"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: symptom regimen (with doses), advance care planning, caregiver support, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Serious-illness communication, responding to emotion, safe opioid prescribing, eliciting values, caregiver support."
+  },
+  {
+    "id": "urology",
+    "name": "Urology",
+    "group": "Physician",
+    "roleTitle": "urology resident",
+    "scope": "Evaluates urinary symptoms, haematuria, kidney stones, erectile and sexual dysfunction, prostate concerns including PSA results, and incontinence. By video: history, symptom scores, review of urinalysis and imaging, and counselling on options.",
+    "encounterTypes": [
+      "new consultation",
+      "PSA / biopsy results discussion",
+      "stone follow-up",
+      "post-procedure check"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Sensitive urinary and sexual history, haematuria red flags, validated symptom scores, shared decision making on screening and treatment."
+  },
+  {
+    "id": "ophthalmology",
+    "name": "Ophthalmology",
+    "group": "Physician",
+    "roleTitle": "ophthalmology resident",
+    "scope": "Triages and follows eye disease by video: red eye, vision change, flashes and floaters, post-operative checks, glaucoma and diabetic eye disease follow-up. Recognises sight-threatening emergencies that need same-day in-person examination.",
+    "encounterTypes": [
+      "eye complaint triage",
+      "post-operative check",
+      "chronic eye disease follow-up"
+    ],
+    "actionKinds": [
+      "exam",
+      "test",
+      "imaging",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Ophthalmology note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: urgency of in-person examination, treatment, drop instructions, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Red-flag screening for sight-threatening disease, limits of remote eye examination, drop adherence and technique."
+  },
+  {
+    "id": "ent",
+    "name": "Otolaryngology (ENT)",
+    "group": "Physician",
+    "roleTitle": "otolaryngology resident",
+    "scope": "Evaluates ear, nose, throat, voice, hearing, balance and neck-mass complaints. By video: focused history, camera inspection of the oropharynx and neck, review of audiograms and imaging, and identification of head and neck cancer red flags.",
+    "encounterTypes": [
+      "new consultation",
+      "hearing loss / dizziness evaluation",
+      "post-operative check",
+      "results discussion"
+    ],
+    "actionKinds": [
+      "exam",
+      "test",
+      "imaging",
+      "lab",
+      "record"
+    ],
+    "noteFormat": "Consult note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Head and neck red flags, vertigo characterisation, audiogram interpretation, airway warning signs."
+  },
+  {
+    "id": "pmr",
+    "name": "Physical Medicine and Rehabilitation",
+    "group": "Physician",
+    "roleTitle": "physiatry resident",
+    "scope": "Leads rehabilitation after stroke, spinal cord injury, brain injury, amputation and musculoskeletal or pain conditions. Assesses impairment, function and participation, manages spasticity, pain and bowel/bladder issues, and coordinates the therapy team and equipment.",
+    "encounterTypes": [
+      "rehabilitation consultation",
+      "post-stroke or spinal cord injury follow-up",
+      "spasticity or pain management visit"
+    ],
+    "actionKinds": [
+      "exam",
+      "assessment",
+      "vitals",
+      "imaging",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Physiatry consult note (impairments, function, rehabilitation plan)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Impairments, activity limitations and participation restrictions; medical complications"
+      },
+      {
+        "id": "plan",
+        "label": "Rehabilitation plan: therapy prescriptions, medications, equipment, functional goals, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Function-centred history, goal setting, interprofessional coordination, preventing secondary complications."
+  },
+  {
+    "id": "physician-assistant",
+    "name": "Physician Assistant / Associate",
+    "group": "Advanced practice",
+    "roleTitle": "physician assistant student",
+    "scope": "Takes histories, examines, orders and interprets tests, diagnoses and treats across primary, urgent and specialty care in collaboration with a physician. Recognises when a case needs escalation to the supervising physician.",
+    "encounterTypes": [
+      "acute complaint visit",
+      "chronic disease follow-up",
+      "pre-operative history and physical",
+      "patient education"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, treatment, patient education, follow-up, and when you would involve the supervising physician"
+      }
+    ],
+    "rubricEmphasis": "Focused history, clinical reasoning, safe prescribing, knowing limits and escalating, patient education."
+  },
+  {
+    "id": "nurse-practitioner",
+    "name": "Nurse Practitioner",
+    "group": "Advanced practice",
+    "roleTitle": "nurse practitioner student",
+    "scope": "Provides advanced nursing practice: comprehensive assessment, diagnosis, prescribing and management of acute and chronic conditions, with emphasis on health promotion, self-management and the patient's context.",
+    "encounterTypes": [
+      "primary care visit",
+      "chronic disease management",
+      "wellness and prevention visit",
+      "medication management"
+    ],
+    "actionKinds": [
+      "exam",
+      "vitals",
+      "lab",
+      "imaging",
+      "test",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "SOAP",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: investigations, pharmacologic and non-pharmacologic treatment, health promotion, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Holistic assessment, diagnostic reasoning, safe prescribing, health promotion, self-management support."
+  },
+  {
+    "id": "nurse-midwife",
+    "name": "Certified Nurse-Midwife",
+    "group": "Advanced practice",
+    "roleTitle": "student nurse-midwife",
+    "scope": "Provides prenatal, postpartum, newborn-feeding, gynaecologic and family-planning care for low-risk patients, supports physiologic birth planning, screens for complications and perinatal mood disorders, and consults or refers when risk rises.",
+    "encounterTypes": [
+      "prenatal visit",
+      "postpartum and lactation visit",
+      "birth planning",
+      "family planning visit"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "SOAP (prenatal / postpartum record)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment: gestational age or postpartum day, risk status, problems identified"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: testing, education and anticipatory guidance, warning signs, consultation or referral, next visit"
+      }
+    ],
+    "rubricEmphasis": "Woman-centred care, screening for warning signs and perinatal depression, informed choice, appropriate consultation and referral."
+  },
+  {
+    "id": "crna",
+    "name": "Nurse Anesthetist (CRNA)",
+    "group": "Advanced practice",
+    "roleTitle": "student registered nurse anesthetist",
+    "scope": "Performs the pre-anaesthesia assessment and prepares patients for anaesthesia: airway, cardiopulmonary and sleep-apnoea risk, prior anaesthetic problems, medications, fasting instructions and the anaesthetic plan, in collaboration with the anaesthesia care team.",
+    "encounterTypes": [
+      "pre-anesthesia assessment",
+      "anesthesia education and consent",
+      "post-anesthesia follow-up call"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "vitals",
+      "lab",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Pre-anesthesia evaluation",
+    "wrapUp": [
+      {
+        "id": "risk",
+        "label": "Risk assessment: ASA class, airway, aspiration, cardiopulmonary and other anaesthetic risks"
+      },
+      {
+        "id": "plan",
+        "label": "Proposed anaesthetic plan and what was discussed with the patient"
+      },
+      {
+        "id": "instructions",
+        "label": "Pre-operative instructions: fasting, medications to hold or continue, items needing team review"
+      }
+    ],
+    "rubricEmphasis": "Systematic pre-anaesthesia assessment, identifying risks that change the plan, clear pre-operative instructions."
+  },
+  {
+    "id": "nursing",
+    "name": "Nursing (RN)",
+    "group": "Nursing",
+    "roleTitle": "nursing student",
+    "scope": "Performs a nursing assessment, monitors and interprets vital signs, identifies safety risks, provides patient education, and escalates concerns to the provider using SBAR.",
+    "encounterTypes": [
+      "admission assessment",
+      "focused assessment",
+      "discharge teaching"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Nursing note + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Nursing assessment: priority findings and risks"
+      },
+      {
+        "id": "plan",
+        "label": "Nursing interventions and patient education provided"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR to the provider (if escalation is needed)"
+      }
+    ],
+    "rubricEmphasis": "Systematic assessment, patient safety, recognition of deterioration, therapeutic communication, escalation."
+  },
+  {
+    "id": "critical-care-nursing",
+    "name": "Critical Care Nursing",
+    "group": "Nursing",
+    "roleTitle": "critical care nursing student",
+    "scope": "Tele-ICU and post-ICU nursing: monitors trends in vital signs and device data, recognises early deterioration, supports family communication, and follows up patients recovering at home after critical illness (weakness, delirium, tracheostomy or oxygen needs).",
+    "encounterTypes": [
+      "post-ICU follow-up",
+      "remote monitoring assessment",
+      "family update"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "record",
+      "test"
+    ],
+    "noteFormat": "Nursing note + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Nursing assessment: priority findings and risks"
+      },
+      {
+        "id": "plan",
+        "label": "Nursing interventions and patient education provided"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR to the provider (if escalation is needed)"
+      }
+    ],
+    "rubricEmphasis": "Trend recognition, early warning scores, prioritisation, structured escalation, family-centred communication."
+  },
+  {
+    "id": "emergency-nursing",
+    "name": "Emergency / Triage Nursing",
+    "group": "Nursing",
+    "roleTitle": "emergency nursing student",
+    "scope": "Telephone and video nurse triage: rapid focused assessment, acuity assignment using a validated scale, protocol-based advice, and directing the patient to the right level of care, including calling an ambulance.",
+    "encounterTypes": [
+      "tele-triage call",
+      "focused assessment",
+      "discharge instructions"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Triage note (acuity level) + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Focused triage assessment and red flags identified"
+      },
+      {
+        "id": "acuity",
+        "label": "Acuity level and disposition (self-care, appointment, emergency department, ambulance) with reasoning"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR handoff to the receiving provider"
+      }
+    ],
+    "rubricEmphasis": "Rapid prioritisation, red-flag recognition, safe disposition, calm clear instructions, concise handoff."
+  },
+  {
+    "id": "oncology-nursing",
+    "name": "Oncology / Infusion Nursing",
+    "group": "Nursing",
+    "roleTitle": "oncology nursing student",
+    "scope": "Supports patients receiving chemotherapy, immunotherapy and other cancer treatment: pre-treatment education, between-cycle symptom and toxicity assessment, central-line and self-care teaching, and urgent escalation of problems such as neutropenic fever.",
+    "encounterTypes": [
+      "pre-chemotherapy teaching",
+      "between-cycle symptom check",
+      "symptom triage call"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "record",
+      "lab"
+    ],
+    "noteFormat": "Nursing note + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Symptom and toxicity assessment (with grades) and psychosocial findings"
+      },
+      {
+        "id": "plan",
+        "label": "Nursing interventions and self-care teaching provided"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR to the oncology provider (if escalation is needed)"
+      }
+    ],
+    "rubricEmphasis": "Toxicity grading, recognising oncologic emergencies, teach-back, emotional support, timely escalation."
+  },
+  {
+    "id": "pediatric-nursing",
+    "name": "Pediatric Nursing",
+    "group": "Nursing",
+    "roleTitle": "pediatric nursing student",
+    "scope": "Nursing assessment and teaching for children and their caregivers: hydration, breathing and pain assessment by video, medication and device teaching (inhalers, insulin, feeding tubes), developmental and safety screening, and escalation of the sick child.",
+    "encounterTypes": [
+      "focused assessment with caregiver",
+      "discharge teaching",
+      "chronic condition education"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Nursing note + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Nursing assessment: priority findings and risks"
+      },
+      {
+        "id": "plan",
+        "label": "Nursing interventions and patient education provided"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR to the provider (if escalation is needed)"
+      }
+    ],
+    "rubricEmphasis": "Family-centred care, age-appropriate communication, recognising the sick child, weight-based medication safety, teach-back."
+  },
+  {
+    "id": "psychiatric-nursing",
+    "name": "Psychiatric-Mental Health Nursing",
+    "group": "Nursing",
+    "roleTitle": "psychiatric nursing student",
+    "scope": "Builds a therapeutic relationship, assesses mental status, mood, safety and medication effects, provides psychoeducation and coping support, and escalates risk. Tele-visits include medication monitoring and post-discharge check-ins.",
+    "encounterTypes": [
+      "mental health check-in",
+      "medication monitoring",
+      "post-discharge follow-up",
+      "safety assessment"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "record",
+      "test"
+    ],
+    "noteFormat": "Nursing note with mental status + SBAR",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Mental status, safety assessment and medication effects"
+      },
+      {
+        "id": "plan",
+        "label": "Nursing interventions, psychoeducation and safety planning"
+      },
+      {
+        "id": "sbar",
+        "label": "SBAR to the psychiatric provider (if escalation is needed)"
+      }
+    ],
+    "rubricEmphasis": "Therapeutic communication, suicide risk screening, side-effect monitoring, de-escalation, recovery-oriented language."
+  },
+  {
+    "id": "public-health-nursing",
+    "name": "Community / Public Health Nursing",
+    "group": "Nursing",
+    "roleTitle": "public health nursing student",
+    "scope": "Works with individuals and families in the community: home-visit style assessment by video, immunisation and communicable-disease follow-up including contact tracing, maternal-child health, health education and connection to community resources.",
+    "encounterTypes": [
+      "home visit assessment",
+      "communicable disease follow-up",
+      "maternal-child health visit",
+      "health education"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "record",
+      "test"
+    ],
+    "noteFormat": "Nursing note / public health case record",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Assessment of the individual, household and environment; risks identified"
+      },
+      {
+        "id": "plan",
+        "label": "Education, interventions and referrals to community resources"
+      },
+      {
+        "id": "followup",
+        "label": "Follow-up plan and any reporting or notification required"
+      }
+    ],
+    "rubricEmphasis": "Social determinants of health, cultural humility, health education, confidentiality in contact tracing, linkage to resources."
+  },
+  {
+    "id": "case-management",
+    "name": "Nurse Case Management / Care Coordination",
+    "group": "Nursing",
+    "roleTitle": "nurse case manager",
+    "scope": "Coordinates care across settings for patients with complex needs: transition-of-care calls after discharge, medication and appointment reconciliation, identifying barriers (cost, transport, caregiving), arranging services and equipment, and preventing readmission.",
+    "encounterTypes": [
+      "transition-of-care call",
+      "care plan review",
+      "discharge planning"
+    ],
+    "actionKinds": [
+      "assessment",
+      "record"
+    ],
+    "noteFormat": "Case management assessment and care plan",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Needs assessment: clinical status, understanding of the plan, barriers and readmission risk"
+      },
+      {
+        "id": "plan",
+        "label": "Care plan: services, equipment and referrals arranged; who is responsible for each"
+      },
+      {
+        "id": "followup",
+        "label": "Follow-up schedule and escalation triggers"
+      }
+    ],
+    "rubricEmphasis": "Barrier identification, medication and appointment reconciliation, advocacy, teach-back, interprofessional coordination."
+  },
+  {
+    "id": "clinical-pharmacy",
+    "name": "Clinical Pharmacy",
+    "group": "Pharmacy",
+    "roleTitle": "pharmacy student (clinical rotation)",
+    "scope": "Conducts comprehensive medication reviews and medication therapy management: best possible medication history, identification of drug therapy problems (indication, effectiveness, safety, adherence), monitoring of labs and levels, and recommendations to the prescriber. Includes anticoagulation and chronic-disease collaborative practice.",
+    "encounterTypes": [
+      "comprehensive medication review",
+      "anticoagulation management visit",
+      "transitions-of-care medication reconciliation",
+      "chronic disease medication management"
+    ],
+    "actionKinds": [
+      "record",
+      "lab",
+      "assessment",
+      "vitals"
+    ],
+    "noteFormat": "Pharmacist SOAP / MTM note with drug therapy problem list",
+    "wrapUp": [
+      {
+        "id": "medhistory",
+        "label": "Best possible medication history: discrepancies found"
+      },
+      {
+        "id": "dtp",
+        "label": "Drug therapy problems, prioritised (indication, effectiveness, safety, adherence)"
+      },
+      {
+        "id": "plan",
+        "label": "Recommendations to the prescriber, patient education and monitoring plan"
+      }
+    ],
+    "rubricEmphasis": "Complete medication history including OTC and herbal products, interaction and dose checking, adherence exploration, clear prescriber recommendations."
+  },
+  {
+    "id": "community-pharmacy",
+    "name": "Community Pharmacy",
+    "group": "Pharmacy",
+    "roleTitle": "pharmacy student (community rotation)",
+    "scope": "Counsels patients on new and refill prescriptions, device technique, over-the-counter and self-care choices, and immunisations; screens for interactions and red flags that need referral to a prescriber; supports adherence and affordability.",
+    "encounterTypes": [
+      "new prescription counseling",
+      "self-care / OTC consultation",
+      "adherence and refill review",
+      "device teaching"
+    ],
+    "actionKinds": [
+      "record",
+      "assessment",
+      "vitals"
+    ],
+    "noteFormat": "Pharmacist counseling record / MTM note",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Assessment: medication-related problems or self-care triage findings"
+      },
+      {
+        "id": "counseling",
+        "label": "Counselling provided and how understanding was confirmed"
+      },
+      {
+        "id": "plan",
+        "label": "Recommendation (OTC product, refer to prescriber, pharmacist intervention) and follow-up"
+      }
+    ],
+    "rubricEmphasis": "Three prime questions, teach-back, OTC triage and referral red flags, interaction screening, plain language."
+  },
+  {
+    "id": "physical-therapy",
+    "name": "Physical Therapy",
+    "group": "Rehabilitation",
+    "roleTitle": "physical therapy student",
+    "scope": "Examines movement, strength, balance, pain and function; screens for red flags needing medical referral; establishes a physical therapy diagnosis and prognosis; prescribes and progresses exercise and teaches self-management. By video, tests are patient-performed under guidance.",
+    "encounterTypes": [
+      "initial evaluation",
+      "progress re-evaluation",
+      "home exercise program teaching",
+      "post-operative rehabilitation visit"
+    ],
+    "actionKinds": [
+      "exam",
+      "assessment",
+      "test",
+      "vitals",
+      "record"
+    ],
+    "noteFormat": "PT evaluation (examination, evaluation, PT diagnosis, prognosis, plan of care with goals)",
+    "wrapUp": [
+      {
+        "id": "examination",
+        "label": "Examination findings: impairments, activity limitations, outcome measure scores"
+      },
+      {
+        "id": "evaluation",
+        "label": "PT diagnosis, contributing factors, prognosis and any red flags"
+      },
+      {
+        "id": "goals",
+        "label": "Short- and long-term functional goals (measurable, time-bound)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan of care: interventions, home exercise program, frequency and duration"
+      }
+    ],
+    "rubricEmphasis": "Red-flag screening, movement analysis, standardised outcome measures, functional goal writing, exercise dosing, patient education."
+  },
+  {
+    "id": "occupational-therapy",
+    "name": "Occupational Therapy",
+    "group": "Rehabilitation",
+    "roleTitle": "occupational therapy student",
+    "scope": "Builds an occupational profile and analyses performance of daily activities (self-care, home management, work, school, leisure); assesses cognition, upper-limb function and the home environment by video; recommends adaptations, equipment and strategies.",
+    "encounterTypes": [
+      "initial evaluation",
+      "home safety assessment",
+      "ADL retraining visit",
+      "cognitive or upper-limb rehabilitation follow-up"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "test",
+      "record"
+    ],
+    "noteFormat": "OT evaluation (occupational profile, analysis of occupational performance, goals, plan)",
+    "wrapUp": [
+      {
+        "id": "profile",
+        "label": "Occupational profile: roles, routines, priorities and environment"
+      },
+      {
+        "id": "performance",
+        "label": "Analysis of occupational performance: what limits participation"
+      },
+      {
+        "id": "goals",
+        "label": "Client-centred, measurable goals"
+      },
+      {
+        "id": "plan",
+        "label": "Intervention plan: adaptations, equipment, strategies, caregiver training"
+      }
+    ],
+    "rubricEmphasis": "Client-centred goal setting, activity analysis, home safety, adaptive strategies, caregiver involvement."
+  },
+  {
+    "id": "speech-language-pathology",
+    "name": "Speech-Language Pathology",
+    "group": "Rehabilitation",
+    "roleTitle": "speech-language pathology student",
+    "scope": "Assesses and treats speech, language, cognitive-communication, voice, fluency and swallowing disorders in children and adults. By video: case history, screening and standardised tasks, swallowing history with caregiver-observed intake, and counselling on strategies.",
+    "encounterTypes": [
+      "communication evaluation",
+      "swallowing (dysphagia) screening and counseling",
+      "pediatric speech-language evaluation",
+      "therapy follow-up"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "test",
+      "record"
+    ],
+    "noteFormat": "SLP evaluation report (history, assessment results, diagnosis, goals, recommendations)",
+    "wrapUp": [
+      {
+        "id": "findings",
+        "label": "Assessment findings: communication and/or swallowing"
+      },
+      {
+        "id": "diagnosis",
+        "label": "Diagnostic impression and severity"
+      },
+      {
+        "id": "plan",
+        "label": "Recommendations: goals, therapy plan, strategies for patient and family, referrals"
+      }
+    ],
+    "rubricEmphasis": "Thorough case history, appropriate task selection, aspiration red flags, family coaching, functional communication goals."
+  },
+  {
+    "id": "audiology",
+    "name": "Audiology",
+    "group": "Rehabilitation",
+    "roleTitle": "audiology student",
+    "scope": "Evaluates hearing and balance complaints, interprets audiograms and tympanometry, counsels on hearing loss and its communication impact, fits and troubleshoots hearing aids remotely, and refers for medical evaluation when red flags are present.",
+    "encounterTypes": [
+      "hearing evaluation results counseling",
+      "hearing aid fitting follow-up",
+      "tinnitus or dizziness history"
+    ],
+    "actionKinds": [
+      "test",
+      "assessment",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Audiologic evaluation report",
+    "wrapUp": [
+      {
+        "id": "findings",
+        "label": "Case history and audiologic findings (type, degree, configuration of hearing loss)"
+      },
+      {
+        "id": "impact",
+        "label": "Communication impact and patient goals"
+      },
+      {
+        "id": "plan",
+        "label": "Recommendations: amplification, communication strategies, medical referral, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Audiogram interpretation, medical-referral red flags (asymmetry, sudden loss), counselling on stigma, communication-partner strategies."
+  },
+  {
+    "id": "respiratory-therapy",
+    "name": "Respiratory Therapy",
+    "group": "Rehabilitation",
+    "roleTitle": "respiratory therapy student",
+    "scope": "Assesses breathing and oxygenation, teaches inhaler, nebuliser and airway-clearance technique, manages home oxygen, CPAP/BiPAP and home ventilation equipment, supports pulmonary rehabilitation and action plans, and escalates respiratory deterioration.",
+    "encounterTypes": [
+      "inhaler and device teaching",
+      "home oxygen / CPAP follow-up",
+      "COPD or asthma action plan review",
+      "pulmonary rehabilitation visit"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "test",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Respiratory care note (SOAP)",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Respiratory assessment: symptoms, oximetry, device data, technique errors observed"
+      },
+      {
+        "id": "plan",
+        "label": "Interventions and teaching provided; equipment changes recommended"
+      },
+      {
+        "id": "escalation",
+        "label": "Findings to report to the prescriber and action-plan triggers"
+      }
+    ],
+    "rubricEmphasis": "Observed device technique with teach-back, oximetry interpretation, equipment troubleshooting, recognising exacerbation."
+  },
+  {
+    "id": "dietetics",
+    "name": "Dietetics / Clinical Nutrition",
+    "group": "Nutrition",
+    "roleTitle": "dietetics student",
+    "scope": "Conducts nutrition assessment (diet history, anthropometrics, labs, barriers), makes a nutrition diagnosis, and delivers patient-centred nutrition education and counselling using motivational interviewing.",
+    "encounterTypes": [
+      "nutrition assessment",
+      "nutrition counseling",
+      "follow-up"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "record",
+      "lab"
+    ],
+    "noteFormat": "ADIME",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Nutrition assessment: key findings"
+      },
+      {
+        "id": "diagnosis",
+        "label": "Nutrition diagnosis (PES statement)"
+      },
+      {
+        "id": "plan",
+        "label": "Intervention, patient goals agreed, monitoring and evaluation"
+      }
+    ],
+    "rubricEmphasis": "Motivational interviewing, cultural humility, plain-language education, realistic goal setting."
+  },
+  {
+    "id": "clinical-psychology",
+    "name": "Clinical Psychology",
+    "group": "Behavioral health",
+    "roleTitle": "clinical psychology trainee",
+    "scope": "Conducts diagnostic clinical interviews, administers and interprets standardised measures, develops a case formulation, and delivers evidence-based psychotherapy such as CBT. Assesses risk and does not prescribe medication.",
+    "encounterTypes": [
+      "diagnostic intake interview",
+      "psychotherapy session",
+      "assessment feedback session",
+      "risk assessment"
+    ],
+    "actionKinds": [
+      "assessment",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Psychological intake / progress note (presenting problem, MSE, formulation, treatment plan)",
+    "wrapUp": [
+      {
+        "id": "presentation",
+        "label": "Presenting problem, relevant history and mental status"
+      },
+      {
+        "id": "formulation",
+        "label": "Case formulation and diagnostic impression"
+      },
+      {
+        "id": "risk",
+        "label": "Risk assessment and safety plan"
+      },
+      {
+        "id": "plan",
+        "label": "Treatment plan: modality, goals, measures, frequency"
+      }
+    ],
+    "rubricEmphasis": "Therapeutic alliance, structured assessment, case formulation, risk assessment, collaborative goal setting."
+  },
+  {
+    "id": "social-work",
+    "name": "Clinical Social Work",
+    "group": "Behavioral health",
+    "roleTitle": "social work student",
+    "scope": "Completes a biopsychosocial assessment, identifies social needs (housing, food, finances, caregiving, safety), provides supportive counselling and crisis intervention, plans discharges, links to resources, and fulfils safeguarding and mandated reporting duties.",
+    "encounterTypes": [
+      "psychosocial assessment",
+      "discharge planning",
+      "crisis intervention",
+      "resource navigation"
+    ],
+    "actionKinds": [
+      "assessment",
+      "record"
+    ],
+    "noteFormat": "Biopsychosocial assessment",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Biopsychosocial assessment: strengths, needs, supports and risks"
+      },
+      {
+        "id": "safety",
+        "label": "Safety and safeguarding concerns (abuse, neglect, self-harm) and actions taken"
+      },
+      {
+        "id": "plan",
+        "label": "Intervention plan: counselling, referrals, resources, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Person-in-environment perspective, strengths-based practice, safety screening, advocacy, self-determination."
+  },
+  {
+    "id": "counseling",
+    "name": "Mental Health Counseling",
+    "group": "Behavioral health",
+    "roleTitle": "counseling trainee",
+    "scope": "Provides talk therapy for mood, anxiety, grief, relationship, adjustment and life-transition concerns: intake assessment, goal setting, evidence-based counselling techniques, risk screening, and referral when needs exceed scope.",
+    "encounterTypes": [
+      "counseling intake",
+      "ongoing counseling session",
+      "grief or adjustment counseling",
+      "career / student counseling"
+    ],
+    "actionKinds": [
+      "assessment",
+      "record"
+    ],
+    "noteFormat": "Intake assessment / DAP progress note (Data, Assessment, Plan)",
+    "wrapUp": [
+      {
+        "id": "data",
+        "label": "Data: presenting concerns and what the client shared"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment: clinical impression, risk, stage of change"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: goals agreed, interventions, homework, next session"
+      }
+    ],
+    "rubricEmphasis": "Core counselling skills (reflection, open questions, validation), alliance, risk screening, culturally responsive practice."
+  },
+  {
+    "id": "addiction-counseling",
+    "name": "Addiction / Substance Use Counseling",
+    "group": "Behavioral health",
+    "roleTitle": "addiction counseling trainee",
+    "scope": "Screens and assesses substance use and its consequences, determines stage of change and level-of-care needs, uses motivational interviewing, plans relapse prevention and harm reduction, and coordinates with medical providers for withdrawal risk and medication treatment.",
+    "encounterTypes": [
+      "substance use assessment",
+      "motivational interviewing session",
+      "relapse prevention session",
+      "brief intervention (SBIRT)"
+    ],
+    "actionKinds": [
+      "assessment",
+      "test",
+      "record"
+    ],
+    "noteFormat": "Substance use assessment (ASAM dimensions) and treatment plan",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Substance use history, consequences, stage of change and withdrawal or overdose risk"
+      },
+      {
+        "id": "level",
+        "label": "Level-of-care recommendation and reasoning"
+      },
+      {
+        "id": "plan",
+        "label": "Treatment plan: goals in the client's words, harm reduction, relapse prevention, referrals"
+      }
+    ],
+    "rubricEmphasis": "Motivational interviewing spirit, non-stigmatising language, withdrawal and overdose risk recognition, harm reduction."
+  },
+  {
+    "id": "medical-laboratory-science",
+    "name": "Medical Laboratory Science",
+    "group": "Diagnostics and technology",
+    "roleTitle": "medical laboratory science student",
+    "scope": "Patient-facing laboratory tele-visits: confirms identity and test orders, gives pre-collection instructions (fasting, timed and 24-hour collections, home and point-of-care testing), investigates pre-analytical problems behind implausible or rejected results, and explains what a test measures. Reports critical values to the ordering provider and does not diagnose or change treatment.",
+    "encounterTypes": [
+      "pre-collection instruction visit",
+      "recollection / pre-analytical investigation",
+      "point-of-care testing teaching"
+    ],
+    "actionKinds": [
+      "record",
+      "lab",
+      "assessment",
+      "test"
+    ],
+    "noteFormat": "Laboratory communication record",
+    "wrapUp": [
+      {
+        "id": "findings",
+        "label": "Pre-analytical findings: preparation, collection, interfering factors identified"
+      },
+      {
+        "id": "instructions",
+        "label": "Instructions given to the patient and how understanding was confirmed"
+      },
+      {
+        "id": "communication",
+        "label": "What was reported to the ordering provider (including critical values) and recollection plan"
+      }
+    ],
+    "rubricEmphasis": "Two-identifier verification, pre-analytical variables, plain-language instructions, critical-value reporting, staying within scope."
+  },
+  {
+    "id": "radiologic-technology",
+    "name": "Radiologic Technology / Medical Imaging",
+    "group": "Diagnostics and technology",
+    "roleTitle": "radiologic technology student",
+    "scope": "Prepares patients for imaging: verifies identity and the order, screens for MRI safety (implants, metal), contrast risk (allergy, kidney function, metformin), pregnancy and claustrophobia, explains the examination and preparation, and flags concerns to the radiologist. Does not interpret images.",
+    "encounterTypes": [
+      "pre-imaging safety screening",
+      "exam preparation instructions",
+      "post-contrast follow-up call"
+    ],
+    "actionKinds": [
+      "record",
+      "assessment",
+      "lab"
+    ],
+    "noteFormat": "Imaging safety screening form and technologist note",
+    "wrapUp": [
+      {
+        "id": "screening",
+        "label": "Safety screening findings (implants, contrast risk, pregnancy, other)"
+      },
+      {
+        "id": "instructions",
+        "label": "Preparation instructions given and patient questions answered"
+      },
+      {
+        "id": "communication",
+        "label": "Issues referred to the radiologist or ordering provider before the examination"
+      }
+    ],
+    "rubricEmphasis": "Systematic safety screening, patient identification, radiation and MRI safety explanation, easing anxiety, staying within scope."
+  },
+  {
+    "id": "sonography",
+    "name": "Diagnostic Medical Sonography",
+    "group": "Diagnostics and technology",
+    "roleTitle": "sonography student",
+    "scope": "Prepares patients for ultrasound examinations: verifies the order and clinical indication, takes the focused history a sonographer needs, explains preparation (fasting, bladder filling) and what the scan involves including transvaginal consent, and explains that results come from the interpreting physician.",
+    "encounterTypes": [
+      "pre-scan history and preparation",
+      "obstetric scan preparation",
+      "explaining the procedure and consent"
+    ],
+    "actionKinds": [
+      "record",
+      "assessment",
+      "imaging"
+    ],
+    "noteFormat": "Sonographer worksheet / pre-scan clinical history",
+    "wrapUp": [
+      {
+        "id": "history",
+        "label": "Focused clinical history relevant to the examination"
+      },
+      {
+        "id": "instructions",
+        "label": "Preparation and procedure explanation given; consent obtained"
+      },
+      {
+        "id": "communication",
+        "label": "Information to pass to the interpreting physician"
+      }
+    ],
+    "rubricEmphasis": "Focused clinical history, dignity and consent for intimate examinations, managing requests for results, professional boundaries."
+  },
+  {
+    "id": "genetic-counseling",
+    "name": "Genetic Counseling",
+    "group": "Diagnostics and technology",
+    "roleTitle": "genetic counseling student",
+    "scope": "Takes a three-generation family history and draws a pedigree, assesses hereditary risk, explains inheritance and testing options with their limits and implications for relatives, supports informed decisions, and discloses and interprets genetic test results.",
+    "encounterTypes": [
+      "pre-test genetic counseling",
+      "results disclosure",
+      "prenatal / reproductive counseling",
+      "hereditary cancer risk assessment"
+    ],
+    "actionKinds": [
+      "assessment",
+      "record",
+      "lab",
+      "test"
+    ],
+    "noteFormat": "Genetic counseling summary (pedigree, risk assessment, testing plan)",
+    "wrapUp": [
+      {
+        "id": "pedigree",
+        "label": "Family history summary and pedigree interpretation"
+      },
+      {
+        "id": "risk",
+        "label": "Risk assessment and inheritance pattern"
+      },
+      {
+        "id": "plan",
+        "label": "Testing options discussed, the patient's decision, psychosocial issues, implications for relatives, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Accurate pedigree, non-directive counselling, risk communication with numbers, informed consent, psychosocial support."
+  },
+  {
+    "id": "dentistry",
+    "name": "Dentistry",
+    "group": "Dental and vision",
+    "roleTitle": "dental student",
+    "scope": "Teledentistry: triages dental pain, swelling, trauma and oral lesions; takes a medical and dental history including anticoagulants and bisphosphonates; inspects by camera and submitted photos; reviews radiographs; and decides urgency and interim management before in-chair treatment.",
+    "encounterTypes": [
+      "dental emergency triage",
+      "treatment planning consultation",
+      "post-extraction follow-up"
+    ],
+    "actionKinds": [
+      "exam",
+      "imaging",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Dental SOAP note",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Dental diagnosis / differential and urgency"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: interim management, analgesia or antibiotics with justification, in-chair treatment needed, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Recognising spreading infection and airway risk, antibiotic stewardship, medical-dental interactions, pain management, anxiety."
+  },
+  {
+    "id": "dental-hygiene",
+    "name": "Dental Hygiene",
+    "group": "Dental and vision",
+    "roleTitle": "dental hygiene student",
+    "scope": "Assesses oral health risk (caries, periodontal disease, oral cancer risk factors), reviews medical history and medications that affect the mouth, teaches oral hygiene technique, and counsels on diet, tobacco and prevention. Refers findings needing diagnosis to the dentist.",
+    "encounterTypes": [
+      "oral health risk assessment",
+      "oral hygiene instruction",
+      "periodontal maintenance follow-up",
+      "tobacco cessation counseling"
+    ],
+    "actionKinds": [
+      "assessment",
+      "exam",
+      "record"
+    ],
+    "noteFormat": "Dental hygiene process of care note (ADPIED)",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Assessment: risk factors and oral findings"
+      },
+      {
+        "id": "diagnosis",
+        "label": "Dental hygiene diagnosis"
+      },
+      {
+        "id": "plan",
+        "label": "Care plan: self-care instruction, preventive measures, referral to the dentist, recall interval"
+      }
+    ],
+    "rubricEmphasis": "Risk assessment, behaviour-change counselling, technique teaching with demonstration, oral-systemic links, appropriate referral."
+  },
+  {
+    "id": "optometry",
+    "name": "Optometry",
+    "group": "Dental and vision",
+    "roleTitle": "optometry student",
+    "scope": "Takes ocular and visual history, triages red eye and vision changes, manages refractive and contact-lens problems, dry eye, and follow-up of diabetic eye disease and glaucoma within scope. Recognises conditions needing urgent ophthalmology referral.",
+    "encounterTypes": [
+      "eye complaint triage",
+      "contact lens follow-up",
+      "diabetic eye exam results counseling",
+      "vision concern history"
+    ],
+    "actionKinds": [
+      "exam",
+      "test",
+      "imaging",
+      "record",
+      "assessment"
+    ],
+    "noteFormat": "Optometric examination record (SOAP)",
+    "wrapUp": [
+      {
+        "id": "summary",
+        "label": "One-line summary of the patient"
+      },
+      {
+        "id": "assessment",
+        "label": "Assessment and differential diagnosis (most likely first, with reasoning)"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: treatment, lens advice, urgency and destination of referral, follow-up"
+      }
+    ],
+    "rubricEmphasis": "Ocular red flags, contact-lens hygiene counselling, explaining findings, timely referral."
+  },
+  {
+    "id": "paramedic",
+    "name": "Paramedicine / EMS",
+    "group": "Pre-hospital and community",
+    "roleTitle": "paramedic student",
+    "scope": "Community paramedicine and telehealth-supported pre-hospital care: scene and primary survey, focused history (SAMPLE, OPQRST), vital signs and point-of-care tests, protocol-based treatment, transport versus treat-in-place decisions, and radio or handover reports.",
+    "encounterTypes": [
+      "community paramedicine visit",
+      "acute pre-hospital assessment",
+      "post-discharge check",
+      "refusal-of-transport assessment"
+    ],
+    "actionKinds": [
+      "assessment",
+      "vitals",
+      "exam",
+      "test",
+      "procedure",
+      "record"
+    ],
+    "noteFormat": "Patient care report (PCR) + handover (IMIST-AMBO / SBAR)",
+    "wrapUp": [
+      {
+        "id": "assessment",
+        "label": "Primary and secondary assessment findings and field impression"
+      },
+      {
+        "id": "treatment",
+        "label": "Treatment given under protocol and the patient's response"
+      },
+      {
+        "id": "handover",
+        "label": "Transport decision and handover report to the receiving clinician"
+      }
+    ],
+    "rubricEmphasis": "Structured primary survey, time-critical recognition, protocol adherence, capacity and refusal assessment, concise handover."
+  },
+  {
+    "id": "athletic-training",
+    "name": "Athletic Training",
+    "group": "Pre-hospital and community",
+    "roleTitle": "athletic training student",
+    "scope": "Evaluates sports injuries and illness in athletes, manages concussion with graded return-to-sport and return-to-learn, designs rehabilitation and prevention programmes, and refers to a physician when red flags are present.",
+    "encounterTypes": [
+      "injury evaluation",
+      "concussion follow-up",
+      "return-to-play assessment",
+      "rehabilitation progress check"
+    ],
+    "actionKinds": [
+      "exam",
+      "assessment",
+      "test",
+      "vitals",
+      "record"
+    ],
+    "noteFormat": "Injury evaluation (HOPS: History, Observation, Palpation, Special tests) / SOAP",
+    "wrapUp": [
+      {
+        "id": "evaluation",
+        "label": "Evaluation findings (history, observation, patient-guided palpation and special tests)"
+      },
+      {
+        "id": "assessment",
+        "label": "Clinical impression and red flags"
+      },
+      {
+        "id": "plan",
+        "label": "Plan: treatment and rehabilitation, return-to-play stage and criteria, referral"
+      }
+    ],
+    "rubricEmphasis": "Mechanism of injury, concussion symptom assessment, return-to-play criteria, athlete and coach pressure, physician referral."
+  },
+  {
+    "id": "community-health",
+    "name": "Health Coaching / Community Health Work",
+    "group": "Pre-hospital and community",
+    "roleTitle": "community health worker",
+    "scope": "Builds trust with patients in their own context, screens for social needs (food, housing, transport, cost of care), supports behaviour change with patient-chosen goals, navigates the health system and community resources, and relays concerns to the care team. Does not diagnose or give medication advice.",
+    "encounterTypes": [
+      "social needs screening",
+      "health coaching session",
+      "care navigation visit",
+      "chronic disease self-management support"
+    ],
+    "actionKinds": [
+      "assessment",
+      "record"
+    ],
+    "noteFormat": "Outreach / coaching encounter note",
+    "wrapUp": [
+      {
+        "id": "needs",
+        "label": "Needs and barriers identified, and strengths and supports"
+      },
+      {
+        "id": "goals",
+        "label": "Goals in the patient's own words and action steps agreed"
+      },
+      {
+        "id": "plan",
+        "label": "Resources and referrals made; what was communicated to the care team; next contact"
+      }
+    ],
+    "rubricEmphasis": "Trust and cultural humility, motivational interviewing, SMART goal setting, resource navigation, knowing when to hand off to a clinician."
+  }
+]

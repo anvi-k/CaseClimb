@@ -1,0 +1,298 @@
+{
+ "patient_overview": {
+  "name": "María Eugenia Rosas",
+  "age": 43,
+  "sex": "Female",
+  "description": "María Eugenia Rosas is a 43-year-old single woman living in Bloomfield, NJ, in a household of eight, who works full-time and was referred for nutrition counseling after being flagged with prediabetes, obesity, and anemia on recent labs. She is precise and factual in how she describes her health - citing her HbA1c and glucose numbers from memory - but reserved about her personal life, offering little beyond the clinical facts at first. She comes across as someone who has already decided she wants to make one concrete change but is guarded about what is actually making that hard to do.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "anemia",
+   "caregiver_burden",
+   "takeaway_eating",
+   "health_literacy",
+   "family_minimization",
+   "transportation_barrier",
+   "weight_management",
+   "preparation_stage"
+  ]
+ },
+ "demographics": {
+  "occupation": "Billing coordinator at a dental office",
+  "residence": "Bloomfield, New Jersey; household of 8",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Single",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "María grew up in a bilingual household and still speaks mostly her first language at home with family; English is her second language for work and most medical visits. Food was never the center of elaborate home cooking in her upbringing - her mother worked long shifts too - so takeaway and quick plates from neighborhood spots became normal early on, and that pattern has stuck as her main way of eating and socializing with coworkers and cousins. She does not see this as a cultural loss, just how her family has always eaten."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "History of tubal ligation",
+   "Anemia",
+   "Body mass index 30+ - obesity"
+  ],
+  "medical_history": [
+   "History of tubal ligation since 2008",
+   "Prediabetes since 2023",
+   "Anemia since 2023",
+   "Body mass index 30+ - obesity since 2025",
+   "Severe anxiety (panic) (2017-06 to 2025-04, resolved)",
+   "Gingivitis (2023-04 to 2023-05, resolved)",
+   "Gingival disease (2023-05 to 2023-05, resolved)",
+   "Injury of neck (2026-07 to 2026-09, resolved)",
+   "Whiplash injury to neck (2026-07 to 2026-09, resolved)",
+   "Discharge from hospital (2026-08-15)",
+   "Nursing care/supplementary surveillance (2026-08-14)",
+   "Professional / ancillary services care (2026-08-14)",
+   "Occupational therapy (2026-08-13)",
+   "Physical therapy procedure (2026-08-08)",
+   "History AND physical examination (2026-07-01)"
+  ],
+  "current_symptoms": [
+   "Feels tired most afternoons, especially after 3pm",
+   "Gets short of breath climbing the stairs at the dental office",
+   "Notices she is thirstier than she used to be",
+   "Occasional lightheadedness she attributes to 'low iron'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Pale conjunctiva consistent with her documented anemia",
+   "Central weight distribution with BMI in the obese range",
+   "Mild fatigue evident in flattened affect during longer conversation",
+   "Normal gait and no acute distress on exam"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.2 % (reference < 5.7; 2025-04-24)",
+   "Glucose: 64.6 mg/dL (reference 70-99 (fasting); 2025-04-24)",
+   "Total cholesterol: 100.5 mg/dL (reference < 200; 2025-04-24)",
+   "LDL cholesterol: 19.3 mg/dL (reference < 100; 2025-04-24)",
+   "HDL cholesterol: 55.8 mg/dL (reference >= 40; 2025-04-24)",
+   "Triglycerides: 127.7 mg/dL (reference < 150; 2025-04-24)",
+   "Haemoglobin: 11.7 g/dL (reference 12.0-17.5; 2023-04-27)",
+   "White cell count: 10.3 10*3/uL (reference 4.0-11.0; 2023-04-27)",
+   "Platelets: 246.7 10*3/uL (reference 150-450; 2023-04-27)",
+   "Potassium: 4.9 mmol/L (reference 3.5-5.1; 2025-04-24)",
+   "Sodium: 142.7 mmol/L (reference 135-145; 2025-04-24)",
+   "Urea nitrogen: 13 mg/dL (reference 7-20; 2025-04-24)"
+  ],
+  "vital_signs": [
+   "BP: 119/74 mmHg",
+   "HR: 84 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2025-04-24"
+  ],
+  "anthropometrics": [
+   "Height: 164 cm",
+   "Weight: 80.9 kg",
+   "BMI: 30.1 kg/m2",
+   "Weight change: +2.0 kg since 2023-04-20"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "Over-the-counter iron tablets, taken 'sometimes, when I remember'",
+   "A multivitamin a cousin recommended",
+   "Ginger candies she keeps at her desk for nausea"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Eats out or orders takeaway 5-6 days a week; cooks at home rarely, mostly on Sundays when the whole household eats together",
+  "food_preferences": [
+   "Rotisserie chicken plates with rice from the place next to her office",
+   "Pupusas or empanadas from a stand near her apartment on weeknights when she's too tired to cook",
+   "Diet soda with most meals",
+   "Sweet coffee with condensed milk in the morning"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at takeaway meals - she estimates but doesn't measure",
+   "Frequency of sugary coffee and soda across the day",
+   "Whether she is eating enough iron-rich foods consistently versus relying on the supplement 'sometimes'",
+   "Skipped lunches on days she is pulled into caregiving tasks"
+  ],
+  "meal_pattern": "Breakfast: coffee only, sometimes a roll. Lunch: ordered in or picked up near work, eaten at her desk. Dinner: takeaway most nights, home-cooked only on Sundays.",
+  "hydration": "Mostly diet soda and coffee during the day; drinks water inconsistently, says she 'forgets' until she's very thirsty",
+  "physical_activity": "Walks to the bus stop and around the office; no structured exercise; says there is 'no time' most weeks",
+  "substance_use": "Does not smoke; does not drink alcohol (AUDIT-C score of 0)",
+  "sleep": "Sleeps around 6 hours most nights, often interrupted"
+ },
+ "psychosocial_profile": {
+  "personality": "Reserved and private; keeps conversation on the facts and figures of her health rather than her feelings; warms up slowly once she senses she won't be judged",
+  "communication_style": "Precise and factual - cites her HbA1c of 6.2%, her glucose reading, and exact dates of diagnoses from memory; gives short answers to open questions until trust builds; dislikes vague advice",
+  "goals": [
+   "Wants one specific, concrete first step she can start this week",
+   "Wants her next HbA1c to come back lower",
+   "Wants more energy to get through her full workday"
+  ],
+  "concerns": [
+   "Worried prediabetes will become full diabetes like it did for her aunt",
+   "Concerned about her low hemoglobin and whether it's connected to how tired she feels",
+   "Frustrated that her schedule leaves no room to cook"
+  ],
+  "beliefs": [
+   "Believes numbers tell the real story more than how she feels day to day",
+   "Thinks her tiredness is 'just the anemia' and not related to her weight or diet",
+   "Believes she just needs more willpower to cook more often"
+  ],
+  "motivations": [
+   "Her HbA1c result scared her enough to want to act",
+   "Wants to keep working full-time without her energy giving out",
+   "Doesn't want to end up on medication if she can avoid it"
+  ],
+  "fears": [
+   "Fear of progressing to type 2 diabetes",
+   "Fear of being seen as weak or failing if she can't change her eating",
+   "Fear that asking for help at home will not be taken seriously"
+  ],
+  "barriers": [
+   "No time to cook most days due to work and caregiving responsibilities at home",
+   "Transportation problems have already caused her to miss a medical appointment",
+   "Household of eight means little control over what food is around or when she can eat",
+   "Quite a bit of self-reported stress"
+  ],
+  "strengths": [
+   "Organized and detail-oriented - tracks her own lab numbers and dates",
+   "Already in the preparation stage, has decided she wants to change something concrete",
+   "Higher education and comfortable researching health information on her own"
+  ],
+  "support_system": "Lives in a household of eight with extended family nearby; sees people socially only 1-2 times a week outside the home; family is physically close but tends to brush off her prediabetes and anemia as 'nothing serious' and continues to serve the same heavy, convenience-based meals at gatherings",
+  "readiness_to_change": "Preparation stage - she has already decided she wants to make a change and is looking for one clear, concrete first step rather than a broad overhaul"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States her HbA1c was 6.2% and her glucose was 64.6 mg/dL on her last test, with the date",
+   "Mentions she was told her BMI is just over 30",
+   "Says she eats out most days because of her schedule",
+   "Reports feeling tired in the afternoons"
+  ],
+  "discoverable_information": [
+   "Describes her usual takeaway orders and typical day of eating when asked directly",
+   "Mentions missing a medical appointment because of a transportation problem",
+   "Admits she doesn't always remember to take her iron tablets",
+   "Shares that her family doesn't take her diagnoses very seriously when gatherings happen"
+  ],
+  "reluctant_information": [
+   "Reveals, when asked gently about her evenings, that she spends several hours after work caring for an elderly relative in the household and has almost no time left for herself",
+   "Admits this caregiving is the real reason she hasn't started cooking more, not just laziness as she first implied"
+  ],
+  "hidden_information": [
+   "She has quietly started skipping her own lunch some days so she can finish caregiving tasks before the relative's appointments",
+   "She feels guilty and would not bring up the caregiving role unless asked specifically and non-judgmentally about her evening routine and who else lives in the home"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full social and caregiving history behind a reserved presentation",
+    "expected_discoveries": [
+     "Household of 8 with caregiving duties for an elderly relative",
+     "Transportation barrier that has already caused a missed appointment",
+     "Limited time for her own meals or self-care"
+    ],
+    "possible_patient_reactions": [
+     "Gives short, factual answers at first",
+     "Opens up slightly if asked with patience and without pressure",
+     "May deflect with a number or date if a question feels too personal"
+    ]
+   },
+   {
+    "learning_objective": "Translate lab values and clinical facts into a single, concrete first behavior change (consistent with her preparation stage)",
+    "expected_discoveries": [
+     "She wants one specific step, not a full diet overhaul",
+     "Her current pattern of 5-6 takeaway meals a week",
+     "Opportunities to modify an existing order rather than replace it entirely"
+    ],
+    "possible_patient_reactions": [
+     "Engages readily when given one specific, measurable suggestion",
+     "Pushes back on vague advice like 'eat healthier'",
+     "Asks clarifying questions about portions or specific menu items"
+    ]
+   },
+   {
+    "learning_objective": "Explore the relationship between her anemia, fatigue, and dietary pattern",
+    "expected_discoveries": [
+     "Inconsistent iron supplement use",
+     "Low intake of iron-rich foods in her takeaway-heavy pattern",
+     "Her belief that fatigue is 'just the anemia' and unrelated to diet overall"
+    ],
+    "possible_patient_reactions": [
+     "Open to concrete iron-rich food suggestions she can order or add",
+     "Surprised that diet pattern and anemia might be linked",
+     "Mentions the supplement she sometimes forgets"
+    ]
+   },
+   {
+    "learning_objective": "Address family dynamics that undermine her health goals without blaming the family",
+    "expected_discoveries": [
+     "Family gatherings center on the same heavy, convenience foods",
+     "Relatives minimize her prediabetes and anemia diagnoses",
+     "She feels isolated in taking her health seriously"
+    ],
+    "possible_patient_reactions": [
+     "States facts about family meals plainly",
+     "May become more guarded if she feels her family is being criticized",
+     "Relieved if the student validates her situation without judging her relatives"
+    ]
+   },
+   {
+    "learning_objective": "Problem-solve around the transportation barrier and its effect on care continuity",
+    "expected_discoveries": [
+     "A missed medical appointment due to lack of transportation",
+     "Potential for telehealth or community resources",
+     "Her stress level, self-reported as 'quite a bit'"
+    ],
+    "possible_patient_reactions": [
+     "Mentions the missed appointment factually, without much emotion",
+     "Interested in practical solutions like telehealth follow-up",
+     "Reluctant to ask for help from family with rides"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed occupation as a billing coordinator at a dental office consistent with full-time work, higher education, and private insurance",
+   "Assumed the household of 8 includes extended family and an elderly relative she helps care for, consistent with the hidden caregiving trait",
+   "Assumed her first language is Spanish given 'White, Hispanic' ethnicity and 'language other than English' field, without attributing specific cultural food practices beyond her stated individual pattern"
+  ],
+  "optional_details": [
+   "Keeps a small notebook where she jots down her lab numbers after each visit",
+   "Has a cousin who recently started a similar weight management program and sometimes compares notes with her",
+   "Prefers tea over coffee in the evening but rarely has time to make it before falling asleep"
+  ]
+ },
+ "source": {
+  "synthea_record": "213e6867",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "reserved and private, gives little away at first",
+   "communication": "precise and factual, quotes numbers and dates",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "moderate health literacy",
+   "eating": "eats out or orders takeaway most days, and it is the main social life",
+   "held_back": "caring duties for someone else that leave no time for their own health",
+   "support": "family nearby who do not take the condition seriously"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

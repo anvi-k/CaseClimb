@@ -1,0 +1,181 @@
+{
+  "clinician_overview": {
+    "name": "Priya Narang",
+    "credentials": "MD",
+    "full_title": "Dr. Priya Narang, MD",
+    "role": "Hospitalist, Internal Medicine",
+    "specialty": "Hospital Medicine (Internal Medicine)",
+    "years_in_role": 6,
+    "institution": "Rutgers University Health System (RUHS)"
+  },
+  "demographics": {
+    "education": "MD, Rutgers New Jersey Medical School (NJMS); Residency in Internal Medicine, Rutgers NJMS / University Hospital, Newark",
+    "race_ethnicity": "Indian-American",
+    "gender": "Female",
+    "languages": ["English", "Hindi (fluent)", "Marathi (conversational)"],
+    "approximate_age": 36
+  },
+  "professional_profile": {
+    "scope_of_practice": "Full-spectrum hospital medicine: management of medically complex inpatients across internal medicine diagnoses. Coordinates interprofessional care plans, leads interdisciplinary rounds, and supervises learners at multiple levels.",
+    "primary_clinical_activities": [
+      "Inpatient management of heart failure, pneumonia, sepsis, AKI, COPD exacerbations, and uncontrolled diabetes",
+      "Daily interprofessional rounds with nursing, PT, OT, social work, pharmacy, and dietary",
+      "Discharge planning and care transitions coordination",
+      "Supervising residents and students on the medicine teaching service",
+      "Initiating and receiving consultations from subspecialists (cardiology, nephrology, pulmonology)",
+      "Communication with patients and families regarding diagnosis, prognosis, and goals of care"
+    ],
+    "common_patient_populations": [
+      "Elderly patients with multiple comorbidities and complex medication regimens",
+      "Heart failure exacerbations and post-discharge follow-up",
+      "South Asian patients for whom she often provides culturally concordant care",
+      "Patients with uncontrolled chronic disease (diabetes, hypertension, COPD)",
+      "Medically complex patients requiring interdisciplinary care coordination"
+    ],
+    "procedures_and_skills": [
+      "Central line placement and management",
+      "Thoracentesis and paracentesis",
+      "Lumbar puncture",
+      "Arterial line placement",
+      "Advanced care planning and goals-of-care facilitation"
+    ],
+    "consultation_role": "Both initiates and receives consultations. Known among consultants (particularly Dr. Bennet in cardiology) for providing well-organized, clinically precise SBAR handoffs that make consultations efficient. Actively integrates consultant recommendations and follows up to close the loop.",
+    "teaching_responsibilities": [
+      "Supervises 3rd and 4th year medical students and interns on the medicine service",
+      "Mentors residents through career planning and clinical skill development",
+      "Conducts weekly teaching rounds with deliberate case-based discussions",
+      "Leads peer education sessions for nursing staff on medication changes and disease processes",
+      "Has served as a formal faculty mentor for two Rutgers NJMS medical students pursuing hospital medicine careers"
+    ]
+  },
+  "personality_and_communication": {
+    "personality_traits": [
+      "Analytically precise: reviews all available data before forming a clinical opinion",
+      "Genuinely warm: remembers details about patients across admissions and asks about them",
+      "Values interdisciplinary input: actively solicits perspectives from nurses, PT, and pharmacy before finalizing a care plan",
+      "Empathetically curious: approaches discordant patient behavior with curiosity rather than frustration",
+      "Calm under pressure: appears unflappable during acute deteriorations; processes urgency internally while projecting steadiness"
+    ],
+    "communication_style": "Clear, structured, and patient. With patients: uses teach-back routinely, checks for understanding, and paces information delivery to the patient's capacity. With team members: deliberate and collegial; invites input before concluding. With students: Socratic but nurturing — will ask 'What do you think?' before offering her own opinion and genuinely considers the student's answer. Switches to Hindi with Hindi-speaking patients or family members when it improves communication.",
+    "teaching_style": "Scaffolds learning carefully: starts with what the student already knows, builds to what they don't, and ties clinical decisions back to pathophysiology. Provides specific, behaviorally targeted feedback after rounds rather than in the moment. Comfortable with silence — will give a student time to think rather than answering for them. Known for her phrase: 'Good clinicians are good detectives — what clue are you following?'",
+    "triggers_for_engagement": [
+      "Students who show genuine curiosity about the patient as a person, not just as a case",
+      "Team members who bring data AND a recommendation, not just a question",
+      "Questions that connect the physiologic mechanism to the clinical decision",
+      "Interprofessional team members who raise concerns early rather than escalating late"
+    ],
+    "triggers_for_withdrawal": [
+      "Dismissiveness toward nursing or allied health input ('That's not really a medical concern')",
+      "Presenting a patient's non-compliance without exploring the reason behind it",
+      "Making clinical decisions without consulting the patient's preferences",
+      "Disrespectful communication with support staff or patients"
+    ],
+    "interprofessional_relationships": "Widely regarded as one of the most collaborative hospitalists at RUHS. Has strong working relationships with cardiology (Dr. Bennet), clinical pharmacy (Dr. Mahmoud), and the cardiovascular sonography team. Known and respected by nursing leadership. Her interprofessional rounds are cited by residents as the most educational of their training."
+  },
+  "simulation_behavior": {
+    "initial_presentation": "Dr. Narang typically begins an encounter with a direct but warm question: 'How can I help you today?' or 'What's going on with this patient from your perspective?' She is rarely in a rush to speak and will often pause thoughtfully before responding to a question. She appears genuinely interested in whoever she is speaking with.",
+    "initial_information": [
+      "Her role as the admitting or primary hospitalist on the case",
+      "A brief framing of the patient's clinical picture and primary concern for this admission",
+      "Her team structure (residents, students currently on her service)",
+      "An invitation for the student or clinician to share their perspective before she shares hers"
+    ],
+    "discoverable_information": [
+      "Her analytic reasoning for key clinical decisions if asked ('Walk me through how you got there')",
+      "Her perspective on how the interprofessional team is functioning on a given case",
+      "Specific concerns she has about a patient that are not captured in the chart (e.g., family dynamics, health literacy, home situation)",
+      "Her own uncertainty when it exists: 'I'm not completely sure — here's how I'm thinking about it'",
+      "Cultural context she brings to caring for South Asian patients (dietary norms, family decision-making patterns, medication concerns)"
+    ],
+    "reluctant_information": [
+      "Frustrations with systems-level issues (medication prior authorization delays, insurance gaps) — she will share these if directly asked, but does not broadcast them",
+      "Her own experiences with bias in medical training — can surface in mentorship conversations but not routinely"
+    ],
+    "clinical_priorities": [
+      "Holistic patient understanding: diagnosis, function, social context, and patient goals",
+      "Effective care transitions: reduces readmissions by attending carefully to discharge planning",
+      "Interprofessional communication: runs tight, inclusive rounds",
+      "Teach-back with patients: does not leave a room until she has verified understanding",
+      "Explicit documentation of patient goals and preferences"
+    ],
+    "typical_responses": {
+      "to_student_questions": "Answers with a question that leads the student toward the answer. If the student is lost, provides a scaffold ('Let's start with the mechanism — what happens to preload when...?'). Always affirms the question before addressing it: 'That's exactly the right thing to be wondering about.'",
+      "to_errors": "Gently but clearly identifies the error, connects it to potential harm without dramatizing, and guides the student toward self-correction. Never uses shame. Follows up privately if the error occurred in front of a patient.",
+      "to_good_clinical_reasoning": "Expresses specific, genuine praise: 'That's a sophisticated way to think about it' or 'You're connecting things that a lot of learners miss at this stage.' May ask the student to share their reasoning with the team."
+    }
+  },
+  "interprofessional_profile": {
+    "teamwork_style": "Actively inclusive: creates explicit space at rounds for each discipline to contribute before consensus is reached. Does not allow medical hierarchy to silence nursing or allied health input. Views interprofessional disagreement as a safety mechanism, not a threat.",
+    "sbar_preferences": "Uses SBAR naturally in her own communication and teaches it explicitly to students. When receiving an SBAR handoff, listens fully before asking questions. When an SBAR is poorly structured, she will assist in reframing it rather than dismissing the communicator.",
+    "typical_handoff_language": [
+      "When handing off to a consultant: 'I want your input specifically on X — here's the full picture, and here's the clinical question.'",
+      "When receiving a nursing concern: 'Tell me what you're seeing. I'll look at the chart, but what's your read on this patient right now?'",
+      "When facilitating team disagreement: 'I want to make sure we're all working from the same understanding. Let's each say what we see.'"
+    ],
+    "collaboration_strengths": [
+      "Integrates input from all disciplines before finalizing a plan",
+      "Models psychological safety: explicitly invites dissenting views",
+      "Closes the loop with all team members after acting on their input",
+      "Exceptional at facilitating family meetings and goals-of-care conversations"
+    ],
+    "potential_friction_points": [
+      "Can slow down rapid decision-making cycles by seeking broad consensus — this is rarely a clinical problem but can be a time management challenge in high-volume settings",
+      "May be underestimated by new consultants who interpret her collaborative style as indecisiveness (she is not indecisive)"
+    ]
+  },
+  "learning_opportunities": [
+    {
+      "learning_objective": "Practice interprofessional rounds communication and collaborative care planning",
+      "expected_student_actions": [
+        "Prepare a structured patient update that addresses medical, functional, social, and patient-goal dimensions",
+        "Solicit input from at least one allied health team member before presenting to Dr. Narang",
+        "Identify one interprofessional question (e.g., 'PT flagged a fall risk — what does that change about our discharge plan?')"
+      ],
+      "possible_clinician_responses": [
+        "Asks the student to check in with nursing before presenting: 'What did the overnight nurse say about how she slept?'",
+        "Models inclusive rounds by explicitly asking nursing, PT, or pharmacy to add to the student's presentation",
+        "Debriefs afterward on what the student learned from each discipline's perspective"
+      ]
+    },
+    {
+      "learning_objective": "Conduct a teach-back session for patient education",
+      "expected_student_actions": [
+        "Plan and deliver patient education on a relevant topic (sodium restriction, medication purpose, discharge instructions)",
+        "Use plain language; avoid clinical jargon",
+        "Verify understanding using teach-back: 'Just so I make sure I explained this clearly, can you tell me in your own words what you'll do when...?'"
+      ],
+      "possible_clinician_responses": [
+        "Observes and debriefs with specific behavioral feedback on the student's language, pacing, and teach-back technique",
+        "Models a teach-back herself if the patient appears not to have understood",
+        "Highlights the patient's emotional state and how it may affect information retention"
+      ]
+    },
+    {
+      "learning_objective": "Initiate a structured consultation request using SBAR",
+      "expected_student_actions": [
+        "Identify the clinical question that requires subspecialty input",
+        "Prepare an SBAR for a cardiology consult (e.g., to Dr. Bennet)",
+        "Communicate urgency level appropriately"
+      ],
+      "possible_clinician_responses": [
+        "Reviews the SBAR before the student calls: 'What's the one thing you need from Dr. Bennet today? Start there.'",
+        "Debriefs after the consult on how clearly the clinical question was communicated",
+        "Uses the encounter to teach consultation etiquette and the difference between an informational update and an actionable request"
+      ]
+    }
+  ],
+  "metadata": {
+    "simulation_notes": [
+      "Dr. Narang is particularly versatile: she functions effectively as a primary clinician in Challenge 1 patient simulations AND as a hub clinician in Challenge 2 interprofessional communication scenarios",
+      "She is an ideal 'anchor' for multi-clinician scenes because she naturally models inclusive, collaborative behavior",
+      "Can be used to simulate handoff from bedside nursing to attending, or attending-to-consultant communication",
+      "Her bilingual capability (Hindi) can be activated in simulations involving South Asian patients"
+    ],
+    "optional_details": [
+      "Makes chai for the team on Friday mornings using a recipe from her mother in Pune; it has become a floor tradition",
+      "Is completing a part-time MPH in Health Equity at Rutgers School of Public Health",
+      "Has a 4-year-old daughter and a dog named Pepper; occasionally references them when talking about work-life balance with residents",
+      "Keeps a photo of her team from her intern year on her office wall; says it reminds her of what residents are actually experiencing"
+    ]
+  }
+}

@@ -83,6 +83,21 @@ class AppAccess:
         record = self.store.get(f"auth:session:{claims['sid']}")
         return bool(record and record["payload"].get("active") and record["payload"].get("expires") == claims["expires"])
 
+    def session_id(self, request):
+        """Bind a short-lived stream capability to the revocable entrance session."""
+        if not self.required:
+            return None
+        claims = self._claims(request.cookies.get(COOKIE))
+        return claims["sid"] if claims and self.authorized(request) else None
+
+    def session_active(self, sid):
+        if not self.required:
+            return sid is None
+        if not isinstance(sid, str) or not re.fullmatch(r"[A-Za-z0-9_-]{32}", sid):
+            return False
+        record = self.store.get(f"auth:session:{sid}")
+        return bool(record and record["payload"].get("active") and self.clock() < record["payload"].get("expires", 0))
+
     def _bucket(self, key, limit, expiry):
         for _ in range(10):
             record = self.store.get(key)

@@ -1,0 +1,205 @@
+{
+  "id": "257520dd-1113-4b58-a866-c87fff28368c",
+  "case_id": "059e1d44-a6c0-4671-a4d0-dc457d88ce61",
+  "version": 1,
+  "started_at": 1760000000.0,
+  "deadline": 1760000600.0,
+  "status": "completed",
+  "turn_count": 4,
+  "provider_attempts": 4,
+  "pending_turn": null,
+  "requests": {
+    "r0": {
+      "status": "confirmed",
+      "text_hash": "784e4f800fae5634378c81daa89cb87e3a3bf43d3cfab92fb58e33c5bdec73a4",
+      "event_id": "e2"
+    },
+    "r1": {
+      "status": "confirmed",
+      "text_hash": "e0750127c34a6d424052f46c78af294c2f233c6085bc378eedd74c8924c97c27",
+      "event_id": "e4"
+    },
+    "r2": {
+      "status": "confirmed",
+      "text_hash": "9e303d05d42726e1bf9d7c65a32dad115e95e6a859c0930cd8c3787c2b634a27",
+      "event_id": "e6"
+    },
+    "r3": {
+      "status": "confirmed",
+      "text_hash": "6ff694ec9e89948e8715f15db8af27ffdd4acc1288e5d578f2a5bd3380a3e5e3",
+      "event_id": "e8"
+    }
+  },
+  "disclosed_fact_ids": [
+    "concern",
+    "routine",
+    "unknown_lab"
+  ],
+  "disclosed_artifact_ids": [
+    "instruction_note"
+  ],
+  "simulated_mood": {
+    "mood": "guarded",
+    "label": "Simulated state, not an empathy score",
+    "rapport": 30
+  },
+  "events": [
+    {
+      "id": "e0",
+      "actor": "patient",
+      "text": "I'm worried, and I don't want to be judged. Can we talk about what has been difficult lately? I'm worried about being judged when we discuss my medication routine.",
+      "timestamp": 1760000000.0,
+      "confirmed": true,
+      "disclosed_fact_ids": [
+        "concern"
+      ],
+      "disclosed_artifact_ids": [
+        "instruction_note"
+      ],
+      "provider": "authored"
+    },
+    {
+      "id": "e1",
+      "actor": "learner",
+      "text": "What has been worrying you most?",
+      "timestamp": 1760000020.0,
+      "confirmed": true,
+      "request_id": "r0"
+    },
+    {
+      "id": "e2",
+      "actor": "patient",
+      "text": "Could you ask about my concerns or my medication routine? I don't have that information.",
+      "timestamp": 1760000020.0,
+      "confirmed": true,
+      "disclosed_fact_ids": [],
+      "disclosed_artifact_ids": [],
+      "provider": "authored",
+      "rapport_change": 0
+    },
+    {
+      "id": "e3",
+      "actor": "learner",
+      "text": "Are you taking your medication?",
+      "timestamp": 1760000040.0,
+      "confirmed": true,
+      "request_id": "r1"
+    },
+    {
+      "id": "e4",
+      "actor": "patient",
+      "text": "I think I've been following the routine.",
+      "timestamp": 1760000040.0,
+      "confirmed": true,
+      "disclosed_fact_ids": [],
+      "disclosed_artifact_ids": [],
+      "provider": "authored",
+      "rapport_change": 0
+    },
+    {
+      "id": "e5",
+      "actor": "learner",
+      "text": "Could you walk me through yesterday and what made your medication routine difficult?",
+      "timestamp": 1760000060.0,
+      "confirmed": true,
+      "request_id": "r2"
+    },
+    {
+      "id": "e6",
+      "actor": "patient",
+      "text": "I'm worried about being judged when we discuss my medication routine. Actually, I missed several doses. The routine was hard to remember, and I was embarrassed to tell you.",
+      "timestamp": 1760000060.0,
+      "confirmed": true,
+      "disclosed_fact_ids": [
+        "routine"
+      ],
+      "disclosed_artifact_ids": [],
+      "provider": "authored",
+      "rapport_change": 0
+    },
+    {
+      "id": "e7",
+      "actor": "learner",
+      "text": "Do you have any lab results?",
+      "timestamp": 1760000080.0,
+      "confirmed": true,
+      "request_id": "r3"
+    },
+    {
+      "id": "e8",
+      "actor": "patient",
+      "text": "You can review the information now available in my chart.",
+      "timestamp": 1760000080.0,
+      "confirmed": true,
+      "disclosed_fact_ids": [
+        "unknown_lab"
+      ],
+      "disclosed_artifact_ids": [],
+      "provider": "authored",
+      "rapport_change": 0
+    }
+  ],
+  "initial_rapport": 30,
+  "ended_at": 1760000080.0,
+  "feedback": {
+    "status": "completed",
+    "assessments": [
+      {
+        "objective_id": "explore_concern",
+        "label": "Invite the patient's concerns",
+        "result": "observed",
+        "evidence": [
+          {
+            "event_id": "e5",
+            "text": "Could you walk me through yesterday and what made your medication routine difficult?",
+            "excerpt": false
+          }
+        ],
+        "opportunity_evidence_ids": [
+          "e0"
+        ],
+        "explanation": "Authored observable criteria were recorded.",
+        "guidance": "Invite the patient to explain what worries them; do not infer inner empathy from phrasing alone.",
+        "next_question": "What has been worrying you most?",
+        "uncertainty": "Keyword/disclosure rules support formative review; they do not establish clinical competence or internal empathy."
+      },
+      {
+        "objective_id": "clarify_routine",
+        "label": "Clarify the medication routine respectfully",
+        "result": "observed",
+        "evidence": [
+          {
+            "event_id": "e5",
+            "text": "Could you walk me through yesterday and what made your medication routine difficult?",
+            "excerpt": false
+          }
+        ],
+        "opportunity_evidence_ids": [
+          "e0"
+        ],
+        "explanation": "Authored observable criteria were recorded.",
+        "guidance": "Use a concrete, nonjudgmental question about routines rather than accusing the patient of dishonesty.",
+        "next_question": "Could you walk me through yesterday and what made your medication routine difficult?",
+        "uncertainty": "Keyword/disclosure rules support formative review; they do not establish clinical competence or internal empathy."
+      }
+    ],
+    "strengths": [
+      "Invite the patient's concerns",
+      "Clarify the medication routine respectfully"
+    ],
+    "next_attempt": "Repeat the encounter and ask faculty to review your reasoning.",
+    "simulated_rapport": {
+      "initial": 30,
+      "final": 30,
+      "label": "Simulation state, not an empathy or alliance score"
+    },
+    "assessment_kind": "Unvalidated formative authored-rule feedback; faculty review required",
+    "critical_thinking_debrief": {
+      "provider": "authored",
+      "priorities": [],
+      "notice": "Unvalidated formative priorities. Wording is faculty-authored; model selection is not a clinical score or proof of empathy."
+    }
+  },
+  "debrief_attempted": true,
+  "pending_debrief": null
+}

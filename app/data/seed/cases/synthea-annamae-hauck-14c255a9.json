@@ -1,0 +1,1161 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for Hypertension and Severe Obesity in a Precontemplative Patient with Minimized Alcohol Intake",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment and MI-based counseling session with a precontemplative, blunt patient who has essential hypertension and severe obesity but minimizes both her alcohol intake and her antihypertensive nonadherence. The core teaching points are eliciting an accurate alcohol/diet history through specific non-judgmental questioning, spotting a patient-versus-chart mismatch (self-reported 'a glass here and there' versus documentation suggesting a much heavier weekend pattern), and building a PES statement and realistic, patient-centered plan rather than lecturing a patient who feels dismissed by both her family and the healthcare system.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Bridgewater, New Jersey (on a short break between helping with household chores, in a cluttered shared living room)",
+  "encounterType": "nutrition assessment and counseling",
+  "difficulty": 3,
+  "patient": {
+   "name": "Annamae Hauck",
+   "age": 46,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Billing coordinator at a regional orthopedic practice",
+   "language": "English",
+   "appearance": "Severely obese body habitus, facial fullness, sitting slightly tilted to favor her lower back, dressed in work-casual clothes with a lanyard still around her neck as if she just stepped away from her desk; background shows a busy, cluttered living room with sounds of family members occasionally passing through.",
+   "portrait": "/portraits/synthea-annamae-hauck-14c255a9.jpg"
+  },
+  "persona": {
+   "personality": "Blunt, impatient, no-nonsense; sharp and matter-of-fact, mildly defensive about her weight and drinking, takes pride in knowing her own numbers",
+   "communicationStyle": "Precise and factual, cites her own lab values and dates readily, gets irritated by vague or 'preachy' explanations, softens slightly when she feels heard rather than judged",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly defensive and impatient, with underlying fatigue and resignation about her health being 'just how it is', becomes more open if approached without judgment",
+   "background": "Annamae grew up in a loud, bustling central New Jersey family where meals were whatever could be thrown together between someone's shift and someone's practice. She's worked as a billing coordinator at a regional orthopedic practice for years, is proud of how organized she keeps her medical appointments and medication schedule, and currently lives in a crowded house with seven family members she describes as 'loud and unhelpful' about her health. She keeps a small succulent on her desk ('the only thing I haven't managed to kill'), unwinds most evenings with true crime documentaries, and has a standing Friday takeout order from the same Italian deli she's used for years.",
+   "speechExamples": [
+    "My pressure was 97 over 64 last time, so I don't really get why we're doing this again.",
+    "Look, I don't cook for one person, it's a waste of time and money.",
+    "It's genetic, half my family is built this way, no amount of salad is changing that.",
+    "I have a glass of wine here and there, nothing crazy.",
+    "I don't need a lecture, I need you to tell me something I don't already know."
+   ],
+   "concerns": [
+    "Being told to overhaul her whole diet when she feels she doesn't have time to cook",
+    "Her weight being blamed for everything from her back pain to her blood pressure",
+    "Being lectured by someone younger than her kids"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition counseling visit with Annamae Hauck, a 46-year-old woman referred for nutrition counseling related to blood pressure and weight management. Review her available health record before the visit. Your job is to complete a nutrition assessment, understand her eating and drinking patterns and barriers, and begin patient-centered counseling.",
+   "chiefComplaint": "Nutrition counseling visit for blood pressure and weight management",
+   "openingLine": "Hi, I'm here for the nutrition thing, but honestly my pressure was 97 over 64 last time so I'm not sure what we're fixing. Let's just get through this.",
+   "tasks": [
+    "Take a focused diet, fluid, and alcohol history using specific, non-judgmental questioning techniques",
+    "Review available vitals, labs, and chart/pharmacy documentation and compare them with what the patient reports",
+    "Assess the patient's readiness to change and identify her personal goals and barriers around eating, drinking, and medication-taking",
+    "Develop at least one nutrition diagnosis (PES statement) addressing her presenting concerns",
+    "Deliver brief, patient-centered nutrition education or counseling using a motivational interviewing approach, and propose one realistic next step"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition counseling visit for blood pressure and weight management"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider at Orthopedic Associates of Central NJ; dietitian (current encounter); pharmacy - Bridgewater Pharmacy"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Recurrent urinary tract infection (since 1999); Body mass index 40+ - severely obese (since 2001); Essential hypertension (since 2002); History of appendectomy (since 2004); Chronic sinusitis (since 2005); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014)"
+   },
+   {
+    "label": "Medications",
+    "value": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; Vitamin B12 5 MG/ML Injectable Solution"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "Presents for nutrition counseling related to hypertension and severe obesity management.",
+    "says": "I'm here because someone wants me to talk about my diet and my blood pressure again. Not sure what's going to change, but here I am.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "blood pressure history",
+    "chart": "Reports history of essential hypertension since 2002; cites most recent reading of 97/64 as reassuring.",
+    "says": "My blood pressure was 97/64 last time I was in. That's basically fine, right? I don't get why we keep harping on it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "weight history",
+    "chart": "Reports longstanding severe obesity, BMI 40+ since 2001.",
+    "says": "I've been a big woman since my twenties. It's genetic, half my family is built this way, so I don't know what's supposed to be different now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "back and neck pain",
+    "chart": "Reports chronic low back and neck pain since 2014, described as constant dull ache worse by end of shift, with neck stiffness after prolonged sitting.",
+    "says": "My back's been aching since 2014, it's just part of life now. Neck gets stiff too after sitting at my desk all day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "urinary symptoms",
+    "chart": "Reports intermittent dysuria, history of recurrent UTIs since 1999.",
+    "says": "The burning when I pee comes and goes, I know the drill by now, I've had UTIs forever.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "sinus symptoms",
+    "chart": "Reports occasional sinus pressure and congestion flare-ups several times a year, history of chronic sinusitis since 2005.",
+    "says": "My sinuses act up a few times a year, nothing new.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "fatigue",
+    "chart": "Reports general fatigue, attributes to aging.",
+    "says": "I'm tired a lot, but I figure that's just getting older.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "No chest pain or anything like that, no.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "swelling",
+    "chart": "Denies lower extremity swelling.",
+    "says": "My ankles aren't swollen or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies vision changes or headaches.",
+    "says": "No headaches, no blurry vision, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Reports occasional heartburn after large late meals, uses antacids as needed; denies nausea or vomiting.",
+    "says": "Sometimes I get heartburn if I eat too much too late, I just pop an antacid.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Denies constipation or diarrhea.",
+    "says": "My stomach's fine otherwise, no issues going to the bathroom.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "dental symptoms",
+    "chart": "Reports recent tooth extraction (2026-01-26) with uneventful follow-up care, now resolved.",
+    "says": "Oh, I had a tooth pulled last month, but that's all healed up fine now.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "recent viral illness",
+    "chart": "Reports resolved viral sinusitis and sore throat in February 2026.",
+    "says": "I had a nasty cold with a sore throat back in February, but that cleared up on its own.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "chronic conditions list",
+    "chart": "Past medical history includes essential hypertension (2002), severe obesity (BMI 40+ since 2001), recurrent UTIs (since 1999), chronic sinusitis (2005), chronic pain/low back pain/neck pain (2014).",
+    "says": "I've got high blood pressure, I'm overweight, I get UTIs and sinus stuff, and my back and neck have been bad for over ten years. That's the rundown.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of gingival disease (resolved 2022), recent tooth infection (resolved January 2026) treated with extraction and fluoride application.",
+    "says": "I had some gum issues a couple years back and then a tooth infection this January that needed pulling, but it's done with.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h17",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "History of appendectomy, 2004.",
+    "says": "I had my appendix out back in 2004, no problems since.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h18",
+    "category": "medications",
+    "topic": "contraceptive use",
+    "chart": "Takes norethindrone 0.35 mg (Jolivette 28-day pack) once daily, reports consistent adherence.",
+    "says": "I take my birth control pill every single day, that's the one I never forget because I really don't want more kids.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "blood pressure medication use",
+    "chart": "Reports taking hydrochlorothiazide 25mg once daily, admits skipping approximately once weekly when she forgets her pillbox at her sister's house.",
+    "says": "I take my water pill every day, except maybe once a week when I leave my pillbox at my sister's and just skip it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "blood pressure medication use",
+    "chart": "Reports taking lisinopril 10mg once daily consistently alongside hydrochlorothiazide each morning.",
+    "says": "The other blood pressure pill, lisinopril, I take that one every day with the water pill, no issue there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "cough symptom",
+    "chart": "Reports occasional dry cough, attributes possibly to lisinopril, has not reported it to prescriber as it does not bother her significantly.",
+    "says": "I get a dry cough sometimes, but it's not bad enough to call the doctor about.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "B12 injection",
+    "chart": "Receives monthly B12 5mg/mL injection at provider's office; reports no missed appointments.",
+    "says": "I get my B12 shot every single month, that's the one thing I don't let slide.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "pain medication use",
+    "chart": "Reports taking ibuprofen 200mg most days for back and neck pain.",
+    "says": "I pop ibuprofen most days just to get through my shift with my back and neck.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Reports inconsistent multivitamin use.",
+    "says": "I take a multivitamin when I remember, which isn't that often honestly.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "antacid use",
+    "chart": "Reports occasional antacid use after large or late meals.",
+    "says": "If I eat too much too late I'll grab an antacid, but that's not often.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h26",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "I'm not allergic to anything that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives in a household of 7 with extended family members; single, no children",
+    "says": "I live with a bunch of relatives — seven of us crammed in one house. Never a quiet minute.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "occupation and schedule",
+    "chart": "Works full-time as billing coordinator at an orthopedic practice; sedentary desk job with long hours",
+    "says": "I'm a billing coordinator, full-time, lots of sitting, lots of hours. It's not exactly a walk in the park but it pays the bills.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family attitudes about health",
+    "chart": "Reports family is dismissive of her health concerns and teases her about her weight",
+    "says": "My family thinks it's hilarious to joke about my weight. Nobody takes my blood pressure thing seriously. They just push food at me and laugh.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "family",
+    "topic": "family support for health",
+    "chart": "Describes limited emotional or practical support from household regarding diet or health goals",
+    "says": "Don't expect help from them, they're loud and useless when it comes to anything health-related. I handle my own stuff.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "psychosocial",
+    "topic": "beliefs about weight",
+    "chart": "Believes her weight is primarily genetic and not strongly tied to her symptoms",
+    "says": "Half my family's built like this. It's genetic. I don't think my weight is really causing my back pain or anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "attitude toward counseling",
+    "chart": "Expresses skepticism about the value of the nutrition visit and dislikes being lectured",
+    "says": "I don't really see the point of this appointment, honestly. I know my numbers. I don't need a lecture.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "goals",
+    "topic": "health priorities",
+    "chart": "States goals as avoiding flagged blood pressure readings, managing pain enough to keep working, and avoiding further UTI treatment",
+    "says": "I just want my blood pressure to stop getting flagged every time, and I want to keep working full shifts without my back killing me. And no more UTI antibiotics, please.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "readiness for change",
+    "chart": "Precontemplative; does not perceive a need to change current eating or drinking habits",
+    "says": "I don't see what's broken that needs fixing. I've been doing fine like this for years.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "concerns about this visit",
+    "chart": "Fears being told to overhaul her entire diet and being blamed for her symptoms because of her weight",
+    "says": "If you're about to tell me to throw out everything I eat, I'm gonna stop you right there. And I'm tired of everything being blamed on my weight.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "cooking habits",
+    "chart": "Reports minimal home cooking, views cooking for herself as not worthwhile",
+    "says": "Cooking for just me? Waste of time and money. Easier to grab something.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "hydration habits",
+    "chart": "Reports primary fluid intake is diet soda and coffee, minimal plain water intake",
+    "says": "I don't really do water. It's diet soda or coffee, pretty much all day.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "function",
+    "topic": "physical activity pattern",
+    "chart": "Reports sedentary job with no structured exercise; parks farther from building entrance as her main activity",
+    "says": "I park at the far end of the lot so I get a little walking in. That's about it for exercise.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "sleep pattern",
+    "chart": "Reports 6 to 7 hours of sleep nightly, often interrupted by household noise",
+    "says": "I get maybe six, seven hours, and that's if nobody's banging around the house.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Former smoker, quit approximately 8 years ago",
+    "says": "I quit smoking, oh, about eight years back now. Haven't touched one since.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s15",
+    "category": "substance",
+    "topic": "weeknight wine amount",
+    "chart": "Initially reports drinking wine occasionally; on further questioning reports about two glasses most weeknights",
+    "says": "It's just a glass here and there... okay, fine, maybe two glasses most nights after work.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "weekend wine amount",
+    "chart": "Reports a third glass of wine on weekends during family gatherings",
+    "says": "Weekends when everyone's around, maybe I'll have a third glass. It's not a big deal.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "substance",
+    "topic": "weekend wine amount, actual pattern",
+    "chart": "Does not disclose that weekend wine intake is closer to a full bottle most nights, a pattern present for about the past year",
+    "says": "[Does not bring this up and deflects if pressed further] Look, it's wine, not vodka. I'm not out of control or anything.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "relevance of alcohol to health",
+    "chart": "Minimizes the relevance of her alcohol intake to her blood pressure and weight",
+    "says": "I really don't think a glass or two of wine is what's driving my blood pressure. That seems like a stretch.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s19",
+    "category": "adherence",
+    "topic": "blood pressure medication refill pattern",
+    "chart": "Describes occasionally forgetting hydrochlorothiazide about once a week; minimizes any pattern of delayed refills",
+    "says": "I forget it maybe once a week, usually when my pillbox got left at my sister's. It happens, nothing major.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s20",
+    "category": "adherence",
+    "topic": "blood pressure medication refill timing, actual pattern",
+    "chart": "Does not disclose that she has delayed refilling hydrochlorothiazide twice this year due to not wanting frequent bathroom breaks during work shifts",
+    "says": "[Does not volunteer this] I mean, sometimes the timing just doesn't work out great with my schedule, that's all.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s21",
+    "category": "other",
+    "topic": "desk item",
+    "chart": "Keeps a small succulent plant on her desk at work",
+    "says": "I've got a little succulent on my desk — only plant I haven't managed to kill yet.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s22",
+    "category": "other",
+    "topic": "evening routine",
+    "chart": "Watches true crime documentaries most evenings to unwind",
+    "says": "Most nights I just put on some true crime show and zone out. That's my relaxing.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s23",
+    "category": "nutrition",
+    "topic": "weekly takeout habit",
+    "chart": "Has a standing Friday takeout order from the same Italian deli for several years",
+    "says": "Every Friday, same order, same deli, for years now. It's basically tradition at this point.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s24",
+    "category": "psychosocial",
+    "topic": "fear about health decline",
+    "chart": "Fears losing physical mobility to the point of being unable to work",
+    "says": "What scares me most is not being able to do my job if my back or legs really give out.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s25",
+    "category": "psychosocial",
+    "topic": "fear about treatment escalation",
+    "chart": "Fears being started on additional medications",
+    "says": "I really don't want to end up on more pills than I'm already taking.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a5",
+    "kind": "record",
+    "name": "Review medication list and refill history",
+    "aliases": [],
+    "result": "Pharmacy refill log shows hydrochlorothiazide 25mg: two refills in 2026 were filled 9-11 days after the prior supply should have run out (late refills), with other months filled on schedule. Lisinopril, Jolivette, and B12 injection refills/appointments all on schedule.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: skipped breakfast; lunch was a deli turkey sandwich from work cafeteria with chips and a diet soda; dinner was a frozen Stouffer's lasagna eaten standing at the counter around 9:30pm with a glass of wine; snacked on pretzels while watching TV later.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Administer brief alcohol use screening (specific quantity/frequency questions)",
+    "aliases": [],
+    "result": "Patient reports approximately 2 glasses of wine (5oz each) on most weeknights, and a third glass on weekend nights when family gatherings occur. States this has been her pattern 'for a while' and does not think it is related to her blood pressure.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review prior nutrition/social history addendum",
+    "aliases": [],
+    "result": "Addendum from a visit 11 months ago notes patient-reported 'drinks a bottle of wine most Saturday and Sunday nights, has for about a year'; no update since.",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess readiness to change (stage-of-change interview)",
+    "aliases": [],
+    "result": "Patient states she doesn't see a strong reason to change her eating or drinking habits right now; her main concern is keeping her blood pressure from being flagged and staying able to work full shifts.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Review household food environment and meal pattern",
+    "aliases": [],
+    "result": "Patient reports household of 7, meals are 'whatever's fastest'; she eats separately most nights standing at the counter; family teases her about her weight and food choices and does not take her health conditions seriously.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Review physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports sedentary desk job; parks far from building entrance to add a short walk; no structured exercise.",
+    "importance": "minor",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Review fluid/hydration pattern",
+    "aliases": [],
+    "result": "Patient reports drinking several cans of diet soda daily plus coffee; minimal plain water intake.",
+    "importance": "important",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review problem list and recent visit history",
+    "aliases": [],
+    "result": "Problem list includes essential hypertension, severe obesity (BMI 40+), recurrent UTI, chronic sinusitis, chronic low back/neck pain, chronic pain, history of appendectomy. Recent minor dental procedures (extraction 2026-01-26, follow-up 2026-01-27) and resolved viral sinusitis/pharyngitis (Feb 2026) noted as incidental.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen for current pain impact on function",
+    "aliases": [],
+    "result": "Patient reports constant dull low back ache worse by end of shift, neck stiffness after prolonged desk sitting; manages with ibuprofen most days; states pain has not stopped her from working.",
+    "importance": "minor",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 97/64 mmHg, heart rate 81/min, respiratory rate 15/min, weight 106.3 kg, height 153.2 cm, BMI 45.3 kg/m2 (recorded 2026-01-12).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 293.3 mg/dL; LDL cholesterol 216.2 mg/dL; HDL cholesterol 53.3 mg/dL; Triglycerides 119.2 mg/dL; Haemoglobin 12.6 g/dL; White cell count 6.5 10*3/uL; Platelets 443 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-01-12); Hep A adult (2021-12-20); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2021-12-20); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-03).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "date": "2025-01 to 2026-01",
+    "author": "Bridgewater Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Fill Date",
+      "Days Supply",
+      "Days Late"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "2025-03-02",
+        "30",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "2025-04-11",
+        "30",
+        "9"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "2025-05-11",
+        "30",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "2025-08-20",
+        "30",
+        "11"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "2025-09-19",
+        "30",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2025-03-02",
+        "30",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "2025-04-02",
+        "30",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Jolivette 28-day pack",
+        "2025-03-05",
+        "28",
+        "0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Jolivette 28-day pack",
+        "2025-04-02",
+        "28",
+        "0"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Social History Addendum",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "date": "2025-02-10",
+    "author": "Orthopedic Associates of Central NJ - Nursing",
+    "body": "Patient reports alcohol use: 'drinks a bottle of wine most Saturday and Sunday nights, has for about a year.' Denies tobacco use (quit ~8 years ago per patient). No other substance use reported. Patient declined further discussion of alcohol at that time."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Prior Nutrition Counseling Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-02-10",
+    "author": "Dietitian, Orthopedic Associates of Central NJ",
+    "body": "Patient seen for nutrition counseling related to hypertension and obesity management. Patient reports reliance on convenience and frozen foods, minimal home cooking, skips breakfast most days. Advised on sodium reduction and meal planning; patient expressed limited interest in changing current routine, cited time constraints and household chaos. Plan: continue to monitor at follow-up visits; readiness to change assessed as low."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nRecurrent urinary tract infection (since 1999)\nBody mass index 40+ - severely obese (since 2001)\nEssential hypertension (since 2002)\nHistory of appendectomy (since 2004)\nChronic sinusitis (since 2005)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\n\nRECENTLY RESOLVED\nGingival disease (2022-01 to 2022-01)\nInfection of tooth (2026-01 to 2026-01)\nViral sinusitis (2026-02 to 2026-02)\nAcute viral pharyngitis (2026-02 to 2026-02)\n\nPROCEDURES\n2026-01-27: Dental fluoride treatment (Patient referral for dental care)\n2026-01-27: Examination of gingivae (Patient referral for dental care)\n2026-01-27: Postoperative care for dental procedure\n2026-01-26: Simple extraction of tooth (Infection of tooth)\n2026-01-26: Dental application of desensitizing medicament (Infection of tooth)\n2026-01-26: Dental surgical procedure (Infection of tooth)\n\nRECENT ENCOUNTERS\n2026-08-12 outpatient: Consultation for treatment (Contraception care)\n2026-02-15 ambulatory: Encounter for symptom (Acute viral pharyngitis)\n2026-02-07 ambulatory: Encounter for symptom (Viral sinusitis)\n2026-01-26 ambulatory: Encounter for check up (Patient referral for dental care)\n2026-01-12 wellness: General examination of patient\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Lifestyle education regarding hypertension; Weight management program"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",
+        "2026-08",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25 MG Oral Tablet",
+        "2026-01",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-01",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Vitamin B12 5 MG/ML Injectable Solution",
+        "2006-09",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "293.3",
+        "mg/dL",
+        "< 200",
+        "2026-01-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "216.2",
+        "mg/dL",
+        "< 100",
+        "2026-01-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "53.3",
+        "mg/dL",
+        ">= 40",
+        "2026-01-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "119.2",
+        "mg/dL",
+        "< 150",
+        "2026-01-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.6",
+        "g/dL",
+        "12.0-17.5",
+        "2022-12-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "6.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-12-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "443",
+        "10*3/uL",
+        "150-450",
+        "2022-12-26"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a specific, non-judgmental alcohol history and compare the patient's self-report with prior documentation to identify discrepancies in reported versus actual intake",
+    "factIds": [
+     "s15",
+     "s16",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess the patient's stage of readiness to change and apply motivational interviewing techniques appropriate to a precontemplative patient, linking counseling to her own stated goals",
+    "factIds": [
+     "s5",
+     "s6",
+     "s7",
+     "s8",
+     "s9"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Evaluate sodium, portion size, and meal timing patterns in a convenience-food-based diet and connect findings to the patient's hypertension and lipid profile",
+    "factIds": [
+     "h2",
+     "s10",
+     "s11",
+     "s23"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a6",
+     "a10",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify medication adherence gaps (hydrochlorothiazide) and related patient-reported barriers, and compare them against pharmacy refill history",
+    "factIds": [
+     "h19",
+     "h20",
+     "h21",
+     "s19",
+     "s20"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Explore how a dismissive, chaotic household environment and sedentary occupation act as barriers to dietary and activity change",
+    "factIds": [
+     "s1",
+     "s2",
+     "s3",
+     "s4",
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate at least one nutrition diagnosis (PES statement) integrating diet history, alcohol intake, vitals, and lab data, and propose a realistic, patient-centered next step",
+    "factIds": [
+     "h3",
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2",
+     "a6",
+     "a7",
+     "a9"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium/energy intake from convenience foods and underreported alcohol use in the context of essential hypertension and severe obesity, in a precontemplative patient",
+   "differential": [
+    "Nutrition diagnosis: Excessive sodium intake related to high reliance on convenience/frozen/deli foods as evidenced by frequent frozen dinners, deli sandwiches, and takeout subs and diagnosis of essential hypertension",
+    "Nutrition diagnosis: Excessive alcohol intake related to underreported weekend wine consumption as evidenced by patient admission of escalating pattern on questioning and discrepancy with prior documentation",
+    "Nutrition diagnosis: Overweight/obesity (excessive energy intake) related to large late-night meals and skipped breakfast as evidenced by BMI 45.3 kg/m2 and reported meal pattern",
+    "Medication adherence barrier (not a nutrition diagnosis but relevant context): hydrochlorothiazide underuse related to activity-schedule conflict as evidenced by patient-reported skipping and refill history"
+   ],
+   "keyFindings": [
+    "BMI 45.3 kg/m2 (height 153.2 cm, weight 106.3 kg) consistent with severe obesity",
+    "BP 97/64 mmHg on 2026-01-12, which the patient cites as reassuring but does not reflect her hypertension history or medication adherence gaps",
+    "Total cholesterol 293.3 mg/dL and LDL 216.2 mg/dL (2026-01-12), both elevated and unaddressed by patient",
+    "Diet pattern: skipped/rushed breakfast, desk-eaten deli lunch, large late convenience dinner (frozen lasagna, rotisserie chicken, takeout subs), pretzels/chips, minimal vegetables, several diet sodas daily, 'doesn't really do water'",
+    "Initial report of 'a glass here and there' of wine progressing on specific questioning to 'about two glasses most weeknights, a third on weekends'",
+    "Hidden pattern (only inferable via chart/record review, not stated by patient): documentation suggesting weekend wine intake closer to a full bottle over the past year, inconsistent with her verbal report",
+    "Hydrochlorothiazide adherence gap framed by patient as occasional forgetfulness ('once a week'), with refill record showing two late refills this year not fully disclosed by her",
+    "Precontemplative stage: patient does not connect her weight or diet to her hypertension, back pain, or UTIs; attributes weight to genetics",
+    "Family environment is dismissive/teasing about her eating and weight, reducing her motivation to change"
+   ],
+   "plan": [
+    "Complete a focused ADIME-format nutrition assessment: diet history (24-hour recall/typical day), meal pattern, fluid intake, alcohol use with specific non-judgmental questions, and medication-taking patterns as they relate to nutrition/lifestyle",
+    "Review available vitals, labs, and chart/pharmacy documentation for consistency with patient self-report, specifically alcohol-related documentation and hydrochlorothiazide refill history",
+    "Formulate at least one PES statement addressing excess sodium/convenience food intake and one addressing alcohol intake relative to hypertension and obesity",
+    "Use motivational interviewing (open-ended questions, reflective listening, avoid lecturing) to assess readiness to change and identify one small, patient-chosen behavior change tied to her stated goal of staying functional at work",
+    "Provide brief, non-judgmental education on sodium content of her usual convenience foods and the relationship between alcohol, blood pressure, and weight, without insisting she quit wine entirely",
+    "Plan a follow-up nutrition visit to monitor blood pressure trend, weight, and any behavior change attempted, and coordinate with her PCP regarding medication adherence barriers she disclosed"
+   ],
+   "redFlags": [
+    "Discrepancy between patient's self-reported alcohol intake and documentation suggestive of a heavier, undisclosed weekend drinking pattern lasting about a year",
+    "Pattern of delayed hydrochlorothiazide refills (twice this year) suggesting under-treated hypertension despite a reassuring single BP reading",
+    "Elevated LDL/total cholesterol in a patient with severe obesity and hypertension, unaddressed by patient and not yet connected to her diet"
+   ],
+   "educationPoints": [
+    "Explain that a single blood pressure reading does not rule out hypertension or reflect average control, especially with inconsistent medication use",
+    "Discuss sodium content of common frozen/deli/takeout foods she eats regularly and simple lower-sodium swaps that fit her time constraints",
+    "Describe how regular alcohol intake, especially larger weekend amounts, can raise blood pressure and contribute to weight gain, in neutral non-judgmental terms",
+    "Offer practical, low-effort strategies for breakfast and hydration (e.g., quick protein-containing breakfast, swapping some diet soda for water) that respect her stated dislike of cooking",
+    "Reinforce the connection between her own stated goals (staying functional at work, avoiding more medications) and small sustainable dietary changes, rather than framing changes as a moral failing"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Patient reports drinking wine 'just a glass here and there,' and when pressed, settles on about two glasses most weeknights plus a third glass on weekend nights during family gatherings (s15, s16)",
+    "recordEvidence": "Social history addendum from 11 months ago documents she drinks a bottle of wine most Saturday and Sunday nights, a pattern present for about a year (d5, a8)",
+    "teachingPoint": "Patients may underreport alcohol intake even on repeated, non-judgmental questioning; triangulating self-report with prior documentation is essential before finalizing a nutrition diagnosis involving alcohol.",
+    "factId": "s16",
+    "artifactId": "d5"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Patient frames her hydrochlorothiazide nonadherence as forgetting her pillbox at her sister's house about once a week, a minor and incidental lapse (s19)",
+    "recordEvidence": "Pharmacy refill history shows two refills in 2026 filled 9-11 days after the prior supply should have run out, indicating sustained gaps rather than occasional single missed doses (d4, a5)",
+    "teachingPoint": "Patient-reported adherence can understate the real pattern; refill history review helps the clinician identify a behavioral barrier (avoiding diuresis at work) that self-report alone would miss, informing counseling and referral.",
+    "factId": "s19",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 12,
+   "condition": "Chronic neck pain",
+   "conditionLabel": "46 F · Chronic neck pain, Chronic low back pain, Chronic pain +4 · 4 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "14c255a9",
+   "fingerprint": "1r04ibm"
+  }
+ }
+}

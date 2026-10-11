@@ -1,0 +1,1066 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Counseling for Obesity and Asthma Self-Management in a Precontemplative Patient with Hidden Medication Overuse and Recent Pregnancy Termination",
+  "summary": "This case places a dietetics student in a telehealth nutrition counseling visit with a proud, precontemplative patient referred for obesity and asthma management. Beyond the grazing eating pattern and wheat-allergy label-reading gaps, the core teaching points are eliciting a hidden medication-use mismatch (chart-documented PRN diphenhydramine versus her actual near-nightly use) through sensitive, non-judgmental questioning, and practicing motivational interviewing with a patient who resists any framing that something needs to change, while respecting a recent, undisclosed pregnancy termination that should surface only if she chooses to share it.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Paramus, New Jersey, on a short break between shifts",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Elsy Boyer",
+   "age": 42,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Shift supervisor at a dry-cleaning and laundry service",
+   "language": "English",
+   "appearance": "A stocky, central-weight-gain build; visibly tired by late afternoon but sits upright and speaks briskly, often smiling or joking. Calling from a cluttered kitchen table with laundry baskets visible in the background, phone propped against a cereal box, occasionally glancing offscreen toward kids' noise in another room.",
+   "portrait": "/portraits/synthea-elsy-boyer-20aeaa1b.jpg"
+  },
+  "persona": {
+   "personality": "Proud, self-reliant, quick with a joke to deflect anything that feels like criticism or pity; dislikes being told what to do, especially about her body or her habits; genuinely warm and resourceful under the brisk exterior",
+   "communicationStyle": "Keeps things light and brisk, plain practical language, no medical jargon; redirects to her job or her church group whenever a question gets too close to something uncomfortable; answers quickly and moves the conversation along",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly upbeat and energetic, cracking jokes, but visibly tired by late afternoon; becomes guarded and stiffens briefly if reproductive health or recent personal stress is touched on, then quickly redirects",
+   "background": "Elsy grew up working-class in northern New Jersey, did some community college business courses before moving into retail and service management, and now works full-time as a shift supervisor at a dry-cleaning and laundry service. She's a single mother raising eight kids and takes real pride in having kept her household fed and running on her own. She and several of her kids attend a nondenominational church most Sundays, where the potluck dinners and prayer groups are one of the only places she feels fully supported without being judged - she's famous there for her baked ziti.",
+   "speechExamples": [
+    "Oh, I'm fine, I'm always fine - ask anybody at the laundromat.",
+    "Honestly between work and the kids I eat whenever I can grab something, you know how it is.",
+    "I've been doing just fine managing myself for 42 years, I think I've got it figured out.",
+    "That's old news, let's talk about something else - how about I tell you about the potluck we had Sunday?",
+    "It's just an allergy pill, it's not like it's anything serious."
+   ],
+   "concerns": [
+    "Being judged for her weight or her eating habits",
+    "Having to explain her recent pregnancy termination to anyone outside her closest circle",
+    "Running out of her asthma medication at an inconvenient time at work"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition counseling visit with Elsy Boyer, a 42-year-old woman referred for nutrition counseling related to weight and asthma management. Review her available health record before the call, then conduct a nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Referred for nutrition counseling related to weight and asthma management",
+   "openingLine": "Hi there! Sorry if there's noise in the background, kids are home. So I guess my doctor wants me talking to you about my weight and my asthma, but honestly I feel pretty fine most days - between the laundromat and the house I don't really have time to think about it much!",
+   "tasks": [
+    "Take a focused nutrition history including a 24-hour recall and typical eating/meal pattern",
+    "Review relevant anthropometric, vital sign, and laboratory data from her health record and relate them to her nutrition status",
+    "Explore her medication-taking patterns and food allergy management in a non-judgmental way to identify any gaps between what's prescribed and what's actually happening",
+    "Apply motivational interviewing techniques to engage a patient who does not currently see her habits as a problem",
+    "Document an ADIME note summarizing your assessment, nutrition diagnosis, and an initial, patient-centered plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for nutrition counseling related to weight and asthma management"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care provider; Pulmonology (as needed); Dietetics (new referral)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Atopic dermatitis (since 1989); Asthma (since 2003); Past pregnancy history of miscarriage (since 2018); Body mass index 30+ - obesity (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "budesonide 0.25 MG/ML Inhalation Suspension; albuterol 0.21 MG/ML Inhalation Solution; diphenhydrAMINE Hydrochloride 25 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism); Animal dander (substance) (Rhinoconjunctivitis, moderate); Grass pollen (substance); Tree pollen (substance); Wheat (substance) (Diarrhea, moderate); Shellfish (substance) (Eruption of skin, moderate)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient referred for nutrition counseling related to obesity (BMI 30.7) and asthma self-management.",
+    "says": "My doctor's office sent me to talk to you about my weight and my breathing, I guess. I feel fine most days, though.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "breathing with exertion",
+    "chart": "Reports feeling winded climbing stairs at work.",
+    "says": "I get a little winded going up the stairs at the laundry place, but who doesn't after a long shift?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "nighttime breathing symptoms",
+    "chart": "Reports occasional nighttime cough and chest tightness.",
+    "says": "Sometimes I cough a bit at night or my chest feels tight, but it passes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "skin flare pattern",
+    "chart": "Reports itchy, dry patches on elbows and behind knees that flare with stress.",
+    "says": "My skin gets itchy and dry on my elbows and behind my knees, especially when things get stressful.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "afternoon energy",
+    "chart": "Reports low energy by mid-afternoon managed with coffee and snacks.",
+    "says": "By mid-afternoon I'm dragging, so I just grab coffee and something to eat to push through.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "heartburn after meals",
+    "chart": "Reports occasional heartburn after large or late meals.",
+    "says": "Every now and then I get heartburn, especially if I eat a big dinner late.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "skin exam findings",
+    "chart": "Lichenified, dry patches noted on antecubital fossae on exam, consistent with chronic atopic dermatitis.",
+    "says": "Yeah, that's just my eczema, it's been that way since I was a kid.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "recent weight change",
+    "chart": "Reports approximately 4-pound weight gain over the past year.",
+    "says": "I guess I've put on a few pounds this past year, but that's just how it goes with everything going on.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "sleep disruption",
+    "chart": "Reports trouble staying asleep due to itching and occasional cough.",
+    "says": "I don't sleep great, honestly, between the itching and sometimes coughing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest symptoms frequency",
+    "chart": "Denies current chest pain, fainting, or swelling in legs.",
+    "says": "No chest pain or anything like that, no swelling in my legs either.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Reports occasional loose stools she attributes to 'a stomach thing' after certain snacks.",
+    "says": "Sometimes my stomach gets upset after I eat something, but I figure it's just whatever I grabbed not sitting right.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "menstrual or reproductive symptoms",
+    "chart": "Denies current abdominal pain or vaginal bleeding.",
+    "says": "No pain or bleeding or anything like that going on right now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "skin condition history",
+    "chart": "Atopic dermatitis since 1989.",
+    "says": "I've had eczema my whole life, since I was little.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "asthma history",
+    "chart": "Asthma since 2003, described by patient as 'under control.'",
+    "says": "I've had asthma since I was in my twenties. It's under control, mostly.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "obesity diagnosis",
+    "chart": "Body mass index 30+ (obesity) diagnosed 2026.",
+    "says": "They told me my weight counts as obese now, but I think my body's just built this way after having all my kids.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "past pregnancy loss",
+    "chart": "History of miscarriage, 2018.",
+    "says": "I lost a pregnancy back in 2018. That was a long time ago.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "recent reproductive history",
+    "chart": "IUD removed 2026-06-13; pregnancy confirmed 2026-08-01; induced termination of pregnancy 2026-08-09 with follow-up visit 2026-08-24.",
+    "says": "I had some female stuff going on this summer. I'd rather not get into all of it, if that's okay.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "anemia history",
+    "chart": "History of anemia during 2022-2023 pregnancy, resolved; current hemoglobin 16 g/dL (12.0-17.5), within normal range.",
+    "says": "I was a little anemic when I was pregnant a few years back, but I think that's fine now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "past substance history",
+    "chart": "History of drug misuse 2021-03 to 2025-02, documented as resolved.",
+    "says": "I went through a rough patch a few years ago, but that's behind me now.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "recent procedures",
+    "chart": "Removal of intrauterine contraceptive device 2026-06-13; pregnancy termination care 2026-08-24.",
+    "says": "I had a procedure done over the summer, it's taken care of.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "daily asthma inhaler use",
+    "chart": "Budesonide 0.25 mg/mL nebulizer solution prescribed as daily maintenance; reports using it inconsistently, mainly when chest feels tight.",
+    "says": "I've got a nebulizer thing I'm supposed to use every day, but honestly I mostly just use it when my chest starts feeling tight. The setup takes forever before my shift.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "rescue inhaler use",
+    "chart": "Albuterol 0.21 mg/mL rescue inhaler used fairly reliably when symptoms start; concern about running out of refills at work.",
+    "says": "I carry my rescue inhaler with me and use it when I feel an attack coming. I just worry about running out at work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "nighttime allergy pill use",
+    "chart": "Reports taking diphenhydramine 25 mg as needed, often at night, more often than directed per patient report.",
+    "says": "I take an allergy pill sometimes at night, just when I need it. It's nothing, really, just an allergy pill.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "frequency of nighttime pill use",
+    "chart": "Patient reports occasional nighttime use; actual pattern is near-nightly use for months to control itching and help her sleep, not disclosed to prescriber at this frequency.",
+    "says": "Okay, fine... it's basically every night. The itching keeps me up otherwise and that pill knocks me out. I know it's probably more than I'm supposed to take.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "over-the-counter skin treatment",
+    "chart": "Uses over-the-counter hydrocortisone cream for dermatitis flare-ups.",
+    "says": "I put hydrocortisone cream on when my skin gets really bad.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "multivitamin use",
+    "chart": "Takes an over-the-counter multivitamin purchased at a discount store.",
+    "says": "I take a multivitamin from the dollar store, just to cover whatever I'm missing.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "antacid use",
+    "chart": "Occasional antacid tablet use after large dinners.",
+    "says": "If I eat too much at dinner I'll pop an antacid.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h28",
+    "category": "allergies",
+    "topic": "environmental allergy history",
+    "chart": "Documented allergies to mold, animal dander, grass pollen, and tree pollen.",
+    "says": "I'm allergic to mold, pet dander, grass, and tree pollen, that kind of thing. Always have been.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h29",
+    "category": "allergies",
+    "topic": "wheat allergy and reaction",
+    "chart": "Documented wheat allergy with diarrhea as reaction; patient reports inconsistent label-reading on packaged snacks.",
+    "says": "I'm allergic to wheat, gives me the runs if I eat too much of it. I know my allergies though, I don't really check labels much, I just know what to avoid mostly.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h30",
+    "category": "allergies",
+    "topic": "shellfish allergy",
+    "chart": "Documented shellfish allergy with skin eruption as reaction.",
+    "says": "Shellfish gives me a rash, so I just stay away from that.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Single mother of eight; sole income earner for household",
+    "says": "It's just me and the eight kids — I run a tight ship, if I do say so myself.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works full-time as shift supervisor at a dry-cleaning/laundry service; physically active job",
+    "says": "I'm a shift supervisor over at the laundry place — on my feet all day, lifting, folding, the whole deal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "psychosocial",
+    "topic": "faith community",
+    "chart": "Attends church most Sundays with several children; describes congregation as primary social support",
+    "says": "Sundays we're at church, and after that it's potluck — my ziti's famous, you'd love it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "function",
+    "topic": "evening fatigue",
+    "chart": "Reports feeling too tired for structured exercise after work shifts",
+    "says": "By the time I get home I'm wiped. Last thing on my mind is going for a jog.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "meal timing",
+    "chart": "No fixed breakfast, lunch, or dinner; snacks through the day, one large meal around 9-10pm",
+    "says": "I don't really sit down to eat, I just grab what's around. Big meal's usually after the little ones are down, like 9 or 10.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s6",
+    "category": "nutrition",
+    "topic": "beverage habits",
+    "chart": "Primary fluid intake is iced coffee with flavored creamer; minimal plain water intake",
+    "says": "Water? Honestly I forget. It's iced coffee all day, keeps me going.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Former smoker, quit several years ago",
+    "says": "I used to smoke but I quit that years back, finally.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol rarely, about one drink on occasion",
+    "says": "I'll have a drink every once in a blue moon, nothing regular.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s9",
+    "category": "function",
+    "topic": "sleep quality",
+    "chart": "Reports trouble staying asleep, attributes to itching and occasional cough",
+    "says": "I don't sleep great — the itching keeps waking me up, and sometimes I cough too.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "attitude toward body",
+    "chart": "States her weight is 'just how her body is built' after having several children; precontemplative about change",
+    "says": "This is just how I'm built after having all these kids. I feel fine, so I don't see what the fuss is.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "response to advice",
+    "chart": "Dislikes being told what to do about her body or habits; deflects with humor when questioned closely",
+    "says": "Oh, you sound like my mother now! I've been doing just fine managing myself for 42 years.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "goals",
+    "topic": "personal priorities",
+    "chart": "Primary goals are maintaining full attendance at work and keeping household running smoothly",
+    "says": "My goal is simple — don't miss a shift, keep the kids fed, keep the lights on.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "other",
+    "topic": "household finances",
+    "chart": "Reports household income on record does not reflect actual available funds after bills for family of eight",
+    "says": "Whatever number's on paper, trust me, there's nothing left over by the time bills are paid.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "nutrition",
+    "topic": "grocery budget",
+    "chart": "Relies on discount and convenience foods due to financial strain feeding a household of eight; feels embarrassed about this",
+    "says": "I use my loyalty card at the discount store every week... it's not like I can afford fresh stuff for eight people every day.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "family",
+    "topic": "recent gynecologic history",
+    "chart": "Had an IUD removed in June 2026",
+    "says": "Oh, I had that taken out back in June, yeah.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s16",
+    "category": "family",
+    "topic": "recent reproductive event",
+    "chart": "Recent pregnancy termination in August 2026, not disclosed to coworkers or most of her church group",
+    "says": "That's old news, let's talk about something else, okay?",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "adherence",
+    "topic": "antihistamine use pattern",
+    "chart": "Reports taking diphenhydramine as needed, often at night, more often than directed per patient report",
+    "says": "It's just an allergy pill, it's not like it's anything serious.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "psychosocial",
+    "topic": "disclosure comfort",
+    "chart": "States she feels most comfortable at church because people there 'don't ask too many questions'",
+    "says": "That's my people, they don't need to know all my business.",
+    "tier": "reluctant",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports no fixed breakfast/lunch/dinner. Grazes on pretzel rods and string cheese from breakroom vending machine during shifts, reheated spaghetti or sloppy joes left from feeding her kids, frozen waffles or toast eaten standing up before work, and iced coffee with flavored creamer throughout the day. Reports a larger meal around 9-10pm after younger children are in bed. Minimal plain water intake.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Weight history and goals assessment",
+    "aliases": [],
+    "result": "Patient states her weight is 'just how her body is built' after having several children and does not identify her weight as a concern needing intervention. Reports no current attempts at weight change.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [],
+    "result": "Patient does not perceive her eating pattern, weight, or medication use as problems. Minimal interest expressed in setting behavior-change goals at this time; redirects to work schedule and church activities when change is suggested.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Food allergy and label-reading practices review",
+    "aliases": [],
+    "result": "Patient reports a lifelong diagnosed wheat allergy causing diarrhea on exposure. States she 'knows her allergies' from a lifetime of experience and does not consistently read ingredient labels on packaged snack foods, relying instead on recognizing familiar brands. Describes occasional mild stomach upset after snack foods that she attributes to 'just a stomach thing.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Patient reports being on her feet most of her 8-hour shift lifting and sorting laundry but no structured exercise outside of work. States she feels 'too tired' after work for additional activity.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Sleep pattern assessment",
+    "aliases": [],
+    "result": "Patient reports trouble staying asleep most nights due to itching from her skin condition and occasional nighttime coughing.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Hydration assessment",
+    "aliases": [],
+    "result": "Patient reports drinking mostly iced coffee with flavored creamer and occasional soda through the day; says she 'forgets' plain water most days.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Household food access and budget assessment",
+    "aliases": [],
+    "result": "Patient reports stretching groceries for a household of eight on a tight budget, relying on a loyalty card at a local discount grocery store, and says the income figure on her chart 'doesn't match what's left after bills.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Asthma and dermatitis medication adherence review",
+    "aliases": [],
+    "result": "Patient reports using her daily budesonide nebulizer inconsistently, 'when her chest feels tight' rather than every day, citing the time the nebulizer setup takes before her shift. Reports using her albuterol rescue inhaler fairly reliably but worries about running out at work. Reports taking diphenhydramine as needed, often at night, for itching, and describes it as 'just an allergy pill' when asked how often she uses it.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review pharmacy refill history",
+    "aliases": [],
+    "result": "Diphenhydramine 25 mg tablets: refill quantities and frequency consistent with near-daily use over the past several months, exceeding typical as-needed dosing patterns.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review allergy list in chart",
+    "aliases": [],
+    "result": "Mold, animal dander, grass pollen, tree pollen, wheat (diarrhea), shellfish (skin eruption).",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review household demographics and insurance on file",
+    "aliases": [],
+    "result": "Household of 8 in Paramus, NJ. Insurance: Medicare. Reported household income figure on file does not reflect self-reported day-to-day grocery budget.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 141/78 mmHg, heart rate 63/min, respiratory rate 13/min, weight 80.7 kg, height 162.2 cm, BMI 30.7 kg/m2, weight change +1.9 kg since 2025-02-08 (recorded 2026-02-14).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 152.8 mg/dL; LDL cholesterol 98.7 mg/dL; HDL cholesterol 31 mg/dL; Triglycerides 115.5 mg/dL; Haemoglobin 16 g/dL; White cell count 4 10*3/uL; Platelets 219.7 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-02-14); Hep A adult (2026-02-14); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2026-02-14); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-04-17).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "other",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a15"
+    },
+    "date": "2026-02-10",
+    "author": "Retail Pharmacy Record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Fill Date",
+      "Quantity Dispensed",
+      "Days Supply"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "diphenhydrAMINE HCl 25 MG Tablet",
+        "2025-09-12",
+        "60 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE HCl 25 MG Tablet",
+        "2025-10-14",
+        "60 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE HCl 25 MG Tablet",
+        "2025-11-15",
+        "60 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE HCl 25 MG Tablet",
+        "2025-12-18",
+        "60 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE HCl 25 MG Tablet",
+        "2026-01-20",
+        "60 tablets",
+        "30 days"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Referral Note for Nutrition Counseling",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-01-28",
+    "author": "Primary Care Provider",
+    "body": "42-year-old female with BMI 30.7, asthma, and atopic dermatitis referred for nutrition counseling to address weight management and dietary factors relevant to asthma control. Patient has multiple food allergies on file (wheat, shellfish). Please assess dietary pattern, barriers to healthy eating, and provide patient-centered counseling."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nAtopic dermatitis (since 1989)\nAsthma (since 2003)\nPast pregnancy history of miscarriage (since 2018)\nBody mass index 30+ - obesity (since 2026)\n\nRECENTLY RESOLVED\nAcute viral pharyngitis (2021-03 to 2021-03)\nMisuses drugs (2021-03 to 2025-02)\nNormal pregnancy (2022-07 to 2023-02)\nAnemia (2022-07 to 2023-02)\nNormal pregnancy (2026-08 to 2026-08)\n\nPROCEDURES\n2026-08-24: Pregnancy termination care (Normal pregnancy)\n2026-08-24: Physical examination procedure (Normal pregnancy)\n2026-08-09: Induced termination of pregnancy (Normal pregnancy)\n2026-08-01: Standard pregnancy test (Normal pregnancy)\n2026-08-01: Ultrasound scan for fetal viability (Normal pregnancy)\n2026-06-13: Removal of intrauterine contraceptive device\n\nRECENT ENCOUNTERS\n2026-08-24 ambulatory: Prenatal visit (Normal pregnancy)\n2026-08-09 ambulatory: Patient-initiated encounter (Normal pregnancy)\n2026-08-01 ambulatory: Prenatal initial visit (Normal pregnancy)\n2026-06-13 outpatient: Patient encounter procedure (Contraception care)\n2026-02-14 wellness: General examination of patient\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Asthma self management; Self-care interventions; Skin condition care"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "budesonide 0.25 MG/ML Inhalation Suspension",
+        "2026-02",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "albuterol 0.21 MG/ML Inhalation Solution",
+        "2026-02",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+        "1985-08",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "152.8",
+        "mg/dL",
+        "< 200",
+        "2024-02-03"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "98.7",
+        "mg/dL",
+        "< 100",
+        "2024-02-03"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "31",
+        "mg/dL",
+        ">= 40",
+        "2024-02-03"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "115.5",
+        "mg/dL",
+        "< 150",
+        "2024-02-03"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "16",
+        "g/dL",
+        "12.0-17.5",
+        "2026-02-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4",
+        "10*3/uL",
+        "4.0-11.0",
+        "2026-02-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "219.7",
+        "10*3/uL",
+        "150-450",
+        "2026-02-14"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a 24-hour food recall and typical eating pattern from a patient with an irregular, grazing eating pattern, identifying lack of structured meals, reliance on convenience snacks, and a large late-evening meal",
+    "factIds": [
+     "s5",
+     "s6"
+    ],
+    "actionIds": [
+     "a1",
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Relate anthropometric, vital sign, and laboratory data to nutrition status, including BMI classification, recent weight change, and lipid/CBC results",
+    "factIds": [
+     "h8",
+     "h15",
+     "h18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore medication-taking patterns non-judgmentally to identify gaps between prescribed regimen and actual use, including asthma controller underuse and antihistamine overuse",
+    "factIds": [
+     "h21",
+     "h23",
+     "h24"
+    ],
+    "actionIds": [
+     "a9",
+     "a15"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Assess food allergy management and label-reading practices in the context of a diagnosed wheat allergy and frequent packaged-snack consumption",
+    "factIds": [
+     "h29"
+    ],
+    "actionIds": [
+     "a4",
+     "a16"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Apply motivational interviewing techniques to engage a precontemplative patient who does not perceive her habits as a problem and dislikes being told what to do",
+    "factIds": [
+     "s10",
+     "s11"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize the dual role of faith community and household financial/food-access constraints as both strengths and barriers in building a patient-centered nutrition plan",
+    "factIds": [
+     "s3",
+     "s13",
+     "s14"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake / irregular eating pattern (grazing, skipped structured meals, large late-evening meal) in the context of obesity (BMI 30.7), poorly controlled asthma, and chronic atopic dermatitis, in a precontemplative patient",
+   "differential": [
+    "Food- and nutrition-related knowledge deficit regarding wheat allergy and label reading",
+    "Inconsistent asthma controller medication use contributing to nocturnal symptoms (nutrition-relevant via fatigue/energy balance, not itself a dietetics diagnosis)",
+    "Behavioral barrier: limited readiness to change (precontemplation) limiting intervention uptake",
+    "Food access/resource barrier despite documented household income not matching lived reality"
+   ],
+   "keyFindings": [
+    "BMI 30.7 kg/m2 (height 162.2 cm, weight 80.7 kg), up 1.9 kg since 2025-02-08",
+    "No fixed meal structure; grazes all day on vending-machine/convenience snacks with one large meal around 9-10pm",
+    "Minimal plain water intake; hydration mainly iced coffee with flavored creamer",
+    "Diagnosed wheat allergy (diarrhea) but inconsistent label-reading on packaged snack foods; occasional mild GI symptoms she attributes to 'just a stomach thing'",
+    "Chart documents diphenhydramine 25mg as PRN/occasional nighttime use per patient report; patient's own description in conversation reveals near-nightly use for months to control itching - this is the mismatch to surface, not resolve on this call",
+    "Mild expiratory wheeze and reports of occasional nighttime cough/chest tightness, with inconsistent daily budesonide use ('when her chest feels tight' rather than daily)",
+    "Lipids within normal limits (TC 152.8, LDL 98.7, TG 115.5) except low HDL 31 mg/dL (ref >=40)",
+    "Hemoglobin, WBC, platelets all within normal reference ranges",
+    "Precontemplative stance: 'this is just how my body is built,' resists framing suggesting a problem",
+    "Church potlucks (e.g., her baked ziti) are both a strong social support and a recurring source of calorie-dense, less structured eating"
+   ],
+   "plan": [
+    "Complete a structured ADIME nutrition assessment including a detailed 24-hour recall and typical day pattern, documenting grazing behavior, skipped sit-down meals, and the late large evening meal",
+    "Discuss hydration pattern and encourage gradual increase in plain water intake alongside her usual iced coffee, in a non-prescriptive way consistent with her readiness stage",
+    "Review her wheat allergy label-reading habits for packaged/vending snacks and provide practical, non-judgmental education on identifying wheat-containing ingredients",
+    "Use motivational interviewing to explore her own goals (staying able to work full-time, keeping her household fed) and gently raise ambivalence about current habits without directly challenging her belief that nothing needs to change",
+    "Note the discrepancy between the documented PRN diphenhydramine use and her description of near-nightly use; reflect this back supportively and recommend she discuss actual frequency with her prescribing provider rather than counseling on dosing herself",
+    "Identify her church community as a resource to build on (e.g., collaborating on potluck dish choices) rather than a barrier to eliminate",
+    "Explore practical, low-cost strategies for more consistent meal timing given her shift schedule and household size, respecting her stated budget constraints",
+    "Plan a follow-up visit to continue rapport-building before introducing more specific behavior-change goals, given her precontemplative stage"
+   ],
+   "redFlags": [
+    "Near-nightly, months-long use of an antihistamine for itch/sleep that has not been disclosed to her prescriber - needs medical follow-up, not nutrition management",
+    "Inconsistent use of daily controller asthma medication alongside reported nighttime cough and wheeze on exam - relevant to refer back to her prescriber/respiratory care team",
+    "Recent (within months) pregnancy termination with no current disclosure to work or most of her church community - acknowledge supportively if she raises it, do not probe, and avoid documenting unnecessary detail beyond what she chooses to share"
+   ],
+   "educationPoints": [
+    "Plain language explanation of how regular, structured meals/snacks may help with energy levels and could support more consistent asthma symptom control, framed around her own stated goal of getting through shifts without flare-ups",
+    "Practical tips for reading ingredient labels on packaged snacks to identify wheat, geared to her literacy level and shopping habits (e.g., discount grocery loyalty card items)",
+    "Validating her resourcefulness in feeding a household of eight while gently introducing the idea of occasional lower-cost, less processed swaps where feasible",
+    "Normalizing that medication questions (including how often an as-needed medicine is actually being used) are best worked through with her prescriber, and offering to help her prepare for that conversation",
+    "Affirming her church community as a strength while discussing collaborative strategies (e.g., contributing a lower-sodium or vegetable-forward dish) rather than framing potlucks as something to avoid"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Elsy describes her diphenhydramine use as 'just an allergy pill' she takes as needed, often at night, downplaying how often she actually uses it (h23/h24)",
+    "recordEvidence": "Pharmacy refill history shows refill quantities and frequency consistent with near-daily use over the past several months, exceeding typical as-needed dosing patterns (d4)",
+    "teachingPoint": "Patients may sincerely under-report frequency of an 'as needed' medication they've normalized into daily use; refill/pharmacy records can reveal a pattern the patient themselves may not recognize as significant, prompting a non-judgmental referral back to the prescriber rather than independent dose counseling.",
+    "factId": "h24",
+    "artifactId": "d4"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Elsy reports using her daily budesonide nebulizer only when her chest feels tight, not daily, citing time constraints before her shift (h21)",
+    "recordEvidence": "Current Medication List documents budesonide 0.25 mg/mL inhalation suspension prescribed as a daily maintenance nebulizer treatment for asthma (d1)",
+    "teachingPoint": "A gap between prescribed frequency documented in the medication list and patient-reported as-needed use signals controller medication underuse; dietetics clinicians should recognize this as relevant to fatigue/energy balance and flag it for the prescribing team rather than attempt to adjust dosing themselves."
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 17,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "42 F · Asthma, Atopic dermatitis · 3 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "20aeaa1b",
+   "fingerprint": "183mgs"
+  }
+ }
+}

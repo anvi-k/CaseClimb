@@ -1,0 +1,320 @@
+{
+ "patient_overview": {
+  "name": "Steven Turcotte",
+  "age": 57,
+  "sex": "Male",
+  "description": "Steven Turcotte is a 57-year-old divorced man from Brick, New Jersey, referred for nutrition counseling related to prediabetes, obesity, and hyperlipidemia. He answers questions in short bursts and wants to know the \"why\" behind every recommendation before he'll consider it. He's begun making some changes to his eating in the last few weeks, but he's guarded about why those changes keep slipping, and a student will need to dig past his terse answers to find out what's really going on at home.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "hyperlipidemia",
+   "sleep_apnea",
+   "caregiver_burden",
+   "portion_size",
+   "health_literacy",
+   "skepticism",
+   "fragile_change",
+   "family_meals"
+  ]
+ },
+ "demographics": {
+  "occupation": "Facilities maintenance supervisor at a commercial property management company",
+  "residence": "Brick, New Jersey; household of 2",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Divorced",
+  "education_level": "More than high school",
+  "insurance": "Not recorded",
+  "cultural_context": "Grew up in a working-class South Jersey household where his father ran a small appliance repair shop and his mother cooked every meal from scratch for a houseful of relatives. He learned to cook standing on a step stool next to her, and food has always been the way he says \"I love you\" to people — big trays of baked ziti, overflowing plates, seconds pushed on anyone who visits. He doesn't see a contradiction between loving someone and overfeeding them; that's just how his family always did it."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Anemia",
+   "Sepsis",
+   "Body mass index 30+ - obesity",
+   "Sleep disorder",
+   "Obstructive sleep apnea syndrome",
+   "Hyperlipidemia"
+  ],
+  "medical_history": [
+   "Prediabetes since 1987",
+   "Anemia since 1991",
+   "Sepsis since 2000",
+   "Body mass index 30+ - obesity since 2011",
+   "Sleep disorder since 2012",
+   "Obstructive sleep apnea syndrome since 2012",
+   "Hyperlipidemia since 2013",
+   "Viral sinusitis (2022-01 to 2022-01, resolved)",
+   "Viral sinusitis (2022-04 to 2022-04, resolved)",
+   "Laceration - injury (2022-08 to 2022-09, resolved)",
+   "Facial laceration (2022-08 to 2022-09, resolved)",
+   "Primary dental caries (2024-11 to 2024-11, resolved)",
+   "Application of composite dental filling material to dentin of tooth following fracture of tooth (2024-11-16)",
+   "Dental plain X-ray bitewing (2024-11-16)",
+   "Examination of gingivae (2024-11-16)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2024-11-16)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2024-11-16)",
+   "Dental care (2024-11-16)"
+  ],
+  "current_symptoms": [
+   "Feels tired by mid-afternoon most days",
+   "Snores loudly and wakes up not feeling rested",
+   "Occasional heartburn after big dinners",
+   "Says his pants are tighter than they used to be"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Central adiposity with a round, full face",
+   "Mild ankle swelling noted at end of day",
+   "Appears fatigued with slight under-eye puffiness",
+   "Speaks in short clipped sentences and crosses his arms when discussing diet"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.1 % (reference < 5.7; 2025-11-08)",
+   "Glucose: 99.2 mg/dL (reference 70-99 (fasting); 2025-11-15)",
+   "eGFR: 76.2 mL/min/1.73m2 (reference >= 90; 2025-11-15)",
+   "Total cholesterol: 154.8 mg/dL (reference < 200; 2025-11-15)",
+   "LDL cholesterol: 136 mg/dL (reference < 100; 2025-11-15)",
+   "HDL cholesterol: 55.2 mg/dL (reference >= 40; 2025-11-15)",
+   "Triglycerides: 155 mg/dL (reference < 150; 2025-11-15)",
+   "Haemoglobin: 12.8 g/dL (reference 12.0-17.5; 2021-10-16)",
+   "White cell count: 7.5 10*3/uL (reference 4.0-11.0; 2021-10-16)",
+   "Platelets: 380.7 10*3/uL (reference 150-450; 2021-10-16)",
+   "Potassium: 4.5 mmol/L (reference 3.5-5.1; 2025-11-15)",
+   "Sodium: 138.8 mmol/L (reference 135-145; 2025-11-15)",
+   "Urea nitrogen: 16.2 mg/dL (reference 7-20; 2025-11-15)"
+  ],
+  "vital_signs": [
+   "BP: 113/68 mmHg",
+   "HR: 85 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2025-11-08"
+  ],
+  "anthropometrics": [
+   "Height: 182.6 cm",
+   "Weight: 100.1 kg",
+   "BMI: 30 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Simvastatin 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "once daily",
+    "purpose": "Hyperlipidemia",
+    "adherence": "Takes it every night without fail, keeps it by the coffee maker so he doesn't forget",
+    "patient_concerns": "Wants to know why he needs a statin when his cholesterol numbers 'don't look that bad' to him; suspicious that medication is being pushed instead of fixing his diet"
+   }
+  ],
+  "supplements_and_otc": [
+   "Fish oil capsules, takes a few times a week when he remembers",
+   "Tums after big dinners",
+   "A multivitamin his partner bought him that sits mostly full in the cabinet"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Home-cooked Italian-American meals, heavy on pasta, bread, and red sauce, with large portions and frequent second helpings",
+  "food_preferences": [
+   "Baked ziti and lasagna on Sundays",
+   "Sausage and peppers",
+   "Crusty bread with every dinner",
+   "Likes a big breakfast on weekends - eggs, bacon, home fries"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at dinner, which he plates generously for himself and his partner",
+   "Frequency of bread and pasta as default side dishes",
+   "Snacking patterns in the evening while watching TV",
+   "Whether cooking for someone else is driving overeating"
+  ],
+  "meal_pattern": "Breakfast is coffee and maybe toast on workdays, bigger on weekends. Lunch is whatever he can grab or pack, often a large sandwich. Dinner is the main event, cooked from scratch, eaten late most nights, around 7:30-8pm.",
+  "hydration": "Mostly coffee in the morning, a couple of sodas during the day, water with dinner. Doesn't track it, says he's 'not much of a water guy.'",
+  "physical_activity": "On his feet most of the day for work, climbing stairs and ladders, but no structured exercise. Used to walk the boardwalk in summer but hasn't in a couple of years.",
+  "substance_use": "Does not smoke. Drinks beer or wine a few times a week, sometimes more on weekends - audit-c score reflects moderate use.",
+  "sleep": "Sleeps about 6 hours, often interrupted; snores heavily and partner has mentioned he stops breathing at times; wakes up groggy."
+ },
+ "psychosocial_profile": {
+  "personality": "Skeptical and questioning, wants a clear reason before he'll change anything. Comes across as gruff but isn't hostile - just doesn't like being told what to do without an explanation.",
+  "communication_style": "Gives short, flat answers at first - 'fine,' 'about the same,' 'not really.' Opens up more if a question is asked a second time or rephrased, and especially if he feels the student is actually listening rather than reading from a script.",
+  "goals": [
+   "Wants to stop feeling exhausted by 3pm every day",
+   "Wants to avoid 'ending up on insulin like my uncle'",
+   "Would like to fit into his old work pants again"
+  ],
+  "concerns": [
+   "Doesn't trust that a dietitian can tell him anything his own cooking instincts can't",
+   "Worried the changes he's started will fall apart like they have before",
+   "Annoyed that he's on medication when he thinks food should be enough"
+  ],
+  "beliefs": [
+   "Thinks eating healthy means eating less of what he already cooks, not different food entirely",
+   "Believes exercise is for people who sit at desks all day, not people who work with their hands",
+   "Thinks a statin is a crutch doctors hand out instead of fixing the real problem"
+  ],
+  "motivations": [
+   "Doesn't want to end up like his uncle who lost a foot to diabetes",
+   "Wants more energy to keep up with his job and with helping around the house",
+   "Wants his partner to stop worrying so much about him"
+  ],
+  "fears": [
+   "Fear of a sudden health crash with no warning, like sepsis did to him once before",
+   "Fear of losing independence",
+   "Fear of being a burden the way the person he currently cares for has become dependent on him"
+  ],
+  "barriers": [
+   "No real time left in the day once caregiving and work are done",
+   "Cooking in large batches because that's what the household he grew up in always did",
+   "Skepticism that makes him dismiss advice before trying it",
+   "Fatigue that saps motivation for anything extra at night"
+  ],
+  "strengths": [
+   "Genuinely skilled cook who can adapt recipes once he understands why",
+   "Has already started making some changes on his own in recent weeks",
+   "Analytical mind - once he accepts a reason, he follows through",
+   "Partner who supports him, even if anxiously"
+  ],
+  "support_system": "Lives with a partner who is supportive but anxious, frequently checking on him, reminding him about his pill, and worrying out loud about his health - which sometimes makes Steven defensive. Limited social contact otherwise, seeing friends only once or twice a week.",
+  "readiness_to_change": "Action stage but fragile - started cutting portions and swapping white bread for whole wheat a few weeks ago, but admits it's easy to slide back after a bad day."
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he has prediabetes and high cholesterol and is 'supposed to watch what I eat'",
+   "Mentions he's already cut back on portions the last few weeks",
+   "Says he cooks most nights and it's 'not fast food, it's real food'",
+   "Confirms he takes the simvastatin every night"
+  ],
+  "discoverable_information": [
+   "Describes his usual dinner routine and portion sizes when asked directly",
+   "Admits he snores badly and his partner says he stops breathing sometimes",
+   "Reveals he used to walk the boardwalk but stopped a couple years back",
+   "Mentions his uncle lost a foot to diabetes complications",
+   "Shares that his cholesterol medication confuses him since his numbers 'don't look that bad' to him"
+  ],
+  "reluctant_information": [
+   "Admits, if asked gently a second time, that most evenings go to caring for his elderly mother who lives nearby and needs help with meals, bills, and rides to appointments",
+   "Acknowledges that caregiving leaves him almost no time to cook anything different for himself or to rest",
+   "Admits he sometimes eats standing at his mother's counter instead of sitting down to a real meal himself"
+  ],
+  "hidden_information": [
+   "Steven has not had a full physical for himself in over a year because every appointment slot goes to his mother's doctor visits instead",
+   "He skipped his own cholesterol recheck once this year because he had to drive his mother to an ER visit that same morning",
+   "He has started hiding how tired he is from his partner because she already worries so much he doesn't want to add to it"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Build rapport with a skeptical patient using open-ended questions and repeated, gentle follow-up rather than one-shot queries.",
+    "expected_discoveries": [
+     "Steven's short initial answers give way to fuller detail when a question is rephrased or asked twice",
+     "His skepticism softens when he feels the student is curious rather than lecturing"
+    ],
+    "possible_patient_reactions": [
+     "'I already told you that' said with mild irritation before elaborating anyway",
+     "Visibly relaxing and giving a longer answer the second time a topic comes up",
+     "Testing the student with a blunt question like 'why does that even matter?'"
+    ]
+   },
+   {
+    "learning_objective": "Assess portion sizes and the emotional meaning of food within a home-cooking household.",
+    "expected_discoveries": [
+     "Steven plates very large portions for himself and his partner as an expression of care",
+     "He associates cutting portions with 'taking something away' from the people he loves"
+    ],
+    "possible_patient_reactions": [
+     "Defensive: 'I'm not gonna starve the people I cook for'",
+     "Reflective once reframed: 'Huh. I never thought about it that way'"
+    ]
+   },
+   {
+    "learning_objective": "Uncover hidden caregiving responsibilities that compete with the patient's own self-care time.",
+    "expected_discoveries": [
+     "Most of Steven's evenings are spent helping his mother rather than resting or exercising",
+     "He has skipped his own medical appointments to attend to hers"
+    ],
+    "possible_patient_reactions": [
+     "Deflecting at first: 'It's fine, I manage'",
+     "Admitting fatigue and frustration once trust is established: 'Some nights I don't eat 'til nine because of her'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the patient's low health literacy around lipid panel results and medication purpose without condescension.",
+    "expected_discoveries": [
+     "Steven misunderstands why his LDL being elevated matters when his total cholesterol looks 'fine' to him",
+     "He is open to a plain-language explanation but resistant to jargon"
+    ],
+    "possible_patient_reactions": [
+     "'Nobody's ever explained it like that before'",
+     "Pushing back with 'so why do I need a pill if my number's not even that high?'"
+    ]
+   },
+   {
+    "learning_objective": "Address the anxious, hovering partner's role in reinforcing or undermining the patient's fragile new habits.",
+    "expected_discoveries": [
+     "Steven's partner reminds him constantly about his pill and his diet, which he experiences as both helpful and smothering",
+     "Family tension around food choices could derail recent progress if not addressed collaboratively"
+    ],
+    "possible_patient_reactions": [
+     "'She means well but she won't let it drop'",
+     "Softening when asked how he'd like support to look instead"
+    ]
+   },
+   {
+    "learning_objective": "Reinforce and stabilize the recent, fragile dietary changes using small, concrete, achievable goals.",
+    "expected_discoveries": [
+     "Steven has already swapped white bread for whole wheat and trimmed portions slightly",
+     "He is at risk of relapse under stress, particularly caregiving-related stress"
+    ],
+    "possible_patient_reactions": [
+     "Pride mixed with worry: 'I've been doing better but I don't know if it'll stick'",
+     "Receptive to specific, small suggestions rather than a full overhaul"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed Steven's caregiving role is for his elderly mother, consistent with 'household of 2' (himself and partner) while caregiving occurs off-site",
+   "Household income and housing worry suggest financial strain despite full-time work, informing modest food budget",
+   "Audit-C score of 3 interpreted as moderate, non-dependent alcohol use",
+   "Sepsis history assumed resolved with no lasting organ damage beyond what is reflected in current labs"
+  ],
+  "optional_details": [
+   "Keeps a small collection of his father's old appliance-repair tools in the garage, fixes neighbors' toasters as a hobby",
+   "Has a loyal spot at the diner near his mother's house where he grabs coffee most mornings",
+   "Coaches his nephew's rec-league baseball team on weekends when he can get away"
+  ]
+ },
+ "source": {
+  "synthea_record": "2842a581",
+  "condition_group": "lipids",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "skeptical and questioning, wants reasons for everything",
+   "communication": "short answers until asked a second time",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "low health literacy",
+   "eating": "cooks well and enjoys it, but portions are large and food is how the family shows love",
+   "held_back": "caring duties for someone else that leave no time for their own health",
+   "support": "a partner who is supportive but anxious and hovers"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

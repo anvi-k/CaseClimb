@@ -1,0 +1,315 @@
+{
+ "patient_overview": {
+  "name": "Lilia Galindo",
+  "age": 52,
+  "sex": "Female",
+  "description": "Lilia Galindo is a 52-year-old Hispanic woman living in East Rutherford, New Jersey, in a crowded household of six, who comes in for a nutrition visit tied to her prediabetes, obesity, fibromyalgia and chronic low back pain. She answers questions in short, flat sentences and visibly wants the appointment to move along, warming up only slightly when asked something a second time. She does not believe anything is really wrong with how she eats and sees this visit as something she's being made to do rather than something she asked for. A dietitian meeting her will need patience, plain language, and a willingness to circle back to sensitive topics rather than push on the first try.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "fibromyalgia",
+   "chronic low back pain",
+   "low health literacy",
+   "precontemplation",
+   "binge eating shame",
+   "convenience foods",
+   "social isolation",
+   "anemia"
+  ]
+ },
+ "demographics": {
+  "occupation": "Not in the labor force; disabled from working due to chronic pain and fibromyalgia, previously worked as a laundromat attendant",
+  "residence": "East Rutherford, New Jersey; household of 6",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Single",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicare",
+  "cultural_context": "Lilia was raised in a working-class Hispanic household where big family meals mattered, but she has lived alone in terms of cooking for years inside a crowded house — everyone else in the household is on different schedules and eats separately. She never learned to cook for just herself and never saw the point in trying. Spanish is still her most comfortable language, and she prefers when health information is explained simply rather than with numbers and charts, which have never meant much to her."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Body mass index 30+ - obesity",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Fibromyalgia",
+   "Past pregnancy history of miscarriage",
+   "Sepsis",
+   "Anemia"
+  ],
+  "medical_history": [
+   "Body mass index 30+ - obesity since 2013",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Fibromyalgia since 2014",
+   "Past pregnancy history of miscarriage since 2020",
+   "Sepsis since 2021",
+   "Prediabetes since 2022",
+   "Anemia since 2024",
+   "Miscarriage in first trimester (2023-10 to 2023-11, resolved)",
+   "Complete miscarriage (2023-10 to 2023-11, resolved)",
+   "Polyp of colon (2023-12 to 2025-03, resolved)",
+   "Gingival disease (2025-02 to 2025-02, resolved)",
+   "Viral sinusitis (2025-10 to 2025-10, resolved)",
+   "Colonoscopy (2025-03-12)",
+   "Dental fluoride treatment (2025-02-26)",
+   "Postoperative care for dental procedure (2025-02-26)",
+   "Gingivectomy or gingivoplasty per tooth (2025-02-26)",
+   "Dental application of desensitizing medicament (2025-02-26)",
+   "Dental surgical procedure (2025-02-26)"
+  ],
+  "current_symptoms": [
+   "Constant dull ache in the low back that flares with standing too long",
+   "Widespread muscle soreness and tender spots described as 'hurts everywhere some days'",
+   "Tired most of the day no matter how much she sleeps",
+   "Occasional lightheadedness she attributes to being 'just tired'",
+   "Trouble falling and staying asleep because of pain"
+  ],
+  "allergies": [
+   "Shellfish (substance) (Eruption of skin)"
+  ],
+  "clinical_findings": [
+   "Obese body habitus with weight centered around the abdomen",
+   "Moves stiffly and slowly when rising from the chair, favoring her lower back",
+   "Pale conjunctiva and slightly pale nail beds consistent with low hemoglobin",
+   "Appears fatigued, rubs her lower back during the conversation"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.4 % (reference < 5.7; 2026-02-18)",
+   "Glucose: 83.4 mg/dL (reference 70-99 (fasting); 2026-02-18)",
+   "Total cholesterol: 157.7 mg/dL (reference < 200; 2024-02-07)",
+   "LDL cholesterol: 78.5 mg/dL (reference < 100; 2024-02-07)",
+   "HDL cholesterol: 58.7 mg/dL (reference >= 40; 2024-02-07)",
+   "Triglycerides: 103 mg/dL (reference < 150; 2024-02-07)",
+   "Haemoglobin: 11.2 g/dL (reference 12.0-17.5; 2024-02-14)",
+   "White cell count: 10.3 10*3/uL (reference 4.0-11.0; 2024-02-14)",
+   "Platelets: 355.8 10*3/uL (reference 150-450; 2024-02-14)",
+   "Potassium: 4.5 mmol/L (reference 3.5-5.1; 2026-02-18)",
+   "Sodium: 140.5 mmol/L (reference 135-145; 2026-02-18)",
+   "Urea nitrogen: 9.5 mg/dL (reference 7-20; 2026-02-18)"
+  ],
+  "vital_signs": [
+   "BP: 138/75 mmHg",
+   "HR: 80 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-02-18"
+  ],
+  "anthropometrics": [
+   "Height: 153.2 cm",
+   "Weight: 70.5 kg",
+   "BMI: 30 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+    "dose": "325 MG",
+    "frequency": "As needed, roughly most days for pain",
+    "purpose": "Not recorded",
+    "adherence": "Takes it when the pain gets bad; does not take it on a fixed schedule",
+    "patient_concerns": "Doesn't think it does much anymore, says she 'just takes it anyway'"
+   }
+  ],
+  "supplements_and_otc": [
+   "Store-brand multivitamin, taken 'sometimes'",
+   "Topical menthol pain cream for her back",
+   "Occasional melatonin gummies for sleep"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Relies heavily on microwave and frozen ready meals, canned soups, and fast food pickup; little fresh cooking",
+  "food_preferences": [
+   "Frozen chicken alfredo trays",
+   "White rice with canned beans",
+   "Pan dulce from the corner bakery",
+   "Soda with meals",
+   "Fried chicken from the drive-through near her house"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Nighttime binge eating of chips or sweets when pain or stress is high",
+   "Skipping real meals then eating a large amount later",
+   "Frequency of fast food versus home-prepared food",
+   "Portion sizes with ready meals eaten straight from the container"
+  ],
+  "meal_pattern": "Irregular; often skips breakfast, grazes on snacks through the day, then eats a large meal late at night",
+  "hydration": "Mostly soda and sweetened iced tea, little plain water",
+  "physical_activity": "Very limited; walking is painful and she avoids it, mostly sits or lies down most of the day",
+  "substance_use": "Never smoked; audit-C score 0, essentially does not drink alcohol",
+  "sleep": "Poor, disrupted by pain, often up late which is when the heavier eating happens"
+ },
+ "psychosocial_profile": {
+  "personality": "Blunt, impatient, no-nonsense; wants answers fast and gets irritated by long explanations",
+  "communication_style": "Gives short, clipped answers at first; opens up a little more only if asked the same question again in a different way; dislikes being lectured",
+  "goals": [
+   "Just wants her back to hurt less",
+   "Wants to be left alone about her weight"
+  ],
+  "concerns": [
+   "Being told she has to change everything about how she eats",
+   "Being judged for eating convenience food"
+  ],
+  "beliefs": [
+   "Thinks her weight and blood sugar numbers are 'not that bad' and not worth fussing over",
+   "Believes the pain is the real problem, not the food",
+   "Thinks diets never work for her so there's no point trying"
+  ],
+  "motivations": [
+   "Avoiding more doctor visits and more lectures",
+   "Keeping her partner from worrying so much"
+  ],
+  "fears": [
+   "Being told she needs to lose a lot of weight",
+   "Ending up unable to care for herself at all"
+  ],
+  "barriers": [
+   "Chronic pain makes cooking and standing in the kitchen hard",
+   "Cooking for one feels pointless in a house of six eating on different schedules",
+   "Low health literacy makes nutrition information confusing",
+   "No motivation to change because she doesn't see the problem"
+  ],
+  "strengths": [
+   "Doesn't drink and never smoked",
+   "Has a partner who checks on her and cares",
+   "Keeps regular medical checkups even if reluctantly"
+  ],
+  "support_system": "Lives with a partner who is supportive but anxious and hovers over her, frequently asking if she's eaten or taken her medicine, which Lilia says 'gets to be a lot'; also shares the house with other family members on different schedules",
+  "readiness_to_change": "Precontemplation; does not see her eating as a problem and resists the idea that it connects to her blood sugar or pain"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "Says her back pain is the main issue, not her diet",
+   "Mentions she mostly eats frozen meals because cooking for the house doesn't make sense for just her",
+   "States she doesn't drink and never smoked",
+   "Says the doctor sent her here, not that she asked to come"
+  ],
+  "discoverable_information": [
+   "Admits she skips breakfast most days and eats most of her food late in the day",
+   "Says soda is easier than water because 'water doesn't do anything for me'",
+   "Mentions her partner keeps asking her if she's eaten, which annoys her a little",
+   "Describes her days as mostly sitting because standing hurts her back"
+  ],
+  "reluctant_information": [
+   "Eventually admits that on bad pain nights she'll eat a whole bag of chips or a sleeve of cookies without really noticing until it's gone",
+   "Admits she sometimes eats in her room alone so her partner won't see how much"
+  ],
+  "hidden_information": [
+   "Lilia has never told anyone, including her partner, that after her miscarriage in 2023 she started eating late at night to fall back asleep and never stopped",
+   "She throws away evidence of binge wrappers in a bag outside rather than the kitchen trash so her partner won't notice"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice motivational interviewing with a patient in precontemplation who denies any need to change.",
+    "expected_discoveries": [
+     "Lilia does not connect her diet to her prediabetes or weight",
+     "She responds better to open-ended, low-pressure questions than direct advice"
+    ],
+    "possible_patient_reactions": [
+     "I don't see why this matters, my numbers aren't even that bad.",
+     "Everybody's gotta eat something, I don't know what you want me to say."
+    ]
+   },
+   {
+    "learning_objective": "Adapt nutrition education for low health literacy.",
+    "expected_discoveries": [
+     "Lilia does not understand lab values or percentages",
+     "She responds to simple, concrete language and visual comparisons rather than numbers"
+    ],
+    "possible_patient_reactions": [
+     "I don't know what that A1C thing means, just tell me if it's bad or not.",
+     "Can you just say it simple?"
+    ]
+   },
+   {
+    "learning_objective": "Explore comfort eating and shame around binge episodes using a non-judgmental approach.",
+    "expected_discoveries": [
+     "Lilia eats large amounts of snack food at night when pain or stress is high",
+     "She hides evidence of binge eating from her partner",
+     "The behavior appears tied to unresolved grief from her 2023 miscarriage"
+    ],
+    "possible_patient_reactions": [
+     "Shuts down or changes subject if asked directly",
+     "I don't want to talk about that.",
+     "Eventually, quietly: 'It's not like I plan it, it just happens.'"
+    ]
+   },
+   {
+    "learning_objective": "Address barriers to meal preparation in a crowded household with chronic pain.",
+    "expected_discoveries": [
+     "Standing to cook aggravates her back and fibromyalgia pain",
+     "Cooking for herself alone in a house of six feels pointless to her",
+     "Reliance on ready meals and fast food is largely about convenience and energy conservation"
+    ],
+    "possible_patient_reactions": [
+     "Why cook a whole meal just for me?",
+     "Standing in the kitchen kills my back after five minutes."
+    ]
+   },
+   {
+    "learning_objective": "Involve a hovering but supportive partner appropriately in nutrition counseling.",
+    "expected_discoveries": [
+     "Partner's constant checking feels like pressure to Lilia rather than help",
+     "There may be an opportunity to redirect partner support toward practical help, like grocery shopping, instead of monitoring"
+    ],
+    "possible_patient_reactions": [
+     "He means well but he's always asking if I ate, it's annoying.",
+     "I don't need babysitting."
+    ]
+   },
+   {
+    "learning_objective": "Discuss hydration and beverage choices in the context of prediabetes.",
+    "expected_discoveries": [
+     "Soda and sweetened tea are her main fluids",
+     "She is unaware or dismissive of the link between sugary drinks and blood sugar"
+    ],
+    "possible_patient_reactions": [
+     "Water's boring, I don't like it.",
+     "One soda's not gonna kill me."
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Lilia's chronic pain and fibromyalgia significantly limit her mobility and willingness to cook",
+   "The 2023 miscarriage is treated as an emotional contributor to her nighttime comfort eating, without introducing a new diagnosis",
+   "Household of six includes Lilia, her partner, and other relatives on different schedules, explaining why she experiences isolation despite not living alone"
+  ],
+  "optional_details": [
+   "Lilia keeps a small television on in her room at night, which is often when the binge eating happens",
+   "She has a nickname for her partner, 'mi gallina clueca' (my mother hen), used affectionately when annoyed by his hovering"
+  ]
+ },
+ "source": {
+  "synthea_record": "3594a7c0",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "blunt and impatient, wants the point quickly",
+   "communication": "short answers until asked a second time",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "low health literacy",
+   "eating": "relies on convenience and ready meals because cooking for one feels pointless",
+   "held_back": "eats for comfort or in binges and is ashamed of it",
+   "support": "a partner who is supportive but anxious and hovers"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

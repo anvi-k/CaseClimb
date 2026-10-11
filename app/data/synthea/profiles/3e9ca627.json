@@ -1,0 +1,280 @@
+{
+ "patient_overview": {
+  "name": "Kasey Haley",
+  "age": 56,
+  "sex": "Male",
+  "description": "Kasey Haley is a 56-year-old warehouse shift supervisor in Millburn, New Jersey, married with a busy household of four, who comes in for a wellness visit flagged for obesity and climbing cholesterol. He's polite almost to a fault, apologizing before the student even asks a question, as if bracing to be scolded about his weight. He deflects by cracking jokes or changing topics whenever the conversation turns to his eating habits, and he leans hard on his church community for support even though he hasn't told them much about his health numbers.",
+  "keywords": [
+   "obesity",
+   "high cholesterol",
+   "shift work eating",
+   "low health literacy",
+   "contemplation stage",
+   "vending machine diet",
+   "faith community support",
+   "hidden supplement use",
+   "gingivitis",
+   "weight management"
+  ]
+ },
+ "demographics": {
+  "occupation": "Warehouse shift supervisor at a regional distribution center",
+  "residence": "Millburn, New Jersey; household of 4",
+  "ethnicity": "Black",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Kasey grew up in a working-class household where big portions at family gatherings were a sign of love and plenty, and he still associates second helpings with belonging. He's been part of the same community church for over twenty years, attending potlucks and men's breakfast groups, where food is central to fellowship and turning down a plate can feel like turning down a friend. He values hard work and providing for his family above almost everything else, which is part of why he's reluctant to admit he feels unwell or out of control around food."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [],
+  "medical_history": [
+   "Body mass index 30+ - obesity since 2007",
+   "Gingivitis (2023-05 to 2023-05, resolved)",
+   "Gingivitis (2024-05 to 2024-05, resolved)",
+   "Gingival disease (2024-05 to 2024-05, resolved)",
+   "Gingivitis (2025-05 to 2025-05, resolved)",
+   "Acute viral pharyngitis (2025-05 to 2025-05, resolved)",
+   "Dental fluoride treatment (2025-05-24)",
+   "Dental plain X-ray bitewing (2025-05-24)",
+   "Examination of gingivae (2025-05-24)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-05-24)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-05-24)",
+   "Dental care (2025-05-24)"
+  ],
+  "current_symptoms": [
+   "Feels tired by mid-afternoon, especially on long shifts",
+   "Occasional heartburn after eating fast food late at night",
+   "Notices his pants fitting tighter over the past year",
+   "Gets winded going up the stairs at the warehouse"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears mildly overweight with central adiposity consistent with recorded BMI",
+   "Mild gum redness/tenderness along gumline, consistent with history of recurrent gingivitis",
+   "Fidgets and avoids eye contact when discussing weight, shifts in seat",
+   "Slightly breathless after walking from waiting room to exam room"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 299.1 mg/dL (reference < 200; 2026-05-23)",
+   "LDL cholesterol: 206.7 mg/dL (reference < 100; 2026-05-23)",
+   "HDL cholesterol: 65.9 mg/dL (reference >= 40; 2026-05-23)",
+   "Triglycerides: 132.6 mg/dL (reference < 150; 2026-05-23)",
+   "Haemoglobin: 12.8 g/dL (reference 12.0-17.5; 2022-04-30)",
+   "White cell count: 7.1 10*3/uL (reference 4.0-11.0; 2022-04-30)",
+   "Platelets: 324.8 10*3/uL (reference 150-450; 2022-04-30)"
+  ],
+  "vital_signs": [
+   "BP: 136/84 mmHg",
+   "HR: 81 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-05-23"
+  ],
+  "anthropometrics": [
+   "Height: 179.2 cm",
+   "Weight: 97.3 kg",
+   "BMI: 30.3 kg/m2",
+   "Weight change: +2.3 kg since 2025-05-17"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "A relative's homemade 'metabolism tea' blend he drinks most mornings, never mentioned to his doctor",
+   "Over-the-counter fish oil capsules taken inconsistently",
+   "A cinnamon capsule supplement a coworker recommended for blood sugar, taken a few times a week",
+   "Occasional antacid tablets for heartburn after late dinners"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Irregular, shift-driven eating heavy in convenience and fast foods with inconsistent meal timing",
+  "food_preferences": [
+   "Fried chicken sandwiches from the drive-through near the warehouse",
+   "Honey buns and chips from the vending machine during breaks",
+   "Sweet tea or soda to stay awake on overnight shifts",
+   "His wife's baked ziti and garlic bread on Sundays after church"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Frequency and portion size of fast-food meals during work shifts",
+   "Use of vending machine snacks as meal substitutes",
+   "Late-night eating after closing shift around 11pm",
+   "Hidden supplement and 'metabolism tea' use not disclosed to providers",
+   "Soda intake pattern across the workday"
+  ],
+  "meal_pattern": "Skips or delays breakfast most days, grabs fast food for lunch between shift tasks, eats a large dinner late at night after getting home, frequent vending machine snacking during breaks",
+  "hydration": "Relies mostly on sweetened iced tea and soda during shifts; drinks little plain water",
+  "physical_activity": "On his feet much of the shift but otherwise sedentary; no structured exercise, says he's 'too tired' after work",
+  "substance_use": "Never smoked tobacco; drinks alcohol rarely, audit-C score of 0",
+  "sleep": "Sleep disrupted by rotating shift schedule; naps during the day, often eats a heavy meal right before bed"
+ },
+ "psychosocial_profile": {
+  "personality": "Anxious, apologetic, quick to assume he's about to be criticized; uses humor to deflect discomfort",
+  "communication_style": "Changes the subject when a topic feels too close to home, often pivoting to talk about work, his kids, or his church group instead of answering directly",
+  "goals": [
+   "Lower his cholesterol numbers without having to give up all his favorite foods",
+   "Have more energy to keep up with his two teenagers",
+   "Avoid being put on medication if he can help it"
+  ],
+  "concerns": [
+   "Worried the doctor will just tell him to 'eat less and move more' without understanding his schedule",
+   "Afraid his weight will become a bigger health problem like it did for his father",
+   "Embarrassed about how much fast food he actually eats"
+  ],
+  "beliefs": [
+   "Thinks his weight gain is mostly just 'getting older' and can't be helped much",
+   "Believes natural remedies and teas passed down in his family are safer than anything a pharmacy sells",
+   "Feels that admitting he needs help with food is a personal failing"
+  ],
+  "motivations": [
+   "Wants to be around and healthy for his kids' milestones",
+   "Wants to keep working full shifts without feeling exhausted",
+   "Values being seen as reliable and strong by his coworkers and church friends"
+  ],
+  "fears": [
+   "Fear of being lectured or shamed about his weight",
+   "Fear of a major diagnosis like his father's heart disease",
+   "Fear that changing his diet will make him stand out or seem weak to his crew at work"
+  ],
+  "barriers": [
+   "Rotating shift schedule limits access to home-cooked meals",
+   "Limited knowledge of nutrition labels or portion sizes",
+   "Vending machines and drive-throughs are the most convenient options near work",
+   "Reluctance to bring up supplement use for fear of being told to stop"
+  ],
+  "strengths": [
+   "Shows up consistently to appointments despite a busy schedule",
+   "Strong desire to be a good role model for his children",
+   "Has a trusted community that could support healthier habits if engaged"
+  ],
+  "support_system": "Married with two teenage children at home; deeply involved in a local church community with weekly men's breakfast and frequent potlucks, though he hasn't shared his health concerns openly with them",
+  "readiness_to_change": "Contemplation: aware his weight and cholesterol are problems and feels torn about changing his routine, but hasn't committed to specific steps yet"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he's here for his yearly check-up and the doctor wanted him to talk to someone about his weight",
+   "Mentions he works long shifts at the warehouse and it's hard to eat right",
+   "Says he knows he 'should probably eat better' but laughs it off"
+  ],
+  "discoverable_information": [
+   "Describes typical shift meals: drive-through lunch, vending machine snacks, late dinner after 11pm",
+   "Admits he drinks soda or sweet tea most of the day instead of water",
+   "Mentions his father had heart problems and high cholesterol too",
+   "Says he doesn't get much exercise beyond standing at work"
+  ],
+  "reluctant_information": [
+   "Admits he feels embarrassed talking about his eating habits because he knows it's 'not great'",
+   "Reveals he's worried the student or doctor will be disappointed in him, like previous visits made him feel",
+   "Shares that he sometimes eats a whole bag of chips in the breakroom because he's starving and tired"
+  ],
+  "hidden_information": [
+   "Drinks a homemade 'metabolism tea' from a family recipe most mornings, never told any provider about it",
+   "Takes cinnamon capsules a coworker gave him a few times a week hoping it helps his blood sugar",
+   "Has looked into stopping these home remedies secretly because he read something concerning online but is scared to ask about it directly"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full 24-hour recall from a shift worker with irregular eating patterns",
+    "expected_discoveries": [
+     "Pattern of skipped breakfast, fast-food lunch, vending machine snacking, and late heavy dinner",
+     "Heavy reliance on sugary beverages during shifts"
+    ],
+    "possible_patient_reactions": [
+     "He laughs and says 'I probably shouldn't tell you what I really eat'",
+     "He changes subject to talk about his son's baseball game when asked about dinner timing"
+    ]
+   },
+   {
+    "learning_objective": "Build trust to uncover undisclosed supplement and home remedy use",
+    "expected_discoveries": [
+     "Daily 'metabolism tea' use",
+     "Occasional cinnamon capsule use suggested by a coworker"
+    ],
+    "possible_patient_reactions": [
+     "He hesitates and asks if he's 'in trouble' for not mentioning it sooner",
+     "He downplays it: 'It's just tea, my aunt makes it, it's nothing medical'"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change using motivational interviewing rather than directive advice",
+    "expected_discoveries": [
+     "He is aware of the problem but feels torn between convenience at work and wanting to improve",
+     "He fears judgment, which has previously made him avoid bringing up habits honestly"
+    ],
+    "possible_patient_reactions": [
+     "He becomes apologetic: 'I know, I know, I should do better'",
+     "He opens up more if the student validates the difficulty of his work schedule"
+    ]
+   },
+   {
+    "learning_objective": "Explore the role of his faith community as a support for behavior change",
+    "expected_discoveries": [
+     "Weekly potlucks and men's breakfast events are central to his social life and tied to food",
+     "He hasn't told his church friends about his health numbers"
+    ],
+    "possible_patient_reactions": [
+     "He lights up talking about his church group but gets quiet when asked if they know about his cholesterol",
+     "He wonders aloud if he could get the group to try healthier potluck dishes"
+    ]
+   },
+   {
+    "learning_objective": "Identify low health literacy and tailor nutrition education accordingly",
+    "expected_discoveries": [
+     "Confusion about what LDL versus HDL cholesterol means",
+     "Uncertainty about reading nutrition labels at the vending machine or drive-through"
+    ],
+    "possible_patient_reactions": [
+     "He admits 'I never really understood what those numbers mean, honestly'",
+     "He asks the student to explain things 'like I'm five' with an embarrassed laugh"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Weight gain of 2.3 kg since last year reflects ongoing shift-work eating patterns rather than a new acute issue",
+   "Low mood and anxiety scores (PHQ-2:1, GAD-7:3) suggest mild baseline anxiety consistent with the apologetic personality trait rather than a clinical mood disorder",
+   "Household income of $180,038 and private insurance suggest financial barriers are minimal; barriers are more about time and convenience",
+   "No medications are recorded, so all supplement use is patient-driven and undisclosed rather than clinician-prescribed"
+  ],
+  "optional_details": [
+   "Kasey has worked at the same distribution center for over 15 years and recently moved into a supervisor role with more irregular hours",
+   "His two teenage children play school sports, and he tries to attend games despite fatigue",
+   "He occasionally brings a cooler with snacks to work but it mostly holds soda rather than healthier food"
+  ]
+ },
+ "source": {
+  "synthea_record": "3e9ca627",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "anxious and apologetic, expects to be told off",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "contemplation: knows something should change but is torn",
+   "literacy": "low health literacy",
+   "eating": "works shifts or long hours and eats at irregular times, often from vending machines or drive-throughs",
+   "held_back": "takes supplements or home remedies the clinic does not know about",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

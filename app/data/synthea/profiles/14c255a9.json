@@ -1,0 +1,340 @@
+{
+ "patient_overview": {
+  "name": "Annamae Hauck",
+  "age": 46,
+  "sex": "Female",
+  "description": "Annamae Hauck is a 46-year-old single woman from Bridgewater, New Jersey, who works full-time and lives in a crowded household of seven. She comes in for nutrition counseling tied to her hypertension and severe obesity management, but she is blunt about not seeing much point in the visit. She rattles off her blood pressure readings and lab numbers from memory, impatient with anything that feels like a lecture, and makes clear she's been managing her chronic back, neck, and sinus issues for over a decade without much change. She comes across as sharp, matter-of-fact, and mildly defensive about her weight and drinking.",
+  "keywords": [
+   "severe obesity",
+   "essential hypertension",
+   "precontemplation",
+   "chronic pain",
+   "recurrent utis",
+   "alcohol minimization",
+   "convenience eating",
+   "weight management",
+   "family dismissiveness",
+   "moderate health literacy"
+  ]
+ },
+ "demographics": {
+  "occupation": "Billing coordinator at a regional orthopedic practice",
+  "residence": "Bridgewater, New Jersey; household of 7",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Single",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Annamae grew up in central New Jersey in a large, loud family where meals were whatever was fastest to get on the table between someone's shift and someone's practice. She values efficiency and directness, and she sees cooking as a chore with no payoff when you're single and feeding only yourself most nights, even though her current household is packed with relatives. She doesn't tie her eating habits to any particular heritage or tradition — it's just what's practical."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Essential hypertension",
+  "secondary_diagnoses": [
+   "Recurrent urinary tract infection",
+   "Body mass index 40+ - severely obese",
+   "History of appendectomy",
+   "Chronic sinusitis",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic neck pain"
+  ],
+  "medical_history": [
+   "Recurrent urinary tract infection since 1999",
+   "Body mass index 40+ - severely obese since 2001",
+   "Essential hypertension since 2002",
+   "History of appendectomy since 2004",
+   "Chronic sinusitis since 2005",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic neck pain since 2014",
+   "Gingival disease (2022-01 to 2022-01, resolved)",
+   "Infection of tooth (2026-01 to 2026-01, resolved)",
+   "Viral sinusitis (2026-02 to 2026-02, resolved)",
+   "Acute viral pharyngitis (2026-02 to 2026-02, resolved)",
+   "Dental fluoride treatment (2026-01-27)",
+   "Examination of gingivae (2026-01-27)",
+   "Postoperative care for dental procedure (2026-01-27)",
+   "Simple extraction of tooth (2026-01-26)",
+   "Dental application of desensitizing medicament (2026-01-26)",
+   "Dental surgical procedure (2026-01-26)"
+  ],
+  "current_symptoms": [
+   "Ongoing low back pain described as a constant dull ache, worse by end of a work shift",
+   "Neck stiffness, especially after sitting at a desk for long stretches",
+   "Occasional burning with urination that she says 'comes and goes, I know the drill by now'",
+   "Sinus pressure and congestion flare-ups a few times a year",
+   "General fatigue she attributes to 'just getting older'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Severely obese body habitus consistent with BMI 45.3",
+   "Mild tenderness to palpation of lumbar paraspinal muscles and reduced cervical range of motion",
+   "Facial fullness without acute distress",
+   "Gait slightly slowed, favoring lower back when rising from chair"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 293.3 mg/dL (reference < 200; 2026-01-12)",
+   "LDL cholesterol: 216.2 mg/dL (reference < 100; 2026-01-12)",
+   "HDL cholesterol: 53.3 mg/dL (reference >= 40; 2026-01-12)",
+   "Triglycerides: 119.2 mg/dL (reference < 150; 2026-01-12)",
+   "Haemoglobin: 12.6 g/dL (reference 12.0-17.5; 2022-12-26)",
+   "White cell count: 6.5 10*3/uL (reference 4.0-11.0; 2022-12-26)",
+   "Platelets: 443 10*3/uL (reference 150-450; 2022-12-26)"
+  ],
+  "vital_signs": [
+   "BP: 97/64 mmHg",
+   "HR: 81 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-01-12"
+  ],
+  "anthropometrics": [
+   "Height: 153.2 cm",
+   "Weight: 106.3 kg",
+   "BMI: 45.3 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Jolivette 28 Day]",
+    "dose": "0.35 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it consistently, says it's 'the one pill I never forget because I don't want more kids'",
+    "patient_concerns": "No real complaints; views it as routine and unrelated to her weight or blood pressure"
+   },
+   {
+    "name": "Hydrochlorothiazide 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "Once daily",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent but admits to skipping it 'maybe once a week when I forget my pillbox at my sister's house'",
+    "patient_concerns": "Says it makes her urinate more at work which is inconvenient during her shift"
+   },
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily",
+    "purpose": "Essential hypertension",
+    "adherence": "Consistent, takes it with the hydrochlorothiazide each morning",
+    "patient_concerns": "Mentions a dry cough sometimes but says 'it's not bad enough to call the doctor about'"
+   },
+   {
+    "name": "Vitamin B12 5 MG/ML Injectable Solution",
+    "dose": "5 MG/ML",
+    "frequency": "Monthly injection at her doctor's office",
+    "purpose": "Not recorded",
+    "adherence": "Keeps the appointment every month, calls it 'the one thing I don't let slide'",
+    "patient_concerns": "None stated; she likes that it's quick and doesn't require her to remember a daily pill"
+   }
+  ],
+  "supplements_and_otc": [
+   "Ibuprofen 200mg tablets, taken most days for back and neck pain",
+   "Multivitamin, taken 'when I remember'",
+   "Occasional antacid tablets after large or late meals"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Heavy reliance on frozen dinners, deli sandwiches, and takeout; minimal home cooking",
+  "food_preferences": [
+   "Stouffer's frozen lasagna",
+   "Rotisserie chicken from the supermarket deli",
+   "Diet soda, several cans a day",
+   "Italian takeout subs from a shop near her office",
+   "Pretzels and chips as evening snacks"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at dinner, often eaten standing at the counter after a long shift",
+   "Frequency and amount of wine consumed on weeknights versus what she first reports",
+   "Salt content of frequent takeout and frozen meals relative to her hypertension",
+   "Lack of vegetables beyond what comes pre-packaged in a meal kit"
+  ],
+  "meal_pattern": "Skips or rushes breakfast, grabs a sandwich at her desk for lunch, eats a large convenience dinner late in the evening after work",
+  "hydration": "Mostly diet soda and coffee; says she 'doesn't really do water'",
+  "physical_activity": "Mostly sedentary desk job; parks far from the building entrance 'to get a little walking in' but no structured exercise",
+  "substance_use": "Ex-smoker, quit roughly 8 years ago; drinks wine most evenings though she initially describes it as 'just a glass here and there'",
+  "sleep": "Reports 6 to 7 hours, often interrupted by noise from the full household"
+ },
+ "psychosocial_profile": {
+  "personality": "Blunt, impatient, no-nonsense; wants the bottom line without a lot of preamble",
+  "communication_style": "Precise and factual, cites her own numbers and dates readily, gets irritated by vague or 'preachy' explanations",
+  "goals": [
+   "Get her blood pressure readings to stop coming up at every visit",
+   "Manage her back and neck pain well enough to keep working full shifts",
+   "Avoid another round of antibiotics for a UTI"
+  ],
+  "concerns": [
+   "Being told to overhaul her whole diet when she feels she doesn't have time to cook",
+   "Her weight being blamed for everything from her back pain to her blood pressure",
+   "Being lectured by someone younger than her kids"
+  ],
+  "beliefs": [
+   "She believes her weight is mostly genetic since 'half my family is built this way'",
+   "She believes cooking for one person is a waste of time and money",
+   "She doesn't think a glass or two of wine a night matters much"
+  ],
+  "motivations": [
+   "Staying employed and functional given her physical job demands",
+   "Not wanting to depend on her family for help with daily tasks"
+  ],
+  "fears": [
+   "Losing mobility to the point she can't work",
+   "Being put on more medications"
+  ],
+  "barriers": [
+   "Crowded, chaotic household makes meal planning hard",
+   "Long work hours leave little energy for cooking",
+   "Family does not take her health conditions seriously and jokes about her diet"
+  ],
+  "strengths": [
+   "Organized about her medical appointments and medication schedule",
+   "Articulate and able to track her own numbers accurately",
+   "Still physically capable of working full-time despite pain"
+  ],
+  "support_system": "Lives with extended family (household of 7) who she describes as 'loud and unhelpful' about her health, often pushing food on her or dismissing her concerns",
+  "readiness_to_change": "Precontemplation; does not see a strong reason to change her eating or drinking habits right now"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States her blood pressure was 97/64 at her last visit and she thinks that's 'basically fine'",
+   "Mentions she's been dealing with back and neck pain since 2014 and 'it's just part of life now'",
+   "Says she eats mostly frozen dinners and takeout because cooking for herself isn't worth the effort"
+  ],
+  "discoverable_information": [
+   "Admits she skips breakfast most days and eats a big dinner late at night",
+   "Reveals she drinks diet soda multiple times a day instead of water",
+   "Mentions her family at home teases her about her weight and doesn't take her hypertension seriously",
+   "Describes her job as a billing coordinator with long hours sitting at a desk"
+  ],
+  "reluctant_information": [
+   "When asked directly about alcohol, eventually says she has 'maybe two glasses of wine' most weeknights, not just 'here and there' as she first said",
+   "Admits she sometimes has a third glass on weekends when family gatherings get going"
+  ],
+  "hidden_information": [
+   "Annamae has actually been drinking close to a bottle of wine on weekend nights for the past year, which she has not disclosed to any provider",
+   "She has quietly stopped filling her hydrochlorothiazide refill on time twice this year because she didn't want to deal with the bathroom breaks during a busy work week"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit accurate alcohol intake using non-judgmental, specific questioning techniques",
+    "expected_discoveries": [
+     "Patient initially underreports wine consumption",
+     "Weekend intake is significantly higher than weekday intake",
+     "Patient minimizes relevance of alcohol to her blood pressure and weight"
+    ],
+    "possible_patient_reactions": [
+     "'It's just a glass or two, nothing crazy.'",
+     "'Why does this matter if my pressure was fine last visit?'",
+     "Becomes more forthcoming once she feels she isn't being judged"
+    ]
+   },
+   {
+    "learning_objective": "Assess readiness to change and apply motivational interviewing in a precontemplation stage patient",
+    "expected_discoveries": [
+     "Patient sees no urgent reason to change diet or drinking habits",
+     "Patient's main motivation is staying functional for work, not long-term health",
+     "Family environment reinforces current habits"
+    ],
+    "possible_patient_reactions": [
+     "'I don't see what's broken that needs fixing.'",
+     "Shuts down if pushed too hard",
+     "Responds better to questions tied to her own stated goals (staying at work)"
+    ]
+   },
+   {
+    "learning_objective": "Evaluate sodium and portion patterns in a convenience-food-based diet for a patient with hypertension",
+    "expected_discoveries": [
+     "High frequency of frozen and deli meals with high sodium content",
+     "Minimal fresh vegetable intake",
+     "Large, late dinners after skipping breakfast"
+    ],
+    "possible_patient_reactions": [
+     "'I don't have time to cook, that's just reality.'",
+     "Surprised when shown sodium counts on her usual frozen dinner",
+     "Defensive about being told convenience food is a problem"
+    ]
+   },
+   {
+    "learning_objective": "Identify medication adherence gaps and link them to patient-reported barriers",
+    "expected_discoveries": [
+     "Patient has delayed refilling hydrochlorothiazide due to inconvenient urination timing at work",
+     "Patient is highly consistent with monthly B12 injection and contraceptive pack but less so with hypertension medication",
+     "Occasional dry cough from lisinopril not reported previously"
+    ],
+    "possible_patient_reactions": [
+     "'I just don't always have time for bathroom breaks at work, so I skip it sometimes.'",
+     "Minimizes the cough as 'not a big deal'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the influence of a dismissive family environment on dietary behavior change",
+    "expected_discoveries": [
+     "Family jokes about her weight and pushes food at gatherings",
+     "Patient feels unsupported but doesn't ask for help",
+     "Household chaos limits meal planning opportunities"
+    ],
+    "possible_patient_reactions": [
+     "'They don't get it, they just think I'm being dramatic about my back.'",
+     "Shows frustration but downplays how much it bothers her"
+    ]
+   },
+   {
+    "learning_objective": "Develop a PES statement addressing excess sodium and alcohol intake related to hypertension",
+    "expected_discoveries": [
+     "Connects her lab values (cholesterol, LDL) and blood pressure history to her reported eating and drinking pattern",
+     "Recognizes gap between her self-report and actual intake",
+     "Identifies at least one small, realistic behavior change she might consider"
+    ],
+    "possible_patient_reactions": [
+     "'Fine, maybe cut back on the chips. I'm not giving up my wine though.'",
+     "Skeptical that small changes will matter"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Patient's household of 7 consists of extended family members (siblings, parents, or adult children) given her single marital status",
+   "Private insurance and high household income suggest the household income reflects combined earnings of multiple working adults in the home, not just the patient's own salary",
+   "Housing dissatisfaction likely relates to overcrowding given the large household size"
+  ],
+  "optional_details": [
+   "Keeps a small succulent on her desk at work that she says is 'the only thing I haven't managed to kill'",
+   "Watches true crime documentaries most evenings to unwind",
+   "Has a standing Friday takeout order from the same Italian deli for the last several years"
+  ]
+ },
+ "source": {
+  "synthea_record": "14c255a9",
+  "condition_group": "hypertension",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "blunt and impatient, wants the point quickly",
+   "communication": "precise and factual, quotes numbers and dates",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "moderate health literacy",
+   "eating": "relies on convenience and ready meals because cooking for one feels pointless",
+   "held_back": "drinks more alcohol than they first say",
+   "support": "family nearby who do not take the condition seriously"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

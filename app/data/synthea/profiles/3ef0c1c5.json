@@ -1,0 +1,319 @@
+{
+ "patient_overview": {
+  "name": "Moshe Anderson",
+  "age": 25,
+  "sex": "Male",
+  "description": "Moshe Anderson is a 25-year-old man from Somers Point, New Jersey, who works full-time and was recently diagnosed with essential hypertension after a reading of 159/117 at his September 2026 wellness visit. He has a documented history of drug misuse since 2020 and comes across as sharp, skeptical, and numbers-driven, often citing his own blood pressure readings and dates back at the clinician. He cooks elaborate family-style meals and takes real pride in it, but admits the portions have crept up, and he's only about five weeks into trying to change anything. He is polite but probing, treating this visit like an interview where he expects the student to justify every recommendation with evidence.",
+  "keywords": [
+   "essential hypertension",
+   "substance misuse",
+   "moderate health literacy",
+   "portion control",
+   "alcohol underreporting",
+   "family food culture",
+   "action stage fragile",
+   "skeptical patient",
+   "transportation barrier",
+   "young adult hypertension"
+  ]
+ },
+ "demographics": {
+  "occupation": "Warehouse logistics coordinator at a regional distribution center",
+  "residence": "Somers Point, New Jersey; household of 2",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Not recorded",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Moshe grew up in a tight-knit White working-to-middle-class family in South Jersey where Sunday dinners were sacred and love was measured in how full your plate was. He went to community college and then finished a bachelor's degree online while working, which he's proud of. Food in his house was never about rules — his mother and aunt would take offense if he left food on his plate — and he's still negotiating what 'cutting back' means in a family that equates second helpings with affection."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Essential hypertension",
+  "secondary_diagnoses": [
+   "Misuses drugs"
+  ],
+  "medical_history": [
+   "Misuses drugs since 2020",
+   "Essential hypertension since 2026",
+   "Acute bronchitis (2022-06 to 2022-07, resolved)",
+   "Gingivitis (2022-07 to 2022-07, resolved)",
+   "Sprain of wrist (2023-05 to 2023-06, resolved)",
+   "Viral sinusitis (2023-11 to 2023-12, resolved)",
+   "Examination of gingivae (2022-07-19)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2022-07-19)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2022-07-19)",
+   "Dental care (2022-07-19)",
+   "Dental consultation and report (2022-07-19)",
+   "Measurement of respiratory function (2022-06-26)"
+  ],
+  "current_symptoms": [
+   "Occasional headaches he attributes to 'work stress, not blood pressure'",
+   "Mild shortness of breath climbing the stairs to his apartment",
+   "Trouble sleeping some nights, which he blames on 'too much coffee, not the drinking'",
+   "Occasional heartburn after big family dinners"
+  ],
+  "allergies": [
+   "Mold (organism)",
+   "House dust mite (organism)",
+   "Animal dander (substance) (Rhinoconjunctivitis)",
+   "Tree pollen (substance)",
+   "Aspirin",
+   "Penicillin V (Cough)"
+  ],
+  "clinical_findings": [
+   "Blood pressure elevated at today's visit (159/117 mmHg), face slightly flushed",
+   "BMI 26.5 with a weight gain of about 10 lbs since 2023, carrying extra weight through the midsection",
+   "Mild dental wear and gum sensitivity noted from history, otherwise well-groomed and alert",
+   "Speaks rapidly and checks his phone notes/app data when discussing his numbers"
+  ],
+  "laboratory_data": [
+   "Haemoglobin: 12 g/dL (reference 12.0-17.5; 2023-09-19)",
+   "White cell count: 4.2 10*3/uL (reference 4.0-11.0; 2023-09-19)",
+   "Platelets: 355.8 10*3/uL (reference 150-450; 2023-09-19)"
+  ],
+  "vital_signs": [
+   "BP: 159/117 mmHg",
+   "HR: 82 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-09-22"
+  ],
+  "anthropometrics": [
+   "Height: 182.8 cm",
+   "Weight: 88.6 kg",
+   "BMI: 26.5 kg/m2",
+   "Weight change: +4.7 kg since 2023-09-19"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "lisinopril 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily, every morning with breakfast",
+    "purpose": "Essential hypertension",
+    "adherence": "Mostly consistent for the past 5-6 weeks since diagnosis, says he 'set a phone alarm for 7:15 am'",
+    "patient_concerns": "Wants proof the dose is actually working rather than just trusting it; asks 'how much should the 10 mg actually drop the systolic number'"
+   },
+   {
+    "name": "Fexofenadine hydrochloride 30 MG Oral Tablet",
+    "dose": "30 MG",
+    "frequency": "Once daily, as needed during allergy season",
+    "purpose": "Not recorded",
+    "adherence": "Consistent when pollen counts are high, otherwise skips it",
+    "patient_concerns": "None significant; sees it as low-stakes compared to blood pressure medication"
+   },
+   {
+    "name": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+    "dose": "0.3 ML",
+    "frequency": "Carries it at all times, never had to use it",
+    "purpose": "Not recorded",
+    "adherence": "Always has it on hand, checks expiration date every few months",
+    "patient_concerns": "Worried about whether it's still potent and wants to know the exact shelf life in months"
+   }
+  ],
+  "supplements_and_otc": [
+   "Magnesium citrate tablets ('read it helps blood pressure')",
+   "Occasional ibuprofen for gym soreness (avoids aspirin because of his allergy)",
+   "Protein powder he adds to morning smoothies"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Home-cooked, high-portion American/Italian-American hybrid meals; heavy on pasta, bread, and braised meats with recent attempts to add vegetables",
+  "food_preferences": [
+   "Chicken parm and baked ziti, his signature dishes",
+   "Garlic bread with every dinner",
+   "Deli sandwiches from the WaWa near work for lunch",
+   "Craft beer from a local brewery on weekends"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at dinner (he plates like his mother did, 'two full ladles of sauce, no less')",
+   "Sodium from canned tomato sauce and deli meats",
+   "Actual frequency and volume of alcohol intake versus the AUDIT-C score of 1 he reported",
+   "Snacking patterns on overnight warehouse shifts"
+  ],
+  "meal_pattern": "Two main meals: a quick lunch from a deli or gas station, then a large home-cooked dinner around 7:30-8pm, sometimes a late-night snack after a closing shift",
+  "hydration": "Mostly water during the day, coffee in the morning, beer most weekend evenings",
+  "physical_activity": "Walks a lot on the warehouse floor during 10-hour shifts, started lifting weights 3x/week five weeks ago at a cheap 24-hour gym",
+  "substance_use": "Reports light drinking (AUDIT-C score 1); documented history of drug misuse since 2020, specifics not elaborated by patient; never smoked",
+  "sleep": "Irregular due to rotating shift schedule, averages 6 hours, worse on weeks with closing shifts"
+ },
+ "psychosocial_profile": {
+  "personality": "Skeptical, questioning, wants a reason and a citation for every recommendation; proud, a little defensive about being told what to do",
+  "communication_style": "Precise and factual, quotes his own blood pressure readings and dates from memory, asks 'what's the study on that' type questions",
+  "goals": [
+   "Get his blood pressure under 130/80 without needing a second medication",
+   "Keep cooking the way he loves but find a way to make it 'count less against him'",
+   "Prove to his family that this is serious without starting a fight at dinner"
+  ],
+  "concerns": [
+   "Being on blood pressure medication 'for the rest of his life' at 25",
+   "Family dismissing his diagnosis as 'just stress, you're young'",
+   "Whether cutting portions means giving up the cooking that makes him feel connected to his mother"
+  ],
+  "beliefs": [
+   "If a number isn't moving, the intervention isn't working, full stop",
+   "Salt is the main villain, so anything 'low sodium' must be fine regardless of portion",
+   "Alcohol in moderation doesn't really affect blood pressure if you're otherwise healthy"
+  ],
+  "motivations": [
+   "A coworker his age had a stroke last year and it scared him",
+   "Wants to be able to play basketball again without getting winded",
+   "Likes tracking data and seeing numbers improve on his home cuff"
+  ],
+  "fears": [
+   "Ending up like his uncle, who had a heart attack at 52",
+   "Being seen as 'the sick one' in the family",
+   "Losing the identity of being the guy who cooks for everyone"
+  ],
+  "barriers": [
+   "No reliable car, depends on rides or buses, which limits grocery options and makes gym attendance inconsistent",
+   "Family actively pushes seconds and thirds and teases him for 'dieting'",
+   "Rotating shift work disrupts meal timing and sleep",
+   "Underestimates his own alcohol intake when asked directly"
+  ],
+  "strengths": [
+   "Genuinely skilled cook willing to adapt recipes if given a real reason",
+   "Already made changes unprompted in the last five weeks (started lifting, bought a home BP cuff)",
+   "Analytical mindset that responds well to data and clear explanations"
+  ],
+  "support_system": "Lives with a roommate; parents and extended family live nearby but downplay the diagnosis and keep serving him large portions out of love",
+  "readiness_to_change": "Action stage but fragile — about five to six weeks into changes, motivated but easily discouraged if family undermines progress or numbers don't move fast enough"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "Name: Moshe Anderson, age 25",
+   "Diagnosed with essential hypertension at the September 2026 visit, BP was 159/117",
+   "Works full-time at a distribution center on rotating shifts",
+   "Started lifting weights three times a week about five weeks ago"
+  ],
+  "discoverable_information": [
+   "Cooks most dinners himself, big Italian-American style meals learned from his mother",
+   "Lives with a roommate, household of two",
+   "Takes lisinopril 10 mg every morning, checks his own BP at home with a cuff",
+   "Family lives nearby and teases him about 'being dramatic' over the diagnosis",
+   "Has transportation problems that limit grocery shopping and sometimes gym attendance"
+  ],
+  "reluctant_information": [
+   "Drinks more than one beer most weekend nights, closer to 4-5 across a weekend rather than the light drinking he first reported",
+   "Gets defensive when asked directly 'how much do you really drink' and initially minimizes it",
+   "Family dinners often include wine his mother pours generously, which he doesn't always count"
+  ],
+  "hidden_information": [
+   "Moshe has used cocaine recreationally at parties as recently as three months ago, which he has not disclosed to this clinic visit and connects privately to his anxiety about his blood pressure spiking afterward",
+   "He skipped his lisinopril twice last week after a late shift and didn't mention it until pressed on adherence specifics"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit an accurate alcohol history using non-judgmental, specific questioning",
+    "expected_discoveries": [
+     "Patient's actual weekend alcohol intake exceeds his initial AUDIT-C report",
+     "Family gatherings involve wine that he doesn't mentally count as 'drinking'"
+    ],
+    "possible_patient_reactions": [
+     "'I mean, a couple beers, nothing crazy' (initial minimization)",
+     "'Okay, fine, maybe four or five if you count Sunday dinner too' (once rapport builds)"
+    ]
+   },
+   {
+    "learning_objective": "Address portion size and sodium in a culturally meaningful home-cooked diet without asking the patient to abandon cooking",
+    "expected_discoveries": [
+     "His signature dishes rely on canned tomato sauce, cured meats, and large plated portions",
+     "He plates according to his mother's standard, not his own hunger cues"
+    ],
+    "possible_patient_reactions": [
+     "'So you're telling me to eat less of my own cooking?' (defensive)",
+     "'If I use less sauce but still get the flavor, I'm listening' (open once given a concrete swap)"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate family dynamics that undermine a fragile stage of change",
+    "expected_discoveries": [
+     "Family pressures him to take seconds and dismisses his diagnosis as stress-related",
+     "He fears conflict more than he fears the diagnosis itself"
+    ],
+    "possible_patient_reactions": [
+     "'They don't get it, to them food is love, saying no is an insult'",
+     "'Maybe I could ask my mom to make a smaller batch of the ziti, just try it'"
+    ]
+   },
+   {
+    "learning_objective": "Use motivational interviewing to reinforce early, fragile action-stage behavior change",
+    "expected_discoveries": [
+     "He already started lifting weights and bought a BP cuff on his own initiative",
+     "He is discouraged easily if his numbers don't move fast"
+    ],
+    "possible_patient_reactions": [
+     "'If this doesn't work in a month I don't see the point' (impatience)",
+     "'Okay, that actually makes sense, I didn't think of it that way' (receptive to data-driven framing)"
+    ]
+   },
+   {
+    "learning_objective": "Assess medication adherence and connect it to broader life context including substance use history",
+    "expected_discoveries": [
+     "He missed his lisinopril twice last week after a late shift",
+     "He privately links past drug use to anxiety spikes and worry about his blood pressure, but hasn't told the clinic"
+    ],
+    "possible_patient_reactions": [
+     "'I take it most days, why does that matter so much' (initially dismissive)",
+     "Long pause, then: 'Look, there's stuff I haven't told my doctor, is this confidential?' (opening up with trust)"
+    ]
+   },
+   {
+    "learning_objective": "Identify practical solutions for transportation and shift-work barriers to healthy eating",
+    "expected_discoveries": [
+     "Lack of reliable transportation limits fresh grocery access, leading to more deli and convenience food at lunch",
+     "Rotating shifts disrupt consistent meal timing and sleep, which he connects to stress eating"
+    ],
+    "possible_patient_reactions": [
+     "'I can't just hop in a car and go to ShopRite whenever I want'",
+     "'If I plan meals for the whole week on my day off, that actually works better'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Moshe is not currently married and lives with a non-family roommate given household of 2 and marital status not recorded",
+   "Household income of $85,413 reflects his full-time logistics coordinator role",
+   "His documented drug misuse since 2020 is interpreted as recreational substance use he minimizes and has not fully disclosed to his care team",
+   "Transportation problem means he relies on a roommate, bus, or rideshare rather than owning a reliable car"
+  ],
+  "optional_details": [
+   "Owns a home blood pressure cuff he bought himself after diagnosis and logs readings in a notes app",
+   "Plays in a weekend recreational basketball league when his shift schedule allows",
+   "Keeps a well-worn recipe box from his mother that he's slowly trying to 'lighten up' one recipe at a time",
+   "Recently started reading nutrition labels on canned goods for sodium content"
+  ]
+ },
+ "source": {
+  "synthea_record": "3ef0c1c5",
+  "condition_group": "hypertension",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "skeptical and questioning, wants reasons for everything",
+   "communication": "precise and factual, quotes numbers and dates",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "moderate health literacy",
+   "eating": "cooks well and enjoys it, but portions are large and food is how the family shows love",
+   "held_back": "drinks more alcohol than they first say",
+   "support": "family nearby who do not take the condition seriously"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

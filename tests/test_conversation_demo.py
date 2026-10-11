@@ -9,15 +9,31 @@ from test_backend import ADMIN, harness, sample, turn
 
 
 def begin(client, emotion=None, profile_id=None):
-    body = {"nonclinical_demo": True}
-    if emotion:
-        body["emotion"] = emotion
-    if profile_id:
-        body["profile_id"] = profile_id
-    result = client.post("/api/demo/encounters", json=body)
-    assert result.status_code == 201, result.text
-    data = result.json()
-    return data["encounter_id"], {"Authorization": "Bearer " + data["token"]}, data
+    """Seed a pre-retirement record to verify legacy transcript compatibility."""
+    import secrets
+    import uuid
+    from backend.app import digest
+    from backend.conversation_demo import demo_case, public_profile, profile_prompts
+    app = client.app
+    profile_id = profile_id or "alex"
+    case = demo_case(emotion=emotion, profile_id=profile_id)
+    snapshot = case.model_dump()
+    snapshot["behavior"].pop("initial_rapport", None)
+    assert app.state.quotas.reserve("sessions")
+    eid, token, now = str(uuid.uuid4()), secrets.token_urlsafe(32), app.state.clock()
+    record = {"id": eid, "case_id": DEMO_ID, "version": 1, "mode": DEMO_MODE,
+              "token_hash": digest(token), "started_at": now, "deadline": now + 600,
+              "status": "active", "turn_count": 0, "provider_attempts": 0, "pending_turn": None,
+              "requests": {}, "disclosed_fact_ids": [], "disclosed_artifact_ids": [],
+              "simulated_mood": {"mood": case.behavior.mood, "label": "Preset fictional delivery; no learner score"},
+              "demo_snapshot": snapshot, "conversation_profile": public_profile(profile_id),
+              "conversation_prompts": profile_prompts(profile_id),
+              "events": [{"id": "e0", "actor": "patient", "text": case.opening, "timestamp": now,
+                          "confirmed": True, "disclosed_fact_ids": [], "disclosed_artifact_ids": [], "provider": "authored"}]}
+    app.state.store.put(f"encounter:{eid}", record, None)
+    auth = {"Authorization": "Bearer " + token}
+    data = {"encounter_id": eid, "token": token, "state": client.get(f"/api/encounters/{eid}", headers=auth).json()}
+    return eid, auth, data
 
 
 def test_demo_requires_app_signin_and_strict_nonclinical_confirmation(gated):
@@ -27,7 +43,8 @@ def test_demo_requires_app_signin_and_strict_nonclinical_confirmation(gated):
     for body in [{}, {"nonclinical_demo": False}, {"nonclinical_demo": 1}, {"nonclinical_demo": "true"}, {"nonclinical_demo": True, "case_id": "clinical"}, {"nonclinical_demo": True, "demo_snapshot": sample()}, {"nonclinical_demo": True, "voice_id": "custom"}, {"nonclinical_demo": True, "model_id": "freeform"}, {"nonclinical_demo": True, "text": "invent new facts"}, {"nonclinical_demo": True, "emotion": "diagnostic"}]:
         assert client.post("/api/demo/encounters", json=body).status_code == 422, body
     assert app.state.quotas.remaining("sessions") == 200
-    assert client.post("/api/demo/encounters", json={"nonclinical_demo": True}).status_code == 201
+    assert client.post("/api/demo/encounters", json={"nonclinical_demo": True}).status_code == 410
+    assert app.state.quotas.remaining("sessions") == 200
 
 
 def test_demo_profiles_require_signin_and_return_only_curated_public_metadata(gated):
@@ -207,7 +224,7 @@ def test_demo_uses_shared_admission_and_tts_budgets_with_pinned_stock_voice(harn
     app.state.quotas.limits["sessions"] = 1
     eid, auth, data = begin(client, "frustrated")
     provider.voice_id = "changed-runtime-voice"
-    assert client.post("/api/demo/encounters", json={"nonclinical_demo": True}).status_code == 429
+    assert client.post("/api/demo/encounters", json={"nonclinical_demo": True}).status_code == 410
     response = client.post(f"/api/encounters/{eid}/tts", headers=auth, json={"event_id": "e0"})
     assert response.status_code == 200
     plan = provider.calls[0]

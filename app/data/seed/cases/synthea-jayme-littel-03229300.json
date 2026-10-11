@@ -1,0 +1,1012 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Outpatient Nutrition Assessment in a Precontemplative Patient with Chronic Pain, Obesity, and Hidden Caregiver Burden",
+  "summary": "This case trains dietetics students to conduct a telehealth nutrition assessment with a blunt, precontemplative patient whose chronic pain, obesity, and hyperlipidemia are compounded by a hidden caregiving burden for her elderly mother. It emphasizes rapport-building with a guarded patient, recognizing a self-report-versus-record mismatch (multivitamin refill history and reported water intake versus actual soda-heavy fluid pattern) without confrontation, screening for opioid-related GI effects on intake, and delivering stage-appropriate motivational interviewing focused on small, low-effort dietary swaps rather than demanding major lifestyle change.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Perth Amboy, NJ, sitting in a cluttered kitchen/living area",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Jayme Littel",
+   "age": 35,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Former retail stock associate, currently unemployed",
+   "language": "English",
+   "appearance": "Sits stiffly on a kitchen chair, shifting her weight and wincing slightly when she turns to reach for her phone; mild facial puffiness; limited neck range of motion visible when she turns to look off-camera; flat affect, minimal eye contact at first, arms often crossed; a small succulent and a worn paperback visible on the counter behind her",
+   "portrait": "/portraits/synthea-jayme-littel-03229300.jpg"
+  },
+  "persona": {
+   "personality": "Blunt, impatient, wants to get to the point; doesn't do small talk; comes across as tired and guarded more than hostile, with a dry sense of humor that surfaces once she warms up slightly",
+   "communicationStyle": "Gives short, flat, clipped answers initially; needs a question rephrased and asked a second, gentler way before she opens up further; dislikes being lectured or having her weight brought up without a clear reason tied to her actual pain or energy",
+   "healthLiteracy": "low",
+   "emotionalState": "Tired, guarded, mildly defensive about her eating habits and weight; softens somewhat if she feels heard rather than judged; underlying stress about caregiving and finances she doesn't volunteer easily",
+   "background": "Jayme is a former retail stock associate from Perth Amboy, NJ, currently unemployed. She's married, and grew up in a working-class household where meals were whatever was fastest between shifts—nobody taught her to cook and she never saw the point of learning. She keeps a small succulent on her windowsill ('the one thing I haven't killed') and rereads a worn paperback when back pain keeps her up at night. She used to enjoy walking her dog before her back got bad, now a neighbor helps out with that. Food, to her, has always been fuel, not a ritual, and she doesn't attach much meaning to it beyond getting through the day.",
+   "speechExamples": [
+    "I eat whatever's fast, that's about it.",
+    "I don't see what any of this has to do with my back.",
+    "Fine, if you really want to know...",
+    "Nobody ever explains why any of this actually matters.",
+    "I'm not going to start meal-prepping, if that's what you're getting at."
+   ],
+   "concerns": [
+    "Worried about keeping up with rent given her unemployment",
+    "Annoyed that every doctor visit turns into a conversation about her weight",
+    "Doesn't want vague 'eat healthy' advice without a clear explanation of why it matters for her pain or energy"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment with Jayme Littel, a 35-year-old woman referred for obesity and high cholesterol in the context of chronic pain management. This is a new nutrition assessment visit. Review the available chart information before the call, then conduct your assessment and counseling via video.",
+   "chiefComplaint": "Referred for nutrition assessment related to obesity, high cholesterol, and chronic pain management",
+   "openingLine": "Yeah, hi. I guess my doctor wanted me to talk to someone about my eating. I don't really know what there is to say — I eat whatever's fast, that's about it.",
+   "tasks": [
+    "Take a focused diet history, including a 24-hour recall and usual meal pattern",
+    "Review relevant anthropometrics and laboratory results and relate them to her nutrition status",
+    "Identify barriers to improving her dietary intake, including any time, financial, or caregiving-related constraints",
+    "Screen for medication-related factors (such as GI side effects) that may be affecting her appetite or intake",
+    "Deliver patient-centered nutrition education and counseling using motivational interviewing appropriate to her stage of readiness to change",
+    "Document your findings and plan using the ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred for a nutrition assessment related to obesity, high cholesterol, and chronic pain management"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. R. Oyelaran (Family Medicine); Referral: Dietetics/Clinical Nutrition"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic sinusitis (since 1992); Body mass index 30+ - obesity (since 2013); Chronic pain (since 2014); Chronic low back pain (since 2014); Chronic neck pain (since 2014)"
+   },
+   {
+    "label": "Medications",
+    "value": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]; Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]; 72 HR Fentanyl 0.025 MG/HR Transdermal System"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient referred for nutrition assessment related to obesity, hyperlipidemia, and chronic pain management.",
+    "says": "They sent me here because of my weight and my cholesterol, I guess. And my pain.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "pain location and pattern",
+    "chart": "Reports chronic low back pain, constant dull ache, worsened by standing or lifting, since 2014.",
+    "says": "My back's always aching, and it gets way worse if I'm on my feet too long or lift anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "neck symptoms",
+    "chart": "Reports chronic neck stiffness and soreness, worse by afternoon, since 2014.",
+    "says": "My neck gets stiff and sore, especially later in the day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "sinus symptoms",
+    "chart": "Reports sinus pressure and congestion, seasonal, worse in spring, with history of chronic sinusitis since 1992.",
+    "says": "My sinuses act up, especially in the spring. I've had that forever.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports persistent low energy and fatigue.",
+    "says": "I'm just tired all the time, honestly.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "nausea pattern",
+    "chart": "Reports occasional nausea, attributes to pain medication.",
+    "says": "Sometimes I get nauseous, I figure it's the pain pills.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "bowel habits",
+    "chart": "Reports constipation associated with opioid use, not previously discussed with providers.",
+    "says": "I get backed up a lot, it's annoying, but I never really brought it up to anybody before.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "appetite changes",
+    "chart": "Reports reduced appetite on days with medication-related nausea.",
+    "says": "Some days my stomach's so off I just don't want to eat much at all.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "weight change history",
+    "chart": "Reports gradual weight gain since 2013, no recent rapid change.",
+    "says": "I've been heavier for a while now, it didn't happen overnight.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "swelling or puffiness",
+    "chart": "Reports mild facial puffiness, attributes to poor sleep.",
+    "says": "My face looks puffy some mornings, probably just bad sleep.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports poor, interrupted sleep due to back pain waking her at night.",
+    "says": "My back wakes me up most nights, so sleep's not great.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bowel/GI red flags",
+    "chart": "Denies blood in stool, denies unintentional rapid weight loss, denies difficulty swallowing.",
+    "says": "No blood or anything like that, and I'm not losing weight fast or anything.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "cardiac or chest symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "No chest pain or anything like that.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "chronic pain diagnoses",
+    "chart": "History of chronic pain, chronic low back pain, and chronic neck pain, all since 2014.",
+    "says": "I've had this pain situation going on since 2014.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "sinus history",
+    "chart": "History of chronic sinusitis since 1992.",
+    "says": "I've had sinus problems since I was a kid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "History of BMI 30+/obesity since 2013.",
+    "says": "I've been considered overweight since like 2013 or so.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "History of two pregnancies: one complicated by pre-eclampsia (2024-12 to 2025-02, resolved), one uncomplicated (2025-12 to 2026-01, resolved).",
+    "says": "I had two pregnancies pretty close together, one had some blood pressure issue near the end but that's all cleared up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "Recent history of gingivitis and dental caries, treated 2026-02 to 2026-03 with filling, cleaning, and fluoride treatment.",
+    "says": "I had some dental stuff done recently, cavity filled, cleaning, all that.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "medications",
+    "topic": "opioid patch regimen",
+    "chart": "Fentanyl 0.025 mg/hr transdermal patch, changed every 72 hours; reports mostly consistent timing with occasional late changes.",
+    "says": "I change my pain patch every three days, usually. Sometimes I'm a day late putting the new one on.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h20",
+    "category": "medications",
+    "topic": "breakthrough pain medication use",
+    "chart": "Acetaminophen 325mg/oxycodone 10mg (Percocet) used as needed for breakthrough pain, a few times weekly; reports rationing doses to make pills last.",
+    "says": "I take a Percocet when the pain gets really bad, maybe a few times a week. I try to save them though, so sometimes I just tough it out instead.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "birth control use",
+    "chart": "Norethindrone 0.35 mg (Camila 28-day pack) taken once daily, reports consistent adherence.",
+    "says": "I take my birth control pill every day, no issues there.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "OTC pain and sinus remedies",
+    "chart": "Reports occasional ibuprofen use for sinus headaches in addition to prescribed opioid regimen, plus intermittent multivitamin use and saline nasal spray as needed.",
+    "says": "I'll take an ibuprofen sometimes for my sinus headaches, and I use that saline spray too. And I take a multivitamin, most days.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h23",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "I'm not allergic to anything that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgical history reported.",
+    "says": "I've never had any surgeries.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives with spouse; household of 3 total",
+    "says": "It's me, my husband, and... it's complicated, but three of us basically.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "employment status",
+    "chart": "Currently unemployed, former retail stock associate",
+    "says": "I'm not working right now. Used to stock shelves but my back can't do that anymore.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "nutrition",
+    "topic": "typical eating pattern",
+    "chart": "Reports eating 'whatever's quick,' minimal cooking",
+    "says": "I eat whatever's fast. I don't cook. Never saw the point.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "psychosocial",
+    "topic": "attitude toward nutrition visit",
+    "chart": "Expresses skepticism about relevance of diet to her pain condition",
+    "says": "I don't really get why I'm talking to a dietitian about my back pain.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "support person involvement",
+    "chart": "Reports spouse is supportive but frequently asks health-related questions",
+    "says": "My husband's good to me, but he worries a lot and asks me a million questions.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "psychosocial",
+    "topic": "beliefs about diet and pain",
+    "chart": "States she does not believe diet is related to her chronic pain",
+    "says": "Honestly? I don't think what I eat has anything to do with my back.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "financial stress",
+    "chart": "Reports concern about ability to afford rent",
+    "says": "If you want to know what stresses me out, it's whether we can make rent this month.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "nutrition",
+    "topic": "cooking attitudes",
+    "chart": "Believes cooking from scratch is not worthwhile given her time and energy",
+    "says": "I'm not gonna start meal-prepping or whatever. That's not happening.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s9",
+    "category": "function",
+    "topic": "activity level",
+    "chart": "Minimal physical activity; pain limits standing or walking",
+    "says": "I can't really stand or walk around much before my back acts up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "social",
+    "topic": "former activity change",
+    "chart": "Used to walk her dog regularly; a neighbor now does this due to her pain",
+    "says": "I used to walk my dog every day. Now my neighbor does it because I can't anymore.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s11",
+    "category": "family",
+    "topic": "caregiving responsibilities",
+    "chart": "Reluctantly discloses she spends most of her day caring for her elderly mother who lives nearby, leaving little time to cook or rest",
+    "says": "...Fine. Most of my day is actually taking care of my mom. She's right nearby and needs a lot.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "nutrition",
+    "topic": "meal skipping pattern",
+    "chart": "Reluctantly admits she sometimes skips her own meals entirely while managing her mother's appointments and medications",
+    "says": "Some days I just don't eat at all, I'm too busy getting her to the doctor or sorting her pills.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "partner dynamic",
+    "chart": "Describes partner's frequent health-related questioning as both supportive and exhausting",
+    "says": "He means well, but it's a lot sometimes, him asking me how I'm doing every five minutes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "adherence",
+    "topic": "multivitamin use",
+    "chart": "Reports taking multivitamin 'most days'",
+    "says": "I take my vitamin most days, when I remember.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "nutrition",
+    "topic": "fluid intake",
+    "chart": "Reports drinking 'a lot of water' daily",
+    "says": "Oh yeah, I drink a lot of water.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "personal priorities",
+    "chart": "States her main goal is better pain control, not weight or diet change",
+    "says": "I just want my pain to be more manageable. That's it. I don't have some big food goal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "psychosocial",
+    "topic": "reaction to weight discussions",
+    "chart": "Expresses frustration that medical visits frequently focus on her weight",
+    "says": "Every single appointment turns into a thing about my weight. I'm so tired of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "small personal routines",
+    "chart": "Keeps a succulent plant and a paperback book for comfort during sleepless nights",
+    "says": "I've got this one plant I haven't managed to kill yet, and a book I reread when I can't sleep.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s19",
+    "category": "psychosocial",
+    "topic": "feelings after medical visits",
+    "chart": "Hidden: discloses only with strong rapport that she cried in the car after a recent appointment feeling no one asked how she was doing",
+    "says": "...I cried in my car after my last appointment. Nobody asked how I was doing. Just forget I said that.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "s20",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol rarely, about one drink on occasion",
+    "says": "I barely drink. Maybe one drink every once in a while.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s21",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Former smoker, quit several years ago",
+    "says": "I used to smoke but quit a few years back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Visual inspection via video (posture, facial appearance, affect)",
+    "aliases": [],
+    "result": "Patient sits stiffly, shifts weight and winces when reaching; mild facial puffiness noted; limited neck range of motion when turning; flat affect with minimal eye contact initially.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "24-hour diet recall",
+    "aliases": [],
+    "result": "Morning: black coffee, no breakfast. Midday: often skipped or a bag of chips/candy bar from a convenience store. Evening: frozen lasagna or fast-food chicken nuggets and fries. Beverages: 3-4 diet sodas across the day, minimal plain water. No fruits or vegetables reported in the recall.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Usual meal pattern and timing assessment",
+    "aliases": [],
+    "result": "Irregular pattern: coffee in the morning, lunch frequently skipped, larger convenience-food dinner later in the evening once 'things calm down.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Fluid/beverage intake assessment",
+    "aliases": [],
+    "result": "Patient reports drinking 'a lot of water' when asked directly, but diet history obtained in the same visit lists several diet sodas and coffee daily with minimal plain water intake described.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "GI symptom and appetite screening (nausea, constipation, appetite changes)",
+    "aliases": [],
+    "result": "Patient reports occasional nausea and constipation she attributes to her pain medication, affecting how much she eats on some days; states she has not raised this with other providers.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Minimal activity reported; pain limits standing or walking for extended periods; mostly sedentary at home.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review pharmacy refill history",
+    "aliases": [],
+    "result": "Multivitamin: single fill recorded over a year ago, no refills since. Fentanyl patches and Percocet show refills consistent with prescribed regimen.",
+    "importance": "critical",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Supplement and OTC use assessment",
+    "aliases": [],
+    "result": "Patient reports taking her multivitamin 'most days.' Occasional ibuprofen for sinus headaches on top of prescribed pain medication. Saline nasal spray used for congestion.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Sodium/convenience food pattern assessment",
+    "aliases": [],
+    "result": "Diet dominated by frozen entrees, fast food, and salty snack foods; patient has not reviewed nutrition labels and is unaware of sodium content of her usual choices.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 127/77 mmHg, heart rate 80/min, respiratory rate 15/min, weight 86.7 kg, height 165.8 cm, BMI 31.5 kg/m2 (recorded 2026-02-15).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets"
+    ],
+    "result": "Total cholesterol 290 mg/dL; LDL cholesterol 208.8 mg/dL; HDL cholesterol 54.3 mg/dL; Triglycerides 134.2 mg/dL; Haemoglobin 15.9 g/dL; White cell count 8.1 10*3/uL; Platelets 243.1 10*3/uL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-02-15); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2023-01-29); COVID-19 vaccine vector-nr rS-Ad26 PF 0.5 mL (2021-04-18).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Referral Note - Primary Care",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-02-10",
+    "author": "Dr. R. Oyelaran, Family Medicine",
+    "body": "35 y/o F with obesity (BMI 31.5), hyperlipidemia (LDL 208.8, total cholesterol 290), chronic low back and neck pain, and chronic sinusitis, managed on fentanyl patch and Percocet for pain. Referring to dietetics for nutrition assessment and counseling given elevated lipids and BMI 30+. Patient has expressed limited interest in dietary change at prior visits; recommend motivational interviewing approach."
+   },
+   {
+    "id": "d7",
+    "type": "other",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "date": "2026-02-14",
+    "author": "Perth Amboy Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Fill Date",
+      "Quantity",
+      "Refills Since"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Multivitamin (OTC)",
+        "2024-11-18",
+        "1 bottle (90 tablets)",
+        "0 refills recorded"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Fentanyl Transdermal 0.025 mg/hr",
+        "2026-01-20",
+        "10 patches",
+        "Refilled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen/Oxycodone (Percocet)",
+        "2026-01-05",
+        "30 tablets",
+        "Refilled approximately monthly"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Camila 28 Day (norethindrone)",
+        "2026-01-02",
+        "1 pack (28 tablets)",
+        "Refilled monthly, consistent"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic sinusitis (since 1992)\nBody mass index 30+ - obesity (since 2013)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nChronic neck pain (since 2014)\n\nRECENTLY RESOLVED\nNormal pregnancy (2024-06 to 2025-02)\nPre-eclampsia (2024-12 to 2025-02)\nNormal pregnancy (2025-12 to 2026-01)\nGingivitis (2026-02 to 2026-03)\nPrimary dental caries (2026-03 to 2026-03)\n\nPROCEDURES\n2026-03-02: Dental fluoride treatment (Gingivitis)\n2026-03-02: Restoration of tooth with coverage of all cusps using dental filling material (Primary dental caries)\n2026-03-02: Dental plain X-ray bitewing\n2026-03-02: Examination of gingivae (Gingivitis)\n2026-03-02: Removal of subgingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n2026-03-02: Removal of supragingival plaque and calculus from all teeth using dental instrument (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-04-01 outpatient: Consultation for treatment (Contraception care)\n2026-03-01 ambulatory: Encounter for check up (Gingivitis)\n2026-02-15 wellness: General examination of patient\n2026-01-05 ambulatory: Prenatal visit (Normal pregnancy)\n2025-12-28 ambulatory: Patient-initiated encounter (Normal pregnancy)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Therapy"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",
+        "2026-04",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+        "2026-02",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "72 HR Fentanyl 0.025 MG/HR Transdermal System",
+        "2026-02",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total cholesterol",
+        "290",
+        "mg/dL",
+        "< 200",
+        "2025-02-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "208.8",
+        "mg/dL",
+        "< 100",
+        "2025-02-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "54.3",
+        "mg/dL",
+        ">= 40",
+        "2025-02-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "134.2",
+        "mg/dL",
+        "< 150",
+        "2025-02-09"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "15.9",
+        "g/dL",
+        "12.0-17.5",
+        "2024-02-04"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.1",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-02-04"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "243.1",
+        "10*3/uL",
+        "150-450",
+        "2024-02-04"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Build rapport with a blunt, guarded patient using open-ended, non-judgmental questioning, allowing reluctant information such as caregiving burden to surface only with repeated, gentler inquiry",
+    "factIds": [
+     "s3",
+     "s4",
+     "s11",
+     "s12"
+    ],
+    "actionIds": [
+     "a6",
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess nutrition-relevant anthropometrics and laboratory data and relate elevated BMI and lipid panel findings to the patient's dietary pattern and overall nutrition status",
+    "factIds": [
+     "h1",
+     "h9",
+     "h16"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify time, financial, and caregiving-related barriers to improving dietary intake, including the hidden burden of caring for an elderly family member",
+    "factIds": [
+     "s7",
+     "s8",
+     "s11",
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a7",
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Screen for medication-related gastrointestinal side effects (nausea, constipation) that may be affecting appetite and oral intake, and recognize when these have not previously been reported",
+    "factIds": [
+     "h6",
+     "h7",
+     "h8"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Reconcile patient self-report of supplement and fluid habits with diet history and pharmacy records, exploring discrepancies using motivational interviewing techniques appropriate to a precontemplative stage of change",
+    "factIds": [
+     "s14",
+     "s15",
+     "s6",
+     "s16"
+    ],
+    "actionIds": [
+     "a8",
+     "a12",
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Deliver patient-centered nutrition education on practical, low-effort dietary swaps within her convenience-food pattern, avoiding a weight-focused frame given her frustration with prior visits",
+    "factIds": [
+     "s3",
+     "s8",
+     "s17",
+     "s9"
+    ],
+    "actionIds": [
+     "a6",
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive sodium/convenience-food and sugar-sweetened beverage intake related to caregiving time burden and low nutrition-related health literacy, as evidenced by elevated LDL/total cholesterol and BMI 31.5 kg/m2 (nutrition diagnosis: PES statement — Excessive sodium and simple carbohydrate/sugar-sweetened beverage intake related to limited time/energy from caregiving responsibilities and low nutrition-related health literacy as evidenced by reliance on frozen/fast food, several diet sodas daily, minimal fruit/vegetable intake, and labs showing total cholesterol 290 mg/dL and LDL 208.8 mg/dL)",
+   "differential": [
+    "Primary nutrition diagnosis: inconsistent/undesirable food choices related to caregiving burden and low health literacy",
+    "Inadequate fluid intake (water) related to habitual reliance on diet soda/coffee",
+    "Altered GI function (nausea/constipation) related to opioid therapy affecting oral intake pattern",
+    "Self-monitoring mismatch: reported supplement/fluid adherence vs. actual pattern (not a true clinical differential, but a documentation discrepancy to explore)"
+   ],
+   "keyFindings": [
+    "BMI 31.5 kg/m2 (weight 86.7 kg, height 165.8 cm) consistent with obesity",
+    "Total cholesterol 290 mg/dL and LDL 208.8 mg/dL, both above reference range; HDL and triglycerides within normal limits",
+    "Irregular meal pattern: coffee only in morning, frequently skips lunch, large convenience dinner at night",
+    "Diet dominated by frozen entrees, fast food, and gas-station snacks; minimal fruits/vegetables",
+    "Several diet sodas daily and minimal plain water intake, despite patient reporting she drinks 'a lot of water'",
+    "Pharmacy refill record shows multivitamin purchased once over a year ago with no refills, despite patient reporting she takes it 'most days'",
+    "Reports nausea and constipation she attributes to pain medication, which has not been discussed with prior providers and may be reducing/altering her intake",
+    "Chronic pain limits standing/cooking/shopping; caregiving duties for her mother consume most of her day, leaving little time for her own meals or rest",
+    "Precontemplative stage of change; does not believe diet is related to her pain symptoms"
+   ],
+   "plan": [
+    "Complete ADIME note documenting 24-hour recall, usual intake pattern, and barriers identified",
+    "Nutrition diagnosis (PES) focused on excessive convenience/sodium/sugar-sweetened beverage intake related to caregiving time burden and low health literacy, evidenced by labs and BMI",
+    "Use motivational interviewing: reflective listening, avoid direct confrontation about the multivitamin/water discrepancy, explore ambivalence about change",
+    "Offer plain-language, concrete education linking sodium/saturated fat intake to cholesterol numbers without over-emphasizing weight",
+    "Suggest small, low-effort swaps within her existing convenience-food pattern (e.g., lower-sodium frozen meal options, pairing a quick fruit/vegetable with meals, swapping one diet soda for flavored water) rather than meal-prep demands",
+    "Screen for and acknowledge opioid-related GI symptoms (nausea, constipation) and their effect on appetite/intake; recommend she discuss with prescribing provider and consider fiber/fluid strategies as tolerated",
+    "Address hydration pattern gently, normalizing that habits took time to build and swaps can be gradual",
+    "Acknowledge caregiving burden as a barrier without requiring her to disclose further; validate without probing into medication-sharing specifics",
+    "Arrange follow-up visit to reassess readiness to change and reinforce rapport before pushing further goals",
+    "Communicate findings to referring provider regarding elevated LDL/total cholesterol and nutrition barriers identified"
+   ],
+   "redFlags": [
+    "Untreated significantly elevated LDL (208.8 mg/dL) and total cholesterol (290 mg/dL) warranting medical follow-up",
+    "Chronic opioid use with unreported GI side effects potentially affecting nutritional intake",
+    "Patient reports 'saving'/rationing prescribed Percocet, raising a safety concern about medication use that should be flagged to the referring/prescribing provider (not confronted directly in this visit)",
+    "Caregiver burden with evidence of self-neglect (skipping her own meals) that may warrant social work or care-coordination referral"
+   ],
+   "educationPoints": [
+    "Explain in plain language how high cholesterol can build up over years without symptoms, and why the lab numbers matter even though she 'feels fine'",
+    "Clarify that frozen/fast food and gas-station snacks are often high in sodium and saturated fat, which can raise cholesterol over time",
+    "Suggest that small swaps (lower-sodium frozen meal, adding a piece of fruit, swapping one soda for water) are realistic first steps, not a full diet overhaul",
+    "Normalize that opioid medications commonly cause nausea and constipation, and that this is worth mentioning to her prescriber, as it may be affecting how much she eats",
+    "Reinforce that her caregiving role is demanding and that even very small nutrition changes can fit around her schedule without adding burden",
+    "Avoid framing education around weight loss; focus on energy, pain management, and lab numbers as motivators since those matter more to her"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking multivitamin 'most days' (s14)",
+    "recordEvidence": "Pharmacy refill history shows multivitamin filled once over a year ago with no refills since (a12, d7)",
+    "teachingPoint": "Self-reported supplement adherence can diverge from objective refill records; explore discrepancies with curiosity rather than confrontation, as patients may round up or misremember infrequent habits.",
+    "factId": "s14",
+    "artifactId": "d7"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 2,
+   "condition": "Chronic neck pain",
+   "conditionLabel": "35 F · Chronic neck pain, Chronic low back pain, Chronic pain +1 · 3 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "03229300",
+   "fingerprint": "ncvm63"
+  }
+ }
+}

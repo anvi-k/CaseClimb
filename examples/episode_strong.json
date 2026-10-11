@@ -1,0 +1,304 @@
+{
+  "episode_id": "ep.0002",
+  "patient_record_id": "rec.maria-alvarez",
+  "patient_record_version": 1,
+  "status": "completed",
+  "started_at": "2026-10-09T15:00:00Z",
+  "ended_at": "2026-10-09T15:09:03Z",
+  "participants": [
+    {
+      "participant_id": "p.patient",
+      "kind": "ai",
+      "role": "patient",
+      "display_name": "Maria",
+      "model": "anthropic.claude-opus-5-5"
+    },
+    {
+      "participant_id": "p.priya",
+      "kind": "human",
+      "role": "nurse_practitioner_student",
+      "display_name": "Priya",
+      "user_id": "u.priya"
+    }
+  ],
+  "turns": [
+    {
+      "turn_id": "t0",
+      "index": 0,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:00:05Z",
+      "text": "Good afternoon, Mrs. Alvarez. I'm Priya, a nurse practitioner student working with Dr. Chen. I'd like to hear what's been going on, look at your chart with you, and make a plan together. Does that sound all right?"
+    },
+    {
+      "turn_id": "t1",
+      "index": 1,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:00:29Z",
+      "text": "That's fine. I'm thirsty all the time and I'm up all night going to the bathroom.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t2",
+      "index": 2,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:00:53Z",
+      "text": "That must be wearing you down. When did you first notice it?"
+    },
+    {
+      "turn_id": "t3",
+      "index": 3,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:01:17Z",
+      "text": "About three months ago. It keeps getting worse.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t4",
+      "index": 4,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:01:41Z",
+      "text": "Tell me about a typical day. What do you eat and drink from morning to night?"
+    },
+    {
+      "turn_id": "t5",
+      "index": 5,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:02:05Z",
+      "text": "Whatever's left at the cafeteria, mostly. And my sweet tea, four or five big glasses.",
+      "avatar": {
+        "emotion": "embarrassed",
+        "intensity": 0.4,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t6",
+      "index": 6,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:02:29Z",
+      "text": "Thank you, that helps me. I see metformin on your medication list. How is that going?"
+    },
+    {
+      "turn_id": "t7",
+      "index": 7,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:02:53Z",
+      "text": "Oh, it's fine. I take my metformin every day.",
+      "avatar": {
+        "emotion": "embarrassed",
+        "intensity": 0.6,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t8",
+      "index": 8,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:03:17Z",
+      "text": "Okay. I'm going to pull up your pharmacy refill history so I have the full picture."
+    },
+    {
+      "turn_id": "t9",
+      "index": 9,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:03:41Z",
+      "text": "All right.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.6,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t10",
+      "index": 10,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:04:05Z",
+      "text": "It shows two fills in the last six months. I'm not trying to catch you out. Metformin is hard on a lot of people's stomachs, and it isn't cheap. What gets in the way for you?"
+    },
+    {
+      "turn_id": "t11",
+      "index": 11,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:04:29Z",
+      "text": "It tears up my stomach, and it's forty dollars I don't always have. I didn't want you to think I wasn't trying.",
+      "avatar": {
+        "emotion": "sad",
+        "intensity": 0.6,
+        "gestures": [
+          "looks down"
+        ]
+      }
+    },
+    {
+      "turn_id": "t12",
+      "index": 12,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:04:53Z",
+      "text": "I don't think that at all. Thank you for telling me, because it changes what I'd suggest. I'd like to check an HbA1c, which shows your average sugar over the last three months. Is that okay?"
+    },
+    {
+      "turn_id": "t13",
+      "index": 13,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:05:17Z",
+      "text": "Okay. Is it bad? I'm scared of where this is heading.",
+      "avatar": {
+        "emotion": "fearful",
+        "intensity": 0.8,
+        "gestures": [
+          "wrings hands"
+        ]
+      }
+    },
+    {
+      "turn_id": "t14",
+      "index": 14,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:05:41Z",
+      "text": "You look frightened. What are you most afraid of?"
+    },
+    {
+      "turn_id": "t15",
+      "index": 15,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:06:05Z",
+      "text": "My mother had the sugar too. She was on dialysis before she died. I don't want to end up like that.",
+      "avatar": {
+        "emotion": "fearful",
+        "intensity": 0.7
+      }
+    },
+    {
+      "turn_id": "t16",
+      "index": 16,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:06:29Z",
+      "text": "I'm so sorry about your mother. It makes sense that this scares you. Your HbA1c is 9.2 percent. That's higher than we want, and it fits with the thirst. It is something we can bring down."
+    },
+    {
+      "turn_id": "t17",
+      "index": 17,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:06:53Z",
+      "text": "Even if I can't take the pills?",
+      "avatar": {
+        "emotion": "hopeful",
+        "intensity": 0.4
+      }
+    },
+    {
+      "turn_id": "t18",
+      "index": 18,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:07:17Z",
+      "text": "I'll go over the options with Dr. Chen rather than promise something specific, and I'll tell her about your stomach and the cost. In the meantime, would you be willing to swap some of the sweet tea for water? What feels doable?"
+    },
+    {
+      "turn_id": "t19",
+      "index": 19,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:07:41Z",
+      "text": "I could do two glasses instead of five.",
+      "avatar": {
+        "emotion": "hopeful",
+        "intensity": 0.6,
+        "gestures": [
+          "nods"
+        ]
+      }
+    },
+    {
+      "turn_id": "t20",
+      "index": 20,
+      "participant_id": "p.priya",
+      "at": "2026-10-09T15:08:05Z",
+      "text": "That's a real start. So: you'll cut the tea to two glasses, I'll talk with Dr. Chen about the metformin, and we'll see you back in two weeks. What questions do you have?"
+    },
+    {
+      "turn_id": "t21",
+      "index": 21,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T15:08:29Z",
+      "text": "No, I think I understand. Thank you for not making me feel bad.",
+      "avatar": {
+        "emotion": "relieved",
+        "intensity": 0.7
+      }
+    }
+  ],
+  "disclosures": [
+    {
+      "item_id": "f.med.metformin",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t0",
+      "trigger": "visible at start"
+    },
+    {
+      "item_id": "f.hpi.thirst",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t3",
+      "trigger": "asked when symptoms started"
+    },
+    {
+      "item_id": "f.sh.diet",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t5",
+      "trigger": "asked about a typical day of eating and drinking"
+    },
+    {
+      "item_id": "f.med.refills",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t8",
+      "trigger": "opened pharmacy refill history"
+    },
+    {
+      "item_id": "f.med.side_effects",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t11",
+      "trigger": "asked non-judgmentally about side effects and cost"
+    },
+    {
+      "item_id": "f.lab.hba1c",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t12",
+      "trigger": "ordered HbA1c"
+    },
+    {
+      "item_id": "f.fh.mother",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t15",
+      "trigger": "asked what she is most afraid of"
+    }
+  ],
+  "handoff": {
+    "from_participant_id": "p.priya",
+    "to_role": "dietitian",
+    "situation": "58-year-old woman with type 2 diabetes, three months of thirst and nocturia, HbA1c 9.2%.",
+    "background": "Prescribed metformin 500 mg twice daily. Refill history shows two fills in six months. She skips doses because of diarrhoea and cost. Drinks four to five large glasses of sweet tea a day. Mother had diabetes and was on dialysis.",
+    "assessment": "Poor control is explained by missed doses and sugar intake. She is frightened of dialysis and motivated to change.",
+    "recommendation": "She has agreed to cut sweet tea to two glasses a day. Please support that goal. Medication plan is with Dr. Chen."
+  },
+  "grading": {
+    "status": "ungraded"
+  }
+}

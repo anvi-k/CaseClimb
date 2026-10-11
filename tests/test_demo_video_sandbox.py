@@ -12,11 +12,7 @@ from test_backend import ADMIN, harness, turn
 from test_video import FakePCM, FakeVideo
 
 
-def begin(client, profile_id="alex"):
-    response = client.post("/api/demo/encounters", json={"nonclinical_demo": True, "profile_id": profile_id})
-    assert response.status_code == 201, response.text
-    data = response.json()
-    return data["encounter_id"], {"Authorization": "Bearer " + data["token"]}, data
+from test_conversation_demo import begin
 
 
 def configure(app, *, sandbox=True):
@@ -106,7 +102,7 @@ def test_demo_sandbox_has_separate_deadline_and_idempotent_start(harness):
 def test_demo_pcm_uses_pinned_stock_voice_and_stored_words(harness, profile_id):
     client, _, app = harness
     _, pcm = configure(app)
-    eid, auth, data = begin(client, profile_id)
+    eid, auth, data = begin(client, profile_id=profile_id)
     assert client.post(f"/api/encounters/{eid}/video/start", headers=auth).status_code == 200
     url = f"/api/encounters/{eid}/video/audio"
     assert client.post(url, headers=auth, json={"event_id": "e0", "voice_id": "invented", "text": "arbitrary"}).status_code == 422

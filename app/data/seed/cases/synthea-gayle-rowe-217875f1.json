@@ -1,0 +1,1165 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling for a Man with Diabetic Nephropathy, CKD Stage 2, and a Self-Directed \"Clean Eating\" Plan Post-Dental Work",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment for a cognitively overwhelmed, low-health-literacy patient with diabetic nephropathy, CKD stage 2, ischemic heart disease, and recent extensive dental work who has adopted a self-directed, non-evidence-based 'clean eating' social media diet. It emphasizes eliciting a sensitive history (progressive disclosure of nightly/binge alcohol use), spotting a chart-vs-patient mismatch (metoprolol refill lapses attributed only to feeling foggy versus a pharmacy record showing simple non-refill), assessing denture-related texture needs, and applying motivational interviewing with an anxious, interjecting spousal caregiver present.\"}",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Cliffside Park, New Jersey, seated at the kitchen table with his wife nearby",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Gayle Rowe",
+   "age": 53,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Former warehouse inventory clerk, not currently working due to disability",
+   "language": "English",
+   "appearance": "Appears fatigued with slightly puffy ankles visible above his socks; speaks in short bursts, trails off mid-sentence, and sometimes needs a question repeated. A new partial denture is visible and causes slight difficulty forming some words. His wife sits close beside him, watchful and ready to jump in.",
+   "portrait": "/portraits/synthea-gayle-rowe-217875f1.jpg"
+  },
+  "persona": {
+   "personality": "Good-natured but overwhelmed and scattered; wants to do right by his family but feels buried under pill bottles, appointments, and conflicting diet advice; loses his train of thought and needs patience",
+   "communicationStyle": "Speaks in short, clipped bursts that trail off mid-sentence; often needs a question gently repeated or rephrased before he answers fully; opens up more once he feels unhurried and not judged; sometimes looks to his wife before answering",
+   "healthLiteracy": "low",
+   "emotionalState": "Anxious underneath a tired, good-humored exterior; worried about his teeth, his heart, and not wanting to burden his wife further; a little embarrassed about parts of his routine he hasn't mentioned to his doctors",
+   "background": "Gayle grew up in a working-class family in northern New Jersey where big Sunday dinners were the one time everyone sat down together, a tradition he still misses now that chewing is hard. He worked for years as a warehouse inventory clerk before his health forced him to stop working. He now lives with his wife and extended family of six in Cliffside Park, a full and sometimes loud household. He takes some pride in having gone further in school than his parents did, but says numbers and medical words 'swim' for him, so he leans on his wife or his phone to translate things into plain terms. In the afternoons when he's too tired to do much, he likes watching old game shows.",
+   "speechExamples": [
+    "Oh, uh — what was the question again? Sorry, I kinda lost it there.",
+    "Yeah, I'm doing this... clean eating thing. Saw it online, from a neighbor's video.",
+    "My teeth, they're — it's a whole thing right now. New dentures and all.",
+    "(wife) He takes a bunch of pills, I don't think he always remembers which — (Gayle) Yeah, yeah, she's not wrong.",
+    "It's not — I mean, maybe a beer or two. Nothing crazy. ...I guess maybe more some nights."
+   ],
+   "concerns": [
+    "Confused about which foods are actually bad for his kidneys versus his blood sugar",
+    "Worried the dental work means he can't eat like he used to",
+    "Feels like there are too many diets and rules to keep track of",
+    "Doesn't want his wife to worry more than she already does",
+    "Scared of ending up on dialysis or having a heart attack like his tests keep hinting at"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Gayle Rowe, a 53-year-old man with a history of hypertension, prediabetes, chronic kidney disease, and heart disease, who recently had dental work including a new partial denture. He is at home at his kitchen table; his wife is nearby and may join the conversation. He was referred for help figuring out how to eat well given his health conditions and his recent dental changes.",
+   "chiefComplaint": "Follow-up nutrition visit to review eating habits and get help figuring out what he can still eat after recent dental work, along with his kidney/diabetes concerns and a diet plan he's been trying on his own",
+   "openingLine": "Hey, yeah — so I've been doing this clean eating thing I saw online, from a neighbor's video. And my teeth are still kind of a mess from the dentist, so... it's a lot right now.",
+   "tasks": [
+    "Take a focused diet and meal-pattern history, including his current soft-food choices and how his new denture has changed what he eats",
+    "Review his relevant anthropometrics and recent lab values to inform nutrition counseling",
+    "Review his medication and supplement list and ask about how well his eating pattern lines up with his insulin and other medication timing",
+    "Explore his understanding of his self-directed 'clean eating' plan and gently clarify any misconceptions in plain language",
+    "Begin a motivational-interviewing-based conversation about one or two realistic next steps he feels ready to try"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit to review eating habits and address questions about diet after recent dental work, in the context of kidney disease, prediabetes, and heart disease"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; Cardiologist; Nephrologist; Dentist; Dietitian (current visit)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Sepsis (since 2007); Essential hypertension (since 2013); Prediabetes (since 2013); Anemia (since 2014); Ischemic heart disease (since 2014); Abnormal findings diagnostic imaging heart+coronary circulat (since 2014); Chronic kidney disease stage 2 (since 2015); Disorder of kidney due to diabetes mellitus (since 2015); Microalbuminuria due to type 2 diabetes mellitus (since 2015); Loss of teeth (since 2026)"
+   },
+   {
+    "label": "Medications",
+    "value": "insulin isophane  human 70 UNT/ML / insulin  regular  human 30 UNT/ML Injectable Suspension [Humulin]; Hydrochlorothiazide 25 MG Oral Tablet; lisinopril 10 MG Oral Tablet; amLODIPine 2.5 MG Oral Tablet; Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for follow-up nutrition visit to review eating habits and dietary plan post-dental work",
+    "says": "I'm here 'cause the doctor wants me to talk about my eating. I been doing this clean eating thing I saw online.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent dental work",
+    "chart": "Fitting of partial denture 2026-08-23; reports ongoing adjustment to eating with new denture",
+    "says": "I just got these new teeth put in, the fake ones. Still gettin' used to 'em. Eatin' is... different now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "mouth soreness",
+    "chart": "Reports mouth soreness making chewing of tough foods uncomfortable",
+    "says": "My gums get sore, especially around the one they filled. Chewin' anything tough, forget it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "medication count",
+    "chart": "States he takes 'a bunch of pills' but is unsure of indications for several",
+    "says": "I take a whole bunch of pills, I don't even know what half of 'em do no more.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports low energy most afternoons",
+    "says": "By the afternoon I'm just... tired. Don't have much in me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "dizziness",
+    "chart": "Reports occasional dizziness when standing up quickly",
+    "says": "Sometimes when I get up too fast I get a little dizzy, head spins a second.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "ankle swelling",
+    "chart": "Reports mild swelling in feet by evening",
+    "says": "My feet puff up some by the end of the day, my socks leave a mark.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "sleep pattern",
+    "chart": "Reports fragmented sleep, waking several times nightly",
+    "says": "I don't sleep straight through. Wake up a bunch of times.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "nighttime bathroom trips",
+    "chart": "Reports waking at night partly due to needing to urinate",
+    "says": "Part of why I wake up is I gotta go to the bathroom, more than I used to.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "chest discomfort",
+    "chart": "Denies current chest pain; reports rare use of nitroglycerin spray as needed",
+    "says": "I ain't had chest pain lately, no. Got that spray thing in the drawer just in case.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "cough",
+    "chart": "Reports a dry cough, not yet discussed with prescribing physician",
+    "says": "I got this dry cough sometimes, didn't think much of it, didn't mention it to the doctor.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "bruising",
+    "chart": "Reports easy bruising since starting clopidogrel",
+    "says": "I bruise kinda easy now, since I started one of them pills. Didn't think it was a big deal.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "appetite and swallowing",
+    "chart": "Denies difficulty swallowing; reports chewing difficulty only",
+    "says": "Swallowin's fine. It's the chewin' that's the problem.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "urinary changes",
+    "chart": "Reports increased urination attributed to diuretic use, avoids taking it before errands",
+    "says": "That water pill makes me pee a lot, so I skip it some mornings if I got somewhere to be.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "kidney and diabetes history",
+    "chart": "History of prediabetes (2013), diabetic nephropathy with microalbuminuria (2015), CKD stage 2 (2015)",
+    "says": "They told me my sugar's borderline and my kidneys got some kinda disease from it. Been that way a while.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "heart history",
+    "chart": "History of ischemic heart disease with abnormal cardiac imaging (2014)",
+    "says": "They found somethin' with my heart a few years back, pictures showed somethin' not right.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "blood pressure history",
+    "chart": "History of essential hypertension since 2013",
+    "says": "I got high blood pressure, had it a long time now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "anemia history",
+    "chart": "History of anemia since 2014",
+    "says": "They said I'm a little anemic too, low blood or somethin'.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "serious infection history",
+    "chart": "History of sepsis in 2007, resolved",
+    "says": "Years back I got real sick, infection in my blood, almost didn't make it. Scared the whole family.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of gingivitis (resolved 2024, 2025, 2026) and dental caries, with recent tooth extraction and restoration in July-August 2026",
+    "says": "My gums been botherin' me on and off for a couple years, then this summer I needed a tooth pulled and one filled.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "Underwent dental filling (2026-07-26), tooth extraction for infection, bitewing X-ray and impressions (2026-08-02), denture fitting (2026-08-23)",
+    "says": "They filled one tooth, pulled another that got infected, took molds, then fit me with the partial last month.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies",
+    "says": "No, I ain't allergic to nothin' that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with wife, adult child, and grandchildren; household of six total",
+    "says": "It's me, my wife, one of my kids, and the grandkids all under one roof. Six of us total.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "spouse involvement",
+    "chart": "Wife present during visit, assists with recall and medication organization",
+    "says": "She's right here, she remembers all the stuff I forget. I'd be lost without her honestly.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "household mealtime environment",
+    "chart": "Reports mealtimes are loud and crowded, limiting ability to plan or eat quietly",
+    "says": "Dinner's chaos, everybody's talking, kids running around. Hard to even think about what I'm eating.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "finances",
+    "chart": "Reports household income is limited relative to family size; dental costs have strained finances",
+    "says": "Money's tight with six mouths to feed, and the dental stuff wasn't cheap, insurance didn't cover all of it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "work status",
+    "chart": "Not currently working; former warehouse inventory clerk, left due to disability from cardiac/kidney conditions",
+    "says": "I used to work in a warehouse, inventory and all that. Can't do it anymore, my heart and everything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s6",
+    "category": "substance",
+    "topic": "alcohol pattern",
+    "chart": "Reports drinking 'a beer or two' on weekends",
+    "says": "Oh, I just have a beer or two, maybe on the weekend.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s7",
+    "category": "substance",
+    "topic": "alcohol frequency",
+    "chart": "On follow-up questioning, reports drinking most nights rather than only weekends",
+    "says": "...I guess, yeah, it's more like most nights. Just a little something after dinner.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol quantity when stressed",
+    "chart": "Reports drinking 4-5 beers on nights when stressed about household",
+    "says": "When things get loud and I can't take it anymore, I might have four, five beers. Takes the edge off.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "substance",
+    "topic": "heavier drinking episodes",
+    "chart": "Reports finishing half a six-pack alone after wife goes to bed on at least three occasions this month",
+    "says": "...There's been a few nights, maybe three this month, where I had half a six-pack by myself after she went up. I don't know why I didn't say that before.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "substance",
+    "topic": "disclosure to specialists",
+    "chart": "Has not disclosed extent of alcohol use to cardiologist, did not think it mattered with heart medications",
+    "says": "I never told my heart doctor about the drinking really. Didn't think it mattered with the pills.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "evening beverage habits",
+    "chart": "Vague when asked about evening drinks, says little detail initially",
+    "says": "Evenings I just have whatever's around, nothing special.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s12",
+    "category": "function",
+    "topic": "afternoon energy and activity",
+    "chart": "Spends afternoons resting, watches television due to fatigue",
+    "says": "By the afternoon I'm pretty wiped. I just sit and watch my shows.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "diet plan source",
+    "chart": "Reluctant to disclose that his diet plan came from a stranger's social media video rather than a healthcare provider",
+    "says": "...it was just something a neighbor sent me, some video. I know it probably sounds dumb, picking it up like that.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "diet confidence",
+    "chart": "Believes the smoothie-based diet is healthy because many people online follow it",
+    "says": "A lot of people online do this smoothie thing and swear by it, so I figured it's gotta be doing something right.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "medication skipping belief",
+    "chart": "Believes skipping a pill occasionally 'balances out' if he eats well that day",
+    "says": "If I eat good that day, I figure missing a pill here or there kind of evens out.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "motivation for change",
+    "chart": "States goal of having energy to help grandchildren with homework and avoiding dialysis",
+    "says": "I just want enough energy to help my grandkids with their homework. And I really don't want to end up on dialysis.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "psychosocial",
+    "topic": "fear of hospitalization",
+    "chart": "Expresses fear of another hospitalization similar to his 2007 sepsis episode",
+    "says": "I had that bad sepsis thing years back, landed in the hospital. Scared the life out of all of us. Don't want a repeat of that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s18",
+    "category": "psychosocial",
+    "topic": "wife's role in conversation",
+    "chart": "Wife frequently answers for him or speaks over him during the interview; patient sometimes defers to her",
+    "says": "Ask her, she'll tell you better than I can half the time.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour diet recall / usual intake pattern",
+    "aliases": [
+     "diet history",
+     "food recall"
+    ],
+    "result": "Patient reports: skips breakfast most days, mid-morning frozen fruit-yogurt smoothie (sometimes with added flavored protein powder), canned soup or deli turkey sandwich for lunch, grazes on snacks in the afternoon, large family dinner in the evening (meat, starch, vegetable, bread when he can manage it). Drinks mostly water during the day; wife adds that he 'has his smoothie no matter what.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [
+     "motivational assessment",
+     "stage of change"
+    ],
+    "result": "Patient states he knows he 'should probably change some things' but keeps going back to his online plan because he hasn't 'given up on it yet.' Rates his confidence to change at 4/10 today. Consistent with contemplation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Oral intake / chewing-texture functional assessment",
+    "aliases": [
+     "denture impact on diet",
+     "texture tolerance"
+    ],
+    "result": "Patient reports chewing is uncomfortable around the newly filled tooth and the new partial denture still feels unfamiliar; he has shifted toward mashed potatoes, oatmeal, smoothies, and soft sandwiches, and has mostly stopped eating raw vegetables, nuts, and crusty bread.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Medication-food timing / adherence barriers review",
+    "aliases": [
+     "medication adherence history",
+     "pill-taking pattern"
+    ],
+    "result": "Patient reports sometimes skipping his evening insulin dose when dinner runs late because the household eats at different times; also reports missing his heart pill (metoprolol) 'now and then' on days he feels foggy or overwhelmed, saying he figures it 'balances out' if he eats better that day.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Alcohol use screening (brief, non-judgmental)",
+    "aliases": [
+     "AUDIT-C",
+     "alcohol screen"
+    ],
+    "result": "On first pass, patient reports 'just a beer or two on weekends.' No further detail volunteered initially.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review pharmacy medication refill history",
+    "aliases": [
+     "refill record",
+     "pharmacy fill history"
+    ],
+    "result": "See medication_list/refill record d4: metoprolol succinate 100mg refill gap noted twice this year (approx. 2-3 weeks late each time); all other medications refilled on schedule.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review dental/oral health visit notes",
+    "aliases": [
+     "dental records"
+    ],
+    "result": "See note d5: gingivitis and primary dental caries treated 2026-07-26; filling placed; infected tooth extracted 2026-08-02; partial denture fitted 2026-08-23. Follow-up for denture adjustment pending.",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Sodium/potassium food source screening (soft-food pattern review)",
+    "aliases": [
+     "low-sodium diet screening",
+     "renal diet knowledge check"
+    ],
+    "result": "Patient identifies canned soups, deli turkey, and smoothie add-ins as near-daily foods; unsure of sodium or potassium content, says he picks items labeled 'natural' or 'sugar-free' assuming they're fine for his kidneys and sugar.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Physical activity and sleep pattern review",
+    "aliases": [
+     "activity and sleep history"
+    ],
+    "result": "Patient reports short walks around the block a few times a week when he feels up to it; sleep is fragmented, waking several times a night, partly to use the bathroom.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 83/70 mmHg, heart rate 82/min, respiratory rate 14/min, weight 79 kg, height 174.1 cm, BMI 26.1 kg/m2 (recorded 2026-07-12).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 3.4 %; Glucose 86.4 mg/dL; eGFR 68.2 mL/min/1.73m2; Total cholesterol 171.1 mg/dL; LDL cholesterol 89 mg/dL; HDL cholesterol 60.1 mg/dL; Triglycerides 110.3 mg/dL; Haemoglobin 12.4 g/dL; White cell count 8.4 10*3/uL; Platelets 199.7 10*3/uL; Potassium 5 mmol/L; Sodium 142.6 mmol/L; Urea nitrogen 16.3 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-07-12); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2024-06-30); zoster vaccine live (2023-12-03); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-05-23).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History (Current Year)",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "date": "2026-08-20",
+    "author": "Community Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Prescribed frequency",
+      "Expected refill interval",
+      "Refill pattern this year"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Humulin 70/30 insulin",
+        "Twice daily",
+        "30 days",
+        "Filled on schedule each month"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25mg",
+        "Once daily",
+        "90 days",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Lisinopril 10mg",
+        "Once daily",
+        "90 days",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Amlodipine 2.5mg",
+        "Once daily",
+        "90 days",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75mg",
+        "Once daily",
+        "90 days",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20mg",
+        "Once daily",
+        "90 days",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Metoprolol succinate ER 100mg",
+        "Once daily",
+        "30 days",
+        "Two refills this year filled 2-3 weeks after due date (March, June)"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Nitroglycerin spray 0.4mg/actuation",
+        "As needed",
+        "Refilled annually",
+        "Filled on schedule"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Dental Visit Summary",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "date": "2026-08-23",
+    "author": "Dental office",
+    "body": "Patient seen for series of visits related to dental caries and gingivitis. 2026-07-26: Examination of gingivae; restoration (filling) placed for primary dental caries. 2026-08-02: Bitewing X-ray and dental impressions taken; dental consultation and report completed; infected tooth identified. Tooth extraction performed for infection of tooth. 2026-08-23: Partial denture fitted. Patient advised to expect an adjustment period with speech and chewing; follow-up adjustment visit recommended if soreness or fit issues persist. Gingivitis episodes (2024-08, 2025-07, 2026-07) all resolved with treatment."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Prior Nutrition/Primary Care Note (Reason for Referral)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-07-15",
+    "author": "Primary care physician",
+    "body": "53-year-old male with diabetic nephropathy, CKD stage 2, prediabetes, essential hypertension, and ischemic heart disease, referred for nutrition counseling following recent dental extractions and denture fitting. Patient and spouse report he has been following a self-selected 'clean eating' plan found on social media. Advised to review sodium and potassium sources given renal findings, assess impact of dental changes on food texture tolerance, and reinforce medication adherence given reported inconsistency with insulin and beta-blocker dosing. Blood pressure noted to run on the lower side at last visit; recommend monitoring."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nSepsis (since 2007)\nEssential hypertension (since 2013)\nPrediabetes (since 2013)\nAnemia (since 2014)\nIschemic heart disease (since 2014)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2014)\nChronic kidney disease stage 2 (since 2015)\nDisorder of kidney due to diabetes mellitus (since 2015)\nMicroalbuminuria due to type 2 diabetes mellitus (since 2015)\nLoss of teeth (since 2026)\n\nRECENTLY RESOLVED\nGingivitis (2024-08 to 2024-08)\nGingivitis (2025-07 to 2025-07)\nGingivitis (2026-07 to 2026-07)\nInfection of tooth (2026-07 to 2026-07)\nPrimary dental caries (2026-07 to 2026-07)\n\nPROCEDURES\n2026-08-23: Fitting of denture (Loss of teeth)\n2026-08-02: Dental plain X-ray bitewing\n2026-08-02: Take oral or dental impression (Loss of teeth)\n2026-08-02: Dental consultation and report (Loss of teeth)\n2026-07-26: Restoration of tooth with coverage of all cusps using dental filling material (Primary dental caries)\n2026-07-26: Examination of gingivae (Gingivitis)\n\nRECENT ENCOUNTERS\n2026-08-23 ambulatory: Follow-up encounter (Loss of teeth)\n2026-08-02 ambulatory: Encounter for problem (Loss of teeth)\n2026-07-26 ambulatory: Encounter for check up (Gingivitis)\n2026-07-12 wellness: General examination of patient\n2025-07-20 ambulatory: Encounter for check up (Gingivitis)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact); Lifestyle education regarding hypertension"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "insulin isophane  human 70 UNT/ML / insulin  regular  human 30 UNT/ML Injectable Suspension [Humulin]",
+        "2026-07",
+        "Prediabetes"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hydrochlorothiazide 25 MG Oral Tablet",
+        "2026-07",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-07",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "amLODIPine 2.5 MG Oral Tablet",
+        "2026-07",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2014-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2014-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2014-05",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2014-05",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "3.4",
+        "%",
+        "< 5.7",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "86.4",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "68.2",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "171.1",
+        "mg/dL",
+        "< 200",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "89",
+        "mg/dL",
+        "< 100",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "60.1",
+        "mg/dL",
+        ">= 40",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "110.3",
+        "mg/dL",
+        "< 150",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.4",
+        "g/dL",
+        "12.0-17.5",
+        "2023-06-25"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "8.4",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-06-25"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "199.7",
+        "10*3/uL",
+        "150-450",
+        "2023-06-25"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "142.6",
+        "mmol/L",
+        "135-145",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "16.3",
+        "mg/dL",
+        "7-20",
+        "2026-07-12"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit an accurate, non-judgmental alcohol history despite initial minimization, and recognize its relevance to fluid balance and blood pressure in a patient on multiple antihypertensive/cardiac medications",
+    "factIds": [
+     "s6",
+     "s7",
+     "s8",
+     "s9",
+     "s10",
+     "s11"
+    ],
+    "actionIds": [
+     "a5",
+     "asyn1"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess the patient's understanding of his self-directed, social-media-based 'clean eating' plan and correct misconceptions about food labels in plain, low-literacy-appropriate language",
+    "factIds": [
+     "s13",
+     "s14",
+     "s15",
+     "s16"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore the impact of recent tooth loss, dental procedures, and a new partial denture on food choices and texture needs, identifying a shift toward soft, processed, higher-sodium foods",
+    "factIds": [
+     "h2",
+     "h3",
+     "h13",
+     "h20",
+     "h21"
+    ],
+    "actionIds": [
+     "a3",
+     "a13",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify medication and insulin adherence gaps tied to irregular meal timing and household chaos, and distinguish patient-reported reasons from objective refill records",
+    "factIds": [
+     "h4",
+     "h14",
+     "s1",
+     "s3",
+     "s15"
+    ],
+    "actionIds": [
+     "a4",
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Apply motivational interviewing techniques to engage a contemplation-stage patient who feels overwhelmed, anchoring counseling on his personal motivations",
+    "factIds": [
+     "s16",
+     "s17",
+     "s2",
+     "s18"
+    ],
+    "actionIds": [
+     "a2"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Integrate relevant anthropometrics, vital signs, and laboratory values (sodium, potassium, eGFR, HbA1c, lipids) into a nutrition assessment appropriate for CKD stage 2 with diabetic nephropathy and ischemic heart disease",
+    "factIds": [
+     "h15",
+     "h16",
+     "h17",
+     "h18"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Altered nutrition-related behavior/intake pattern (excessive sodium/added-sugar reliance via soft, processed foods; irregular meal timing misaligned with insulin dosing) in the context of CKD stage 2 with diabetic nephropathy, hypertension, ischemic heart disease, and recent extensive dental work, complicated by self-directed social-media diet, low health literacy, and unrecognized alcohol intake affecting fluid/BP status",
+   "differential": [
+    "Nutrition knowledge deficit related to self-selected non-evidence-based diet (clean eating/smoothie plan)",
+    "Inconsistent oral medication/insulin intake related to disorganized routine and household chaos",
+    "Altered chewing ability related to new partial denture and recent dental procedures affecting food choices (texture modification needed)",
+    "Excess sodium intake related to reliance on canned soups and deli meats",
+    "Underreported alcohol intake possibly contributing to low BP, fluid shifts, and interacting with antihypertensive regimen",
+    "Inconsistent physical activity related to fatigue and sedentary pattern"
+   ],
+   "keyFindings": [
+    "BP 83/70 mmHg (low) on HCTZ + lisinopril + amlodipine + metoprolol, raising concern for volume depletion/medication-alcohol interaction",
+    "Potassium 5.0 mmol/L and sodium 142.6 mmol/L both at upper edge of normal, relevant to CKD stage 2 dietary counseling",
+    "eGFR 68.2 mL/min/1.73m2 consistent with CKD stage 2; microalbuminuria/diabetic nephropathy on history",
+    "BMI 26.1 kg/m2 (overweight) with weight 79 kg, height 174.1 cm",
+    "HbA1c 3.4% is implausibly low given prediabetes diagnosis and insulin use; should be flagged for clarification/repeat rather than taken at face value",
+    "Reports a loosely followed social-media 'clean eating' plan heavy in smoothies, canned soup, deli meat, and flavored protein powder, raising sodium and hidden-sugar concerns",
+    "Describes irregular meal pattern (skipped breakfast, grazing, large dinner) misaligned with twice-daily insulin dosing, with admitted inconsistent evening insulin dosing",
+    "Initially reports 'a beer or two on weekends'; on gentle repeated questioning admits nightly drinking and episodes of 4-5 beers or more when stressed",
+    "Pharmacy refill record shows two lapses in metoprolol refill this year; patient initially attributes missed doses only to feeling foggy, later admits he also simply forgot to refill (chart-vs-patient mismatch)",
+    "New partial denture and recent gum tenderness have shifted intake toward soft, processed foods and away from fibrous vegetables/whole grains"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment including diet history, 24-hour recall/typical day, anthropometrics, relevant labs (sodium, potassium, eGFR, HbA1c, lipids), and medication/supplement review",
+    "Document nutrition diagnosis (PES statement) addressing excess sodium/processed food intake and irregular meal pattern related to self-directed diet and dental limitations, as evidenced by diet history and labs",
+    "Provide plain-language education correcting 'natural/sugar-free label = safe' belief and explain basic renal- and cardiac-appropriate choices (lower-sodium soups/deli alternatives, reading labels for sodium and potassium)",
+    "Counsel on texture-modified, nutrient-dense soft foods (e.g., soft-cooked vegetables, scrambled eggs, soft fruits, blended legumes) to replace processed soft staples and preserve fiber/micronutrient intake",
+    "Coach on aligning meal timing with insulin dosing to reduce skipped evening doses; suggest simple visual meal-timing/pill-timing pairing tool for household use",
+    "Use motivational interviewing to explore ambivalence about the social-media diet versus recommended changes, anchoring on his stated motivations (grandchildren, avoiding dialysis, avoiding another hospitalization)",
+    "Gently and non-judgmentally elicit a fuller alcohol history; once disclosed, explain in plain language how nightly/binge drinking can affect blood pressure, fluid balance, and interact with his heart and blood pressure medicines, and encourage him to share this with his cardiologist",
+    "Review the metoprolol refill record with him, normalize forgetting, and problem-solve concrete reminder strategies (e.g., pairing refill pickup with a routine household task, pharmacy auto-refill)",
+    "Involve his wife as a support resource for meal planning and reminders while coaching the couple on letting Gayle answer first before she fills in gaps",
+    "Arrange follow-up nutrition visit to reassess diet pattern, denture adaptation, and refer back to primary care/cardiology for the unexpectedly low HbA1c, low BP, and newly disclosed alcohol use"
+   ],
+   "redFlags": [
+    "BP 83/70 mmHg in a patient on four antihypertensive/cardiac medications plus newly disclosed heavier alcohol intake",
+    "Potassium 5.0 mmol/L in a patient with CKD and diabetic nephropathy",
+    "Unexplained discrepancy between HbA1c 3.4% and his diagnosed prediabetes/insulin regimen",
+    "Newly disclosed heavy episodic drinking (half a six-pack alone on at least three occasions this month) not yet communicated to his cardiologist",
+    "Two undisclosed metoprolol refill lapses this year in a patient with ischemic heart disease"
+   ],
+   "educationPoints": [
+    "'Natural' or 'sugar-free' labels do not automatically make a food safe for his kidneys, blood sugar, or blood pressure; checking sodium and potassium on labels matters too",
+    "Canned soups and deli meats, while convenient and soft, are often high in sodium, which is important to watch with his kidney condition",
+    "Timing meals consistently with his insulin doses can help avoid skipped doses and swings in blood sugar",
+    "Soft doesn't have to mean processed: there are nutrient-rich, easy-to-chew options like soft-cooked vegetables, eggs, and blended foods that fit his denture and his health needs",
+    "Alcohol can affect blood pressure and interact with his heart and blood pressure medicines, so sharing his actual drinking pattern with his cardiology team is important for his safety",
+    "Skipping a pill is not 'balanced out' by eating well that day; medications and diet work together, not as substitutes for each other",
+    "Missing a refill isn't a moral failing — simple reminder systems (like pharmacy auto-refill or pairing pickups with routine errands) can help close that gap"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Gayle initially reports missing his metoprolol only on days he feels foggy or overwhelmed, attributing all missed doses to how he feels (h4, a4)",
+    "recordEvidence": "Pharmacy refill history shows the metoprolol succinate refill was late by about 2-3 weeks on two separate occasions this year, independent of symptom days",
+    "teachingPoint": "Self-reported reasons for nonadherence may be incomplete; cross-checking refill records can reveal logistical gaps (forgetting to refill) that need a different solution (e.g., auto-refill) than symptom-related skipping alone",
+    "factId": "h4",
+    "artifactId": "d4"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Gayle initially states he drinks 'just a beer or two' on weekends (s6)",
+    "recordEvidence": "On gentle repeated questioning during the same visit, he discloses drinking most nights, sometimes 4-5 beers when stressed, and finishing half a six-pack alone on at least three occasions this month (s7, s8, s9)",
+    "teachingPoint": "Initial minimization of alcohol intake is common; nonjudgmental, repeated open-ended questioning can reveal a pattern with significant implications for blood pressure and medication interactions that the patient did not think to mention to his cardiologist"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 20,
+   "condition": "Loss of teeth",
+   "conditionLabel": "53 M · Loss of teeth, Microalbuminuria due to type 2 diabetes mellitus, Disorder of kidney due to diabetes mellitus +6 · 8 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "217875f1",
+   "fingerprint": "br66au"
+  }
+ }
+}

@@ -1,0 +1,261 @@
+{
+  "episode_id": "ep.0003",
+  "patient_record_id": "rec.maria-alvarez",
+  "patient_record_version": 1,
+  "status": "completed",
+  "started_at": "2026-10-09T16:00:00Z",
+  "ended_at": "2026-10-09T16:06:55Z",
+  "participants": [
+    {
+      "participant_id": "p.patient",
+      "kind": "ai",
+      "role": "patient",
+      "display_name": "Maria",
+      "model": "anthropic.claude-opus-5-5"
+    },
+    {
+      "participant_id": "p.jordan",
+      "kind": "human",
+      "role": "nurse_practitioner_student",
+      "display_name": "Jordan",
+      "user_id": "u.jordan"
+    }
+  ],
+  "turns": [
+    {
+      "turn_id": "t0",
+      "index": 0,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:00:05Z",
+      "text": "Hello, I'm Jordan, one of the NP students. So you're here about your diabetes?"
+    },
+    {
+      "turn_id": "t1",
+      "index": 1,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:00:25Z",
+      "text": "I guess so. I'm thirsty all the time and I'm up all night going to the bathroom.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t2",
+      "index": 2,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:00:45Z",
+      "text": "How long?"
+    },
+    {
+      "turn_id": "t3",
+      "index": 3,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:01:05Z",
+      "text": "About three months.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t4",
+      "index": 4,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:01:25Z",
+      "text": "Any family history of diabetes?"
+    },
+    {
+      "turn_id": "t5",
+      "index": 5,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:01:45Z",
+      "text": "My mother had it. She was on dialysis before she died.",
+      "avatar": {
+        "emotion": "sad",
+        "intensity": 0.7,
+        "gestures": [
+          "looks down"
+        ]
+      }
+    },
+    {
+      "turn_id": "t6",
+      "index": 6,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:02:05Z",
+      "text": "Okay. And you're on metformin, 500 twice a day. Are you taking it?"
+    },
+    {
+      "turn_id": "t7",
+      "index": 7,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:02:25Z",
+      "text": "Yes. I take my metformin every day.",
+      "avatar": {
+        "emotion": "embarrassed",
+        "intensity": 0.6,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t8",
+      "index": 8,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:02:45Z",
+      "text": "Let me check the pharmacy record."
+    },
+    {
+      "turn_id": "t9",
+      "index": 9,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:03:05Z",
+      "text": "All right.",
+      "avatar": {
+        "emotion": "anxious",
+        "intensity": 0.6
+      }
+    },
+    {
+      "turn_id": "t10",
+      "index": 10,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:03:25Z",
+      "text": "This says you've only filled it twice in six months. So you haven't been taking it every day. Why did you tell me you were?"
+    },
+    {
+      "turn_id": "t11",
+      "index": 11,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:03:45Z",
+      "text": "I take it. Maybe the pharmacy has it wrong.",
+      "avatar": {
+        "emotion": "frustrated",
+        "intensity": 0.7,
+        "gestures": [
+          "crosses arms"
+        ]
+      }
+    },
+    {
+      "turn_id": "t12",
+      "index": 12,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:04:05Z",
+      "text": "The record is pretty clear. You need to take it as prescribed or your sugar won't come down."
+    },
+    {
+      "turn_id": "t13",
+      "index": 13,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:04:25Z",
+      "text": "I said I take it.",
+      "avatar": {
+        "emotion": "angry",
+        "intensity": 0.6,
+        "gestures": [
+          "crosses arms"
+        ]
+      }
+    },
+    {
+      "turn_id": "t14",
+      "index": 14,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:04:45Z",
+      "text": "Okay. I'm ordering an HbA1c."
+    },
+    {
+      "turn_id": "t15",
+      "index": 15,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:05:05Z",
+      "text": "Fine.",
+      "avatar": {
+        "emotion": "frustrated",
+        "intensity": 0.6
+      }
+    },
+    {
+      "turn_id": "t16",
+      "index": 16,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:05:25Z",
+      "text": "It's 9.2 percent. That's well above target, which is what I'd expect if doses are being missed. Do you drink a lot of sugary drinks?"
+    },
+    {
+      "turn_id": "t17",
+      "index": 17,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:05:45Z",
+      "text": "Not really.",
+      "avatar": {
+        "emotion": "frustrated",
+        "intensity": 0.5,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t18",
+      "index": 18,
+      "participant_id": "p.jordan",
+      "at": "2026-10-09T16:06:05Z",
+      "text": "All right. I'll let my preceptor know about the refills and the A1c, and we'll have you come back in a month. Please try to take the metformin twice a day. Any questions?"
+    },
+    {
+      "turn_id": "t19",
+      "index": 19,
+      "participant_id": "p.patient",
+      "at": "2026-10-09T16:06:25Z",
+      "text": "No.",
+      "avatar": {
+        "emotion": "frustrated",
+        "intensity": 0.6
+      }
+    }
+  ],
+  "disclosures": [
+    {
+      "item_id": "f.med.metformin",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t0",
+      "trigger": "visible at start"
+    },
+    {
+      "item_id": "f.hpi.thirst",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t3",
+      "trigger": "asked about duration of symptoms"
+    },
+    {
+      "item_id": "f.fh.mother",
+      "item_type": "fact",
+      "channel": "patient",
+      "turn_id": "t5",
+      "trigger": "asked about family history"
+    },
+    {
+      "item_id": "f.med.refills",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t8",
+      "trigger": "opened pharmacy refill history"
+    },
+    {
+      "item_id": "f.lab.hba1c",
+      "item_type": "fact",
+      "channel": "chart",
+      "turn_id": "t14",
+      "trigger": "ordered HbA1c"
+    }
+  ],
+  "grading": {
+    "status": "ungraded"
+  }
+}

@@ -1,0 +1,962 @@
+{
+ "origin": "sample",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review vital signs flowsheet",
+    "result": "BP 128/82 mmHg, HR 78 bpm, Temp 98.6°F, RR 16/min (from last clinic visit)",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Calculate BMI from height/weight",
+    "result": "Height 5'9\" (175 cm), Weight 178 lb (80.7 kg) → BMI 27.8 kg/m² (overweight range)",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Review recent weight trend",
+    "result": "Weight up 5 lb over past 3 months (173 lb → 178 lb); patient reports no intentional change in intake he is aware of",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review HbA1c result",
+    "result": "HbA1c 9.8% (goal <7.0%) — drawn 1 week prior to visit",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review fasting glucose",
+    "result": "Fasting glucose 180 mg/dL (reference 70-99 mg/dL) — drawn same day as HbA1c",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "lab",
+    "name": "Review lipid panel",
+    "result": "Total cholesterol 220 mg/dL (H), LDL 142 mg/dL (H), HDL 38 mg/dL (L), Triglycerides 190 mg/dL (H)",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review medication list and pharmacy refill history",
+    "result": "Metformin 500 mg once daily (last refill 68 days ago for a 30-day supply, suggesting gaps); Lisinopril 10 mg once daily (refills on time)",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review prior nutrition/primary care note",
+    "result": "Note from 2 years ago documents prediabetes with A1c 6.0%, lifestyle counseling given, no follow-up nutrition visit until now",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "result": "Patient reports: skipped breakfast, lunch was a store-bought sandwich and a sugary juice box, dinner was rice, beans, pork, and plantains with family, plus a quesillo dessert and another cup of piña juice; snacked on crackers around 11pm",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change screening",
+    "result": "Patient scores in the 'contemplation' stage — acknowledges sugar is a problem but is ambivalent about making consistent changes, says he needs to 'see it work' before committing",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Food security screening (Hunger Vital Sign, 2-item)",
+    "result": "Positive screen: patient endorses 'often true' to running out of food before money to buy more; 'sometimes true' that food didn't last",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Fluid/beverage intake review",
+    "result": "Reports 2-3 cups of sugary juice (piña or similar) and occasional soda daily; estimates less than 2 cups of plain water per day",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "PHQ-2 depression/distress screen",
+    "result": "Score 2/6 (positive on low energy/fatigue item, negative on anhedonia item) — mild, warrants further exploration but not diagnostic",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review surgical/trauma history note",
+    "result": "Note confirms gunshot wound to abdomen 2 months ago, emergency surgery, uncomplicated recovery per surgical follow-up, cleared for gradual activity increase",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Self-reported physical activity level",
+    "result": "Patient reports walking for community volunteer work most days, no structured exercise, feels 'too weak' for more right now",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "lab_report",
+    "title": "Metabolic and Lipid Panel",
+    "author": "Community Health Lab",
+    "date": "1 week prior to visit",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "9.8",
+        "%",
+        "<5.7 normal; <7.0 goal for diabetes"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Fasting Glucose",
+        "180",
+        "mg/dL",
+        "70-99"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Total Cholesterol",
+        "220",
+        "mg/dL",
+        "<200"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "LDL Cholesterol",
+        "142",
+        "mg/dL",
+        "<100"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "HDL Cholesterol",
+        "38",
+        "mg/dL",
+        ">40 (male)"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "190",
+        "mg/dL",
+        "<150"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.9",
+        "mg/dL",
+        "0.7-1.3"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "flowsheet",
+    "title": "Vitals and Anthropometrics Flowsheet",
+    "author": "Clinic Nursing Staff",
+    "date": "Last 3 visits",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Weight (lb)",
+      "Height",
+      "BMI",
+      "BP",
+      "HR"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "3 months ago",
+        "173",
+        "5'9\"",
+        "26.9",
+        "124/80",
+        "76"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "6 weeks ago",
+        "176",
+        "5'9\"",
+        "27.4",
+        "126/80",
+        "80"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Today",
+        "178",
+        "5'9\"",
+        "27.8",
+        "128/82",
+        "78"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current Medications and Pharmacy Refill History",
+    "author": "Pharmacy records",
+    "date": "Current",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Purpose",
+      "Last fill date",
+      "Days supply",
+      "Expected next fill"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Metformin",
+        "500 mg",
+        "Once daily",
+        "Type 2 diabetes",
+        "68 days ago",
+        "30 days",
+        "~38 days overdue"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Once daily",
+        "Hypertension",
+        "25 days ago",
+        "30 days",
+        "On time"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Primary Care Note — 2 Years Prior",
+    "author": "Dr. M. Santos, Internal Medicine",
+    "date": "2 years ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "22-year-old male (then 20 y/o) seen for routine labs showing HbA1c 6.0%, consistent with prediabetes. Discussed weight management and reduced sugar-sweetened beverage intake. Family history of T2DM (mother). Advised follow-up with nutrition services; patient did not return for scheduled follow-up. No medications started at that time."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Surgical Follow-Up Note",
+    "author": "Trauma Surgery Service",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient is 2 months post emergency exploratory laparotomy for gunshot wound to the abdomen. Wound healing well, no signs of infection, surgical drains removed. Cleared for gradual return to normal activity including light exercise. Advised adequate protein intake to support continued healing. No dietary restrictions specified by surgical team."
+   },
+   {
+    "id": "d6",
+    "type": "chart",
+    "title": "Weight Trend (Past 3 Months)",
+    "author": "Clinic Nursing Staff",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Visit",
+     "yLabel": "Weight (lb)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "3 months ago",
+         "y": 173
+        },
+        {
+         "x": "6 weeks ago",
+         "y": 176
+        },
+        {
+         "x": "Today",
+         "y": 178
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Apply the Nutrition Care Process to gather a complete diet history, identify lifestyle factors affecting glycemic control, and uncover social barriers (food insecurity, cost, irregular work hours) using respectful, non-judgmental questioning.",
+    "factIds": [
+     "f6",
+     "f9",
+     "f12",
+     "f17",
+     "f21",
+     "f24",
+     "f29"
+    ],
+    "actionIds": [
+     "a9",
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Formulate an accurate PES statement linking elevated HbA1c and poor glycemic control to specific etiologies (food insecurity, irregular meal pattern, high sugar-sweetened beverage intake) and signs/symptoms from the data gathered.",
+    "factIds": [
+     "f6",
+     "f9",
+     "f21",
+     "f24"
+    ],
+    "actionIds": [
+     "a4",
+     "a5",
+     "a9",
+     "a11"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Design culturally congruent, evidence-based nutrition interventions that incorporate traditional Puerto Rican foods (rice, beans, plantains, pork) with practical modifications rather than restrictive 'Western' diet advice.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f22",
+     "f23"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explore medication-nutrition interactions, including metformin GI side effects and timing with meals, and address adherence barriers empathetically rather than punitively.",
+    "factIds": [
+     "f7",
+     "f14",
+     "f15",
+     "f27"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Demonstrate motivational interviewing techniques (open-ended questions, reflective listening, affirmations) to explore ambivalence and elicit the patient's own motivations (siblings, independence) for change.",
+    "factIds": [
+     "f16",
+     "f19",
+     "f25",
+     "f26"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify when a patient-reported claim conflicts with objective record evidence (medication adherence vs. refill history) and explore this discrepancy with curiosity rather than confrontation.",
+    "factIds": [
+     "f14"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o7",
+    "text": "Recognize cues suggesting unmet psychosocial needs (trauma-related stress affecting sleep/eating, financial strain, disordered eating history) that warrant interprofessional referral (behavioral health, social work) rather than nutrition counseling alone.",
+    "factIds": [
+     "f28",
+     "f30",
+     "f33",
+     "f34"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Dominic Rivera",
+   "age": 22,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Puerto Rican",
+   "occupation": "Part-time community volunteer and college student (associate degree seeking)",
+   "language": "Spanish (primary), functional English, prefers Spanish for personal topics",
+   "appearance": "Sitting on a couch in a small apartment living room, visible scar movement when he shifts positions, wearing a community volunteer t-shirt; posture is guarded at first, arms crossed, but leans forward and relaxes somewhat when talking about his siblings",
+   "portrait": "/portraits/dominic-rivera.jpg"
+  },
+  "persona": {
+   "personality": "Resilient and pragmatic, but skeptical of authority figures and medical advice. Values independence and self-reliance; protective of younger siblings, which he treats as his core motivation though he downplays how much he relies on them emotionally.",
+   "communicationStyle": "Direct, occasionally blunt, uses slang, may interrupt if he feels unheard or judged. Code-switches to English for clinical topics but prefers Spanish for anything personal or emotional. Shows defensiveness when criticized but opens up when he feels respected and listened to.",
+   "healthLiteracy": "low",
+   "emotionalState": "Guarded and a little tired; becomes more animated and hopeful when discussing his siblings or community work; shows flashes of frustration when he feels lectured.",
+   "background": "Dominic grew up in an urban Latino neighborhood in Puerto Rico, part of a tight-knit family. He's the oldest of several siblings and has always felt responsible for looking out for them. He's working toward an associate degree while volunteering in his community, and two months ago survived a gunshot wound that required emergency surgery. He has a dog he walks daily and attends a weekly community meeting about local issues. He trusts his mother's home remedies more than doctors.",
+   "speechExamples": [
+    "Look, I know my sugar's high, but doc, with all respect, y'all don't really get how it is out here.",
+    "My mom always says food fixes food — she gives me this root tea, it's supposed to help the sugar.",
+    "I take the metformin when I remember, okay? It's not like I'm trying to mess up on purpose.",
+    "My little sister's been sick, and that's what's really stressing me out right now, not my damn blood sugar.",
+    "I just want to get back to normal, man. Walk my dog, go back to volunteering, not feel like a burden to my family."
+   ],
+   "concerns": [
+    "Fear of losing his volunteer position/job due to health limitations",
+    "Concern about medication side effects (GI upset from metformin)",
+    "Fear of becoming a burden to his family",
+    "Worried about his younger sister who is currently sick"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment follow-up visit with Dominic Rivera, a 22-year-old male with poorly controlled Type 2 Diabetes (recent HbA1c 9.8%), referred after recent labs. He is 2 months post-op from a gunshot wound. Review the chart, then conduct a culturally sensitive nutrition assessment, build rapport, and develop a nutrition care plan using motivational interviewing. Do not assume adherence or health beliefs — ask open-ended questions.",
+   "chiefComplaint": "Follow-up for poorly controlled type 2 diabetes with elevated HbA1c, referred for nutrition counseling",
+   "openingLine": "Hey... yeah, I know why I'm here. My sugar's been running high, I'm tired all the time and thirsty like crazy. But honestly, I got a lot going on right now.",
+   "tasks": [
+    "Conduct a thorough diet history including meal pattern, food preferences, and beverage intake",
+    "Screen for food insecurity and other social/economic barriers to nutrition care",
+    "Explore medication-nutrition interactions and adherence barriers without judgment",
+    "Identify the patient's own goals and motivations using motivational interviewing techniques",
+    "Formulate a PES statement and propose a culturally appropriate, practical nutrition intervention"
+   ],
+   "timeLimitMin": 30
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition counseling follow-up for poorly controlled Type 2 Diabetes Mellitus"
+   },
+   {
+    "label": "Problem list",
+    "value": "Type 2 Diabetes Mellitus (poorly controlled); History of prediabetes; Hypertension; Status post gunshot wound with exploratory laparotomy (2 months ago, healing well)"
+   },
+   {
+    "label": "Medications",
+    "value": "Metformin 500 mg PO once daily; Lisinopril 10 mg PO once daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 128/82 mmHg, HR 78 bpm, Temp 98.6°F, RR 16/min, Weight 178 lb, Height 5'9\", BMI 27.8"
+   },
+   {
+    "label": "Insurance",
+    "value": "Public health insurance"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary Care Physician, Trauma Surgery (post-op follow-up), Nutrition Services (new referral)"
+   }
+  ],
+  "difficulty": 4,
+  "encounterType": "nutrition assessment / counseling follow-up",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "blood sugar symptoms",
+    "chart": "Reports polydipsia and polyuria, consistent with hyperglycemia",
+    "says": "I'm thirsty all the time and I'm running to the bathroom every hour, it's annoying.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "energy level",
+    "chart": "Reports fatigue and low energy",
+    "says": "I'm tired, like dragging-through-the-day tired, even when I sleep.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "adherence",
+    "topic": "medication routine",
+    "chart": "Reports skipping metformin dose intermittently",
+    "says": "Yeah I don't always take the metformin, I forget sometimes, or I just don't feel like it that day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "nutrition",
+    "topic": "typical meals",
+    "chart": "Reports frequent intake of rice, beans, and similar staple foods",
+    "says": "I eat rice and beans most days, that's just how we eat.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "psh",
+    "topic": "recent injury",
+    "chart": "Reports recent gunshot wound and surgery, now recovering",
+    "says": "I got shot a couple months back, had surgery, I'm still healing up from that too.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "family",
+    "topic": "sibling health",
+    "chart": "Reports a younger sibling is currently ill, causing stress",
+    "says": "My little sister's sick right now and that's got me way more stressed than my sugar, honestly.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "adherence",
+    "topic": "medication pattern details",
+    "chart": "Describes medication adherence as contingent on feeling well that day; takes metformin inconsistently",
+    "says": "Real talk? I take it when I'm having a good day. Bad days, I just forget about it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "nutrition",
+    "topic": "beverage preference",
+    "chart": "Prefers sugar-sweetened juice over water",
+    "says": "I like my juice, piña juice especially, way more than plain water. Water's boring.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Reports irregular work/volunteer hours affecting meal timing",
+    "says": "My hours for the volunteer stuff change all the time, so I don't always know when I'll eat next.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "social",
+    "topic": "family advice trust",
+    "chart": "States greater trust in mother's home remedies than physician recommendations",
+    "says": "My mom knows more about this than any doctor, if you ask me. She's been dealing with this stuff her whole life.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "nutrition",
+    "topic": "breakfast habits",
+    "chart": "Reports skipping breakfast regularly",
+    "says": "I don't really eat breakfast, I just grab coffee and go.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "nutrition",
+    "topic": "cooking frequency",
+    "chart": "Relies on pre-made or store-bought food due to limited time/energy during recovery",
+    "says": "Since the surgery I don't cook much, it's easier to just grab something already made.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "function",
+    "topic": "recovery activity level",
+    "chart": "Reports low physical activity, mainly walking for volunteer work",
+    "says": "I walk around for the volunteer stuff, that's about it. No gym or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "adherence",
+    "topic": "breakfast cost reasoning",
+    "chart": "Admits skipping breakfast partly to save money for lunch",
+    "says": "Honestly? Sometimes I skip breakfast so I got enough to buy lunch later. Money's tight.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "metformin side effects",
+    "chart": "Reports mild GI upset (nausea/discomfort) with metformin, contributing to avoidance",
+    "says": "That medicine messes with my stomach sometimes, makes me feel kinda sick, so I just skip it those days.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "psychosocial",
+    "topic": "activity limitation feelings",
+    "chart": "Expresses desire to be more physically active but feels physically weak since surgery",
+    "says": "I want to get back to moving more, walking my dog longer, but honestly I still feel weak, like my body's not all the way back yet.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "psychosocial",
+    "topic": "family burden worry",
+    "chart": "Downplays fear of becoming a financial/emotional burden to family",
+    "says": "I don't want to be, like, a problem for my family. I'm supposed to be the one helping them, not the other way around.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Reports occasional blurred vision and mild headaches, intermittent",
+    "says": "Sometimes my eyes get blurry for a bit, and I get these little headaches, not all the time though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "goals",
+    "topic": "motivation for health",
+    "chart": "States main motivation for improving health is being able to be active with younger siblings",
+    "says": "I just want my sugar down so I can actually play with my little brothers and sisters without getting winded or dizzy.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports poor sleep quality, attributes partly to stress",
+    "says": "I don't sleep great, my mind races at night sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "social",
+    "topic": "food access near home",
+    "chart": "Reports limited access to fresh/affordable produce in his neighborhood",
+    "says": "Where I live, it's not easy to find fresh stuff that's not expensive. Lotta corner stores, not really a real grocery store close by.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "nutrition",
+    "topic": "favorite cultural foods",
+    "chart": "Identifies plantains, pork, and coconut milk dishes as important cultural foods",
+    "says": "Plantains, pork, the coconut milk dishes my abuela makes — that's real food to me, that's home.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "nutrition",
+    "topic": "sweet treat habits",
+    "chart": "Reports regular consumption of sweet desserts like quesillo",
+    "says": "I got a weakness for quesillo, my mom makes it and I can't say no.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "nutrition",
+    "topic": "late night eating",
+    "chart": "Reports snacking late at night, often processed/salty foods",
+    "says": "Sometimes late at night I can't sleep so I end up snacking, crackers or chips usually.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "goals",
+    "topic": "return to normal life",
+    "chart": "States goal of returning to volunteer work and regaining independence",
+    "says": "I just wanna get back to my volunteer work and not have to depend on everybody else for everything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "trust in care team",
+    "chart": "Expresses skepticism that healthcare providers understand his cultural context",
+    "says": "No offense, but a lot of y'all don't really get where I'm coming from, culturally and all that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "adherence",
+    "topic": "blood pressure medication routine",
+    "chart": "Reports more consistent adherence to lisinopril than metformin, especially when reminded by family",
+    "says": "The blood pressure pill I take pretty regular, especially if my mom reminds me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "psychosocial",
+    "topic": "stress affecting eating",
+    "chart": "Reports that trauma-related stress and anxiety affect his appetite and eating patterns, sometimes skipping meals or overeating when anxious",
+    "says": "Since the shooting, sometimes I just don't feel like eating at all, and other times I can't stop eating, it's weird, I don't really get it myself.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f29",
+    "category": "social",
+    "topic": "financial strain details",
+    "chart": "Discloses ongoing financial strain limiting consistent access to healthy food",
+    "says": "Money's really tight right now, between the medical bills and everything, buying the 'healthy' stuff just isn't always realistic.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f30",
+    "category": "psychosocial",
+    "topic": "sleep and trauma symptoms",
+    "chart": "Discloses nightmares and hypervigilance related to the shooting that disrupt sleep and indirectly affect eating routine",
+    "says": "I keep having these dreams about that night, wake up at like 3am and can't fall back asleep, so I end up just eating something to pass the time.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "substance",
+    "topic": "supplement use",
+    "chart": "Admits using an unproven herbal supplement/tea believed to lower blood sugar, in addition to prescribed medication",
+    "says": "I've been drinking this root tea my mom gets me, she swears it helps bring the sugar down, so I've been doing that instead of taking the pill sometimes.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "provider role beliefs",
+    "chart": "Holds strong cultural belief that he must be the family provider and caretaker, resists any role that makes him feel dependent",
+    "says": "In my family, I'm supposed to be the one taking care of everybody, not the other way around. That's just how it is.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f33",
+    "category": "psychosocial",
+    "topic": "body image history",
+    "chart": "Discloses a past history of disordered eating related to body image concerns and family dynamics, now mostly resolved but occasionally resurfaces under stress",
+    "says": "A couple years back I had a thing with food, like I was obsessed with how I looked, barely ate. I don't really talk about that.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f34",
+    "category": "ros",
+    "topic": "headache pattern",
+    "chart": "Reports headaches are mild and intermittent, not associated with vision loss or neurological symptoms, distractor for serious complication concern",
+    "says": "The headaches aren't that bad, just annoying, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f35",
+    "category": "social",
+    "topic": "pet care routine",
+    "chart": "Reports caring for and walking a pet dog daily as part of routine",
+    "says": "I got my dog, I walk him most days, he's basically my best friend at this point.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f36",
+    "category": "family",
+    "topic": "community meeting involvement",
+    "chart": "Reports attending a weekly community meeting as part of volunteer role",
+    "says": "I go to this community meeting every week, we talk about what's going on in the neighborhood.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f3",
+    "patientClaim": "Dominic says he just forgets to take his metformin sometimes, implying occasional lapses but overall general use.",
+    "recordEvidence": "Pharmacy refill record shows his last metformin fill was 68 days ago for a 30-day supply, meaning he has been without medication on hand for roughly 38 days — far more than occasional forgetting.",
+    "artifactId": "d3",
+    "teachingPoint": "Self-reported 'occasional' nonadherence may understate the true gap; cross-checking refill/pharmacy records provides objective adherence data and opens a non-judgmental conversation about real barriers (cost, side effects, beliefs) rather than relying on self-report alone."
+   },
+   {
+    "id": "m2",
+    "factId": "f27",
+    "patientClaim": "Dominic states he takes lisinopril 'pretty regular' especially when reminded by his mother, implying consistent control of his blood pressure medication routine.",
+    "recordEvidence": "Vitals flowsheet shows BP trending from 124/80 three months ago to 128/82 today, a mild upward trend that, combined with weight gain, suggests his overall self-management (not just BP meds) may be less consistent than he perceives, and raises the question of whether home routine reports match actual physiologic trends.",
+    "teachingPoint": "Even when a patient reports good adherence to one medication, trending vital signs over time can reveal whether overall self-management goals are being met, prompting a broader, more holistic assessment rather than taking a single adherence claim at face value.",
+    "artifactId": "d2"
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Poorly controlled Type 2 Diabetes Mellitus (HbA1c 9.8%) with nutrition-related etiologies including food insecurity, irregular meal pattern, high intake of sugar-sweetened beverages, and medication nonadherence related to GI side effects and cultural/trust barriers.",
+   "differential": [
+    "Nutrition diagnosis: Altered nutrition-related laboratory values (elevated HbA1c/fasting glucose) related to excessive sugar-sweetened beverage and refined carbohydrate intake and irregular meal pattern as evidenced by HbA1c 9.8% and 24-hour recall",
+    "Nutrition diagnosis: Food-and-nutrition-related knowledge deficit related to limited prior nutrition education and low health literacy as evidenced by patient statements about diet beliefs",
+    "Nutrition diagnosis: Limited access to food (food insecurity) related to financial constraints and neighborhood food desert as evidenced by positive Hunger Vital Sign screen and skipped breakfasts to afford lunch",
+    "Behavioral consideration: Medication nonadherence (not a nutrition diagnosis per se, but critical context) related to GI side effects of metformin and cultural mistrust as evidenced by refill gap and patient report"
+   ],
+   "keyFindings": [
+    "HbA1c 9.8% (goal <7%) and fasting glucose 180 mg/dL indicate poorly controlled T2DM",
+    "Elevated total cholesterol 220, LDL 142, low HDL 38, elevated triglycerides 190",
+    "5 lb weight gain over 3 months (173→178 lb), BMI 27.8 (overweight)",
+    "Positive food insecurity screen (Hunger Vital Sign)",
+    "Pharmacy refill record shows ~38 days without metformin on hand despite patient describing adherence as only 'occasional' lapses (mismatch)",
+    "High intake of sugar-sweetened beverages (piña juice, soda), low water intake",
+    "Irregular meal pattern: skips breakfast (partly for financial reasons), relies on pre-made/processed foods since surgery, late-night snacking",
+    "Trauma-related stress affecting appetite and sleep, with hidden history of disordered eating that should be screened sensitively",
+    "Strong cultural food identity (rice, beans, plantains, pork, coconut milk) that should be incorporated into intervention rather than restricted",
+    "Patient using unproven herbal tea supplement in place of medication on some days"
+   ],
+   "plan": [
+    "Document findings using ADIME format with a clear PES statement addressing glycemic control, dietary pattern, and food insecurity",
+    "Provide culturally congruent nutrition counseling emphasizing portion/preparation modifications to traditional foods (e.g., smaller rice portions, grilled vs. fried pork, limiting added sugar in coconut milk dishes) rather than elimination",
+    "Address sugar-sweetened beverage intake with practical substitutions (infused water, reduced-sugar options) respecting taste preferences",
+    "Use motivational interviewing to explore ambivalence about medication and dietary change, affirming his motivation to be active with his siblings",
+    "Discuss metformin GI side effects empathetically and coordinate with prescriber regarding timing with food or formulation adjustment to improve tolerability and adherence",
+    "Screen and refer appropriately: food insecurity resources (SNAP/WIC equivalent, community food pantry), behavioral health referral for trauma-related stress and eating history, as part of interprofessional care",
+    "Set a small, specific, achievable behavior goal collaboratively with the patient (e.g., eating one additional meal per day, swapping one sugary drink for water) rather than a comprehensive diet overhaul",
+    "Schedule follow-up visit to reassess readiness to change, adherence, and repeat labs in 3 months"
+   ],
+   "redFlags": [
+    "HbA1c 9.8% is significantly above goal and places patient at risk for microvascular/macrovascular complications if unaddressed",
+    "Reported intermittent blurred vision and headaches warrant communication to medical team to rule out diabetic retinopathy or hypertensive changes",
+    "Positive food insecurity screen requires timely connection to resources, as it is a root driver of poor glycemic control",
+    "Disclosed trauma-related eating pattern changes and history of disordered eating warrant careful, nonjudgmental follow-up and likely behavioral health referral rather than nutrition counseling alone",
+    "Use of unproven herbal supplement in place of prescribed medication on some days needs to be addressed with the medical team"
+   ],
+   "educationPoints": [
+    "Explain the relationship between consistent carbohydrate intake, meal timing, and blood glucose control in accessible, non-judgmental language",
+    "Clarify that cultural staple foods (rice, beans, plantains, pork) are not inherently 'bad' and can be included in a diabetes-friendly pattern through portion and preparation adjustments",
+    "Educate on reading sugar content in beverages and offer culturally acceptable alternatives to sugary juices",
+    "Teach the practical connection between taking metformin with food to reduce GI side effects, if clinically appropriate, to support adherence",
+    "Explain the purpose and goal ranges of HbA1c and fasting glucose in lay terms so the patient understands why the lab values matter to his stated goals (playing with siblings, returning to volunteer work)",
+    "Discuss that stress and trauma can physiologically affect appetite and blood sugar, validating his experience without pathologizing it, and normalizing referral to additional support as a sign of strength not weakness"
+   ]
+  },
+  "setting": "Telehealth video visit; patient at home in his apartment in an urban Latino neighborhood in Puerto Rico, student/clinician calling from clinic",
+  "specialty": "Dietetics / Clinical Nutrition",
+  "summary": "A 22-year-old Puerto Rican male college student and community volunteer, two months post-gunshot wound surgery, presents for a telehealth nutrition follow-up with poorly controlled Type 2 Diabetes (HbA1c 9.8%). The case teaches culturally sensitive diet history-taking, food insecurity screening, motivational interviewing with a mistrustful and ambivalent young adult, and recognition of a self-report-versus-refill-record medication adherence mismatch, alongside hidden psychosocial factors (trauma-related eating changes, prior disordered eating, financial strain) requiring interprofessional referral.",
+  "title": "Poorly Controlled Type 2 Diabetes in a 22-Year-Old Trauma-Recovering Community Volunteer: Culturally Responsive Nutrition Counseling",
+  "professions": [
+   "dietetics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

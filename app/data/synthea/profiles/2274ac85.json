@@ -1,0 +1,328 @@
+{
+ "patient_overview": {
+  "name": "Guillermina Holguín",
+  "age": 79,
+  "sex": "Female",
+  "description": "Guillermina Holguín is a 79-year-old married woman living in Paterson, New Jersey, in a busy household of six, who still works full-time and comes across as sharp, no-nonsense, and faintly amused by the idea that a nutrition visit might change anything. She has prediabetes, hyperlipidemia, chronic sinusitis, and an early Alzheimer's diagnosis that she does not like discussing. She fires questions back at the student rather than answering directly, testing whether they actually know what they're talking about, and leans on her own online research to challenge any advice she doesn't like.",
+  "keywords": [
+   "prediabetes",
+   "hyperlipidemia",
+   "alzheimer's disease",
+   "precontemplation",
+   "health literacy",
+   "convenience foods",
+   "multigenerational household",
+   "chronic sinusitis",
+   "blunt communication",
+   "family illness fear"
+  ]
+ },
+ "demographics": {
+  "occupation": "Front-desk coordinator at a medical billing office, still working full-time",
+  "residence": "Paterson, New Jersey; household of 6",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicare",
+  "cultural_context": "Guillermina grew up speaking a language other than English at home and still prefers it for anything emotionally important, switching to English mainly for work and official appointments. She was raised to see cooking as a daily obligation tied to caring for a family, so now that her adult children mostly fend for themselves and she's one of six people under one roof with mismatched schedules, she feels less motivated to cook 'just because' and leans on packaged convenience. She values directness and sees long, soft-pedaled explanations as a waste of everyone's time."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Past pregnancy history of miscarriage",
+   "Chronic sinusitis",
+   "Hyperlipidemia",
+   "Alzheimer's disease"
+  ],
+  "medical_history": [
+   "Prediabetes since 1972",
+   "Past pregnancy history of miscarriage since 1975",
+   "Chronic sinusitis since 1982",
+   "Hyperlipidemia since 2010",
+   "Alzheimer's disease since 2025",
+   "Severe anxiety (panic) (2019-12 to 2025-01, resolved)",
+   "Viral sinusitis (2022-10 to 2022-11, resolved)",
+   "Primary dental caries (2023-01 to 2023-01, resolved)",
+   "Gingivitis (2025-01 to 2025-01, resolved)",
+   "Streptococcal sore throat (2025-03 to 2025-03, resolved)",
+   "Dental plain X-ray bitewing (2025-04-01)",
+   "Examination of gingivae (2025-04-01)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2025-04-01)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2025-04-01)",
+   "Dental care (2025-04-01)",
+   "Dental consultation and report (2025-04-01)"
+  ],
+  "current_symptoms": [
+   "Facial pressure and post-nasal drip most mornings",
+   "Occasional forgetfulness about whether she already ate",
+   "Mild bloating after some ready meals",
+   "Fatigue in the afternoon",
+   "Occasional dizziness she attributes to 'low blood pressure days'"
+  ],
+  "allergies": [
+   "Mold (organism) (Cutaneous hypersensitivity)"
+  ],
+  "clinical_findings": [
+   "Mildly disheveled hair and wrinkled blouse suggesting less attention to grooming than before",
+   "Nasal congestion and mouth-breathing with a hoarse voice from chronic sinusitis",
+   "Dry patches of skin on the forearm from contact dermatitis, slightly scratched",
+   "Appears alert and makes good eye contact but repeats a question back when confused about details"
+  ],
+  "laboratory_data": [
+   "HbA1c: 6.3 % (reference < 5.7; 2026-01-20)",
+   "Glucose: 96.9 mg/dL (reference 70-99 (fasting); 2026-01-21)",
+   "eGFR: 84.6 mL/min/1.73m2 (reference >= 90; 2026-01-21)",
+   "Total cholesterol: 175.7 mg/dL (reference < 200; 2026-01-21)",
+   "LDL cholesterol: 80.8 mg/dL (reference < 100; 2026-01-21)",
+   "HDL cholesterol: 53.3 mg/dL (reference >= 40; 2026-01-21)",
+   "Triglycerides: 120.9 mg/dL (reference < 150; 2026-01-21)",
+   "Haemoglobin: 12.5 g/dL (reference 12.0-17.5; 2025-01-14)",
+   "White cell count: 8.7 10*3/uL (reference 4.0-11.0; 2025-01-14)",
+   "Platelets: 173.7 10*3/uL (reference 150-450; 2025-01-14)",
+   "Potassium: 5 mmol/L (reference 3.5-5.1; 2026-01-21)",
+   "Sodium: 140.1 mmol/L (reference 135-145; 2026-01-21)",
+   "Urea nitrogen: 16.5 mg/dL (reference 7-20; 2026-01-21)"
+  ],
+  "vital_signs": [
+   "BP: 149/71 mmHg",
+   "HR: 85 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-01-20"
+  ],
+  "anthropometrics": [
+   "Height: 174.6 cm",
+   "Weight: 86.8 kg",
+   "BMI: 28.5 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Simvastatin 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily",
+    "purpose": "Hyperlipidemia",
+    "adherence": "Takes it most days, keeps it by the coffee maker as a reminder",
+    "patient_concerns": "Thinks statins are overprescribed and asks why she needs one when her cholesterol numbers 'aren't even that bad' per what she's read online"
+   },
+   {
+    "name": "Galantamine 4 MG Oral Tablet",
+    "dose": "4 MG",
+    "frequency": "Once daily",
+    "purpose": "Alzheimer's disease",
+    "adherence": "Inconsistent; sometimes forgets a dose and won't admit it unless pressed",
+    "patient_concerns": "Doesn't like being on 'a dementia pill' and questions whether it's even working, asks the student to prove it does anything"
+   },
+   {
+    "name": "Hydrocortisone 10 MG/ML Topical Cream",
+    "dose": "10 MG/ML",
+    "frequency": "Applied to affected skin as needed",
+    "purpose": "Contact dermatitis",
+    "adherence": "Uses it only when the rash is visibly bothering her, often forgets otherwise",
+    "patient_concerns": "Finds it greasy and avoids using it before going out"
+   }
+  ],
+  "supplements_and_otc": [
+   "Fish oil capsules she buys at the pharmacy 'for the heart'",
+   "Saline nasal spray for sinus congestion",
+   "Occasional melatonin gummies when she can't sleep",
+   "A multivitamin she takes 'most days'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Mostly ready-to-eat and microwaveable meals supplemented with grab-and-go items; low on fresh produce and fiber relative to her needs",
+  "food_preferences": [
+   "Rotisserie chicken from the supermarket",
+   "Frozen rice and bean bowls",
+   "Canned soups she doctors up with hot sauce",
+   "Buttered crackers as a snack",
+   "Supermarket bakery pastries on weekends"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "How often she actually reads nutrition labels versus just buying what's familiar",
+   "Portion sizes of her frozen dinners, several of which run high in sodium",
+   "Whether she eats differently when her husband or household members are home versus when she's eating alone",
+   "Snacking pattern in the evening while watching the news",
+   "Her fish oil and multivitamin use and what she believes they're doing for her"
+  ],
+  "meal_pattern": "Grabs something quick before work, often skips a real lunch and eats a granola bar at her desk, then has a ready-made dinner alone or with whichever household member is around",
+  "hydration": "Drinks coffee throughout the morning, water inconsistently, a glass of juice most days because she 'likes something with flavor'",
+  "physical_activity": "Walks to and from the bus stop for work, otherwise fairly sedentary; says she 'doesn't have time' for anything structured",
+  "substance_use": "Does not smoke, essentially does not drink alcohol (audit-c score 0)",
+  "sleep": "Reports trouble falling asleep some nights, uses melatonin occasionally, otherwise sleeps adequately"
+ },
+ "psychosocial_profile": {
+  "personality": "Blunt, impatient, intelligent, and quick to size people up; dislikes being talked down to",
+  "communication_style": "Answers questions with questions ('Why do you need to know that?' 'Does it matter if I eat breakfast?'), expects efficient, evidence-based answers and gets irritated by vague or overly gentle phrasing",
+  "goals": [
+   "Keep working full-time without interruption",
+   "Stay out of the hospital",
+   "Be left alone about her diet unless there's a concrete reason to change"
+  ],
+  "concerns": [
+   "Being told she has to give up foods she likes for a 'maybe' benefit",
+   "Losing her independence at work",
+   "Being lectured instead of informed"
+  ],
+  "beliefs": [
+   "Thinks most dietary advice is exaggerated or sold to scare people",
+   "Believes her labs are 'fine enough' and doesn't see prediabetes as urgent",
+   "Trusts what she reads from reputable medical sites more than most providers' explanations"
+  ],
+  "motivations": [
+   "Wanting to keep functioning independently at work and home",
+   "Not wanting to be a burden on her husband or household"
+  ],
+  "fears": [
+   "That she will end up like a relative who declined with a serious illness, and that nothing she does will prevent it"
+  ],
+  "barriers": [
+   "Precontemplation stage: doesn't see a reason to change her eating",
+   "Cooking for herself feels pointless so she defaults to convenience foods",
+   "Full-time work limits time and energy for meal prep",
+   "Busy six-person household makes shared cooking schedules difficult"
+  ],
+  "strengths": [
+   "High health literacy and reads extensively online",
+   "Organized and capable, holds down a demanding job",
+   "Has a close friend/neighbor she trusts and talks to regularly"
+  ],
+  "support_system": "A close neighbor and friend who checks in on her often and is her main confidante, more so than her husband or the rest of the household",
+  "readiness_to_change": "Precontemplation; she does not believe she needs to change anything about her eating and resists being told otherwise"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "She states she's only here because her doctor's office scheduled it, not because she asked for it",
+   "She says plainly that she eats a lot of ready meals because cooking for herself 'isn't worth the trouble'",
+   "She mentions she works full-time and doesn't have time to fuss over food",
+   "She immediately asks the student what exactly they think is wrong with her numbers"
+  ],
+  "discoverable_information": [
+   "She skips lunch most days and snacks on crackers or a granola bar instead",
+   "She lives with five other people but often eats on her own schedule",
+   "She reads health articles online regularly and brings up studies to challenge suggestions",
+   "She takes fish oil and a multivitamin she picked out herself",
+   "She doesn't always take the galantamine as prescribed"
+  ],
+  "reluctant_information": [
+   "She downplays how often she forgets whether she's eaten or taken her medication, brushing it off as 'just being busy'",
+   "She admits, if pushed gently, that she skips cooking most nights because it reminds her of being alone even in a full house"
+  ],
+  "hidden_information": [
+   "Her mother was diagnosed with Alzheimer's disease in her seventies and declined rapidly over three years before dying, and Guillermina is terrified her own new diagnosis means she will follow the exact same path, which is why she avoids discussing the diagnosis directly and deflects with questions about diet instead"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice motivational interviewing with a patient in precontemplation who deflects with questions",
+    "expected_discoveries": [
+     "Patient does not perceive her prediabetes or hyperlipidemia as urgent problems",
+     "Patient uses rhetorical questions to control the pace of the conversation"
+    ],
+    "possible_patient_reactions": [
+     "'Why would I change anything? My numbers aren't even bad.'",
+     "'You tell me — what's actually going to happen if I don't change?'"
+    ]
+   },
+   {
+    "learning_objective": "Assess convenience-food reliance in a busy, multigenerational household and identify realistic small changes",
+    "expected_discoveries": [
+     "Her frozen meals and canned soups are high in sodium relative to her hyperlipidemia and prediabetes risk",
+     "She has six people in the house but eats largely on her own because of mismatched schedules"
+    ],
+    "possible_patient_reactions": [
+     "'I don't have time to cook a separate thing just for me.'",
+     "'What am I supposed to do, make a salad every night by myself?'"
+    ]
+   },
+   {
+    "learning_objective": "Explore health beliefs and literacy to tailor evidence-based education rather than generic advice",
+    "expected_discoveries": [
+     "She reads extensively online and will cite sources to challenge the student",
+     "She distrusts advice that feels like fear-based messaging"
+    ],
+    "possible_patient_reactions": [
+     "'I already read that fiber lowers cholesterol by two points, big deal.'",
+     "'Show me the actual study, not just a brochure.'"
+    ]
+   },
+   {
+    "learning_objective": "Build rapport to approach the sensitive topic of her Alzheimer's diagnosis and family history without triggering defensiveness",
+    "expected_discoveries": [
+     "She deflects any direct question about her diagnosis back onto the student",
+     "With enough trust, she may reveal her fear of repeating her mother's decline"
+    ],
+    "possible_patient_reactions": [
+     "'Why are we talking about that? I thought this was about my diet.'",
+     "(if rapport is strong) 'My mother went the same way. I don't like to think about it.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify and leverage her support system in a nutrition care plan",
+    "expected_discoveries": [
+     "Her close neighbor and friend is her main source of emotional support, more than her husband or household",
+     "This friend could be incorporated into meal planning or accountability strategies"
+    ],
+    "possible_patient_reactions": [
+     "'My neighbor already checks on me enough, I don't need another person doing that.'",
+     "'She's the one who actually listens, if that's what you're asking.'"
+    ]
+   },
+   {
+    "learning_objective": "Integrate medication adherence (statin, galantamine, topical steroid) into a nutrition-focused discussion",
+    "expected_discoveries": [
+     "Inconsistent adherence to galantamine and reluctance to acknowledge it",
+     "Skepticism about whether the statin is actually necessary at her lab levels"
+    ],
+    "possible_patient_reactions": [
+     "'I take it when I remember, is that so wrong?'",
+     "'Prove to me the pill is even doing anything.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Patient continues full-time work despite early Alzheimer's diagnosis, consistent with the record's 'Full-time work' employment status",
+   "Household of six includes her husband and likely adult children or extended family, though exact composition is not specified in the record",
+   "Her mother's history of Alzheimer's is inferred as the feared repeating illness, consistent with the patient's own Alzheimer's diagnosis and the assigned fear trait",
+   "Her close friend/neighbor support is distinct from her husband, who is present but not described as her primary confidant"
+  ],
+  "optional_details": [
+   "She keeps a small notebook of 'health articles' she's printed out from reputable sites",
+   "She prefers her native language for anything emotional but switches to English at work and in clinical settings without difficulty",
+   "She has a standing Sunday phone call with her neighbor-friend that she protects fiercely"
+  ]
+ },
+ "source": {
+  "synthea_record": "2274ac85",
+  "condition_group": "lipids",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "blunt and impatient, wants the point quickly",
+   "communication": "answers questions with questions",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "relies on convenience and ready meals because cooking for one feels pointless",
+   "held_back": "a fear that a relative's illness will repeat itself in them",
+   "support": "a close friend or neighbour who is the main support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

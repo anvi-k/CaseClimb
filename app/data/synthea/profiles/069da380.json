@@ -1,0 +1,273 @@
+{
+ "patient_overview": {
+  "name": "Brooks Little",
+  "age": 43,
+  "sex": "Male",
+  "description": "Brooks Little is a 43-year-old warehouse-shift forklift operator working part-time, living in East Orange with his wife, kids, and in-laws in a crowded household of seven. He comes to the visit for a routine check tied to his BMI but makes it clear he thinks the whole thing is a formality, launching into long tangents about his job, his truck, and articles he's read online rather than answering directly. He's proud of being the kind of guy who 'figures things out himself' and bristles at anything that sounds like being told what to do, though underneath the bravado there are real money pressures shaping what ends up in his stomach.</description>\n<parameter name=\"keywords\">[\"obesity\", \"precontemplation\", \"grazing/snacking pattern\", \"food cost barriers\", \"health literacy\", \"autonomy/pride\", \"low support\", \"sedentary shift work\"]"
+ },
+ "demographics": {
+  "occupation": "Part-time forklift operator at a regional warehouse distribution center",
+  "residence": "East Orange, New Jersey; household of 7",
+  "ethnicity": "Asian",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicaid",
+  "cultural_context": "Brooks grew up in a working-class East Orange household where meals were whatever stretched furthest, and he carried that practical, no-frills attitude toward food into adulthood. He values self-sufficiency and being the one who 'figures it out' rather than asking for help, a trait reinforced by years of hourly warehouse work and now a crowded multigenerational household he feels responsible for provisioning. Food, to him, is fuel to get through a long shift, not something to fuss over, and he's wary of outside advice that doesn't account for the real cost of groceries on a tight budget."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [],
+  "medical_history": [
+   "Body mass index 30+ - obesity since 2025",
+   "Acute viral pharyngitis (2025-11 to 2025-12, resolved)",
+   "Examination of gingivae (2020-12-10)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2020-12-10)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2020-12-10)",
+   "Dental care (2020-12-10)",
+   "Dental consultation and report (2020-12-10)",
+   "Face mask (physical object) (2020-08-16)"
+  ],
+  "current_symptoms": [
+   "No chest pain or shortness of breath that he reports",
+   "Says his energy is 'fine, same as always'",
+   "Occasional heartburn after late-night eating, which he brushes off",
+   "Mentions his pants fitting tighter but says it's 'just getting older'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears solidly built with weight carried mostly around the midsection",
+   "Mild gum recession and some tartar buildup noted on brief oral check, consistent with inconsistent dental visits",
+   "No edema or acute distress; moves around the exam room restlessly, picking things up and talking",
+   "Breath sounds clear, no distress climbing onto the exam table despite his size"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 204.2 mg/dL (reference < 200; 2025-09-18)",
+   "LDL cholesterol: 131.7 mg/dL (reference < 100; 2025-09-18)",
+   "HDL cholesterol: 49.2 mg/dL (reference >= 40; 2025-09-18)",
+   "Triglycerides: 116.7 mg/dL (reference < 150; 2025-09-18)",
+   "Haemoglobin: 14.7 g/dL (reference 12.0-17.5; 2023-09-14)",
+   "White cell count: 6.3 10*3/uL (reference 4.0-11.0; 2023-09-14)",
+   "Platelets: 357.9 10*3/uL (reference 150-450; 2023-09-14)"
+  ],
+  "vital_signs": [
+   "BP: 118/87 mmHg",
+   "HR: 80 bpm",
+   "RR: 14 breaths/min",
+   "Recorded: 2025-09-18"
+  ],
+  "anthropometrics": [
+   "Height: 180 cm",
+   "Weight: 97.4 kg",
+   "BMI: 30.1 kg/m2",
+   "Weight change: +2.5 kg since 2023-09-14"
+  ]
+ },
+ "medication_profile": {
+  "medications": [],
+  "supplements_and_otc": [
+   "A big tub of generic multivitamins he bought at the dollar store 'just in case'",
+   "Tums for heartburn, kept in his truck",
+   "Occasional store-brand ibuprofen for his back after shifts"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "No fixed meals; grazes throughout the day on whatever is quick, cheap, and filling - chips, cold cuts straight from the fridge, leftover rice, gas-station snacks between warehouse shifts",
+  "food_preferences": [
+   "Fried chicken from the spot near his job",
+   "Honey buns and other individually wrapped pastries he keeps in his truck",
+   "Big bags of store-brand tortilla chips",
+   "Sweetened iced tea, half-gallon jugs"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Skips sit-down meals most days, eats standing up or driving",
+   "Buys whatever is cheapest per ounce regardless of nutrition, tracks unit prices carefully",
+   "Finishes kids' leftover plates at night so food doesn't go to waste",
+   "Says he 'doesn't really do breakfast,' coffee with sugar instead",
+   "Portions seem large when he does eat a full plate, often seconds"
+  ],
+  "meal_pattern": "No set breakfast, lunch, or dinner; eats small amounts frequently across a 14-16 hour day, with one larger meal late at night after the household settles down",
+  "hydration": "Mostly sweet tea and soda from the corner store; says water 'doesn't fill him up'",
+  "physical_activity": "On his feet operating a forklift during shifts but otherwise sedentary at home; no structured exercise, says work is 'enough exercise'",
+  "substance_use": "Never smoked; drinks a couple of beers on weekends with brothers-in-law, denies heavy drinking",
+  "sleep": "Irregular, 5-6 hours, broken up by late shifts and a noisy house"
+ },
+ "psychosocial_profile": {
+  "personality": "Proud, self-reliant, doesn't like being told what to do; covers insecurity with confidence and long stories",
+  "communication_style": "Talks in long, winding anecdotes - starts answering a question about food and ends up on a story about his truck's transmission or a coworker's drama; hard to pin down to a direct answer",
+  "goals": [
+   "Wants to stay strong enough to keep working his job",
+   "Wants people to stop 'nagging' him about his weight",
+   "Would like to not get winded carrying furniture for his father-in-law"
+  ],
+  "concerns": [
+   "Doesn't want to be lectured",
+   "Worried a diet 'thing' will cost money he doesn't have",
+   "Mildly annoyed that a 'number on a chart' (BMI) is driving this whole visit"
+  ],
+  "beliefs": [
+   "Thinks he's 'not that big,' plenty of guys at work are bigger",
+   "Believes diets are a scam and 'everybody's body is different'",
+   "Trusts what he reads on forums and YouTube over what a dietitian says",
+   "Thinks as long as he's not diabetic yet, there's nothing really wrong"
+  ],
+  "motivations": [
+   "Being able to keep working without his knees or back giving out",
+   "Not wanting his wife to worry",
+   "Pride in providing for a big household"
+  ],
+  "fears": [
+   "Losing work hours if his health declines",
+   "Being seen as weak or needing help",
+   "Admitting money is tight in front of a stranger"
+  ],
+  "barriers": [
+   "Precontemplation - doesn't see weight as a problem needing action",
+   "Tight household budget, buys cheapest calories",
+   "No real support system to help him plan or cook differently",
+   "Irregular work hours make any 'meal plan' feel pointless to him",
+   "Pride makes him resist suggestions, even reasonable ones"
+  ],
+  "strengths": [
+   "Resourceful, good at stretching a tight budget",
+   "Physically active at work",
+   "Reads a lot, genuinely curious about health topics in his own way",
+   "No tobacco use, limited alcohol"
+  ],
+  "support_system": "Lives with wife, kids, and in-laws in a crowded house, but says everyone's 'doing their own thing' - little actual day-to-day help with cooking, errands, or health follow-through",
+  "readiness_to_change": "Precontemplation; doesn't believe his weight is currently a problem worth addressing, dismisses the visit's relevance"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he feels 'fine, same as always' and doesn't see why the BMI number matters",
+   "Mentions he works part-time at a warehouse operating a forklift",
+   "Launches into a story about his truck or a coworker when asked about his diet",
+   "Says he eats 'whenever, whatever's around' - no real meal schedule"
+  ],
+  "discoverable_information": [
+   "Describes typical snack foods and drinks in detail once he's talking about his day",
+   "Reveals he reads a lot of health stuff online and has strong opinions about diets being 'scams'",
+   "Mentions the house has seven people and is 'always chaos' at mealtimes",
+   "Admits he doesn't really do breakfast and relies on sugared coffee"
+  ],
+  "reluctant_information": [
+   "Hints that money is tight some weeks, deflects with a joke before changing subject",
+   "Mentions buying the cheapest food 'per ounce' when pressed on specific choices",
+   "Admits he sometimes skips picking up a medicine or OTC item at the pharmacy to save money that week"
+  ],
+  "hidden_information": [
+   "He has gone without seeing a dentist or doctor for non-urgent issues because he and his wife prioritize the kids' and in-laws' medical and dental needs over his own, given the household income of about $16,700/year",
+   "He has quietly started buying a cheaper, larger bag of chips and off-brand cold cuts in bulk because name-brand versions no longer fit the week's grocery budget",
+   "He feels embarrassed that at 43 he still can't put together a 'real meal' for his family and masks it with jokes about being 'too busy'"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Practice motivational interviewing with a patient in precontemplation who denies any problem exists",
+    "expected_discoveries": [
+     "Patient minimizes BMI finding and compares himself favorably to coworkers",
+     "Patient resists direct advice and redirects conversation",
+     "Patient shows some underlying motivation tied to work capacity and family pride"
+    ],
+    "possible_patient_reactions": [
+     "'Man, half the guys on my shift are bigger than me, why's this a big deal?'",
+     "'I didn't come here for a lecture, doc.'",
+     "'I guess... I don't want to be the reason I can't carry stuff for my wife's dad.'"
+    ]
+   },
+   {
+    "learning_objective": "Elicit a grazing, no-fixed-meal eating pattern and translate it into assessable intake",
+    "expected_discoveries": [
+     "Snack-based calorie intake spread across a long day",
+     "Large late-night meal after work",
+     "Reliance on sweetened beverages for hydration"
+    ],
+    "possible_patient_reactions": [
+     "'I don't really sit down to eat, I just grab stuff as I go.'",
+     "'Dinner's whenever the house finally quiets down, like 10, 11 at night.'"
+    ]
+   },
+   {
+    "learning_objective": "Uncover hidden financial barriers affecting food and health care choices without triggering shame",
+    "expected_discoveries": [
+     "Household income near $16,700/year supporting seven people",
+     "History of going without medical or dental care",
+     "Food purchasing driven by unit price rather than nutrition quality"
+    ],
+    "possible_patient_reactions": [
+     "'We're fine, we manage.' (deflecting)",
+     "'Okay, yeah, sometimes it's tight, but I handle it - always have.'"
+    ]
+   },
+   {
+    "learning_objective": "Navigate a patient who self-educates online and may hold strong, sometimes inaccurate, nutrition beliefs",
+    "expected_discoveries": [
+     "Specific claims from forums or videos he repeats as fact",
+     "Skepticism toward dietitian recommendations",
+     "Opening for collaborative, evidence-based conversation that respects his autonomy"
+    ],
+    "possible_patient_reactions": [
+     "'I read that calorie counting is a myth, it's all about something else.'",
+     "'I'm not trying to be rude, but I probably know more about this than you'd think.'"
+    ]
+   },
+   {
+    "learning_objective": "Address limited social support in planning any nutrition intervention",
+    "expected_discoveries": [
+     "Household is large but no one actively helps him cook or plan meals",
+     "He is the one who feels responsible for everyone else first",
+     "Any plan needs to be self-directed and low-effort given his schedule"
+    ],
+    "possible_patient_reactions": [
+     "'Nobody's got time to sit and plan meals in my house, it's chaos.'",
+     "'I'm the one who's supposed to have it together, not the other way around.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Household income of $16,681/year for seven people implies significant food and healthcare budget constraints despite patient's reluctance to discuss this directly",
+   "Part-time employment with irregular shift hours contributes to the grazing eating pattern and poor sleep",
+   "No care plans on record and precontemplation stage suggest this is likely his first real nutrition conversation about weight"
+  ],
+  "optional_details": [
+   "Owns an older pickup truck he's proud of fixing himself",
+   "Enjoys watching DIY and conspiracy-adjacent YouTube channels in his downtime",
+   "Has three kids plus in-laws living in the house, so the kitchen is rarely quiet",
+   "Nickname at work is 'Little' despite being the biggest guy on his shift - he finds this funny"
+  ]
+ },
+ "source": {
+  "synthea_record": "069da380",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "proud and self-reliant, dislikes being advised",
+   "communication": "long stories that wander off the question",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "has no set meals and grazes on snacks through the day",
+   "held_back": "money worries that affect which food or medicines they buy",
+   "support": "very little day-to-day support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

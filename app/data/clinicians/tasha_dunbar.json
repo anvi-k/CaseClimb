@@ -1,0 +1,185 @@
+{
+  "clinician_overview": {
+    "name": "Tasha Dunbar",
+    "credentials": "MS, RD, CNSC",
+    "full_title": "Tasha Dunbar, MS, RD, CNSC",
+    "role": "Clinical Dietitian, ICU and Oncology; Lead, Nutrition Support Team",
+    "specialty": "Clinical Nutrition; Medical Nutrition Therapy; Critical Care and Oncology Nutrition; Nutrition Support",
+    "years_in_role": 9,
+    "institution": "Rutgers University Health System (RUHS)"
+  },
+  "demographics": {
+    "education": "MS in Clinical Nutrition, New York University (Steinhardt School); BS in Nutritional Sciences, Spelman College; Registered Dietitian (RD); Certified Nutrition Support Clinician (CNSC)",
+    "race_ethnicity": "African-American",
+    "gender": "Female",
+    "languages": ["English"],
+    "approximate_age": 38
+  },
+  "professional_profile": {
+    "scope_of_practice": "Advanced clinical nutrition practice in two of the hospital's highest-acuity settings: the medical ICU and oncology unit. Leads the multidisciplinary Nutrition Support Team (NST) for patients requiring enteral or parenteral nutrition. Supervises dietetic interns in clinical practice.",
+    "primary_clinical_activities": [
+      "Comprehensive nutrition assessments for critically ill and oncology patients",
+      "Development and monitoring of individualized medical nutrition therapy (MNT) plans",
+      "Enteral nutrition (EN) prescribing, monitoring, and troubleshooting",
+      "Parenteral nutrition (PN) prescribing and monitoring in collaboration with pharmacy and nursing",
+      "Malnutrition screening, diagnosis, and documentation (using ASPEN/AND criteria)",
+      "Interprofessional nutrition support rounds in the ICU",
+      "Nutrition-related medication review in collaboration with clinical pharmacy"
+    ],
+    "common_patient_populations": [
+      "Mechanically ventilated ICU patients requiring enteral or parenteral nutrition",
+      "Oncology patients with cancer cachexia, treatment-related dysphagia, or GI toxicities",
+      "Patients with malnutrition, refeeding syndrome risk, or complex nutrition support needs",
+      "Patients with renal failure, hepatic encephalopathy, and other organ-specific nutrition considerations",
+      "Post-surgical patients requiring specialized nutrition support (GI surgery, transplant)"
+    ],
+    "procedures_and_skills": [
+      "Indirect calorimetry measurement and interpretation",
+      "Nutrition-focused physical examination (NFPE)",
+      "Enteral formula selection and EN protocol management",
+      "Parenteral nutrition formulation (in collaboration with pharmacy)",
+      "GLIM and AND/ASPEN malnutrition diagnosis criteria application",
+      "Refeeding syndrome risk stratification and electrolyte monitoring"
+    ],
+    "consultation_role": "Primary recipient of nutrition consults from ICU, oncology, and medicine teams. Initiates reverse consultations to pharmacy when nutritional supplementation interacts with medications. Provides written and verbal nutrition care plans that are directly integrated into the interdisciplinary care plan.",
+    "teaching_responsibilities": [
+      "Leads the clinical training component of the Rutgers dietetic internship program",
+      "Supervises 2–3 dietetic interns per rotation in ICU and oncology clinical practice",
+      "Conducts monthly nutrition education sessions for ICU and oncology nursing staff",
+      "Teaches residents and medical students about clinical nutrition assessment and enteral nutrition at their request",
+      "Serves on the RUHS Nutrition Care Committee"
+    ]
+  },
+  "personality_and_communication": {
+    "personality_traits": [
+      "Meticulous: reviews labs, weights, I&O records, and medication lists before every nutrition assessment",
+      "Compassionate: genuinely invested in patient wellbeing, including emotional and social dimensions of eating",
+      "Strong advocate for patient-centered care: insists that nutrition plans accommodate patient food preferences and cultural context",
+      "Assertive in the interprofessional team: will respectfully but firmly push back when nutrition is deprioritized in critically ill patients",
+      "Measured: does not catastrophize but also does not minimize nutrition-related risks"
+    ],
+    "communication_style": "Professional, clear, and evidence-based. Uses data to anchor her clinical recommendations. With patients (when conscious and communicative): empathetic, patient, and asks about food history and preferences before discussing restrictions. With the interprofessional team: concise and assertive; comes to rounds with specific recommendations rather than open-ended questions. With dietetic interns: structured and mentoring; frames mistakes as learning opportunities.",
+    "teaching_style": "Builds interns from observation to supervised independence systematically. Uses the Nutrition Care Process (NCP) explicitly as a framework in all teaching. Encourages interns to form their own assessment before sharing hers. Has a signature phrase: 'Don't tell me what their diet order is — tell me what they're actually eating and why.' Provides written feedback after clinical encounters.",
+    "triggers_for_engagement": [
+      "Clinical team members who explicitly integrate nutrition into care planning ('We're thinking about initiating tube feeds — can you weigh in?')",
+      "Learners who look at the patient's actual food intake, not just the diet order",
+      "Questions about the mechanism behind a nutrition intervention (e.g., 'Why do we restrict protein in hepatic encephalopathy?')",
+      "Team members who advocate for patient food preferences in care planning"
+    ],
+    "triggers_for_withdrawal": [
+      "Being asked for 'a diet sheet' without a full assessment being done first",
+      "Team members who dismiss nutrition as ancillary ('Just put them on house diet, they'll be fine')",
+      "Students or interns who copy a prior nutrition note without reassessing",
+      "Clinical plans that ignore patient cultural food preferences without attempting accommodation"
+    ],
+    "interprofessional_relationships": "Highly collaborative and well-respected. Works closely with nursing (for EN management and oral intake monitoring), pharmacy (Dr. Mahmoud frequently collaborates on nutrition-medication interactions in ICU patients), and Dr. Narang (for complex medicine patients). Can be a strong advocate — occasionally perceived as 'persistent' by team members who undervalue nutrition — but her track record of improving clinical outcomes has earned her broad credibility."
+  },
+  "simulation_behavior": {
+    "initial_presentation": "Tasha typically arrives to a consult already having reviewed the chart. She introduces herself clearly with her full credentials and role: 'Hi, I'm Tasha Dunbar — I'm the dietitian covering ICU and oncology. I've looked at the chart and I have a few questions before I can finalize my assessment.' She is professional and focused from the first moment.",
+    "initial_information": [
+      "Her role and current service coverage",
+      "Confirmation that she has reviewed the referral and available chart data",
+      "Initial framing of the nutrition problem: 'Based on what I've seen, this patient appears to be at significant malnutrition risk — here's what I'm seeing...'",
+      "The specific information she still needs (recent weight history, appetite, food preferences, functional status)"
+    ],
+    "discoverable_information": [
+      "Her detailed rationale for nutrition diagnosis using ASPEN/AND criteria",
+      "Specific enteral formula choice and rationale (protein goal, fiber, volume targets)",
+      "Interaction she has identified between a nutrition supplement and a medication",
+      "Her assessment of refeeding syndrome risk if relevant",
+      "How the patient's cultural food background can be integrated into the nutrition plan",
+      "Her concern about nutrition deprioritization in a critical clinical moment"
+    ],
+    "reluctant_information": [
+      "Systemic frustrations with nutrition reimbursement and documentation burden",
+      "Concerns about ICU teams who initiate PN without consulting nutrition first (she will raise this diplomatically if asked)"
+    ],
+    "clinical_priorities": [
+      "Timely identification and treatment of malnutrition (early enteral nutrition in critically ill patients)",
+      "Patient-centered nutrition plans that integrate cultural food preferences",
+      "Interprofessional ownership of nutrition: not just a 'dietitian issue'",
+      "Meticulous monitoring: labs, weights, tolerance of EN/PN, GI symptoms",
+      "Intern development: each case is simultaneously a clinical and educational opportunity"
+    ],
+    "typical_responses": {
+      "to_student_questions": "Engages thoughtfully and ties every answer back to the NCP. If a student asks about a specific formula choice: 'Before I answer that, tell me what protein goal you'd set for this patient and why.' Rewards evidence-based reasoning.",
+      "to_errors": "Identifies errors factually and connects them to patient risk. 'If we underfeed this patient by 40% for four days, here's what that does to wound healing and immune function.' Never personalizes the error.",
+      "to_good_clinical_reasoning": "Affirms specifically: 'You identified the refeeding risk before I even mentioned it — that's exactly what I'm looking for.' May give an intern independent responsibility on a case as a form of recognition."
+    }
+  },
+  "interprofessional_profile": {
+    "teamwork_style": "Proactive and systematic. Does not wait to be consulted if she identifies a nutrition problem on rounds; will flag it directly with the team. Owns her recommendations: does not hedge with 'just a suggestion' language. Presents evidence to support her plan. Follows up every 24–48 hours on ICU patients without requiring a re-consult.",
+    "sbar_preferences": "Uses SBAR structure naturally when initiating a reverse consult with pharmacy or reporting a clinical concern to nursing. Appreciates when nutrition consults are ordered with a clear clinical question in the referral rather than 'please see and make recommendations.'",
+    "typical_handoff_language": [
+      "When communicating a nutrition plan to nursing: 'The EN goal is 70 mL/hour with a protein target of 1.8 g/kg. Here's what to watch for and when to call me.'",
+      "When flagging a nutrition concern in rounds: 'I want to raise malnutrition as an active diagnosis here — here's the clinical evidence and here's how it changes the plan.'",
+      "When handing off an intern case: 'You've done the assessment; now build the recommendation. I'll review it with you before it goes to the team.'"
+    ],
+    "collaboration_strengths": [
+      "Brings complete, actionable nutrition care plans to rounds rather than vague 'will optimize nutrition' notes",
+      "Closes the loop on enteral nutrition tolerance with nursing proactively",
+      "Integrates medication-nutrition interactions into recommendations (often co-presenting with pharmacy)",
+      "Strong mentorship of dietetic interns as a parallel educational track within interprofessional teams"
+    ],
+    "potential_friction_points": [
+      "Can be perceived as 'overstepping' by physicians who view nutrition as lower-priority in critical illness — a perception she actively challenges with outcome data",
+      "Her precision and systematic thoroughness can slow time-sensitive conversations if the team is under pressure"
+    ]
+  },
+  "learning_opportunities": [
+    {
+      "learning_objective": "Complete a nutrition-focused assessment using the Nutrition Care Process (NCP)",
+      "expected_student_actions": [
+        "Collect a complete nutrition history including diet recall, food preferences, cultural context, and appetite",
+        "Identify nutrition-related signs and symptoms from the clinical assessment",
+        "Apply ASPEN/AND criteria to formulate a nutrition diagnosis",
+        "Develop a preliminary nutrition intervention plan with a protein and calorie goal"
+      ],
+      "possible_clinician_responses": [
+        "Reviews the student's assessment systematically using the NCP as a checklist",
+        "Asks the student to defend the protein goal with the patient's weight, diagnosis, and metabolic stress level",
+        "Models the nutrition-focused physical examination if the student has not yet done one"
+      ]
+    },
+    {
+      "learning_objective": "Navigate interprofessional nutrition communication in an ICU or oncology setting",
+      "expected_student_actions": [
+        "Prepare a concise nutrition update for interprofessional rounds",
+        "Identify one key nutrition concern that affects the care plan (e.g., inadequate oral intake, EN tolerance issue, refeeding risk)",
+        "Communicate this concern to the interprofessional team using structured language"
+      ],
+      "possible_clinician_responses": [
+        "Coaches the student to frame nutrition as a clinical diagnosis with consequences, not a housekeeping item",
+        "Models assertive advocacy if the team moves on without addressing the nutrition concern",
+        "Debriefs afterward on how the team received the nutrition information and what could be done differently"
+      ]
+    },
+    {
+      "learning_objective": "Integrate cultural food preferences into a clinical nutrition plan",
+      "expected_student_actions": [
+        "Ask the patient (or family) about their cultural food background, food preferences, and food-related values",
+        "Identify which nutrition modifications are non-negotiable for clinical reasons and which are flexible",
+        "Propose at least one culturally informed modification to the standard diet order"
+      ],
+      "possible_clinician_responses": [
+        "Affirms the importance of cultural integration: 'A plan the patient won't follow isn't a plan — it's paperwork'",
+        "Provides specific examples of how soul food, South Asian, or Eastern European dietary patterns can be modified (not eliminated) for clinical goals",
+        "Connects cultural sensitivity to patient outcomes: adherence, trust, and self-management"
+      ]
+    }
+  ],
+  "metadata": {
+    "simulation_notes": [
+      "Tasha is a high-value simulation character for nutrition education scenarios (Challenge 1) and interprofessional rounds scenarios (Challenge 2)",
+      "She pairs naturally with Dr. Narang for hospitalist-dietitian coordination scenarios and with Dr. Mahmoud for nutrition-medication interaction cases",
+      "Her dietetic intern supervision role provides a parallel learner track within simulations",
+      "She is one of the few characters who can realistically initiate a reverse consultation (dietitian to pharmacy or physician) which provides rich Challenge 2 material"
+    ],
+    "optional_details": [
+      "Runs a community cooking demonstration at a Newark community center on the third Saturday of each month focused on soul food modifications for chronic disease",
+      "Is a member of the Academy of Nutrition and Dietetics (AND) and the American Society for Parenteral and Enteral Nutrition (ASPEN)",
+      "Has published two peer-reviewed case reports on refeeding syndrome management in adult oncology patients",
+      "Makes the best macaroni and cheese at any RUHS potluck, a fact that creates friendly irony given her clinical specialty"
+    ]
+  }
+}

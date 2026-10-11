@@ -33,6 +33,8 @@ jobs:
           node --check frontend/app.js
           node --check frontend/video.js
           node --check frontend/conversation.js
+          node --check frontend/streaming.js
+          node --check frontend/microphone-worklet.js
           node --test frontend/*.test.cjs
       - name: Check infrastructure documents
         run: |

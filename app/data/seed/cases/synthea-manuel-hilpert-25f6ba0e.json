@@ -1,0 +1,998 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Prediabetes nutrition counselling follow-up in a 40-year-old warehouse worker with chronic pain, addiction history, and food-insecure household",
+  "summary": "This case portrays Manuel Hilpert, a 40-year-old food-insecure warehouse worker with new prediabetes/obesity, chronic migraine and pain, a history of dependent drug abuse with a recent overdose, and a household where his sister controls all meal preparation. It teaches dietetics students to conduct a nutrition-focused telehealth assessment amid complex psychosocial barriers, to notice a patient-vs-chart mismatch between self-reported and documented alcohol use without confrontation, and to apply motivational interviewing with a chronically agreeable patient whose verbal compliance does not match his follow-through, while gently and non-judgmentally exploring (but not forcing disclosure of) shame-based nighttime eating.\"}",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in his bedroom at his sister Donna's house in Trenton, New Jersey",
+  "encounterType": "nutrition assessment / follow-up counseling",
+  "difficulty": 4,
+  "patient": {
+   "name": "Manuel Hilpert",
+   "age": 40,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Warehouse order picker at a distribution center near Trenton, NJ",
+   "language": "English",
+   "appearance": "Sits on the edge of a twin bed in a small bedroom, warehouse hoodie on, a worn spiral notebook visible on the nightstand. Mild under-eye puffiness, tired affect, posture slightly hunched as if guarding his back; he smiles and nods a lot, often glancing down at the notebook before answering with a date or number.",
+   "portrait": "/portraits/synthea-manuel-hilpert-25f6ba0e.jpg"
+  },
+  "persona": {
+   "personality": "Agreeable almost to a fault; eager to please and avoid conflict; takes quiet pride in memorizing medical numbers even when their meaning escapes him; carries guilt and shame beneath a cheerful, cooperative surface",
+   "communicationStyle": "Speaks in short, factual bursts, often citing exact dates ('since 2007'), doses, and lab values from memory or his notebook; answers quickly with 'yeah, I can do that' to almost any suggestion; deflects or goes quiet when a topic feels too close to shame or failure; needs gentle, repeated, non-judgmental invitation before opening up about anything embarrassing",
+   "healthLiteracy": "low",
+   "emotionalState": "Tired but trying to stay upbeat; underlying anxiety about his job, his sobriety, and disappointing his sister; mild shame simmering under a cooperative exterior",
+   "background": "Manuel grew up in a working-class family in Trenton, New Jersey, and left school before finishing high school to start working. He's been a warehouse order picker for years and has a solid group of coworkers he sees several times a week — they're his main social outlet and he's known there as 'Manny.' He's divorced and has a teenage daughter he doesn't live with but wants to make proud. Since his divorce he's lived with his sister Donna and her teenage son; Donna does all the cooking and has basically run the kitchen since their mother passed. He keeps a worn spiral notebook where he jots down lab numbers from his after-visit summaries, flipping through it during appointments even though he doesn't always know what to do with the numbers.",
+   "speechExamples": [
+    "Yeah, I can do that, no problem.",
+    "My A1c was 5.8 back in December, I wrote it right here in my notebook.",
+    "Donna's been cooking for us since Mom passed, I don't really ask for anything different.",
+    "I eat what's put in front of me, that's just how it works at our house.",
+    "I don't really think about it, I just eat something if I can't sleep."
+   ],
+   "concerns": [
+    "Losing his warehouse job if he misses more shifts for migraines or appointments",
+    "Being seen as 'the addict' by his coworkers or providers",
+    "His weight creeping up even though he feels like he 'barely eats all day'",
+    "Wanting to get his A1c back under 5.7 like it used to be"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition follow-up visit with Manuel Hilpert, a 40-year-old warehouse worker recently flagged for prediabetes and obesity at his last primary care visit. He is joining the call from his bedroom at his sister's house in Trenton, NJ. Review his available chart information before and during the visit, then conduct a focused nutrition assessment and begin patient-centered counseling.",
+   "chiefComplaint": "Follow-up nutrition visit after being flagged for prediabetes and obesity",
+   "openingLine": "Hey, yeah, thanks for calling — I got the note that my doctor wanted me to talk to someone about the prediabetes thing. I got my numbers right here if you need 'em.",
+   "tasks": [
+    "Conduct a focused diet history (meal pattern, hydration, food preferences, and barriers to home food choices)",
+    "Review available vitals, anthropometrics, and lab results in the chart and relate them to the patient's reported intake",
+    "Review the behavioral health screening note in the chart and notice any discrepancy with what the patient reports about his own habits, exploring it gently rather than confronting him",
+    "Screen for food insecurity and other social barriers affecting his eating pattern",
+    "Assess his readiness/stage of change for dietary modification and begin a motivational-interviewing-based counseling conversation with one or two realistic, patient-chosen next steps"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit after being flagged for prediabetes and obesity at last primary care check"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician (Trenton Primary Care Clinic); Behavioral health counselor; Dietitian (new referral)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Chronic intractable migraine without aura (since 2000); Impacted molars (since 2000); Chronic pain (since 2001); Dependent drug abuse (since 2007); Unhealthy alcohol drinking behavior (since 2008); Prediabetes (since 2025); Body mass index 30+ - obesity (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector; Astemizole 10 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for follow-up nutrition visit after being flagged for prediabetes and obesity at last primary care check.",
+    "says": "They sent me to talk to you about my blood sugar and my weight, I guess, since my numbers came back borderline.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "recent lab result",
+    "chart": "Reports HbA1c 5.8% on 12/29/2025.",
+    "says": "My A1c was 5.8 last time, I wrote it down in my notebook. Doctor said that's prediabetes.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "diagnosis timeline",
+    "chart": "Reports being diagnosed with prediabetes and obesity in 2025.",
+    "says": "Yeah, prediabetes and the obesity thing, that's officially 2025, since my last checkup.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Reports feeling his weight has crept up over the past couple of years despite feeling like he barely eats during the day.",
+    "says": "I feel like my weight just keeps creeping up even though I feel like I barely eat all day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "headache history",
+    "chart": "Reports chronic migraine without aura since 2000.",
+    "says": "I've had these migraines since 2000, so like 25 years now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "headache impact on eating",
+    "chart": "Reports frequent headaches and occasional severe migraines that interfere with eating regular meals.",
+    "says": "When a migraine hits I can't even think about food, I just lay in the dark till it passes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "chronic pain history",
+    "chart": "Reports chronic low back and joint pain since 2001.",
+    "says": "My back and joints have been bad since 2001, from the warehouse work I think.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "pain impact on activity",
+    "chart": "Reports chronic pain limits standing/cooking at home and limits movement outside work shifts.",
+    "says": "Standing around in the kitchen for too long kills my back, so I don't really cook much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "afternoon energy",
+    "chart": "Reports fatigue by mid-afternoon most days.",
+    "says": "By like 2 or 3 in the afternoon I'm just dragging, every day.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h10",
+    "category": "hpi",
+    "topic": "lightheaded episodes",
+    "chart": "Reports occasional lightheadedness, attributes to 'low blood sugar' though unconfirmed.",
+    "says": "Sometimes I get kind of lightheaded, I figure it's my blood sugar dropping, but I'm not really sure.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "breathing symptoms",
+    "chart": "Denies current cough, shortness of breath, or wheezing.",
+    "says": "No, I'm breathing fine now, that bronchitis cleared up a while back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Denies nausea, vomiting, or abdominal pain.",
+    "says": "My stomach's fine, no pain or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "ros",
+    "topic": "swelling or breathing with meals",
+    "chart": "Denies any swelling, hives, or breathing trouble after eating any foods.",
+    "says": "I've never had my throat close up or anything after eating, no.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, frequent urination, or unexplained weight loss.",
+    "says": "I'm not peeing a ton or losing weight without trying, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "dental discomfort",
+    "chart": "Reports occasional discomfort chewing related to impacted molars but no acute dental pain currently.",
+    "says": "My back teeth bug me sometimes when I chew, they're impacted I was told, but it's not awful right now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "dental history",
+    "chart": "History of impacted molars since 2000; dental cleaning 2/27/2023 showed plaque buildup.",
+    "says": "I've had messed up back teeth since forever, and last time I got my teeth cleaned they said there was a lot of buildup.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "respiratory illness history",
+    "chart": "History of acute bronchitis, resolved 12/2025.",
+    "says": "I had bronchitis back in December, but that's cleared up.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "past viral illness",
+    "chart": "History of COVID-19, resolved 2021.",
+    "says": "I had COVID back in 2021, nothing major, I got better fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "psh",
+    "topic": "rehab program",
+    "chart": "Completed a rehabilitation therapy program 5/31/2026.",
+    "says": "I did a rehab program, finished it up end of May this year.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "psh",
+    "topic": "dental procedures",
+    "chart": "History of dental cleaning, fluoride treatment, and plaque/calculus removal on 2/27/2023.",
+    "says": "I had a big cleaning done at the dentist, like a deep clean, back in 2023.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "daily tablet use",
+    "chart": "Reports taking astemizole 10 mg tablet approximately once daily, inconsistently, especially during migraine flares; unsure of its purpose.",
+    "says": "I take this one pill, I think once a day, but I forget sometimes when my head's bad. Honestly I don't even know what it's for anymore, the pharmacy just keeps sending it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "emergency injector use",
+    "chart": "Carries an epinephrine 0.3 mL auto-injector for emergency use; has never used it and has not checked whether it is expired.",
+    "says": "I've got one of those EpiPen things in my bag just in case, never had to use it though. I don't even know if it's expired, never checked.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "pain reliever use",
+    "chart": "Reports taking ibuprofen 200 mg tablets, several at a time, during migraine or back pain flares.",
+    "says": "When my head or back is really bad I'll take a handful of the ibuprofen, like three or four at once.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "vitamin and sleep aid use",
+    "chart": "Reports taking a dollar-store multivitamin daily and occasional melatonin gummies on nights with bad pain.",
+    "says": "I take a multivitamin Donna buys in bulk, and sometimes a melatonin gummy if I can't sleep after a rough pain night.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "allergies",
+    "topic": "food and drug allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No, I've never had an allergy to anything that I know of.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "living situation",
+    "chart": "Lives with sister Donna and her teenage son; household of 3",
+    "says": "I live with my sister Donna and her kid, my nephew. Been there a while now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "family",
+    "topic": "meal preparation control",
+    "chart": "Reports his sister does all cooking at home and he has no input into meal content",
+    "says": "Donna does all the cooking. She's been doing it since Mom passed, so I don't really ask for anything different.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s3",
+    "category": "family",
+    "topic": "family view of his health",
+    "chart": "Reports family minimizes his prediabetes and weight compared to his addiction history",
+    "says": "Donna says as long as I'm not using anymore, the sugar thing isn't that big a deal. Nobody really brings it up at home.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "work schedule and shifts",
+    "chart": "Works full-time as a warehouse order picker; worried about missing shifts",
+    "says": "I'm on my feet all day picking orders. If I miss too many shifts for headaches or appointments, I could lose the job.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "social",
+    "topic": "transportation barriers",
+    "chart": "Reports transportation problems have caused missed medical appointments and medication pickups",
+    "says": "The bus doesn't really run close to the clinic, so sometimes I just miss stuff - appointments, picking up my pills.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "social",
+    "topic": "household income",
+    "chart": "Reports household income near $31,625/year supporting a household of three",
+    "says": "Money's tight. Between me and Donna we're making it work but it's close.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "social",
+    "topic": "social support outside home",
+    "chart": "Reports regular positive social contact with coworkers 3-5 times weekly",
+    "says": "The guys at the warehouse are good people, we hang out most days. They call me Manny.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s8",
+    "category": "nutrition",
+    "topic": "food availability during the month",
+    "chart": "Reports going without food at times during the past month due to insufficient money",
+    "says": "There was like a week last month we were short on money, so I just skipped some meals.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "nutrition",
+    "topic": "weekend drinking amount",
+    "chart": "Reports drinking two beers on weekends with coworkers",
+    "says": "On weekends I'll have maybe one or two beers with the guys, nothing crazy.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s10",
+    "category": "nutrition",
+    "topic": "nighttime eating pattern",
+    "chart": "Acknowledges, when asked gently, eating cereal or chips alone at night after others are asleep",
+    "says": "Yeah... sometimes if I can't sleep I'll go down and have a bowl of cereal or some chips by myself, just to wind down.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s11",
+    "category": "nutrition",
+    "topic": "eating leftovers",
+    "chart": "Admits he sometimes finishes his nephew's leftover fast food even when not hungry, to avoid waste",
+    "says": "Sometimes my nephew leaves half a burger or fries sitting there and I'll just eat it so it doesn't go to waste, even if I'm not that hungry.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "nutrition",
+    "topic": "night after a stressful event",
+    "chart": "Describes, with reluctance and a long pause, an episode of eating an entire box of cereal and a sleeve of cookies alone one night, which he has not told his family about",
+    "says": "There was... one night I don't really want to get into it. I just ate a whole box of cereal and a sleeve of cookies by myself. Never told Donna. I don't want anybody thinking I'm out of control again.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "psychosocial",
+    "topic": "following through on changes",
+    "chart": "Tends to verbally agree with recommendations readily but reports inconsistent follow-through",
+    "says": "Yeah, I can do that, no problem - that's kind of what I always say. Doesn't mean I always get there though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "psychosocial",
+    "topic": "recent change in routine",
+    "chart": "Reports he had cut back on drinking and completed rehab in May 2026, but has drifted back toward old habits since the July 2026 overdose",
+    "says": "I was doing good there for a while after rehab in May. Then after what happened in July, I don't know, I just kind of slipped back into old stuff.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "being seen by others",
+    "chart": "Expresses concern about coworkers or providers viewing him as 'the addict' or a problem patient",
+    "says": "I don't want people at work or the doctors thinking of me as, you know, the addict guy. I try to just go along with things.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s16",
+    "category": "goals",
+    "topic": "personal motivation for change",
+    "chart": "States his main motivation is to show his ex-wife and daughter he can stay stable, and fear of another overdose",
+    "says": "I want my daughter to see I can actually get it together this time. And honestly I'm scared of ending up back in the ER.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s17",
+    "category": "other",
+    "topic": "tracking his own numbers",
+    "chart": "Keeps a personal notebook recording lab values from after-visit summaries, though reports limited understanding of their significance",
+    "says": "I write all my numbers down in this notebook - the A1c, the blood pressure, all that - I just don't always know what to do with 'em.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s18",
+    "category": "family",
+    "topic": "living arrangement stability",
+    "chart": "Reports keeping his own bedroom at his sister's house, which he values",
+    "says": "I got my own room there, it's not much but it's mine. I don't want to mess that up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review problem list and medical history summary",
+    "aliases": [],
+    "result": "Chronic intractable migraine without aura since 2000; chronic pain since 2001; impacted molars since 2000; dependent drug abuse since 2007 with overdoses 2022-05, 2023-09, 2026-07; completed rehabilitation 2026-05-31; unhealthy alcohol drinking behavior since 2008; prediabetes since 2025; obesity (BMI 30+) since 2025; COVID-19 resolved 2021-03 to 2021-05; acute bronchitis resolved 2025-12.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review most recent behavioral health/alcohol screening note",
+    "aliases": [],
+    "result": "See document: Behavioral Health Screening Note, 2025-11, AUDIT-C-style screen documents 4-5 drinks per occasion, 2-3 times per week.",
+    "importance": "critical",
+    "artifactIds": [
+     "d4"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review last dental visit note",
+    "aliases": [],
+    "result": "2023-02-27 dental cleaning note: plaque and calculus buildup on all teeth, gingival examination performed, fluoride treatment given; consistent with inconsistent dental follow-up.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Administer 24-hour diet recall / usual intake assessment",
+    "aliases": [],
+    "result": "Patient reports: usually skips breakfast or has a gas-station pastry; lunch is whatever is cheapest near the warehouse; dinner is whatever his sister Donna cooks (casseroles, boxed pasta, fried chicken, baked ziti, fried bologna sandwiches, meatloaf with ketchup); drinks mostly sweet tea and soda, rarely plain water during shifts.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Screen for food insecurity (e.g., Hunger Vital Sign)",
+    "aliases": [],
+    "result": "Patient reports that within the past month, food sometimes ran out before there was money to buy more, and he went without meals for stretches as a result.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess readiness to change / stage-of-change interview",
+    "aliases": [],
+    "result": "Patient describes a period of sustained positive change (reduced drinking, completed rehab program ending 2026-05-31) followed by drifting back toward prior habits since a destabilizing event in 2026-07; agrees readily with proposed changes but reports inconsistent follow-through.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen for disordered or binge eating patterns (brief behavioral screen)",
+    "aliases": [],
+    "result": "On initial questioning, patient denies any unusual eating patterns beyond 'eating what's put in front of me.'",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review prior nutrition/primary care visit note (if any)",
+    "aliases": [],
+    "result": "No prior dietitian visit on file. Primary care note from 2025-12-29 flags new diagnoses of prediabetes and obesity and refers to nutrition services for counseling.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Review home safety of emergency medication (epinephrine auto-injector check)",
+    "aliases": [],
+    "result": "Patient reports he carries the auto-injector in his bag, has never used it, and has not checked the expiration date.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 141/91 mmHg, heart rate 78/min, respiratory rate 14/min, weight 100.8 kg, height 181.9 cm, BMI 30.5 kg/m2, weight change +1.7 kg since 2023-02-13 (recorded 2025-12-29).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.8 %; Glucose 88 mg/dL; Total cholesterol 181.6 mg/dL; LDL cholesterol 121.1 mg/dL; HDL cholesterol 34.9 mg/dL; Triglycerides 128.4 mg/dL; Haemoglobin 13.5 g/dL; White cell count 4.5 10*3/uL; Platelets 264.4 10*3/uL; Potassium 4 mmol/L; Sodium 143.1 mmol/L; Urea nitrogen 10.7 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-12-29); Hep A adult (2025-12-01); COVID-19 mRNA LNP-S PF 30 mcg/0.3 mL dose (2021-06-07); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2017-02-06).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Behavioral Health Screening Note",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "date": "2025-11-14",
+    "author": "Primary Care Behavioral Health Team",
+    "body": "Patient completed an alcohol use screening (AUDIT-C style) during routine behavioral health check-in. Patient endorsed consuming 4-5 drinks per occasion, 2-3 times per week, typically on weekends and some weeknights with coworkers. Score consistent with unhealthy alcohol use. Patient was counseled briefly on alcohol use and referred to continue follow-up with primary care and behavioral health given history of dependent drug abuse (in remission as of rehabilitation completed 2026-05-31) and most recent overdose 2026-07. Patient appeared agreeable during counseling and stated he would 'cut back,' plan for reassessment at next visit."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Dental Visit Note",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "date": "2023-02-27",
+    "author": "Trenton Family Dental Associates",
+    "body": "Patient presented for routine cleaning. Examination of gingivae performed. Removal of supragingival and subgingival plaque and calculus from all teeth. Fluoride treatment applied. Findings notable for moderate plaque and calculus buildup consistent with infrequent professional cleanings. Impacted molars noted as longstanding, no acute intervention needed at this visit. Recommended return in 6 months; no record of follow-up visit since."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nChronic intractable migraine without aura (since 2000)\nImpacted molars (since 2000)\nChronic pain (since 2001)\nDependent drug abuse (since 2007)\nUnhealthy alcohol drinking behavior (since 2008)\nPrediabetes (since 2025)\nBody mass index 30+ - obesity (since 2025)\n\nRECENTLY RESOLVED\nDisease caused by severe acute respiratory syndrome coronavirus 2 (2021-03 to 2021-05)\nOverdose (2022-05 to 2022-05)\nOverdose (2023-09 to 2023-09)\nAcute bronchitis (2025-12 to 2025-12)\nOverdose (2026-07 to 2026-07)\n\nPROCEDURES\n2026-05-31: Rehabilitation therapy (Dependent drug abuse)\n2023-02-27: Dental fluoride treatment (Patient referral for dental care)\n2023-02-27: Examination of gingivae (Patient referral for dental care)\n2023-02-27: Removal of subgingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2023-02-27: Removal of supragingival plaque and calculus from all teeth using dental instrument (Patient referral for dental care)\n2023-02-27: Dental care (Patient referral for dental care)\n\nRECENT ENCOUNTERS\n2026-07-14 emergency: Emergency room admission (Overdose)\n2026-05-31 ambulatory: Encounter for problem (Dependent drug abuse)\n2026-05-01 ambulatory: Encounter for problem (Dependent drug abuse)\n2026-04-01 ambulatory: Encounter for problem (Dependent drug abuse)\n2025-12-29 urgentcare: Urgent care clinic (environment)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Care plan (record artifact); Diabetes self management plan (record artifact); Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "NDA020800 0.3 ML Epinephrine 1 MG/ML Auto-Injector",
+        "1988-12",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Astemizole 10 MG Oral Tablet",
+        "1988-11",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.8",
+        "%",
+        "< 5.7",
+        "2025-12-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "88",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2025-12-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "181.6",
+        "mg/dL",
+        "< 200",
+        "2023-02-13"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "121.1",
+        "mg/dL",
+        "< 100",
+        "2023-02-13"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "34.9",
+        "mg/dL",
+        ">= 40",
+        "2023-02-13"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "128.4",
+        "mg/dL",
+        "< 150",
+        "2023-02-13"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "13.5",
+        "g/dL",
+        "12.0-17.5",
+        "2025-12-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "4.5",
+        "10*3/uL",
+        "4.0-11.0",
+        "2025-12-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "264.4",
+        "10*3/uL",
+        "150-450",
+        "2025-12-01"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4",
+        "mmol/L",
+        "3.5-5.1",
+        "2025-12-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143.1",
+        "mmol/L",
+        "135-145",
+        "2025-12-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "10.7",
+        "mg/dL",
+        "7-20",
+        "2025-12-29"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Conduct a focused diet history that captures meal pattern, hydration habits, food preferences, and barriers to home food choices, including the patient's lack of control over meals cooked by a family member.",
+    "factIds": [
+     "s1",
+     "s2",
+     "s9"
+    ],
+    "actionIds": [
+     "a11"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Review and interpret available vitals, anthropometrics, and laboratory data (BMI, HbA1c, fasting glucose, lipid panel) and relate these objective findings to the patient's reported dietary intake and perceived eating pattern.",
+    "factIds": [
+     "h2",
+     "h3",
+     "h4"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review a behavioral health/alcohol screening note in the chart and recognize a discrepancy between patient-reported and documented substance use, exploring it with sensitivity rather than confrontation.",
+    "factIds": [
+     "s9",
+     "s14"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Screen for food insecurity and other social determinants (transportation, income, support system) that constrain nutrition-related behavior change.",
+    "factIds": [
+     "s5",
+     "s6",
+     "s8"
+    ],
+    "actionIds": [
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess stage/readiness for dietary change, recognizing a slip from a prior maintenance stage, and begin a motivational-interviewing-based counseling conversation that negotiates small, patient-chosen next steps appropriate to his limited control over home cooking.",
+    "factIds": [
+     "s13",
+     "s14",
+     "s16"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Gently and non-judgmentally explore nighttime or secretive eating behaviors as part of a brief behavioral screen, recognizing shame as a barrier to disclosure and avoiding pressure for full disclosure of sensitive details.",
+    "factIds": [
+     "s10",
+     "s11",
+     "s12",
+     "s15"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive carbohydrate/added sugar intake and energy intake relative to needs, related to limited food access, lack of control over home meal preparation, and limited nutrition-related knowledge, as evidenced by diet recall (skipped breakfast followed by large dinner portions, frequent sugar-sweetened beverages, nighttime snacking), HbA1c 5.8%, and BMI 30.5 kg/m2",
+   "differential": [
+    "Altered nutrition-related laboratory values (prediabetes) related to excess carbohydrate/added sugar intake",
+    "Overweight/obesity related to excess energy intake and limited physical activity secondary to chronic pain",
+    "Disordered eating pattern (nocturnal/binge-type eating) related to psychological stress and shame, not yet formally assessed",
+    "Food/nutrition-related knowledge deficit regarding carbohydrate sources and label reading",
+    "Inconsistent/inadequate access to food (food insecurity) related to limited income"
+   ],
+   "keyFindings": [
+    "BMI 30.5 kg/m2 (obesity), weight +1.7 kg since 2/13/2023",
+    "HbA1c 5.8% (prediabetes range), fasting glucose 88 mg/dL (normal)",
+    "BP 141/91 mmHg at last visit",
+    "HDL 34.9 mg/dL (low), LDL 121.1 mg/dL (above goal), triglycerides 128.4 mg/dL (normal) from 2/13/2023 lipid panel",
+    "Diet pattern: skips breakfast or has gas-station pastry, cheap lunch, large Donna-cooked dinner, sweet tea/soda as primary fluids, little to no plain water",
+    "No structured physical activity; on feet all shift but chronic pain limits home activity",
+    "Reports food insecurity—went without food at times in the past month due to money",
+    "Reports 'maybe one or two beers' on weekends, but 11/2025 behavioral health screening note documents 4-5 drinks per occasion, 2-3 times/week — patient-vs-chart mismatch to be explored gently, not confronted",
+    "Reluctant disclosure of nighttime solitary eating of cereal/chips 'to wind down' and finishing nephew's leftover fast food",
+    "Hidden: one binge episode of a full box of cereal plus a sleeve of cookies the night after his July 2026 overdose, never disclosed to anyone — may surface only with strong rapport, not required for a successful visit",
+    "Readiness to change: previously in maintenance (cut drinking, completed rehab 5/2026) but slipping since 7/2026 overdose; agrees verbally to all suggestions but has a pattern of low follow-through",
+    "Donna (sister) controls all home meal content/portions and minimizes the prediabetes/weight as unimportant compared to his addiction history",
+    "Unsure of indication/adherence for astemizole 10mg daily; keeps an unchecked, possibly expired epinephrine auto-injector"
+   ],
+   "plan": [
+    "Complete ADIME-format nutrition assessment including 24-hour recall/usual intake, hydration pattern, meal timing, household food access, and barriers",
+    "Review available vitals, anthropometrics, and labs already in the chart to anchor counseling in objective data (BMI, HbA1c, lipids)",
+    "Review the behavioral health/alcohol screening note in the chart and gently, non-confrontationally explore the gap between reported and documented alcohol use without accusing the patient of lying",
+    "Screen for food insecurity using a brief validated approach (e.g., Hunger Vital Sign-style questions) and document findings",
+    "Assess stage of change/readiness using a stage model, noting the slide from maintenance toward relapse of old habits since the July 2026 overdose",
+    "Use motivational interviewing to explore ambivalence rather than prescribing a rigid diet, given his pattern of reflexive agreement without follow-through",
+    "Negotiate one or two small, specific, patient-chosen behavior changes that do not require control over Donna's cooking (e.g., adding a protein/fiber item at breakfast, swapping one sugar-sweetened drink per shift for water, keeping a cheap shelf-stable breakfast item in his bag)",
+    "Explore nighttime eating patterns with curiosity and without judgment; if disclosed, normalize and avoid shaming language; do not press if patient deflects",
+    "Discuss with patient the idea of involving Donna in future nutrition conversations if/when he feels ready, as a possible way to build household support",
+    "Flag for the referring prescriber/PCP: patient's uncertainty about astemizole indication/adherence and un-checked epinephrine auto-injector expiration, for medical (not dietetic) follow-up",
+    "Plan brief, flexible follow-up given transportation barriers; consider telehealth continuity and connecting with social work for transportation/food access resources"
+   ],
+   "redFlags": [
+    "Recent (July 2026) overdose — ongoing risk of relapse; any disclosure of current suicidal ideation, unsafe substance use, or crisis should prompt escalation per supervising team's protocol",
+    "Reported episode of going without food during the month (food insecurity) warrants referral to social work/community resources",
+    "Unexplained or unchecked emergency medication (epinephrine auto-injector) and uncertain adherence to a daily prescribed tablet (astemizole) should be flagged to the medical team, not managed by the dietitian",
+    "Any signs of significant eating-disorder-level distress (e.g., if binge disclosure emerges) should be flagged for behavioral health rather than managed solely with diet education"
+   ],
+   "educationPoints": [
+    "Explain in plain language what HbA1c 5.8% means (prediabetes range, not diabetes) and that it is still changeable with diet pattern shifts",
+    "Clarify that fasting glucose of 88 mg/dL being 'normal' does not cancel out the HbA1c finding—both numbers tell different parts of the story",
+    "Discuss how skipping breakfast and eating a large dinner can contribute to overeating and blood sugar swings, and offer low-cost, low-effort breakfast swaps he can control himself (e.g., keeping a cheap protein bar or boiled eggs in his bag)",
+    "Explain the impact of sugar-sweetened beverages (sweet tea, soda, flavored coffee) on blood sugar and offer realistic, gradual substitution strategies given he 'forgets' water during shifts (e.g., carrying a filled bottle, setting phone reminders)",
+    "Normalize that it's common to eat differently at night when stressed or in pain, and that this is worth discussing with his care team, not something to be ashamed of",
+    "Reinforce that small, sustainable changes (one swap at a time) are more realistic than overhauling meals he doesn't control, given Donna does the cooking",
+    "Validate his goal of getting his A1c back under 5.7 and connect it concretely to specific, feasible actions he can take within his current household and work constraints"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports drinking two beers on weekends with coworkers",
+    "recordEvidence": "Behavioral Health Screening Note (11/2025) documents an AUDIT-C-style screen with 4-5 drinks per occasion, 2-3 times per week",
+    "teachingPoint": "Patients may under-report substance use, especially alcohol, due to shame or fear of being labeled 'the addict'; dietitians should gently reconcile self-report with chart documentation rather than confront, since alcohol intake affects caloric load, glycemic control, and nutrition counseling priorities",
+    "factId": "s9",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 24,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "40 M · Prediabetes, Unhealthy alcohol drinking behavior, Dependent drug abuse +3 · 2 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "25f6ba0e",
+   "fingerprint": "1dfplf8"
+  }
+ }
+}

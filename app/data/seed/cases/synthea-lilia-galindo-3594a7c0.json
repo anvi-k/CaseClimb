@@ -1,0 +1,1039 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Assessment and Counseling in Precontemplation: A 52-Year-Old Woman with Prediabetes, Obesity, Fibromyalgia, and Hidden Nighttime Binge Eating After Pregnancy Loss",
+  "summary": "This case portrays Lilia Galindo, a 52-year-old woman with prediabetes, obesity, fibromyalgia, and chronic low back pain, referred (not self-requested) for nutrition counseling. She presents in precontemplation, dismissing any link between her diet and her health, and the case trains students in motivational interviewing with a resistant patient, adaptation of nutrition education for low health literacy, and gentle exploration of a hidden nighttime binge-eating pattern rooted in unresolved grief after a 2023 miscarriage. A built-in mismatch between her stated breakfast-skipping today and a prior chart note documenting 'three meals a day' (alongside near-daily acetaminophen refills) teaches learners to notice and reconcile patient-versus-chart discrepancies without confrontation.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in East Rutherford, New Jersey, in her bedroom with the TV visible in the background",
+  "encounterType": "nutrition assessment",
+  "difficulty": 4,
+  "patient": {
+   "name": "Lilia Galindo",
+   "age": 52,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Not in the labor force; disabled from working due to chronic pain and fibromyalgia; previously a laundromat attendant",
+   "language": "Spanish-dominant; speaks limited English, prefers simple spoken explanations over numbers or charts",
+   "appearance": "Obese body habitus with weight centered around the abdomen; sits stiffly on a couch in a cluttered bedroom with a small TV on in the background; pale conjunctiva and slightly pale nail beds; moves slowly and winces when shifting position, periodically rubbing her lower back; arms crossed, flat affect, checking the clock",
+   "portrait": "/portraits/synthea-lilia-galindo-3594a7c0.jpg"
+  },
+  "persona": {
+   "personality": "Blunt, impatient, no-nonsense; wants answers fast and gets irritated by anything that sounds like a lecture. Underneath the flat affect is some guardedness about things she doesn't want to talk about.",
+   "communicationStyle": "Short, clipped answers at first. Mixes English with Spanish-inflected phrasing. Dislikes being lectured or shown numbers/charts. Warms up only slightly if a question is rephrased and asked again later with warmth instead of pressure. Crosses her arms, checks the clock, flat tone.",
+   "healthLiteracy": "low",
+   "emotionalState": "Irritated and resigned about being sent to this visit; guarded; underneath, carrying some unspoken grief and shame she keeps tightly contained.",
+   "background": "Lilia grew up in a working-class Hispanic family where big family meals were a given, but these days she lives in a crowded house of six where everyone eats on their own schedule, so cooking for just herself never felt worth the effort. She used to work as a laundromat attendant until chronic pain and fibromyalgia forced her to stop. She has a partner who checks on her often, which she finds both touching and exhausting, affectionately grumbling that he's her 'gallina clueca' (mother hen). She keeps a small TV on in her room at night, mostly for company during the hours she can't sleep.",
+   "speechExamples": [
+    "I don't see why this matters, my numbers aren't even that bad.",
+    "Everybody's gotta eat something, I don't know what you want me to say.",
+    "Can you just say it simple? I don't do good with all that number stuff.",
+    "My back is the problem, not what's on my plate.",
+    "He's always asking if I ate, if I took my pills — mi gallina clueca, I tell him, I'm fine."
+   ],
+   "concerns": [
+    "Being told she has to change everything about how she eats",
+    "Being judged for eating convenience food",
+    "Having to come back for more visits like this one"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment with Lilia Galindo, a 52-year-old woman referred by her physician for a visit related to prediabetes and weight. She did not request this visit herself. This is an initial nutrition assessment: gather a diet history, screen for barriers to eating well, review relevant anthropometrics and labs, and begin patient-centered counseling. She may be short with you at first.",
+   "chiefComplaint": "Referred for nutrition counseling related to prediabetes and weight; patient reports her main problem is chronic back pain, not her diet",
+   "openingLine": "The doctor sent me. I don't really know why I'm here, I eat fine.",
+   "tasks": [
+    "Take a focused diet history (meal pattern, typical foods, beverages, portions) and identify barriers to healthy eating",
+    "Review relevant anthropometrics and labs with the patient in plain, non-numeric language appropriate to her health literacy",
+    "Reconcile any inconsistencies you notice between what the patient reports today and what is documented in her chart",
+    "Formulate a nutrition diagnosis based on your assessment findings",
+    "Practice motivational interviewing to explore her readiness to change and identify one small, realistic step she herself identifies"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Referred by primary care physician for nutrition counseling related to prediabetes and weight"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician (Dr. R. Kessler); referred to Dietetics/Clinical Nutrition for nutrition assessment and counseling"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 2013); Chronic pain (since 2014); Chronic low back pain (since 2014); Fibromyalgia (since 2014); Past pregnancy history of miscarriage (since 2020); Sepsis (since 2021); Prediabetes (since 2022); Anemia (since 2024)"
+   },
+   {
+    "label": "Medications",
+    "value": "Acetaminophen 325 MG Oral Tablet [Tylenol]"
+   },
+   {
+    "label": "Allergies",
+    "value": "Shellfish (substance) (Eruption of skin, moderate)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for nutrition visit referred by PCP for prediabetes and weight management.",
+    "says": "My doctor sent me here. I didn't really ask for this.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "main concern today",
+    "chart": "Patient states her chronic low back pain, not her diet, is her primary concern.",
+    "says": "My back is what's wrong with me, not what I eat.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "view of lab numbers",
+    "chart": "Patient believes her blood sugar and weight are 'not that bad' and does not see them as a priority.",
+    "says": "My numbers aren't even that bad, I don't know why everyone's making a big deal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "past diet attempts",
+    "chart": "Patient reports previous attempts at dieting were unsuccessful and expresses low motivation to try again.",
+    "says": "I've tried dieting before, it never works for me, so what's the point.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "ros",
+    "topic": "back pain pattern",
+    "chart": "Reports constant dull low back pain that worsens with prolonged standing.",
+    "says": "My back's always aching, and if I stand too long it gets worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "body-wide soreness",
+    "chart": "Reports widespread muscle soreness and tender points, variable day to day.",
+    "says": "Some days it just hurts everywhere, like all over.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Reports persistent fatigue regardless of sleep duration.",
+    "says": "I'm tired all the time, no matter how much I sleep.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "lightheadedness",
+    "chart": "Reports occasional lightheadedness, attributes to fatigue.",
+    "says": "Sometimes I get a little dizzy, but I figure it's just 'cause I'm tired.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports difficulty falling and staying asleep due to pain.",
+    "says": "I can't sleep good, the pain keeps waking me up.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "Denies current abdominal pain, nausea, vomiting, diarrhea, or constipation.",
+    "says": "My stomach's fine, no problems there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "chest or breathing symptoms",
+    "chart": "Denies chest pain, palpitations, or shortness of breath.",
+    "says": "No, nothing like that, my chest is fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "vision and headaches",
+    "chart": "Denies blurred vision or frequent headaches.",
+    "says": "My eyes are okay, no headaches really.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "Obesity since 2013.",
+    "says": "I've been heavier for a long time now, over ten years I guess.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "chronic pain diagnoses",
+    "chart": "Fibromyalgia and chronic low back pain, both diagnosed 2014.",
+    "says": "They told me years ago I got fibromyalgia, and my back's been bad since then too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes diagnosed 2022, most recent A1c 6.4% on 2026-02-18.",
+    "says": "They said I'm pre-diabetic, found that out a couple years back.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "anemia history",
+    "chart": "Anemia since 2024, hemoglobin 11.2 g/dL on 2024-02-14.",
+    "says": "They told me my blood's a little low, something like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "pregnancy history",
+    "chart": "History of complete miscarriage, first trimester, October-November 2023, resolved.",
+    "says": "I lost a pregnancy a couple years back.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "past infection history",
+    "chart": "History of sepsis in 2021, resolved.",
+    "says": "I was real sick with an infection a while back, ended up in the hospital.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "colon screening history",
+    "chart": "Colon polyp 2023-12 to 2025-03, resolved; colonoscopy performed 2025-03-12.",
+    "says": "They found a little polyp a while ago, had it taken care of.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "recent dental and sinus history",
+    "chart": "Gingival disease and dental procedures February 2025, resolved; viral sinusitis October 2025, resolved.",
+    "says": "I had some dental work done and a sinus thing last year, both cleared up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h21",
+    "category": "medications",
+    "topic": "pain medication use pattern",
+    "chart": "Reports taking acetaminophen 325 mg as needed for pain, not on a fixed schedule.",
+    "says": "I just take a Tylenol when it hurts bad, not every day on a schedule or nothing.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h22",
+    "category": "medications",
+    "topic": "pain medication effectiveness",
+    "chart": "Reports acetaminophen provides little relief but continues taking it.",
+    "says": "Honestly I don't think it does much anymore, but I take it anyway.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "vitamin and sleep supplement use",
+    "chart": "Reports inconsistent use of a store-brand multivitamin and occasional melatonin gummies for sleep.",
+    "says": "I take a vitamin sometimes, and I'll pop a melatonin gummy once in a while to sleep.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "topical pain relief",
+    "chart": "Uses topical menthol cream for back pain.",
+    "says": "I rub some of that menthol cream on my back when it's bad.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "allergies",
+    "topic": "food allergy",
+    "chart": "Allergy to shellfish, causes skin eruption.",
+    "says": "I'm allergic to shellfish, I break out if I eat it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "ros",
+    "topic": "skin and swelling",
+    "chart": "Denies rashes, swelling, or skin changes other than known shellfish allergy reactions.",
+    "says": "My skin's fine otherwise, no swelling or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h27",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies increased thirst, frequent urination, or unexplained weight loss.",
+    "says": "I'm not going to the bathroom more than usual or losing weight or nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a household of 6; cooks and eats separately from others due to differing schedules",
+    "says": "There's six of us in the house but everybody's got their own schedule, so it's just me doing my own thing most of the time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "psychosocial",
+    "topic": "reason for visit",
+    "chart": "States referral was physician-initiated; did not seek nutrition visit herself",
+    "says": "My doctor's the one who sent me here, not something I asked for.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "function",
+    "topic": "mobility and standing tolerance",
+    "chart": "Reports standing to cook aggravates low back pain within minutes",
+    "says": "I can't stand at that stove more than five minutes before my back's screaming at me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s4",
+    "category": "function",
+    "topic": "daily activity level",
+    "chart": "Spends most of day sitting or lying down; avoids walking due to pain",
+    "says": "I mostly just sit or lay down. Walking around hurts too much.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "partner support",
+    "chart": "Lives with supportive partner who frequently checks whether she has eaten or taken medication",
+    "says": "He's always asking did I eat, did I take my pill. Gets to be a lot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "family",
+    "topic": "partner relationship tone",
+    "chart": "Describes partner affectionately despite finding his checking-in behavior overbearing",
+    "says": "I call him my mother hen. He means well, he just hovers.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "beliefs about her numbers",
+    "chart": "Believes her lab values and weight are not concerning enough to warrant attention",
+    "says": "My numbers aren't even that bad, I don't know why everyone's making a big deal.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "priority concern",
+    "chart": "Identifies back pain, not diet, as her primary concern",
+    "says": "My back is the real problem here, not what I'm eating.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "past diet attempts",
+    "chart": "Reports prior diet attempts were unsuccessful and expresses low expectation that change is possible",
+    "says": "I've tried dieting before, it never works for me, so what's the point.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "attitude toward cooking alone",
+    "chart": "Views cooking a full meal for herself alone as not worthwhile given household eats on separate schedules",
+    "says": "Why would I cook a whole meal just for me? Doesn't make sense.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "goals",
+    "topic": "what she wants from care",
+    "chart": "States primary goal is pain reduction, not weight or dietary change",
+    "says": "I just want my back to hurt less. Leave the weight stuff alone.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s12",
+    "category": "psychosocial",
+    "topic": "fears about this visit",
+    "chart": "Expresses concern about being told to overhaul her entire diet or being judged for food choices",
+    "says": "I don't want to be told I gotta change everything, or get judged for eating what's easy.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s13",
+    "category": "other",
+    "topic": "nighttime routine",
+    "chart": "Reports keeping a television on in her bedroom at night, often while awake late",
+    "says": "I keep the TV on in my room at night, helps pass the time when I can't sleep.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s14",
+    "category": "nutrition",
+    "topic": "nighttime eating episodes",
+    "chart": "Reports episodes of eating a large quantity of snack food, such as a bag of chips or sleeve of cookies, in one sitting without noticing the amount",
+    "says": "Sometimes on a bad night I'll go through a whole bag of chips before I even realize it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "psychosocial",
+    "topic": "eating privately",
+    "chart": "Reports eating alone in her bedroom at times so her partner does not see the amount consumed",
+    "says": "Sometimes I just eat in my room by myself so he doesn't see how much.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "other",
+    "topic": "disposal habits",
+    "chart": "Reports disposing of certain food wrappers in a bag kept outside rather than the kitchen trash",
+    "says": "I put some of the wrappers in a bag outside instead of the kitchen trash.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "family",
+    "topic": "history around 2023",
+    "chart": "Reports onset of nighttime eating pattern began after a 2023 pregnancy loss, used to help her fall back asleep, and has continued since",
+    "says": "It started after I lost the baby back in 2023. Eating something late helped me get back to sleep. Never really stopped since.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "substance",
+    "topic": "alcohol and tobacco use",
+    "chart": "Denies alcohol use (AUDIT-C 0) and tobacco use, never smoked",
+    "says": "I don't drink and I never smoked, not my thing.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: coffee only in the morning (no breakfast food); snacks on chips, crackers, or pan dulce midday; dinner is often a frozen chicken alfredo tray or white rice with canned beans; drinks soda or sweetened iced tea through the day, little water; reports a 'big' late-night snack most nights but does not quantify it.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Usual meal pattern and timing assessment",
+    "aliases": [],
+    "result": "Patient describes skipping breakfast most days, grazing on snacks through midday and afternoon, and eating her largest meal late at night, often after 9-10 pm.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Fluid/beverage intake assessment",
+    "aliases": [],
+    "result": "Patient reports soda with most meals and sweetened iced tea between meals; says she drinks very little plain water, 'maybe a glass, if that.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage-of-change assessment",
+    "aliases": [],
+    "result": "Patient states she does not think her eating is a problem, says her labs 'aren't that bad,' and says she is here because her doctor sent her, not because she asked to come.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Household and food access/barriers assessment",
+    "aliases": [],
+    "result": "Patient lives with five other people on different eating schedules; says cooking a full meal just for herself 'doesn't make sense'; relies on ready-made and frozen foods for convenience.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Pain-related functional barriers to meal preparation",
+    "aliases": [],
+    "result": "Patient reports standing in the kitchen more than a few minutes brings on back pain and fibromyalgia soreness, which limits how much cooking she is willing to do.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review prior PCP nutrition intake note",
+    "aliases": [],
+    "result": "Note from a prior primary care visit documents patient self-report of 'eats three meals a day, no significant dietary concerns noted.'",
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review pharmacy refill history for acetaminophen",
+    "aliases": [],
+    "result": "Pharmacy refill log shows acetaminophen 325 mg tablets refilled monthly at a quantity consistent with near-daily use.",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review problem list / diagnosis history",
+    "aliases": [],
+    "result": "Active problems include prediabetes, obesity (BMI 30+), chronic low back pain, fibromyalgia, anemia; resolved history includes miscarriage (2023), sepsis (2021), colon polyp, dental procedures, viral sinusitis.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Alcohol use screening (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 0; patient reports she does not drink alcohol.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "assessment",
+    "name": "Social support assessment",
+    "aliases": [],
+    "result": "Patient reports living with a partner who frequently asks if she has eaten or taken her medicine, which she describes as 'a lot' though she appreciates that he cares.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 138/75 mmHg, heart rate 80/min, respiratory rate 13/min, weight 70.5 kg, height 153.2 cm, BMI 30 kg/m2 (recorded 2026-02-18).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.4 %; Glucose 83.4 mg/dL; Total cholesterol 157.7 mg/dL; LDL cholesterol 78.5 mg/dL; HDL cholesterol 58.7 mg/dL; Triglycerides 103 mg/dL; Haemoglobin 11.2 g/dL; White cell count 10.3 10*3/uL; Platelets 355.8 10*3/uL; Potassium 4.5 mmol/L; Sodium 140.5 mmol/L; Urea nitrogen 9.5 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-02-18); zoster vaccine live (2025-02-12); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2025-02-12); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-06-16).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Prior Primary Care Nutrition Intake Note",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "date": "2025-11-10",
+    "author": "Dr. R. Kessler, MD (Primary Care)",
+    "body": "52 y/o F with prediabetes and obesity seen for routine follow-up. Patient reports eating three meals a day with no significant dietary concerns noted. Advised continued monitoring of blood sugar and weight. Referral placed to dietitian for nutrition counseling given A1c trending upward."
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Pharmacy Refill History",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2026-01-15",
+    "author": "Community Pharmacy",
+    "table": {
+     "columns": [
+      "Medication",
+      "Strength",
+      "Quantity per Fill",
+      "Refill Interval",
+      "Last Fill Date"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen tablet",
+        "325 mg",
+        "90 tablets",
+        "30 days",
+        "2026-01-15"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 2013)\nChronic pain (since 2014)\nChronic low back pain (since 2014)\nFibromyalgia (since 2014)\nPast pregnancy history of miscarriage (since 2020)\nSepsis (since 2021)\nPrediabetes (since 2022)\nAnemia (since 2024)\n\nRECENTLY RESOLVED\nMiscarriage in first trimester (2023-10 to 2023-11)\nComplete miscarriage (2023-10 to 2023-11)\nPolyp of colon (2023-12 to 2025-03)\nGingival disease (2025-02 to 2025-02)\nViral sinusitis (2025-10 to 2025-10)\n\nPROCEDURES\n2025-03-12: Colonoscopy\n2025-02-26: Dental fluoride treatment (Patient referral for dental care)\n2025-02-26: Postoperative care for dental procedure\n2025-02-26: Gingivectomy or gingivoplasty per tooth (Gingival disease)\n2025-02-26: Dental application of desensitizing medicament (Gingival disease)\n2025-02-26: Dental surgical procedure (Gingival disease)\n\nRECENT ENCOUNTERS\n2026-02-18 wellness: General examination of patient\n2025-10-21 ambulatory: Encounter for symptom (Viral sinusitis)\n2025-03-12 ambulatory: Encounter for check up (Polyp of colon)\n2025-02-26 ambulatory: Encounter for check up (Patient referral for dental care)\n2025-02-12 wellness: General examination of patient\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact); Self-care interventions"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Acetaminophen 325 MG Oral Tablet [Tylenol]",
+        "2026-02",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.4",
+        "%",
+        "< 5.7",
+        "2026-02-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "83.4",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-02-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "157.7",
+        "mg/dL",
+        "< 200",
+        "2024-02-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "78.5",
+        "mg/dL",
+        "< 100",
+        "2024-02-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "58.7",
+        "mg/dL",
+        ">= 40",
+        "2024-02-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "103",
+        "mg/dL",
+        "< 150",
+        "2024-02-07"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.2",
+        "g/dL",
+        "12.0-17.5",
+        "2024-02-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "10.3",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-02-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "355.8",
+        "10*3/uL",
+        "150-450",
+        "2024-02-14"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-02-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.5",
+        "mmol/L",
+        "135-145",
+        "2026-02-18"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "9.5",
+        "mg/dL",
+        "7-20",
+        "2026-02-18"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused diet history including meal pattern, typical foods, beverages, and portions to identify patterns relevant to prediabetes and weight management.",
+    "factIds": [
+     "s13"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify practical and psychosocial barriers to healthy eating, including chronic pain limiting food preparation and the challenges of cooking for one in a crowded household.",
+    "factIds": [
+     "s1",
+     "s3",
+     "s4",
+     "s10"
+    ],
+    "actionIds": [
+     "a5",
+     "a6"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Review relevant anthropometrics and laboratory data (BMI, HbA1c, fasting glucose, lipids, hemoglobin) and explain findings to the patient in plain, non-numeric language appropriate to her health literacy.",
+    "factIds": [
+     "h15",
+     "h16"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Reconcile discrepancies between the patient's current self-reported eating pattern and medication use versus prior documentation in the chart, exploring possible reasons without confronting the patient directly.",
+    "factIds": [
+     "h21",
+     "h22"
+    ],
+    "actionIds": [
+     "a13",
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Formulate a nutrition diagnosis based on assessment findings, integrating diet history, barriers, and biochemical/anthropometric data.",
+    "factIds": [
+     "h15",
+     "s14"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Apply motivational interviewing techniques to explore a precontemplative patient's ambivalence about dietary change, gently uncover sensitive information about nighttime eating patterns, and collaboratively identify one small, realistic step she herself identifies.",
+    "factIds": [
+     "h3",
+     "h4",
+     "s7",
+     "s14",
+     "s15",
+     "s17"
+    ],
+    "actionIds": [
+     "a4"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Excessive energy intake and irregular meal pattern (nighttime grazing/binge eating of energy-dense snack foods, skipped breakfast, heavy reliance on convenience/fast foods) related to chronic pain limiting food preparation, unresolved grief after 2023 pregnancy loss, and low health literacy; evidenced by BMI 30 kg/m2, A1c 6.4%, and self-reported eating pattern",
+   "differential": [
+    "Nutrition diagnosis: Excessive energy intake related to nighttime binge eating and reliance on convenience/fast food, as evidenced by BMI 30 and A1c 6.4%",
+    "Nutrition diagnosis: Undesirable food choices related to limited cooking ability from chronic pain and low health literacy, as evidenced by diet history of frozen meals, fast food, and sugar-sweetened beverages",
+    "Nutrition diagnosis: Disordered eating pattern (nocturnal eating) related to unresolved emotional distress (2023 miscarriage), as evidenced by patient report of eating alone at night 'without noticing' and concealing wrappers",
+    "Not a nutrition diagnosis but a pertinent medical consideration: mild anemia (Hgb 11.2) that may contribute to fatigue reported by patient, not primarily nutrition-related today but worth noting for referral"
+   ],
+   "keyFindings": [
+    "BMI 30 kg/m2 (height 153.2 cm, weight 70.5 kg) consistent with obesity",
+    "A1c 6.4% (2026-02-18) and fasting glucose 83.4 mg/dL, consistent with prediabetes",
+    "Vitals 2026-02-18: BP 138/75, HR 80, RR 13 - unremarkable for this visit",
+    "Lipid panel 2024-02-07 within normal limits (TC 157.7, LDL 78.5, HDL 58.7, TG 103)",
+    "Hemoglobin 11.2 g/dL (2024-02-14), mildly low, with pale conjunctiva/nail beds on exam",
+    "Electrolytes/renal function normal (K 4.5, Na 140.5, BUN 9.5)",
+    "Diet history reveals skipped breakfast, grazing through day, large late-night meal, heavy reliance on frozen/fast food, soda/sweetened tea as primary fluids",
+    "Reluctant disclosure: nighttime consumption of large quantities of chips/cookies 'without noticing,' sometimes eaten alone to avoid partner seeing",
+    "Mismatch: pharmacy refill records show near-daily acetaminophen use and a prior nutrition note stating she 'eats three meals a day,' which conflicts with her current report of skipping breakfast most days",
+    "Hidden fact (only emerges with sustained rapport): nighttime eating began after her 2023 miscarriage as a way to fall back asleep, and she disposes of wrapper evidence outside rather than in household trash"
+   ],
+   "plan": [
+    "Complete a structured 24-hour recall/diet history and compare against prior documented intake note to gently reconcile the three-meals-a-day discrepancy",
+    "Review relevant labs (A1c, fasting glucose, lipids, hemoglobin) and vital signs in context of nutrition diagnosis, explaining results in plain, non-numeric language she can use",
+    "Formulate and document a PES-format nutrition diagnosis addressing excessive energy intake and nighttime eating pattern",
+    "Use motivational interviewing (open-ended questions, reflective listening, avoiding direct advice-giving) to explore her ambivalence about her eating and connect, at her pace, to how she already feels (pain, fatigue, sleep)",
+    "Identify one or two small, pain-compatible, culturally relevant behavior changes she identifies herself (e.g., a simple no-cook breakfast item, swapping one soda for water/agua fresca) rather than prescribing a full diet overhaul",
+    "Explore ways to redirect her partner's hovering toward practical support (e.g., grocery shopping) rather than monitoring, if she is receptive",
+    "Screen gently for nighttime eating pattern and associated distress; if disclosed, acknowledge supportively and consider referral to behavioral health/counseling for unresolved grief, without pressing for details beyond what she offers",
+    "Document anemia and fatigue findings for PCP follow-up; this is not the primary focus of today's nutrition visit"
+   ],
+   "redFlags": [
+    "Mildly low hemoglobin (11.2 g/dL) with pale conjunctiva/nail beds - warrants PCP follow-up though not acutely urgent",
+    "Patient minimizes/denies connection between diet and prediabetes despite clear precontemplation stage - risk of disengagement if lectured",
+    "Concealment behavior around nighttime eating (hiding wrappers outside the house) suggests shame/distress that may need behavioral health referral if she discloses more",
+    "History of pregnancy loss (2023) with eating behavior onset immediately after - possible unresolved grief, consider gentle referral if she is open to it"
+   ],
+   "educationPoints": [
+    "Explain A1c and glucose results in plain, non-numeric terms (e.g., 'your blood sugar is a little higher than it should be, but we caught it early and small changes can help') rather than citing percentages or reference ranges",
+    "Normalize that convenience and fast foods are not 'bad' but discuss simple ways to make them a little more balanced (adding a vegetable side, smaller portion from the tray) without requiring full home cooking",
+    "Discuss that sugary drinks (soda, sweetened tea) raise blood sugar more than water, using concrete comparisons rather than numbers (e.g., comparing to spoonfuls of sugar)",
+    "Validate that her back pain and energy level are real priorities, and frame nutrition changes as potentially helping her feel less tired or achy, rather than solely about weight or labs",
+    "Offer reassurance that nighttime eating is common and not something to feel ashamed of, if she discloses it, and that support is available without judgment",
+    "Discuss practical, low-standing-time food prep ideas (e.g., pre-portioned snacks, sitting while prepping) that respect her pain limitations"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Patient reports skipping breakfast most days, having only coffee, then grazing through the day and eating her largest meal late at night (a2, a1)",
+    "recordEvidence": "Prior PCP nutrition intake note documents patient self-report of 'eats three meals a day, no significant dietary concerns noted' (d2)",
+    "teachingPoint": "Dietary self-report can change over time or vary by context/rapport; reconcile discrepancies between current recall and prior documentation with curiosity rather than confrontation, since both may reflect the patient's honest perception at different moments.",
+    "artifactId": "d2"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Patient reports taking acetaminophen 325 mg as needed for pain, not on a fixed schedule, and feels it provides little relief but 'just takes it anyway' (h21, h22)",
+    "recordEvidence": "Pharmacy refill history shows acetaminophen 325 mg tablets refilled monthly at a quantity consistent with near-daily use (d3)",
+    "teachingPoint": "Patients may underestimate or minimize how consistently they use a medication; refill records can reveal a pattern of near-daily use that differs from a patient's description of irregular, as-needed dosing, which is relevant context for her pain and sleep disruption affecting eating patterns.",
+    "factId": "h21",
+    "artifactId": "d3"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 32,
+   "condition": "Anemia",
+   "conditionLabel": "52 F · Anemia, Prediabetes, Sepsis +3 · 1 medication",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "3594a7c0",
+   "fingerprint": "iukm11"
+  }
+ }
+}

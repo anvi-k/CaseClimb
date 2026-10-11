@@ -1,0 +1,1010 @@
+{
+ "origin": "sample",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home weight trend / weigh-in",
+    "result": "Current weight 145 lbs (65.8 kg), height 5'11\" (180 cm), BMI 19.0 kg/m^2. Weight down from 155 lbs 6 months ago (-6.5%, >5% unintentional weight loss in 6 months).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Review vital signs flowsheet",
+    "result": "Temp 98.6°F, HR 88 bpm irregular, BP 132/84 mmHg, RR 18/min, SpO2 97% room air.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "lab",
+    "name": "Review HbA1c",
+    "result": "HbA1c 9.2% (goal <7%) — poorly controlled type 2 diabetes.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review random blood glucose",
+    "result": "Random glucose 245 mg/dL.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review lipid panel",
+    "result": "Total cholesterol 210 mg/dL, HDL 38 mg/dL (L), LDL 110 mg/dL, Triglycerides 155 mg/dL.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "lab",
+    "name": "Review renal function panel",
+    "result": "eGFR 67 mL/min/1.73m2, Creatinine 1.3 mg/dL (H) — mildly reduced kidney function, relevant for metformin dosing and sodium/potassium counseling.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "lab",
+    "name": "Review electrolytes",
+    "result": "Sodium 138 mEq/L, Potassium 4.1 mEq/L — within normal limits.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review CBC",
+    "result": "Hemoglobin 12.5 g/dL (low-normal), no significant anemia flagged.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review medication list and refill history",
+    "result": "Lisinopril 10mg qAM, Metoprolol succinate 25mg qAM, Carvedilol 8mg BID all show consistent on-time refills. Metformin 500mg daily with dinner shows refill gaps consistent with inconsistent use (last fill 45 days overdue).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review cardiology/HF clinic note",
+    "result": "NYHA Class C heart failure (structural heart disease with current or prior symptoms), stable on guideline-directed medical therapy, prior CABG 10 years ago. No current recommendation for fluid restriction documented.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "24-hour diet recall / usual intake assessment",
+    "result": "Patient reports skipping breakfast most days, small lunch, large dinner (often 8-9 PM) that triggers fullness/discomfort and occasional palpitations; low fruit intake; avoids dairy; limited fluid intake aside from water/tea.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Nutrition-focused physical exam (patient self-exam via camera)",
+    "result": "Patient shows mild temporal wasting and visibly thin forearms on camera; right ankle shows 1+ pitting edema when patient presses on it himself; no visible muscle wasting assessment of calves possible due to swelling.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Malnutrition screening (e.g., MST or similar)",
+    "result": "Score indicates moderate risk: unintentional weight loss >5% in 6 months plus reduced intake pattern (early satiety limiting meal volume).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "result": "Patient scores in precontemplation to early contemplation stage; acknowledges diet 'matters' but unsure of specific action steps; open to simple, concrete suggestions.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review prior GI workup notes",
+    "result": "Multiple upper endoscopies over past 2 years, all with normal findings; no structural cause identified for early satiety.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Estimate energy and protein needs",
+    "result": "Estimated needs approximately 1850-2000 kcal/day and 70-80 g protein/day (about 1.1-1.2 g/kg) based on 65.8 kg body weight, adjusted for underweight status and need to preserve lean mass without excess sodium/fluid load.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "vitals",
+    "name": "Review home blood glucose log",
+    "result": "No home glucose monitoring log on file; patient has not been given or is not using a glucometer.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "medication_list",
+    "title": "Current Medication List with Refill History",
+    "date": "Day of visit",
+    "author": "Primary care clinic / pharmacy records",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Purpose",
+      "Last Fill Date",
+      "Days Supply Remaining"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Every morning",
+        "HF / BP control",
+        "12 days ago",
+        "On schedule"
+       ]
+      },
+      {
+       "cells": [
+        "Metoprolol succinate",
+        "25 mg",
+        "Every morning",
+        "HF / rate control",
+        "10 days ago",
+        "On schedule"
+       ]
+      },
+      {
+       "cells": [
+        "Carvedilol",
+        "8 mg",
+        "Twice daily",
+        "HF management",
+        "11 days ago",
+        "On schedule"
+       ]
+      },
+      {
+       "cells": [
+        "Metformin",
+        "500 mg",
+        "Once daily with dinner",
+        "Blood sugar control",
+        "68 days ago",
+        "Overdue refill ~45 days; pattern of gaps over past 6 months"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Laboratory Results - Comprehensive Panel",
+    "date": "1 week prior to visit",
+    "author": "Westside Medical Lab",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "9.2",
+        "%",
+        "4.0-5.6"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Random Glucose",
+        "245",
+        "mg/dL",
+        "70-140 (random, non-fasting)"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Total Cholesterol",
+        "210",
+        "mg/dL",
+        "<200"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "HDL Cholesterol",
+        "38",
+        "mg/dL",
+        "40-60"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "LDL Cholesterol",
+        "110",
+        "mg/dL",
+        "<100"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "155",
+        "mg/dL",
+        "<150"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "eGFR",
+        "67",
+        "mL/min/1.73m2",
+        "60-120"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.3",
+        "mg/dL",
+        "0.7-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "138",
+        "mEq/L",
+        "135-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mEq/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "12.5",
+        "g/dL",
+        "13.5-17.5"
+       ],
+       "flag": "L"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "flowsheet",
+    "title": "Vital Signs - Today's Visit",
+    "date": "Day of visit",
+    "author": "Telehealth intake",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Parameter",
+      "Value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Temperature",
+        "98.6°F (37.0°C)"
+       ]
+      },
+      {
+       "cells": [
+        "Pulse",
+        "88 bpm, irregular"
+       ]
+      },
+      {
+       "cells": [
+        "Blood Pressure",
+        "132/84 mmHg"
+       ]
+      },
+      {
+       "cells": [
+        "Respiratory Rate",
+        "18/min"
+       ]
+      },
+      {
+       "cells": [
+        "SpO2",
+        "97% room air"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Weight Trend - Past 6 Months",
+    "date": "Day of visit",
+    "author": "Clinic records",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Months ago",
+     "yLabel": "Weight (lbs)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "6 months ago",
+         "y": 155
+        },
+        {
+         "x": "5 months ago",
+         "y": 153
+        },
+        {
+         "x": "4 months ago",
+         "y": 151
+        },
+        {
+         "x": "3 months ago",
+         "y": 149
+        },
+        {
+         "x": "2 months ago",
+         "y": 147
+        },
+        {
+         "x": "1 month ago",
+         "y": 146
+        },
+        {
+         "x": "Today",
+         "y": 145
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Cardiology Follow-up Note (3 months ago)",
+    "date": "3 months ago",
+    "author": "Dr. Patel, Cardiology",
+    "release": {
+     "when": "start"
+    },
+    "body": "Mr. Ramirez seen for routine HF follow-up. NYHA Class C heart failure, structural heart disease with prior symptomatic episodes, now stable on guideline-directed medical therapy (ACE-inhibitor, beta-blockers). Prior CABG x3 vessels 10 years ago, no recurrent angina. Mild lower extremity edema noted, stable from prior visit. Continue current regimen. No fluid restriction ordered at this time. Diabetes newly diagnosed, referred to nutrition and PCP for management."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "GI Clinic Note - EGD Summary",
+    "date": "8 months ago",
+    "author": "Dr. Lin, Gastroenterology",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient referred for evaluation of early satiety and intermittent upper abdominal discomfort. Upper endoscopy performed, second procedure in 18 months. Mucosa normal throughout esophagus, stomach, and duodenum. No evidence of gastroparesis-specific testing performed. No structural abnormality identified. Symptoms likely functional or related to meal pattern/cardiac status; recommend nutrition consult."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Apply the Nutrition Care Process to synthesize assessment data (weight trend, BMI, labs, intake pattern) into an accurate PES statement reflecting unintended weight loss and inadequate oral intake related to early satiety and poorly controlled diabetes.",
+    "factIds": [
+     "f1",
+     "f6",
+     "f7",
+     "f20",
+     "f21"
+    ],
+    "actionIds": [
+     "a1",
+     "a3",
+     "a11",
+     "a13"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify the discrepancy between reported medication adherence and refill history for metformin, and explore barriers using motivational interviewing rather than confrontation.",
+    "factIds": [
+     "f14",
+     "f15"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate nutrition care with medication regimen by recognizing how meal timing, metformin timing, and GI symptoms interact without providing medical advice outside scope.",
+    "factIds": [
+     "f13",
+     "f14",
+     "f15",
+     "f16"
+    ],
+    "actionIds": [
+     "a9",
+     "a16"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Use motivational interviewing techniques to explore the patient's beliefs that heart disease and diabetes are unrelated, and his fear that weight gain/eating more could worsen his heart failure or cause frailty concerns to be reconciled with unintentional weight loss.",
+    "factIds": [
+     "f23",
+     "f24",
+     "f25",
+     "f29"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess psychosocial and financial barriers (cost of fresh produce, work schedule, fatigue, low health literacy) and tailor recommendations to his stated preference for simple, concrete, non-overwhelming steps.",
+    "factIds": [
+     "f30",
+     "f31",
+     "f32",
+     "f17"
+    ],
+    "actionIds": [
+     "a11",
+     "a14"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify and appropriately engage available support resources (adult son, community programs) while respecting the patient's value of independence.",
+    "factIds": [
+     "f18",
+     "f19"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition assessment - new type 2 diabetes diagnosis, early satiety, unintentional weight loss"
+   },
+   {
+    "label": "Problem list",
+    "value": "Heart failure NYHA Class C; Type 2 Diabetes Mellitus (new, 6 months); Essential Hypertension; Metabolic Syndrome; s/p CABG x3 vessels (10 years ago)"
+   },
+   {
+    "label": "Medications",
+    "value": "Lisinopril 10mg qAM; Metoprolol succinate 25mg qAM; Carvedilol 8mg BID; Metformin 500mg daily with dinner; Fish oil 1g/day (OTC); Multivitamin weekly (OTC)"
+   },
+   {
+    "label": "Allergies",
+    "value": "Penicillin (mild rash, 2012); NKDA otherwise"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 132/84, HR 88 irregular, Temp 98.6F, RR 18, SpO2 97% RA, Weight 145 lb, Height 5'11\""
+   },
+   {
+    "label": "Care team",
+    "value": "PCP (Dr. Nguyen), Cardiology (Dr. Patel), Gastroenterology (Dr. Lin) - referred for nutrition consult"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "difficulty": 4,
+  "patient": {
+   "name": "Marcus Ramirez",
+   "age": 59,
+   "sex": "Male",
+   "pronouns": "he/him",
+   "ethnicity": "Hispanic/Latino",
+   "occupation": "Sales associate at Westwood One (radio sales)",
+   "language": "English (fluent), Spanish (fluent)",
+   "appearance": "Seated at a small kitchen table in his apartment, wearing a collared work shirt as if just home from work. Thin build, posture upright but slightly guarded. Keeps a glass of water nearby but rarely drinks it. Speaks in short, measured sentences and makes brief eye contact with the camera.",
+   "portrait": "/portraits/marcus-ramirez.jpg"
+  },
+  "persona": {
+   "personality": "Cautious, stoic, and practical. Avoids emotional discussions and reluctant to express vulnerability, but highly observant and capable once he trusts the information given.",
+   "communicationStyle": "Direct, literal, concise. Uses short sentences and factual statements. Rarely asks clarifying questions unless prompted. May lapse into Spanish phrases when discussing food or family.",
+   "healthLiteracy": "low",
+   "emotionalState": "Guarded and mildly anxious beneath a calm exterior; worried about losing independence but doesn't volunteer this easily.",
+   "background": "Born and raised in the city, works in radio ad sales, divorced about 8 years ago, lives alone in an apartment. Has one adult son nearby who helps occasionally with groceries and rides. Enjoys watching soccer, used to cook big family meals on weekends before his energy declined. Quit a 30-pack-year smoking habit 15 years ago after his bypass surgery.",
+   "speechExamples": [
+    "I eat when I remember to. Mostly dinner.",
+    "Doc says sugar's high. I don't really get what that has to do with my heart.",
+    "I don't want to end up a burden on my son. That's the big thing.",
+    "Spicy food, I love it, but it messes with my stomach now so I stay away.",
+    "Fruit's got sugar in it, right? I figured I should skip it."
+   ],
+   "concerns": [
+    "Worried diet changes will be too complicated to keep up with",
+    "Thinks early satiety might be permanent",
+    "Doesn't fully see the link between his heart condition and his blood sugar",
+    "Afraid that gaining weight back could strain his heart, but also afraid of becoming frail",
+    "Doesn't want to feel like a burden to his family"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a dietetics student conducting a telehealth nutrition assessment for Marcus Ramirez, a 59-year-old man with heart failure and newly diagnosed type 2 diabetes, referred for medical nutrition therapy. He reports early satiety, fatigue, and uncertainty about how diet relates to his conditions. Conduct a full nutrition assessment, identify a nutrition diagnosis using PES format, and provide patient-centered counseling using motivational interviewing.",
+   "chiefComplaint": "Early satiety, fatigue, and uncertainty about diet's role in managing newly diagnosed diabetes alongside heart failure",
+   "openingLine": "Hi. They said I should talk to a dietitian. I get full real fast when I eat, and I'm tired a lot. Not sure food's really the issue though - that's what the pills are for, right?",
+   "tasks": [
+    "Obtain a thorough diet history including meal pattern, food preferences, fluid intake, and barriers",
+    "Review relevant anthropometric data, labs, and medication list with the patient",
+    "Explore the patient's beliefs about diet, diabetes, and heart failure using open-ended, motivational interviewing techniques",
+    "Formulate a PES statement and propose 2-3 simple, concrete, patient-centered next steps"
+   ],
+   "timeLimitMin": 30
+  },
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "early satiety",
+    "chart": "Reports early satiety after small meals, longstanding over past several months",
+    "says": "I get full real fast, even if I only eat a little bit. It's annoying.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "chief_complaint",
+    "topic": "energy level",
+    "chart": "Reports persistent fatigue and low energy",
+    "says": "I'm tired a lot. Just don't have the get-up-and-go I used to.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "chief_complaint",
+    "topic": "leg swelling",
+    "chart": "Reports mild swelling in right ankle",
+    "says": "My right ankle gets puffy sometimes, especially by end of day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "chief_complaint",
+    "topic": "medication list",
+    "chart": "States he is on multiple medications for heart and diabetes",
+    "says": "I take pills for my heart and now one for sugar too.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f5",
+    "category": "chief_complaint",
+    "topic": "diagnoses known",
+    "chart": "Aware of heart failure and new type 2 diabetes diagnosis",
+    "says": "They told me I got heart failure a couple years back, and now sugar diabetes too, just found out six months ago.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "meal schedule barriers",
+    "chart": "Reports irregular meal schedule due to fatigue and inconsistent work shifts",
+    "says": "Some days I don't eat till dinner. Work's got me running around, and honestly I just don't feel like eating earlier.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "dinner timing and symptoms",
+    "chart": "Reports large, late dinner (often 8-9 PM) followed by fullness, discomfort, occasional palpitations",
+    "says": "Dinner's my big meal, usually around 8 or 9. After I eat I sometimes feel my heart doing a little flutter thing.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "breakfast habits",
+    "chart": "Skips breakfast most days",
+    "says": "Breakfast? Nah, usually just coffee. Maybe nothing at all.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "lunch pattern",
+    "chart": "Eats small lunch, often fast food or convenience food near work",
+    "says": "Lunch is small, whatever's quick. Sandwich, maybe.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "nutrition",
+    "topic": "fruit avoidance",
+    "chart": "Avoids fruit due to belief it will spike blood sugar",
+    "says": "Fruit's got a lot of sugar in it, right? I figured I should just stay away from it now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "nutrition",
+    "topic": "dairy avoidance",
+    "chart": "Avoids dairy due to mild lactose intolerance symptoms",
+    "says": "Milk and stuff, it messes with my stomach a bit, so I don't really do dairy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "nutrition",
+    "topic": "spicy food avoidance",
+    "chart": "Avoids previously enjoyed spicy Latin dishes due to fear of bloating/discomfort",
+    "says": "I love spicy food, grew up on it, but now it messes with my stomach so I stay away.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "nutrition",
+    "topic": "fluid intake",
+    "chart": "Drinks fluid inconsistently, mostly water or tea only when thirsty, often underhydrated during day",
+    "says": "I drink water when I think about it. Not a lot, honestly. Maybe I should drink more.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "metformin routine",
+    "chart": "Reports taking metformin daily with dinner but inconsistently - takes it 'when he remembers'",
+    "says": "I take the sugar pill with dinner, mostly. Sometimes I forget though. Doesn't seem to do much anyway.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "metformin side effects",
+    "chart": "Fears GI upset from metformin and doesn't perceive clear benefit, contributing to inconsistent use",
+    "says": "That pill upsets my stomach sometimes. And I don't really feel different whether I take it or not.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "medications",
+    "topic": "heart medication adherence",
+    "chart": "Reports consistent daily adherence with lisinopril, metoprolol, carvedilol",
+    "says": "My heart pills, those I never miss. Those I take every day, no question.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "medications",
+    "topic": "dizziness concern",
+    "chart": "Fears dizziness with lisinopril, especially standing up",
+    "says": "Sometimes I get a little dizzy standing up fast. I figure it's the pill.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives alone in urban apartment, divorced",
+    "says": "I live by myself. Been divorced about eight years now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "social",
+    "topic": "family support",
+    "chart": "Has supportive adult son nearby who helps with groceries/transportation, but patient prefers independence",
+    "says": "My son helps with groceries sometimes, drives me places. But I like doing things myself when I can.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "other",
+    "topic": "weight change awareness",
+    "chart": "Aware he has lost weight recently but unsure of exact amount or cause",
+    "says": "Yeah, my pants are looser. Didn't really try to lose weight though.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f21",
+    "category": "other",
+    "topic": "weight loss cause",
+    "chart": "Attributes recent weight loss to not eating as much due to fullness, not intentional dieting",
+    "says": "I think it's 'cause I just don't eat as much anymore. Food doesn't go down easy.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "nighttime urination",
+    "chart": "Reports frequent nighttime urination disrupting sleep",
+    "says": "I'm up two, three times a night to use the bathroom. Didn't used to be like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "psychosocial",
+    "topic": "beliefs about heart and sugar connection",
+    "chart": "Believes heart failure and diabetes are separate, unrelated conditions managed independently",
+    "says": "The heart thing and the sugar thing, those are two different problems, right? I don't see how food fixes both.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f24",
+    "category": "psychosocial",
+    "topic": "weight gain fear",
+    "chart": "Fears that eating more or gaining weight could worsen heart failure symptoms",
+    "says": "If I eat more and gain weight back, won't that be bad for my heart? Isn't that more work for it?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "frailty concern",
+    "chart": "Fears being underweight could lead to frailty and loss of independence",
+    "says": "But if I'm too skinny, don't I get weak? I don't want to end up frail either.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "burden to family",
+    "chart": "Fears becoming a burden to his son or daughters if health worsens",
+    "says": "I don't want to end up a burden on my son. That's the big thing for me.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "permanence of symptoms",
+    "chart": "Worries early satiety is a permanent, unchangeable part of his life",
+    "says": "I figure this full-fast thing, that's just how it's gonna be from now on.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "psychosocial",
+    "topic": "complexity worry",
+    "chart": "Worries that dietary changes will be too complicated or time-consuming to maintain",
+    "says": "If this diet thing is complicated, I probably won't keep up with it, just being honest.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "health priorities",
+    "chart": "Primary goals are symptom stability, improved energy, avoiding hospitalization, and simple actionable steps",
+    "says": "I just want to feel steady, have some energy, and not end up back in the hospital. Keep it simple for me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "social",
+    "topic": "grocery cost concerns",
+    "chart": "Reluctant to admit financial limitations affecting ability to buy fresh produce",
+    "says": "Money's tight some months. Fresh stuff costs more, so I don't always get it.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "function",
+    "topic": "activity limitation",
+    "chart": "Rarely active; limited mobility due to fatigue from heart failure, cannot walk far without tiring",
+    "says": "Walking more than a block or two, I get wiped out. So I just don't really move much.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "function",
+    "topic": "meal preparation energy",
+    "chart": "Fatigue limits ability to prepare more complex or frequent meals",
+    "says": "By the time I get home, I don't have energy to cook much. That's part of why dinner's the one real meal.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f33",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "30 pack-year smoking history, quit 15 years ago after CABG",
+    "says": "I used to smoke, quit that after my heart surgery, must be 15 years now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f34",
+    "category": "other",
+    "topic": "herbal tea use",
+    "chart": "Drinks sage leaf herbal tea when feeling unwell, believes it settles his stomach",
+    "says": "When I feel off, I'll have some sage tea. My abuela always said it helps.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f35",
+    "category": "other",
+    "topic": "supplement use",
+    "chart": "Takes fish oil 1g daily (self-started) and multivitamin once weekly",
+    "says": "I take fish oil every day, started that myself. And a multivitamin, maybe once a week if I remember.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f36",
+    "category": "pmh",
+    "topic": "prior GI workups",
+    "chart": "Has had multiple upper endoscopies with normal findings for early satiety/discomfort",
+    "says": "They looked down my throat with the camera twice now. Doctor said everything looked fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f37",
+    "category": "psychosocial",
+    "topic": "stress sources",
+    "chart": "Reports stress related to work and family but unsure how to manage it",
+    "says": "Work stresses me out, family stuff too sometimes. I don't really have a way to deal with it, I just push through.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f14",
+    "artifactId": "d1",
+    "patientClaim": "He states he takes metformin daily with dinner, 'mostly,' and frames it as a consistent habit even though he admits to occasionally forgetting.",
+    "recordEvidence": "Pharmacy refill history shows metformin was last filled 68 days ago with a pattern of recurring gaps over the past 6 months, while his heart failure medications show on-schedule refills every ~10-12 days as expected.",
+    "teachingPoint": "Self-reported adherence often overestimates actual medication-taking behavior. Refill/pharmacy records can reveal gaps that patients may not fully recognize or may minimize; this is a cue to explore barriers (GI side effects, perceived lack of benefit) non-judgmentally using motivational interviewing rather than confronting the discrepancy directly."
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Poorly controlled Type 2 Diabetes with unintentional weight loss and inadequate oral intake related to early satiety, in the context of NYHA Class C heart failure",
+   "differential": [
+    "Inadequate oral intake (NI-2.1) related to early satiety and irregular/skipped meals as evidenced by 6.5% unintentional weight loss over 6 months and BMI 19.0",
+    "Food- and nutrition-related knowledge deficit (NB-1.1) related to lack of understanding of the relationship between dietary pattern, heart failure, and glycemic control as evidenced by patient statements that heart and sugar problems are unrelated",
+    "Inconsistent carbohydrate intake / disordered meal pattern (NI-5.8.2 or NB-1.5) related to large, late evening meals and skipped breakfast as evidenced by diet history and post-meal palpitation reports",
+    "Altered nutrition-related laboratory values (NC-2.2) related to uncontrolled diabetes as evidenced by HbA1c 9.2% and random glucose 245 mg/dL"
+   ],
+   "keyFindings": [
+    "BMI 19.0 kg/m^2 with unintentional weight loss of 10 lbs (6.5%) over 6 months - nutritionally significant",
+    "HbA1c 9.2% and random glucose 245 mg/dL indicating poorly controlled diabetes despite inconsistent metformin use",
+    "Irregular meal pattern: skipped breakfast, small lunch, large late dinner (8-9 PM) associated with early satiety, fullness, and post-meal palpitations",
+    "Fruit and dairy avoidance based on misconceptions, narrowing nutrient variety (fiber, potassium, calcium, vitamin C)",
+    "Inconsistent fluid intake with risk of dehydration, notable given diuretic-adjacent heart failure regimen (though no fluid restriction currently ordered)",
+    "Mismatch between reported 'mostly consistent' metformin adherence and refill records showing significant gaps, linked to GI side effect fears and perceived lack of benefit",
+    "Belief that heart failure and diabetes are separate, independently managed conditions, reflecting a knowledge gap about the role of diet in both",
+    "Fear of weight gain worsening heart failure versus fear of being 'too skinny'/frail, creating ambivalence about increasing intake",
+    "Financial barriers to fresh produce and fatigue-limited meal preparation capacity",
+    "Normal multiple EGD findings ruling out structural GI cause for early satiety, supporting a functional/meal-pattern-related or cardiac-related etiology"
+   ],
+   "plan": [
+    "Formulate and document PES statement: 'Inadequate oral intake related to early satiety and irregular meal pattern as evidenced by 6.5% unintentional weight loss over 6 months and BMI 19.0 kg/m^2'",
+    "Recommend smaller, more frequent meals (5-6 small meals/day) distributing intake earlier in the day to reduce single-meal volume and post-dinner symptoms, while preserving total caloric/protein adequacy (~1850-2000 kcal, 70-80g protein/day)",
+    "Provide simple education connecting diet, blood glucose, and heart failure symptoms using plain language and the patient's preferred level of detail; correct misconception that fruit must be avoided entirely (recommend whole fruit in moderate, consistent portions as part of carbohydrate counting)",
+    "Address metformin adherence barriers collaboratively using motivational interviewing (explore GI side effect concerns and perceived lack of benefit) and recommend patient discuss timing/formulation (e.g., extended release) with prescribing provider rather than dietitian independently adjusting medication",
+    "Encourage small, consistent fluid intake throughout the day given no current fluid restriction, while coordinating with cardiology if restrictions are added later",
+    "Discuss appropriate reintroduction of lactose-containing foods in small amounts or lactose-free alternatives to support calcium/protein intake",
+    "Identify and connect patient with community resources (e.g., SNAP, local food assistance, diabetes self-management education program) to address financial barriers to fresh produce",
+    "Involve son in meal planning/grocery support in a way that respects patient's wish for independence, per patient's comfort level",
+    "Schedule follow-up nutrition visit to reassess weight trend, intake, and glycemic control, and coordinate with PCP/cardiology regarding medication adherence and symptom monitoring"
+   ],
+   "redFlags": [
+    "Unintentional weight loss >5% in 6 months with BMI near underweight threshold in setting of chronic heart failure - risk for cardiac cachexia if trend continues",
+    "Irregular heart rate (88 bpm, irregular) with post-meal palpitations - warrants communication to medical team, not solely a nutrition issue",
+    "HbA1c 9.2% indicating significantly uncontrolled diabetes with inconsistent medication adherence - risk for progression/complications",
+    "Elevated creatinine (1.3) with reduced eGFR (67) - relevant to future medication dosing and electrolyte monitoring, flag for medical team awareness"
+   ],
+   "educationPoints": [
+    "Diabetes and heart failure are interconnected: dietary patterns (meal timing, portion size, carbohydrate distribution) affect both blood sugar control and cardiac symptom burden, they are not separate systems to manage independently",
+    "Unintentional weight loss in heart failure is a warning sign, not necessarily a positive outcome, and differs from intentional weight loss for cardiovascular risk reduction",
+    "Smaller, more frequent meals distributed across the day can reduce early satiety-related symptoms and post-meal palpitations while supporting adequate nutrient intake",
+    "Whole fruit in consistent, moderate portions can fit into a diabetes meal plan and does not need to be eliminated; pairing with protein/fat can blunt glycemic response",
+    "Self-reported medication adherence can differ from actual adherence; open, non-judgmental conversation about barriers (side effects, perceived benefit) is more productive than confrontation",
+    "Simple, concrete, stepwise changes are more sustainable than complex overhauls, particularly given this patient's stated preferences and barriers (fatigue, low health literacy, cost)"
+   ]
+  },
+  "summary": "A 59-year-old man with NYHA Class C heart failure and newly diagnosed type 2 diabetes presents for telehealth nutrition assessment with early satiety, fatigue, and unintentional weight loss, while holding the belief that his heart and diabetes conditions are unrelated and manageable through medication alone. The case teaches application of the Nutrition Care Process to a complex cardiometabolic patient, including recognition of a medication adherence mismatch (reported vs. refill-confirmed metformin use) and use of motivational interviewing to address low health literacy, financial barriers, and competing fears about weight gain versus frailty.",
+  "title": "Early Satiety and Unintentional Weight Loss in a 59-Year-Old Man with Heart Failure and New Type 2 Diabetes",
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in his urban apartment",
+  "encounterType": "Nutrition assessment and counseling (initial MNT visit)",
+  "professions": [
+   "dietetics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

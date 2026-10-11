@@ -1,0 +1,35 @@
+{
+  "episode_id": "ep.0001",
+  "patient_record_id": "rec.maria-alvarez",
+  "patient_record_version": 1,
+  "status": "completed",
+  "started_at": "2026-10-09T14:00:00Z",
+  "ended_at": "2026-10-09T14:07:40Z",
+  "participants": [
+    { "participant_id": "p.patient", "kind": "ai", "role": "patient", "display_name": "Maria", "model": "anthropic.claude-opus-5-5" },
+    { "participant_id": "p.sam", "kind": "human", "role": "nurse_practitioner_student", "display_name": "Sam", "user_id": "u.sam" }
+  ],
+  "turns": [
+    { "turn_id": "t0", "index": 0, "participant_id": "p.sam", "at": "2026-10-09T14:00:05Z", "text": "Hi Mrs. Alvarez, I'm Sam, a nurse practitioner student. What brings you in today?" },
+    { "turn_id": "t1", "index": 1, "participant_id": "p.patient", "at": "2026-10-09T14:00:20Z", "text": "I'm thirsty all the time and I'm up all night going to the bathroom.", "avatar": { "emotion": "anxious", "intensity": 0.5 } },
+    { "turn_id": "t2", "index": 2, "participant_id": "p.sam", "at": "2026-10-09T14:00:40Z", "text": "That sounds exhausting. How long has that been going on?" },
+    { "turn_id": "t3", "index": 3, "participant_id": "p.patient", "at": "2026-10-09T14:00:55Z", "text": "About three months now. It keeps getting worse.", "avatar": { "emotion": "anxious", "intensity": 0.5 } },
+    { "turn_id": "t4", "index": 4, "participant_id": "p.sam", "at": "2026-10-09T14:01:30Z", "text": "Walk me through what you eat and drink on a normal day." },
+    { "turn_id": "t5", "index": 5, "participant_id": "p.patient", "at": "2026-10-09T14:01:50Z", "text": "Whatever's left at the cafeteria, mostly. And my sweet tea, four or five big glasses.", "avatar": { "emotion": "embarrassed", "intensity": 0.4, "gestures": ["looks away"] } },
+    { "turn_id": "t6", "index": 6, "participant_id": "p.sam", "at": "2026-10-09T14:02:30Z", "text": "I see you're on metformin. Are you taking it like you're supposed to?" },
+    { "turn_id": "t7", "index": 7, "participant_id": "p.patient", "at": "2026-10-09T14:02:45Z", "text": "Oh yes. I take my metformin every day.", "avatar": { "emotion": "embarrassed", "intensity": 0.6, "gestures": ["looks away"] } },
+    { "turn_id": "t8", "index": 8, "participant_id": "p.sam", "at": "2026-10-09T14:03:10Z", "text": "Great, that's good to hear. I'm going to order an HbA1c to see where your sugar has been." },
+    { "turn_id": "t9", "index": 9, "participant_id": "p.patient", "at": "2026-10-09T14:03:25Z", "text": "Okay. Is it bad? I just... I'm scared of where this is heading.", "avatar": { "emotion": "fearful", "intensity": 0.8, "gestures": ["wrings hands"] } },
+    { "turn_id": "t10", "index": 10, "participant_id": "p.sam", "at": "2026-10-09T14:04:00Z", "text": "Your HbA1c is 9.2 percent, which is high. Do you have any allergies?" },
+    { "turn_id": "t11", "index": 11, "participant_id": "p.patient", "at": "2026-10-09T14:04:15Z", "text": "No. No allergies.", "avatar": { "emotion": "sad", "intensity": 0.6 } },
+    { "turn_id": "t12", "index": 12, "participant_id": "p.sam", "at": "2026-10-09T14:06:50Z", "text": "Since you're already taking the metformin every day, we'll probably need to raise the dose. I'll talk to my preceptor and we'll see you in three months." },
+    { "turn_id": "t13", "index": 13, "participant_id": "p.patient", "at": "2026-10-09T14:07:30Z", "text": "All right. Thank you.", "avatar": { "emotion": "sad", "intensity": 0.5 } }
+  ],
+  "disclosures": [
+    { "item_id": "f.med.metformin", "item_type": "fact", "channel": "chart", "turn_id": "t0", "trigger": "visible at start" },
+    { "item_id": "f.hpi.thirst", "item_type": "fact", "channel": "patient", "turn_id": "t3", "trigger": "asked about duration of symptoms" },
+    { "item_id": "f.sh.diet", "item_type": "fact", "channel": "patient", "turn_id": "t5", "trigger": "asked about a typical day of eating and drinking" },
+    { "item_id": "f.lab.hba1c", "item_type": "fact", "channel": "chart", "turn_id": "t8", "trigger": "ordered HbA1c" }
+  ],
+  "grading": { "status": "ungraded" }
+}

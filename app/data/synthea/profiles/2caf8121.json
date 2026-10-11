@@ -1,0 +1,351 @@
+{
+ "patient_overview": {
+  "name": "Tosha Wuckert",
+  "age": 71,
+  "sex": "Female",
+  "description": "Tosha Wuckert is a 71-year-old White woman, married, living with her husband and two other family members in Ridgefield Park, New Jersey. She's a breast cancer survivor now in surveillance, with prediabetes, obesity, osteoporosis, and chronic back and neck pain, referred for nutrition counseling as part of her ongoing care. She greets a student with a big smile and a quip, cheerful and quick to laugh, but slides past anything that feels too personal or too technical with a joke or a change of subject. Underneath the warmth is a woman who's quietly worried about slipping back into old habits and about things she doesn't fully understand on her own.",
+  "keywords": [
+   "prediabetes",
+   "obesity",
+   "breast cancer survivor",
+   "osteoporosis",
+   "chronic pain",
+   "unhealthy alcohol use",
+   "low health literacy",
+   "maintenance stage relapse",
+   "family cook",
+   "faith community"
+  ]
+ },
+ "demographics": {
+  "occupation": "Front desk coordinator at a dental office in Hackensack, works full-time",
+  "residence": "Ridgefield Park, New Jersey; household of 4",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "High school diploma or GED",
+  "insurance": "Medicare",
+  "cultural_context": "Tosha was raised in a working-class New Jersey family where big Sunday dinners and a full table were a sign of love. She's been the one cooking for her household since she was a teenager helping her mother, and she still measures a good day by whether everyone ate well. Her Lutheran church has been her anchor since her thirties — choir on Wednesdays, potluck on Sundays — and she trusts her pastor and her church friends more than most doctors. She didn't go past high school and feels a flicker of shame about it that she covers with humor, especially when paperwork or pamphlets are involved."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Past pregnancy history of miscarriage",
+   "Body mass index 30+ - obesity",
+   "Malignant neoplasm of breast",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic neck pain",
+   "Osteoporosis",
+   "Unhealthy alcohol drinking behavior"
+  ],
+  "medical_history": [
+   "Past pregnancy history of miscarriage since 1986",
+   "Body mass index 30+ - obesity since 1999",
+   "Malignant neoplasm of breast since 1999",
+   "Prediabetes since 2007",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic neck pain since 2014",
+   "Osteoporosis since 2025",
+   "Unhealthy alcohol drinking behavior since 2025",
+   "Gingival disease (2021-09 to 2021-09, resolved)",
+   "Gingivitis (2022-09 to 2022-10, resolved)",
+   "Gingivitis (2024-10 to 2024-10, resolved)",
+   "Gingival disease (2024-10 to 2024-10, resolved)",
+   "Viral sinusitis (2025-02 to 2025-02, resolved)",
+   "Colonoscopy (2026-06-29)",
+   "Cytopathology procedure preparation of smear genital source (2026-01-03)",
+   "Manual pelvic examination (2026-01-03)",
+   "Mammography (2026-01-03)",
+   "Physical examination complete (2026-01-03)",
+   "Bone density scan (2025-10-08)"
+  ],
+  "current_symptoms": [
+   "Nagging low back pain that flares after standing at the stove too long",
+   "Stiff neck, especially in the morning, that loosens up by midday",
+   "General fatigue she blames on 'just getting older'",
+   "Occasional heartburn after big family dinners, which she waves off",
+   "Trouble sleeping some nights, which she says is from 'too much on her mind'"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Appears heavier-set with a BMI in the obese range, moves carefully and shifts weight off her lower back when standing",
+   "Mild stiffness and guarded posture in the neck and shoulders, winces briefly when reaching for something on a high shelf",
+   "Breath has a faint minty-gum smell, as if masking something, and she jokes about it when noticed",
+   "Hands show slight tremor when filling out the intake clipboard, and she pushes it toward her husband to finish"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.9 % (reference < 5.7; 2025-10-08)",
+   "Glucose: 86 mg/dL (reference 70-99 (fasting); 2025-10-08)",
+   "Total cholesterol: 123.1 mg/dL (reference < 200; 2023-09-27)",
+   "LDL cholesterol: 42.4 mg/dL (reference < 100; 2023-09-27)",
+   "HDL cholesterol: 55.7 mg/dL (reference >= 40; 2023-09-27)",
+   "Triglycerides: 125 mg/dL (reference < 150; 2023-09-27)",
+   "Haemoglobin: 14.6 g/dL (reference 12.0-17.5; 2022-09-21)",
+   "White cell count: 7.2 10*3/uL (reference 4.0-11.0; 2022-09-21)",
+   "Platelets: 306.4 10*3/uL (reference 150-450; 2022-09-21)",
+   "Potassium: 4.8 mmol/L (reference 3.5-5.1; 2025-10-08)",
+   "Sodium: 140.2 mmol/L (reference 135-145; 2025-10-08)",
+   "Urea nitrogen: 13.3 mg/dL (reference 7-20; 2025-10-08)"
+  ],
+  "vital_signs": [
+   "BP: 108/72 mmHg",
+   "HR: 87 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2025-10-08"
+  ],
+  "anthropometrics": [
+   "Height: 173.9 cm",
+   "Weight: 91.2 kg",
+   "BMI: 30.2 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule",
+    "dose": "10 MG",
+    "frequency": "Every 12 hours, extended release",
+    "purpose": "Not recorded",
+    "adherence": "Takes it fairly regularly for her back, though she sometimes stretches doses out to make the bottle 'last' when money feels tight",
+    "patient_concerns": "She jokes that it makes her 'loopy' and prefers not to talk about how much she actually relies on it"
+   },
+   {
+    "name": "Acetaminophen 300 MG / Hydrocodone Bitartrate 5 MG Oral Tablet",
+    "dose": "300 MG",
+    "frequency": "As needed for breakthrough pain, up to a few times a week",
+    "purpose": "Not recorded",
+    "adherence": "Inconsistent; takes it on bad flare days, sometimes doubles up without checking the label math",
+    "patient_concerns": "Worried about taking 'too many pills at once' but unsure how the two hydrocodone products interact, and deflects when asked directly"
+   },
+   {
+    "name": "Alendronic acid 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once weekly",
+    "purpose": "Osteoporosis",
+    "adherence": "Good most weeks, occasionally forgets the empty-stomach, stay-upright instructions",
+    "patient_concerns": "Finds the instructions on the pharmacy sheet confusing and admits she sometimes just takes it 'whenever' rather than exactly as printed"
+   },
+   {
+    "name": "Vitamin B12 5 MG/ML Injectable Solution",
+    "dose": "5 MG/ML",
+    "frequency": "Monthly injection, given at her doctor's office",
+    "purpose": "Not recorded",
+    "adherence": "Keeps her appointments for this one faithfully",
+    "patient_concerns": "No real concerns; she likes that someone else handles it for her"
+   }
+  ],
+  "supplements_and_otc": [
+   "Calcium chewables (takes 'sometimes' but not sure of the dose)",
+   "Tylenol PM on rough nights",
+   "A church friend's recommended turmeric capsules for joint pain",
+   "Tums kept in her purse for after dinner"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Traditional American comfort cooking for a household of four — meatloaf, pot roast, mashed potatoes, casseroles, with dessert most nights",
+  "food_preferences": [
+   "Pot roast with gravy",
+   "Baked ziti",
+   "Her mother's apple crisp recipe",
+   "Buttered egg noodles",
+   "Coffee cake for church potlucks"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion sizes at family dinners are large because she cooks 'to feed everyone'",
+   "Frequent use of butter, cream soups, and processed gravy mixes in cooking",
+   "Nightly glass or two of wine that has crept up over the past year",
+   "Skips breakfast most workdays, grabs a donut at the office instead",
+   "Rarely checks nutrition labels on packaged goods, estimates by eye"
+  ],
+  "meal_pattern": "Light or skipped breakfast, cafeteria lunch at work, large home-cooked dinner with the whole family around 6:30 PM",
+  "hydration": "Mostly coffee in the morning, a couple glasses of water through the day, wine most evenings",
+  "physical_activity": "Limited; mostly on her feet at the front desk, avoids extra walking because of back and neck pain",
+  "substance_use": "Ex-smoker (quit years ago); drinks wine most nights, more on weekends, screening score suggests heavier drinking than she lets on",
+  "sleep": "Fair; some nights restless due to pain or 'thinking too much'"
+ },
+ "psychosocial_profile": {
+  "personality": "Warm, cheerful, quick with a joke, the type who makes everyone else feel at ease while deflecting attention from herself",
+  "communication_style": "Chatty and friendly on the surface, changes the subject with humor whenever a topic turns serious or technical, often answers a hard question with a story about someone else",
+  "goals": [
+   "Keep cooking for her family the way she always has",
+   "Get back to how she was eating 'a few years ago' before things slipped",
+   "Stay out of the hospital and keep up with her grandkids"
+  ],
+  "concerns": [
+   "Worried the cancer could come back",
+   "Quietly scared her drinking has crept up more than she admits",
+   "Afraid of becoming dependent on her pain medication"
+  ],
+  "beliefs": [
+   "Thinks a little extra wine 'relaxes the nerves' and isn't really a problem",
+   "Believes food is love and cutting back feels like depriving her family",
+   "Figures her weight has 'always been like this' so it's not urgent",
+   "Trusts her pastor's prayer group more than a pamphlet from the doctor"
+  ],
+  "motivations": [
+   "Wanting to see future grandchildren grow up",
+   "Not wanting to burden her husband with more worry",
+   "Keeping her place in the church community active and involved"
+  ],
+  "fears": [
+   "Cancer recurrence",
+   "Losing her independence to pain or falls given her bones",
+   "Being seen as 'slipping' by people who respected her for 'having it together'"
+  ],
+  "barriers": [
+   "Struggles to read small print on labels and medication sheets but hides it with jokes",
+   "Cooks for the whole household so changing her own portions feels disruptive",
+   "Housing costs have her anxious despite decent income, adding daily stress she downplays",
+   "Limited mobility from back and neck pain limits exercise options"
+  ],
+  "strengths": [
+   "Deep, reliable faith community for support",
+   "Genuine love of cooking that could be redirected",
+   "Good relationship with her husband and household",
+   "Keeps her medical appointments faithfully"
+  ],
+  "support_system": "Married, lives with husband and two other household members; close-knit Lutheran church group with potlucks and prayer circle she attends weekly",
+  "readiness_to_change": "Maintenance with slippage — she made real changes a few years back after her cancer diagnosis but has drifted back toward old habits with wine, portions, and skipped checkups on her own understanding"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "She'll mention she's a breast cancer survivor and just had her follow-up mammogram",
+   "She'll say she has 'some back and neck trouble' from years of standing at work",
+   "She'll volunteer that she cooks big family dinners every night",
+   "She'll joke about her 'sweet tooth' and dessert habit"
+  ],
+  "discoverable_information": [
+   "With gentle questions about meals, she'll describe her evening wine habit as 'just one glass, maybe two'",
+   "She'll admit her breakfast is usually a donut from the break room",
+   "She'll mention she sometimes takes extra pain pills on bad days",
+   "She'll say she doesn't really exercise because of her back"
+  ],
+  "reluctant_information": [
+   "She is reluctant to admit her AUDIT-C screening score suggests she drinks more than 'a glass or two' most nights, closer to 3-4 drinks some evenings",
+   "She hesitates to admit she's worried about the housing costs on their income despite seeming financially comfortable",
+   "She's slow to admit she sometimes doubles up on the acetaminophen/hydrocodone tablets without doing the math on the extended-release dose she already took"
+  ],
+  "hidden_information": [
+   "Tosha cannot reliably read the small print on her alendronic acid instruction sheet and has been taking it lying down right after eating breakfast instead of upright on an empty stomach, but laughs it off as 'eh, close enough'",
+   "She has quietly stopped going to her water aerobics class at the Y that she started after her cancer diagnosis, three months ago, and hasn't told her husband because she doesn't want him to worry",
+   "She mixes up the two hydrocodone products' labels because the print is too small for her to read comfortably, and has never told her doctor she can't read them well"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Recognize signs of low health literacy hidden behind humor and deflection, and adapt teaching methods accordingly",
+    "expected_discoveries": [
+     "Tosha cannot easily read small-print medication or nutrition labels and compensates by estimating or joking",
+     "She prefers verbal, story-based explanations over written handouts"
+    ],
+    "possible_patient_reactions": [
+     "'Oh, I don't need the fine print, I just know what I'm doing!' with a laugh",
+     "Quickly changes subject to a story about her grandkids when asked to read something aloud"
+    ]
+   },
+   {
+    "learning_objective": "Screen for unhealthy alcohol use using a non-judgmental, rapport-based approach",
+    "expected_discoveries": [
+     "Her actual wine intake is higher than she first states, closer to 3-4 drinks some nights",
+     "She uses alcohol to cope with pain and stress but minimizes it"
+    ],
+    "possible_patient_reactions": [
+     "'A little wine never hurt anybody, my grandmother lived to 95!'",
+     "Looks away and quickly offers a joke if pressed further on quantity"
+    ]
+   },
+   {
+    "learning_objective": "Address relapse in the maintenance stage of change, exploring what has slipped since her post-diagnosis improvements",
+    "expected_discoveries": [
+     "She made real dietary and activity changes after her 1999 and recent cancer surveillance but has drifted back toward old portions and skipped her exercise class",
+     "She feels quiet shame about 'falling off' but hides it with cheerfulness"
+    ],
+    "possible_patient_reactions": [
+     "'I guess I got comfortable again, ha! Old habits, you know?'",
+     "Deflects with 'Let's not dwell on that, tell me about yourself instead'"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate family-meal modifications when the patient cooks for a full household rather than suggesting an individual diet plan",
+    "expected_discoveries": [
+     "She cooks the same large, rich meals for everyone and sees her own portion as inseparable from the family's",
+     "Possible small swaps (gravy, portion size, side dishes) that keep meals recognizable to her family"
+    ],
+    "possible_patient_reactions": [
+     "'I can't just make myself a sad little salad while everyone else gets pot roast!'",
+     "Warms up to ideas framed as 'the whole family would feel better' rather than just her"
+    ]
+   },
+   {
+    "learning_objective": "Explore the role of her faith community as a support system for behavior change",
+    "expected_discoveries": [
+     "Her church potlucks and prayer group are both an emotional anchor and a source of rich, calorie-dense food",
+     "She may be open to involving her pastor or church friends in accountability if approached respectfully"
+    ],
+    "possible_patient_reactions": [
+     "'Oh, the ladies at church would love to hear about this, maybe we do a healthy potluck!'",
+     "Lights up discussing her choir and prayer group, more guarded about her own eating within it"
+    ]
+   },
+   {
+    "learning_objective": "Identify medication safety risks related to opioid use and reading comprehension without shaming the patient",
+    "expected_discoveries": [
+     "She sometimes takes extra acetaminophen/hydrocodone on top of her extended-release dose without realizing the overlap",
+     "She has never disclosed to her prescriber that she struggles to read the dosing instructions"
+    ],
+    "possible_patient_reactions": [
+     "'I just take what I need to get through the day, honey.'",
+     "Becomes quiet and less jokey if the student notices she avoided answering about the pill bottles directly"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Tosha's full-time employment at a dental office front desk is compatible with her chronic pain, managed with scheduled breaks and her pain medication regimen",
+   "Her 'housing unsatisfactory' flag and worry about housing reflect dissatisfaction with the condition or space of her home rather than inability to afford it, given her household income",
+   "Her chronic pain, back, and neck issues stem from the 2014 onset noted in her history, likely degenerative/occupational in nature",
+   "The two hydrocodone products are prescribed separately for baseline and breakthrough pain management related to her chronic pain diagnoses"
+  ],
+  "optional_details": [
+   "Tosha has been at the same dental office for over 20 years and is known for remembering every patient's name",
+   "She sings alto in her church choir and has done so for over 15 years",
+   "Her husband is a retired postal worker who helps with grocery shopping on weekends",
+   "She has two grown children and is hoping for grandchildren soon"
+  ]
+ },
+ "source": {
+  "synthea_record": "2caf8121",
+  "condition_group": "prediabetes",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "cheerful, deflects anything serious with a joke",
+   "communication": "changes the subject when uncomfortable",
+   "readiness": "maintenance: changed a while ago and is starting to slip",
+   "literacy": "low health literacy",
+   "eating": "cooks traditional family meals for a full household and eats what everyone eats",
+   "held_back": "struggles to read labels or written instructions and hides it",
+   "support": "a faith or community group that matters a great deal"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

@@ -1,0 +1,888 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Prediabetes, Obesity, and Anemia in a Reserved Caregiver: First Nutrition Counseling Visit",
+  "summary": "A 43-year-old woman with prediabetes, obesity, and anemia presents for a first telehealth nutrition counseling visit, precise about her lab numbers but initially guarded about the caregiving burden and meal-skipping behind her takeaway-heavy eating pattern. The case teaches eliciting psychosocial barriers behind a reserved presentation, connecting labs/symptoms to a concrete first behavior change at the patient's stage of change, and recognizing a mismatch between a stated explanation (schedule) and the fuller picture revealed through rapport-building (caregiving duties, inconsistent iron supplement use).",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit; patient at home in Bloomfield, New Jersey, seated at her kitchen table",
+  "encounterType": "nutrition assessment and counseling (initial telehealth visit)",
+  "difficulty": 3,
+  "patient": {
+   "name": "María Eugenia Rosas",
+   "age": 43,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "white, hispanic",
+   "occupation": "Billing coordinator at a dental office",
+   "language": "Spanish (primary), English (second language, used for work and most medical visits)",
+   "appearance": "Seated at a small kitchen table at home, dressed in work clothes as if just off a shift. Posture upright and composed, pale conjunctiva visible on camera, flattened affect that becomes more noticeable as the conversation goes on. Keeps a small notebook next to her laptop.",
+   "portrait": "/portraits/synthea-mar-a-eugenia-rosas-213e6867.jpg"
+  },
+  "persona": {
+   "personality": "Reserved and private; precise and detail-oriented about clinical facts; warms up slowly once she senses she will not be judged",
+   "communicationStyle": "Gives short, factual answers to open-ended questions initially; cites exact lab values and dates from memory; dislikes vague advice and responds better to specific, concrete suggestions; may deflect personal questions by returning to a number or date",
+   "healthLiteracy": "high",
+   "emotionalState": "Guarded but motivated; underlying worry about progressing to diabetes; some fatigue-related flatness by the end of a longer conversation",
+   "background": "Grew up in a bilingual household where food was never the center of elaborate home cooking; her mother worked long shifts and takeaway or quick plates from neighborhood spots became the norm. Now works full-time as a billing coordinator at a dental office and lives in a household of eight with extended family. Keeps a notebook of her lab numbers after every visit. Has a cousin in a similar weight management program she sometimes compares notes with. Prefers tea in the evening but rarely has time to make it.",
+   "speechExamples": [
+    "My A1C was 6.2% as of April 24th, and my glucose was 64.6.",
+    "I don't really want a whole overhaul, I just want one specific thing to start with.",
+    "I eat out most days, it's just how my schedule works.",
+    "I guess I only take the iron pills sometimes, when I remember.",
+    "It's not laziness, there's just... a lot going on at home."
+   ],
+   "concerns": [
+    "Worried prediabetes will become full diabetes like it did for her aunt",
+    "Concerned about her low hemoglobin and whether it's connected to how tired she feels",
+    "Frustrated that her schedule leaves no room to cook"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are joining a telehealth video visit with María Eugenia Rosas, a 43-year-old woman referred for nutrition counseling after recent labs flagged prediabetes, obesity, and anemia. This is her first visit with you. Review the available chart information before the call, then conduct a nutrition-focused assessment and counseling session.",
+   "chiefComplaint": "Referred for nutrition counseling after labs showing prediabetes, obesity, and anemia",
+   "openingLine": "Hi, thanks for seeing me. My doctor sent me here because of my last labs - my A1C was 6.2% and my BMI was just over 30. I figured I should get this handled before it turns into something worse.",
+   "tasks": [
+    "Take a focused nutrition and social history of the presenting concern",
+    "Review relevant anthropometric and laboratory data with the patient and connect it to her symptoms",
+    "Identify barriers affecting her eating pattern and self-care using patient-centered, non-judgmental questions",
+    "Collaboratively identify one concrete, feasible first behavior change consistent with her stated goals",
+    "Document the encounter using the ADIME format"
+   ],
+   "timeLimitMin": 30
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition counseling referral following labs showing prediabetes and anemia, and BMI in the obese range"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician: Dr. A. Fenwick, Internal Medicine; referral placed for dietetics/nutrition counseling"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   },
+   {
+    "label": "Problem list",
+    "value": "History of tubal ligation (since 2008); Prediabetes (since 2023); Anemia (since 2023); Body mass index 30+ - obesity (since 2025)"
+   },
+   {
+    "label": "Medications",
+    "value": "None recorded"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Referred for nutrition counseling after labs showing HbA1c 6.2%, hemoglobin 11.7 g/dL, and BMI 30.1",
+    "says": "My doctor sent me here because my last labs showed my A1C was 6.2% and my iron was low again. They said my BMI was just over 30.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "fatigue pattern",
+    "chart": "Reports fatigue most afternoons after 3pm",
+    "says": "I get really tired most afternoons, especially after 3pm. It's hard to focus by then.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "eating schedule drivers",
+    "chart": "Reports eating out or ordering takeaway 5-6 days a week due to work schedule",
+    "says": "I eat out most days, honestly. My schedule just doesn't leave time to cook.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "ros",
+    "topic": "breathing with exertion",
+    "chart": "Reports shortness of breath climbing stairs at work",
+    "says": "I get short of breath going up the stairs at my office. It didn't used to be like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "ros",
+    "topic": "thirst changes",
+    "chart": "Reports increased thirst compared to baseline",
+    "says": "I've noticed I'm thirstier than I used to be, actually.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "ros",
+    "topic": "lightheadedness",
+    "chart": "Reports occasional lightheadedness, attributes to anemia",
+    "says": "Sometimes I get a little lightheaded. I figure that's just my low iron.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "typical takeaway order",
+    "chart": "Describes usual lunch order as rotisserie chicken plate with rice from a restaurant near work",
+    "says": "For lunch I usually get a rotisserie chicken plate with rice from the place next to my office. I don't really measure it, I just get what looks like a normal plate.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "evening meal pattern",
+    "chart": "Describes evening meals as pupusas or empanadas from a nearby stand on weeknights, or takeaway; home-cooked meal only on Sundays",
+    "says": "On weeknights I usually grab pupusas or empanadas from a stand near my place, I'm too tired to cook. Sundays are the only day the whole house eats something homemade together.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "breakfast habits",
+    "chart": "Reports breakfast is usually coffee with condensed milk, sometimes a bread roll",
+    "says": "In the morning I just have coffee, sweet, with condensed milk. Sometimes a roll if I have time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "beverage choices",
+    "chart": "Reports diet soda with most meals and inconsistent water intake",
+    "says": "I drink diet soda with most meals. Water I kind of forget until I'm really thirsty.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "nutrition_profile_1",
+    "category": "adherence",
+    "topic": "iron supplement use",
+    "chart": "Reports taking OTC iron tablets inconsistently, 'when I remember'",
+    "says": "I have iron tablets, but honestly I only take them sometimes, when I remember.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "adherence",
+    "topic": "other supplements",
+    "chart": "Takes a multivitamin recommended by a family member; keeps ginger candies at desk for nausea",
+    "says": "I also take a multivitamin my cousin recommended, and I keep ginger candies at my desk if my stomach feels off.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in a household of 8 with extended family",
+    "says": "There are eight of us in the house, it's a big household.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "psychosocial",
+    "topic": "evening caregiving routine",
+    "chart": "Discloses spending several hours after work caring for an elderly relative in the household, leaving little personal time",
+    "says": "After work I'm usually taking care of my grandmother for a few hours most nights. There isn't a lot left for me by the time that's done.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "psychosocial",
+    "topic": "real reason for not cooking",
+    "chart": "Clarifies that caregiving responsibilities, not lack of effort, are the main barrier to cooking at home",
+    "says": "It's not that I don't want to cook more. It's that by the time I'm done helping my grandmother, there's just no time or energy left.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "psychosocial",
+    "topic": "skipped meals",
+    "chart": "Reports skipping her own lunch on some days to finish caregiving tasks before a relative's appointments",
+    "says": "Some days I actually skip my own lunch so I can get my grandmother ready in time for her appointments. I haven't really told anyone that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "psychosocial",
+    "topic": "feelings about skipping meals",
+    "chart": "Expresses guilt about skipping meals for caregiving duties",
+    "says": "I feel kind of guilty about it, skipping meals like that. It's not really something I bring up.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "transportation barrier",
+    "chart": "Reports a missed medical appointment due to lack of reliable transportation",
+    "says": "I actually missed an appointment once because I couldn't get a ride and the bus schedule didn't line up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "family",
+    "topic": "family response to diagnoses",
+    "chart": "Reports family minimizes her prediabetes and anemia diagnoses",
+    "says": "My family kind of brushes it off, like it's nothing serious. They don't really get why I'm worried.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "family",
+    "topic": "food at family gatherings",
+    "chart": "Describes family gatherings as centered on heavy, convenience-based meals that have not changed since her diagnoses",
+    "says": "When we all get together it's the same heavy food as always, nothing's really changed just because of my labs.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "psychosocial",
+    "topic": "stress level",
+    "chart": "Self-reports quite a bit of stress",
+    "says": "I'd say I have quite a bit of stress, yeah.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "goals",
+    "topic": "desired type of change",
+    "chart": "States preference for one specific, concrete first step rather than a broad diet overhaul",
+    "says": "I don't want some big overhaul. I just want one specific thing I can start doing this week.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f23",
+    "category": "goals",
+    "topic": "lab-related goal",
+    "chart": "States goal of lowering next HbA1c result",
+    "says": "I want my next A1C to come back lower than 6.2.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "goals",
+    "topic": "energy goal",
+    "chart": "States goal of having more energy through the full workday",
+    "says": "I just want enough energy to get through my whole workday without crashing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "fear about diabetes progression",
+    "chart": "Expresses fear of progressing to type 2 diabetes, citing an aunt's history",
+    "says": "My aunt went from prediabetes to full diabetes. I really don't want that to happen to me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "belief about fatigue cause",
+    "chart": "Believes fatigue is due to anemia alone, not related to diet pattern",
+    "says": "I just figured the tiredness is from the anemia, not really connected to what I'm eating.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "belief about willpower",
+    "chart": "Believes cooking more at home mainly requires more willpower",
+    "says": "I think I just need more willpower to cook more, honestly.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Does not drink alcohol, AUDIT-C score 0",
+    "says": "I don't drink at all.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "substance",
+    "topic": "smoking status",
+    "chart": "Does not smoke",
+    "says": "I've never smoked.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "function",
+    "topic": "physical activity pattern",
+    "chart": "Reports walking to bus stop and around office; no structured exercise, cites lack of time",
+    "says": "I walk to the bus stop and around the office, that's about it. There's just no time for a real workout.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "function",
+    "topic": "sleep pattern",
+    "chart": "Reports approximately 6 hours of sleep most nights, often interrupted",
+    "says": "I get about six hours most nights, and it's not always straight through.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "social",
+    "topic": "social contact outside home",
+    "chart": "Reports socializing outside the home only 1-2 times a week",
+    "says": "I only really see people outside the house maybe once or twice a week.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "hpi",
+    "topic": "neck injury history",
+    "chart": "History of whiplash injury to neck, 2026-07 to 2026-09, resolved, with physical and occupational therapy",
+    "says": "I had a whiplash injury a while back and did some physical therapy for it, but that's all cleared up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f34",
+    "category": "pmh",
+    "topic": "anxiety history",
+    "chart": "History of severe anxiety/panic, 2017 to 2025, resolved",
+    "says": "I used to deal with pretty bad anxiety, panic attacks and all, but that resolved a while back.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f35",
+    "category": "psh",
+    "topic": "tubal ligation history",
+    "chart": "History of tubal ligation since 2008",
+    "says": "I had my tubes tied back in 2008.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f36",
+    "category": "adherence",
+    "topic": "self-tracking habits",
+    "chart": "Keeps a personal notebook recording her lab numbers after each visit",
+    "says": "I actually keep a little notebook where I write down my numbers after every visit.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall",
+    "aliases": [],
+    "result": "Breakfast: black coffee with condensed milk, sometimes a bread roll. Lunch: takeaway rotisserie chicken plate with rice, eaten at desk, 4-5x/week. Dinner: pupusas or empanadas from a stand, or takeaway, most weeknights; home-cooked meal on Sundays with household. Diet soda with most meals. Water intake low and inconsistent.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage of change assessment",
+    "aliases": [],
+    "result": "Patient identifies as ready to make one specific, concrete change; declines broad overhaul; consistent with preparation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Malnutrition/weight history screen",
+    "aliases": [],
+    "result": "Weight 80.9 kg, up 2.0 kg since 2023-04-20. No unintentional weight loss. No difficulty chewing or swallowing reported.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review medication/supplement list",
+    "aliases": [],
+    "result": "No prescribed medications on file. OTC iron tablets and a multivitamin reported as self-directed; ginger candies for nausea.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review visit and appointment history",
+    "aliases": [],
+    "result": "History and physical examination documented 2026-07-01; record notes a missed outpatient follow-up appointment with reason listed as transportation.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "AUDIT-C alcohol screening",
+    "aliases": [],
+    "result": "Score 0/12 - does not drink alcohol.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Walks to bus stop and around office; no structured exercise; reports no time most weeks.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 119/74 mmHg, heart rate 84/min, respiratory rate 14/min, weight 80.9 kg, height 164 cm, BMI 30.1 kg/m2, weight change +2.0 kg since 2023-04-20 (recorded 2025-04-24).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 6.2 %; Glucose 64.6 mg/dL; Total cholesterol 100.5 mg/dL; LDL cholesterol 19.3 mg/dL; HDL cholesterol 55.8 mg/dL; Triglycerides 127.7 mg/dL; Haemoglobin 11.7 g/dL; White cell count 10.3 10*3/uL; Platelets 246.7 10*3/uL; Potassium 4.9 mmol/L; Sodium 142.7 mmol/L; Urea nitrogen 13 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2025-04-24); Hep A adult (2025-04-24); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2025-04-24).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Primary Care Referral Note",
+    "release": {
+     "when": "start"
+    },
+    "date": "2025-05-02",
+    "author": "Dr. A. Fenwick, Internal Medicine",
+    "body": "Patient referred to outpatient nutrition counseling following labs notable for HbA1c 6.2% and hemoglobin 11.7 g/dL, in the setting of BMI 30.1. Patient reports fatigue and occasional lightheadedness. Advised to follow up with nutrition for individualized counseling on weight management, glycemic risk reduction, and iron intake. No medications currently prescribed; patient reports intermittent use of over-the-counter iron supplement."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Missed Appointment Log",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-02-10",
+    "author": "Front Desk Scheduling",
+    "body": "Patient no-showed scheduled follow-up visit on 2026-02-10. Office called patient; patient stated she was unable to arrange a ride and public transit schedule did not align with appointment time. Visit rescheduled via telehealth."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nHistory of tubal ligation (since 2008)\nPrediabetes (since 2023)\nAnemia (since 2023)\nBody mass index 30+ - obesity (since 2025)\n\nRECENTLY RESOLVED\nSevere anxiety (panic) (2017-06 to 2025-04)\nGingivitis (2023-04 to 2023-05)\nGingival disease (2023-05 to 2023-05)\nInjury of neck (2026-07 to 2026-09)\nWhiplash injury to neck (2026-07 to 2026-09)\n\nPROCEDURES\n2026-08-15: Discharge from hospital\n2026-08-14: Nursing care/supplementary surveillance\n2026-08-14: Professional / ancillary services care\n2026-08-13: Occupational therapy\n2026-08-08: Physical therapy procedure\n2026-07-01: History AND physical examination\n\nRECENT ENCOUNTERS\n2026-07-01 emergency: Emergency room admission (Injury of neck)\n2026-07-01 snf: Hospital admission (Patient transfer to skilled nursing facility)\n2025-04-24 wellness: General examination of patient\n2023-05-11 ambulatory: Encounter for check up (Gingivitis)\n2023-04-27 ambulatory: Encounter for problem (Anemia)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact); Weight management program"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "No current medications",
+        "-",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "6.2",
+        "%",
+        "< 5.7",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "64.6",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "100.5",
+        "mg/dL",
+        "< 200",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "19.3",
+        "mg/dL",
+        "< 100",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "55.8",
+        "mg/dL",
+        ">= 40",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "127.7",
+        "mg/dL",
+        "< 150",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "11.7",
+        "g/dL",
+        "12.0-17.5",
+        "2023-04-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "10.3",
+        "10*3/uL",
+        "4.0-11.0",
+        "2023-04-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "246.7",
+        "10*3/uL",
+        "150-450",
+        "2023-04-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.9",
+        "mmol/L",
+        "3.5-5.1",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "142.7",
+        "mmol/L",
+        "135-145",
+        "2025-04-24"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "13",
+        "mg/dL",
+        "7-20",
+        "2025-04-24"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a full social and caregiving history behind a reserved presentation, including household composition, caregiving duties, and transportation barriers",
+    "factIds": [
+     "f13",
+     "f14",
+     "f15",
+     "f18"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Translate lab values and clinical facts into a single, concrete, patient-centered first behavior change consistent with the preparation stage of change",
+    "factIds": [
+     "f22",
+     "f23",
+     "f24",
+     "f7",
+     "f8"
+    ],
+    "actionIds": [
+     "a2",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explore the relationship between anemia, fatigue, and dietary pattern, including supplement adherence and iron-rich food intake",
+    "factIds": [
+     "nutrition_profile_1",
+     "f12",
+     "f26",
+     "f2"
+    ],
+    "actionIds": [
+     "asyn2",
+     "a10"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Address family dynamics that undermine health goals without blaming the family",
+    "factIds": [
+     "f19",
+     "f20"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Problem-solve around the transportation barrier and caregiving-related meal skipping, and identify its effect on care continuity and nutrition status",
+    "factIds": [
+     "f16",
+     "f17",
+     "f18",
+     "f21"
+    ],
+    "actionIds": [
+     "a11",
+     "a3"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify and gently explore a discrepancy between a patient's stated explanation for a behavior and corroborating record evidence, without breaking rapport",
+    "factIds": [
+     "nutrition_profile_1",
+     "f3"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Altered nutrition-related laboratory values (prediabetes, HbA1c 6.2%) and excess energy intake related to a takeaway-dominant eating pattern and caregiving-related meal skipping, as evidenced by elevated HbA1c, BMI 30.1, and self-reported skipped lunches",
+   "differential": [
+    "Nutrition diagnosis: Excessive energy intake related to frequent high-portion takeaway meals and sugar-sweetened beverages as evidenced by BMI 30.1 and HbA1c 6.2%",
+    "Nutrition diagnosis: Inadequate iron intake related to limited intake of iron-rich foods and inconsistent supplement adherence as evidenced by hemoglobin 11.7 g/dL and reported fatigue",
+    "Nutrition diagnosis: Limited access to self-care/food preparation related to caregiving burden and household demands as evidenced by reported skipped meals and lack of time to cook",
+    "Alternative consideration: Fatigue attributable solely to anemia without dietary contribution (patient's own belief, to be explored and gently reframed)"
+   ],
+   "keyFindings": [
+    "HbA1c 6.2% (prediabetes range) with BMI 30.1 kg/m2 and 2.0 kg weight gain since 2023",
+    "Hemoglobin 11.7 g/dL (low) with inconsistent OTC iron supplement adherence and low iron-rich food intake",
+    "Eating pattern dominated by takeaway/convenience foods 5-6 days/week, sugar-sweetened coffee and diet soda, inconsistent water intake",
+    "Hidden caregiving burden (several hours/evening caring for elderly relative) and occasional self-skipped lunches, with associated guilt",
+    "Transportation barrier previously causing a missed appointment; family minimizes her diagnoses and continues serving heavy convenience foods at gatherings",
+    "Patient is in the preparation stage of change and wants one concrete, specific first step rather than a broad overhaul"
+   ],
+   "plan": [
+    "Collaboratively select one concrete, feasible first behavior change (e.g., modifying an existing takeaway order, such as swapping diet soda for water at one meal, or adding an iron-rich side to her usual lunch order)",
+    "Provide specific, non-judgmental education linking dietary pattern to both glycemic risk and anemia/fatigue, correcting the belief that fatigue is 'just the anemia'",
+    "Address iron supplement adherence barriers directly and suggest a simple reminder strategy (e.g., pairing with an existing habit like morning coffee)",
+    "Discuss practical, low-burden ways to preserve her own lunch during caregiving-heavy days (e.g., a portable iron-rich snack kept on hand)",
+    "Validate the caregiving burden and family dynamics without criticizing family; explore any community or respite resources she may be open to",
+    "Discuss telehealth as a strategy to maintain follow-up continuity given the transportation barrier",
+    "Plan follow-up visit to recheck HbA1c and hemoglobin trend and reassess progress on the chosen behavior change"
+   ],
+   "redFlags": [
+    "Hemoglobin 11.7 g/dL with ongoing fatigue, lightheadedness, and exertional shortness of breath warrants communication with referring physician if symptoms worsen or hemoglobin trends further down",
+    "Self-reported meal skipping tied to caregiving burden with associated guilt, which could affect both nutritional status and mental well-being if unaddressed",
+    "Family minimization of diagnoses and ongoing transportation barriers may limit follow-through on any plan without problem-solving support"
+   ],
+   "educationPoints": [
+    "HbA1c of 6.2% falls in the prediabetes range (5.7-6.4%) and is modifiable with dietary pattern changes",
+    "Dietary pattern (frequency, portions, beverage choices) can influence both glycemic control and energy balance even when individual lab values like lipids are currently normal",
+    "Iron-rich food intake and consistent supplement use both matter for correcting anemia; sporadic supplement use alone is unlikely to normalize hemoglobin",
+    "Fatigue can have multiple contributing factors (anemia, meal skipping, sleep, stress) rather than a single cause",
+    "Small, specific, sustainable changes within an existing eating pattern (e.g., modifying a usual order) are often more achievable than a full dietary overhaul, especially in the preparation stage of change"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking her OTC iron tablets sometimes, when she remembers",
+    "recordEvidence": "Referral note documents patient reports intermittent use of over-the-counter iron supplement, consistent with ongoing low hemoglobin of 11.7 g/dL despite supplementation being recommended",
+    "teachingPoint": "Self-reported intermittent adherence to an iron supplement correlates with a persistently low hemoglobin; explore adherence barriers rather than assuming the supplement alone will correct anemia, and assess dietary iron intake as an adjunct.",
+    "factId": "nutrition_profile_1",
+    "artifactId": "d4"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 18,
+   "condition": "Body mass index 30+ - obesity",
+   "conditionLabel": "43 F · Anemia, Prediabetes, History of tubal ligation · 0 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "213e6867",
+   "fingerprint": "1i1rou5"
+  }
+ }
+}

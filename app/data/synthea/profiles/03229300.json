@@ -1,0 +1,317 @@
+{
+ "patient_overview": {
+  "name": "Jayme Littel",
+  "age": 35,
+  "sex": "Female",
+  "description": "Jayme Littel is a 35-year-old married woman from Perth Amboy, NJ, with chronic low back and neck pain, chronic sinusitis, and obesity, on a pain management plan that includes a fentanyl patch and Percocet. She's blunt and impatient in the visit, giving short clipped answers unless pressed twice, and clearly doesn't see much point in a dietitian appointment. She comes across as tired and guarded, more focused on getting through the day than on long-term health changes.",
+  "keywords": [
+   "chronic pain",
+   "obesity",
+   "opioid management",
+   "low health literacy",
+   "precontemplation",
+   "convenience foods",
+   "caregiver burden",
+   "chronic low back pain",
+   "high cholesterol"
+  ]
+ },
+ "demographics": {
+  "occupation": "Former retail stock associate, currently unemployed",
+  "residence": "Perth Amboy, New Jersey; household of 3",
+  "ethnicity": "White",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Jayme grew up in a working-class household in central New Jersey where meals were whatever was fastest between shifts; nobody sat down and taught her to cook, and she never saw the point of learning. Food in her family was fuel, not a ritual, and she carries that same practical, no-frills attitude now. She doesn't attach any heritage or celebration meaning to food, and bristles a little at the idea that eating should be anything more than getting through the day."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Chronic low back pain",
+  "secondary_diagnoses": [
+   "Chronic sinusitis",
+   "Body mass index 30+ - obesity",
+   "Chronic pain",
+   "Chronic neck pain"
+  ],
+  "medical_history": [
+   "Chronic sinusitis since 1992",
+   "Body mass index 30+ - obesity since 2013",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic neck pain since 2014",
+   "Normal pregnancy (2024-06 to 2025-02, resolved)",
+   "Pre-eclampsia (2024-12 to 2025-02, resolved)",
+   "Normal pregnancy (2025-12 to 2026-01, resolved)",
+   "Gingivitis (2026-02 to 2026-03, resolved)",
+   "Primary dental caries (2026-03 to 2026-03, resolved)",
+   "Dental fluoride treatment (2026-03-02)",
+   "Restoration of tooth with coverage of all cusps using dental filling material (2026-03-02)",
+   "Dental plain X-ray bitewing (2026-03-02)",
+   "Examination of gingivae (2026-03-02)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-03-02)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-03-02)"
+  ],
+  "current_symptoms": [
+   "Constant dull ache in her low back that flares with standing or lifting",
+   "Stiffness and soreness in her neck, worse by afternoon",
+   "Sinus pressure and congestion, especially in spring",
+   "Low energy, says she's 'just tired all the time'",
+   "Occasional nausea she blames on her pain medication"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Guarded, stiff posture when shifting in the chair",
+   "Visibly limited range of motion turning her neck",
+   "Mild facial puffiness",
+   "Flat, clipped affect with minimal eye contact until rapport builds"
+  ],
+  "laboratory_data": [
+   "Total cholesterol: 290 mg/dL (reference < 200; 2025-02-09)",
+   "LDL cholesterol: 208.8 mg/dL (reference < 100; 2025-02-09)",
+   "HDL cholesterol: 54.3 mg/dL (reference >= 40; 2025-02-09)",
+   "Triglycerides: 134.2 mg/dL (reference < 150; 2025-02-09)",
+   "Haemoglobin: 15.9 g/dL (reference 12.0-17.5; 2024-02-04)",
+   "White cell count: 8.1 10*3/uL (reference 4.0-11.0; 2024-02-04)",
+   "Platelets: 243.1 10*3/uL (reference 150-450; 2024-02-04)"
+  ],
+  "vital_signs": [
+   "BP: 127/77 mmHg",
+   "HR: 80 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-02-15"
+  ],
+  "anthropometrics": [
+   "Height: 165.8 cm",
+   "Weight: 86.7 kg",
+   "BMI: 31.5 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "{28 (norethindrone 0.35 MG Oral Tablet) } Pack [Camila 28 Day]",
+    "dose": "0.35 MG",
+    "frequency": "once daily, oral contraceptive pill",
+    "purpose": "Not recorded",
+    "adherence": "Takes it fairly consistently, keeps it by the bathroom sink",
+    "patient_concerns": "Not worried about this one, says it's 'just birth control' and barely thinks about it"
+   },
+   {
+    "name": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "dose": "325 MG",
+    "frequency": "as needed for breakthrough pain, up to a few times a week",
+    "purpose": "Not recorded",
+    "adherence": "Uses it when pain spikes but tries to 'save' pills in case things get worse, so sometimes under-doses herself and suffers through pain instead",
+    "patient_concerns": "Doesn't like how it makes her foggy and constipated, and gets defensive if asked too much about how often she takes it"
+   },
+   {
+    "name": "72 HR Fentanyl 0.025 MG/HR Transdermal System",
+    "dose": "0.025 MG",
+    "frequency": "patch changed every 72 hours",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent with patch changes, admits she's forgotten a day or two and just put the next one on late",
+    "patient_concerns": "Worried about becoming too dependent on it long-term but doesn't bring this up unless asked directly; annoyed when providers focus on the patch instead of her actual pain"
+   }
+  ],
+  "supplements_and_otc": [
+   "Occasional ibuprofen for sinus headaches, on top of her prescribed pain meds",
+   "A multivitamin she bought once and takes 'sometimes, when I remember'",
+   "Saline nasal spray for sinus congestion"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Heavy reliance on microwave meals, fast food, and gas-station snacks; low intake of fruits/vegetables",
+  "food_preferences": [
+   "Frozen lasagna and other microwave entrees from the Stop & Shop freezer aisle",
+   "Chicken nuggets and fries from the drive-thru near her apartment",
+   "Diet soda, drinks several a day",
+   "Convenience store snacks like chips and candy bars when she's out running errands"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Skipping meals when caregiving duties take over the day, then overeating convenience food later",
+   "Portion sizes with pain-medication-related nausea affecting appetite",
+   "Sodium intake from frozen and fast food given her cholesterol numbers",
+   "Fluid intake, mostly soda and coffee rather than water"
+  ],
+  "meal_pattern": "Irregular; coffee in the morning, often no real lunch, bigger convenience dinner at night once things calm down",
+  "hydration": "Mostly diet soda and coffee; drinks very little plain water",
+  "physical_activity": "Minimal; pain limits standing or walking for long, mostly sedentary at home",
+  "substance_use": "Ex-smoker, quit a few years back; drinks alcohol rarely, about one drink on occasion",
+  "sleep": "Poor and interrupted, says her back wakes her up most nights and she's up early for other reasons"
+ },
+ "psychosocial_profile": {
+  "personality": "Blunt, impatient, wants to get to the point; not interested in small talk or being coddled",
+  "communication_style": "Gives short, flat answers at first; opens up a little more only if asked the same question a second time in a different way; dislikes feeling lectured",
+  "goals": [
+   "Just wants the pain to be more manageable day to day",
+   "Doesn't have specific nutrition goals, mostly wants to be left alone about her weight"
+  ],
+  "concerns": [
+   "Worried about her housing situation and whether they can keep up with rent",
+   "Annoyed that every doctor visit turns into a conversation about her weight",
+   "Doesn't want to be told she needs to 'eat healthy' with no explanation of why it matters for her pain"
+  ],
+  "beliefs": [
+   "Thinks diet has little to do with her back and neck pain",
+   "Believes cooking is a waste of time when you can just heat something up",
+   "Thinks the lab numbers are 'just numbers' and not something she feels day to day"
+  ],
+  "motivations": [
+   "Avoiding more pain, more than any long-term health goal",
+   "Keeping some normalcy for her household despite everything going on"
+  ],
+  "fears": [
+   "Fear that her pain will get even worse and she won't be able to do anything",
+   "Underlying fear that she's not doing enough for the person she's caring for, though she won't say that outright"
+  ],
+  "barriers": [
+   "Chronic pain limits standing, cooking, and shopping",
+   "Low health literacy makes lab values and dietary advice feel abstract and irrelevant",
+   "No time or energy left after caregiving duties",
+   "Financial strain limits what she buys at the store"
+  ],
+  "strengths": [
+   "Resourceful about getting through hard days",
+   "Honest once she decides to talk, doesn't sugarcoat things",
+   "Has a partner who helps pick up slack at home"
+  ],
+  "support_system": "Married; her partner is supportive but anxious and hovers, often asking her a lot of questions out of worry, which she finds both helpful and exhausting",
+  "readiness_to_change": "Precontemplation; does not see a clear reason to change her eating habits and gets defensive if pushed too hard on it"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she has chronic back and neck pain and takes medication for it",
+   "Mentions she's unemployed right now",
+   "Says she eats 'whatever's quick' and doesn't cook much"
+  ],
+  "discoverable_information": [
+   "Describes her usual day of meals: coffee, maybe skips lunch, frozen dinner at night",
+   "Mentions her partner is anxious and asks her a lot of questions about her health",
+   "Admits she doesn't really believe food has much to do with her pain",
+   "Will say she's worried about keeping up with rent if asked about stress"
+  ],
+  "reluctant_information": [
+   "Admits, if asked a second time more gently, that most of her day goes to caring for her elderly mother who lives nearby, leaving no time to cook or rest",
+   "Reluctantly says she sometimes skips her own meals entirely while managing her mother's appointments and meds"
+  ],
+  "hidden_information": [
+   "Has not told any provider that she's been rationing her Percocet some weeks to make sure there's enough for her mother's pain management too, not just her own",
+   "Hides that she cried in the car after a recent appointment because she felt like nobody asked how SHE was doing"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Build rapport with a blunt, guarded patient using open-ended, non-judgmental questions",
+    "expected_discoveries": [
+     "Patient's short initial answers soften with a second, differently-phrased question",
+     "Underlying caregiving responsibilities surface only with patience"
+    ],
+    "possible_patient_reactions": [
+     "'I already told you, I eat whatever's fast.'",
+     "'Why does this matter for my back?'",
+     "'Fine, if you really want to know...'"
+    ]
+   },
+   {
+    "learning_objective": "Assess for low health literacy and adapt nutrition education accordingly",
+    "expected_discoveries": [
+     "Patient doesn't understand how cholesterol or sodium relate to her symptoms",
+     "Needs plain-language, concrete connections between diet and pain or energy"
+    ],
+    "possible_patient_reactions": [
+     "'I don't get what that number even means.'",
+     "'Nobody ever explains why it matters.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify caregiving burden as a hidden barrier to self-care and nutrition",
+    "expected_discoveries": [
+     "Patient spends most of her day caring for her mother",
+     "Patient skips her own meals during caregiving tasks"
+    ],
+    "possible_patient_reactions": [
+     "Deflects at first: 'I'm just busy, that's all.'",
+     "Opens up only if asked gently and without pressure"
+    ]
+   },
+   {
+    "learning_objective": "Explore the role of her partner's anxious, hovering support style in her health behaviors",
+    "expected_discoveries": [
+     "Partner means well but adds pressure by over-asking about her habits",
+     "Patient feels both supported and smothered"
+    ],
+    "possible_patient_reactions": [
+     "'He means well but it's a lot sometimes.'",
+     "Shrugs off the question initially"
+    ]
+   },
+   {
+    "learning_objective": "Discuss practical, low-effort nutrition strategies given her reliance on convenience foods and limited energy",
+    "expected_discoveries": [
+     "Opportunities to improve frozen/convenience meal choices rather than demanding full meal prep",
+     "Patient's resistance to anything that sounds like 'cooking from scratch'"
+    ],
+    "possible_patient_reactions": [
+     "'I'm not going to start meal-prepping, if that's what you're getting at.'",
+     "More receptive to small swaps if framed as still 'quick'"
+    ]
+   },
+   {
+    "learning_objective": "Screen for medication-related nutrition concerns such as opioid-induced constipation and appetite changes",
+    "expected_discoveries": [
+     "Patient's nausea and constipation linked to pain medication affects her eating patterns",
+     "Patient has not discussed this with prior providers"
+    ],
+    "possible_patient_reactions": [
+     "'It just makes my stomach messed up, so I don't eat much some days.'",
+     "Defensive if she thinks she's being accused of misusing medication"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed Jayme's caregiving responsibility is for her elderly mother, consistent with household of 3 and no mention of other dependents",
+   "Assumed unemployment is recent and connected to managing chronic pain and caregiving demands",
+   "Assumed her partner is the second adult in the household of 3, with a third person being her mother visiting frequently or a dependent, though record lists household of 3 as her immediate home"
+  ],
+  "optional_details": [
+   "Keeps a small succulent on her windowsill that she says is 'the one thing I haven't killed'",
+   "Has a worn paperback she rereads when she can't sleep from back pain",
+   "Used to enjoy walking her dog before her back pain worsened, now has a neighbor help with walks"
+  ]
+ },
+ "source": {
+  "synthea_record": "03229300",
+  "condition_group": "weight",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "blunt and impatient, wants the point quickly",
+   "communication": "short answers until asked a second time",
+   "readiness": "precontemplation: does not see a reason to change",
+   "literacy": "low health literacy",
+   "eating": "relies on convenience and ready meals because cooking for one feels pointless",
+   "held_back": "caring duties for someone else that leave no time for their own health",
+   "support": "a partner who is supportive but anxious and hovers"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

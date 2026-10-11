@@ -1,0 +1,59 @@
+{
+  "rubric_id": "patient_encounter_performance",
+  "title": "Patient Encounter Performance Rubric",
+  "note": "Stand-in built from the project plan (section 6). Replace with the rubric JSON supplied by the challenge organisers; keep the same keys.",
+  "scale": {
+    "4": "Strong",
+    "3": "Competent",
+    "2": "Developing",
+    "1": "Unsafe or absent"
+  },
+  "allow_not_applicable": true,
+  "total_is": "A discussion aid, not a pass/fail grade.",
+  "domains": [
+    {
+      "number": 1,
+      "domain_id": "opening_and_purpose",
+      "name": "Opening and purpose",
+      "description": "Introduces self and role, confirms who the patient is, and sets the agenda for the visit."
+    },
+    {
+      "number": 2,
+      "domain_id": "rapport_respect_empathy",
+      "name": "Rapport, respect, and empathy",
+      "description": "Treats the patient with respect, builds trust, and responds to emotion with empathy, especially when the patient is being difficult."
+    },
+    {
+      "number": 3,
+      "domain_id": "information_gathering",
+      "name": "Information gathering",
+      "description": "Probes with good questions: open before closed, concrete and non-judgmental, and thorough enough to uncover what matters."
+    },
+    {
+      "number": 4,
+      "domain_id": "listening_and_cues",
+      "name": "Listening and response to cues",
+      "description": "Notices and follows up on verbal and non-verbal cues, including inconsistencies between what the patient says and what the chart shows."
+    },
+    {
+      "number": 5,
+      "domain_id": "explanation_and_shared_decisions",
+      "name": "Explanation and shared decisions",
+      "description": "Explains results and delivers hard news clearly and kindly, checks understanding, and involves the patient in decisions."
+    },
+    {
+      "number": 6,
+      "domain_id": "clinical_reasoning_and_synthesis",
+      "name": "Clinical reasoning and synthesis",
+      "description": "Pulls the history and chart together into an accurate picture of the clinical findings."
+    },
+    {
+      "number": 7,
+      "domain_id": "professionalism_safety_closure",
+      "name": "Professionalism, safety, and closure",
+      "description": "Stays professional and safe, and ends the visit clearly with next steps."
+    }
+  ],
+  "written_evidence": ["strength", "important_gap", "safety_or_accuracy_concern"],
+  "teacher_review": { "domain_numbers": [6, 7], "at_or_below_score": 1 }
+}

@@ -1,0 +1,438 @@
+{
+ "patient_overview": {
+  "name": "Ana Luisa Riojas",
+  "age": 81,
+  "sex": "Female",
+  "description": "Ana Luisa Riojas is an 81-year-old White Hispanic woman living in a crowded Somerset, New Jersey household of seven, juggling a heart attack history, early Alzheimer's, osteoporosis, and chronic back and neck pain. She comes across to a student as sharp-tongued and alert despite her memory diagnosis, answering most questions with a question of her own, as if testing whether the student has really done their homework. Three weeks ago, after a scare with her sugar numbers crossing into prediabetes territory, she started genuinely trying to change how she eats - smaller plates, less rice at dinner - but the change is new and wobbly. She cooks elaborate meals for her large household because that is how she has always shown love, and underneath the questioning exterior there is quiet shame about nights she eats far past full in front of the television after everyone else has gone to bed.",
+  "keywords": [
+   "prediabetes",
+   "alzheimer's disease",
+   "osteoporosis",
+   "chronic pain",
+   "ischemic heart disease",
+   "binge eating",
+   "portion control",
+   "polypharmacy",
+   "health literacy",
+   "caregiver fatigue"
+  ]
+ },
+ "demographics": {
+  "occupation": "Retired seamstress who now does part-time alterations work for a dry cleaner two mornings a week",
+  "residence": "Somerset, New Jersey; household of 7",
+  "ethnicity": "White, Hispanic",
+  "language": "Language other than English",
+  "marital_status": "Single",
+  "education_level": "More than high school",
+  "insurance": "Medicare",
+  "cultural_context": "Ana Luisa was raised in a bilingual household where Sunday meals were the one guaranteed gathering of extended family, and she was taught that a full plate was proof of love and a clean plate was proof of gratitude. She has carried that into her own kitchen for sixty years, cooking for whoever is under her roof - currently her daughter, two grandchildren, a great-grandchild, and a boarder. She distrusts advice that doesn't come with an explanation, a habit she traces to watching relatives get prescribed things 'just because' without anyone telling them why."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Prediabetes",
+  "secondary_diagnoses": [
+   "Recurrent urinary tract infection",
+   "Past pregnancy history of miscarriage",
+   "Chronic pain",
+   "Chronic low back pain",
+   "Chronic neck pain",
+   "Acute non-ST segment elevation myocardial infarction",
+   "History of myocardial infarction",
+   "Ischemic heart disease",
+   "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "Alzheimer's disease",
+   "Osteoporosis"
+  ],
+  "medical_history": [
+   "Recurrent urinary tract infection since 1961",
+   "Past pregnancy history of miscarriage since 1991",
+   "Prediabetes since 1991",
+   "Chronic pain since 2014",
+   "Chronic low back pain since 2014",
+   "Chronic neck pain since 2014",
+   "Acute non-ST segment elevation myocardial infarction since 2018",
+   "History of myocardial infarction since 2018",
+   "Ischemic heart disease since 2023",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2023",
+   "Alzheimer's disease since 2024",
+   "Osteoporosis since 2026",
+   "Acute viral pharyngitis (2021-11 to 2021-11, resolved)",
+   "Gingivitis (2023-02 to 2023-02, resolved)",
+   "Gingival disease (2023-02 to 2023-02, resolved)",
+   "Gingivitis (2025-02 to 2025-03, resolved)",
+   "Acute bacterial sinusitis (2026-06 to 2026-07, resolved)",
+   "Dental fluoride treatment (2026-05-31)",
+   "Examination of gingivae (2026-05-31)",
+   "Removal of subgingival plaque and calculus from all teeth using dental instrument (2026-05-31)",
+   "Removal of supragingival plaque and calculus from all teeth using dental instrument (2026-05-31)",
+   "Dental care (2026-05-31)",
+   "Dental consultation and report (2026-05-31)"
+  ],
+  "current_symptoms": [
+   "Dull, constant ache in the low back and neck that worsens by late afternoon",
+   "Burning with urination that comes and goes, 'like clockwork every few months'",
+   "Fatigue most afternoons, especially after a big lunch",
+   "Occasional lightheadedness when standing up from the sofa",
+   "Trouble remembering whether she already took her pills or already ate"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Gait is slow and slightly favors the right hip, pausing to steady herself on doorframes when walking from the waiting room",
+   "Mild forgetfulness mid-sentence, which she covers by rephrasing or asking the student to repeat the question",
+   "Noticeable swelling and tenderness she points to in her lower back and neck when she shifts position in the chair",
+   "Dentition shows a recently cleaned mouth with some gum recession, consistent with her gingival history"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.9 % (reference < 5.7; 2026-05-24)",
+   "Glucose: 90 mg/dL (reference 70-99 (fasting); 2026-05-24)",
+   "eGFR: 8.9 mL/min/1.73m2 (reference >= 90; 2018-02-18)",
+   "Total cholesterol: 196.7 mg/dL (reference < 200; 2026-03-01)",
+   "LDL cholesterol: 106.8 mg/dL (reference < 100; 2026-03-01)",
+   "HDL cholesterol: 61.9 mg/dL (reference >= 40; 2026-03-01)",
+   "Triglycerides: 139.8 mg/dL (reference < 150; 2026-03-01)",
+   "Haemoglobin: 15.4 g/dL (reference 12.0-17.5; 2023-02-12)",
+   "White cell count: 8.1 10*3/uL (reference 4.0-11.0; 2023-02-12)",
+   "Platelets: 153 10*3/uL (reference 150-450; 2023-02-12)",
+   "Potassium: 4 mmol/L (reference 3.5-5.1; 2026-05-24)",
+   "Sodium: 143.7 mmol/L (reference 135-145; 2026-05-24)",
+   "Urea nitrogen: 12.4 mg/dL (reference 7-20; 2026-05-24)"
+  ],
+  "vital_signs": [
+   "BP: 107/70 mmHg",
+   "HR: 83 bpm",
+   "RR: 13 breaths/min",
+   "Recorded: 2026-05-24"
+  ],
+  "anthropometrics": [
+   "Height: 169.8 cm",
+   "Weight: 70.4 kg",
+   "BMI: 24.4 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Acetaminophen 325 MG / Oxycodone Hydrochloride 10 MG Oral Tablet [Percocet]",
+    "dose": "325 MG",
+    "frequency": "As needed, roughly 2-3 times a week for flare-ups",
+    "purpose": "Not recorded",
+    "adherence": "Takes it when the back pain is 'unbearable,' otherwise skips it because she doesn't like how foggy it makes her feel",
+    "patient_concerns": "Why do you need to know what I eat before I take a pain pill? Does it mess with my stomach?"
+   },
+   {
+    "name": "12 HR Hydrocodone Bitartrate 10 MG Extended Release Oral Capsule",
+    "dose": "10 MG",
+    "frequency": "Twice daily, extended release",
+    "purpose": "Not recorded",
+    "adherence": "Mostly consistent, keeps it in a weekly pill organizer her neighbor fills with her",
+    "patient_concerns": "It's been making her constipated for weeks, and she wants to know if certain foods will help without 'taking even more pills'"
+   },
+   {
+    "name": "Alendronic acid 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once weekly, on an empty stomach",
+    "purpose": "Osteoporosis",
+    "adherence": "Good, but she admits she sometimes forgets the 'no lying down for 30 minutes' rule and lies on the couch anyway",
+    "patient_concerns": "Asks why she has to wait so long after taking it before eating breakfast - 'What's the actual reason, not just the rule?'"
+   },
+   {
+    "name": "24 HR Donepezil hydrochloride 10 MG / Memantine hydrochloride 28 MG Extended Release Oral Capsule",
+    "dose": "10 MG",
+    "frequency": "Once daily, extended release",
+    "purpose": "Alzheimer's disease",
+    "adherence": "Good, her neighbor double-checks the organizer each Sunday",
+    "patient_concerns": "Worries it's 'not really doing anything' since her memory still slips, and wonders if diet could help more than the pill"
+   },
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Heard online that grapefruit interacts with blood thinners and wants to know if that applies to her"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, 20 MG",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Questions why she's on two different simvastatin doses and whether that's a mistake someone should catch"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily, extended release",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Notices her ankles swell some days and asks if salt in her cooking could be the cause"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest discomfort",
+    "purpose": "Not recorded",
+    "adherence": "Keeps it in her purse and checks the expiration date herself every month",
+    "patient_concerns": "Wants to know if the burning in her chest is really her heart or 'just the beans repeating on me'"
+   },
+   {
+    "name": "aspirin 81 MG Oral Tablet",
+    "dose": "81 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Asks whether she still needs it since she's 'already on the other blood thinner'"
+   },
+   {
+    "name": "bisoprolol fumarate 2.5 MG / hydrochlorothiazide 6.25 MG Oral Tablet",
+    "dose": "2.5 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Confused why there are two blood pressure combination pills and whether that's doubling up"
+   },
+   {
+    "name": "simvastatin 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily, 10 MG",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Same question as the other statin - wants a clear answer about why there are two strengths listed"
+   },
+   {
+    "name": "valsartan 80 MG Oral Tablet",
+    "dose": "80 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Wants to know if the lightheadedness when she stands up is from this pill or from her heart"
+   },
+   {
+    "name": "prasugrel 10 MG Oral Tablet",
+    "dose": "10 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Consistent",
+    "patient_concerns": "Asks if this is 'the same as the other clot pill' and why she takes both"
+   },
+   {
+    "name": "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+    "dose": "25 MG",
+    "frequency": "As needed, mostly at night",
+    "purpose": "Not recorded",
+    "adherence": "Uses it maybe twice a week when her mind is 'too busy' to sleep",
+    "patient_concerns": "Read that it's not great for memory in older people and wants to know if that's true for her specifically"
+   }
+  ],
+  "supplements_and_otc": [
+   "Calcium citrate with vitamin D, taken most mornings with coffee",
+   "Fish oil capsules she buys at the farmacia when her neighbor drives her",
+   "Topical menthol rub for her neck and back",
+   "Magnesium gummies she read 'help with bone pills'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Home-cooked traditional meals, heavy on rice, beans, stewed meats, and fried sides, with recent effort to shrink portions and swap soda for water in the last three weeks",
+  "food_preferences": [
+   "Arroz con pollo and other one-pot family dishes",
+   "Flan or tres leches for Sunday dessert",
+   "Strong coffee with condensed milk in the morning",
+   "Fresh tortillas bought from a local tortilleria rather than packaged"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Nighttime binge episodes after household stress",
+   "Portion sizes still scaled for seven even when cooking for fewer",
+   "Hidden sugary snack wrappers suggesting secret eating",
+   "Frequency and trigger pattern of the 'second dinner'"
+  ],
+  "meal_pattern": "Three family meals a day plus informal grazing while cooking; dinner is the largest and most elaborate meal, often eaten twice by Ana Luisa if the household goes to bed before she's settled",
+  "hydration": "Mostly coffee and water now; recently cut back on regular soda as part of her three-week change",
+  "physical_activity": "Limited by chronic back and neck pain; walks short distances around the house and occasional slow walks with Teresa in the evening",
+  "substance_use": "Ex-smoker; light alcohol use (AUDIT-C score of 1, roughly a glass of wine at holidays)",
+  "sleep": "Fragmented, often up late in the kitchen; reports her mind 'won't settle' some nights, which is when the second dinner happens"
+ },
+ "psychosocial_profile": {
+  "personality": "Skeptical, sharp, questioning - treats every piece of advice as a hypothesis to be tested, not a command to be followed",
+  "communication_style": "Answers questions with questions ('Why does that matter?' 'Who told you that?'), rarely gives a flat yes or no on the first pass",
+  "goals": [
+   "Keep her blood sugar from crossing into full diabetes",
+   "Stay sharp enough to keep cooking for her family",
+   "Avoid another heart event",
+   "Stay out of a nursing home"
+  ],
+  "concerns": [
+   "That her memory lapses will become everyone's excuse to take over her kitchen",
+   "That her part-time work hours will shrink if she gets sicker",
+   "That the household budget can't stretch to 'special' diabetic foods for just her"
+  ],
+  "beliefs": [
+   "If a doctor can't explain the mechanism, the advice isn't trustworthy",
+   "Love is shown through food, so a smaller portion feels like a smaller gesture of care",
+   "Pills are a last resort piled on top of each other without anyone really checking the whole list"
+  ],
+  "motivations": [
+   "Fear of ending up like her late sister, who lost both legs to diabetes complications",
+   "Wanting to still be the one who cooks for her great-grandchild's birthday",
+   "Pride in being the sharpest person in most rooms, even now"
+  ],
+  "fears": [
+   "Losing her memory faster and becoming a burden instead of the one who takes care of others",
+   "Another heart attack while home alone with the children",
+   "Being found out for the nighttime eating she can't explain even to herself"
+  ],
+  "barriers": [
+   "Housing is crowded and she worries about losing it, which raises her stress",
+   "Transportation problems have made her miss appointments and refill pickups more than once",
+   "Large family portions are baked into every recipe she knows",
+   "Fragile three-week-old changes that could collapse under stress or a bad week"
+  ],
+  "strengths": [
+   "Genuinely skilled, confident cook",
+   "Already took real action weeks ago, not just talk",
+   "Reads medical information independently and remembers details well for someone with her diagnosis",
+   "Has one trusted person who helps her stay organized"
+  ],
+  "support_system": "Her next-door neighbor of 20 years, Teresa, who drives her to appointments, fills her weekly pill organizer, and is the one person she admits things to that she won't tell her own family",
+  "readiness_to_change": "Action stage, but only three weeks in - she has started smaller portions and fewer sugary drinks, and is proud of it, but admits (if pressed gently) that one bad week with her grandson's school troubles sent her back to the refrigerator at midnight"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States she has prediabetes and 'already started fixing it myself three weeks ago'",
+   "Mentions she cooks for seven people every night and loves doing it",
+   "Volunteers that she takes 'too many pills to count' and wants to know what they're actually for",
+   "Says her neighbor Teresa drives her because the bus schedule doesn't work with her appointments"
+  ],
+  "discoverable_information": [
+   "Describes her usual day's meals in detail when asked - large dinners with rice, beans, meat, dessert most nights",
+   "Admits the osteoporosis diagnosis scared her into finally taking the alendronic acid seriously",
+   "Reveals she missed a cardiology refill pickup last month because no one could drive her that week",
+   "Explains that stress at home - a crowded house, worry about rent - makes her 'cook even bigger meals' to feel in control"
+  ],
+  "reluctant_information": [
+   "Acknowledges, if asked kindly about nighttime habits, that she sometimes eats a 'second dinner' alone after the house goes quiet",
+   "Admits she doesn't always remember if she's already eaten and sometimes eats again rather than ask her daughter and look forgetful"
+  ],
+  "hidden_information": [
+   "Ana Luisa ate nearly a whole tres leches cake by herself over two nights last month after an argument with her daughter about money, and threw away the pan so no one would ask",
+   "She has, twice in the past month, hidden pan dulce wrappers in her coat pocket instead of the kitchen trash so Teresa wouldn't notice during a visit"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a full day's intake from a skeptical, question-deflecting patient using open-ended, non-judgmental techniques.",
+    "expected_discoveries": [
+     "Large family-style dinners with rice, beans, meat, and dessert most nights",
+     "Smaller breakfasts and skipped mid-morning snacks",
+     "Portion sizes that have shrunk only slightly in the past three weeks"
+    ],
+    "possible_patient_reactions": [
+     "\"Why do you want to know what I had for breakfast - are you writing a book?\"",
+     "\"I already told the other nurse this, don't you people talk to each other?\""
+    ]
+   },
+   {
+    "learning_objective": "Explore comfort eating and binge patterns with sensitivity, recognizing shame as a barrier to disclosure.",
+    "expected_discoveries": [
+     "Nighttime 'second dinners' eaten alone",
+     "The hidden tres leches cake incident tied to a family argument",
+     "Hidden pan dulce wrappers kept from her support person"
+    ],
+    "possible_patient_reactions": [
+     "Deflects with a question: \"Doesn't everyone eat a little extra when they're upset?\"",
+     "Goes quiet and changes the subject to her grandchildren",
+     "If trust is built, admits quietly, \"I don't want Teresa to know. She'd worry.\""
+    ]
+   },
+   {
+    "learning_objective": "Support a fragile three-week action-stage change plan without triggering relapse or defensiveness.",
+    "expected_discoveries": [
+     "She has already reduced portions and sugary drinks on her own initiative",
+     "One bad week with her grandson's school troubles already caused a lapse",
+     "Her pride in self-directed change is a lever, not just a barrier"
+    ],
+    "possible_patient_reactions": [
+     "\"I did this myself, nobody made me - why would I stop now?\"",
+     "Bristles if the plan sounds like it doubts her progress: \"You think I can't keep this up?\""
+    ]
+   },
+   {
+    "learning_objective": "Reconcile large-household, love-through-food cooking traditions with portion and sugar goals for prediabetes.",
+    "expected_discoveries": [
+     "Recipes serve seven and are rarely halved",
+     "Smaller plates feel to her like withholding love from family",
+     "Possible strategies: freezing extra portions, adjusting recipe ratios without changing the dish itself"
+    ],
+    "possible_patient_reactions": [
+     "\"So you want me to feed my family less? Try telling my daughter that.\"",
+     "Warms up when asked to describe a favorite recipe in detail"
+    ]
+   },
+   {
+    "learning_objective": "Review a 14-medication regimen for nutrition-relevant interactions and barriers (constipation, timing with meals, cardiac symptoms vs. GI symptoms).",
+    "expected_discoveries": [
+     "Hydrocodone-related constipation needing fiber and fluid strategies",
+     "Alendronic acid timing and empty-stomach requirements",
+     "Confusion over duplicate statin and antiplatelet entries that merits a medication reconciliation referral"
+    ],
+    "possible_patient_reactions": [
+     "\"Why does nobody explain why I have two of the same kind of pill?\"",
+     "Tests the student: \"If you're so sure, tell me what this one does.\""
+    ]
+   },
+   {
+    "learning_objective": "Identify social barriers (transportation, housing stress, crowded household) that affect nutrition follow-through and connect to community resources.",
+    "expected_discoveries": [
+     "Missed medication pickups due to transportation problems",
+     "Housing worry contributing to stress-driven cooking and eating",
+     "Teresa as the key support person who could be looped into follow-up planning"
+    ],
+    "possible_patient_reactions": [
+     "\"You can't fix the bus for me, so what's the point of asking?\"",
+     "Softens when asked about Teresa: \"She's been so good to me, better than family some days.\""
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Assumed the duplicate simvastatin and antiplatelet entries reflect a medication list in need of reconciliation rather than an intentional doubling, since purpose fields were largely unrecorded",
+   "Assumed her part-time alterations work is compatible with her transportation and health limitations as recorded",
+   "Assumed the household of seven includes her daughter's family and a boarder, consistent with the housing and income data given"
+  ],
+  "optional_details": [
+   "Ana Luisa was a seamstress for forty years before cutting back to part-time alterations work",
+   "She keeps a small radio in the kitchen tuned to a Spanish-language talk station while she cooks"
+  ]
+ },
+ "source": {
+  "synthea_record": "1ea70449",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "skeptical and questioning, wants reasons for everything",
+   "communication": "answers questions with questions",
+   "readiness": "action: started changing in the last few weeks and it is fragile",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "cooks well and enjoys it, but portions are large and food is how the family shows love",
+   "held_back": "eats for comfort or in binges and is ashamed of it",
+   "support": "a close friend or neighbour who is the main support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

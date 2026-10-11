@@ -1,0 +1,1191 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Nutrition Self-Management Visit for a 55-Year-Old Man with Obesity, Prediabetes, and Ischemic Heart Disease: Late-Night Eating Pattern and Covert Statin Non-Adherence",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment with a stoic, talkative, preparation-stage patient whose single late-night large meal pattern and skipped daytime meals are linked to his prediabetes and cardiac history. The core teaching points are eliciting an accurate diet history despite narrative tangents, tactfully uncovering a concealed health-literacy barrier and a patient-vs-chart mismatch (reported 'fairly consistent' statin use versus a pharmacy refill pattern showing intermittent skipping), and negotiating one concrete, measurable behavior-change step consistent with motivational interviewing principles.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Union City, New Jersey, seated at his kitchen table on a break between errands",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Conrad Champlin",
+   "age": 55,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "black, hispanic",
+   "occupation": "Part-time facilities maintenance technician for a residential property management company",
+   "language": "English",
+   "appearance": "Alert and talkative on camera, sitting in a modest kitchen with a work radio audible in the background; appears fatigued around the eyes with mild pallor of the conjunctiva and nail beds; dressed in a company polo shirt as if just off or about to start a shift; gestures animatedly while telling stories and often needs to be gently redirected back to the question asked.",
+   "portrait": "/portraits/synthea-conrad-champlin-16d0dc5c.jpg"
+  },
+  "persona": {
+   "personality": "Easygoing, good-humored, stoic, and quietly proud of being the guy who 'doesn't make a fuss.' Minimizes symptoms and deflects with humor or long stories when a topic touches something he hasn't told his doctors or doesn't fully understand.",
+   "communicationStyle": "Talkative and tangential - launches into stories about his building's boiler, his daughter's softball games, or his father's work ethic before circling back to answer the actual question. Uses plain, everyday language, avoids medical jargon, and gets gently defensive or jokes his way past uncomfortable topics.",
+   "healthLiteracy": "low",
+   "emotionalState": "Outwardly cheerful and in control, but underneath carries real worry about his heart and quiet shame about struggling with written instructions; motivated and ready to make one change if given a clear, simple target.",
+   "background": "Conrad grew up in Union City in a mixed Black and Hispanic household where weekend meals were a big celebration but weekday eating was always squeezed in around work. He's a part-time facilities maintenance tech for a property management company, married with a teenage daughter he's devoted to - he talks about her softball games and wanting to see her graduate college and get married someday. He models himself on his father, who worked two jobs and 'never once called in sick.' He likes reading health articles online and keeps a notebook of printouts, even though he doesn't always finish them. On his one day off he likes watching baseball.",
+   "speechExamples": [
+    "Oh man, don't even get me started on that boiler, I was there till midnight last Tuesday...",
+    "Nah, I'm fine, I don't make a fuss about that stuff, never have.",
+    "My daughter, she's something else with that softball bat, you shoulda seen her last weekend.",
+    "I read somewhere that stuff can mess with your liver if you're not careful, so I just... skip it sometimes, no big deal.",
+    "Just give me the one thing to do, doc, I'll run with it - don't need the whole ten-page plan."
+   ],
+   "concerns": [
+    "Worried his late-night eating pattern is 'catching up' with his heart",
+    "Concerned about forgetting his medications when his work schedule shifts around",
+    "Doesn't want to be a burden on his wife, who already works full time and has enough on her plate"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are joining a telehealth video visit as the dietetics student working with the clinical nutrition team. Your patient is Conrad Champlin, a 55-year-old man referred for a nutrition visit tied to his diabetes self-management plan (he has prediabetes, obesity, and a history of heart disease). Review his chart before the call, then conduct a focused nutrition assessment and counseling session. He is friendly and talkative and may go off on tangents - you'll need to gently redirect him back to the questions you need answered.",
+   "chiefComplaint": "Follow-up nutrition visit for diabetes self-management (prediabetes) and weight/heart-healthy eating",
+   "openingLine": "Hey, good to see you - yeah so, they wanted me to talk to a nutrition person about my sugar and my eating, I guess. I'm doing alright though, just the usual running around.",
+   "tasks": [
+    "Take a focused diet history (24-hour recall and typical meal/snack pattern) despite the patient's tendency to go off on tangents",
+    "Review anthropometric measurements and relevant labs with the patient and relate them to his eating pattern",
+    "Assess barriers to regular meal timing, including his work schedule, support system, and budget",
+    "Screen sensitively for how well he understands and follows written nutrition and medication instructions, without causing embarrassment",
+    "Collaborate with the patient to identify one specific, measurable first step he can start this week, consistent with his readiness to change",
+    "Document your encounter using the ADIME format"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Follow-up nutrition visit for diabetes self-management (prediabetes) and weight/heart-healthy eating"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Union City Primary Care Associates; Cardiology: Dr. R. Alvarez"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Body mass index 30+ - obesity (since 2008); Prediabetes (since 2011); Anemia (since 2017); Ischemic heart disease (since 2023); Abnormal findings diagnostic imaging heart+coronary circulat (since 2023)"
+   },
+   {
+    "label": "Medications",
+    "value": "Clopidogrel 75 MG Oral Tablet; Simvastatin 20 MG Oral Tablet; 24 HR metoprolol succinate 100 MG Extended Release Oral Tablet; Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known allergies"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "visit reason",
+    "chart": "Presents for follow-up nutrition visit tied to prediabetes self-management plan and weight/heart-healthy eating.",
+    "says": "I'm here because my doctor wants me to get a handle on my eating, with the sugar and the heart thing and all.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "meal timing pattern",
+    "chart": "Reports eating essentially one large meal daily, between 9:30-11 PM, due to work shift schedule.",
+    "says": "Honestly I eat basically one real meal a day, late at night after I'm done running around all day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "work schedule",
+    "chart": "Works part-time, variable-shift facilities maintenance job, often skipping meals during shifts.",
+    "says": "I'm part-time doing maintenance, but it keeps me on my feet all day, no real time to sit and eat.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "cardiac history summary",
+    "chart": "Reports history of 'borderline sugar' (prediabetes) and heart trouble found on cardiac imaging last year.",
+    "says": "I got the borderline sugar thing and some heart trouble they found on a scan last year.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "medication regimen overview",
+    "chart": "Reports taking several heart medications and a blood thinner.",
+    "says": "I'm on a few heart pills and one of those baby-aspirin-type blood thinners.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "hpi",
+    "topic": "late dinner contents",
+    "chart": "Describes typical late dinner as rice and beans or stewed meat, often with fried plantains and sweetened iced tea; occasionally substitutes leftover pizza or a deli sandwich on busy days.",
+    "says": "Most nights it's rice and beans or some stewed meat from the spot by my building, plantains on the side, big glass of iced tea. Busy nights, maybe pizza or a sandwich from the deli instead.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h7",
+    "category": "hpi",
+    "topic": "daytime eating",
+    "chart": "Admits to skipping breakfast most days and often lunch, substituting coffee and sweetened iced tea.",
+    "says": "Breakfast, I just don't do it. Lunch, maybe, maybe not. Mostly I'm drinking coffee or iced tea to get through.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h8",
+    "category": "hpi",
+    "topic": "energy symptoms",
+    "chart": "Reports low energy most afternoons, which he attributes to aging.",
+    "says": "I get real tired by the afternoon, but I figure that's just getting older.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "hpi",
+    "topic": "exertional breathing",
+    "chart": "Reports shortness of breath climbing stairs to his third-floor apartment.",
+    "says": "Walking up to my place, three flights, I get a little winded. Everybody does, right?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "hpi",
+    "topic": "skipping meals effects",
+    "chart": "Reports feeling lightheaded if he goes too long between meals, though he minimizes significance.",
+    "says": "If I go too long without eating I get a little dizzy, but it's nothing, I just need to grab something.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h11",
+    "category": "hpi",
+    "topic": "chest symptoms frequency",
+    "chart": "Initially reports chest tightness has occurred only twice, attributed to stress.",
+    "says": "My chest gets tight sometimes, maybe happened twice, I think it's just stress.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h12",
+    "category": "hpi",
+    "topic": "chest symptoms frequency",
+    "chart": "On further questioning, reports chest tightness occurs several times a month, usually after his large late meal.",
+    "says": "Okay, I guess it's more than a couple times... maybe a few times a month, usually right after I eat that big dinner.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h13",
+    "category": "hpi",
+    "topic": "nighttime routine",
+    "chart": "Reports going to bed within an hour of his late meal and sleeping poorly most nights.",
+    "says": "I eat, then I'm pretty much right in bed within the hour. Sleep's not great most nights.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h14",
+    "category": "ros",
+    "topic": "chest pain character",
+    "chart": "Denies chest pain at rest unrelated to meals or exertion; describes tightness as intermittent, non-radiating.",
+    "says": "It's not a sharp pain or anything, just tight, and it goes away after a bit.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h15",
+    "category": "ros",
+    "topic": "palpitations and dizziness",
+    "chart": "Denies palpitations; denies fainting episodes.",
+    "says": "No, my heart doesn't race or skip, and I've never passed out or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h16",
+    "category": "ros",
+    "topic": "swelling and weight change",
+    "chart": "Denies leg or ankle swelling; denies recent unintentional weight loss or gain.",
+    "says": "No swelling in my legs, and my weight's been about the same for a while.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h17",
+    "category": "ros",
+    "topic": "GI symptoms",
+    "chart": "Denies nausea, vomiting, or abdominal pain; occasionally uses antacid after late dinners.",
+    "says": "No throwing up or stomach pain, just sometimes I take a Tums after I eat that late meal.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h18",
+    "category": "ros",
+    "topic": "bruising concern",
+    "chart": "Reports noticing easy bruising, has not reported this to cardiologist.",
+    "says": "I've noticed I bruise kinda easy lately, haven't said anything to my heart doctor about it though.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "weight history",
+    "chart": "History of obesity since 2008.",
+    "says": "I've been carrying extra weight since way back, 2008 or so.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "History of prediabetes since 2011.",
+    "says": "They told me I had the borderline sugar thing back in 2011.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h21",
+    "category": "pmh",
+    "topic": "anemia history",
+    "chart": "History of anemia since 2017, stable.",
+    "says": "I got told I'm a little anemic a few years back, 2017 I think. Nothing's changed with it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "pmh",
+    "topic": "heart disease history",
+    "chart": "History of ischemic heart disease and abnormal cardiac imaging finding since 2023.",
+    "says": "In 2023 they found something off on a heart scan and said I got heart disease.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h23",
+    "category": "pmh",
+    "topic": "recent minor illnesses",
+    "chart": "History of viral sinusitis (Feb-Mar 2025) and gingivitis/gingival disease with dental procedures (Jul 2025), both resolved.",
+    "says": "I had a sinus thing earlier last year and some gum work done over the summer, all cleared up now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h24",
+    "category": "psh",
+    "topic": "recent and upcoming procedures",
+    "chart": "Dental procedures including fluoride treatment, gingivectomy, desensitizing medicament application, and postoperative dental care all on 2025-07-20; colonoscopy scheduled 2026-06-20.",
+    "says": "Had some dental surgery stuff done back in July, and I've got a colonoscopy coming up on the calendar.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "antiplatelet medication",
+    "chart": "Clopidogrel 75 mg oral tablet once daily; reports taking it most days, admits he sometimes forgets when his work schedule changes.",
+    "says": "I take that blood thinner pill, clopidogrel, pretty much every day, though I'll forget sometimes if my shift changes up on me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "cholesterol medication adherence",
+    "chart": "Reports taking simvastatin 20 mg once daily in the evening fairly consistently.",
+    "says": "I take my cholesterol pill at night, pretty regular about it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "cholesterol medication timing and skipping",
+    "chart": "Admits to sometimes skipping simvastatin after a large late meal due to concern read online about liver effects; has not disclosed this to his cardiologist.",
+    "says": "Okay, truth is... sometimes after I eat that big dinner I just skip the cholesterol pill. Read online it can mess with your liver if you eat a lot with it, so I figure better safe.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h28",
+    "category": "medications",
+    "topic": "beta blocker medication",
+    "chart": "Takes metoprolol succinate ER 100 mg once daily; generally adherent; reports feeling 'slowed down' some days after long shifts.",
+    "says": "I take that heart rate pill every day. Some days it just makes me feel kind of slowed down, especially after a long shift.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h29",
+    "category": "medications",
+    "topic": "as-needed chest spray use",
+    "chart": "Carries nitroglycerin spray for chest pain; reports using it only twice; downplays actual frequency of need.",
+    "says": "I got that spray thing for my chest, but I've only really used it twice.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h30",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Takes fish oil capsules and a multivitamin from his wife 'when he remembers.'",
+    "says": "I take fish oil pills, read they're good for the heart, and a multivitamin my wife got me, when I remember.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h31",
+    "category": "allergies",
+    "topic": "drug and food allergies",
+    "chart": "No known drug or food allergies.",
+    "says": "No allergies that I know of, never had a reaction to anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s1",
+    "category": "family",
+    "topic": "household composition",
+    "chart": "Lives with wife and teenage daughter; both work/schoolwork heavily scheduled",
+    "says": "It's me, my wife, and my daughter at home, but between my wife's job and my daughter's softball, everybody's running in different directions.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works part-time as facilities maintenance technician; shift schedule variable, often ending around 9 PM",
+    "says": "My hours bounce around depending on what's broken that day — could be a 9 to 5, could run till 9 at night.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "household income/budget",
+    "chart": "Household income approximately $58,373/year; reports tight budget",
+    "says": "Money's tight, so I go for what's filling and cheap more than what's 'balanced,' if you know what I mean.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s4",
+    "category": "nutrition",
+    "topic": "food sourcing",
+    "chart": "Frequently obtains dinner from a local Dominican-Puerto Rican restaurant; substitutes deli sandwich or leftover pizza on busy days",
+    "says": "There's a spot by my building, rice and beans, stewed meat, plantains — that's dinner most nights. Busy days it's just whatever's at the deli or leftover pizza.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s5",
+    "category": "nutrition",
+    "topic": "beverage habits",
+    "chart": "Drinks sweetened iced tea and coffee throughout the day; minimal plain water intake",
+    "says": "I'm an iced tea guy, sweet tea with dinner too. Water? Honestly I forget until I'm already thirsty.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "function",
+    "topic": "physical activity pattern",
+    "chart": "No structured exercise; considers on-the-job stair climbing and lifting as sufficient activity",
+    "says": "I'm up and down stairs all day fixing stuff — that's my workout, I don't need a gym.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s7",
+    "category": "function",
+    "topic": "sleep pattern",
+    "chart": "Goes to bed within an hour of late dinner; reports poor sleep most nights",
+    "says": "I eat and then I'm pretty much ready to crash, but I don't sleep great most nights.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s8",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Light alcohol use, 1-2 beers on weekends; AUDIT-C score 2",
+    "says": "Maybe a beer or two on the weekend if I'm watching the game, that's about it.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s9",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Never smoked",
+    "says": "Never been a smoker, never saw the appeal.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "attitude toward symptoms",
+    "chart": "Minimizes symptoms; models father's work ethic of never acknowledging illness",
+    "says": "My father worked two jobs and never called in sick once in his life — I guess I got that from him. If it's not real bad, I just push through.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "support system",
+    "chart": "Reports minimal day-to-day support; describes managing health independently despite living with family",
+    "says": "My wife's got enough on her plate with her job, I don't want to pile more on her. I pretty much handle my own thing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "other",
+    "topic": "health information habits",
+    "chart": "Reads health articles online frequently; keeps a notebook of printed articles he does not always finish reading",
+    "says": "I like to look stuff up online, heart health, sugar, all that. I even print articles out — don't always finish 'em, but I like having 'em.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s13",
+    "category": "function",
+    "topic": "written instructions handling",
+    "chart": "Reports difficulty with dense written instructions; states he 'already knows that part' when materials are offered",
+    "says": "Those instruction sheets, the print's so small, honestly I don't even bother. I pretty much know what I need to know anyway.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s14",
+    "category": "function",
+    "topic": "managing paperwork at home",
+    "chart": "Relies on daughter for help with printed materials rather than reading independently",
+    "says": "My daughter's way better with paperwork than me, she sorts that stuff out when I need it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "s15",
+    "category": "other",
+    "topic": "reading prescription labels",
+    "chart": "Patient discloses inability to read fine print on prescription bottles or diabetes care plan handout without assistance; has not disclosed this to any provider previously",
+    "says": "...honestly? I can't really make out that tiny print on the pill bottles or that diabetes sheet they gave me. I never told anybody that. Feels dumb to say out loud.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s16",
+    "category": "other",
+    "topic": "pharmacy visits",
+    "chart": "Has returned to pharmacy twice to have staff re-explain medication schedule rather than disclosing difficulty reading instructions to a provider",
+    "says": "I went back to the pharmacy a couple times, just asked them to walk me through the schedule again. Easier than making a big deal of it with the doctor.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s17",
+    "category": "goals",
+    "topic": "preferred style of guidance",
+    "chart": "Expresses preference for one concrete, measurable change rather than a comprehensive plan",
+    "says": "Just give me one thing to do, I'll actually do it. Don't hand me a whole list, I'll never get through it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s18",
+    "category": "goals",
+    "topic": "long-term motivation",
+    "chart": "States motivation to stay healthy for daughter's milestones and to avoid his uncle's stroke history",
+    "says": "I want to see my daughter graduate, maybe walk her down the aisle someday. My uncle had a stroke in his sixties and I don't want that to be me.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "actions": [
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review pharmacy refill history for cardiac medications",
+    "aliases": [],
+    "result": "Clopidogrel 75mg: refilled approximately every 30 days, consistent with daily use. Simvastatin 20mg: refill intervals ranging 55-60 days over past six months despite 30-day supply quantity. Metoprolol succinate ER 100mg: refilled approximately every 30 days.",
+    "importance": "critical",
+    "artifactIds": [
+     "d3",
+     "d6"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review cardiology note from abnormal imaging finding (2023)",
+    "aliases": [],
+    "result": "2023 note documents ischemic heart disease with an abnormal finding on cardiac imaging; patient started on clopidogrel, simvastatin, metoprolol succinate ER, and PRN nitroglycerin for secondary prevention; follow-up with cardiology recommended for symptom monitoring.",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Conduct 24-hour dietary recall",
+    "aliases": [],
+    "result": "Patient reports: black coffee only before and during most of work shift; sweetened iced tea through the afternoon; one large meal around 10 PM consisting of a large plate of rice and beans with stewed chicken, a side of fried plantains, and a glass of sweetened iced tea; no structured breakfast or lunch; occasional substitution of leftover pizza or a deli sandwich on busy days.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess usual meal timing and pattern over a typical week",
+    "aliases": [],
+    "result": "Patient describes eating essentially one large meal per day, typically between 9:30 and 11 PM, after his shift ends; reports going to bed within about an hour of this meal; describes irregular, variable work shift schedule as the main driver of this pattern.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess hydration pattern",
+    "aliases": [],
+    "result": "Patient reports drinking mostly sweetened iced tea and coffee throughout the day; says he 'forgets water' until he feels very thirsty; denies carbonated soda intake.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess physical activity pattern",
+    "aliases": [],
+    "result": "Patient reports no structured exercise; describes being on his feet most of his work shift doing building repairs, climbing stairs and lifting; considers this activity sufficient.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess alcohol use (AUDIT-C)",
+    "aliases": [],
+    "result": "AUDIT-C score 2 (reports one to two beers on weekends, denies binge pattern)",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Screen functional health literacy using a teach-back approach on a sample nutrition label",
+    "aliases": [],
+    "result": "Patient initially laughs off the request, says he 'already knows that part,' then hesitates when asked to read the small-print serving size and sodium content aloud, eventually saying his daughter 'usually sorts out that kind of paperwork' for him.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Assess readiness to change using a stage-of-change framework",
+    "aliases": [],
+    "result": "Patient states he has already decided he needs to change how he eats and is specifically asking for one clear, doable first step rather than a full plan; consistent with preparation stage.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Assess social support and household food resources",
+    "aliases": [],
+    "result": "Patient reports living with wife and teenage daughter, both with demanding schedules; describes himself as 'mostly handling it solo' day to day; reports household budget is tight and he prioritizes filling, inexpensive food options.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "record",
+    "name": "Review diabetes self-management care plan handout given at prior visit",
+    "aliases": [],
+    "result": "Handout document on file instructing patient to eat three balanced meals spaced through the day, limit late-night eating, and read nutrition labels for added sugar and sodium content; no documentation of patient comprehension check at time of distribution.",
+    "importance": "minor",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 136/74 mmHg, heart rate 61/min, respiratory rate 15/min, weight 98.4 kg, height 180.4 cm, BMI 30.2 kg/m2 (recorded 2026-07-12).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.8 %; Glucose 68.3 mg/dL; Total cholesterol 205 mg/dL; LDL cholesterol 131.1 mg/dL; HDL cholesterol 53.8 mg/dL; Triglycerides 100.4 mg/dL; Haemoglobin 12.1 g/dL; White cell count 7 10*3/uL; Platelets 304.7 10*3/uL; Potassium 4.7 mmol/L; Sodium 137.2 mmol/L; Urea nitrogen 13.4 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-07-12); zoster vaccine live (2022-06-19); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2022-06-19); COVID-19 mRNA LNP-S PF 100 mcg/0.5mL dose or 50 mcg/0.25mL dose (2021-06-20).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d3",
+    "type": "other",
+    "title": "Pharmacy Refill History - Cardiac Medications",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "date": "Past 6 months, through 2026-07-10",
+    "author": "Union City Pharmacy Services",
+    "table": {
+     "columns": [
+      "Medication",
+      "Quantity dispensed",
+      "Days supply",
+      "Fill dates (most recent 4)",
+      "Average interval between fills"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Clopidogrel 75mg tablet",
+        "30 tablets",
+        "30 days",
+        "2026-07-10, 2026-06-10, 2026-05-11, 2026-04-10",
+        "~30 days"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20mg tablet",
+        "30 tablets",
+        "30 days",
+        "2026-06-28, 2026-05-02, 2026-03-05, 2026-01-08",
+        "~57 days"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Metoprolol succinate ER 100mg tablet",
+        "30 tablets",
+        "30 days",
+        "2026-07-09, 2026-06-09, 2026-05-10, 2026-04-10",
+        "~30 days"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Diabetes Self-Management Care Plan Handout (Prior Visit)",
+    "release": {
+     "when": "action",
+     "ref": "a17"
+    },
+    "date": "2026-04-15",
+    "author": "Union City Primary Care Associates - Diabetes Education Service",
+    "body": "Patient education handout distributed at prior diabetes self-management visit. Instructions include: eat three balanced meals spaced across the day; avoid eating within 2-3 hours of bedtime; limit sweetened beverages; read nutrition facts labels for added sugar and sodium content; take medications as prescribed and bring any concerns about side effects to the care team rather than stopping or skipping doses. No documentation of a comprehension check (e.g., teach-back) performed at time of distribution."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Cardiology Consultation Note",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "date": "2023-09-14",
+    "author": "Dr. R. Alvarez, Cardiology",
+    "body": "55-year-old (then 52-year-old) male referred for evaluation after abnormal finding on cardiac imaging study. Impression: ischemic heart disease. Plan: initiate secondary prevention regimen including antiplatelet therapy (clopidogrel 75mg daily), statin therapy (simvastatin 20mg daily, evening dosing), beta-blocker (metoprolol succinate ER 100mg daily), and PRN nitroglycerin spray for chest discomfort. Counseled patient on importance of medication adherence and prompt reporting of any new or worsening chest symptoms. Follow-up with cardiology recommended at 6-12 month intervals or sooner if symptoms change."
+   },
+   {
+    "id": "d6",
+    "type": "chart",
+    "title": "Simvastatin Refill Interval Trend",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "date": "Past 6 months",
+    "author": "Union City Pharmacy Services",
+    "chart": {
+     "kind": "line",
+     "xLabel": "Fill date",
+     "yLabel": "Days since previous fill",
+     "series": [
+      {
+       "name": "Simvastatin 20mg",
+       "points": [
+        {
+         "x": "2026-01-08",
+         "y": 30
+        },
+        {
+         "x": "2026-03-05",
+         "y": 56
+        },
+        {
+         "x": "2026-05-02",
+         "y": 58
+        },
+        {
+         "x": "2026-06-28",
+         "y": 57
+        }
+       ]
+      }
+     ],
+     "refLow": 28,
+     "refHigh": 32
+    }
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nBody mass index 30+ - obesity (since 2008)\nPrediabetes (since 2011)\nAnemia (since 2017)\nIschemic heart disease (since 2023)\nAbnormal findings diagnostic imaging heart+coronary circulat (since 2023)\n\nRECENTLY RESOLVED\nViral sinusitis (2025-02 to 2025-03)\nGingivitis (2025-07 to 2025-07)\nGingival disease (2025-07 to 2025-07)\n\nPROCEDURES\n2026-06-20: Colonoscopy\n2025-07-20: Dental fluoride treatment (Gingivitis)\n2025-07-20: Postoperative care for dental procedure\n2025-07-20: Gingivectomy or gingivoplasty per tooth (Gingival disease)\n2025-07-20: Dental application of desensitizing medicament (Gingival disease)\n2025-07-20: Dental surgical procedure (Gingival disease)\n\nRECENT ENCOUNTERS\n2026-07-12 wellness: General examination of patient\n2026-06-20 ambulatory: Encounter for check up (Screening for malignant neoplasm of colon)\n2025-07-20 ambulatory: Encounter for check up (Gingivitis)\n2025-07-06 wellness: General examination of patient\n2025-02-10 ambulatory: Encounter for symptom (Viral sinusitis)\n\nSMOKING STATUS: Never smoked tobacco\nCARE PLANS: Diabetes self management plan (record artifact)"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Clopidogrel 75 MG Oral Tablet",
+        "2023-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Simvastatin 20 MG Oral Tablet",
+        "2023-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+        "2023-07",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+        "2023-07",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.8",
+        "%",
+        "< 5.7",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "68.3",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "205",
+        "mg/dL",
+        "< 200",
+        "2024-06-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "131.1",
+        "mg/dL",
+        "< 100",
+        "2024-06-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "53.8",
+        "mg/dL",
+        ">= 40",
+        "2024-06-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "100.4",
+        "mg/dL",
+        "< 150",
+        "2024-06-30"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.1",
+        "g/dL",
+        "12.0-17.5",
+        "2022-06-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2022-06-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "304.7",
+        "10*3/uL",
+        "150-450",
+        "2022-06-19"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.7",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "137.2",
+        "mmol/L",
+        "135-145",
+        "2026-07-12"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "13.4",
+        "mg/dL",
+        "7-20",
+        "2026-07-12"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a realistic 24-hour recall and typical weekly meal pattern despite the patient's tendency to digress into unrelated stories, identifying the single large late-night meal and minimal daytime intake.",
+    "factIds": [
+     "h2",
+     "h6",
+     "h7",
+     "h10"
+    ],
+    "actionIds": [
+     "a9",
+     "a10"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Relate anthropometric measurements and relevant laboratory values (HbA1c, fasting glucose, lipid panel, CBC, BMP) to the patient's eating pattern and chronic disease history.",
+    "factIds": [
+     "h4",
+     "h19",
+     "h20",
+     "h21",
+     "h22"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Assess barriers to regular meal timing, including variable work schedule, household budget, hydration habits, and limited day-to-day support.",
+    "factIds": [
+     "s2",
+     "s3",
+     "s4",
+     "s5",
+     "s11"
+    ],
+    "actionIds": [
+     "a10",
+     "a11",
+     "a16"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Sensitively screen functional health literacy around nutrition labels and written medication/care-plan instructions without causing embarrassment, recognizing cues that the patient may be compensating for a comprehension barrier.",
+    "factIds": [
+     "s12",
+     "s13",
+     "s14"
+    ],
+    "actionIds": [
+     "a14",
+     "a17"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Explore the relationship between the late-night eating pattern, nocturnal chest tightness, and cardiac medication timing/adherence, and recognize when a nutrition-related finding should be communicated to the medical team.",
+    "factIds": [
+     "h11",
+     "h12",
+     "h26",
+     "h27"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Collaborate with the patient, using his stated preference and preparation-stage readiness, to negotiate one concrete, measurable first step he can start within the week.",
+    "factIds": [
+     "s17",
+     "s18"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Altered nutrition-related behavior: excessive energy intake concentrated in a single late-night meal, inconsistent with pattern needed for prediabetes/cardiac risk reduction (nutrition diagnosis: NI-5.8.2 Altered nutrition-related laboratory values risk / NB-1.5 Not ready for diet/lifestyle change-adjacent but actually preparation stage / most accurately NI-1.3 or behavioral diagnosis 'Undesirable food choices related to irregular work schedule and limited meal planning as evidenced by one large nocturnal meal pattern and skipped breakfast/lunch')",
+   "differential": [
+    "Primary: skipped-meal/late-night single-meal eating pattern contributing to weight, prediabetes, and possible nocturnal reflux-like chest discomfort",
+    "Covert statin non-adherence due to unverified health belief about liver harm, confounding lipid/cardiac risk management",
+    "Functional/literacy barrier to following written medication and nutrition instructions, concealed by the patient",
+    "Stable chronic anemia (non-urgent, not the focus of this visit)",
+    "Mild dyslipidemia from 2024 (LDL 131 mg/dL), stable, not acutely changed"
+   ],
+   "keyFindings": [
+    "BMI 30.2 kg/m2 (98.4 kg, 180.4 cm) consistent with obesity",
+    "HbA1c 5.8% (2026-07-12), prediabetes range, with fasting glucose 68.3 mg/dL same day (low-normal, consistent with prolonged fasting intervals before the large late meal)",
+    "Reported eating pattern: skips breakfast and usually lunch; one large dense meal 9:30-11PM (rice/beans or stewed meat, fried plantains, sweetened iced tea); occasional deli sandwich/pizza on busy days",
+    "Hydration mostly sweetened tea/coffee; minimal water intake",
+    "On exam: mild pallor of conjunctiva/nail beds consistent with known anemia (Hgb 12.1 g/dL 2022-06-19), not an acute finding",
+    "Reports chest tightness 'about twice,' later reluctantly expands to several times a month, usually after the late heavy meal",
+    "Reports being 'fairly consistent' with simvastatin; pharmacy refill record shows refills every ~55-60 days instead of expected 30 days, consistent with intermittent skipping",
+    "Admits, when asked gently, to guessing pill timing because the instruction sheet print is hard to follow; does not disclose full extent of literacy barrier",
+    "AUDIT-C 2 (light weekend alcohol), stable, non-contributory",
+    "Lipid panel 2024-06-30: Total cholesterol 205, LDL 131.1, HDL 53.8, TG 100.4 mg/dL - stable, not re-checked this visit"
+   ],
+   "plan": [
+    "Complete ADIME nutrition assessment focused on 24-hour recall, meal timing/spacing, and barriers (shift schedule, cost, support)",
+    "Document nutrition diagnosis addressing irregular meal pattern/large nocturnal intake relative to his prediabetes and cardiac history",
+    "Negotiate one concrete, measurable first step consistent with preparation-stage readiness (e.g., adding a small morning or midday meal, or shifting dinner earlier by 1-2 hours), per his stated goal of 'one thing to start this week'",
+    "Screen tactfully for literacy/comprehension barriers with instructions and labels using a non-stigmatizing approach (e.g., teach-back, show-me technique) without naming or embarrassing the patient",
+    "Explore sodium content of stewed/fried dishes relative to his heart disease and discuss simple label-reading or verbal substitutes (e.g., asking the restaurant about salt, portioning plantains)",
+    "Discuss hydration swap (reducing sweetened tea, increasing water) as a low-effort addition",
+    "Flag to the referring PCP/cardiology team: possible intermittent statin self-discontinuation and increased frequency of nocturnal chest tightness, for medical follow-up (dietitian does not manage medication directly but must communicate the safety-relevant finding)",
+    "Schedule a focused follow-up visit to assess adherence to the agreed first step and reassess readiness for additional changes"
+   ],
+   "redFlags": [
+    "Chest tightness occurring several times a month, more frequent than initially reported, especially at night after large meals - warrants communication to cardiology/PCP",
+    "Reported statin 'fairly consistent' use is contradicted by pharmacy refill intervals of ~55-60 days, suggesting intermittent self-discontinuation of a secondary-prevention cardiac medication without informing his physician",
+    "Possible undisclosed literacy/comprehension barrier affecting safe medication self-management (guessing dose timing)"
+   ],
+   "educationPoints": [
+    "Explain, in plain language, how skipping meals all day and eating one very large meal late at night can affect blood sugar, energy, and nighttime comfort",
+    "Clarify that stopping a statin without talking to the prescribing doctor is risky even if the concern (liver harm) is understandable, and offer to help him bring this question to his cardiologist/PCP rather than deciding alone",
+    "Normalize checking in about understanding of written instructions in a way that does not feel like a test, so any need for extra support (e.g., teach-back, verbal review, large-print handout) can be identified without shame",
+    "Introduce the idea of a small, consistent morning or midday food addition as a first step rather than a full dietary overhaul, matching his stated preference for one concrete change",
+    "Discuss simple ways to make his usual cultural foods (rice and beans, stewed meats, plantains) fit a heart-healthy pattern through portioning and timing rather than elimination",
+    "Encourage swapping some sweetened iced tea for water across the day as an easy, low-cost addition"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Reports taking simvastatin 20 mg once daily in the evening fairly consistently (h26)",
+    "recordEvidence": "Pharmacy refill history shows simvastatin 20mg refill intervals of 55-60 days over the past six months, instead of the expected ~30 days for daily use (d3/d6)",
+    "teachingPoint": "Reported medication adherence can diverge from objective refill data; dietitians should corroborate self-reported adherence with available records and flag discrepancies affecting nutrition-medication interactions (e.g., meal timing and statin dosing) to the prescribing team rather than taking self-report at face value.",
+    "factId": "h26",
+    "artifactId": "d3"
+   },
+   {
+    "id": "m2",
+    "patientClaim": "Initially reports chest tightness has occurred only twice, attributed to stress (h11)",
+    "recordEvidence": "On further gentle questioning, patient discloses chest tightness occurs several times a month, usually after his large late meal (h12); this pattern of minimization is also consistent with cardiology's note documenting his ischemic heart disease and abnormal imaging finding as an ongoing concern requiring symptom monitoring (d5)",
+    "teachingPoint": "Patients who minimize symptoms (especially those modeling a 'never complain' upbringing) may underreport frequency on first pass; a careful, non-confrontational follow-up is often needed to elicit the true symptom burden, which here links directly to his eating pattern and has implications for safety communication back to the cardiology team."
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 13,
+   "condition": "Abnormal findings diagnostic imaging heart+coronary circulat",
+   "conditionLabel": "55 M · Ischemic heart disease, Anemia, Prediabetes · 4 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "16d0dc5c",
+   "fingerprint": "umc6kb"
+  }
+ }
+}

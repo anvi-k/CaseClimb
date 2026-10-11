@@ -1,0 +1,322 @@
+{
+ "patient_overview": {
+  "name": "Conrad Champlin",
+  "age": 55,
+  "sex": "Male",
+  "description": "Conrad Champlin is a 55-year-old Black, Hispanic man working part-time as a facilities maintenance technician for a property management company in Union City, New Jersey. He has obesity, prediabetes, anemia, and ischemic heart disease with a prior abnormal cardiac imaging finding, and he's here for a nutrition visit tied to his diabetes self-management plan. He comes across as easygoing and talkative, launching into long stories about his building's boiler problems or his daughter's softball games before circling back to whatever the student actually asked, and he tends to minimize anything that sounds like a complaint about his own health.",
+  "keywords": [
+   "obesity",
+   "prediabetes",
+   "ischemic heart disease",
+   "late-night eating",
+   "skipped meals",
+   "health literacy gap",
+   "label reading difficulty",
+   "preparation stage",
+   "stoic minimizer",
+   "limited support"
+  ]
+ },
+ "demographics": {
+  "occupation": "Part-time facilities maintenance technician for a residential property management company",
+  "residence": "Union City, New Jersey; household of 3",
+  "ethnicity": "Black, Hispanic",
+  "language": "English",
+  "marital_status": "Married",
+  "education_level": "More than high school",
+  "insurance": "Private insurance",
+  "cultural_context": "Conrad grew up in Union City in a mixed Black and Hispanic household where food was tied to celebration and big weekend gatherings, but weekday eating was always an afterthought squeezed between work shifts. He takes pride in being the guy who 'doesn't make a fuss' — about his health, his schedule, or anything else — a trait he says he got from his father, who worked two jobs and never once called in sick. He reads constantly about heart health and diabetes online because he likes to feel in control of information, even when he's quietly unsure how to apply it."
+ },
+ "clinical_profile": {
+  "primary_diagnosis": "Body mass index 30+ - obesity",
+  "secondary_diagnoses": [
+   "Prediabetes",
+   "Anemia",
+   "Ischemic heart disease",
+   "Abnormal findings diagnostic imaging heart+coronary circulat"
+  ],
+  "medical_history": [
+   "Body mass index 30+ - obesity since 2008",
+   "Prediabetes since 2011",
+   "Anemia since 2017",
+   "Ischemic heart disease since 2023",
+   "Abnormal findings diagnostic imaging heart+coronary circulat since 2023",
+   "Viral sinusitis (2025-02 to 2025-03, resolved)",
+   "Gingivitis (2025-07 to 2025-07, resolved)",
+   "Gingival disease (2025-07 to 2025-07, resolved)",
+   "Colonoscopy (2026-06-20)",
+   "Dental fluoride treatment (2025-07-20)",
+   "Postoperative care for dental procedure (2025-07-20)",
+   "Gingivectomy or gingivoplasty per tooth (2025-07-20)",
+   "Dental application of desensitizing medicament (2025-07-20)",
+   "Dental surgical procedure (2025-07-20)"
+  ],
+  "current_symptoms": [
+   "Occasional chest tightness that he brushes off as 'just stress'",
+   "Low energy most afternoons, which he blames on 'getting older'",
+   "Shortness of breath walking up the stairs to his third-floor apartment",
+   "Feels lightheaded if he skips too long between meals, though he denies this is a big deal"
+  ],
+  "allergies": [
+   "No known allergies"
+  ],
+  "clinical_findings": [
+   "Carries extra weight centrally, consistent with recorded BMI 30.2",
+   "Mild pallor of conjunctiva and nail beds consistent with his anemia history",
+   "Appears fatigued around the eyes but alert and talkative",
+   "Speaks in long tangents, circling back to the question only after a few minutes"
+  ],
+  "laboratory_data": [
+   "HbA1c: 5.8 % (reference < 5.7; 2026-07-12)",
+   "Glucose: 68.3 mg/dL (reference 70-99 (fasting); 2026-07-12)",
+   "Total cholesterol: 205 mg/dL (reference < 200; 2024-06-30)",
+   "LDL cholesterol: 131.1 mg/dL (reference < 100; 2024-06-30)",
+   "HDL cholesterol: 53.8 mg/dL (reference >= 40; 2024-06-30)",
+   "Triglycerides: 100.4 mg/dL (reference < 150; 2024-06-30)",
+   "Haemoglobin: 12.1 g/dL (reference 12.0-17.5; 2022-06-19)",
+   "White cell count: 7 10*3/uL (reference 4.0-11.0; 2022-06-19)",
+   "Platelets: 304.7 10*3/uL (reference 150-450; 2022-06-19)",
+   "Potassium: 4.7 mmol/L (reference 3.5-5.1; 2026-07-12)",
+   "Sodium: 137.2 mmol/L (reference 135-145; 2026-07-12)",
+   "Urea nitrogen: 13.4 mg/dL (reference 7-20; 2026-07-12)"
+  ],
+  "vital_signs": [
+   "BP: 136/74 mmHg",
+   "HR: 61 bpm",
+   "RR: 15 breaths/min",
+   "Recorded: 2026-07-12"
+  ],
+  "anthropometrics": [
+   "Height: 180.4 cm",
+   "Weight: 98.4 kg",
+   "BMI: 30.2 kg/m2"
+  ]
+ },
+ "medication_profile": {
+  "medications": [
+   {
+    "name": "Clopidogrel 75 MG Oral Tablet",
+    "dose": "75 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Takes it most days, admits he sometimes forgets when his schedule at work changes",
+    "patient_concerns": "Worried about bruising easily but hasn't mentioned it to his cardiologist"
+   },
+   {
+    "name": "Simvastatin 20 MG Oral Tablet",
+    "dose": "20 MG",
+    "frequency": "Once daily, evening",
+    "purpose": "Not recorded",
+    "adherence": "Fairly consistent, though he sometimes takes it with his late-night meal instead of before bed",
+    "patient_concerns": "Read online that statins can hurt his liver and quietly skips it after big meals 'just to be safe'"
+   },
+   {
+    "name": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet",
+    "dose": "100 MG",
+    "frequency": "Once daily",
+    "purpose": "Not recorded",
+    "adherence": "Generally adherent",
+    "patient_concerns": "Says it makes him feel 'slowed down' some days, especially after a long shift"
+   },
+   {
+    "name": "Nitroglycerin 0.4 MG/ACTUAT Mucosal Spray",
+    "dose": "0.4 MG/ACTUAT",
+    "frequency": "As needed for chest pain",
+    "purpose": "Not recorded",
+    "adherence": "Carries it but has only used it twice, downplays how often he feels he might need it",
+    "patient_concerns": "Doesn't want to admit how often his chest tightens up at night after his big late meal"
+   }
+  ],
+  "supplements_and_otc": [
+   "Fish oil capsules, bought after reading an article on heart health",
+   "Occasional Tums after his late dinners",
+   "A multivitamin his wife picked up for him that he takes 'when he remembers'"
+  ]
+ },
+ "nutrition_profile": {
+  "dietary_pattern": "Skips breakfast and often lunch during work shifts, then eats one large, dense meal between 9:30 and 11 PM",
+  "food_preferences": [
+   "Rice and beans or stewed meat dishes from a local Dominican-Puerto Rican spot near his building",
+   "Fried plantains as a frequent side",
+   "Sweetened iced tea with dinner",
+   "Leftover pizza or a sandwich grabbed from the corner deli on busy days"
+  ],
+  "foods_or_behaviors_to_explore": [
+   "Portion size of the single late-night meal, which tends to be very large",
+   "Frequency of ordering from the corner deli versus cooking at home",
+   "Snacking patterns (or lack of snacks) during long work shifts",
+   "Sodium intake from stewed and fried dishes relative to his heart disease",
+   "Reading nutrition labels on packaged snacks and frozen meals"
+  ],
+  "meal_pattern": "Essentially one large meal a day, eaten late at night after his shift ends around 9 PM",
+  "hydration": "Mostly sweetened iced tea and coffee during the day; says he 'forgets water' until he's thirsty",
+  "physical_activity": "On his feet most of his shift doing building repairs, but no structured exercise; says walking up and down stairs at work 'counts'",
+  "substance_use": "Light alcohol use, a beer or two on weekends (AUDIT-C score 2); never smoked",
+  "sleep": "Goes to bed shortly after his late meal, sometimes within an hour, and says he doesn't sleep well most nights"
+ },
+ "psychosocial_profile": {
+  "personality": "Stoic, downplays symptoms and problems, good-humored on the surface",
+  "communication_style": "Launches into long, wandering stories — about work, his daughter, the building he manages — before eventually circling back to answer the question asked",
+  "goals": [
+   "Wants one clear, concrete first step he can start this week rather than a long list of changes",
+   "Wants to avoid a heart attack like the 'abnormal finding' his cardiologist mentioned",
+   "Wants to keep working without needing to take time off"
+  ],
+  "concerns": [
+   "Worried his late-night eating pattern is 'catching up' with his heart",
+   "Concerned about his memory lapses with medications when his shift schedule changes",
+   "Doesn't want to be a burden to his wife, who already works full time"
+  ],
+  "beliefs": [
+   "Believes if he's not in pain, the problem isn't serious",
+   "Believes reading about health online makes him responsible for his own care",
+   "Thinks eating one big meal at night is 'efficient' since he has no time during the day"
+  ],
+  "motivations": [
+   "Wants to see his daughter graduate college and stay healthy enough to walk her down the aisle one day",
+   "Doesn't want to end up like his uncle, who had a stroke in his sixties",
+   "Likes the idea of a simple, trackable plan he can follow consistently"
+  ],
+  "fears": [
+   "Secretly afraid the chest tightness he's been having is more serious than he admits",
+   "Afraid of being told he has to overhaul his whole life at once",
+   "Afraid of looking incompetent if someone finds out he struggles to follow written instructions"
+  ],
+  "barriers": [
+   "Very little day-to-day support — his wife works long hours and his daughter is often at school or practice",
+   "Irregular part-time shift schedule makes consistent meal timing hard",
+   "Struggles to read dense nutrition labels and written medication instructions but covers it by saying he 'already knows that part'",
+   "Budget is tight on $58,373 household income, so he often chooses what's filling and cheap over what's balanced"
+  ],
+  "strengths": [
+   "Highly motivated to learn and already does a lot of independent research",
+   "Has decided he's ready to change and just wants a clear first step",
+   "Good rapport with his primary care team and shows up to appointments",
+   "Physically active on his feet most of the day at work"
+  ],
+  "support_system": "Lives with his wife and teenage daughter but both have packed schedules; describes himself as 'mostly handling it solo' day to day",
+  "readiness_to_change": "Preparation stage — he has already decided he needs to change his eating pattern and is asking for one specific, doable first step rather than general advice"
+ },
+ "information_disclosure": {
+  "initial_information": [
+   "States he has 'borderline sugar' (prediabetes) and heart trouble found on a scan last year",
+   "Mentions he works part-time doing maintenance and is usually running around all day",
+   "Says he eats 'basically one real meal' at night because of his schedule",
+   "Mentions he's on a few heart medications and a baby aspirin-type blood thinner"
+  ],
+  "discoverable_information": [
+   "Describes his late dinner in detail — portion size, what's in it, how late it usually is",
+   "Admits he skips breakfast most days and often lunch too, grabbing coffee instead",
+   "Reveals he drinks sweetened iced tea most of the day instead of water",
+   "Mentions his father's 'never call in sick' attitude shaped how he handles his own symptoms"
+  ],
+  "reluctant_information": [
+   "Eventually admits he sometimes skips his simvastatin after a big meal because he read online it can hurt his liver, without telling his doctor",
+   "Admits, when asked gently about managing his pill schedule, that he sometimes just guesses the dose timing because the instruction sheet 'has too much small print'",
+   "Reveals he's had chest tightness at night more than the 'twice' he initially said, closer to several times a month"
+  ],
+  "hidden_information": [
+   "Conrad cannot actually read the fine print on his prescription bottles or the diabetes care plan handout without his daughter's help, and has never told any provider this",
+   "He has gone back to the pharmacy twice to quietly ask them to re-explain the medication schedule rather than admit he didn't understand the printed instructions"
+  ]
+ },
+ "learning_opportunities": {
+  "opportunities": [
+   {
+    "learning_objective": "Elicit a realistic 24-hour recall despite the patient's tendency to wander into unrelated stories",
+    "expected_discoveries": [
+     "The single large late-night meal pattern and its typical composition",
+     "Minimal daytime intake aside from coffee and sweetened tea"
+    ],
+    "possible_patient_reactions": [
+     "'Oh that reminds me of the time my boiler broke and I didn't eat till midnight...'",
+     "'Honestly I don't think about breakfast, never have time for it.'"
+    ]
+   },
+   {
+    "learning_objective": "Identify a low-literacy-friendly way to assess understanding of nutrition label reading without embarrassing the patient",
+    "expected_discoveries": [
+     "Conrad struggles with the fine print on labels and medication sheets but masks it with humor or deflection",
+     "He relies on his daughter or pharmacist rather than reading materials himself"
+    ],
+    "possible_patient_reactions": [
+     "'Nah I don't really look at those, I just know what's good for me.'",
+     "'My daughter usually sorts that stuff out, she's smarter than me with paperwork.'"
+    ]
+   },
+   {
+    "learning_objective": "Negotiate one concrete, specific first step consistent with his preparation-stage readiness to change",
+    "expected_discoveries": [
+     "Conrad responds well to a single, simple, measurable action rather than a full meal plan overhaul",
+     "He wants something he can start the same week"
+    ],
+    "possible_patient_reactions": [
+     "'Just tell me the one thing to do first, I'll do it.'",
+     "'Don't give me ten things, give me one and I'll run with it.'"
+    ]
+   },
+   {
+    "learning_objective": "Explore the connection between his eating pattern, cardiac symptoms, and medication timing (e.g., statin, antiplatelet)",
+    "expected_discoveries": [
+     "He sometimes skips his statin after large meals due to an unverified online concern about liver damage",
+     "His chest tightness correlates with his late, heavy dinners more than he initially admits"
+    ],
+    "possible_patient_reactions": [
+     "'I read somewhere that stuff's hard on your liver if you eat too much with it, so I just... skip it sometimes.'",
+     "'It's not that bad, probably just gas from eating so late.'"
+    ]
+   },
+   {
+    "learning_objective": "Assess support systems and daily barriers to consistent meal timing",
+    "expected_discoveries": [
+     "Very little day-to-day support despite living with family",
+     "Irregular part-time work schedule as a major barrier to regular meals"
+    ],
+    "possible_patient_reactions": [
+     "'My wife's got her own stuff going on, I don't want to add to her plate.'",
+     "'I handle my own thing, always have.'"
+    ]
+   }
+  ]
+ },
+ "metadata": {
+  "assumptions": [
+   "Conrad's ischemic heart disease and abnormal cardiac imaging are being managed on standard secondary prevention medications (clopidogrel, simvastatin, metoprolol, nitroglycerin) though specific purposes were not recorded, so purposes are inferred from standard practice",
+   "His part-time schedule is assumed to be variable/shift-based, consistent with his described eating pattern",
+   "His difficulty with written instructions is assumed to be a functional literacy or processing issue he actively conceals rather than a vision problem, since no vision diagnosis is recorded"
+  ],
+  "optional_details": [
+   "Enjoys watching baseball on his one day off",
+   "Keeps a small notebook of health articles he's printed out but admits he doesn't always finish reading them"
+  ]
+ },
+ "source": {
+  "synthea_record": "16d0dc5c",
+  "condition_group": "heart",
+  "written_by_model": "us.anthropic.claude-sonnet-5",
+  "assigned_traits": {
+   "personality": "stoic, plays every problem down",
+   "communication": "long stories that wander off the question",
+   "readiness": "preparation: has decided and wants a concrete first step",
+   "literacy": "high health literacy, reads a lot online",
+   "eating": "skips meals during the day and then eats a very large meal late at night",
+   "held_back": "struggles to read labels or written instructions and hides it",
+   "support": "very little day-to-day support"
+  },
+  "from_synthea": [
+   "patient_overview.name, age, sex",
+   "demographics.residence, ethnicity, language, marital_status, education_level, insurance",
+   "clinical_profile.secondary_diagnoses, medical_history, allergies, laboratory_data, vital_signs, anthropometrics",
+   "clinical_profile.primary_diagnosis (chosen by the model from the recorded problems)",
+   "medication_profile.medications: name, dose, purpose"
+  ],
+  "from_model": [
+   "patient_overview.description, keywords",
+   "demographics.occupation, cultural_context",
+   "clinical_profile.current_symptoms, clinical_findings",
+   "medication_profile.medications: frequency, adherence, patient_concerns",
+   "medication_profile.supplements_and_otc",
+   "nutrition_profile, psychosocial_profile, information_disclosure, learning_opportunities, metadata"
+  ]
+ }
+}

@@ -1,0 +1,1106 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "title": "Meal-Timing and Adherence Barriers in a 43-Year-Old Man with Hyperlipidemia and Prediabetes",
+  "summary": "This case teaches dietetics students to conduct a telehealth nutrition assessment for a stoic, under-reporting patient with hyperlipidemia and prediabetes whose real problem - skipping meals all day then eating one large late-night meal - is intertwined with social isolation since his divorce. A built-in patient-versus-record mismatch (his self-reported 'I take my inhalers fine' versus a pharmacy refill record showing 7-10+ day gaps in his controller inhaler, undisclosed to his pulmonologist) gives learners practice spotting and gently exploring discrepancies without derailing the nutrition-focused visit. The case emphasizes motivational-interviewing skills to negotiate a single small, concrete change consistent with the patient's preparation stage of change, rather than overwhelming him with a full diet overhaul.",
+  "professions": [
+   "dietetics"
+  ],
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home in Crestwood Village, New Jersey, seated at his kitchen table",
+  "encounterType": "nutrition assessment",
+  "difficulty": 3,
+  "patient": {
+   "name": "Gordon Bergnaum",
+   "age": 43,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white, nonhispanic",
+   "occupation": "Former warehouse inventory clerk, now not in the labor force due to disability-related early retirement",
+   "language": "English",
+   "appearance": "A stocky, soft-spoken man sitting at a cluttered kitchen table, wearing a faded flannel shirt. He has dry, flaky patches visible on his forearms, keeps his arms crossed or hands folded, and gives brief, even-keeled answers without much facial animation. A cat occasionally wanders into frame.",
+   "portrait": "/portraits/synthea-gordon-bergnaum-3ab4d27b.jpg"
+  },
+  "persona": {
+   "personality": "Stoic, even-keeled, and self-sufficient; tends to minimize symptoms and problems, rarely volunteers opinions or complaints unless gently drawn out",
+   "communicationStyle": "Soft-spoken with brief, practical answers; frequently defers with phrases like 'whatever you think is best'; opens up slightly only when talking about his grandkids or his garden",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Calm and resigned on the surface, mildly guarded about anything that feels like criticism of his habits, quietly lonely underneath the stoicism",
+   "background": "Gordon is a 43-year-old divorced man living in Crestwood Village, New Jersey, in a household that technically includes five people through a shared family arrangement, though he spends much of his week alone. He used to work as a warehouse inventory clerk until a disability led him to leave the workforce early. He grew up in a working-class New Jersey family where meals were simple and practical - meatloaf, canned vegetables, whatever was on sale - and he's carried that practical, no-fuss attitude about food into adulthood. He keeps a small vegetable garden in the summer that he's proud of, though he admits he rarely gets around to eating much of what he grows. He has a cat he feeds on a strict schedule - more consistently, he jokes, than he feeds himself. He values his independence and doesn't like making a fuss about his health, having 'just gotten on with it' through various chronic issues since childhood.",
+   "speechExamples": [
+    "Whatever you think is best, doc.",
+    "I'm fine, really - don't make a big deal out of it.",
+    "I just never got hungry during the day, so I eat when I finally sit down at night.",
+    "It's not lonely, that's just how it is now.",
+    "I guess I only reach for the inhaler when my chest feels tight - didn't think that was wrong."
+   ],
+   "concerns": [
+    "His cholesterol numbers creeping up at his last visit",
+    "Being lectured by his adult children about his habits",
+    "Not wanting to seem like he's falling apart or becoming a burden"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are joining a telehealth video visit as the dietetics student. The patient is Gordon Bergnaum, a 43-year-old man following up for nutrition counseling related to his hyperlipidemia and prediabetes. Review his chart before the call. Your job is to complete a nutrition assessment, understand his eating pattern and barriers, and work with him toward one concrete next step he feels ready to take.",
+   "chiefComplaint": "Nutrition follow-up visit for hyperlipidemia and prediabetes management",
+   "openingLine": "Hey, yeah - I'm here. I guess I'm just following up about my cholesterol and whatever else. I eat one big meal at night and don't really do breakfast, if that's what you're asking.",
+   "tasks": [
+    "Take a focused diet history, including meal timing, portion sizes, beverage intake, and typical food choices",
+    "Review available anthropometric data, labs, and medication/record information relevant to his nutrition status",
+    "Explore the psychosocial and practical barriers behind his current eating pattern using a patient-centred, nonjudgmental approach",
+    "Identify any mismatches between what the patient reports and what the record shows, and address them sensitively",
+    "Negotiate and document one specific, patient-chosen first step consistent with his readiness to change, using ADIME format"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition follow-up visit for hyperlipidemia and prediabetes management"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; Endocrinology; Pulmonology; Dietetics (current referral)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   },
+   {
+    "label": "Problem list",
+    "value": "Atopic dermatitis (since 1983); Chronic sinusitis (since 1988); Asthma (since 2003); Sepsis (since 2017); Septic shock (since 2017); Prediabetes (since 2017); Essential hypertension (since 2018); Anemia (since 2018); Hyperlipidemia (since 2024)"
+   },
+   {
+    "label": "Medications",
+    "value": "Simvastatin 10 MG Oral Tablet; NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]; 120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]; lisinopril 10 MG Oral Tablet; ferrous sulfate 325 MG Oral Tablet; diphenhydrAMINE Hydrochloride 25 MG Oral Tablet"
+   },
+   {
+    "label": "Allergies",
+    "value": "Mold (organism) (Sneezing, mild); House dust mite (organism); Animal dander (substance) (Rhinoconjunctivitis, moderate); Grass pollen (substance); Sulfamethoxazole / Trimethoprim (Wheal, moderate); Tree nut (substance) (Anaphylaxis, severe)"
+   }
+  ],
+  "facts": [
+   {
+    "id": "h1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Presents for nutrition follow-up visit related to hyperlipidemia and prediabetes management.",
+    "says": "They set this up because my cholesterol was high at my last check-up, and I guess my blood sugar's borderline too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h2",
+    "category": "hpi",
+    "topic": "general symptom awareness",
+    "chart": "Reports feeling well overall; denies noticing significant symptoms day to day.",
+    "says": "Honestly, I feel fine most days. I don't really notice anything wrong.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h3",
+    "category": "hpi",
+    "topic": "exertional breathing",
+    "chart": "Reports mild shortness of breath climbing stairs to his apartment.",
+    "says": "I get a little winded going up the stairs to my place, but I figure that's just being out of shape.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h4",
+    "category": "hpi",
+    "topic": "nighttime stomach symptoms",
+    "chart": "Reports nighttime stomach discomfort and bloating after his late dinner.",
+    "says": "Sometimes after I eat at night my stomach gets kind of upset and bloated. I just figure it's from eating too fast.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h5",
+    "category": "hpi",
+    "topic": "afternoon energy",
+    "chart": "Reports low energy in the late afternoon, attributed by patient to aging.",
+    "says": "By mid-afternoon I just feel kind of dragged out. I figure that's just getting older.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h6",
+    "category": "ros",
+    "topic": "skin symptoms",
+    "chart": "Reports occasional itchy, flaky skin on elbows, scratches without conscious awareness.",
+    "says": "My elbows get itchy and flaky sometimes, I just scratch at them without even thinking about it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h7",
+    "category": "ros",
+    "topic": "respiratory symptoms",
+    "chart": "Denies current wheezing, chest tightness, or acute respiratory distress; faint end-expiratory wheeze noted on deep breath testing.",
+    "says": "I'm not wheezing or anything right now, I feel okay breathing-wise.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h8",
+    "category": "ros",
+    "topic": "sinus congestion",
+    "chart": "Reports chronic nasal congestion and sinus pressure, longstanding.",
+    "says": "My nose is usually a little stuffed up, has been for years. Just normal for me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h9",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports restless sleep most nights, going to bed late after his large evening meal.",
+    "says": "I don't sleep great. I'm usually up late eating, then I toss and turn some.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h10",
+    "category": "ros",
+    "topic": "cardiac symptoms",
+    "chart": "Denies chest pain, palpitations, or syncope.",
+    "says": "No chest pain or anything like that, no.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h11",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "Denies nausea, vomiting, or blood in stool; reports occasional bloating as noted above.",
+    "says": "No throwing up or blood or anything, just the bloating sometimes.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h12",
+    "category": "ros",
+    "topic": "swelling or edema",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "My legs and ankles aren't swelling or anything.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h13",
+    "category": "pmh",
+    "topic": "skin condition history",
+    "chart": "Atopic dermatitis since 1983.",
+    "says": "I've had eczema since I was a little kid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h14",
+    "category": "pmh",
+    "topic": "sinus condition history",
+    "chart": "Chronic sinusitis since 1988.",
+    "says": "I've had sinus trouble since I was a teenager.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h15",
+    "category": "pmh",
+    "topic": "breathing condition history",
+    "chart": "Asthma since 2003.",
+    "says": "I've had asthma since my twenties.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h16",
+    "category": "pmh",
+    "topic": "past serious illness",
+    "chart": "History of sepsis and septic shock in 2017, resolved, no current sequelae reported.",
+    "says": "Back in 2017 I got real sick, ended up in the hospital with sepsis. Scared me pretty bad. I'm fine now though.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h17",
+    "category": "pmh",
+    "topic": "blood sugar history",
+    "chart": "Prediabetes diagnosed 2017.",
+    "says": "They told me a few years back my blood sugar was borderline, prediabetes they called it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h18",
+    "category": "pmh",
+    "topic": "blood pressure history",
+    "chart": "Essential hypertension diagnosed 2018.",
+    "says": "I've had high blood pressure since about 2018.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h19",
+    "category": "pmh",
+    "topic": "blood count history",
+    "chart": "Anemia diagnosed 2018, stable.",
+    "says": "They said I was a little anemic a while back too.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "h20",
+    "category": "pmh",
+    "topic": "cholesterol history",
+    "chart": "Hyperlipidemia diagnosed 2024.",
+    "says": "My cholesterol got flagged last year, that's the main reason I'm doing this nutrition thing.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "h21",
+    "category": "pmh",
+    "topic": "recent dental care",
+    "chart": "Recent resolved gingivitis and gingival disease (Feb 2025, Feb 2026) with dental procedures including gingivectomy, fluoride treatment, and bitewing X-ray in February 2026.",
+    "says": "Oh, I had some gum stuff done at the dentist back in February, nothing major, all cleared up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h22",
+    "category": "pmh",
+    "topic": "recent viral illness",
+    "chart": "Acute viral pharyngitis, March 2025, resolved.",
+    "says": "I had a sore throat thing last spring, went away on its own.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "h23",
+    "category": "medications",
+    "topic": "cholesterol medication use",
+    "chart": "Reports taking simvastatin 10mg daily most days; admits to occasionally forgetting for stretches and not restarting until prompted by a refill reminder.",
+    "says": "I take that cholesterol pill most days. Sometimes I forget for a while and don't start back up till I get the refill notice.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "h24",
+    "category": "medications",
+    "topic": "rescue inhaler use",
+    "chart": "Reports using albuterol MDI as needed for wheezing, which he describes as rare.",
+    "says": "I've got the one inhaler I use if my chest feels tight, but that's not very often.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h25",
+    "category": "medications",
+    "topic": "controller inhaler use",
+    "chart": "Reports using fluticasone propionate MDI only when he feels he needs it rather than the prescribed twice-daily schedule.",
+    "says": "I take my inhalers fine. I mean, I use the daily one more when I feel like I need it, not really every day.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "h26",
+    "category": "medications",
+    "topic": "blood pressure medication use",
+    "chart": "Reports consistent daily use of lisinopril 10mg, taken with first food or drink of the day.",
+    "says": "That one I take every day, no problem, just with whatever I eat or drink first thing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "h27",
+    "category": "medications",
+    "topic": "iron supplement timing",
+    "chart": "Reports fairly consistent use of ferrous sulfate 325mg daily; sometimes taken late at night with his large meal on an empty stomach instead of with breakfast.",
+    "says": "I take my iron pill most days, sometimes late at night with dinner since I don't really eat breakfast. It upsets my stomach sometimes but I don't know why.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h28",
+    "category": "medications",
+    "topic": "nighttime allergy medication use",
+    "chart": "Reports using diphenhydramine 25mg several nights a week for itching or sleep; does not consider it a regular medication.",
+    "says": "I take a Benadryl some nights, for the itching or to help me sleep. That's not really a medicine though, is it?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h29",
+    "category": "allergies",
+    "topic": "environmental allergies",
+    "chart": "Allergic to mold, house dust mite, animal dander, and grass pollen.",
+    "says": "I'm allergic to mold, dust, pet dander, that kind of stuff, since I was a kid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "h30",
+    "category": "allergies",
+    "topic": "medication allergy",
+    "chart": "Allergic to sulfamethoxazole/trimethoprim, reaction was a wheal (hives).",
+    "says": "I can't take that one antibiotic, Bactrim I think, it gave me hives one time.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "h31",
+    "category": "allergies",
+    "topic": "food allergy",
+    "chart": "Allergic to tree nuts, history of anaphylaxis.",
+    "says": "I'm very allergic to tree nuts, had a bad reaction once, so I stay away from those completely.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s1",
+    "category": "social",
+    "topic": "household composition",
+    "chart": "Lives in household of five; divorced",
+    "says": "It's me and the family, I guess - we're five under one roof counting everybody, but it's complicated since the divorce.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s2",
+    "category": "social",
+    "topic": "living arrangement",
+    "chart": "Spends much of the week alone, particularly at mealtimes",
+    "says": "Most nights it's just me at the table. The house fills up some days, but not when I'm eating.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s3",
+    "category": "social",
+    "topic": "employment status",
+    "chart": "Former warehouse inventory clerk; not in labor force due to disability-related early retirement",
+    "says": "I used to work in a warehouse, keeping track of stock. Had to stop a while back - health stuff. I'm not looking for work now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s4",
+    "category": "social",
+    "topic": "insurance",
+    "chart": "Insured through Medicare",
+    "says": "I'm on Medicare, so that covers most of my visits.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s5",
+    "category": "family",
+    "topic": "adult children",
+    "chart": "Adult children check in frequently but tend to comment critically on his habits; he disengages from these conversations",
+    "says": "My kids call and check on me. They mean well but they get on me about what I eat and my pills. I just kind of nod and let it go.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s6",
+    "category": "family",
+    "topic": "grandchildren contact",
+    "chart": "Reports wanting more energy to keep up with grandchildren during visits",
+    "says": "My grandkids come around sometimes. I'd like to have more energy when they're here instead of feeling worn out.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s7",
+    "category": "psychosocial",
+    "topic": "loneliness at mealtimes",
+    "chart": "Reveals that he eats dinner alone most nights since the divorce and that this meal has become the main event of his day",
+    "says": "Honestly, dinner's about the only thing I look forward to most days. Eating by myself's gotten old, but it's just how it is now.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "s8",
+    "category": "psychosocial",
+    "topic": "meal timing origin",
+    "chart": "Reports late-meal pattern began around the time of his divorce and never changed back",
+    "says": "I started eating late like this right around when things ended with my ex. Never really went back to doing it any other way.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s9",
+    "category": "psychosocial",
+    "topic": "attitude toward health concerns",
+    "chart": "Minimizes symptoms; believes his body will tell him when something is seriously wrong",
+    "says": "I figure if something's really wrong, my body will let me know. I don't like making a fuss over things.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s10",
+    "category": "psychosocial",
+    "topic": "fear of being a burden",
+    "chart": "Expresses fear of becoming dependent on his children or having his health become something they have to manage",
+    "says": "I don't want my health turning into some project my kids have to run. I'd rather handle it myself.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s11",
+    "category": "psychosocial",
+    "topic": "fear of hospitalization",
+    "chart": "Reports fear of ending up hospitalized again like during his 2017 sepsis episode",
+    "says": "I don't ever want to end up back in the hospital like that time in 2017. That scared me more than I let on.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "s12",
+    "category": "goals",
+    "topic": "preference for one simple change",
+    "chart": "States preference for one concrete, manageable change rather than a full list of instructions",
+    "says": "Just give me one thing to work on. I don't want a whole list - I'll lose track of it.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "s13",
+    "category": "goals",
+    "topic": "energy and independence",
+    "chart": "Goals include reducing afternoon fatigue and maintaining independence",
+    "says": "I just want to feel less dragged out by the afternoon, and keep doing things on my own.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "s14",
+    "category": "function",
+    "topic": "physical activity level",
+    "chart": "Sedentary; no structured exercise since a knee issue a few years ago; limited to walking to the mailbox and light chores",
+    "says": "I don't really exercise anymore. My knee's given me trouble the last few years, so I just do little things around the house, walk to get the mail.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "s15",
+    "category": "substance",
+    "topic": "smoking history",
+    "chart": "Ex-smoker, quit approximately 8 years ago",
+    "says": "I quit smoking about eight years back. Haven't touched one since.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "s16",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol lightly, approximately 1-2 beers on weekends",
+    "says": "I'll have a beer or two on the weekend, nothing during the week.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "s17",
+    "category": "nutrition",
+    "topic": "gardening and fresh produce",
+    "chart": "Keeps a small vegetable garden in summer but rarely eats fresh produce from it",
+    "says": "I've got a little vegetable garden out back, I'm kind of proud of it, but I don't end up eating much of what grows. It just sits there mostly.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "s18",
+    "category": "other",
+    "topic": "pet routine",
+    "chart": "Keeps a strict feeding schedule for his cat, more consistent than his own meal pattern",
+    "says": "My cat eats on a tighter schedule than I do, honestly. She gets fed the same time every day - me, not so much.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "24-hour dietary recall / meal pattern assessment",
+    "aliases": [],
+    "result": "Patient reports no breakfast or lunch most days. First intake is coffee starting mid-morning. Around 6pm, sometimes a snack of chips or crackers. Main meal after 9pm: typically a frozen lasagna or meatloaf dinner, or deli ham and cheese on white bread, with potato chips; reports occasionally having seconds. Minimal water intake during the day, some water with the evening meal.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Readiness-to-change / stage-of-change assessment",
+    "aliases": [],
+    "result": "Patient identifies himself as ready to make a change and wants one specific, manageable step to start this week rather than a full overhaul of his diet. Consistent with the preparation stage of change.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Social/household context screen",
+    "aliases": [],
+    "result": "Patient reports living in a household of five on a shared basis but spends much of his week at the residence alone, particularly at mealtimes. Describes seeing people 3-5 times per week overall.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Physical activity assessment",
+    "aliases": [],
+    "result": "Patient reports no structured exercise since a knee problem a few years ago. Describes activity as walking to the mailbox and light household chores.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Alcohol and tobacco use screen",
+    "aliases": [],
+    "result": "Patient reports quitting smoking about 8 years ago. Reports drinking one to two beers on weekend days, none during the week.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Medication-taking routine review (timing relative to meals)",
+    "aliases": [],
+    "result": "Patient reports taking lisinopril with whatever he first eats or drinks in the day. Reports taking ferrous sulfate daily but says some nights he takes it late with his big meal instead of in the morning; mentions his stomach bothers him some nights after taking it.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Inhaler use pattern review",
+    "aliases": [],
+    "result": "Patient reports he 'takes his inhalers fine' and uses the daily controller inhaler 'when he feels like he needs it,' saying this is rare. States he hasn't had any flare-ups worth mentioning.",
+    "importance": "critical",
+    "artifactIds": [],
+    "abnormal": true
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Pharmacy refill history review",
+    "aliases": [],
+    "result": "See pharmacy refill record document.",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ],
+    "abnormal": true
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Prior nutrition/endocrinology visit note review",
+    "aliases": [],
+    "result": "See prior visit note document.",
+    "importance": "minor",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "assessment",
+    "name": "Sodium intake source screen (processed/convenience foods)",
+    "aliases": [],
+    "result": "Patient identifies deli ham and cheese, potato chips, and frozen prepared dinners as near-daily components of his evening meal. Does not add table salt beyond what's in packaged foods.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Hydration pattern assessment",
+    "aliases": [],
+    "result": "Patient reports several cups of black coffee starting mid-morning, with water mainly limited to what he drinks alongside his evening meal. Says he 'doesn't think about drinking water much' otherwise.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn1",
+    "kind": "vitals",
+    "name": "Vital signs",
+    "aliases": [
+     "vitals",
+     "blood pressure",
+     "BP",
+     "heart rate",
+     "pulse",
+     "weight",
+     "height",
+     "BMI"
+    ],
+    "result": "Blood pressure 117/96 mmHg, heart rate 86/min, respiratory rate 13/min, weight 87.6 kg, height 177.9 cm, BMI 27.7 kg/m2 (recorded 2026-02-06).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "asyn2",
+    "kind": "lab",
+    "name": "Recent laboratory results",
+    "aliases": [
+     "labs",
+     "lab results",
+     "blood tests",
+     "bloods",
+     "HbA1c",
+     "Glucose",
+     "eGFR",
+     "Total cholesterol",
+     "LDL cholesterol",
+     "HDL cholesterol",
+     "Triglycerides",
+     "Haemoglobin",
+     "White cell count",
+     "Platelets",
+     "Potassium",
+     "Sodium",
+     "Urea nitrogen"
+    ],
+    "result": "HbA1c 5.9 %; Glucose 93 mg/dL; eGFR 67 mL/min/1.73m2; Total cholesterol 207.7 mg/dL; LDL cholesterol 126 mg/dL; HDL cholesterol 52.7 mg/dL; Triglycerides 143.4 mg/dL; Haemoglobin 12.6 g/dL; White cell count 3.7 10*3/uL; Platelets 320.7 10*3/uL; Potassium 5 mmol/L; Sodium 140.2 mmol/L; Urea nitrogen 13.8 mg/dL.",
+    "importance": "important",
+    "artifactIds": [
+     "dsyn3"
+    ]
+   },
+   {
+    "id": "asyn3",
+    "kind": "record",
+    "name": "Immunisation record",
+    "aliases": [
+     "immunizations",
+     "immunisations",
+     "vaccines",
+     "vaccination record"
+    ],
+    "result": "Influenza split virus trivalent PF (2026-02-06); Hep A adult (2025-01-31); Td (adult) 5 Lf tetanus toxoid preservative free adsorbed (2025-01-31).",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Endocrinology Follow-up Note (Prior Visit)",
+    "release": {
+     "when": "start"
+    },
+    "date": "2026-01-15",
+    "author": "Dr. R. Hennessey, Endocrinology",
+    "body": "43 y/o male seen for prediabetes and hyperlipidemia follow-up. Patient reports feeling well overall, denies polyuria/polydipsia. Discussed lifestyle modification including meal regularity and reduced processed food intake; patient agreeable but noncommittal about specifics. Continue simvastatin 10mg daily, lisinopril 10mg daily. Referred to nutrition for dietary counseling given overweight BMI and borderline A1c. Will recheck labs in 6 weeks. Asthma and dermatitis stable per patient report; no acute complaints voiced at this visit."
+   },
+   {
+    "id": "d5",
+    "type": "other",
+    "title": "Pharmacy Refill History - Fluticasone Propionate MDI (Flovent) 0.044 mg/actuation",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "date": "2026-02-20",
+    "author": "Crestwood Pharmacy",
+    "body": "Refill pattern over past 6 months shows the controller inhaler consistently being refilled later than the expected 30-day supply interval, with gaps of 7 to 12 days between when one canister should have run out (based on twice-daily dosing) and the next refill pickup. One notable gap of 10 days occurred in January 2026, overlapping with a documented sinusitis flare. No refill gaps are noted for the albuterol rescue inhaler, which has been refilled at intervals consistent with occasional as-needed use."
+   },
+   {
+    "id": "dsyn1",
+    "type": "note",
+    "title": "Problem list and history",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "body": "ACTIVE PROBLEMS\nAtopic dermatitis (since 1983)\nChronic sinusitis (since 1988)\nAsthma (since 2003)\nSepsis (since 2017)\nSeptic shock (since 2017)\nPrediabetes (since 2017)\nEssential hypertension (since 2018)\nAnemia (since 2018)\nHyperlipidemia (since 2024)\n\nRECENTLY RESOLVED\nGingivitis (2025-02 to 2025-03)\nAcute viral pharyngitis (2025-03 to 2025-03)\nGingivitis (2026-02 to 2026-02)\nGingival disease (2026-02 to 2026-02)\n\nPROCEDURES\n2026-02-20: Dental fluoride treatment (Gingivitis)\n2026-02-20: Postoperative care for dental procedure\n2026-02-20: Gingivectomy or gingivoplasty per tooth (Gingival disease)\n2026-02-20: Dental application of desensitizing medicament (Gingival disease)\n2026-02-20: Dental surgical procedure (Gingival disease)\n2026-02-20: Dental plain X-ray bitewing\n\nRECENT ENCOUNTERS\n2026-07-17 ambulatory: Asthma follow-up (Asthma)\n2026-02-27 ambulatory: Follow-up encounter (Hyperlipidemia)\n2026-02-20 ambulatory: Encounter for check up (Gingivitis)\n2026-02-06 wellness: General examination of patient\n2026-01-18 ambulatory: Asthma follow-up (Asthma)\n\nSMOKING STATUS: Ex-smoker\nCARE PLANS: Asthma self management; Diabetes self management plan (record artifact); Hyperlipidemia clinical management plan (record artifact); Lifestyle education regarding hypertension; Self-care interventions; Skin condition care"
+   },
+   {
+    "id": "dsyn2",
+    "type": "medication_list",
+    "title": "Medication list",
+    "release": {
+     "when": "start"
+    },
+    "author": "Health record",
+    "table": {
+     "columns": [
+      "Medication",
+      "Started",
+      "For"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Simvastatin 10 MG Oral Tablet",
+        "2026-02",
+        "Hyperlipidemia"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "NDA020983 200 ACTUAT albuterol 0.09 MG/ACTUAT Metered Dose Inhaler [Ventolin]",
+        "2026-02",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "120 ACTUAT fluticasone propionate 0.044 MG/ACTUAT Metered Dose Inhaler [Flovent]",
+        "2026-02",
+        "Childhood asthma"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "lisinopril 10 MG Oral Tablet",
+        "2026-02",
+        "Essential hypertension"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "ferrous sulfate 325 MG Oral Tablet",
+        "2019-01",
+        "-"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "diphenhydrAMINE Hydrochloride 25 MG Oral Tablet",
+        "1983-09",
+        "-"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "dsyn3",
+    "type": "lab_report",
+    "title": "Laboratory results",
+    "release": {
+     "when": "action",
+     "ref": "asyn2"
+    },
+    "author": "Clinic laboratory",
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range",
+      "Collected"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "HbA1c",
+        "5.9",
+        "%",
+        "< 5.7",
+        "2026-02-06"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose",
+        "93",
+        "mg/dL",
+        "70-99 (fasting)",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "67",
+        "mL/min/1.73m2",
+        ">= 90",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "207.7",
+        "mg/dL",
+        "< 200",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "126",
+        "mg/dL",
+        "< 100",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "52.7",
+        "mg/dL",
+        ">= 40",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "143.4",
+        "mg/dL",
+        "< 150",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Haemoglobin",
+        "12.6",
+        "g/dL",
+        "12.0-17.5",
+        "2024-01-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "White cell count",
+        "3.7",
+        "10*3/uL",
+        "4.0-11.0",
+        "2024-01-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "320.7",
+        "10*3/uL",
+        "150-450",
+        "2024-01-26"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "5",
+        "mmol/L",
+        "3.5-5.1",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "140.2",
+        "mmol/L",
+        "135-145",
+        "2026-02-27"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Urea nitrogen",
+        "13.8",
+        "mg/dL",
+        "7-20",
+        "2026-02-27"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a focused diet/meal-pattern history that reveals skipped breakfast and lunch followed by a single large late-night meal, and link this pattern to convenience-food and sodium intake.",
+    "factIds": [
+     "h4",
+     "h9"
+    ],
+    "actionIds": [
+     "a1",
+     "a16",
+     "a17"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Review relevant anthropometric data and laboratory results (weight/BMI, HbA1c, lipid panel, renal panel, CBC) and relate findings to the patient's eating pattern and chronic disease management.",
+    "factIds": [
+     "h17",
+     "h18",
+     "h20"
+    ],
+    "actionIds": [
+     "asyn1",
+     "asyn2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Use a nonjudgmental, patient-centred approach to uncover medication-taking routines, including inhaler use and iron supplement timing, and identify discrepancies between self-report and the medical record.",
+    "factIds": [
+     "h25",
+     "h27",
+     "h23"
+    ],
+    "actionIds": [
+     "a6",
+     "a7",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Explore psychosocial and practical barriers underlying the late-meal pattern, including social isolation after divorce and family dynamics, using a respectful and nonjudgmental approach.",
+    "factIds": [
+     "s2",
+     "s7",
+     "s8",
+     "s5"
+    ],
+    "actionIds": [
+     "a3"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess the patient's stage of readiness to change and negotiate one specific, patient-chosen first step consistent with his stated preference for a single manageable goal.",
+    "factIds": [
+     "s12",
+     "s13"
+    ],
+    "actionIds": [
+     "a2"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Screen for additional lifestyle factors (physical activity, alcohol/tobacco use, hydration) relevant to a comprehensive nutrition assessment.",
+    "factIds": [
+     "s14",
+     "s15",
+     "s16"
+    ],
+    "actionIds": [
+     "a4",
+     "a5",
+     "a17"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Altered nutrition-related behavior: disordered meal timing (skipped breakfast/lunch with a single large late-night meal) in a man with hyperlipidemia and prediabetes, compounded by undisclosed controller-inhaler nonadherence and underlying loneliness since his divorce.",
+   "differential": [
+    "Nutrition diagnosis: Undesirable food choices (excessive sodium/convenience foods) related to limited meal planning and living alone, as evidenced by diet history of deli meats, chips, and frozen entrees.",
+    "Nutrition diagnosis: Irregular meal pattern (skipped breakfast and lunch, one large meal after 9pm) related to loss of routine after divorce and lack of daytime appetite cues, as evidenced by patient report of 'one big meal' eaten late.",
+    "Nutrition diagnosis: Inadequate fluid intake related to habitual reliance on coffee, as evidenced by patient report of minimal water intake.",
+    "Behavioral/psychosocial contributor (not a nutrition diagnosis but relevant context): medication nonadherence (fluticasone controller inhaler used symptomatically rather than scheduled) that the patient has not disclosed to his pulmonologist.",
+    "Consider but not primary: inadequate energy intake overall - unlikely given overweight BMI and large caloric load concentrated at night."
+   ],
+   "keyFindings": [
+    "BMI 27.7 kg/m2 (overweight), weight 87.6 kg, height 177.9 cm",
+    "Fasting glucose 93 mg/dL (normal) but HbA1c 5.9% (prediabetic range, >=5.7)",
+    "Total cholesterol 207.7 mg/dL and LDL 126 mg/dL both above goal; HDL 52.7 and triglycerides 143.4 within normal limits",
+    "BP 117/96 mmHg - diastolic elevated despite normal systolic",
+    "eGFR 67 mL/min/1.73m2 - mildly reduced, worth noting for sodium/protein counseling but not a current nutrition diagnosis driver",
+    "Diet history: skips breakfast and lunch, single large meal after 9 pm consisting of frozen entrees, deli meats, chips, with occasional seconds",
+    "Hydration pattern: several cups of black coffee daily, minimal water",
+    "Reports taking the fluticasone inhaler 'when I feel like I need it' rather than twice daily; pharmacy refill record shows gaps of 7-10+ days without refill pickup, including during a documented sinusitis flare, which the patient has not disclosed to his pulmonologist",
+    "Patient reports eating alone most nights since his divorce and describes the late meal as 'the one quiet comfort' of his day",
+    "Stage of change: preparation - patient explicitly wants one small, concrete first step rather than a full overhaul"
+   ],
+   "plan": [
+    "Complete a full ADIME-format nutrition assessment including 24-hour recall and typical day pattern, confirming meal timing, portions, and beverage intake",
+    "Review available anthropometric and lab data (weight/BMI, HbA1c, lipid panel, BP, eGFR) in the context of the diet history to formulate the nutrition diagnosis (PES statement)",
+    "Gently explore the psychosocial context of the late meal (loneliness, living alone part of the week, family dynamics) without pushing the patient past his comfort level",
+    "Review the pharmacy/medication record for the fluticasone inhaler and compare it with the patient's self-report to identify the adherence mismatch; flag for communication with his pulmonologist rather than attempting to manage the inhaler directly",
+    "Negotiate one specific, patient-chosen behavioral goal consistent with his stage of change (e.g., adding a small daytime snack, moving dinner earlier by 1-2 hours, swapping chips for a lower-sodium side) and set a realistic follow-up timeframe",
+    "Document using ADIME format: Assessment (diet history, anthropometrics, labs, psychosocial factors), Diagnosis (PES statement), Intervention (agreed single goal, education given), Monitoring/Evaluation (plan to reassess at next visit)"
+   ],
+   "redFlags": [
+    "Diastolic BP 96 mmHg is elevated and should be flagged for the medical team though not primarily a nutrition action item",
+    "HbA1c in prediabetic range trending upward risk given current eating pattern",
+    "eGFR 67 (mildly reduced) warrants noting for future sodium/protein guidance and medical follow-up",
+    "Undisclosed controller-inhaler nonadherence during a symptomatic sinusitis period is a patient-safety concern that should be communicated back to the referring/primary clinical team with the patient's awareness",
+    "Social isolation at mealtimes may be an ongoing emotional vulnerability, not simply a dietary habit"
+   ],
+   "educationPoints": [
+    "Explain in plain language how skipping meals all day and eating one very large meal late at night can affect blood sugar, cholesterol, and sleep, without shaming the pattern",
+    "Discuss how deli meats, chips, and frozen entrees contribute to sodium intake relevant to his blood pressure, offering simple swaps rather than a full overhaul",
+    "Normalize that one small, concrete change (not a complete diet rebuild) is an appropriate and effective starting point given his stated readiness",
+    "Encourage him to mention his actual inhaler-use pattern to his pulmonologist, framing it as useful information for his asthma care rather than a confession of failure",
+    "Validate the role of eating alone in shaping his current pattern, and explore (without insisting) whether any small routine shift (e.g., eating with family when available) might support a healthier timing without taking away his sense of autonomy"
+   ]
+  },
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "mismatches": [
+   {
+    "id": "m1",
+    "patientClaim": "Patient states he takes his inhalers fine and only uses the daily fluticasone (Flovent) controller inhaler 'when he feels like he needs it,' describing this as rare, with no gaps reported to his pulmonologist.",
+    "recordEvidence": "Pharmacy refill history for fluticasone propionate MDI shows refill gaps consistent with stretches of 7-10+ days without the medication, including during a documented sinusitis flare.",
+    "teachingPoint": "Patients may sincerely underreport nonadherence to maintenance medications, especially when they believe symptom-based use is reasonable; cross-checking refill records against self-report is essential before counseling, and discrepancies should be raised gently and relayed to the prescribing clinician rather than confronted.",
+    "factId": "h25",
+    "artifactId": "d5"
+   }
+  ],
+  "dataSource": {
+   "dataset": "Synthea (synthetichealth/synthea), seed 2026, New Jersey, adults 18-85",
+   "row": 33,
+   "condition": "Hyperlipidemia",
+   "conditionLabel": "43 M · Hyperlipidemia, Anemia, Essential hypertension +6 · 6 medications",
+   "values": {},
+   "documentId": "dsyn1",
+   "actionIds": [
+    "asyn1",
+    "asyn2",
+    "asyn3"
+   ],
+   "kind": "synthea",
+   "recordId": "3ab4d27b",
+   "fingerprint": "18s5k5f"
+  }
+ }
+}
