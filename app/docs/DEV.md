@@ -74,14 +74,40 @@ EC2 behind CloudFront. A systemd timer on the server polls `main` on GitHub ever
 the new commit in its own release directory and switches over. `GET /api/health` reports the
 running commit.
 
-## Dataset-grounded patients
+## Patients grounded in data
+
+Two sources can supply a new patient's clinical content so the model does not invent it. Both are
+chosen under **Clinical data source** in **New patient**, both are written into the case by code
+after the model has drafted the rest, and both are recorded on the case as `dataSource`.
+
+### Synthea records
+
+[Synthea](https://github.com/synthetichealth/synthea) builds synthetic patient histories from
+published disease statistics and care guidelines, with no language model. `data/synthea/records.json`
+holds 120 adult records generated with it.
+
+- Taken from the record: name, age, sex, problem list, recent history, medications, allergies,
+  vital signs, laboratory results, immunisations. They become the chart summary, the documents
+  "Problem list and history", "Medication list" and "Laboratory results", and the actions "Vital
+  signs", "Recent laboratory results" and "Immunisation record" (`src/lib/synthea.ts`).
+- Written by the model: the reason for today's visit, personality, how the patient talks, what they
+  hold back, mismatches, objectives and the answer key.
+- The consistency check raises a high-severity issue if anything taken from the record is edited.
+- Synthea gives no reference ranges; the ones shown are standard adult ranges added by
+  `scripts/synthea_records.py`. Records are plausible, not clinically curated: a problem list can
+  disagree with the latest numbers (for example "obesity" beside a BMI under 30).
+- To rebuild the records: download `synthea-with-dependencies.jar` from Synthea's releases, run the
+  command in the header of `scripts/synthea_records.py`, then run that script.
+
+### Health-markers dataset rows
+
 
 A patient's blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure can be taken from a
-row of the organisers' health-markers dataset instead of being written by the model.
+row of the organisers' health-markers dataset. Only those values come from the data.
 
 - Put the file at `data/private/health_markers_dataset.csv` (gitignored) or set `HEALTH_MARKERS_CSV`.
   Without it the option does not appear and generation works as before.
-- In **New patient**, choose a condition under **Clinical values from data**. The server picks a
+- In **New patient**, choose a condition under **Clinical data source**. The server picks a
   random complete row with that label (`src/lib/markersData.ts`), tells the model the values so
   the story fits them, and then writes them into the case itself (`applyMarkers` in
   `src/lib/markers.ts`): a "Laboratory results" document and "Blood tests" and "Blood pressure"

@@ -186,9 +186,14 @@ export interface CaseProfile {
 }
 
 export interface DataSource {
+  /** Which kind of source: a health-markers row (the default) or a Synthea patient record. */
+  kind?: "markers" | "synthea";
   dataset: string;
   /** 1-based data row in the dataset file. */
   row: number;
+  /** Synthea only: the record's id, and a fingerprint of what was written from it. */
+  recordId?: string;
+  fingerprint?: string;
   condition: string;
   conditionLabel: string;
   /** Values as shown in the case, keyed by dataset column. */

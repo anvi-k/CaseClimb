@@ -1,3 +1,4 @@
+import { syntheaChanged } from "./synthea";
 import type { Artifact, CaseProfile, ClinicalAction, DataSource } from "./types";
 
 /**
@@ -119,6 +120,10 @@ export interface MarkerProblem {
 export function markerProblems(c: CaseProfile): MarkerProblem[] {
   const src = c.dataSource;
   if (!src) return [];
+  if (src.kind === "synthea")
+    return syntheaChanged(c)
+      ? [{ severity: "high", where: "Patient details, chart summary, record documents and record actions", title: "The Synthea record was changed", why: `This patient's demographics, problem list, medications, allergies, vital signs, laboratory results and immunisations are meant to match ${src.dataset}, record ${src.recordId}. Something among them has been edited since they were written from the record.` }]
+      : [];
   const out: MarkerProblem[] = [];
   const v = src.values;
   const origin = `${src.dataset} row ${src.row}`;
