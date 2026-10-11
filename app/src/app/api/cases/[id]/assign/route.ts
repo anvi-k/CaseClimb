@@ -31,7 +31,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
   return Response.json({ students: roster(user.id, id).map(({ id: sid, name, assigned }) => ({ id: sid, name, assigned })) });
 }
 
-/** Puts this patient on the chosen students' lists. Body: { studentIds: string[] } */
+/** Puts this patient on the chosen students' lists. Body: { studentIds: string[], temperament?: 1-5 } */
 export async function POST(req: Request, { params }: { params: Promise<{ id: string }> }) {
   const user = await apiUser("faculty");
   if (user instanceof Response) return user;
@@ -42,6 +42,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
   const wanted = new Set<string>(Array.isArray(b.studentIds) ? b.studentIds.map(String) : []);
   const chosen = roster(user.id, id).filter((s) => wanted.has(s.id) && !s.assigned);
   if (!wanted.size) return bad("Choose at least one student.");
+  const temperament = Math.max(1, Math.min(5, Math.round(Number(b.temperament) || 3)));
   // One assignment per class, limited to the chosen students in it.
   for (const courseId of new Set(chosen.map((s) => s.course_id))) {
     run(
@@ -53,7 +54,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
       "homework",
       JSON.stringify([id]),
       null,
-      JSON.stringify({ level: 2 }),
+      JSON.stringify({ level: temperament, temperament }),
       null,
       1,
       JSON.stringify(chosen.filter((s) => s.course_id === courseId).map((s) => s.id)),

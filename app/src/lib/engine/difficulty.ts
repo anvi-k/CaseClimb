@@ -1,6 +1,11 @@
 import type { Knobs, Perturbation } from "../types";
 
-export const LEVEL_NAMES = ["", "Foundational", "Developing", "Proficient", "Advanced", "Expert"];
+/** The five temperaments a patient can be played at, from 1 (easiest to talk to) to 5. */
+export const TEMPERAMENTS = ["", "Easygoing", "Reserved", "Guarded", "Frustrated", "Very difficult"];
+/** The same five steps under their older name; kept so existing code reads the temperament names. */
+export const LEVEL_NAMES = TEMPERAMENTS;
+/** The mood that goes with the sharper temperaments, on top of the interview difficulty. */
+export const TEMPERAMENT_MOOD: Record<number, string | false> = { 1: false, 2: "withdrawn", 3: false, 4: "badday", 5: "skeptical" };
 
 /**
  * Difficulty never changes the clinical facts of a case. It changes how hard the patient is to

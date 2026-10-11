@@ -117,7 +117,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
       )}
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-        <Stat label="Next adaptive level" value={`${profile.level} ${LEVEL_NAMES[profile.level]}`} note={profile.sessions ? `Expected score about ${Math.round(profile.expectedAtLevel * 100)}%` : "Starting level for new students"} />
+        <Stat label="Suggested temperament" value={LEVEL_NAMES[profile.level]} note={profile.sessions ? `Expected score about ${Math.round(profile.expectedAtLevel * 100)}%` : "Starting level for new students"} />
         <Stat label="Overall rating" value={String(Math.round(profile.overall))} note={`Level ${profile.level} plays at ${LEVEL_RATING[profile.level]}`} />
         <Stat label="Scored visits" value={String(profile.sessions)} note="In this role, counted toward your ratings" />
         <Stat label="Weakest domain" value={weakest ? weakest.split(/[,(]| and /)[0] : "–"} note={weakest || "Shown after your first scored visit"} />
@@ -211,7 +211,7 @@ export default async function ProgressPage({ searchParams }: { searchParams: Pro
                             </td>
                             <td className="px-3 py-2.5 text-xs text-slate-600">
                               <div className="flex flex-wrap items-center gap-1">
-                                <Badge tone="teal">Level {a.level}</Badge>
+                                <Badge tone="teal">{LEVEL_NAMES[a.level]}</Badge>
                                 <Badge>{MODE_LABEL[a.mode] || a.mode}</Badge>
                               </div>
                               {a.variation && <div className="mt-1">Patient variation: {a.variation}</div>}

@@ -1,4 +1,5 @@
 import { apiUser } from "@/lib/auth";
+import { TEMPERAMENT_MOOD } from "@/lib/engine/difficulty";
 import { get, parse } from "@/lib/db";
 import { createEncounter } from "@/lib/engine/encounter";
 import { bad } from "@/lib/http";
@@ -25,7 +26,7 @@ export async function POST(req: Request) {
     const a = get<{ id: string; type: string; settings: string; case_ids: string; course_id: string }>("SELECT * FROM assignments WHERE id = ?", b.assignmentId);
     if (!a || !parse<string[]>(a.case_ids, []).includes(c.id)) return bad("Assignment not found", 404);
     if (user.role === "student" && !get("SELECT 1 FROM enrollments WHERE course_id = ? AND user_id = ?", a.course_id, user.id)) return bad("You are not enrolled in that course", 403);
-    const s = parse<{ level?: number; knobs?: Partial<Knobs>; timeLimitMin?: number; hints?: boolean; maxAttempts?: number; liveAssist?: boolean; perturb?: boolean; sharedPatient?: boolean }>(a.settings, {});
+    const s = parse<{ level?: number; temperament?: number; knobs?: Partial<Knobs>; timeLimitMin?: number; hints?: boolean; maxAttempts?: number; liveAssist?: boolean; perturb?: boolean; sharedPatient?: boolean }>(a.settings, {});
     if (s.maxAttempts) {
       const used = get<{ n: number }>("SELECT COUNT(*) AS n FROM encounters WHERE user_id = ? AND assignment_id = ? AND case_id = ? AND parent_id IS NULL AND status != 'abandoned'", user.id, a.id, c.id)!.n;
       if (used >= s.maxAttempts && user.role === "student") return bad(`You have used all ${s.maxAttempts} attempt${s.maxAttempts === 1 ? "" : "s"} for this assignment.`, 403);
@@ -37,6 +38,11 @@ export async function POST(req: Request) {
     if (s.hints !== undefined) knobs.hints = s.hints;
     liveAssist = !!s.liveAssist;
     perturb = !!s.perturb;
+    // A temperament chosen when the patient was assigned sets both how guarded and what mood.
+    if (s.temperament) {
+      level = s.temperament;
+      perturb = TEMPERAMENT_MOOD[s.temperament] ?? false;
+    }
     if (s.sharedPatient) teamScope = `team:${a.id}`;
   }
   const professions = parse<string[]>(c.professions, []);

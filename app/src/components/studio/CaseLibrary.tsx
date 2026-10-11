@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { Badge, Button, Empty, Input, LinkButton, PageHeader, Select } from "@/components/ui";
 import Icon from "@/components/Icon";
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
 import type { LibraryItem } from "@/lib/studio/store";
 import { api, Notice, startTestVisit } from "./fields";
 
@@ -166,6 +167,7 @@ export function AssignDialog({ patient, onClose }: { patient: { id: string; pati
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [done, setDone] = useState<number | null>(null);
+  const [temperament, setTemperament] = useState(3);
   useEffect(() => {
     api<{ students: { id: string; name: string; assigned: boolean }[] }>(`/api/cases/${patient.id}/assign`)
       .then((r) => setStudents(r.students))
@@ -184,7 +186,7 @@ export function AssignDialog({ patient, onClose }: { patient: { id: string; pati
     setBusy(true);
     setError("");
     try {
-      const r = await api<{ assigned: number }>(`/api/cases/${patient.id}/assign`, { json: { studentIds: [...picked] } });
+      const r = await api<{ assigned: number }>(`/api/cases/${patient.id}/assign`, { json: { studentIds: [...picked], temperament } });
       setDone(r.assigned);
     } catch (e) {
       setError((e as Error).message);
@@ -236,6 +238,14 @@ export function AssignDialog({ patient, onClose }: { patient: { id: string; pati
                 ))}
               </div>
             )}
+            <p className="mb-2 mt-5 text-sm font-semibold text-slate-900">Temperament</p>
+            <div className="flex flex-wrap gap-2">
+              {TEMPERAMENTS.slice(1).map((name, i) => (
+                <button key={name} type="button" aria-pressed={temperament === i + 1} onClick={() => setTemperament(i + 1)} className={`rounded-full border px-3.5 py-1.5 text-sm font-medium ${temperament === i + 1 ? "border-brand-600 bg-brand-600" : "border-slate-300 text-slate-700 hover:bg-slate-50"}`}>
+                  {name}
+                </button>
+              ))}
+            </div>
             <div className="mt-6 flex justify-end gap-2">
               <Button variant="secondary" onClick={onClose}>
                 Cancel

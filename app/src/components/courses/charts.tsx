@@ -1,4 +1,5 @@
 "use client";
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 
 // Chart tokens. One series colour throughout (checked with the dataviz palette validator against a
@@ -116,7 +117,7 @@ export function SkillDots({ items, ticks, lo, hi }: { items: SkillDot[]; ticks: 
         <div className="relative h-4">
           {ticks.map((t) => (
             <span key={t.level} className="absolute -translate-x-1/2 whitespace-nowrap text-[14px] tabular-nums text-slate-500" style={{ left: `${x(t.rating)}%` }}>
-              Level {t.level}
+              {TEMPERAMENTS[t.level]}
             </span>
           ))}
         </div>
@@ -228,7 +229,7 @@ export function RatingLine({ points, ticks, lo, hi, name }: { points: HistoryPoi
               <g key={t.level}>
                 <line x1={m.left} x2={W - m.right} y1={yAt(t.rating)} y2={yAt(t.rating)} stroke={GRID} strokeWidth={1} />
                 <text x={m.left - 8} y={yAt(t.rating)} dy="0.32em" textAnchor="end" fontSize={11} fill={MUTED}>
-                  Level {t.level}
+                  {TEMPERAMENTS[t.level]}
                 </text>
               </g>
             ))}

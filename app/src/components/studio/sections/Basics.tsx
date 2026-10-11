@@ -1,5 +1,6 @@
 "use client";
 
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
 import { Badge, Button, Input, Label, Select } from "@/components/ui";
 import { FACT_CATEGORIES } from "@/lib/types";
 import type { CaseProfile, Mismatch, Objective } from "@/lib/types";
@@ -19,11 +20,11 @@ export function OverviewSection({ p, set, roles }: SectionProps & { roles: Role[
         <Text label="Specialty" value={p.specialty} onChange={(v) => up({ specialty: v })} />
         <Text label="Encounter type" value={p.encounterType} onChange={(v) => up({ encounterType: v })} placeholder="e.g. diagnostic interview, follow-up, counseling" />
         <Text className="sm:col-span-2" label="Setting" hint="Every visit is a telehealth video call. Say where the patient is calling from." value={p.setting} onChange={(v) => up({ setting: v })} />
-        <Field label="Difficulty" hint="The intrinsic difficulty of the case. Assignments can make the patient more or less forthcoming on top of this.">
+        <Field label="Usual temperament" hint="How this patient behaves in a test visit. A temperament chosen when assigning the patient replaces it.">
           <Select value={p.difficulty} onChange={(e) => up({ difficulty: Number(e.target.value) })}>
             {[1, 2, 3, 4, 5].map((n) => (
               <option key={n} value={n}>
-                {n} of 5
+                {TEMPERAMENTS[n]}
               </option>
             ))}
           </Select>

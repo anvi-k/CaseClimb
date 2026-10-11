@@ -1,11 +1,10 @@
 import { apiUser } from "@/lib/auth";
 import { all } from "@/lib/db";
+import { TEMPERAMENT_MOOD as MOOD } from "@/lib/engine/difficulty";
 import { createEncounter } from "@/lib/engine/encounter";
 import { bad } from "@/lib/http";
 import { parse } from "@/lib/db";
 
-/** How each temperament step plays: the engine's difficulty level, plus a mood for the sharper ones. */
-const MOOD: Record<number, string | false> = { 1: false, 2: "withdrawn", 3: false, 4: "badday", 5: "skeptical" };
 
 /**
  * Starts a private practice visit. The student chooses only the patient's temperament (1 easygoing

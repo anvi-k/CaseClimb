@@ -137,7 +137,7 @@ function seedDemoClass() {
     "homework",
     JSON.stringify(patients),
     null,
-    JSON.stringify({ level: 2 }),
+    JSON.stringify({ level: 2, temperament: 2 }),
     null,
     1,
   );

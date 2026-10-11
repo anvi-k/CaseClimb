@@ -77,7 +77,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
       <div>
         <div className="mb-1 flex flex-wrap items-center gap-1.5">
           <Badge tone="teal">{assignment ? assignment.title : cfg.mode === "adaptive" ? "Adaptive practice" : "Practice"}</Badge>
-          <Badge>Level {cfg.knobs.level} · {LEVEL_NAMES[cfg.knobs.level]}</Badge>
+          <Badge>{LEVEL_NAMES[cfg.knobs.level]}</Badge>
           <Badge>Attempt {row.attempt}</Badge>
           {(cfg.visitNumber || 1) > 1 && <Badge tone="blue">Follow-up · visit {cfg.visitNumber}</Badge>}
           <Badge tone={row.assignment_id || row.journey_run_id ? "violet" : "slate"}>{row.assignment_id || row.journey_run_id ? "Recorded for instructor" : "Private practice"}</Badge>
@@ -256,7 +256,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
                       <Link href={`/encounter/${h.id}/feedback`} className="hover:underline">
                         Attempt {h.attempt}
                       </Link>
-                      <div className="font-normal">L{h.level}{h.variation ? ` · ${h.variation}` : ""}</div>
+                      <div className="font-normal">{LEVEL_NAMES[h.level] || ""}{h.variation ? ` · ${h.variation}` : ""}</div>
                     </th>
                   ))}
                 </tr>

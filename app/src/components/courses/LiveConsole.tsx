@@ -1,4 +1,5 @@
 "use client";
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
 import Link from "next/link";
 import { TrendChart } from "@/components/chart/ArtifactView";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -168,7 +169,7 @@ export default function LiveConsole() {
             <div className="mt-2 flex flex-wrap gap-x-3 gap-y-0.5 text-xs text-slate-600">
               <span>Turn {v.turn}</span>
               <span>{v.facts} facts gathered</span>
-              <span>Level {v.level}</span>
+              <span>{TEMPERAMENTS[v.level]}</span>
               <span>{mins(v.startedAt, now)} min in</span>
             </div>
             <div className="mt-2">

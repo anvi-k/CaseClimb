@@ -1,5 +1,6 @@
 "use client";
 
+import { TEMPERAMENTS } from "@/lib/engine/difficulty";
 import AppIcon from "@/components/Icon";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -431,7 +432,7 @@ export default function Visit({ id, viewerName }: { id: string; viewerName: stri
           Video visit with <span className="font-medium text-slate-900">{p.name}</span>
         </span>
         <span className="rounded bg-slate-100 px-1.5 py-0.5 text-[14px] font-medium text-slate-600">{MODE_LABEL[data.mode] || data.mode}</span>
-        <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[14px] text-slate-600 sm:inline">Level {data.level}</span>
+        <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[14px] text-slate-600 sm:inline">{TEMPERAMENTS[data.level]}</span>
         {data.visitNumber > 1 ? <span className="hidden rounded bg-sky-100 px-1.5 py-0.5 text-[14px] font-medium text-sky-800 sm:inline">Follow-up · visit {data.visitNumber}</span> : data.attempt > 1 && <span className="hidden rounded bg-slate-100 px-1.5 py-0.5 text-[14px] text-slate-600 sm:inline">Attempt {data.attempt}</span>}
         <span className={`hidden rounded px-1.5 py-0.5 text-[14px] font-medium md:inline ${data.recorded ? "bg-violet-100 text-violet-800" : "bg-slate-100 text-slate-600"}`}>{data.recorded ? "Recorded for instructor" : "Private practice"}</span>
         {data.liveAssist && <span className="hidden rounded bg-violet-100 px-1.5 py-0.5 text-[14px] font-medium text-violet-800 md:inline">Instructor can join</span>}

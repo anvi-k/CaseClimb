@@ -352,7 +352,7 @@ export default function AssignmentBuilder({
                             </label>
                             <div className="mt-1 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
                               <Badge tone="teal">
-                                Level {c.difficulty} {LEVEL_NAMES[c.difficulty]}
+                                {LEVEL_NAMES[c.difficulty]}
                               </Badge>
                               {c.aiDraft && <Badge tone="amber">AI draft, not reviewed</Badge>}
                               <span>{c.professions.map((p) => professionNames[p] || p).join(", ")}</span>
@@ -392,12 +392,12 @@ export default function AssignmentBuilder({
           <div className="space-y-4 p-4">
             <div className="grid gap-4 sm:grid-cols-3">
               <div>
-                <Label htmlFor="as-level">Difficulty level</Label>
+                <Label htmlFor="as-level">Patient temperament</Label>
                 <Select id="as-level" value={s.level === null ? "" : String(s.level)} onChange={(e) => set({ level: e.target.value ? Number(e.target.value) : null })}>
-                  {!exam && <option value="">Each patient's own level</option>}
+                  {!exam && <option value="">Each patient's own temperament</option>}
                   {[1, 2, 3, 4, 5].map((l) => (
                     <option key={l} value={l}>
-                      Level {l}: {LEVEL_NAMES[l]}
+                      {LEVEL_NAMES[l]}
                     </option>
                   ))}
                 </Select>
