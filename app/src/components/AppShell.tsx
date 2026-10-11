@@ -13,7 +13,7 @@ const FACULTY_NAV = [
   { href: "/faculty/cases", label: "Patients", icon: "users" as const },
 ];
 const STUDENT_NAV = [
-  { href: "/student", label: "My patients", icon: "users" as const },
+  { href: "/student", label: "Home", icon: "users" as const },
   { href: "/student/practice", label: "Practice", icon: "chat" as const },
 ];
 
@@ -23,7 +23,7 @@ const FACULTY_MENU = [
   { href: "/faculty/cases", label: "Patients", icon: "users" as const },
 ];
 const STUDENT_MENU = [
-  { href: "/student", label: "My patients", icon: "users" as const },
+  { href: "/student", label: "Home", icon: "users" as const },
   { href: "/student/practice", label: "Practice", icon: "chat" as const },
   { href: "/student/progress", label: "My progress", icon: "chart" as const },
 ];

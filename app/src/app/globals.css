@@ -167,6 +167,82 @@ select optgroup {
   color: #f4f8fc;
 }
 
+/*
+ * Cream cards. The large rounded cards (lists, the next-patient card, pop-ups) are cream on the
+ * blue page. Inside one, the palette is put back to its ordinary light-theme values, so the same
+ * utility classes give dark text on a light surface again.
+ */
+.bg-white.rounded-2xl,
+.bg-white.rounded-3xl,
+.cream {
+  background-color: #fbf4e2;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border-color: #eadfc4;
+  color: #1c2b3a;
+  --color-slate-50: #f6efdc;
+  --color-slate-100: #f0e7d0;
+  --color-slate-200: #e6dbc0;
+  --color-slate-300: #d3c6a6;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f1f33;
+  --color-emerald-50: #ecfdf5;
+  --color-emerald-100: #d1fae5;
+  --color-emerald-200: #a7f3d0;
+  --color-emerald-700: #047857;
+  --color-emerald-800: #065f46;
+  --color-emerald-900: #064e3b;
+  --color-amber-50: #fffbeb;
+  --color-amber-100: #fef3c7;
+  --color-amber-200: #fde68a;
+  --color-amber-700: #b45309;
+  --color-amber-800: #92400e;
+  --color-amber-900: #78350f;
+  --color-amber-950: #451a03;
+  --color-rose-50: #fff1f2;
+  --color-rose-100: #ffe4e6;
+  --color-rose-200: #fecdd3;
+  --color-rose-700: #be123c;
+  --color-rose-800: #9f1239;
+  --color-rose-900: #881337;
+  --color-sky-50: #f0f9ff;
+  --color-sky-100: #dbeefb;
+  --color-sky-200: #bae6fd;
+  --color-sky-700: #0369a1;
+  --color-sky-800: #075985;
+  --color-violet-50: #f5f3ff;
+  --color-violet-100: #ebe5fb;
+  --color-violet-200: #ddd6fe;
+  --color-violet-700: #6d28d9;
+  --color-violet-800: #5b21b6;
+  --color-violet-900: #4c1d95;
+  --color-violet-950: #2e1065;
+  --color-orange-700: #c2410c;
+}
+/* Mint is too pale to read on cream, so brand text and tints go a shade deeper there. */
+:is(.bg-white.rounded-2xl, .bg-white.rounded-3xl, .cream) :is(.text-brand-700, .text-brand-600, .text-brand-900) {
+  color: #0f6e56;
+}
+:is(.bg-white.rounded-2xl, .bg-white.rounded-3xl, .cream) :is(.bg-brand-50, .bg-brand-100) {
+  background-color: #d8f1e4;
+}
+:is(.bg-white.rounded-2xl, .bg-white.rounded-3xl, .cream) .bg-white {
+  background-color: #fffdf7;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+:is(.bg-white.rounded-2xl, .bg-white.rounded-3xl, .cream) ::placeholder {
+  color: #94a3b8;
+}
+:is(.bg-white.rounded-2xl, .bg-white.rounded-3xl, .cream) .disabled\:bg-slate-300:disabled {
+  background-color: #e6dbc0;
+  color: #64748b;
+}
+
 @keyframes fadein {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: none; }
