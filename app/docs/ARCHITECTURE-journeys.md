@@ -1,6 +1,6 @@
 # Care Journeys: architecture and integration
 
-Challenge 2, "The Connected Care Journey". This document describes what is built in the Rounds
+Challenge 2, "The Connected Care Journey". This document describes what is built in the Poscere
 repository: how one virtual patient moves through several professional encounters, how the team's
 shared understanding of that patient is stored and traced, how information moves between
 encounters, and how interprofessional communication is evaluated.
@@ -24,7 +24,7 @@ existing record ─► encounter 1 ─► SBAR ─► encounter 2 ─► SBAR �
 ```
 
 - For the encounter the student chose, the student interviews the virtual patient in the normal
-  Rounds visit screen, with a "Care team" tab showing the shared state and the handoff received.
+  Poscere visit screen, with a "Care team" tab showing the shared state and the handoff received.
 - For every other encounter, an AI clinician (one of the five provided personas) conducts the
   visit while the student watches it stream.
 - After every encounter the shared patient state is updated and the professional writes an SBAR
