@@ -131,7 +131,7 @@ export default function PracticeGallery({ patients }: { patients: PracticePatien
             type="button"
             aria-pressed={filter === f.id}
             onClick={() => setFilter(f.id)}
-            className={`rounded-full border px-4 py-2 text-sm font-semibold ${filter === f.id ? "border-brand-600 bg-brand-600" : "border-slate-400 text-slate-900 hover:bg-white/10"}`}
+            className={`rounded-full border px-4 py-2 text-sm font-semibold ${filter === f.id ? "border-brand-600 bg-brand-600" : "border-slate-300 text-slate-900 hover:bg-slate-200"}`}
           >
             {f.label}
           </button>
