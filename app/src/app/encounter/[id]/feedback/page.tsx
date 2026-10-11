@@ -272,7 +272,7 @@ export default async function FeedbackPage({ params }: { params: Promise<{ id: s
                       return (
                         <td key={h.id} className={`px-2 py-1.5 tabular-nums ${h.id === id ? "bg-slate-50 font-semibold" : ""}`}>
                           {s === null ? "N/A" : s}
-                          {delta !== 0 && <span className={`ml-1 text-[14px] ${delta > 0 ? "text-emerald-700" : "text-rose-700"}`}>{delta > 0 ? "▲" : "▼"}{Math.abs(delta)}</span>}
+                          {delta !== 0 && <span className={`ml-1 text-[14px] ${delta > 0 ? "text-emerald-700" : "text-rose-700"}`}>{delta > 0 ? "↑" : "↓"}{Math.abs(delta)}</span>}
                         </td>
                       );
                     })}
