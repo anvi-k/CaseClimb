@@ -1,0 +1,1085 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home vitals/weight log (today)",
+    "result": "Today's home readings: Weight 71 kg (BMI 23.9), home BP 118/74 mmHg, HR 78 bpm. Consistent with prior documented vitals (6 months ago) and with the past-year home trend, with no interval weight change.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "test",
+    "name": "Review CGM download (last 14 days)",
+    "result": "Time in range 38%, time >180 mg/dL 52%, time <70 mg/dL 7%, time <54 mg/dL 3%. Pattern: marked afternoon-evening hyperglycemia on work days; recurrent nocturnal hypoglycemia (<54 mg/dL) on Friday and Saturday nights.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review insulin pump bolus history",
+    "result": "Average 2 boluses/day logged over past 2 weeks versus an estimated 4-5 meals/snacks per day; many work-shift days show zero meal boluses after 3pm.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review HbA1c trend",
+    "result": "HbA1c rose from 7.6% one year ago to 8.5% six months ago to 9.4% today (reference <5.7% nondiabetic, goal individualized ~<7.0-7.5%).",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Order/review comprehensive metabolic panel",
+    "result": "Glucose 238 mg/dL (H), Na 139 mmol/L, K 4.1 mmol/L, Cl 101 mmol/L, CO2 23 mmol/L, BUN 14 mg/dL, Cr 0.9 mg/dL, eGFR >90, AST 48 U/L (H), ALT 55 U/L (H), total bilirubin 0.6 mg/dL.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "lab",
+    "name": "Order/review lipid panel",
+    "result": "Total cholesterol 198 mg/dL, LDL 118 mg/dL (above the <100 mg/dL optimal reference range), HDL 42 mg/dL, Triglycerides 190 mg/dL (H).",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "lab",
+    "name": "Review urine microalbumin/creatinine ratio",
+    "result": "Urine albumin/creatinine ratio 18 mg/g (within normal <30 mg/g).",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review TSH",
+    "result": "TSH 2.1 mIU/L (reference 0.4-4.0 mIU/L) - normal.",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "imaging",
+    "name": "Review dilated retinal screening status",
+    "result": "No documented diabetic eye exam in chart for 3 years; patient reports last exam done elsewhere, not received.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "exam",
+    "name": "Guide camera inspection of infusion-site/pump sites",
+    "result": "Patient shows abdomen on camera: infusion sites rotated appropriately, no lipohypertrophy, erythema, or signs of infection.",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "exam",
+    "name": "Guide camera inspection of feet",
+    "result": "Patient shows both feet on camera: skin intact, no ulcers, no deformity, normal color; patient reports no numbness or tingling.",
+    "abnormal": false,
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Review pump/CGM alert settings",
+    "result": "Low alert threshold set at 70 mg/dL, high alert at 250 mg/dL. Settings have not been modified in over a year despite the current glycemic pattern.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Administer brief depression/burnout screen (PHQ-2 style, diabetes distress)",
+    "result": "Diabetes Distress Scale score elevated (screen-positive for diabetes-related burnout); PHQ-2 score 1/6 (screen-negative for major depression). Patient denies suicidal ideation.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Administer AUDIT-C alcohol screening questionnaire",
+    "result": "AUDIT-C score 7/12 (positive screen for risky drinking pattern; threshold for further assessment in men is ≥4). Patient confirms weekend drinking after shifts; denies morning drinking or withdrawal symptoms.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review current diabetes medication/supply list",
+    "result": "Insulin pump (rapid-acting insulin aspart reservoir), CGM sensor, no other glucose-lowering agents; no GLP-1 or metformin currently prescribed.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a16",
+    "kind": "vitals",
+    "name": "Review home blood pressure/weight trend over past year",
+    "result": "Weight stable 69-71 kg over past year; BP consistently 110-120/70-78 mmHg on home cuff readings.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "chart",
+    "title": "CGM 14-Day Ambulatory Glucose Profile Summary",
+    "date": "This visit",
+    "author": "CGM manufacturer report, uploaded by patient",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time of day",
+     "yLabel": "Glucose (mg/dL)",
+     "yRefLow": 70,
+     "yRefHigh": 180,
+     "series": [
+      {
+       "name": "Median glucose (14-day)",
+       "points": [
+        {
+         "x": "12am",
+         "y": 110
+        },
+        {
+         "x": "3am",
+         "y": 95
+        },
+        {
+         "x": "6am",
+         "y": 105
+        },
+        {
+         "x": "9am",
+         "y": 140
+        },
+        {
+         "x": "12pm",
+         "y": 160
+        },
+        {
+         "x": "3pm",
+         "y": 210
+        },
+        {
+         "x": "6pm",
+         "y": 245
+        },
+        {
+         "x": "9pm",
+         "y": 220
+        },
+        {
+         "x": "11pm",
+         "y": 150
+        }
+       ]
+      },
+      {
+       "name": "Fri/Sat overnight (example nights)",
+       "points": [
+        {
+         "x": "12am",
+         "y": 90
+        },
+        {
+         "x": "3am",
+         "y": 50
+        },
+        {
+         "x": "6am",
+         "y": 48
+        },
+        {
+         "x": "9am",
+         "y": 130
+        }
+       ]
+      }
+     ]
+    },
+    "body": "Summary statistics (14-day CGM report): Time in range (70-180 mg/dL) 38%. Time >180 mg/dL 52%. Time <70 mg/dL 7%. Time <54 mg/dL 3%. Pattern: marked afternoon-evening hyperglycemia on work days (median trace above); recurrent nocturnal hypoglycemia (<54 mg/dL) concentrated on Friday and Saturday nights (example overnight trace above)."
+   },
+   {
+    "id": "d2",
+    "type": "flowsheet",
+    "title": "Insulin Pump Bolus History (14-day download)",
+    "date": "This visit",
+    "author": "Pump software report",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "table": {
+     "columns": [
+      "Metric",
+      "Value"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Average boluses per day",
+        "2.0"
+       ]
+      },
+      {
+       "cells": [
+        "Average total daily insulin",
+        "38 units"
+       ]
+      },
+      {
+       "cells": [
+        "Estimated meals/snacks per day (patient report)",
+        "4-5"
+       ]
+      },
+      {
+       "cells": [
+        "Days with zero bolus after 3pm",
+        "9 of 14"
+       ]
+      },
+      {
+       "cells": [
+        "Average carb entry per bolus",
+        "Not entered (manual bolus used)"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "chart",
+    "title": "HbA1c Trend",
+    "date": "Past 12 months",
+    "author": "Endocrinology clinic lab trend",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Visit date",
+     "yLabel": "HbA1c (%)",
+     "series": [
+      {
+       "name": "HbA1c",
+       "points": [
+        {
+         "x": "12 months ago",
+         "y": 7.6
+        },
+        {
+         "x": "6 months ago",
+         "y": 8.5
+        },
+        {
+         "x": "Today",
+         "y": 9.4
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "lab_report",
+    "title": "Comprehensive Metabolic Panel, Lipid Panel, Urine Microalbumin - Today",
+    "date": "Today",
+    "author": "Quest Diagnostics via clinic lab order",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Glucose",
+        "238",
+        "mg/dL",
+        "70-99"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mmol/L",
+        "3.5-5.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Chloride",
+        "101",
+        "mmol/L",
+        "98-107"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "CO2 (bicarbonate)",
+        "23",
+        "mmol/L",
+        "22-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "BUN",
+        "14",
+        "mg/dL",
+        "7-20"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.9",
+        "mg/dL",
+        "0.6-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        ">90",
+        "mL/min/1.73m2",
+        ">60"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "AST",
+        "48",
+        "U/L",
+        "10-40"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "ALT",
+        "55",
+        "U/L",
+        "7-56"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Total bilirubin",
+        "0.6",
+        "mg/dL",
+        "0.2-1.2"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total cholesterol",
+        "198",
+        "mg/dL",
+        "<200"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "LDL cholesterol",
+        "118",
+        "mg/dL",
+        "<100 (optimal)"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "HDL cholesterol",
+        "42",
+        "mg/dL",
+        ">40"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "190",
+        "mg/dL",
+        "<150"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Urine albumin/creatinine ratio",
+        "18",
+        "mg/g",
+        "<30"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "medication_list",
+    "title": "Current Medications and Diabetes Supplies",
+    "date": "Today",
+    "author": "Clinic EHR",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication/Supply",
+      "Dose/Type",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Insulin aspart (pump reservoir)",
+        "Variable per pump settings",
+        "Continuous subcutaneous infusion + manual boluses"
+       ]
+      },
+      {
+       "cells": [
+        "CGM sensor",
+        "Dexcom G6",
+        "Worn continuously, sensor change q10 days"
+       ]
+      },
+      {
+       "cells": [
+        "Multivitamin",
+        "OTC",
+        "Daily, inconsistent"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Prior Endocrinology Visit Note (6 months ago)",
+    "date": "6 months ago",
+    "author": "Dr. A. Reyes, Endocrinology",
+    "release": {
+     "when": "start"
+    },
+    "body": "23 y/o male with T1DM since age 9 on pump/CGM therapy, A1c 8.5% (up from 7.6%). Discussed carb counting review and importance of consistent bolusing. Patient reports he is 'doing his best' with school and work schedule. Deferred retinal exam referral pending patient scheduling; patient states he will arrange through university health clinic. No DKA episodes reported. Plan: continue current pump settings, recheck A1c and CGM download in 6 months, strong encouragement to complete overdue dilated eye exam and resume regular meal bolusing."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "follow-up visit reason",
+    "chart": "Presents for routine T1DM follow-up; aware A1c has risen.",
+    "says": "My doctor said my A1c jumped up again and wanted me to check in before it gets worse.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "diabetes duration",
+    "chart": "Type 1 diabetes diagnosed at age 9, now 14 years duration.",
+    "says": "I've had this since I was 9, so it's been like 14 years now.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "insulin delivery method",
+    "chart": "Uses insulin pump with integrated CGM.",
+    "says": "I'm on the pump and I wear the sensor too, so it's all connected.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "bolusing habits",
+    "chart": "Reports bolusing for every meal.",
+    "says": "Yeah, I bolus every time I eat, pretty much like clockwork.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "work schedule",
+    "chart": "Works part-time as a bartender, typically evening/night shifts 3-4 nights per week.",
+    "says": "I bartend a few nights a week on top of school, so my schedule's all over the place.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "daytime glucose pattern",
+    "chart": "Notices glucose tends to run high in the afternoon and evening.",
+    "says": "I know my numbers climb in the afternoon, especially once I'm at work.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "fear of hypoglycemia at work",
+    "chart": "Avoids bolusing during shifts due to fear of hypoglycemia while bartending.",
+    "says": "Honestly, I get nervous bolusing right before a shift because if I go low behind the bar it's a whole scene.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "skipped boluses pattern",
+    "chart": "Admits to frequently skipping meal boluses during work shifts, sometimes going hours without bolusing.",
+    "says": "So yeah, sometimes I just... don't bolus for a few hours while I'm working. I tell myself I'll fix it later.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "hypoglycemia symptoms",
+    "chart": "Reports occasional shakiness and sweating consistent with lows, mostly overnight after weekend shifts.",
+    "says": "Some nights after work I wake up shaky and sweaty, usually weekends.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "hypoglycemia awareness",
+    "chart": "Reports usually recognizing lows but sometimes sleeps through alarms.",
+    "says": "Usually I feel it, but sometimes I guess I just sleep through the alarm.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "substance1",
+    "category": "substance",
+    "topic": "weekend drinking pattern",
+    "chart": "Reports binge drinking (5-6+ standard drinks) on weekend nights after shifts.",
+    "says": "After a long shift, yeah, a few of us hang out and drink, probably more than I should.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "substance",
+    "topic": "eating while drinking",
+    "chart": "Often drinks alcohol without eating a substantial meal afterward.",
+    "says": "Honestly by the time I'm drinking I usually haven't eaten dinner, I just grab snacks or nothing.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "substance",
+    "topic": "alcohol frequency",
+    "chart": "Drinks alcohol on 2 nights per week on average, tied to weekend shifts.",
+    "says": "It's really just the weekends after work, not like every day.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "substance",
+    "topic": "other substance use",
+    "chart": "Denies tobacco, marijuana, or other recreational drug use.",
+    "says": "No, I don't smoke or do anything else like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "psychosocial",
+    "topic": "diabetes burnout",
+    "chart": "Reports feeling burned out after 14 years of diabetes management, describes fatigue with constant self-care demands.",
+    "says": "Honestly? I'm just tired of this. Fourteen years of counting carbs and poking myself, it wears on you.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "psychosocial",
+    "topic": "mood and motivation",
+    "chart": "Reports decreased motivation for diabetes self-care most days, denies pervasive sadness or anhedonia.",
+    "says": "I still enjoy hanging out with friends and stuff, I just can't bring myself to care about the diabetes stuff some days.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "psychosocial",
+    "topic": "suicidal ideation",
+    "chart": "Denies any thoughts of self-harm or suicidal ideation.",
+    "says": "No, nothing like that, I'm not in a dark place, just worn out.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f18",
+    "category": "psychosocial",
+    "topic": "humor as coping",
+    "chart": "Uses humor to deflect when discussing difficult aspects of diabetes management.",
+    "says": "Hey, at least I'm consistent at being inconsistent, right?",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "social",
+    "topic": "school and work balance",
+    "chart": "Final-year university student balancing full course load with part-time bartending job.",
+    "says": "I'm in my last year of school and bartending to help pay bills, it's a lot some weeks.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "social",
+    "topic": "financial pressure",
+    "chart": "Reports financial pressure as a reason for continuing to work service shifts despite difficulty managing diabetes at work.",
+    "says": "I can't really afford to cut back on hours right now, I need the money for rent and tuition.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "family",
+    "topic": "family support",
+    "chart": "Family lives in Colombia; limited in-person support locally, some phone check-ins with mother.",
+    "says": "My mom calls to check on me from Colombia, but she's not here, so it's mostly on me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurry vision, floaters, or vision loss.",
+    "says": "My eyes seem fine, no blurriness or anything weird.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness, tingling, or pain in feet.",
+    "says": "My feet feel normal, no tingling or numbness.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "ros",
+    "topic": "nausea or abdominal pain",
+    "chart": "Denies nausea, vomiting, or abdominal pain suggestive of DKA.",
+    "says": "No throwing up or stomach pain, I feel okay physically other than tired.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "pmh",
+    "topic": "prior DKA episodes",
+    "chart": "No DKA hospitalizations in the past 3 years.",
+    "says": "I haven't ended up in the hospital for my sugar in a few years now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "adherence",
+    "topic": "retinal eye exam history",
+    "chart": "Last dilated retinal exam over 3 years ago; has not completed referral from prior visit.",
+    "says": "I keep meaning to get that eye exam done, I just haven't gotten around to it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "adherence",
+    "topic": "CGM alarm management",
+    "chart": "Silences or mutes CGM high/low alarms during work shifts to avoid disruption.",
+    "says": "I turn the alarms down or off when I'm working, they're too distracting behind the bar.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f28",
+    "category": "adherence",
+    "topic": "infusion site rotation",
+    "chart": "Reports rotating pump infusion sites regularly without issues.",
+    "says": "I move the pump site around, usually my stomach or sides.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "nutrition",
+    "topic": "meal pattern on shift days",
+    "chart": "Often skips or delays meals on work days, eating irregularly around shifts.",
+    "says": "On shift days I barely eat until way later, it's just chaotic.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "nutrition",
+    "topic": "carb counting practice",
+    "chart": "Reports estimating carbs 'by eye' rather than consistently measuring, especially outside home.",
+    "says": "I don't really measure stuff anymore, I just guess the carbs now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "medications",
+    "topic": "other medications",
+    "chart": "Takes no other prescription medications; occasional OTC multivitamin.",
+    "says": "Just the insulin pump stuff, maybe a multivitamin sometimes.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f32",
+    "category": "family",
+    "topic": "family history of thyroid disease",
+    "chart": "Mother has hypothyroidism, treated with levothyroxine.",
+    "says": "My mom has thyroid issues, she takes a pill for it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f33",
+    "category": "goals",
+    "topic": "patient's own goals",
+    "chart": "Expresses desire to 'get back on track' but unsure where to start given busy schedule.",
+    "says": "I do want to get this under control, I just don't know how with everything going on.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f34",
+    "category": "function",
+    "topic": "exercise habits",
+    "chart": "Occasionally plays recreational soccer on weekends when schedule allows.",
+    "says": "When I have time I'll play soccer with friends, but it's not regular.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Interpret CGM ambulatory glucose profile and pump bolus history together to identify discordance between reported and actual bolusing frequency.",
+    "factIds": [
+     "f4",
+     "f8"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Elicit, with empathy, the behavioral drivers of glycemic pattern: fear of hypoglycemia at work, alarm silencing, and weekend binge drinking without food, moving beyond screening-tool scores to the underlying narrative once rapport is established.",
+    "factIds": [
+     "f7",
+     "f27",
+     "substance1",
+     "f12"
+    ],
+    "actionIds": [
+     "a12",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Screen for and recognize diabetes burnout/distress as a contributor to nonadherence, distinguishing it from major depression with suicidal ideation, and follow up screen-positive results with direct, empathetic questions to uncover the full picture.",
+    "factIds": [
+     "f15",
+     "f16",
+     "f17"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify overdue diabetic complication screening (retinal exam) and address nephropathy and lipid risk based on labs.",
+    "factIds": [
+     "f26"
+    ],
+    "actionIds": [
+     "a7",
+     "a9",
+     "a6"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize the mismatch between the patient's self-report of consistent mealtime bolusing and the objective pump data, and address it nonjudgmentally.",
+    "factIds": [
+     "f4",
+     "f8"
+    ],
+    "actionIds": [
+     "a3"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate a management plan within endocrinology scope: adjust pump/CGM settings and alarm strategy, address hypoglycemia risk from alcohol, counsel on carb counting, and refer appropriately for eye care and behavioral health rather than manage those directly.",
+    "factIds": [
+     "f20",
+     "f33"
+    ],
+    "actionIds": [
+     "a9",
+     "a13",
+     "a12"
+    ]
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f4",
+    "artifactId": "d2",
+    "patientClaim": "I bolus every time I eat, pretty much like clockwork.",
+    "recordEvidence": "Pump bolus history shows an average of only 2 boluses per day against an estimated 4-5 meals/snacks, with 9 of 14 days having zero boluses after 3pm.",
+    "teachingPoint": "Objective device data often reveals adherence gaps that patients may not fully recognize or may minimize; approach discrepancies with curiosity rather than confrontation to preserve trust and uncover root causes (fear of hypoglycemia, work constraints)."
+   },
+   {
+    "id": "m2",
+    "factId": "f26",
+    "artifactId": "d6",
+    "patientClaim": "I keep meaning to get that eye exam done, I just haven't gotten around to it.",
+    "recordEvidence": "Prior visit note from 6 months ago documents the same unresolved referral for dilated eye exam, deferred pending patient scheduling, with no completion in over 3 years.",
+    "teachingPoint": "Recurring deferred referrals for complication screening need active care coordination (e.g., direct scheduling assistance, reminder systems) rather than repeated verbal encouragement alone."
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Suboptimal type 1 diabetes control (HbA1c 9.4%, time in range 38%) driven by behavioral nonadherence: fear-driven bolus omission during bartending shifts, CGM/pump alarm silencing, and weekend binge drinking without food leading to a mixed pattern of daytime hyperglycemia and recurrent nocturnal hypoglycemia, in the context of diabetes burnout.",
+   "differential": [
+    "Nonadherence/behavioral causes of hyperglycemia (fear of hypoglycemia, work-related bolus omission) - supported by pump data",
+    "Alcohol-associated nocturnal hypoglycemia (binge drinking without food after shifts) - supported by CGM pattern on Fri/Sat nights",
+    "Diabetes distress/burnout contributing to self-care disengagement - supported by screening responses",
+    "Insufficient pump basal/bolus settings for current lifestyle (less likely as primary driver given bolus omission is the dominant pattern, but settings review still warranted)",
+    "Comorbid thyroid dysfunction contributing to glycemic variability - excluded, TSH normal",
+    "Early diabetic nephropathy as explanation for malaise - excluded, albumin/creatinine ratio normal"
+   ],
+   "keyFindings": [
+    "HbA1c rising trend 7.6% to 8.5% to 9.4% over 12 months",
+    "CGM time in range only 38%, with time <54 mg/dL 3% concentrated on Friday/Saturday overnights and marked afternoon/evening hyperglycemia",
+    "Pump bolus history shows ~2 boluses/day versus reported 4-5 meals, with 9/14 days lacking any bolus after 3pm",
+    "Patient reports fear of hypoglycemia while bartending leads to deliberate bolus omission and alarm silencing",
+    "Weekend binge drinking (5-6+ drinks) after shifts, often without eating, temporally matches nocturnal hypoglycemia pattern",
+    "Diabetes burnout after 14 years, decreased motivation for self-care, without suicidal ideation",
+    "No dilated retinal exam in 3+ years despite prior documented referral",
+    "Mildly elevated LDL (118 mg/dL) and triglycerides (190 mg/dL), mildly elevated AST/ALT (may reflect alcohol use), normal renal function and urine albumin/creatinine ratio, normal TSH"
+   ],
+   "plan": [
+    "Review CGM and pump data collaboratively with patient to show objective bolusing pattern without judgment; explore the gap between intention and behavior",
+    "Problem-solve work-shift hypoglycemia fear: consider adjusting correction factors, raising low-glucose suspend threshold, or using temporary basal/activity settings during shifts; discuss using CGM predictive low alerts rather than muting them",
+    "Counsel specifically on alcohol-related delayed hypoglycemia risk: avoid drinking without food, consider reducing basal insulin or using a bedtime snack with carbohydrate+protein on drinking nights, ensure glucagon access and that friends/coworkers know how to recognize/treat severe lows",
+    "Address diabetes burnout: validate emotional burden, discuss manageable incremental goals, refer to behavioral health/diabetes psychology or certified diabetes care and education specialist for ongoing support",
+    "Place/confirm referral for dilated retinal eye exam with active scheduling assistance (not just verbal encouragement) given 3+ year gap",
+    "Address modestly elevated LDL and triglycerides with reinforced nutrition counseling and recheck lipid panel in 3-6 months; monitor AST/ALT trend given alcohol use and recheck after counseling",
+    "Continue monitoring renal function and urine albumin/creatinine ratio annually (currently normal)",
+    "Arrange closer follow-up interval (e.g., 4-6 weeks) with CGM/pump data review to assess response to behavioral and settings changes before next A1c check"
+   ],
+   "redFlags": [
+    "Recurrent nocturnal glucose <54 mg/dL, especially unwitnessed and alcohol-associated, carries risk for severe hypoglycemia and impaired awareness - requires urgent attention",
+    "Diabetes burnout with reduced self-care engagement should be screened for escalation to depression or suicidal ideation at each visit",
+    "Overdue diabetic eye screening in setting of 14-year disease duration and poor control raises retinopathy risk and needs timely completion"
+   ],
+   "educationPoints": [
+    "Pump/CGM download data provide objective adherence information that should be reviewed collaboratively, not as a 'gotcha,' to understand root causes of gaps between stated and actual behavior",
+    "Alcohol can cause delayed hypoglycemia for many hours after drinking, especially when combined with insulin on board and inadequate food intake; patient education should include practical harm-reduction strategies rather than abstinence-only messaging if the patient is not ready to stop drinking",
+    "Fear of hypoglycemia is a common and legitimate driver of insulin omission, particularly in jobs with safety or social stakes (e.g., service industry); addressing the fear directly (through alarm/threshold adjustments, low-treatment planning) is often more effective than simply repeating adherence instructions",
+    "Diabetes burnout is distinct from major depressive disorder but still warrants screening for mood symptoms and suicidal ideation, and benefits from referral to behavioral health or diabetes education support",
+    "Routine complication screening (retinal exam, urine albumin/creatinine ratio, lipids) should be actively tracked and re-ordered/rescheduled when overdue, rather than relying solely on patient follow-through"
+   ]
+  },
+  "patient": {
+   "name": "Diego Morales",
+   "age": 23,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Colombian-American",
+   "occupation": "Final-year university student; part-time bartender",
+   "language": "English (primary), conversational Spanish",
+   "appearance": "A young man with short dark hair and an easy smile, wearing a university hoodie, seated in what looks like a small bedroom with a desk and string lights visible behind him. He gestures animatedly and often laughs or jokes before answering more serious questions, though his eyes look tired.",
+   "portrait": "/portraits/endocrinology-diego-morales-type-1-diabetes.jpg"
+  },
+  "persona": {
+   "personality": "Charming, quick-witted, uses humor to deflect from uncomfortable topics, generally likeable and sociable.",
+   "communicationStyle": "Casual, conversational, peppers answers with jokes; opens up more when the clinician responds with warmth rather than correction.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Outwardly upbeat but underlying fatigue and discouragement surface when burnout topic is explored; mild embarrassment about drinking and bolus omission.",
+   "background": "Grew up in Miami after his family emigrated from Colombia when he was young; diagnosed with type 1 diabetes at age 9. Now in his final year of university, juggling a demanding course load with bartending shifts several nights a week to help cover rent and tuition. His mother still lives in Colombia and checks in by phone, but he manages most day-to-day life, including his diabetes care, independently.",
+   "speechExamples": [
+    "Oh man, don't remind me about the eye doctor, I know, I know.",
+    "Honestly between work and school I'm just trying to keep my head above water.",
+    "I mean, I bolus... most of the time? Okay, let's be real, not always.",
+    "Hey, at least my CGM graph looks like a rollercoaster, keeps things exciting.",
+    "Yeah, weekends after shifts we usually have a few drinks, nothing crazy... I think."
+   ],
+   "concerns": [
+    "Worried the rising A1c means he's 'failing' at managing his diabetes",
+    "Anxious about going low while working behind the bar in front of customers",
+    "Unsure how to balance diabetes care with school and work demands",
+    "Slightly embarrassed to admit how much he's been skipping boluses and drinking"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the endocrinology fellow seeing Diego Morales, a 23-year-old with type 1 diabetes since age 9 on insulin pump/CGM therapy, for a telehealth follow-up. His HbA1c has risen from 7.6% to 9.4% over the past year. Review his device data, take a focused history, and develop a management plan within your scope.",
+   "chiefComplaint": "Follow-up for worsening glycemic control (HbA1c rising to 9.4%) in a patient with longstanding type 1 diabetes on pump/CGM therapy.",
+   "openingLine": "Hey, so my doctor said my A1c jumped up again and wanted me to check in before it gets worse.",
+   "tasks": [
+    "Review the CGM ambulatory glucose profile and pump bolus history with the patient",
+    "Take a focused history exploring factors that may be affecting diabetes management",
+    "Screen for diabetes distress and mood symptoms",
+    "Review complication screening status",
+    "Formulate a collaborative management plan and arrange appropriate follow-up"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Type 1 diabetes follow-up; rising HbA1c"
+   },
+   {
+    "label": "Problem list",
+    "value": "Type 1 diabetes mellitus (since age 9); on insulin pump and CGM therapy"
+   },
+   {
+    "label": "Medications",
+    "value": "Insulin aspart via insulin pump; multivitamin OTC (occasional)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 118/74 mmHg, HR 78 bpm, Weight 71 kg, BMI 23.9 (recorded 6 months ago)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per university health records"
+   },
+   {
+    "label": "Care team",
+    "value": "Endocrinology (Dr. A. Reyes/fellow clinic), university health center primary care"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "follow-up",
+  "specialty": "Endocrinology",
+  "setting": "Telehealth video visit, patient at home in his bedroom in Miami, Florida",
+  "summary": "A 23-year-old with 14-year history of type 1 diabetes on pump/CGM therapy presents for follow-up with HbA1c risen from 7.6% to 9.4% over one year. The case teaches reconciling patient self-report with objective CGM/pump data, uncovering fear-driven insulin omission and alcohol-related nocturnal hypoglycemia, screening for diabetes burnout, and coordinating overdue complication screening, all while modeling empathetic, nonjudgmental communication with a charming but avoidant young adult patient.",
+  "title": "Rising HbA1c in a 23-year-old bartender with type 1 diabetes: unmasking fear-driven insulin omission and alcohol-related nocturnal hypoglycemia",
+  "professions": [
+   "endocrinology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

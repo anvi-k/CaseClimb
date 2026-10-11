@@ -1,0 +1,896 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "exam",
+    "name": "Camera inspection of oral cavity/oropharynx",
+    "result": "Oral cavity and oropharynx: no visible mucosal lesions, no obvious masses, poor dentition noted, tongue mobile and symmetric, tonsils absent (prior tonsillectomy per patient). Limited view of hypopharynx/larynx as expected on unaided camera exam.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera inspection of neck",
+    "result": "Right-sided neck swelling visible at level II, approximately 2 cm, patient reports it is non-tender; no visible skin changes, no obvious asymmetry of thyroid cartilage on external exam.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Patient self-palpation of neck mass (guided)",
+    "result": "Patient reports a firm, non-mobile, non-tender lump below the right jaw angle, approximately 2 cm, present for about 3 weeks, not changing with swallowing.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Cranial nerve screening exam (facial symmetry, tongue protrusion, shoulder shrug) via camera",
+    "result": "Facial movement symmetric, tongue protrudes midline, shoulder shrug strong and symmetric bilaterally, no voice change with phonation beyond baseline hoarseness.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Review home/office vitals",
+    "result": "BP 132/80 mmHg, HR 78 bpm, SpO2 97% on room air, weight 61 kg (down from 65 kg three months ago), BMI 23.",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Order flexible fiberoptic laryngoscopy (in-person, urgent referral)",
+    "result": "Scheduling order placed for urgent in-person flexible laryngoscopy within 1 week; patient instructed on what to expect; visit cannot substitute for direct visualization of the larynx.",
+    "importance": "critical",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "imaging",
+    "name": "Order contrast-enhanced CT neck/soft tissue",
+    "result": "Order placed for CT neck with contrast to evaluate laryngeal mass extent and cervical lymphadenopathy; to be obtained prior to or same day as laryngoscopy if possible.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "imaging",
+    "name": "Order chest imaging to screen for synchronous primary/metastasis",
+    "result": "No prior chest imaging on file; order placed for chest x-ray or CT chest to screen for a synchronous lung primary or metastatic disease given smoking history, to be coordinated with oncology once a primary site is confirmed; full staging determination will require multidisciplinary input.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review urgent care visit note (prior antibiotic/PPI trial)",
+    "result": "Urgent care note from 7 weeks ago: diagnosed 'laryngitis, possible reflux,' prescribed azithromycin 5-day course and omeprazole 40 mg daily x4 weeks. No laryngoscopy performed. Note documents 'denies dysphagia at time of visit.' Patient reports no improvement in voice since.",
+    "importance": "important",
+    "artifactIds": [
+     "d1"
+    ],
+    "abnormal": false
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review smoking/alcohol history documentation in chart",
+    "result": "Social history (prior primary care note, 8 months ago): tobacco use documented as 1 pack/day x40 years (40 pack-year history); alcohol use recorded as 'social drinker only, denies heavy use.' No subsequent chart update on alcohol use is on file.",
+    "abnormal": false,
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "test",
+    "name": "Voice/perceptual assessment (listen to sustained phonation and reading passage over video)",
+    "result": "Voice is persistently rough/breathy with reduced loudness and shortened maximum phonation time (~8 seconds); no stridor at rest.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Screen for airway distress (ask about breathing, observe respiratory effort on camera)",
+    "result": "No stridor, no use of accessory muscles, respiratory rate 16, patient denies shortness of breath or noisy breathing at rest or with exertion.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "lab",
+    "name": "Review TSH (thyroid function)",
+    "result": "TSH 2.1 mIU/L (reference 0.4-4.0 mIU/L) - normal.",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "lab",
+    "name": "Review CBC",
+    "result": "WBC 7.2 x10^9/L (4.0-11.0), Hgb 12.6 g/dL (12.0-15.5), Platelets 240 x10^9/L (150-400) - all within normal limits; mild anemia risk flagged for monitoring given weight loss but currently normal.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review prior primary care social history note",
+    "result": "Social history (8 months ago): tobacco use - current smoker, 1 pack/day since age 20 (40 pack-year history), advised cessation multiple times, not ready to quit. Alcohol - 'social drinker only, denies heavy use.' Occupation: school bus dispatcher, works via two-way radio most of shift.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ],
+    "abnormal": false
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Suspected laryngeal (or hypopharyngeal) squamous cell carcinoma presenting as persistent hoarseness with red-flag features (otalgia, dysphagia, weight loss, neck mass) in a heavy smoker/drinker, requiring urgent laryngoscopy and staging workup; outside the scope of a telehealth visit to diagnose definitively.",
+   "differential": [
+    "Laryngeal or hypopharyngeal squamous cell carcinoma",
+    "Vocal cord lesion (polyp, nodule, papilloma) less likely given systemic red flags",
+    "Chronic laryngitis/LPR (prior diagnosis, now insufficient given lack of response and red flags)",
+    "Reactive or metastatic cervical lymphadenopathy from head/neck primary",
+    "Thyroid mass with secondary voice change (TSH normal, less likely primary)"
+   ],
+   "keyFindings": [
+    "Hoarseness >6 weeks unresponsive to antibiotic/PPI trial, mandating laryngoscopy per guidelines",
+    "Referred right otalgia (classic for hypopharyngeal/laryngeal lesion via vagal referral)",
+    "Dysphagia to solids",
+    "Unintentional weight loss of approximately 4 kg over 3 months (~6.2% of body weight, meeting criteria for clinically significant unintentional weight loss)",
+    "New right neck mass, firm, non-tender, non-mobile, ~2 cm, present ~3 weeks",
+    "40 pack-year smoking history and heavy nightly alcohol use (synergistic carcinogen risk)",
+    "No airway compromise currently (no stridor, normal SpO2 and respiratory effort)"
+   ],
+   "plan": [
+    "Urgent in-person flexible fiberoptic laryngoscopy within days, not deferred for repeat medication trial",
+    "Contrast-enhanced CT of the neck to characterize laryngeal/hypopharyngeal lesion and cervical nodal disease",
+    "Chest imaging (CXR or CT chest) for synchronous lung primary/staging given smoking history",
+    "If mass confirmed on laryngoscopy or imaging, biopsy and multidisciplinary head and neck tumor board referral",
+    "Counsel on smoking and alcohol cessation resources regardless of final diagnosis",
+    "Set expectations: diagnosis cannot be confirmed by video exam alone; same-week in-person evaluation is essential",
+    "Address patient's fear (husband's lung cancer death) with clear, honest communication about next steps and timeline"
+   ],
+   "redFlags": [
+    "Hoarseness persisting beyond 2 weeks without improvement after empiric therapy (ACR/AAO-HNS indication for laryngoscopy)",
+    "Unilateral referred otalgia",
+    "Progressive dysphagia",
+    "Unintentional weight loss (~6.2% body weight over 3 months)",
+    "Palpable, firm, non-tender, enlarging neck mass",
+    "Heavy combined tobacco and alcohol exposure"
+   ],
+   "educationPoints": [
+    "Persistent hoarseness >2-3 weeks, especially with any red flag, requires direct laryngeal visualization regardless of empiric treatment trials already given",
+    "Referred otalgia with normal ear exam should prompt evaluation of the aerodigestive tract (cranial nerves IX/X referral pathways)",
+    "Combined tobacco and heavy alcohol use multiplies head and neck cancer risk beyond either alone",
+    "A telehealth visit can triage and expedite urgent in-person procedures but cannot replace direct laryngoscopy or tissue diagnosis",
+    "Patients may minimize alcohol use initially ('socially') and disclose more accurately once rapport is established-screen directly and gently",
+    "Unintentional weight loss (here, ~6.2% of body weight in 3 months) and new neck mass in a smoker are not to be attributed to reflux or minor infection without ruling out malignancy first"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Urgent Care Visit Note",
+    "author": "Dr. R. Finch, Urgent Care",
+    "date": "7 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "body": "CC: Hoarse voice x4 weeks. HPI: 60F with hoarseness, denies fever, denies dysphagia at time of visit. Exam: oropharynx mildly erythematous, no exudate. Assessment: Acute laryngitis, possible laryngopharyngeal reflux. Plan: Azithromycin 250mg day1 then 250mg daily x4 days; Omeprazole 40mg daily x4 weeks; voice rest advised; follow up if not improved in 2-3 weeks. No laryngoscopy performed at this visit."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "EHR Medication Reconciliation",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Omeprazole",
+        "40 mg",
+        "once daily",
+        "Reflux/laryngitis (urgent care, course completed)"
+       ]
+      },
+      {
+       "cells": [
+        "Amlodipine",
+        "5 mg",
+        "once daily",
+        "Hypertension"
+       ]
+      },
+      {
+       "cells": [
+        "Albuterol HFA inhaler",
+        "90 mcg/puff",
+        "as needed",
+        "Occasional wheeze (patient reports rare use)"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Laboratory Results - Thyroid and CBC Panel",
+    "author": "Primary Care Lab Order",
+    "date": "5 days ago",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "TSH",
+        "2.1",
+        "mIU/L",
+        "0.4-4.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "WBC",
+        "7.2",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "12.6",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "240",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Vitals Flowsheet",
+    "author": "Telehealth intake",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "BP",
+      "HR",
+      "SpO2",
+      "Weight"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "3 months ago",
+        "128/78",
+        "74",
+        "98%",
+        "65 kg"
+       ]
+      },
+      {
+       "cells": [
+        "today",
+        "132/80",
+        "78",
+        "97%",
+        "61 kg"
+       ],
+       "flag": "L"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "chart",
+    "title": "Weight Trend",
+    "author": "EHR",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Visit",
+     "yLabel": "Weight (kg)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "3 months ago",
+         "y": 65
+        },
+        {
+         "x": "today",
+         "y": 61
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Prior Primary Care Note - Social History",
+    "author": "Dr. A. Patel, Primary Care",
+    "date": "8 months ago",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "body": "Social History: Tobacco use - current smoker, 1 pack/day, smoking since age 20 (40 pack-year history), advised cessation multiple times, patient not ready to quit. Alcohol - patient reports social drinker only, denies heavy use. Occupation: school bus dispatcher, works via two-way radio most of shift."
+   },
+   {
+    "id": "d7",
+    "type": "other",
+    "title": "Referral/Triage Order Summary",
+    "author": "ENT Consult Service",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a6"
+    },
+    "body": "Urgent referral placed for in-person flexible fiberoptic laryngoscopy, to be scheduled within 7 days given 8-week unresolved hoarseness with red-flag symptoms (otalgia, dysphagia, weight loss, neck mass). Patient advised that same-week evaluation is strongly recommended; transportation and work schedule barriers discussed. CT neck with contrast ordered to precede or coincide with laryngoscopy visit."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Persistent hoarseness x8 weeks, not improved with antibiotics/PPI"
+   },
+   {
+    "label": "Problem list",
+    "value": "Hypertension; Hoarseness (new)"
+   },
+   {
+    "label": "Medications",
+    "value": "Omeprazole 40 mg daily (recent course); Amlodipine 5 mg daily; Albuterol HFA as needed"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 132/80 mmHg, HR 78 bpm, SpO2 97% RA, Weight 61 kg"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Influenza vaccine - this season; Up to date per PCP record"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. A. Patel; Referral: ENT (today's consult)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "diagnostic interview / new consultation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "voice change duration",
+    "chart": "8 weeks of hoarse voice, no improvement after antibiotic and PPI trial",
+    "says": "My voice has been scratchy and rough for about two months now, and nothing's helped.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "voice use at work",
+    "chart": "Works as school bus dispatcher, uses two-way radio extensively throughout shift",
+    "says": "I talk on the radio to the bus drivers all day long, it's my whole job.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "prior treatment response",
+    "chart": "Completed azithromycin course and 4-week omeprazole trial from urgent care with no voice improvement",
+    "says": "I took the antibiotics and the heartburn pills they gave me, but my voice sounds just as bad, maybe worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "ear discomfort",
+    "chart": "Reports right-sided ear ache for several weeks without ear infection symptoms (no drainage, no hearing change)",
+    "says": "My right ear's been aching a bit too, but there's nothing coming out of it or anything.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "swallowing solids",
+    "chart": "Reports discomfort/sensation of difficulty swallowing solid foods for about a month",
+    "says": "Swallowing my food, especially meat and bread, kind of catches or hurts going down lately.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "swallowing liquids",
+    "chart": "No difficulty swallowing liquids, no choking or coughing with thin liquids",
+    "says": "Drinking water or coffee is fine, it's just the solid food that's an issue.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Unintentional weight loss of approximately 4 kg over past 3 months",
+    "says": "I guess I have lost some weight, my pants are looser, but I haven't really been trying to.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "neck lump",
+    "chart": "Noticed a small lump on the right side of neck approximately 3 weeks ago, non-tender",
+    "says": "There's this little lump on the right side of my neck I noticed a few weeks back. It doesn't hurt though.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "neck lump change",
+    "chart": "Patient unsure if neck lump has grown but states it has not gone away or softened",
+    "says": "I don't know if it's gotten bigger exactly, but it sure hasn't gone away.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "breathing at rest",
+    "chart": "Denies shortness of breath, noisy breathing, or stridor at rest or with exertion",
+    "says": "I breathe fine, no wheezing or anything like that, even when I'm walking around.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "coughing up blood",
+    "chart": "Denies hemoptysis",
+    "says": "No, I haven't coughed up any blood.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "voice fatigue pattern",
+    "chart": "Hoarseness is constant throughout the day, not just at end of shift, with no better or worse time",
+    "says": "It's pretty much bad all day, doesn't really get better after I rest it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "heartburn symptoms",
+    "chart": "Denies classic heartburn, regurgitation, or chest burning",
+    "says": "I never really had heartburn feelings, the doctor just thought maybe that's what it was.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "ear hearing change",
+    "chart": "Denies hearing loss, tinnitus, or ear drainage",
+    "says": "My hearing's fine on that side, no ringing, nothing draining out.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "night sweats",
+    "chart": "Denies night sweats or fevers",
+    "says": "No night sweats or fevers that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "substance",
+    "topic": "tobacco amount",
+    "chart": "Current smoker, 1 pack per day for 40 years (40 pack-year history)",
+    "says": "I've smoked about a pack a day since I was twenty. I know, I know.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "substance",
+    "topic": "tobacco quit attempts",
+    "chart": "Has tried to quit smoking twice using patches, relapsed within weeks both times",
+    "says": "I tried the patches twice, didn't stick with it either time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "alcohol amount initial",
+    "chart": "Initially describes alcohol use as social drinking only",
+    "says": "Oh, I just drink socially, nothing serious.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "substance",
+    "topic": "alcohol amount actual",
+    "chart": "On further questioning, reports drinking 3-4 bourbons most evenings for several years",
+    "says": "I guess most nights it's more like three or four bourbons, after work helps me unwind.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f20",
+    "category": "substance",
+    "topic": "other substance use",
+    "chart": "Denies other recreational drug use",
+    "says": "No, nothing like that, just my cigarettes and my evening drinks.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "family",
+    "topic": "husband's cancer history",
+    "chart": "Husband died of lung cancer two years ago; patient reports significant anxiety about cancer",
+    "says": "My husband passed from lung cancer two years ago. I get real scared thinking something like that could be happening to me.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "family",
+    "topic": "family cancer history other",
+    "chart": "No known family history of head and neck cancer specifically; mother had breast cancer in her 70s",
+    "says": "My mom had breast cancer when she was older, but nobody else that I know of had anything like throat cancer.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "psychosocial",
+    "topic": "fear and avoidance",
+    "chart": "Patient admits she delayed seeking care because she was afraid of what the lump and symptoms might mean",
+    "says": "Honestly I put off coming in because I was scared of what they'd find, especially after what happened with my husband.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "occupation detail",
+    "chart": "Works full-time as school bus dispatcher, has not missed work despite symptoms",
+    "says": "I haven't missed a day of work, even feeling like this, we're short-staffed.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "social",
+    "topic": "insurance and access",
+    "chart": "Has state Medicaid coverage, worried about being able to get timely procedure authorized",
+    "says": "I'm on the state insurance, I just hope they don't make this take forever to get approved.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "pmh",
+    "topic": "hypertension history",
+    "chart": "History of hypertension, controlled on amlodipine 5 mg daily",
+    "says": "I've got high blood pressure, I take a little pill for that every morning.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "pmh",
+    "topic": "asthma history",
+    "chart": "Mild intermittent asthma, rarely uses albuterol inhaler, not related to current symptoms",
+    "says": "I've got a little asthma, I keep an inhaler around but barely use it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "psh",
+    "topic": "prior ENT surgery",
+    "chart": "Tonsillectomy as a child, no other ENT surgical history",
+    "says": "Had my tonsils out when I was a kid, that's the only ear-nose-throat surgery I've had.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "ros",
+    "topic": "allergy symptoms",
+    "chart": "Reports seasonal nasal congestion in spring, attributes some throat clearing to allergies",
+    "says": "I do get stuffy in the spring, allergies I think, and I clear my throat a lot then.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "medications",
+    "topic": "PPI course completion",
+    "chart": "Completed full 4-week course of omeprazole 40 mg daily as prescribed, confirms adherence",
+    "says": "I took that heartburn medicine every single day like they told me, didn't miss any.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "nutrition",
+    "topic": "diet changes",
+    "chart": "Has shifted to softer foods over past few weeks because of swallowing discomfort, not intentional dieting",
+    "says": "I've been eating softer stuff lately, like soups and mashed potatoes, because the regular food is uncomfortable going down.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "goals",
+    "topic": "patient priorities",
+    "chart": "Patient's main goal is to find out quickly what is causing the lump and voice change",
+    "says": "I just want to know what this is, as fast as possible, so I can stop worrying.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "ros",
+    "topic": "ear pain character",
+    "chart": "Describes right ear ache as dull, intermittent, not associated with chewing or jaw movement",
+    "says": "It's just a dull ache in my ear sometimes, doesn't matter if I'm chewing or not.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f34",
+    "category": "hpi",
+    "topic": "voice quality description",
+    "chart": "Describes voice as rough and raspy, occasionally breathy, denies complete voice loss (aphonia)",
+    "says": "It's rough and raspy, sometimes breathy, but I can still get words out, just sound bad.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f18",
+    "artifactId": "d6",
+    "patientClaim": "Patient initially states she only drinks socially and denies heavy alcohol use.",
+    "recordEvidence": "Prior primary care note from 8 months ago documents 'social drinker only, denies heavy use,' matching her initial statement today. No prior record documents any heavier use, so the chart alone cannot resolve whether this is accurate.",
+    "teachingPoint": "Prior charted social history may simply reflect what the patient reported previously, not the truth; a single prior note stating 'social drinking' does not rule out underreporting, and direct, non-judgmental re-screening at this visit is essential, especially when alcohol is a major risk factor for the suspected diagnosis."
+   },
+   {
+    "id": "m2",
+    "factId": "f3",
+    "artifactId": "d1",
+    "patientClaim": "Patient reports no dysphagia symptoms were present when she first saw urgent care, only hoarseness.",
+    "recordEvidence": "Urgent care note explicitly documents 'denies dysphagia at time of visit' 7 weeks ago, consistent with progression of symptoms, confirming dysphagia is a newer development not present at initial presentation.",
+    "teachingPoint": "Symptom progression (new dysphagia, weight loss, neck mass appearing after initial presentation) is itself a red flag indicating this is not resolving laryngitis but a progressive process requiring urgent re-evaluation, not just repeating the same empiric treatment."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit the full constellation of head and neck cancer red-flag symptoms (otalgia, dysphagia, weight loss, neck mass) beyond the presenting complaint of hoarseness through structured, tiered questioning.",
+    "factIds": [
+     "f4",
+     "f5",
+     "f7",
+     "f8"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize that hoarseness persisting beyond empiric antibiotic/PPI therapy for 6-8 weeks mandates direct laryngoscopy rather than further medication trials, and place the appropriate urgent referral.",
+    "factIds": [
+     "f1",
+     "f3",
+     "f30"
+    ],
+    "actionIds": [
+     "a6",
+     "a9"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Obtain an accurate tobacco and alcohol history, recognizing that initial patient disclosure may understate alcohol use, and connect combined use to head and neck cancer risk.",
+    "factIds": [
+     "f16",
+     "f18",
+     "f19"
+    ],
+    "actionIds": [
+     "a10",
+     "a15"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Perform a feasible remote assessment of airway safety and voice quality to determine urgency and triage appropriately without underestimating or overestimating acuity.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f34"
+    ],
+    "actionIds": [
+     "a11",
+     "a12"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Order appropriate staging imaging (contrast neck CT, chest imaging) and recognize the limits of telehealth evaluation in confirming a tissue diagnosis.",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a7",
+     "a8"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Address the psychosocial dimension of the visit, including the patient's fear related to her husband's cancer death and her delay in seeking care, with empathy while maintaining urgency of workup.",
+    "factIds": [
+     "f21",
+     "f23",
+     "f25"
+    ],
+    "actionIds": []
+   }
+  ],
+  "patient": {
+   "name": "Patricia Lawson",
+   "age": 60,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "White",
+   "occupation": "School bus dispatcher",
+   "language": "English",
+   "appearance": "A woman who appears her age with a sturdy build, short gray-blonde hair, wearing a cardigan over a work polo shirt, seated at a kitchen table with a coffee mug visible. Lighting is a bit dim, and she speaks with a noticeably rough, raspy voice, occasionally touching the right side of her neck as she talks.",
+   "portrait": "/portraits/ent-patricia-lawson-hoarse-voice.jpg"
+  },
+  "persona": {
+   "personality": "Chatty, warm, deflects from difficult topics with humor or small talk, but underneath is quite anxious",
+   "communicationStyle": "Talks in a roundabout way, volunteers unrelated details about work and family before circling back to health concerns, uses plain lay language",
+   "healthLiteracy": "low",
+   "emotionalState": "Anxious beneath a cheerful exterior, especially fearful of cancer given her husband's death",
+   "background": "Married for 32 years to a long-haul truck driver who died of lung cancer two years ago; has two grown children who live out of state; has worked as a school bus dispatcher for 15 years and takes pride in rarely missing work despite being short-staffed",
+   "speechExamples": [
+    "Oh honey, let me tell you about my week before we get into all this.",
+    "It's probably nothing, I'm sure, but my voice just won't quit being scratchy.",
+    "I don't like to make a fuss, but my neck's got this little lump that's bothering me.",
+    "After Jerry passed from the lung cancer, I guess I get spooked easier than I used to."
+   ],
+   "concerns": [
+    "Worried this could be cancer like what her husband had",
+    "Worried about missing work and losing income if this requires procedures",
+    "Concerned about insurance approval delays for tests",
+    "Embarrassed about her drinking and smoking habits"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the ENT resident seeing Patricia Lawson, a 60-year-old school bus dispatcher, for a new telehealth consultation regarding 8 weeks of hoarseness that has not improved despite antibiotics and a PPI trial from urgent care. Conduct a focused history, perform feasible camera-based exam maneuvers, and determine next steps.",
+   "chiefComplaint": "Persistent hoarse voice for 8 weeks, not improved with antibiotics and acid reflux medication",
+   "openingLine": "Hi there, thanks for seeing me. My voice has just been so scratchy and rough for about two months now, and nothing they've given me has helped one bit.",
+   "tasks": [
+    "Take a focused history of the presenting concern",
+    "Obtain a tobacco and alcohol history",
+    "Perform a feasible camera-based examination of the oropharynx and neck",
+    "Determine and communicate the next steps in management",
+    "Address the patient's concerns with empathy"
+   ],
+   "timeLimitMin": 22
+  },
+  "setting": "Telehealth video visit, patient at home at her kitchen table",
+  "specialty": "Otolaryngology (ENT)",
+  "summary": "A 60-year-old smoker and heavy drinker presents by telehealth with 8 weeks of hoarseness unresponsive to empiric antibiotic/PPI therapy, with red-flag features of referred otalgia, dysphagia, weight loss, and a new neck mass. The case teaches ENT residents to recognize when hoarseness requires urgent laryngoscopy and staging imaging rather than further empiric treatment, and to elicit sensitive substance use history that the patient initially minimizes.",
+  "title": "Persistent Hoarseness with Red Flags in a 60-Year-Old Smoker: Suspected Laryngeal Malignancy",
+  "professions": [
+   "ent"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

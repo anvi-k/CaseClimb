@@ -1,0 +1,288 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://poscere.app/schemas/evaluation.schema.json",
+  "title": "Evaluation",
+  "description": "The evaluator's assessment of one graded episode: seven-domain rubric scores, optional case checklist, and the material the debrief and teacher dashboard are built from. One per episode, keyed by episode_id. The episode's own `grading` block carries the objective and behavior results; this document carries everything the rubric adds.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "episode_id",
+    "patient_record_id",
+    "patient_record_version",
+    "graded_participant_id",
+    "evaluated_at",
+    "grader",
+    "rubric",
+    "elicited_fact_ids",
+    "missed_fact_ids",
+    "discrepancy_findings",
+    "under_probing",
+    "goal_progress",
+    "debrief_questions",
+    "encounter",
+    "integrity"
+  ],
+  "properties": {
+    "episode_id": { "$ref": "#/$defs/id" },
+    "patient_record_id": { "$ref": "#/$defs/id" },
+    "patient_record_version": { "type": "integer", "minimum": 1 },
+    "graded_participant_id": { "$ref": "#/$defs/id" },
+    "evaluated_at": { "type": "string", "format": "date-time" },
+    "grader": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind"],
+      "properties": {
+        "kind": { "enum": ["ai", "faculty"] },
+        "user_id": { "$ref": "#/$defs/id" },
+        "model": { "type": "string" }
+      }
+    },
+
+    "rubric": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "rubric_id",
+        "domain_scores",
+        "total",
+        "max_total",
+        "needs_teacher_review",
+        "review_reasons",
+        "written_evidence"
+      ],
+      "properties": {
+        "rubric_id": { "$ref": "#/$defs/id" },
+        "domain_scores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["domain_id", "number", "name", "score", "label", "rationale", "evidence"],
+            "properties": {
+              "domain_id": { "$ref": "#/$defs/id" },
+              "number": { "type": "integer", "minimum": 1 },
+              "name": { "type": "string" },
+              "score": {
+                "type": ["integer", "null"],
+                "minimum": 1,
+                "maximum": 4,
+                "description": "4 Strong, 3 Competent, 2 Developing, 1 Unsafe or absent. null means N/A or not scored; see label."
+              },
+              "label": { "type": "string" },
+              "rationale": { "type": "string" },
+              "evidence": { "$ref": "#/$defs/evidence_list" }
+            }
+          }
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Sum of scored domains. A discussion aid, not a pass/fail grade."
+        },
+        "max_total": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "4 times the number of scored domains; 28 when none are N/A."
+        },
+        "needs_teacher_review": {
+          "type": "boolean",
+          "description": "True when domain 6 or 7 scored 1, whatever the total."
+        },
+        "review_reasons": { "type": "array", "items": { "type": "string" } },
+        "written_evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["strength", "important_gap", "safety_or_accuracy_concern"],
+          "properties": {
+            "strength": { "$ref": "#/$defs/written_point" },
+            "important_gap": { "$ref": "#/$defs/written_point" },
+            "safety_or_accuracy_concern": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["present", "text", "evidence"],
+              "properties": {
+                "present": { "type": "boolean" },
+                "text": { "type": "string" },
+                "evidence": { "$ref": "#/$defs/evidence_list" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "checklist": {
+      "type": "object",
+      "description": "Present only when the case has a checklist attached.",
+      "additionalProperties": false,
+      "required": ["checklist_id", "title", "items", "points_awarded", "points_possible"],
+      "properties": {
+        "checklist_id": { "$ref": "#/$defs/id" },
+        "title": { "type": "string" },
+        "points_awarded": { "type": "integer", "minimum": 0 },
+        "points_possible": { "type": "integer", "minimum": 0 },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["item_id", "description", "points_possible", "points_awarded", "evidence", "feedback"],
+            "properties": {
+              "item_id": { "$ref": "#/$defs/id" },
+              "description": { "type": "string" },
+              "points_possible": { "type": "integer", "minimum": 0 },
+              "points_awarded": { "type": "integer", "minimum": 0 },
+              "evidence": { "$ref": "#/$defs/evidence_list" },
+              "feedback": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "elicited_fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+    "missed_fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+
+    "discrepancy_findings": {
+      "type": "array",
+      "description": "One per discrepancy in the record: did the student catch the patient's claim?",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["discrepancy_id", "outcome", "contradiction_was_visible", "evidence", "feedback"],
+        "properties": {
+          "discrepancy_id": { "$ref": "#/$defs/id" },
+          "outcome": {
+            "enum": ["uncovered", "challenged_unresolved", "accepted_without_challenge", "not_raised"],
+            "description": "uncovered: the truth came out. challenged_unresolved: the student probed but did not get there. accepted_without_challenge: the patient made the claim and the student took it. not_raised: the topic never came up."
+          },
+          "contradiction_was_visible": {
+            "type": "boolean",
+            "description": "From the event log: whether any contradicting fact was disclosed during the episode."
+          },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "under_probing": {
+      "type": "array",
+      "description": "Things the student never asked about, or asked about too shallowly.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic", "why_it_mattered", "related_fact_ids", "evidence"],
+        "properties": {
+          "topic": { "type": "string" },
+          "why_it_mattered": { "type": "string" },
+          "related_fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+          "evidence": { "$ref": "#/$defs/evidence_list" }
+        }
+      }
+    },
+
+    "goal_progress": {
+      "type": "array",
+      "description": "Progress against the student's personal goals, when any were supplied.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["goal_id", "description", "progress", "evidence", "feedback"],
+        "properties": {
+          "goal_id": { "$ref": "#/$defs/id" },
+          "description": { "type": "string" },
+          "progress": { "enum": ["achieved", "progressing", "not_demonstrated"] },
+          "evidence": { "$ref": "#/$defs/evidence_list" },
+          "feedback": { "type": "string" }
+        }
+      }
+    },
+
+    "debrief_questions": {
+      "type": "array",
+      "description": "Opening questions for the debrief conversation, most important first.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "evidence"],
+        "properties": {
+          "question": { "type": "string" },
+          "evidence": { "$ref": "#/$defs/evidence_list" }
+        }
+      }
+    },
+
+    "encounter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration_seconds", "over_time_limit", "student_turn_count"],
+      "properties": {
+        "duration_seconds": { "type": ["integer", "null"] },
+        "over_time_limit": { "type": "boolean" },
+        "student_turn_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "integrity": {
+      "type": "object",
+      "description": "What the evaluator corrected in the grader model's output before publishing it.",
+      "additionalProperties": false,
+      "required": [
+        "evidence_items_dropped",
+        "quotes_dropped",
+        "adjustments",
+        "objectives_not_assessed",
+        "record_version_mismatch"
+      ],
+      "properties": {
+        "evidence_items_dropped": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Evidence pointing at a turn that does not exist."
+        },
+        "quotes_dropped": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Quotes that were not found in the turn they cited. The turn link is kept."
+        },
+        "adjustments": { "type": "array", "items": { "type": "string" } },
+        "objectives_not_assessed": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "record_version_mismatch": { "type": "boolean" }
+      }
+    }
+  },
+
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+
+    "evidence_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "anyOf": [{ "required": ["turn_id"] }, { "required": ["location"] }],
+        "properties": {
+          "turn_id": { "$ref": "#/$defs/id" },
+          "quote": { "type": "string" },
+          "location": { "type": "string" }
+        }
+      }
+    },
+
+    "written_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "evidence"],
+      "properties": {
+        "text": { "type": "string" },
+        "evidence": { "$ref": "#/$defs/evidence_list" }
+      }
+    }
+  }
+}

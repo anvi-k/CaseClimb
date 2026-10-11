@@ -1,0 +1,1101 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review vitals flowsheet",
+    "result": "Temp 36.7°C, HR 78 bpm regular, BP 128/76 mmHg, RR 16, SpO2 97% on room air, Weight 78.2 kg (down from 81.0 kg three cycles ago)",
+    "importance": "important",
+    "artifactIds": [
+     "d8"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera inspection of hands/fingertips for skin changes",
+    "result": "No visible ulceration, cyanosis, or digital color change on camera; patient reports fingertips feel numb to light touch when he taps them together, no visible tremor",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "test",
+    "name": "Guided bedside neuropathy check (patient buttons shirt, picks up a coin on camera)",
+    "result": "Patient takes approximately 45 seconds to button top shirt button, fumbles twice; drops a coin picked up from table on first attempt; reports it 'feels like my fingers are wearing gloves'",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Grade peripheral neuropathy using CTCAE criteria",
+    "result": "CTCAE Grade 2 sensory peripheral neuropathy: symptoms interfering with instrumental activities of daily living (buttons, cuffs, fine motor tasks)",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Camera inspection of oral mucosa",
+    "result": "Patient tilts camera to show mild erythema of buccal mucosa bilaterally, no ulceration, no white plaques, no bleeding gums visible",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Grade oral mucositis using CTCAE criteria",
+    "result": "CTCAE Grade 1 oral mucositis: asymptomatic or mild symptoms, intervention not indicated, able to eat soft diet",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Grade diarrhea using CTCAE criteria",
+    "result": "CTCAE Grade 1 diarrhea (unambiguous, not borderline Grade 2): Grade 1 = increase of <4 stools/day over baseline; Grade 2 = increase of 4-6 stools/day. Patient reports 4 loose stools/day versus baseline 1/day, an increase of 3 stools/day, which falls clearly within the Grade 1 range. No blood, no fever, no dehydration signs on report.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review today's CBC with differential",
+    "result": "WBC 3.1 x10^9/L (L), ANC 1.3 x10^9/L (L) - CTCAE grade 2 neutropenia, Hemoglobin 10.4 g/dL (L), Platelets 98 x10^9/L (L) — see CBC trend artifact",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Review comprehensive metabolic panel",
+    "result": "Creatinine 0.9 mg/dL (normal), Sodium 138 mmol/L, Potassium 4.1 mmol/L, Magnesium 1.9 mg/dL, Total bilirubin 0.6 mg/dL, AST 32 U/L, ALT 28 U/L, Alkaline phosphatase 95 U/L — all within normal limits",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Review CEA trend",
+    "result": "CEA has fallen from 212 ng/mL at diagnosis to 64 ng/mL most recent draw, consistent with partial response",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "imaging",
+    "name": "Review most recent restaging CT chest/abdomen/pelvis report",
+    "result": "Partial response per RECIST: largest hepatic lesion decreased from 4.1 cm to 2.6 cm, no new lesions, primary colonic mass stable in size, no evidence of progression",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review chemotherapy flowsheet / cycle doses administered to date",
+    "result": "Cycles 1-4 of FOLFOX given at full dose per protocol (oxaliplatin 85 mg/m2, leucovorin 400 mg/m2, 5-FU bolus + 46-hr infusion 2400 mg/m2); no dose reductions or delays recorded to date",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review home symptom diary / patient-reported outcome log submitted before visit",
+    "result": "Diary notes 'tingling in fingers, comes and goes' logged after cycles 2-4 but no mention of symptoms between cycles or interference with daily tasks; diary for the past 10 days (since cycle 4) notes continuous tingling and 'trouble with buttons' entered by his wife, not by patient",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d9"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Assess hydration status via reported intake/output and orthostatic symptoms",
+    "result": "Patient denies dizziness on standing, denies decreased urination, reports drinking fluids normally; no clinical dehydration reported",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Performance status assessment (ECOG)",
+    "result": "ECOG 1: ambulatory, able to carry out light work, restricted in strenuous activity",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review prior oxaliplatin dosing history for cumulative neurotoxicity risk",
+    "result": "Cumulative oxaliplatin dose through cycle 4 approximately 340 mg/m2 (85 mg/m2 x 4 cycles); cumulative neuropathy risk rises substantially beyond 540-680 mg/m2 (typically reached after ~6-8 cycles at full dose). Notably, this patient already has Grade 2 sensory neuropathy with ADL interference at only ~340 mg/m2, well below the usual threshold for severe neuropathy - this early-onset, disproportionate neurotoxicity is itself clinically significant and should prompt discontinuing or reducing oxaliplatin now rather than continuing to a higher cumulative dose.",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Oncology Consult Note - Initial Diagnosis",
+    "author": "Dr. Patel, Medical Oncology",
+    "date": "5 months ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "66-year-old man with newly diagnosed stage IV adenocarcinoma of the sigmoid colon with synchronous liver metastases (3 lesions, largest 4.1 cm segment VI). CEA 212 ng/mL at diagnosis. KRAS wild-type, MSI-stable, BRAF wild-type. ECOG 0. Plan: FOLFOX every 2 weeks for 4-6 cycles with restaging, consider addition of bevacizumab or EGFR inhibitor based on response. Discussed goals of care; patient wishes aggressive but quality-of-life-preserving treatment, specific goal of attending granddaughter's high school graduation in approximately 4 months."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "CBC with Differential - Today",
+    "author": "Fairview Diagnostic Laboratory",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "3.1",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "ANC (Absolute Neutrophil Count)",
+        "1.3",
+        "x10^9/L",
+        "1.5-8.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "10.4",
+        "g/dL",
+        "13.5-17.5"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Platelets",
+        "98",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "MCV",
+        "91",
+        "fL",
+        "80-100"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Comprehensive Metabolic Panel - Today",
+    "author": "Fairview Diagnostic Laboratory",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "138",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mmol/L",
+        "3.5-5.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.9",
+        "mg/dL",
+        "0.7-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Magnesium",
+        "1.9",
+        "mg/dL",
+        "1.7-2.2"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Total Bilirubin",
+        "0.6",
+        "mg/dL",
+        "0.2-1.2"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "AST",
+        "32",
+        "U/L",
+        "10-40"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "ALT",
+        "28",
+        "U/L",
+        "7-35"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Alkaline Phosphatase",
+        "95",
+        "U/L",
+        "40-130"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "CEA Trend Over Treatment Course",
+    "author": "Medical Oncology",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Timepoint",
+     "yLabel": "CEA (ng/mL)",
+     "series": [
+      {
+       "name": "CEA",
+       "points": [
+        {
+         "x": "Diagnosis",
+         "y": 212
+        },
+        {
+         "x": "After Cycle 2",
+         "y": 128
+        },
+        {
+         "x": "After Cycle 4 (today)",
+         "y": 64
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "imaging",
+    "title": "CT Chest/Abdomen/Pelvis with Contrast - Restaging After Cycle 4",
+    "author": "Dr. Nguyen, Radiology",
+    "date": "1 week ago",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "body": "COMPARISON: Prior CT 4 months ago (baseline) and current study.\n\nLIVER: Three hypodense lesions again identified. Dominant lesion in segment VI now measures 2.6 cm (previously 4.1 cm), representing significant decrease. Two smaller lesions in segment V and VII also decreased in size, now 1.1 cm and 0.9 cm (previously 1.8 cm and 1.5 cm). No new hepatic lesions.\n\nCOLON: Sigmoid colon wall thickening at known primary site is stable, measures 3.2 cm, unchanged from prior.\n\nNo new peritoneal, nodal, or pulmonary metastatic disease. No ascites.\n\nIMPRESSION: Partial response to systemic therapy per RECIST 1.1 criteria."
+   },
+   {
+    "id": "d6",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "Fairview Oncology Clinic",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Oxaliplatin",
+        "85 mg/m2",
+        "IV",
+        "Day 1 of 14-day cycle"
+       ]
+      },
+      {
+       "cells": [
+        "Leucovorin",
+        "400 mg/m2",
+        "IV",
+        "Day 1 of 14-day cycle"
+       ]
+      },
+      {
+       "cells": [
+        "Fluorouracil (5-FU) bolus + continuous infusion",
+        "400 mg/m2 bolus + 2400 mg/m2 over 46 hrs",
+        "IV",
+        "Day 1-2 of 14-day cycle"
+       ]
+      },
+      {
+       "cells": [
+        "Ondansetron",
+        "8 mg",
+        "Oral",
+        "As needed for nausea"
+       ]
+      },
+      {
+       "cells": [
+        "Loperamide",
+        "2 mg",
+        "Oral",
+        "As needed for diarrhea, max 8/day"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Daily, for hypertension"
+       ]
+      },
+      {
+       "cells": [
+        "Atorvastatin",
+        "20 mg",
+        "Oral",
+        "Daily, for hyperlipidemia"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "flowsheet",
+    "title": "Chemotherapy Administration Flowsheet",
+    "author": "Infusion Center Nursing",
+    "date": "Through Cycle 4",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "table": {
+     "columns": [
+      "Cycle",
+      "Date",
+      "Oxaliplatin dose given",
+      "5-FU dose given",
+      "Dose reduction?",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "1",
+        "~8 weeks ago",
+        "85 mg/m2 (full)",
+        "Full dose",
+        "No",
+        "Tolerated well, mild cold sensitivity in fingers"
+       ]
+      },
+      {
+       "cells": [
+        "2",
+        "~6 weeks ago",
+        "85 mg/m2 (full)",
+        "Full dose",
+        "No",
+        "Mild tingling fingers/toes with cold exposure, resolves within days"
+       ]
+      },
+      {
+       "cells": [
+        "3",
+        "~4 weeks ago",
+        "85 mg/m2 (full)",
+        "Full dose",
+        "No",
+        "Tingling now lasting about a week between cycles"
+       ]
+      },
+      {
+       "cells": [
+        "4",
+        "~2 weeks ago",
+        "85 mg/m2 (full)",
+        "Full dose",
+        "No",
+        "Patient reports symptoms 'manageable,' no reduction requested"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d8",
+    "type": "chart",
+    "title": "Weight Trend",
+    "author": "Fairview Oncology Clinic",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Visit",
+     "yLabel": "Weight (kg)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "Cycle 1",
+         "y": 81
+        },
+        {
+         "x": "Cycle 2",
+         "y": 80.1
+        },
+        {
+         "x": "Cycle 3",
+         "y": 79
+        },
+        {
+         "x": "Cycle 4",
+         "y": 78.2
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d9",
+    "type": "other",
+    "title": "Patient-Reported Outcome Symptom Diary",
+    "author": "Patient / Caregiver entries, patient portal",
+    "date": "Past 8 weeks",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "body": "Week 2 (after Cycle 1): 'Fingers feel funny when I touch cold things, goes away same day.' - entered by patient\nWeek 4 (after Cycle 2): 'Tingling in fingers, comes and goes.' - entered by patient\nWeek 6 (after Cycle 3): 'Some tingling, not too bad.' - entered by patient\nWeek 7-8 (since Cycle 4, past 10 days): 'Numbness and tingling in his hands most of the day now, having trouble buttoning his shirts and dropped his keys twice. Also seems more tired.' - entered by spouse (Mrs. Mwangi) via patient portal on his behalf"
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "On-treatment toxicity check, pre-Cycle 5 FOLFOX"
+   },
+   {
+    "label": "Problem list",
+    "value": "Stage IV adenocarcinoma of sigmoid colon with liver metastases (KRAS wild-type, MSI-stable, BRAF wild-type); Hypertension; Hyperlipidemia"
+   },
+   {
+    "label": "Medications",
+    "value": "See medication list - FOLFOX regimen, lisinopril, atorvastatin, ondansetron PRN, loperamide PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 128/76, HR 78, Temp 36.7°C, Weight 78.2 kg (recorded today)"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Patel (Medical Oncology, attending), Fellow (today's visit), Infusion Center Nursing, Primary Care - Dr. Osei"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (per most recent documentation, not revisited this visit)"
+   }
+  ],
+  "difficulty": 4,
+  "encounterType": "On-treatment toxicity check",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient presents for routine toxicity check before Cycle 5 of FOLFOX; reports fingers 'a little cold-sensitive' and some loose stools.",
+    "says": "I'm here for my check before the next round of chemo. My hands get a bit cold and tingly sometimes, nothing I can't handle.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "finger symptoms timing",
+    "chart": "Reports tingling in fingers triggered by cold exposure since cycle 1, now persisting between cycles since cycle 4.",
+    "says": "At first it was just when I touched something cold, like the refrigerator door. Lately though, I notice it even when I'm just sitting at the table.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "hand function",
+    "chart": "Reports difficulty with fine motor tasks: buttons, shirt cuffs, picking up small objects.",
+    "says": "I'll admit, buttoning my shirt takes me a while now. My wife had to help me with my cufflinks last week, which I didn't love.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "minimizing symptoms",
+    "chart": "Patient initially downplays severity of neuropathy, fearing treatment discontinuation.",
+    "says": "It's really not that bad, I can manage. I don't want you to stop the chemo because of some tingling fingers — that's working, isn't it?",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "fear of stopping treatment",
+    "chart": "Patient voices concern that reporting symptoms accurately may lead to dose reduction or discontinuation, which he fears will reduce chance of controlling cancer.",
+    "says": "If I tell you everything, are you going to pull me off this medicine? I need it to keep working. I have somewhere I need to be in a few months.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "goals",
+    "topic": "personal goal",
+    "chart": "Patient's stated goal is to attend granddaughter's high school graduation in approximately 4 months.",
+    "says": "My granddaughter graduates high school in about four months. I promised her I'd be there. That's really what I'm fighting for right now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "bowel symptoms",
+    "chart": "Reports 4 loose stools per day, up from baseline of 1 per day, no blood, no fever.",
+    "says": "My stomach's been loose, maybe four times a day now. No blood or anything like that, just more frequent than usual.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "blood in stool",
+    "chart": "Denies blood in stool.",
+    "says": "No, no blood that I've seen.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "fever",
+    "chart": "Denies fever or chills.",
+    "says": "No fever, I check sometimes and it's always normal.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "mouth symptoms",
+    "chart": "Reports mild mouth soreness, able to eat soft foods, no difficulty swallowing.",
+    "says": "My mouth's a bit sore, especially with anything spicy or acidic. I've been sticking to softer foods.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "swallowing",
+    "chart": "Denies difficulty swallowing or odynophagia severe enough to limit intake.",
+    "says": "I can still swallow fine, it's more just soreness.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "fatigue level",
+    "chart": "Reports increased fatigue over the past week, able to do light activities but tires more easily.",
+    "says": "I'm more tired than I used to be. I still get up and move around the house but I need to rest more.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "fever/infection screening",
+    "chart": "Denies cough, dysuria, or other localizing signs of infection.",
+    "says": "No cough, no burning when I urinate, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "bleeding or bruising",
+    "chart": "Denies easy bruising, gum bleeding, or blood in urine.",
+    "says": "I haven't noticed any unusual bruising or bleeding.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "shortness of breath",
+    "chart": "Denies dyspnea on exertion or at rest.",
+    "says": "My breathing's fine, no problems there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "nutrition",
+    "topic": "appetite and intake",
+    "chart": "Reports mildly decreased appetite due to mouth soreness but adequate oral intake, no significant weight loss beyond expected.",
+    "says": "I'm eating less than before because of my mouth, but I'm still eating. My wife makes sure of that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "family",
+    "topic": "family support",
+    "chart": "Wife is primary caregiver and has been monitoring and reporting symptoms via patient portal.",
+    "says": "My wife has been keeping an eye on things, she even writes in that online diary for me sometimes when I forget.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "psychosocial",
+    "topic": "fear of prognosis",
+    "chart": "Patient privately worries about how much time he has but has not raised this directly with the care team before.",
+    "says": "I try not to think too much about... how long I have. I just focus on getting to that graduation.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "psychosocial",
+    "topic": "emotional coping",
+    "chart": "Patient describes using prayer and family support to cope with uncertainty.",
+    "says": "My faith helps me a lot, and my family. I don't let myself dwell on the hard questions too long.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "hpi",
+    "topic": "loperamide use",
+    "chart": "Using loperamide 2mg as needed for diarrhea, taking roughly 2-4 mg per day, finds it moderately helpful.",
+    "says": "I take the diarrhea medicine when it gets bad, maybe twice a day. It helps some.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "medications",
+    "topic": "other home medications",
+    "chart": "Continues lisinopril and atorvastatin as prescribed without changes.",
+    "says": "I still take my blood pressure pill and the cholesterol one every morning, no changes there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "adherence",
+    "topic": "medication adherence",
+    "chart": "Reports taking all medications as prescribed without missed doses.",
+    "says": "I don't miss my pills. I'm very careful about that.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "dizziness or falls",
+    "chart": "Denies falls, denies dizziness on standing.",
+    "says": "No falls, no dizziness when I stand up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "occupation history",
+    "chart": "Retired civil engineer; enjoys woodworking as a hobby but has had to pause it recently.",
+    "says": "I was a civil engineer for over thirty years before I retired. I used to do woodworking for fun, but I've had to set that aside lately with my hands the way they are.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "social",
+    "topic": "immigration background",
+    "chart": "Born in Kenya, immigrated to the United States over 30 years ago, now a US citizen living in Minneapolis with wife.",
+    "says": "I came here from Kenya more than thirty years ago. Minneapolis has been home for a long time now.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "ros",
+    "topic": "numbness in feet",
+    "chart": "Reports mild numbness in toes with cold exposure, less prominent than hand symptoms, no gait instability.",
+    "says": "My feet get a little numb too, especially when they're cold, but it's not as bad as my hands.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "jaw or throat tightness",
+    "chart": "Denies jaw tightness, throat tightness, or laryngeal symptoms with infusions, which can occur acutely with oxaliplatin.",
+    "says": "I never had that throat-tightening thing during the infusion that they warned me about.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "symptom impact on driving",
+    "chart": "Reports difficulty gripping steering wheel firmly, has avoided driving at night due to hand symptoms.",
+    "says": "I've stopped driving at night, my grip isn't what it used to be and I don't trust it in the dark.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "treatment goals understanding",
+    "chart": "Understands treatment intent is to control, not cure, metastatic disease, but hopes for prolonged response.",
+    "says": "I know this isn't going to cure me, but I'm hoping it keeps things under control for as long as possible.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "psychosocial",
+    "topic": "disclosure concerns",
+    "chart": "Patient admits he has been somewhat selective in what he reports to the team because he fears losing access to effective treatment.",
+    "says": "I suppose I haven't always told the full story at these visits. I didn't want anyone thinking I couldn't handle it.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f31",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies visual changes or blurred vision.",
+    "says": "My eyes are fine, no changes there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "family",
+    "topic": "family cancer history",
+    "chart": "No known family history of colorectal cancer; mother had hypertension, father died of unrelated causes.",
+    "says": "No one else in my family had this kind of cancer that I know of. My mother had high blood pressure, my father passed from something else entirely.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and accurately grade chemotherapy-induced peripheral neuropathy (CTCAE) despite patient minimization, recognizing it has progressed to grade 2 (interfering with ADLs).",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4",
+     "f28"
+    ],
+    "actionIds": [
+     "a3",
+     "a4"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify and reconcile a mismatch between the patient's self-report and the caregiver-entered symptom diary/flowsheet notes, exploring why the patient under-reported.",
+    "factIds": [
+     "f4",
+     "f5",
+     "f30"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Integrate CBC results (grade 2 neutropenia, grade 1 thrombocytopenia, grade 1 anemia) with clinical symptoms to determine safety and dosing of Cycle 5.",
+    "factIds": [
+     "f12",
+     "f7"
+    ],
+    "actionIds": [
+     "a8"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Grade and manage diarrhea and mucositis toxicities using CTCAE criteria and correlate with hydration/nutrition status.",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9",
+     "f10",
+     "f11",
+     "f16"
+    ],
+    "actionIds": [
+     "a6",
+     "a7",
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Synthesize restaging CT and CEA trend to communicate treatment response (partial response) in context of ongoing toxicity decision-making.",
+    "factIds": [
+     "f29"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Elicit the patient's goals of care (attending granddaughter's graduation) and address his hidden fear about prognosis and disclosure behavior with empathy, without overstepping into definitive prognosis-setting beyond this role's scope in a single visit.",
+    "factIds": [
+     "f6",
+     "f18",
+     "f30"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o7",
+    "text": "Formulate an appropriate oxaliplatin dose modification plan (reduce or hold oxaliplatin) based on grade 2 neuropathy per standard practice, while recognizing this requires discussion with/sign-off from the attending oncologist.",
+    "factIds": [
+     "f3",
+     "f4"
+    ],
+    "actionIds": [
+     "a4",
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Grade 2 oxaliplatin-induced peripheral sensory neuropathy with grade 2 neutropenia, grade 1 anemia, and grade 1 thrombocytopenia on cycle 4 labs, plus grade 1 diarrhea and grade 1 mucositis, in a patient with partial radiographic and biochemical response (stage IV colon cancer with liver metastases) presenting for pre-Cycle 5 toxicity check.",
+   "differential": [
+    "Oxaliplatin-induced peripheral neuropathy (acute cold-triggered and chronic cumulative) - primary diagnosis",
+    "Chemotherapy-induced myelosuppression (ANC 1.3, Hgb 10.4, Plt 98) requiring dose assessment before next cycle",
+    "5-FU/mucositis-related diarrhea versus infectious diarrhea (less likely given no fever, no blood, pattern consistent with chemo toxicity)",
+    "Oral mucositis grade 1 versus oral candidiasis (no plaques seen, less likely)",
+    "Underlying anemia of malignancy/chronic disease versus chemotherapy-induced marrow suppression contributing to fatigue"
+   ],
+   "keyFindings": [
+    "Grade 2 sensory peripheral neuropathy objectively demonstrated on camera (button/coin task) despite patient initially minimizing symptoms",
+    "Neuropathy has reached Grade 2 at a cumulative oxaliplatin dose of only ~340 mg/m2, well below the 540-680 mg/m2 range typically associated with severe cumulative neurotoxicity - this early, disproportionate severity is itself a red flag warranting oxaliplatin discontinuation/reduction now rather than dose-dependent waiting",
+    "Symptom diary shows caregiver-reported escalation in neuropathy over the past 10 days that patient did not volunteer himself - a patient-vs-chart mismatch",
+    "Patient discloses (with reluctance) that he has been underreporting symptoms for fear of treatment discontinuation",
+    "CBC shows ANC 1.3 x10^9/L (CTCAE grade 2 neutropenia), platelets 98 x10^9/L (grade 1 thrombocytopenia), Hgb 10.4 g/dL (grade 1 anemia)",
+    "CT and CEA trend both confirm partial response, supporting continued systemic therapy with modification rather than discontinuation",
+    "No signs of infection, GI bleeding, or dehydration to suggest an alternative acute process explaining diarrhea or fatigue",
+    "Patient's goal of attending granddaughter's graduation in ~4 months should anchor shared decision-making about dose modification versus discontinuation"
+   ],
+   "plan": [
+    "Discuss findings with attending oncologist (Dr. Patel) before finalizing Cycle 5 orders, as per fellow's scope",
+    "Hold or reduce oxaliplatin dose (e.g., discontinue oxaliplatin and continue 5-FU/leucovorin, or reduce oxaliplatin by 20-25%) given grade 2 neuropathy occurring at an unexpectedly low cumulative dose (~340 mg/m2), per standard FOLFOX toxicity management guidelines - final dosing decision to be co-signed by attending",
+    "Reassess counts prior to Cycle 5; given ANC 1.3 (grade 2 neutropenia) and platelets 98, consider either brief treatment delay with recheck in several days or dose reduction of myelosuppressive agents (5-FU, oxaliplatin) per institutional protocol - defer final dose adjustment to attending-level sign-off",
+    "Supportive care for grade 1 mucositis: oral hygiene, saline/baking soda rinses, avoid acidic/spicy foods; monitor for progression",
+    "Supportive care for grade 1 diarrhea: continue loperamide as needed within max dose, hydration counseling, instruct to call if diarrhea worsens to grade 2+ (4-6 stools/day over baseline) or if fever/blood occurs",
+    "Address disclosure concerns directly: reassure patient that honest reporting leads to safer dose adjustments that aim to preserve both efficacy and his functional goals, not automatic discontinuation",
+    "Open a goals-of-care conversation acknowledging his wish to attend the graduation in 4 months; offer to revisit prognosis discussion in more depth with attending oncologist present if he wishes",
+    "Document caregiver's role in symptom reporting and encourage patient to communicate directly or jointly with wife to ensure accurate toxicity reporting going forward",
+    "Schedule follow-up CBC recheck closer to planned Cycle 5 date to confirm counts have recovered sufficiently"
+   ],
+   "redFlags": [
+    "Grade 2 peripheral neuropathy with functional impairment (buttons, driving) that patient was minimizing, occurring at a relatively low cumulative oxaliplatin dose (~340 mg/m2) - risk of progression to irreversible grade 3 if oxaliplatin continued at full dose unmodified",
+    "ANC 1.3 x10^9/L (grade 2 neutropenia) raises concern for neutropenic risk with further myelosuppressive chemotherapy - need count recheck/trend before Cycle 5",
+    "Patient's admission of selective symptom reporting is a safety signal that should prompt a broader conversation about trust and shared decision-making, not just this visit's toxicities",
+    "No current signs of febrile neutropenia, GI bleeding, or sepsis today, but patient should be instructed on when to seek urgent care (fever, severe diarrhea, bleeding)"
+   ],
+   "educationPoints": [
+    "CTCAE grading of peripheral neuropathy depends on functional impact (ADLs) not just symptom presence - objective functional testing (buttoning, picking up objects) is a feasible and valuable telehealth exam technique",
+    "CTCAE diarrhea grading: Grade 1 = increase of <4 stools/day over baseline; Grade 2 = increase of 4-6 stools/day. A 3-stool/day increase (1 to 4) is unambiguously Grade 1, not borderline Grade 2 - precise anchoring to baseline and threshold avoids miscommunication in handoffs",
+    "Early-onset Grade 2 neuropathy at a cumulative oxaliplatin dose well below the typical 540-680 mg/m2 risk threshold is clinically notable and should itself prompt consideration of stopping oxaliplatin, independent of how many cycles remain to reach that threshold",
+    "Patients may underreport toxicity due to fear that honesty will lead to treatment discontinuation; proactively normalizing disclosure and separating 'reporting symptoms' from 'automatically stopping treatment' builds trust",
+    "Caregiver-entered symptom diaries can reveal discrepancies with patient self-report and should be reviewed before or during visits as a cross-check, not instead of direct conversation with the patient",
+    "Dose modification decisions for oxaliplatin-based regimens in the context of cumulative neuropathy require weighing efficacy (partial response demonstrated) against quality of life and functional goals",
+    "Goals-of-care conversations should be woven into routine toxicity visits, not reserved only for progression/end-of-life discussions - time-bound personal goals (like attending an event) are valuable anchors for treatment decisions",
+    "Fellow-level learners should recognize when final treatment modification decisions require attending oncologist co-signature, modeling appropriate escalation within training scope"
+   ]
+  },
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f4",
+    "artifactId": "d9",
+    "patientClaim": "Patient states his finger tingling is 'not that bad' and that he 'can manage,' downplaying severity in the visit.",
+    "recordEvidence": "Patient-reported outcome diary (artifact d9) shows that for the past 10 days, his wife has entered that he has numbness/tingling 'most of the day now' and is 'having trouble buttoning his shirts and dropped his keys twice' - a clear escalation he did not volunteer himself.",
+    "teachingPoint": "Patients may minimize toxicity symptoms during visits due to fear of treatment changes; caregiver-entered portal messages or symptom diaries can reveal the true functional impact and should be actively reviewed and reconciled with the patient directly."
+   },
+   {
+    "id": "m2",
+    "factId": "f28",
+    "artifactId": "d7",
+    "patientClaim": "Chemotherapy flowsheet (cycle 4 note) documents patient reported symptoms as 'manageable, no reduction requested' after Cycle 4.",
+    "recordEvidence": "Despite that chart note, the patient discloses in this visit (fact f28, reluctant tier) that he has already stopped driving at night due to grip problems - a functional limitation that was present but not disclosed at the Cycle 4 visit.",
+    "teachingPoint": "A documented absence of symptom escalation at a prior visit does not guarantee the symptom was absent - it may reflect under-reporting; clinicians should proactively probe specific functional domains (driving, fine motor tasks) rather than relying solely on open-ended symptom checks."
+   }
+  ],
+  "patient": {
+   "name": "Isaac Mwangi",
+   "age": 66,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Kenyan-American",
+   "occupation": "Retired civil engineer",
+   "language": "English",
+   "appearance": "A trim, upright man with closely cropped gray hair, wearing a neatly buttoned cardigan despite some visible effort buttoning it earlier. He is seated at a dining table in a tidy, well-lit room with family photos visible on the wall behind him, and he maintains a calm, measured demeanor with occasional brief grimaces when moving his hands.",
+   "portrait": "/portraits/oncology-isaac-mwangi-chemo-check.jpg"
+  },
+  "persona": {
+   "personality": "Dignified, precise, and stoic; takes pride in self-sufficiency and tends to intellectualize his situation using his engineering background (describes things in terms of tolerances and systems).",
+   "communicationStyle": "Measured, articulate, and polite; answers questions directly but tends to understate symptom severity unless specifically and gently pressed; uses understatement as a coping mechanism.",
+   "healthLiteracy": "high",
+   "emotionalState": "Outwardly composed and controlled, but carrying private anxiety about prognosis and time; becomes slightly more open when he senses genuine curiosity and non-judgment from the clinician.",
+   "background": "Born in Nairobi, Kenya; moved to the United States for graduate school in civil engineering over 30 years ago and stayed, eventually becoming a US citizen. Worked for a Minneapolis engineering firm for over three decades before retiring. Married for 38 years; has two adult children and one granddaughter about to graduate high school. Enjoys woodworking, long walks with his wife, and attending his Presbyterian church community.",
+   "speechExamples": [
+    "I'd say the tolerance on my hands has gotten a bit tighter than I'd like, if you follow the engineering metaphor.",
+    "It's manageable. I've dealt with harder things than some tingling fingers.",
+    "I don't want to make a fuss - I just want to know this is still working.",
+    "My wife worries more than I let on, if I'm honest.",
+    "I suppose precision was always my job, and now my hands won't cooperate with that."
+   ],
+   "concerns": [
+    "Worried that reporting symptoms honestly will lead to the oncology team reducing or stopping his chemotherapy",
+    "Wants to know if the treatment is working, given it's his best chance to extend time",
+    "Privately anxious about how much time he realistically has left but reluctant to ask directly",
+    "Wants to attend his granddaughter's high school graduation in about four months and sees this as a concrete goal driving his treatment decisions",
+    "Concerned about losing independence (buttoning shirts, driving at night) due to hand symptoms"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the oncology fellow conducting a telehealth on-treatment toxicity check for Isaac Mwangi, a 66-year-old man with stage IV sigmoid colon cancer with liver metastases, currently on FOLFOX chemotherapy (cycle 5 planned). He completed restaging scans and labs recently. Your job is to assess for treatment toxicity, review response data, and determine whether and how to modify the upcoming cycle, in coordination with the attending oncologist as needed.",
+   "chiefComplaint": "Pre-Cycle 5 toxicity check on FOLFOX for metastatic colon cancer; patient reports cold-sensitive tingling in fingers and increased loose stools.",
+   "openingLine": "I'm here for my check before the next round of chemo. My hands get a bit cold and tingly sometimes, nothing I can't handle.",
+   "tasks": [
+    "Take a thorough toxicity history, exploring symptoms across all relevant domains",
+    "Review the recent laboratory results, imaging, and tumor markers with the patient",
+    "Reconcile any differences between the patient's account and documented information in the chart",
+    "Formulate a treatment plan for the upcoming cycle, specifying what requires attending co-sign",
+    "Address the patient's concerns and agree on next steps with appropriate safety-netting"
+   ],
+   "timeLimitMin": 25
+  },
+  "setting": "Telehealth video visit; patient at home in Minneapolis, seated at his dining room table",
+  "specialty": "Medical Oncology",
+  "summary": "A 66-year-old man with stage IV colon cancer with liver metastases on FOLFOX presents for a pre-Cycle 5 toxicity check showing partial treatment response (falling CEA, shrinking liver lesions) but worsening grade 2 peripheral neuropathy that he minimizes out of fear of treatment discontinuation, alongside grade 2 neutropenia, grade 1 anemia, grade 1 thrombocytopenia, grade 1 diarrhea, and grade 1 mucositis. The case teaches toxicity grading via remote functional testing, reconciling patient self-report against caregiver-reported diary data, and integrating goals-of-care conversation into a routine on-treatment visit while respecting the fellow's scope relative to the attending oncologist.",
+  "title": "Grade 2 Neuropathy and Myelosuppression Before Cycle 5 of FOLFOX in a Responding Stage IV Colon Cancer Patient",
+  "professions": [
+   "oncology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

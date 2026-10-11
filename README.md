@@ -19,3 +19,10 @@ ElevenLabs supplies speech with per-case voice and delivery controls. The deploy
 AWS deployment includes a shared entrance password with a signed, revocable four-hour session. Faculty tokens and encounter access remain separate. The deploy script saves access values in ignored `.private/app-access.md`; no credentials or raw sponsor materials are committed. Imported patient sources stay private drafts until a qualified faculty reviewer supplies reveal rules and reviews them. No real patient data, institutional identity integration, clinical validation, or validated grades are established by this prototype.
 
 The deployed AWS setup also includes a six-widget CloudWatch dashboard, four error/throttle alarms, and seven-day DynamoDB point-in-time recovery. Alarm notifications are disabled. The [setup runbook](infra/README.md) covers reproducing the deployment, private configuration, monitoring, recovery, and workshop expiry. GitHub Actions runs backend, browser-controller, and infrastructure checks without cloud credentials.
+
+## Evaluator and the Poscere app
+
+Two further pieces live beside the FastAPI app and do not change it:
+
+- [`evaluator/`](evaluator/README.md) grades a finished encounter against the seven-domain rubric, checks every quote against the transcript, and produces the debrief material. `evaluator/app_bridge.py` reads encounters stored by `backend/`. Its dependencies are the `evaluator` extra (`uv sync --extra evaluator`), so the Lambda package is unchanged.
+- [`app/`](app/README.md) is a copy of the Poscere Next.js app from `CANTSOAR/lowhangingfruit26` (commit `a14043b`), with its scoring step calling the evaluator. It has its own `package.json` and is run from inside `app/`.

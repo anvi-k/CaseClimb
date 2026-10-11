@@ -1,0 +1,390 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caseclimb.app/schemas/episode.schema.json",
+  "title": "Episode",
+  "description": "One encounter between a patient record and one or more clinicians (human students or AI). Episodes are graded after they end; graded episodes become the patient's memory in later episodes ('Dr. John said X last week, which one should I believe?').",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "episode_id",
+    "patient_record_id",
+    "patient_record_version",
+    "status",
+    "participants",
+    "turns",
+    "disclosures",
+    "grading",
+    "started_at"
+  ],
+  "properties": {
+    "episode_id": { "$ref": "#/$defs/id" },
+    "patient_record_id": { "$ref": "#/$defs/id" },
+    "patient_record_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Record version this episode ran against."
+    },
+    "status": { "enum": ["in_progress", "completed", "abandoned"] },
+    "care_pathway_step": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Which step of the record's care_pathway this episode fulfils, if any."
+    },
+    "started_at": { "type": "string", "format": "date-time" },
+    "ended_at": { "type": "string", "format": "date-time" },
+    "simulated_date": {
+      "type": "string",
+      "format": "date",
+      "description": "In-world date of the visit, used to order episodes in the patient's memory."
+    },
+
+    "memory_sources": {
+      "type": "array",
+      "description": "Prior graded episodes loaded into the patient's memory for this episode.",
+      "items": { "$ref": "#/$defs/id" }
+    },
+
+    "participants": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["participant_id", "kind", "role", "display_name"],
+        "properties": {
+          "participant_id": { "$ref": "#/$defs/id" },
+          "kind": { "enum": ["human", "ai"] },
+          "role": {
+            "type": "string",
+            "description": "'patient', or a professional role such as 'cardiologist', 'radiologist', 'physical_therapist', 'dietitian'."
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Name the patient uses later, e.g. 'John'."
+          },
+          "user_id": {
+            "$ref": "#/$defs/id",
+            "description": "Account id for human participants."
+          },
+          "model": {
+            "type": "string",
+            "description": "Model id for AI participants."
+          }
+        },
+        "if": { "properties": { "kind": { "const": "human" } } },
+        "then": { "required": ["user_id"] }
+      }
+    },
+
+    "turns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["turn_id", "index", "participant_id", "text", "at"],
+        "properties": {
+          "turn_id": { "$ref": "#/$defs/id" },
+          "index": { "type": "integer", "minimum": 0 },
+          "participant_id": { "$ref": "#/$defs/id" },
+          "at": { "type": "string", "format": "date-time" },
+          "modality": { "enum": ["text", "voice"], "default": "text" },
+          "text": { "type": "string", "description": "Utterance, or transcript for voice turns." },
+          "audio_uri": { "type": "string" },
+          "avatar": {
+            "type": "object",
+            "description": "How the patient avatar reacted on this turn. Only set on patient turns.",
+            "additionalProperties": false,
+            "required": ["emotion"],
+            "properties": {
+              "emotion": { "$ref": "#/$defs/emotion" },
+              "intensity": { "type": "number", "minimum": 0, "maximum": 1 },
+              "gestures": {
+                "type": "array",
+                "items": { "type": "string" },
+                "description": "e.g. 'looks away', 'rubs chest', 'nods'."
+              }
+            }
+          },
+          "referenced_contributions": {
+            "type": "array",
+            "description": "Statements from earlier episodes the speaker cited on this turn.",
+            "items": { "$ref": "#/$defs/contribution_ref" }
+          }
+        }
+      }
+    },
+
+    "disclosures": {
+      "type": "array",
+      "description": "Log of every record fact or artifact released during the episode.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "item_type", "channel", "turn_id"],
+        "properties": {
+          "item_id": {
+            "$ref": "#/$defs/id",
+            "description": "fact_id or artifact_id from the patient record."
+          },
+          "item_type": { "enum": ["fact", "artifact"] },
+          "channel": { "enum": ["patient", "chart"] },
+          "turn_id": { "$ref": "#/$defs/id" },
+          "trigger": {
+            "type": "string",
+            "description": "What released it, e.g. 'asked about medication adherence', 'ordered HbA1c'."
+          }
+        }
+      }
+    },
+
+    "contributions": {
+      "type": "array",
+      "description": "Provenance-tracked findings, interpretations, and advice produced in this episode. These feed the shared patient state and the patient's memory.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "contribution_id",
+          "kind",
+          "statement",
+          "source",
+          "recorded_by",
+          "turn_ids",
+          "epistemic_status"
+        ],
+        "properties": {
+          "contribution_id": { "$ref": "#/$defs/id" },
+          "kind": {
+            "enum": [
+              "finding",
+              "interpretation",
+              "diagnosis",
+              "recommendation",
+              "patient_education",
+              "plan_item",
+              "open_question"
+            ]
+          },
+          "statement": { "type": "string" },
+          "source": {
+            "enum": ["patient", "chart", "clinician"],
+            "description": "Where the information originated."
+          },
+          "recorded_by": {
+            "$ref": "#/$defs/id",
+            "description": "participant_id of the clinician who surfaced or said it."
+          },
+          "turn_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/id" }
+          },
+          "epistemic_status": {
+            "enum": ["patient_reported", "established", "uncertain", "disputed", "unanswered"]
+          },
+          "related_fact_ids": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/id" }
+          },
+          "responds_to": {
+            "type": "array",
+            "description": "Earlier contributions this one confirms, revises, or contradicts.",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ref", "relation"],
+              "properties": {
+                "ref": { "$ref": "#/$defs/contribution_ref" },
+                "relation": { "enum": ["confirms", "revises", "contradicts", "answers"] }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "handoff": {
+      "type": "object",
+      "description": "Optional SBAR handoff written at the end of the episode for the next professional.",
+      "additionalProperties": false,
+      "required": ["from_participant_id", "to_role", "situation", "background", "assessment", "recommendation"],
+      "properties": {
+        "from_participant_id": { "$ref": "#/$defs/id" },
+        "to_role": { "type": "string" },
+        "situation": { "type": "string" },
+        "background": { "type": "string" },
+        "assessment": { "type": "string" },
+        "recommendation": { "type": "string" },
+        "sent_at": { "type": "string", "format": "date-time" }
+      }
+    },
+
+    "grading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": { "enum": ["ungraded", "grading", "graded"] },
+        "graded_at": { "type": "string", "format": "date-time" },
+        "grader": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind"],
+          "properties": {
+            "kind": { "enum": ["ai", "faculty"] },
+            "user_id": { "$ref": "#/$defs/id" },
+            "model": { "type": "string" }
+          }
+        },
+        "graded_participant_id": {
+          "$ref": "#/$defs/id",
+          "description": "The student being assessed."
+        },
+        "elicited_fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "missed_fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "objective_results": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["objective_id", "result", "evidence", "feedback"],
+            "properties": {
+              "objective_id": { "$ref": "#/$defs/id" },
+              "result": { "enum": ["met", "partially_met", "not_met"] },
+              "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+              "feedback": { "type": "string" }
+            }
+          }
+        },
+        "behaviors": {
+          "type": "array",
+          "description": "Explainable behavior trace: interview structure, empathy, SBAR components, etc.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["behavior", "observed", "evidence", "feedback"],
+            "properties": {
+              "behavior": {
+                "type": "string",
+                "description": "e.g. 'open_ended_opening', 'empathic_response', 'sbar.recommendation', 'noticed_contradiction'."
+              },
+              "category": {
+                "enum": ["interview_structure", "communication", "empathy", "professionalism", "clinical_reasoning", "teamwork"]
+              },
+              "observed": { "type": "boolean" },
+              "evidence": { "type": "array", "items": { "$ref": "#/$defs/evidence" } },
+              "feedback": { "type": "string" }
+            }
+          }
+        },
+        "strengths": { "type": "array", "items": { "type": "string" } },
+        "improvements": { "type": "array", "items": { "type": "string" } },
+        "next_attempt_suggestions": { "type": "array", "items": { "type": "string" } }
+      },
+      "if": { "properties": { "status": { "const": "graded" } } },
+      "then": { "required": ["graded_at", "grader", "objective_results", "behaviors"] }
+    },
+
+    "patient_memory": {
+      "type": "object",
+      "description": "What the patient takes away from this episode, written from the patient's point of view. Only extracted from graded episodes; loaded into later episodes via memory_sources.",
+      "additionalProperties": false,
+      "required": ["extracted_at", "summary", "remembered_statements"],
+      "properties": {
+        "extracted_at": { "type": "string", "format": "date-time" },
+        "summary": {
+          "type": "string",
+          "description": "First person, e.g. 'Saw John, a cardiologist. He said my heart looked bad and I should cut salt.'"
+        },
+        "remembered_statements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["contribution_id", "speaker_name", "speaker_role", "as_remembered", "trust"],
+            "properties": {
+              "contribution_id": { "$ref": "#/$defs/id" },
+              "speaker_name": { "type": "string" },
+              "speaker_role": { "type": "string" },
+              "as_remembered": {
+                "type": "string",
+                "description": "Patient's paraphrase, which may be simpler or slightly off from what was said."
+              },
+              "trust": { "enum": ["trusts", "unsure", "doubts"] },
+              "followed_advice": { "enum": ["yes", "partially", "no", "not_applicable"] }
+            }
+          }
+        },
+        "impression_of_clinician": { "type": "string" },
+        "emotional_aftermath": { "$ref": "#/$defs/emotion" },
+        "open_questions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Things the patient is still worried or confused about and may raise next visit."
+        }
+      }
+    }
+  },
+
+  "allOf": [
+    {
+      "if": { "required": ["patient_memory"] },
+      "then": {
+        "properties": {
+          "grading": {
+            "properties": { "status": { "const": "graded" } }
+          }
+        }
+      }
+    }
+  ],
+
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+
+    "emotion": {
+      "enum": [
+        "neutral",
+        "calm",
+        "anxious",
+        "fearful",
+        "sad",
+        "frustrated",
+        "angry",
+        "confused",
+        "embarrassed",
+        "relieved",
+        "hopeful",
+        "in_pain"
+      ]
+    },
+
+    "contribution_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["episode_id", "contribution_id"],
+      "properties": {
+        "episode_id": { "$ref": "#/$defs/id" },
+        "contribution_id": { "$ref": "#/$defs/id" }
+      }
+    },
+
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [{ "required": ["turn_id"] }, { "required": ["location"] }],
+      "properties": {
+        "turn_id": { "$ref": "#/$defs/id" },
+        "quote": { "type": "string" },
+        "location": {
+          "type": "string",
+          "description": "Non-turn evidence location, e.g. 'handoff.assessment'."
+        }
+      }
+    }
+  }
+}

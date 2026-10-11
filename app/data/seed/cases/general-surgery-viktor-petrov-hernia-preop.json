@@ -1,0 +1,855 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "exam",
+    "name": "Camera inspection of right groin (standing)",
+    "result": "Visible bulge in right inguinal region, approximately 4 cm, more prominent with standing and Valsalva. Skin intact, no erythema or discoloration. No visible bulge in scrotum.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Patient self-reduction maneuver (lying down)",
+    "result": "Patient reports bulge flattens out completely when lying down and gently pushing; no pain with reduction, mass disappears within a few seconds.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection for overlying skin changes/discoloration",
+    "result": "No redness, no dusky or violet discoloration, no skin breakdown over the bulge.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Video-observed reduction maneuver",
+    "result": "On camera, patient demonstrates reducing the bulge himself: gentle manual pressure while supine causes the mass to flatten completely within seconds; no grimacing or guarding observed during the maneuver, consistent with an easily, painlessly reducible hernia.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "vitals",
+    "name": "Review home vital signs (BP cuff, pulse ox)",
+    "result": "BP 138/86 mmHg, HR 78 bpm regular, temp 98.2°F, SpO2 97% on room air.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "record",
+    "name": "Review home weight/BMI documentation",
+    "result": "Height 5'10\" (178 cm), weight 216 lb (98 kg), BMI 31 kg/m2, consistent with prior visits.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "imaging",
+    "name": "Review groin ultrasound report",
+    "result": "Right inguinal hernia, indirect type, containing omental fat, fully reducible, no bowel loop identified, no evidence of strangulation.",
+    "artifactIds": [
+     "d1"
+    ],
+    "importance": "critical"
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Aspirin 81 mg daily, tamsulosin 0.4 mg daily, no anticoagulants, no other prescription medications listed.",
+    "artifactIds": [
+     "d2"
+    ],
+    "importance": "critical"
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Review recent CBC and basic metabolic panel",
+    "result": "Hemoglobin 14.1 g/dL (13.5-17.5), platelets 245 x10^9/L (150-400), sodium 139 mmol/L (136-145), potassium 4.1 mmol/L (3.5-5.0), creatinine 1.0 mg/dL (0.7-1.3) - all within normal limits.",
+    "artifactIds": [
+     "d3"
+    ],
+    "importance": "important"
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Review HbA1c",
+    "result": "HbA1c 5.7% (<5.7% normal, 5.7-6.4% prediabetes) - borderline, no prior diagnosis of diabetes.",
+    "artifactIds": [
+     "d3"
+    ],
+    "importance": "minor"
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review smoking history/pack-year documentation",
+    "result": "Current smoker, 1 pack per day x 30 years (30 pack-years), has not attempted quitting per prior visit notes.",
+    "artifactIds": [
+     "d4"
+    ],
+    "importance": "critical"
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "International Prostate Symptom Score (IPSS) administered",
+    "result": "IPSS total score 16/35 (moderate symptom range), driven by weak stream, straining, and incomplete emptying domains; no hematuria or fever reported on associated screening questions.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review prior post-void residual/urology note if available",
+    "result": "No urology referral or post-void residual study on file; tamsulosin was prescribed by primary care for symptomatic benign prostatic enlargement 18 months ago, no further workup documented.",
+    "artifactIds": [
+     "d5"
+    ],
+    "importance": "important"
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Operative risk stratification (ASA class / functional capacity)",
+    "result": "ASA class II (uncontrolled/untreated hypertension, obesity, tobacco use); reports walking long distances at truck stops and climbing into cab daily without chest pain or dyspnea, consistent with greater than 4 METs functional capacity.",
+    "importance": "important",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "Groin Ultrasound Report",
+    "date": "2 weeks ago",
+    "author": "Radiology, Outpatient Imaging Center",
+    "release": {
+     "when": "start"
+    },
+    "body": "CLINICAL HISTORY: Right groin bulge, intermittent discomfort.\n\nFINDINGS: There is a right inguinal hernia with a defect identified lateral to the inferior epigastric vessels, consistent with an indirect inguinal hernia. The hernia sac contains omental fat. On provocative (Valsalva) maneuver, the hernia protrudes and reduces spontaneously and with gentle manual pressure. No bowel loop is identified within the sac. Doppler flow within adjacent structures is normal. No free fluid. No evidence of incarceration or strangulation.\n\nIMPRESSION: Reducible right indirect inguinal hernia containing omental fat, no bowel involvement, no sonographic signs of incarceration."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Today",
+    "author": "Primary Care Clinic",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Aspirin",
+        "81 mg",
+        "Oral",
+        "Once daily",
+        "Cardiovascular prophylaxis"
+       ]
+      },
+      {
+       "cells": [
+        "Tamsulosin",
+        "0.4 mg",
+        "Oral",
+        "Once daily at bedtime",
+        "Benign prostatic enlargement/urinary symptoms"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Preoperative Labs",
+    "date": "5 days ago",
+    "author": "Primary Care Clinic Lab",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "14.1",
+        "g/dL",
+        "13.5-17.5"
+       ]
+      },
+      {
+       "cells": [
+        "Platelets",
+        "245",
+        "x10^9/L",
+        "150-400"
+       ]
+      },
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "136-145"
+       ]
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mmol/L",
+        "3.5-5.0"
+       ]
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.0",
+        "mg/dL",
+        "0.7-1.3"
+       ]
+      },
+      {
+       "cells": [
+        "HbA1c",
+        "5.7",
+        "%",
+        "<5.7 normal; 5.7-6.4 prediabetes"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Primary Care Visit Note - Tobacco Use",
+    "date": "4 months ago",
+    "author": "Dr. R. Alvarez, Primary Care",
+    "release": {
+     "when": "start"
+    },
+    "body": "Mr. Petrov continues to smoke approximately 1 pack per day, started around age 20, for an estimated 30 pack-year history. Counseled on cessation including nicotine replacement and prescription options; patient states he is not ready to quit at this time due to stress of long-haul driving schedule. Will readdress at future visits."
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Primary Care Visit Note - Urinary Symptoms",
+    "date": "18 months ago",
+    "author": "Dr. R. Alvarez, Primary Care",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient reports progressive urinary hesitancy, weak stream, and straining over several months. Digital rectal exam deferred by patient preference at that visit. Started tamsulosin 0.4 mg daily for presumed benign prostatic enlargement. Advised follow-up with urology if symptoms worsen or fail to improve; no urology referral placed to date per chart review."
+   },
+   {
+    "id": "d6",
+    "type": "chart",
+    "title": "Reported Groin Bulge Size (Patient Estimate Over Time)",
+    "date": "Past 12 months",
+    "author": "Patient-reported, compiled at today's visit",
+    "release": {
+     "when": "fact",
+     "ref": "f3"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Months ago",
+     "yLabel": "Approximate bulge size (cm, patient estimate)",
+     "series": [
+      {
+       "name": "Right groin bulge size",
+       "points": [
+        {
+         "x": "12",
+         "y": 1.5
+        },
+        {
+         "x": "9",
+         "y": 2
+        },
+        {
+         "x": "6",
+         "y": 2.5
+        },
+        {
+         "x": "3",
+         "y": 3.5
+        },
+        {
+         "x": "0",
+         "y": 4
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "groin bulge",
+    "chart": "Right groin bulge, present and enlarging over 1 year, aches by end of day, always reduces",
+    "says": "I've got this lump in my right groin that's been there about a year now. It's gotten bigger. By the end of a long drive it aches, but if I lie down it goes away.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "goals",
+    "topic": "timing of surgery",
+    "chart": "Patient requests surgery during 3-week winter layoff from truck driving work",
+    "says": "I've got three weeks off starting mid-December. I want this fixed then so I'm not losing driving time.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "bulge progression",
+    "chart": "Bulge estimated at 1.5 cm a year ago, now approximately 4 cm, slow steady increase",
+    "says": "When it started it was maybe the size of a grape. Now it's more like a small egg.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "pain pattern",
+    "chart": "Dull ache localized to right groin, worse with prolonged standing/driving, resolves with rest or lying flat",
+    "says": "It's not really sharp pain, more a dull ache after sitting in the truck all day. Goes away once I'm home and lying down.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "reducibility",
+    "chart": "Hernia always fully reducible, patient able to push it back himself without difficulty",
+    "says": "I can always push it back in myself, no problem. It's never gotten stuck.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "symptom minimization",
+    "chart": "Patient initially describes symptoms as 'not that bad' despite daily end-of-shift discomfort affecting driving tolerance",
+    "says": "It's not a big deal, honestly. I can live with it. Just want it done before it gets worse.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "nausea or vomiting",
+    "chart": "Denies nausea, vomiting, or fevers",
+    "says": "No, I haven't thrown up or felt sick to my stomach, no fevers either.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "skin changes over bulge",
+    "chart": "Denies redness, warmth, or color change over the bulge",
+    "says": "No, the skin over it looks normal, no redness or anything.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "bowel habit changes",
+    "chart": "No change in bowel habits, no constipation or obstipation",
+    "says": "My bathroom habits are regular, no problems there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "sudden severe pain episode",
+    "chart": "Denies any episode of sudden severe pain or inability to reduce the hernia",
+    "says": "It's never suddenly gotten really painful or stuck where I couldn't push it back.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "blood thinning medication",
+    "chart": "Takes aspirin 81 mg daily, started by primary care for cardiovascular risk reduction given his hypertension, obesity, and smoking (no known heart attack, stroke, or vascular disease); no other anticoagulants",
+    "says": "I take a baby aspirin every morning, that's it for blood thinners. Doc put me on it a few years back, I don't think I've had a heart attack or anything, just said it was good for my heart.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "medications",
+    "topic": "urinary medication",
+    "chart": "Takes tamsulosin 0.4 mg daily for urinary symptoms attributed to prostate enlargement",
+    "says": "I'm on a pill for my prostate, tamsulosin, started that about a year and a half ago.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "urinary stream and effort",
+    "chart": "Reports weak urinary stream, straining to start urination, occasional incomplete emptying sensation for over a year",
+    "says": "My stream's gotten weak, and I have to really strain to get it going. Sometimes feels like I didn't fully empty.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "blood in urine",
+    "chart": "Denies hematuria",
+    "says": "No blood in my urine that I've noticed.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "urinary frequency at night",
+    "chart": "Reports waking twice nightly to urinate",
+    "says": "I'm up maybe twice a night to go.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "substance",
+    "topic": "tobacco use amount",
+    "chart": "Smokes 1 pack of cigarettes per day for approximately 30 years (30 pack-year history)",
+    "says": "I smoke about a pack a day. Been doing that since I was maybe 20, so a long time.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "substance",
+    "topic": "interest in quitting",
+    "chart": "Not currently interested in smoking cessation, cites stress of long-haul driving as barrier",
+    "says": "I know it's not great for me, but driving all day, smoking's about the only break I get. Not ready to quit right now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks 1-2 beers on weekends when not driving, denies daily or heavy use",
+    "says": "I'll have a beer or two on the weekend when I'm not on the road. Nothing during the week.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "blood pressure history",
+    "chart": "History of hypertension, managed with lifestyle only, not currently on antihypertensive medication, today's BP mildly elevated at 138/86",
+    "says": "My blood pressure runs a little high sometimes but I'm not on anything for it, doctor just said watch my salt.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "prior surgeries",
+    "chart": "No prior abdominal or groin surgeries",
+    "says": "Never had surgery before, this would be my first.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "family",
+    "topic": "family hernia history",
+    "chart": "Father had a hernia repair in his 60s, no other known family surgical history",
+    "says": "My father had a hernia fixed too when he got older.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "occupation demands",
+    "chart": "Long-haul truck driver, job requires sitting for long periods, occasional lifting of cargo straps and equipment up to 50 lbs",
+    "says": "I drive long haul, mostly sitting, but I do have to hook up straps and move some gear, maybe 50 pounds sometimes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "goals",
+    "topic": "return to driving timeline",
+    "chart": "Patient asks how soon he can resume commercial driving after surgery",
+    "says": "How fast can I get back behind the wheel? I can't afford to be out longer than my layoff.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "goals",
+    "topic": "lifting restrictions concern",
+    "chart": "Patient asks about lifting restrictions after surgery given job duties",
+    "says": "When can I lift stuff again? My job needs me hauling straps and sometimes boxes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "mesh safety concern",
+    "chart": "Patient expresses concern about mesh safety after seeing television advertisements about mesh lawsuits",
+    "says": "I saw those commercials on TV about hernia mesh lawsuits. Is that stuff safe? I don't want problems down the road.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "work income pressure",
+    "chart": "Patient is primary income earner, concerned about missing work beyond planned layoff",
+    "says": "I'm the one bringing in the money at home. If I'm out too long, that's a real problem for us.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "nutrition",
+    "topic": "diet pattern on the road",
+    "chart": "Diet mostly truck-stop food, admits difficulty eating vegetables while driving",
+    "says": "Eating healthy on the road is tough, mostly fast food and truck stop stuff.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "exercise tolerance",
+    "chart": "Able to walk long distances and climb into truck cab daily without chest pain, shortness of breath, or palpitations",
+    "says": "I walk around at truck stops, climb up into the cab, never had chest pain or trouble breathing doing that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "sexual",
+    "topic": "groin pain with intimacy",
+    "chart": "Denies pain with intercourse or testicular pain",
+    "says": "No pain down there during... you know, intimate stuff, and no pain in my testicle.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "adherence",
+    "topic": "aspirin stop timing understanding",
+    "chart": "Patient unsure whether and when to stop aspirin before surgery, states he will 'just stop it a day or two before' on his own if told to",
+    "says": "I figured I'd just stop the aspirin a day or two before, is that about right?",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "psychosocial",
+    "topic": "fear of being put under anesthesia",
+    "chart": "Admits mild anxiety about general anesthesia, has never had anesthesia before",
+    "says": "I'll be honest, never been put to sleep for anything before. Makes me a little nervous.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "ros",
+    "topic": "testicular swelling",
+    "chart": "Denies scrotal or testicular swelling",
+    "says": "No swelling down in my testicle, just the groin area.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a hernia history that confirms indication for elective repair (chronicity, reducibility, absence of incarceration red flags) despite patient minimization of symptoms",
+    "factIds": [
+     "f1",
+     "f3",
+     "f4",
+     "f5",
+     "f6",
+     "f10"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a7"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify and counsel on modifiable perioperative risk factors: smoking, obesity, aspirin management, and undiagnosed lower urinary tract symptoms that could precipitate postoperative urinary retention",
+    "factIds": [
+     "f11",
+     "f12",
+     "f13",
+     "f16",
+     "f17",
+     "f30"
+    ],
+    "actionIds": [
+     "a6",
+     "a8",
+     "a9",
+     "a11",
+     "a12",
+     "a13"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Explain open versus laparoscopic/mesh repair options and address patient concerns about mesh safety using accurate, non-dismissive language",
+    "factIds": [
+     "f25"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Counsel on realistic return-to-driving and lifting timelines appropriate to occupational demands, balancing patient's work pressure against safe recovery",
+    "factIds": [
+     "f22",
+     "f23",
+     "f24",
+     "f26"
+    ],
+    "actionIds": [
+     "a14"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize incarceration/strangulation warning signs to teach the patient for self-monitoring during the preoperative waiting period",
+    "factIds": [
+     "f7",
+     "f8",
+     "f9",
+     "f10",
+     "f32"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify the aspirin/perioperative medication mismatch between patient's plan and appropriate guidance, and recognize the undiagnosed BPH/urinary retention risk that may warrant primary care or urology input before or around surgery",
+    "factIds": [
+     "f30",
+     "f13"
+    ],
+    "actionIds": [
+     "a8",
+     "a12",
+     "a13"
+    ]
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f6",
+    "artifactId": "d6",
+    "patientClaim": "Patient states the bulge and discomfort are 'not a big deal' and he can 'live with it'",
+    "recordEvidence": "Patient-reported size trend chart shows the bulge nearly tripling in estimated size over 12 months (1.5 cm to 4 cm)",
+    "teachingPoint": "Patients, especially those motivated to avoid time off work, may understate symptom severity; eliciting a careful functional and chronologic history (effect on driving tolerance, timing of aching) reveals a more significant clinical picture than the patient's framing suggests, and objective size trend data corroborates this progression."
+   },
+   {
+    "id": "m2",
+    "factId": "f30",
+    "artifactId": "d2",
+    "patientClaim": "Patient plans to simply stop his aspirin 'a day or two before' surgery on his own",
+    "recordEvidence": "Medication list shows aspirin 81 mg daily listed for cardiovascular prophylaxis with no documented history of MI, stroke, or peripheral arterial disease, and no structured perioperative plan on file; the correct approach (continue vs. stop, and for how long) depends on clarifying with the prescribing clinician whether this is primary or secondary prevention, not on the patient unilaterally picking a stop date",
+    "teachingPoint": "Perioperative medication management, especially antiplatelet agents, must follow an explicit documented plan coordinated with the prescribing clinician rather than patient-initiated discontinuation, to avoid both excess bleeding and (if there is a true atherosclerotic indication) thrombotic risk; the indication for aspirin (primary vs. secondary prevention) should be clarified first since this changes the risk-benefit calculus and determines whether stopping or continuing is actually preferred."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Pre-operative surgical consultation for right inguinal hernia repair"
+   },
+   {
+    "label": "Problem list",
+    "value": "Right inguinal hernia (indirect, reducible); Hypertension, untreated/lifestyle-managed; Tobacco use disorder; Obesity (BMI 31); Lower urinary tract symptoms, on tamsulosin"
+   },
+   {
+    "label": "Medications",
+    "value": "Aspirin 81 mg daily; Tamsulosin 0.4 mg daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 138/86 mmHg, HR 78 bpm, Temp 98.2°F, SpO2 97%, BMI 31 kg/m2"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per primary care record"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: Dr. R. Alvarez; Surgery: new consult, no prior surgeon on file"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "pre-operative consultation / informed consent discussion",
+  "patient": {
+   "name": "Viktor Petrov",
+   "age": 59,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Bulgarian-American",
+   "occupation": "Long-haul truck driver",
+   "language": "English (fluent, second language)",
+   "appearance": "A sturdy, broad-shouldered man with close-cropped gray hair, sitting at a small kitchen table in a modest home, wearing a plain flannel shirt. The lighting is a bit dim and the webcam angle is slightly low, giving a view of a motel-style room visible behind him suggesting he is between routes; his expression is matter-of-fact and slightly impatient.",
+   "portrait": "/portraits/general-surgery-viktor-petrov-hernia-preop.jpg"
+  },
+  "persona": {
+   "personality": "Direct, practical, a little impatient with small talk, takes pride in self-reliance and not complaining",
+   "communicationStyle": "Speaks in short, blunt sentences, downplays discomfort, asks pointed questions about logistics and timelines",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about anesthesia and mesh safety but masks it with a brusque, business-like tone, focused on getting back to work quickly",
+   "background": "Immigrated from Bulgaria in his late 20s, has driven long-haul trucks across the Midwest for over 25 years, is the primary earner for his household, and takes pride in rarely missing work or needing medical care",
+   "speechExamples": [
+    "It's not a big deal, I just want it fixed.",
+    "How soon can I get back on the road, that's what matters to me.",
+    "I saw those lawsuit commercials, is that mesh stuff going to cause me trouble?",
+    "I don't like being put under, never done that before, but if it has to be done.",
+    "I can push it back in myself, so it's fine, right?"
+   ],
+   "concerns": [
+    "Whether mesh used in the repair is safe given lawsuit advertisements he has seen",
+    "How soon he can return to commercial driving after surgery",
+    "How soon and how much he can lift given his job duties",
+    "Whether this surgery can realistically happen within his 3-week winter layoff",
+    "Losing income if recovery takes longer than expected"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a general surgery resident conducting a telehealth pre-operative consultation with Viktor Petrov, a 59-year-old truck driver referred for evaluation of an enlarging, aching right groin bulge. He is requesting elective repair during his upcoming 3-week work layoff. Your job is to assess his symptoms, confirm the surgical indication, assess his operative risk, discuss repair options and risks, and address his questions about timing.",
+   "chiefComplaint": "Enlarging, aching right groin bulge for about a year, patient requesting elective repair during his upcoming 3-week work layoff",
+   "openingLine": "I've got this lump in my right groin that's been there about a year. It's bigger now. I want it fixed during my three weeks off next month.",
+   "tasks": [
+    "Take a focused history of the presenting concern and review any available imaging",
+    "Assess perioperative risk factors including relevant medical history, medications, and social history",
+    "Explain surgical repair options and address the patient's questions and concerns",
+    "Counsel on realistic timelines for return to driving and lifting given his occupation",
+    "Teach warning signs to watch for in the preoperative period and discuss perioperative medication management"
+   ],
+   "timeLimitMin": 20
+  },
+  "answerKey": {
+   "primaryProblem": "Symptomatic, reducible right indirect inguinal hernia confirmed by ultrasound, appropriate for elective surgical repair",
+   "differential": [
+    "Reducible indirect inguinal hernia (confirmed)",
+    "Direct inguinal hernia (less likely given ultrasound description of indirect defect lateral to inferior epigastric vessels)",
+    "Femoral hernia (not supported by exam/imaging location)",
+    "Hydrocele or varicocele (ruled out by absence of scrotal/testicular findings)",
+    "Lipoma of groin (ruled out by ultrasound showing true hernia defect)"
+   ],
+   "keyFindings": [
+    "One-year history of progressively enlarging right groin bulge with end-of-day aching, now ultrasound-confirmed indirect inguinal hernia containing fat",
+    "Hernia always fully reducible, no history of incarceration, no overlying skin changes, no nausea/vomiting - no current emergent features",
+    "30 pack-year current smoker, not yet ready to quit",
+    "BMI 31, untreated/lifestyle-managed hypertension (BP 138/86 today), ASA class II",
+    "On aspirin 81 mg daily apparently for primary cardiovascular risk reduction (no documented history of MI, stroke, or peripheral arterial disease) without a documented perioperative plan; patient intends to self-stop it a day or two before surgery on his own rather than through a coordinated plan",
+    "Undiagnosed, undertreated urinary symptoms (weak stream, straining, nocturia; IPSS 16/35 moderate) on tamsulosin for 18 months without urology follow-up - a recognized risk factor for postoperative urinary retention",
+    "Patient significantly minimizes symptom severity relative to the history of progressive enlargement and worsening aching"
+   ],
+   "plan": [
+    "Confirm elective operative indication; schedule repair within the patient's 3-week layoff window if medically feasible, favoring open or laparoscopic mesh repair based on shared decision-making",
+    "Discuss open vs. laparoscopic (TEP/TAPP) mesh repair approaches, including recovery differences, and provide balanced, evidence-based counseling on mesh safety to address his lawsuit-advertisement concerns, correcting misconceptions without dismissing them",
+    "Review and address modifiable risk factors: strongly recommend smoking cessation (even short-term preoperative abstinence reduces wound and pulmonary complication risk) and offer referral to cessation resources",
+    "Clarify with the prescribing clinician whether aspirin is for primary or secondary cardiovascular prevention, since this determines the correct perioperative approach: for primary prevention without documented atherosclerotic disease (the likely scenario here), perioperative discontinuation coordinated with the prescribing clinician is often reasonable because the bleeding-risk reduction outweighs the marginal cardiovascular benefit, and the ongoing need for aspirin itself should be revisited with primary care; for secondary prevention with documented atherosclerotic disease, continuation through this low-bleeding-risk hernia repair is generally favored. In either case, any change must follow an explicit documented plan rather than the patient stopping it on his own a day or two beforehand",
+    "Refer to primary care or urology for proper evaluation of lower urinary tract symptoms (consider post-void residual, possible BPH workup) before surgery, given risk of postoperative urinary retention, which is outside general surgery's scope to independently diagnose or manage definitively",
+    "Provide explicit counseling on realistic return-to-driving (commercial driving typically restricted at least 1-2 weeks after mesh repair, pending surgeon clearance and any DOT medical requirements) and lifting restrictions (typically no heavy lifting over approximately 10-15 lbs for about 2 weeks, with gradual return) tailored to his job duties",
+    "Teach incarceration/strangulation warning signs: sudden inability to reduce the hernia, severe or worsening pain, nausea/vomiting, fever, or skin discoloration over the bulge - instruct to seek emergency care immediately if these occur before scheduled surgery",
+    "Obtain informed consent documenting discussion of recurrence risk, chronic groin pain, urinary retention, and other standard risks/benefits/alternatives"
+   ],
+   "redFlags": [
+    "Sudden inability to reduce the hernia (possible incarceration)",
+    "Severe or rapidly worsening groin pain",
+    "Overlying skin erythema, warmth, or discoloration (possible strangulation)",
+    "Associated nausea, vomiting, or fever",
+    "Acute urinary retention (inability to void) - requires urgent evaluation, outside elective timeline"
+   ],
+   "educationPoints": [
+    "A reducible, asymptomatic-seeming hernia can still be clinically significant; a careful chronologic and functional history (not just a device-generated trend) is the primary tool for uncovering progression in patients who minimize symptoms",
+    "Hernia mesh is generally safe and is the evidence-based standard of care for most inguinal hernia repairs; publicized lawsuits often relate to specific product recalls or other mesh types (e.g., transvaginal mesh) rather than inguinal hernia mesh broadly, and this distinction should be explained clearly and respectfully",
+    "Whether low-dose aspirin should be continued or stopped before a low-bleeding-risk procedure like hernia repair depends on the indication: for primary prevention without documented atherosclerotic disease, perioperative discontinuation (coordinated with the prescribing clinician, never self-directed) is often appropriate because bleeding-risk reduction outweighs the marginal cardiovascular benefit, and the ongoing need for aspirin itself should be revisited with primary care; continuation is favored when aspirin is for secondary prevention of documented atherosclerotic disease. In no case should the patient decide on his own to stop it a day or two before surgery",
+    "Preoperative smoking cessation, even for a short period before surgery, meaningfully reduces wound healing and pulmonary complication risk and should be addressed at every opportunity without being punitive",
+    "Undiagnosed or undertreated benign prostatic symptoms raise the risk of postoperative urinary retention after hernia repair under anesthesia, and should prompt referral for proper urologic evaluation rather than being overlooked because the surgical complaint is unrelated",
+    "Occupational return-to-work counseling (driving, lifting) should be concrete and individualized, balancing the patient's economic pressures against safe tissue healing timelines"
+   ]
+  },
+  "professions": [
+   "general-surgery"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "title": "Pre-operative consultation for symptomatic right inguinal hernia in a 59-year-old truck driver",
+  "summary": "A 59-year-old male truck driver with a one-year history of enlarging, symptomatic right indirect inguinal hernia seeks surgical repair during his three-week winter layoff. The case teaches pre-operative risk assessment (smoking, obesity, urinary symptoms), informed consent for mesh herniorrhaphy, patient education about realistic recovery timelines for physically demanding work, and recognition of modifiable perioperative risks including smoking cessation and undiagnosed benign prostatic hyperplasia.",
+  "specialty": "General Surgery",
+  "setting": "Telehealth video visit; patient calling from a motel-style room between trucking routes"
+ }
+}

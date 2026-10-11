@@ -1,0 +1,808 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home vitals (HR, BP, temp) reported by patient",
+    "result": "HR 72 bpm, BP 112/68 mmHg, Temp 98.4°F — patient reports via home cuff/thermometer, no fever",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera inspection of right knee (effusion, alignment, quad bulk)",
+    "result": "Mild residual effusion over suprapatellar pouch, no erythema, slight quadriceps atrophy compared to left thigh (patient reports left thigh circumference 2 cm larger), no gross deformity",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Guided active knee range of motion (patient performs heel slides and extension)",
+    "result": "Active flexion 0-125 degrees, full active extension to 0 degrees, mild end-range discomfort at terminal flexion, no locking",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Guided pivot-shift apprehension and subjective instability questioning (no manual laxity testing performed)",
+    "result": "Patient reports a strong sense of apprehension and 'giving-way' feeling when guided to describe attempting a pivoting/cutting motion; unable to perform a valid two-person laxity test by telehealth, so no objective anterior translation grade obtained — findings limited to subjective report of instability",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Guided single-leg stance and partial squat assessment",
+    "result": "Able to stand single-leg briefly with mild wobble; reports apprehension and sensation of instability with partial squat/pivot motion, no immediate giving-way during test",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera inspection of surgical/injury site for swelling symmetry and skin integrity",
+    "result": "No ecchymosis currently, skin intact, mild symmetric swelling resolved from initial presentation per patient report",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "imaging",
+    "name": "Review knee MRI report",
+    "result": "MRI right knee: complete full-thickness tear of the ACL mid-substance; small peripheral tear of the lateral meniscus body, non-displaced; bone contusion of lateral femoral condyle and posterolateral tibial plateau; growth plates closed/fused; menisci otherwise intact; no chondral defect; PCL, MCL, LCL intact",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "imaging",
+    "name": "Review knee x-ray report (obtained day of injury)",
+    "result": "3-view right knee x-ray: no fracture, no dislocation, growth plates closed, joint spaces preserved, small suprapatellar joint effusion",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review emergency department/urgent care note from day of injury",
+    "result": "Patient presented with acute right knee swelling after twisting injury during soccer; exam limited by pain and effusion; placed in hinged knee brace, given crutches, referred to orthopedics for MRI and follow-up",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review physical therapy prehab referral status",
+    "result": "No physical therapy visits attended yet; referral placed by primary care at time of injury but not yet scheduled",
+    "importance": "important",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Review growth plate status for surgical planning",
+    "result": "Distal femoral and proximal tibial physes are closed/fused on imaging, consistent with skeletal maturity; standard adult-type ACL reconstruction techniques are appropriate",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "lab",
+    "name": "Review inflammatory/infection labs if effusion were concerning (CBC, CRP)",
+    "result": "CBC and CRP not clinically indicated given classic traumatic mechanism and non-infectious exam; not drawn",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Assess functional stability and readiness for pivoting sports in current state",
+    "result": "Current subjective instability with pivoting activities and two episodes of giving-way on stairs; not safe for return to cutting/pivoting sport without surgical stabilization and structured rehabilitation",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "MRI Right Knee Without Contrast",
+    "author": "Radiology — Dr. A. Nguyen",
+    "date": "2 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "FINDINGS: Complete full-thickness tear of the anterior cruciate ligament (ACL) mid-substance with wavy contour and absent fibers on sagittal sequences. Small peripheral tear of the posterior horn/body junction of the lateral meniscus, non-displaced, stable appearing. Bone marrow edema (bone bruise) involving the lateral femoral condyle and posterolateral tibial plateau, consistent with pivot-shift mechanism. Medial meniscus intact. PCL, MCL, and LCL intact. Articular cartilage preserved throughout, no focal chondral defect. Distal femoral and proximal tibial growth plates are closed/fused. Small joint effusion. IMPRESSION: 1. Complete ACL tear. 2. Small non-displaced lateral meniscus tear. 3. Bone contusions typical of pivot injury. 4. Skeletally mature growth plates."
+   },
+   {
+    "id": "d2",
+    "type": "imaging",
+    "title": "Right Knee X-ray, 3 views (day of injury)",
+    "author": "Radiology — Dr. T. Olsen",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "FINDINGS: No acute fracture or dislocation. Joint spaces preserved. Small suprapatellar effusion. Growth plates closed. IMPRESSION: No fracture. Effusion noted, correlate clinically."
+   },
+   {
+    "id": "d3",
+    "type": "note",
+    "title": "Urgent Care Note — Date of Injury",
+    "author": "Dr. R. Castillo, Urgent Care",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "17-year-old female presents with acute right knee injury during soccer match approximately 2 hours prior. Reports planting right foot and pivoting when she felt a pop and immediate pain, followed by rapid swelling. Unable to bear full weight initially. On exam: moderate effusion, limited ROM due to pain and swelling, ligamentous exam deferred due to guarding and effusion, distal pulses intact, sensation intact. Placed in hinged knee brace locked in extension for comfort, given crutches for partial weight-bearing, ice/elevation instructed, ibuprofen for pain. X-ray obtained, no fracture. Referred to orthopedic surgery for MRI and further evaluation. Physical therapy prehabilitation referral placed."
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "author": "Primary Care / Pharmacy record",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Ibuprofen",
+        "400 mg",
+        "Oral",
+        "Every 6-8 hours as needed",
+        "Knee pain"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Combined oral contraceptive (ethinyl estradiol/norgestimate)",
+        "0.25 mg/35 mcg",
+        "Oral",
+        "Daily",
+        "Menstrual cycle regulation"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Vital Signs — Today's Visit (patient-reported, home devices)",
+    "author": "Self-reported, telehealth",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "HR (bpm)",
+      "BP (mmHg)",
+      "Temp (°F)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Today, 2:00 PM",
+        "72",
+        "112/68",
+        "98.4"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "chart",
+    "title": "Knee Range of Motion Trend",
+    "author": "Orthopedic clinic / PT prehab tracking",
+    "date": "Last 3 weeks",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time since injury",
+     "yLabel": "Degrees of flexion (active)",
+     "series": [
+      {
+       "name": "Right knee flexion",
+       "points": [
+        {
+         "x": "Week 1",
+         "y": 80
+        },
+        {
+         "x": "Week 2",
+         "y": 105
+        },
+        {
+         "x": "Week 3 (today)",
+         "y": 125
+        }
+       ]
+      },
+      {
+       "name": "Left knee flexion (reference)",
+       "points": [
+        {
+         "x": "Week 1",
+         "y": 140
+        },
+        {
+         "x": "Week 2",
+         "y": 140
+        },
+        {
+         "x": "Week 3 (today)",
+         "y": 140
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Physical Therapy Referral Status",
+    "author": "Primary Care referral coordinator",
+    "date": "3 weeks ago, updated today",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "body": "Referral for pre-operative knee rehabilitation (prehabilitation) placed at time of injury. Status: Not yet scheduled — patient reports difficulty finding appointment availability and conflicting school schedule. No visits completed to date. Recommend expedited scheduling given planned surgical timeline."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "MRI results review and treatment planning, right knee injury"
+   },
+   {
+    "label": "Problem list",
+    "value": "Right knee ACL tear (complete); right knee lateral meniscus tear (small, stable); right knee bone contusion"
+   },
+   {
+    "label": "Medications",
+    "value": "Ibuprofen 400 mg PRN; combined oral contraceptive daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "HR 72, BP 112/68, Temp 98.4°F (today, patient-reported)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per school records"
+   },
+   {
+    "label": "Care team",
+    "value": "Orthopedic surgery (consulting), Primary care, Physical therapy (referred, not yet scheduled)"
+   },
+   {
+    "label": "Code status",
+    "value": "N/A (outpatient, minor with parent involved)"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "New musculoskeletal consultation — results review and treatment planning",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "17-year-old female presents for review of MRI results and discussion of treatment options after right knee injury 3 weeks ago.",
+    "says": "I'm here to find out what my MRI showed and what we're going to do about my knee — I've got a big tournament coming up.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "injury mechanism",
+    "chart": "Injury occurred during soccer match when patient planted right foot and pivoted; felt a pop.",
+    "says": "I was cutting to the left during a game and my foot kind of stuck in the turf — I felt a pop in my knee right away.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "swelling timing",
+    "chart": "Knee swelled within approximately 2 hours of injury.",
+    "says": "It blew up like a balloon within like an hour or two, it was huge by the time my mom got me home.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "instability episodes",
+    "chart": "Knee has given way twice on stairs since the injury.",
+    "says": "It's buckled on me twice going down the stairs at home, it's scary, like my knee just isn't there for a second.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "weight-bearing status",
+    "chart": "Initially unable to bear full weight; now ambulates without crutches but avoids pivoting.",
+    "says": "I couldn't put weight on it the first day, but now I can walk fine, I just don't trust it when I turn.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "pain level now",
+    "chart": "Pain currently mild, rated 2/10 at rest, worse with twisting activity.",
+    "says": "It barely hurts just sitting around, maybe a 2 out of 10, but if I try to twist it, it's way worse.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "locking or catching",
+    "chart": "Denies true locking or catching sensation.",
+    "says": "It hasn't ever gotten stuck or locked up on me, just feels wobbly sometimes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "swelling pattern now",
+    "chart": "Residual mild swelling present most days, worse after activity.",
+    "says": "It's still a little puffy most days, especially after I've been up and around a lot.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "brace use",
+    "chart": "Has been using hinged knee brace intermittently, not consistently as directed.",
+    "says": "I wear the brace sometimes, honestly, it's bulky under my jeans so I skip it some days.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "goals",
+    "topic": "tournament timing",
+    "chart": "Patient has a college recruiting showcase tournament in approximately 10 weeks and wants to know if she can play in a brace.",
+    "says": "There's a huge college showcase in like ten weeks and I need to know if I can just play in a brace.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "goals",
+    "topic": "recruiting fear",
+    "chart": "Patient expresses fear that missing the showcase will end her chances of being recruited.",
+    "says": "If I miss this tournament, I feel like coaches are just going to forget I exist.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "psychosocial",
+    "topic": "emotional response to injury",
+    "chart": "Patient reports frustration and anxiety about timeline and loss of control.",
+    "says": "I've worked my whole life for this and now it feels like it's all slipping away because of one stupid turn.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "family",
+    "topic": "parent involvement",
+    "chart": "Mother present in adjacent room, involved in care decisions and will participate if invited.",
+    "says": "My mom's right in the next room, she wants to be part of this conversation too.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "sexual",
+    "topic": "menstrual cycle regulation",
+    "chart": "Taking combined oral contraceptive for menstrual cycle regulation, unrelated to current injury.",
+    "says": "I'm on the pill, just for my periods, nothing to do with my knee.",
+    "tier": "reluctant",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "prior knee problems",
+    "chart": "No prior knee injuries, surgeries, or instability episodes before this injury.",
+    "says": "This is the first time anything's ever happened to this knee, never had problems before.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "family",
+    "topic": "family history of ligament injury",
+    "chart": "Mother reports her own ACL tear and reconstruction in her 20s, recovered well and returned to recreational sports.",
+    "says": "Funny enough, my mom tore the same ligament years ago and she's totally fine now, so that gives me some hope.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "numbness or tingling",
+    "chart": "Denies numbness, tingling, or color change in the foot/leg.",
+    "says": "No numbness or weird color in my foot or toes, that's all normal.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "other joint symptoms",
+    "chart": "Denies pain or swelling in other joints.",
+    "says": "No other joints are bothering me, just the one knee.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "adherence",
+    "topic": "ibuprofen use",
+    "chart": "Taking ibuprofen 400 mg as needed, roughly 2-3 times per week currently.",
+    "says": "I take the ibuprofen when it's really bothering me, maybe a couple times a week now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "adherence",
+    "topic": "prehab therapy attendance",
+    "chart": "Has not yet attended any physical therapy sessions despite referral placed three weeks ago.",
+    "says": "I haven't actually made it to physical therapy yet, it's been hard to get an appointment with school and everything.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "function",
+    "topic": "school and stairs",
+    "chart": "Attending school full days, uses elevator when possible, avoids stairs when able.",
+    "says": "I'm at school full days, I try to take the elevator now instead of stairs when I can.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "function",
+    "topic": "driving status",
+    "chart": "Driving without difficulty, no limitations noted.",
+    "says": "I'm driving fine, that part hasn't been a problem.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with mother and younger sibling; father lives in another state.",
+    "says": "It's just me, my mom, and my little brother at home most of the time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "soccer commitment level",
+    "chart": "Plays club soccer year-round and on varsity high school team; central midfielder, team captain.",
+    "says": "I play club soccer basically all year plus varsity for my high school, I'm the captain this year.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "goals",
+    "topic": "understanding of options",
+    "chart": "Patient has heard from teammates that some athletes play on torn ACLs with a brace and wants to know if that applies to her.",
+    "says": "One of my teammates said she played a whole season on a torn ACL with just a brace, is that something I could do?",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "fear of surgery",
+    "chart": "Expresses some fear about surgery itself, in addition to timeline concerns.",
+    "says": "I'm not gonna lie, the surgery part scares me too, not just missing the tournament.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "nutrition",
+    "topic": "general diet",
+    "chart": "Reports eating a generally balanced diet, no recent weight change.",
+    "says": "I eat pretty normal, nothing's really changed with my weight or appetite.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "swelling with specific activities",
+    "chart": "Swelling increases notably after attempting any jogging or pivoting movements, which she has tried twice against instructions.",
+    "says": "I tried jogging a little in the backyard twice just to test it, and it swelled up both times afterward.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "adherence",
+    "topic": "brace locking setting",
+    "chart": "Does not recall whether brace is set to allow full range of motion versus restricted range; has not followed up on this detail.",
+    "says": "Honestly I don't really know if the brace is set to let my knee bend all the way or not, I never asked.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "goals",
+    "topic": "timeline expectations",
+    "chart": "Patient initially believes recovery might take only 6-8 weeks based on online research.",
+    "says": "I read online some people are back in like six to eight weeks, is that realistic for me?",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f31",
+    "category": "family",
+    "topic": "financial/insurance considerations",
+    "chart": "Mother has concerns about insurance coverage and cost of surgery versus physical therapy alone, has not yet contacted insurer.",
+    "says": "My mom mentioned she's worried about what insurance will cover, surgery versus just doing therapy.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "psh",
+    "topic": "prior surgeries",
+    "chart": "No prior surgeries of any kind.",
+    "says": "I've never had any surgery before, this would be my first.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f9",
+    "artifactId": "d7",
+    "patientClaim": "Patient reports wearing the hinged knee brace at least intermittently since the injury and attempting to follow activity precautions.",
+    "recordEvidence": "Physical therapy referral note documents no prehab visits attended and ongoing high-risk activity (patient tried jogging/pivoting twice despite instructions), with brace use inconsistent per patient's own admission — overall adherence to the structured protection plan is incomplete.",
+    "teachingPoint": "Even well-intentioned, motivated patients may underestimate gaps in adherence to bracing and activity restriction; explicitly reconcile stated behavior with functional reports (giving-way episodes, self-initiated jogging) before counseling on risk of further injury."
+   },
+   {
+    "id": "m2",
+    "factId": "f30",
+    "artifactId": "d6",
+    "patientClaim": "Patient believes a 6-8 week return to sport is realistic based on online information.",
+    "recordEvidence": "Range of motion trend chart shows slow, incomplete recovery of motion even at 3 weeks (125 degrees active flexion, not yet symmetric with contralateral 140 degrees), illustrating that early motion alone is not synonymous with readiness for cutting/pivoting sport, which standard ACL reconstruction protocols require passing criteria-based testing with a minimum of about 9 months and often longer.",
+    "teachingPoint": "Online anecdotes about rapid return to sport often reflect selection bias or non-pivoting sports; evidence-based ACL reconstruction rehabilitation is criteria-based (minimum ~9 months, graft maturation and neuromuscular readiness testing), not determined by symptom resolution or motion milestones alone."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a mechanism-of-injury history consistent with a non-contact pivoting ACL injury, including the pop, rapid effusion, and subsequent instability episodes.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4"
+    ],
+    "actionIds": [
+     "a2",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Perform and interpret a guided remote knee examination (inspection, active ROM, subjective instability/apprehension questioning) recognizing its limitations compared to in-person exam, including the impossibility of a valid remote Lachman/anterior drawer test.",
+    "factIds": [
+     "f5",
+     "f7"
+    ],
+    "actionIds": [
+     "a2",
+     "a3",
+     "a4",
+     "a5"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Accurately interpret and explain the MRI findings (complete ACL tear, small stable lateral meniscus tear, bone bruising, closed growth plates) in lay terms appropriate for a teenage patient and parent.",
+    "factIds": [
+     "f30"
+    ],
+    "actionIds": [
+     "a7",
+     "a8",
+     "a11"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Counsel on operative versus non-operative management for a skeletally mature competitive pivoting athlete, correctly discouraging play on a torn ACL in a brace given risk of further meniscal/chondral injury and recurrent instability.",
+    "factIds": [
+     "f4",
+     "f25",
+     "f28"
+    ],
+    "actionIds": [
+     "a13",
+     "a5"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Set a realistic, evidence-based return-to-sport expectation (criteria-based testing, minimum ~9 months, potentially well beyond 12 months) and address the patient's goal conflict with the 10-week showcase tournament with empathy.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f30"
+    ],
+    "actionIds": [
+     "a7",
+     "a13"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Identify the gap in prehabilitation engagement and reconcile the patient's self-reported adherence with the referral record, then provide a prehab plan and appropriate referral/handback to physical therapy.",
+    "factIds": [
+     "f9",
+     "f20",
+     "f28"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Zoe Hartman",
+   "age": 17,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "White",
+   "occupation": "High school student, varsity and club soccer midfielder",
+   "language": "English",
+   "appearance": "A fit, athletic-looking teenager with her hair in a ponytail, wearing a soccer club hoodie, seated at a desk in what looks like a bedroom with posters and a trophy shelf visible behind her. She leans toward the camera with alert, intense eye contact, and her right leg is propped on a chair with a hinged knee brace partially visible; her affect shifts between determined and visibly anxious.",
+   "portrait": "/portraits/orthopedics-zoe-hartman-knee-injury.jpg"
+  },
+  "persona": {
+   "personality": "Articulate, driven, and used to being in control of her body as a competitive athlete; impatient with uncertainty and prone to research things herself before appointments.",
+   "communicationStyle": "Direct and detailed, asks pointed follow-up questions, occasionally interrupts to clarify timelines, comfortable using some sports/training vocabulary.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Anxious and frustrated beneath a composed exterior; fear of losing recruiting opportunities surfaces as urgency and occasional pushback on medical advice.",
+   "background": "Zoe has played club and school soccer since age 7 and was named varsity captain this year as a junior. She is being scouted by several Division II and III college programs and has been emailing coaches directly. Outside of soccer she tutors younger kids in math and hopes to study kinesiology in college.",
+   "speechExamples": [
+    "Okay but realistically, if I just wear a brace, could I play through this?",
+    "I read a bunch of ACL recovery stories online last night, some people were back way faster than a year.",
+    "My mom tore the exact same ligament and she's completely fine now, so why can't I just do what she did?",
+    "I'm the captain, my team is counting on me, I can't just disappear for a season.",
+    "Is this the kind of thing where surgery actually makes stuff worse before it gets better?"
+   ],
+   "concerns": [
+    "Whether she can play in the 10-week college showcase tournament with a brace",
+    "Whether surgery is truly necessary versus bracing and physical therapy alone",
+    "How long full recovery and return to competitive pivoting sport will actually take",
+    "Whether this injury will hurt her chances of being recruited to play college soccer",
+    "Fear of the surgery itself and the recovery process"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the orthopedic surgery resident conducting a telehealth visit with Zoe Hartman, a 17-year-old competitive soccer player, to review her knee MRI results obtained after a twisting injury three weeks ago and discuss treatment options. Her mother is present and available. Review the chart before the call.",
+   "chiefComplaint": "Follow-up visit to review MRI results and discuss treatment options after right knee twisting injury 3 weeks ago, with ongoing instability on stairs.",
+   "openingLine": "Hi, thanks for seeing me — I'm here to find out what my MRI showed and figure out what we're doing about my knee. I've got a big tournament coming up.",
+   "tasks": [
+    "Take a focused history of the injury mechanism, subsequent symptoms, and current functional status",
+    "Perform a guided remote knee examination within telehealth limitations",
+    "Review and explain the MRI findings to the patient and family",
+    "Discuss treatment options appropriate for the patient's presentation and goals",
+    "Agree a management plan, set expectations for recovery timeline, and arrange appropriate follow-up"
+   ],
+   "timeLimitMin": 20
+  },
+  "setting": "Telehealth video visit; patient at home in her bedroom in Colorado, seated with her right leg elevated and braced, mother present in an adjacent room and available to join",
+  "specialty": "Orthopedic Surgery",
+  "summary": "A 17-year-old competitive soccer player with a complete ACL tear, small stable lateral meniscus tear, and bone bruising on MRI after a classic pivoting injury presents for results review and treatment planning. The case tests the resident's ability to perform a guided remote knee exam, explain imaging findings in lay terms, counsel on operative versus non-operative management for a skeletally mature pivoting athlete (explicitly addressing why bracing alone is unsafe for return to cutting sports), and navigate a realistic 9-12 month return-to-sport timeline against the patient's urgent desire to play in a 10-week showcase tournament.",
+  "title": "Complete ACL Tear in a Skeletally Mature Teen Athlete — Results Review and Return-to-Sport Planning",
+  "answerKey": {
+   "primaryProblem": "Complete right ACL tear with small stable lateral meniscus tear and bone bruising in a skeletally mature 17-year-old competitive pivoting athlete, three weeks post-injury with ongoing episodic instability.",
+   "differential": [
+    "Isolated complete ACL tear (confirmed on MRI)",
+    "Combined ACL and meniscal injury (confirmed: small stable lateral meniscus tear)",
+    "Multiligamentous knee injury (excluded: MCL/LCL/PCL intact on MRI)",
+    "Patellar instability/dislocation (excluded: mechanism and exam not consistent, no patellar apprehension described)",
+    "Tibial plateau or physeal fracture (excluded: x-ray negative, growth plates closed)"
+   ],
+   "keyFindings": [
+    "Classic non-contact pivot mechanism with audible/felt pop and rapid (within 2 hours) effusion",
+    "Two episodes of knee giving-way on stairs since injury, plus swelling recurrence after self-initiated jogging/pivoting attempts",
+    "MRI: complete mid-substance ACL tear, small non-displaced stable lateral meniscus tear, bone bruising of lateral femoral condyle and posterolateral tibial plateau, closed growth plates",
+    "Guided remote exam notable for residual effusion, mild quadriceps atrophy, incomplete terminal flexion, and subjective instability on self-performed stability testing and pivoting/squat maneuvers",
+    "Inconsistent brace adherence and no physical therapy prehab visits attended despite three-week-old referral"
+   ],
+   "plan": [
+    "Explain MRI findings in plain language to patient and mother, emphasizing complete ACL tear with closed growth plates allowing standard adult-type reconstruction technique if surgery chosen",
+    "Counsel against return to pivoting/cutting sport (including the 10-week showcase) in a brace alone given confirmed complete ACL tear, ongoing instability episodes, and risk of further meniscal/chondral injury",
+    "Discuss operative (ACL reconstruction, timing options including graft choice discussion deferred to full surgical consult) versus non-operative management (activity modification, bracing, physical therapy) and shared decision-making given patient's competitive pivoting sport goals",
+    "Set realistic return-to-sport expectations: criteria-based clearance with a minimum of approximately 9 months post-reconstruction, based on graft maturation and validated functional/neuromuscular/strength testing rather than a fixed calendar date, and explain that timing can extend well beyond 12 months if objective criteria are not yet met",
+    "Address the gap in prehabilitation: escalate/expedite physical therapy referral for prehab (quadriceps strengthening, effusion control, ROM) prior to any surgical date",
+    "Advise strict avoidance of further unsupervised pivoting/jogging trials pending stabilization plan to reduce risk of secondary meniscal or chondral injury",
+    "Arrange follow-up visit for shared decision on surgical timing and formal surgical consent discussion if family elects reconstruction; involve mother in decision-making given patient's age"
+   ],
+   "redFlags": [
+    "Recurrent giving-way episodes increasing risk of secondary meniscal/chondral damage if pivoting activity continues unprotected",
+    "Patient's own activity (unsupervised jogging trials) outside of recommended restrictions while awaiting treatment decision",
+    "Delay in prehabilitation engagement that could affect surgical readiness and timeline"
+   ],
+   "educationPoints": [
+    "A complete ACL tear with closed growth plates in a skeletally mature teenager is treated using standard adult ACL reconstruction principles, not pediatric growth-plate-sparing techniques",
+    "Playing competitive pivoting sport on a torn ACL, even with a brace, does not restore rotational stability and carries meaningful risk of further meniscal or cartilage injury",
+    "Return-to-sport after ACL reconstruction should be criteria-based rather than purely time-based: current evidence supports a minimum of approximately 9 months, driven by graft biological maturation and passing validated functional/strength/neuromuscular testing, with return often extending well past 12 months if criteria are not met",
+    "Prehabilitation (quadriceps strengthening, effusion control, achieving full motion) before surgery improves post-operative outcomes and should begin promptly",
+    "Shared decision-making should explicitly involve both the patient and parent given the patient's age, balancing athletic goals with safety"
+   ]
+  },
+  "professions": [
+   "orthopedics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

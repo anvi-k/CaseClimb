@@ -1,0 +1,162 @@
+{
+  "domain_scores": [
+    {
+      "domain_id": "opening_and_purpose",
+      "score": "3",
+      "rationale": "You introduced yourself and your role and opened with a broad question. You did not set an agenda for the visit.",
+      "evidence": [{ "turn_id": "t0", "quote": "I'm Sam, a nurse practitioner student. What brings you in today?", "location": "" }]
+    },
+    {
+      "domain_id": "rapport_respect_empathy",
+      "score": "2",
+      "rationale": "You acknowledged how tiring her symptoms were early on, but when she told you she was scared you moved straight to allergies.",
+      "evidence": [
+        { "turn_id": "t2", "quote": "That sounds exhausting.", "location": "" },
+        { "turn_id": "t10", "quote": "Do you have any allergies?", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "information_gathering",
+      "score": "2",
+      "rationale": "Your question about a normal day of eating and drinking was concrete and brought out the sweet tea. The adherence question was closed and judgmental, and you never asked about family history, side effects, or cost.",
+      "evidence": [
+        { "turn_id": "t4", "quote": "Walk me through what you eat and drink on a normal day.", "location": "" },
+        { "turn_id": "t6", "quote": "Are you taking it like you're supposed to?", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "listening_and_cues",
+      "score": "2",
+      "rationale": "She looked away while saying she takes her metformin every day, and she was visibly frightened at t9. Neither was followed up.",
+      "evidence": [
+        { "turn_id": "t7", "quote": "I take my metformin every day.", "location": "" },
+        { "turn_id": "t9", "quote": "I'm scared of where this is heading", "location": "" }
+      ]
+    },
+    {
+      "domain_id": "explanation_and_shared_decisions",
+      "score": "2",
+      "rationale": "You gave the result as a number and called it high without explaining what it means or asking what she made of it.",
+      "evidence": [{ "turn_id": "t10", "quote": "Your HbA1c is 9.2 percent, which is high.", "location": "" }]
+    },
+    {
+      "domain_id": "clinical_reasoning_and_synthesis",
+      "score": "1",
+      "rationale": "The plan to raise the dose rests on an adherence claim you did not check. An HbA1c of 9.2% on a drug she says she takes daily should have prompted a look at the refill history.",
+      "evidence": [{ "turn_id": "t12", "quote": "Since you're already taking the metformin every day, we'll probably need to raise the dose.", "location": "" }]
+    },
+    {
+      "domain_id": "professionalism_safety_closure",
+      "score": "3",
+      "rationale": "You were courteous, deferred the dose decision to your preceptor, and gave a follow-up interval. You did not check her understanding or invite questions.",
+      "evidence": [{ "turn_id": "t12", "quote": "I'll talk to my preceptor and we'll see you in three months.", "location": "" }]
+    }
+  ],
+  "written_evidence": {
+    "strength": {
+      "text": "Asking her to walk you through a normal day got an honest, specific answer about sweet tea that a yes/no diet question would have missed.",
+      "evidence": [{ "turn_id": "t4", "quote": "Walk me through what you eat and drink on a normal day.", "location": "" }]
+    },
+    "important_gap": {
+      "text": "You accepted that she takes metformin daily and built the plan on it. The refill history, which you did not open, shows two fills in six months.",
+      "evidence": [{ "turn_id": "t8", "quote": "Great, that's good to hear.", "location": "" }]
+    },
+    "safety_or_accuracy_concern": {
+      "present": true,
+      "text": "Raising the dose of a drug she is mostly not taking, for a reason that is partly its side effects, risks making adherence worse.",
+      "evidence": [{ "turn_id": "t12", "quote": "we'll probably need to increase the dose", "location": "" }]
+    }
+  },
+  "objective_results": [
+    {
+      "objective_id": "o.history",
+      "result": "met",
+      "evidence": [{ "turn_id": "t2", "quote": "How long has that been going on?", "location": "" }],
+      "feedback": "You covered her symptoms and diet well."
+    },
+    {
+      "objective_id": "o.adherence",
+      "result": "not_met",
+      "evidence": [{ "turn_id": "t6", "quote": "Are you taking it like you're supposed to?", "location": "" }],
+      "feedback": "A question that implies there is a right answer invites the right answer. Try asking what taking it is like for her, or how many doses she misses in a typical week."
+    },
+    {
+      "objective_id": "o.empathy",
+      "result": "not_met",
+      "evidence": [{ "turn_id": "t9", "quote": "I'm scared of where this is heading", "location": "" }],
+      "feedback": "She told you she was scared and you answered with a number. Naming the fear and asking what she is afraid of would have opened the conversation about her mother."
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "open_ended_opening",
+      "category": "interview_structure",
+      "observed": true,
+      "evidence": [{ "turn_id": "t0", "quote": "What brings you in today?", "location": "" }],
+      "feedback": "A good open start."
+    },
+    {
+      "behavior": "empathic_response",
+      "category": "empathy",
+      "observed": false,
+      "evidence": [{ "turn_id": "t10", "quote": "Do you have any allergies?", "location": "" }],
+      "feedback": "Her fear at t9 went unanswered."
+    },
+    {
+      "behavior": "noticed_contradiction",
+      "category": "clinical_reasoning",
+      "observed": false,
+      "evidence": [{ "turn_id": "t99", "quote": "", "location": "" }],
+      "feedback": "A high HbA1c alongside reported daily metformin was not questioned."
+    }
+  ],
+  "discrepancy_findings": [
+    {
+      "discrepancy_id": "d.adherence",
+      "outcome": "accepted_without_challenge",
+      "evidence": [
+        { "turn_id": "t7", "quote": "I take my metformin every day.", "location": "" },
+        { "turn_id": "t8", "quote": "Great, that's good to hear.", "location": "" }
+      ],
+      "feedback": "She made the claim while looking away, and you took it at face value."
+    }
+  ],
+  "under_probing": [
+    {
+      "topic": "Family history",
+      "why_it_mattered": "Her mother's dialysis is the source of her fear and shapes what she needs to hear.",
+      "related_fact_ids": ["f.fh.mother"],
+      "evidence": []
+    },
+    {
+      "topic": "Side effects and cost of metformin",
+      "why_it_mattered": "These are the reasons she skips doses.",
+      "related_fact_ids": ["f.med.side_effects", "f.med.refills"],
+      "evidence": [{ "turn_id": "t6", "quote": "Are you taking it like you're supposed to?", "location": "" }]
+    }
+  ],
+  "checklist_results": [],
+  "goal_progress": [],
+  "strengths": [
+    "Concrete, open question about a normal day of eating and drinking.",
+    "Clear introduction of yourself and your role."
+  ],
+  "improvements": [
+    "Ask about adherence without implying a right answer.",
+    "Stop and respond when the patient shows fear."
+  ],
+  "next_attempt_suggestions": [
+    "Before proposing a medication change, open the refill history.",
+    "When her face changes, say what you see and ask about it."
+  ],
+  "debrief_questions": [
+    {
+      "question": "At t7 she said \"I take my metformin every day.\" What made you accept that?",
+      "evidence": [{ "turn_id": "t7", "quote": "I take my metformin every day.", "location": "" }]
+    },
+    {
+      "question": "At t9 she said she was scared. What did you notice about her in that moment, and what were you thinking when you asked about allergies?",
+      "evidence": [{ "turn_id": "t9", "quote": "I'm scared of where this is heading", "location": "" }]
+    }
+  ]
+}

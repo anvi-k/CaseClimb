@@ -1,0 +1,951 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Airway exam (Mallampati, mouth opening, neck mobility via camera)",
+    "result": "Patient opens mouth fully on camera; Mallampati class II estimated; good neck flexion/extension demonstrated; no limitation noted. Thyromental distance appears >3 fingerbreadths by patient self-measurement.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "STOP-BANG obstructive sleep apnea screening",
+    "result": "Snoring: no (0). Tiredness: occasional, attributed to work shifts, scored as no (0). Observed apnea: no bed partner report of pauses (0). Pressure (BP): borderline per home cuff but not meeting hypertension threshold, scored as no (0). BMI >35: no (BMI 33) (0). Age >50: no (0). Neck circumference: patient reports collar size 14in (~35.5cm), not large (0). Gender male: no (0). Score 0/8, low risk for OSA.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Review home blood pressure log/vitals",
+    "result": "Home BP readings over past 2 weeks range 118-132/74-84 mmHg, HR 68-78 bpm, documented in flowsheet.",
+    "importance": "minor",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "vitals",
+    "name": "Current vital signs via home device (BP cuff, pulse ox, scale)",
+    "result": "BP 126/80 mmHg, HR 74 bpm regular, SpO2 98% room air, Temp 98.2F (36.8C) oral, Weight 212 lb (96.2 kg), Height 5'5\" (165 cm), BMI 33.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Camera inspection of dentition/oral cavity",
+    "result": "No loose teeth; two small composite fillings; no dentures or removable appliances; no oral piercings.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Patient self-palpation of jaw/TMJ and neck range of motion",
+    "result": "Patient reports no jaw clicking or pain; full neck rotation bilaterally without discomfort; no cervical surgical scars visible.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "lab",
+    "name": "Review recent CBC and basic metabolic panel (if on file)",
+    "result": "CBC and BMP from pre-op labs 3 weeks ago: all values within normal limits, no anemia, normal renal function and electrolytes.",
+    "importance": "minor",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review hemoglobin A1c (if on file)",
+    "result": "HbA1c 5.4% (reference <5.7%), drawn 3 weeks ago; no diabetes.",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review prior anesthesia record (if available)",
+    "result": "No prior anesthesia records on file in this system; patient reports her only sedation was outpatient dental, records not available from that office.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review current medication list in chart",
+    "result": "Chart lists semaglutide 1mg subcutaneous weekly, sumatriptan 50mg PRN migraine, ginkgo biloba supplement daily, fish oil 2000mg daily.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "NPO/fasting instructions review and teaching",
+    "result": "Standard ASA fasting guidance reviewed with patient: clear liquids up to 2 hours before, light meal up to 6 hours before, no solid/fatty foods after midnight before surgery; patient verbalizes understanding.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "GLP-1 receptor agonist perioperative risk assessment",
+    "result": "Patient confirms last semaglutide dose was 5 days ago, next dose not due until after surgery; reports no current nausea, vomiting, bloating, or early satiety; last normal bowel movement yesterday.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Functional capacity / exercise tolerance assessment",
+    "result": "Patient reports walking her dog 2 miles daily and climbing 2 flights of stairs without dyspnea or chest pain; estimated >4 METs.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "exam",
+    "name": "Camera inspection of IV access sites (hands/forearms)",
+    "result": "Veins appear visible and accessible bilaterally in forearms/hands on camera; no visible edema, infection, or skin breakdown.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Postoperative nausea and vomiting (PONV) risk assessment (Apfel score)",
+    "result": "Risk factors present: female sex, nonsmoker, prior severe nausea/vomiting after sedation (used here as a surrogate for the classic 'history of PONV or motion sickness' criterion), and planned postoperative opioid use. Using this proxy, all four Apfel criteria are met. Apfel score estimated 4/4, high risk for PONV; multimodal antiemetic prophylaxis recommended.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "test",
+    "name": "Patient-reported pregnancy status / last menstrual period",
+    "result": "Patient reports regular menstrual cycles, last menstrual period 10 days ago, not pregnant, uses copper IUD for contraception.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Pre-anesthesia assessment for outpatient knee arthroscopy in a patient with possible undisclosed malignant hyperthermia (MH) susceptibility, prior severe PONV, GLP-1 agonist use, and class II obesity",
+   "differential": [
+    "Malignant hyperthermia susceptibility (family history suggestive, unconfirmed) requiring escalation to the anesthesia care team and collaborative decision-making about anesthetic technique",
+    "High risk for postoperative nausea and vomiting given prior sedation history",
+    "Delayed gastric emptying risk from weekly semaglutide affecting aspiration risk and NPO timing",
+    "Obesity-related airway and ventilation considerations (BMI 33, otherwise reassuring airway exam)",
+    "Herbal supplement (ginkgo, fish oil) related bleeding risk requiring perioperative hold"
+   ],
+   "keyFindings": [
+    "Maternal uncle had a near-fatal hyperthermic reaction during anesthesia for appendectomy; cousin advised to wear a medical alert bracelet — classic red flag for MH susceptibility, never previously documented or explained to patient",
+    "History of severe nausea/vomiting after wisdom tooth sedation — significant PONV risk factor, used here as a surrogate for the classic Apfel 'history of PONV/motion sickness' criterion",
+    "Weekly semaglutide, last dose 5 days prior to this visit (approximately 11 days before surgery), no current GI symptoms — satisfies current ASA guidance to hold the weekly dose for a full week before surgery, but standard aspiration precautions should still be applied if any uncertainty remains",
+    "BMI 33 with reassuring airway exam, low STOP-BANG score, good functional capacity",
+    "Daily ginkgo biloba and high-dose fish oil, both with antiplatelet/bleeding-risk potential, not yet addressed for perioperative hold",
+    "No prior personal anesthesia complications other than PONV; this would be her first general anesthetic exposure since dental sedation"
+   ],
+   "plan": [
+    "Document and escalate the family history suggestive of malignant hyperthermia susceptibility to the supervising anesthesiologist/anesthesia care team before proceeding; this is a collaborative decision, not an independent CRNA determination",
+    "Discuss with the anesthesia care team whether a non-triggering anesthetic technique (avoiding volatile anesthetics and succinylcholine, e.g., total intravenous anesthesia) is warranted pending further risk stratification; final determination rests with the supervising anesthesiologist/team, not the CRNA independently",
+    "Flag the possible need for genetics or neuromuscular specialist referral or caffeine-halothane contracture/genetic testing as a question for the anesthesia team to decide, and note this is outside CRNA independent scope",
+    "Implement multimodal PONV prophylaxis per Apfel score (e.g., combination antiemetics, consider regional/avoid volatile agents if feasible)",
+    "Advise holding ginkgo biloba and fish oil supplements per standard preoperative supplement guidance (typically 5-7 days prior) in coordination with surgical team",
+    "Reinforce standard ASA NPO guidance; confirm semaglutide dosing timeline relative to surgery date and apply current ASA guidance (hold the weekly dose for a full week preoperatively when feasible) — the reported timeline of last dose 5 days before this visit (~11 days before surgery) satisfies this recommendation",
+    "Confirm no pregnancy, reasonable functional capacity, and reassuring airway/cardiopulmonary exam; proceed with case contingent on anesthesia team review of MH risk"
+   ],
+   "redFlags": [
+    "Family history of unexplained hyperthermia and near-death during anesthesia (maternal uncle)",
+    "Cousin advised to wear a medical-alert bracelet for an anesthesia-related condition",
+    "History of severe post-anesthetic nausea/vomiting",
+    "Daily use of two supplements (ginkgo, fish oil) with bleeding-risk potential not yet addressed"
+   ],
+   "educationPoints": [
+    "Always ask specifically about family history of anesthesia complications; patients may not recognize vague stories ('ran a very high fever,' 'medical alert bracelet') as medically significant",
+    "Malignant hyperthermia is a pharmacogenetic risk; a suggestive family history should prompt escalation to the anesthesia care team for a collaborative decision about anesthetic technique, even without confirmatory testing on the day",
+    "GLP-1 receptor agonists are associated with delayed gastric emptying; current ASA guidance recommends holding the weekly dose for a full week before surgery when feasible, which should be applied explicitly to dose timing and NPO counseling",
+    "Common herbal supplements (ginkgo, fish oil) carry bleeding risk and should be addressed in preoperative medication reconciliation",
+    "Apfel scoring (female sex, nonsmoker, history of PONV/motion sickness, planned postoperative opioids) helps standardize PONV risk assessment and prophylaxis planning; when a patient reports vomiting after prior sedation rather than a clearly established history of PONV/motion sickness, this should be documented as a reasonable surrogate for the criterion rather than a verified classic match",
+    "This case models a patient-vs-chart mismatch: the intake form marked family history 'noncontributory,' which does not reflect the family anesthetic history disclosed verbally, underscoring the importance of directly eliciting this history through specific questioning rather than relying on the record alone"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "medication_list",
+    "title": "Current Outpatient Medication List",
+    "date": "Today",
+    "author": "EHR Medication Reconciliation",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Semaglutide",
+        "1 mg",
+        "Subcutaneous injection",
+        "Once weekly"
+       ]
+      },
+      {
+       "cells": [
+        "Sumatriptan",
+        "50 mg",
+        "Oral",
+        "PRN migraine, max 200mg/day"
+       ]
+      },
+      {
+       "cells": [
+        "Ginkgo biloba",
+        "120 mg",
+        "Oral",
+        "Once daily"
+       ]
+      },
+      {
+       "cells": [
+        "Fish oil (omega-3)",
+        "2000 mg",
+        "Oral",
+        "Once daily"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Pre-operative Laboratory Panel",
+    "date": "3 weeks ago",
+    "author": "Outpatient Lab Services",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "6.8",
+        "x10^3/uL",
+        "4.0-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "13.4",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hematocrit",
+        "40.1",
+        "%",
+        "36.0-46.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "245",
+        "x10^3/uL",
+        "150-400"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mEq/L",
+        "135-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mEq/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.72",
+        "mg/dL",
+        "0.6-1.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Glucose (fasting)",
+        "91",
+        "mg/dL",
+        "70-99"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Hemoglobin A1c",
+    "date": "3 weeks ago",
+    "author": "Outpatient Lab Services",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "5.4",
+        "%",
+        "<5.7"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Home Blood Pressure Log",
+    "date": "Past 2 weeks",
+    "author": "Patient-reported, uploaded via portal",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "BP (mmHg)",
+      "HR (bpm)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Day -14",
+        "128/80",
+        "72"
+       ]
+      },
+      {
+       "cells": [
+        "Day -11",
+        "132/84",
+        "78"
+       ]
+      },
+      {
+       "cells": [
+        "Day -8",
+        "122/76",
+        "70"
+       ]
+      },
+      {
+       "cells": [
+        "Day -5",
+        "118/74",
+        "68"
+       ]
+      },
+      {
+       "cells": [
+        "Day -2",
+        "124/78",
+        "74"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "chart",
+    "title": "Weekly Semaglutide Dosing and Weight Trend",
+    "date": "Past 3 months",
+    "author": "Patient-reported / pharmacy refill history",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Weeks ago",
+     "yLabel": "Weight (lb)",
+     "series": [
+      {
+       "name": "Weight (lb)",
+       "points": [
+        {
+         "x": "12",
+         "y": 225
+        },
+        {
+         "x": "9",
+         "y": 221
+        },
+        {
+         "x": "6",
+         "y": 217
+        },
+        {
+         "x": "3",
+         "y": 214
+        },
+        {
+         "x": "0",
+         "y": 212
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Oral Surgery Sedation Record (External, Patient-Reported Summary)",
+    "date": "8 years ago",
+    "author": "Patient recollection, no external records obtained",
+    "release": {
+     "when": "fact",
+     "ref": "f6"
+    },
+    "body": "Per patient report: outpatient IV sedation for third molar extraction at approximately age 28. Patient recalls severe nausea and multiple episodes of vomiting in recovery lasting several hours, delaying discharge. No records available from the oral surgery office; patient did not require hospital transfer. No other complications recalled by patient (no fever, no muscle rigidity reported by patient for this specific event)."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Chart Note: Family and Social History Section",
+    "date": "Today, prior to visit",
+    "author": "Intake coordinator",
+    "release": {
+     "when": "start"
+    },
+    "body": "Family history: noncontributory per intake questionnaire (patient marked 'no' to family history of anesthesia problems on standard intake form). No further detail recorded. Social history: works as veterinary technician, nonsmoker, occasional alcohol (1-2 drinks/week), lives with partner and two dogs."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Pre-anesthesia telephone/video assessment prior to outpatient right knee arthroscopy with meniscal repair, scheduled in 6 days"
+   },
+   {
+    "label": "Problem list",
+    "value": "Migraine without aura; Obesity (BMI 33); Right knee medial meniscus tear"
+   },
+   {
+    "label": "Medications",
+    "value": "Semaglutide 1mg SC weekly; Sumatriptan 50mg PO PRN; Ginkgo biloba 120mg PO daily; Fish oil 2000mg PO daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 124/78 mmHg, HR 72 bpm, SpO2 99%, Weight 212 lb, Height 65 in, BMI 33 (recorded at pre-op lab visit 3 weeks ago)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per patient report"
+   },
+   {
+    "label": "Care team",
+    "value": "Orthopedic surgeon (Dr. Alvarez); Primary care provider (Dr. Nguyen); Anesthesia care team to be assigned day of surgery"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient procedure, standard presumption)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "pre-anesthesia assessment",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for call",
+    "chart": "Patient presents for pre-anesthesia assessment prior to scheduled right knee arthroscopy with meniscal repair in 6 days.",
+    "says": "Hi! I'm just here for that call before my knee surgery next week, right? I figured this would be pretty quick.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "surgical plan",
+    "chart": "Scheduled for outpatient right knee arthroscopy with meniscal repair in 6 days, performed by orthopedic surgeon.",
+    "says": "I tore the meniscus in my right knee playing softball. Dr. Alvarez is doing the scope and repair next week.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f3",
+    "category": "pmh",
+    "topic": "general health",
+    "chart": "Patient reports no major medical problems aside from migraines and obesity; denies heart, lung, or kidney disease.",
+    "says": "Overall I'm pretty healthy. Just my migraines, and I know I need to lose some weight, which is why I'm on the medication.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "pmh",
+    "topic": "migraine history",
+    "chart": "History of migraine without aura, treated with sumatriptan PRN, roughly 2-3 episodes per month, well controlled.",
+    "says": "I get migraines maybe two or three times a month. The sumatriptan usually knocks it out within an hour or two.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f5",
+    "category": "medications",
+    "topic": "weight-loss medication",
+    "chart": "Takes semaglutide 1mg subcutaneous weekly for weight management, last dose 5 days prior to this visit.",
+    "says": "I take that semaglutide shot once a week, Sundays usually, for my weight. I had my last one five days ago.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "prior sedation experience",
+    "chart": "History of severe nausea and prolonged vomiting after IV sedation for third molar extraction approximately 8 years ago; no hospital transfer required.",
+    "says": "The one time I had sedation, for my wisdom teeth, I threw up for hours afterward. It was awful, worst part of the whole thing.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "breathing during sleep",
+    "chart": "Denies snoring, witnessed apneas, or excessive daytime sleepiness per bed partner report.",
+    "says": "My partner's never said anything about me snoring or stopping breathing. I don't feel unusually tired during the day either.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "chest symptoms",
+    "chart": "Denies chest pain, palpitations, orthopnea, or syncope.",
+    "says": "No chest pain, no fainting spells, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "heartburn and reflux",
+    "chart": "Denies gastroesophageal reflux symptoms.",
+    "says": "No heartburn or acid reflux, never really had that problem.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "family",
+    "topic": "relative's surgery complication",
+    "chart": "Reports maternal uncle experienced a severe hyperthermic reaction with near-fatal outcome during anesthesia for an appendectomy; event not previously documented in patient's chart.",
+    "says": "Oh, actually now that you mention it — my mom always talks about her brother, my uncle, who nearly died during his appendix surgery years ago. She said his temperature shot up really high and it was really scary. Nobody's ever asked me about that before.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "family",
+    "topic": "relative's medical bracelet",
+    "chart": "Reports a cousin was advised by a physician to wear a medical alert bracelet, reportedly related to the same family anesthetic reaction; patient does not know the specific diagnosis.",
+    "says": "And my cousin on that side was told to wear one of those medical bracelet things, I think because of something similar. I never really understood why.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "family",
+    "topic": "understanding of family history",
+    "chart": "Patient states no physician has previously explained the significance of the family anesthetic history to her; it has never been discussed as relevant to her own care.",
+    "says": "Honestly nobody's ever sat down and explained what that whole thing with my uncle actually meant, or if it matters for me.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "medications",
+    "topic": "herbal supplement use",
+    "chart": "Takes ginkgo biloba 120mg daily, started for 'brain health,' ongoing for over a year.",
+    "says": "I take ginkgo every day, I read it's good for memory and focus.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "fish oil use",
+    "chart": "Takes high-dose fish oil 2000mg daily for general health/joint health.",
+    "says": "And I take fish oil too, a pretty big dose, for my joints and heart health.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "supplement perioperative discussion",
+    "chart": "Patient has not been previously advised to stop ginkgo or fish oil before surgery.",
+    "says": "Nobody's told me to stop taking any of my vitamins or supplements before surgery.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No allergies to any medications that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works full-time as a veterinary technician.",
+    "says": "I'm a vet tech, I work at an animal clinic, mostly dogs and cats, sometimes exotics.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "tobacco use",
+    "chart": "Denies any tobacco or nicotine product use.",
+    "says": "I've never smoked, not even vaping.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks 1-2 alcoholic beverages per week, socially.",
+    "says": "I might have a glass of wine or a beer once or twice a week, nothing heavy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "substance",
+    "topic": "recreational drug use",
+    "chart": "Denies any recreational or illicit drug use.",
+    "says": "No, I don't use any recreational drugs.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "hpi",
+    "topic": "functional activity level",
+    "chart": "Reports good functional capacity: walks 2 miles daily, climbs stairs without limitation except for recent knee pain affecting walking distance slightly.",
+    "says": "I usually walk my dogs about two miles a day, though the knee's been slowing me down lately. I can still do stairs fine.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "bleeding or bruising history",
+    "chart": "Denies history of easy bruising, prolonged bleeding, or bleeding disorders in self or family.",
+    "says": "I don't bruise easily or bleed a lot, nothing like that runs in my family that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "sexual",
+    "topic": "pregnancy status",
+    "chart": "Not pregnant; last menstrual period 10 days prior; uses copper IUD for contraception.",
+    "says": "I'm definitely not pregnant, I have an IUD, and my last period was about ten days ago.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "hpi",
+    "topic": "anxiety about surgery",
+    "chart": "Reports mild anticipatory nervousness about anesthesia, mainly related to fear of repeat nausea, otherwise not anxious about the procedure itself.",
+    "says": "I'm not really scared of the surgery, I just really do not want to throw up again like last time.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "recent illness",
+    "chart": "Denies recent fever, cough, cold symptoms, or COVID-19 exposure in the past two weeks.",
+    "says": "I haven't been sick lately, no cold or fever or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "psh",
+    "topic": "prior surgeries",
+    "chart": "No prior surgeries other than the wisdom tooth extraction under IV sedation 8 years ago; no prior general anesthesia.",
+    "says": "Besides my wisdom teeth, I've never had any other surgery or been put under before.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "nutrition",
+    "topic": "typical appetite and GI symptoms",
+    "chart": "Reports normal appetite, no early satiety, bloating, or nausea currently; last bowel movement normal, yesterday.",
+    "says": "My appetite's normal, I ate dinner just fine last night, no stomach issues going on right now.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "adherence",
+    "topic": "fasting plan awareness",
+    "chart": "Patient aware she needs to fast before surgery but unsure of exact timing; has not yet received written instructions.",
+    "says": "I know I'm supposed to not eat for a while before, but I don't remember exactly how many hours.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "other",
+    "topic": "transportation after surgery",
+    "chart": "Has arranged for partner to drive her home and stay with her overnight after the procedure.",
+    "says": "My partner's taking the day off to drive me home and stay with me that night.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "pet exposure at work",
+    "chart": "Reports no recent animal bites, scratches, or zoonotic illness exposure at work relevant to this surgery.",
+    "says": "Had a cat scratch me last week at work, just a little one, nothing serious, already healed up.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "ros",
+    "topic": "dental work recently",
+    "chart": "No recent dental procedures or loose teeth.",
+    "says": "No new dental work recently, my teeth are fine.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "expectations for the call",
+    "chart": "Patient initially expected this visit to be a brief formality and is mildly surprised by the depth of questions, particularly about family history.",
+    "says": "I honestly thought this was just going to be a quick check-the-box kind of call!",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f10",
+    "artifactId": "d7",
+    "patientClaim": "Patient discloses, when asked directly about family anesthesia problems, that her maternal uncle nearly died with a very high fever during anesthesia for an appendectomy, and a cousin was told to wear a medical alert bracelet.",
+    "recordEvidence": "Intake questionnaire on file states family history is 'noncontributory' and that the patient marked 'no' to family history of anesthesia problems.",
+    "teachingPoint": "Standardized intake checkboxes can miss clinically critical history; a sincere 'no' on a form may simply reflect that the patient never recognized a vague family story as relevant. Direct, specific questioning by the anesthesia provider is essential and can reveal findings the written record misses entirely."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a detailed family anesthesia history using targeted, specific questioning (not relying on intake forms alone) and recognize features suggestive of malignant hyperthermia susceptibility.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f12"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o2",
+    "text": "Identify a patient-vs-chart mismatch between a 'noncontributory' intake family history and significant verbally disclosed family anesthetic history, and understand why screening tools can miss critical findings.",
+    "factIds": [
+     "f10"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o3",
+    "text": "Formulate an appropriate escalation and anesthetic plan for suspected malignant hyperthermia susceptibility, recognizing this decision requires collaboration with the supervising anesthesiologist and is outside independent CRNA scope to finalize alone.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f12"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o4",
+    "text": "Assess and risk-stratify for postoperative nausea and vomiting using prior sedation history and standard risk scoring, and propose multimodal prophylaxis.",
+    "factIds": [
+     "f6",
+     "f24"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Evaluate perioperative considerations related to GLP-1 receptor agonist therapy, including dosing timeline, current GI symptoms, and implications for aspiration risk and NPO planning.",
+    "factIds": [
+     "f5",
+     "f27"
+    ],
+    "actionIds": [
+     "a12",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Perform a remote airway and OSA risk screening appropriate to a telehealth pre-anesthesia visit and correctly identify low-risk findings as well as reassuring functional capacity.",
+    "factIds": [
+     "f7",
+     "f21"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a13"
+    ]
+   },
+   {
+    "id": "o7",
+    "text": "Identify perioperative bleeding-risk medications (ginkgo biloba, high-dose fish oil) during medication reconciliation and recommend appropriate preoperative management.",
+    "factIds": [
+     "f13",
+     "f14",
+     "f15"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Hannah Voss",
+   "age": 36,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "White",
+   "occupation": "Veterinary technician",
+   "language": "English",
+   "appearance": "A woman in her mid-30s with shoulder-length brown hair pulled into a ponytail, wearing a casual zip-up fleece, seated at a kitchen table with a coffee mug nearby. Lighting is bright and even; her affect is upbeat and relaxed, with occasional glances off-camera toward a dog heard briefly in the background.",
+   "portrait": "/portraits/crna-hannah-voss-knee-arthroscopy.jpg"
+  },
+  "persona": {
+   "personality": "Cheerful, practical, and a bit of a problem-solver; approaches the call with casual confidence and light humor.",
+   "communicationStyle": "Direct and conversational, uses everyday language, answers questions readily once asked but doesn't volunteer background family history because she doesn't see it as relevant.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Relaxed and mildly impatient, expecting a quick formality; becomes more attentive and slightly concerned once the conversation turns to her family history and its possible significance.",
+   "background": "Grew up in rural Wisconsin, has worked at the same small-animal veterinary clinic for 10 years, lives with her partner and two rescue dogs, enjoys softball league which is how she injured her knee, close with her mother who tells family stories but rarely explains medical details.",
+   "speechExamples": [
+    "I figured this would be a pretty quick call, honestly!",
+    "Yeah, no, I've never had surgery before, just the wisdom teeth thing.",
+    "Oh, now that you ask, my mom always tells this story about my uncle...",
+    "Wait, is that actually something I should be worried about for my own surgery?",
+    "I just really don't want to spend my recovery throwing up like last time."
+   ],
+   "concerns": [
+    "Avoiding another severe nausea/vomiting episode like after her wisdom teeth",
+    "Making sure the knee surgery stays on schedule since she already arranged time off work",
+    "Not fully understanding what, if anything, the family history means for her own anesthesia risk",
+    "Wanting clear, simple instructions about eating/drinking before surgery and her medications"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the student registered nurse anesthetist (SRNA) conducting a telehealth pre-anesthesia assessment for Hannah Voss, a 36-year-old woman scheduled for outpatient right knee arthroscopy with meniscal repair in 6 days. Review her history, airway/cardiopulmonary and OSA risk, prior anesthesia experiences, medications and supplements, and fasting plan, and formulate a documented anesthesia plan in collaboration with the supervising anesthesia team.",
+   "chiefComplaint": "Pre-anesthesia assessment prior to scheduled outpatient right knee arthroscopy with meniscal repair.",
+   "openingLine": "Hi! I'm just here for that call before my knee surgery next week, right? I figured this would be pretty quick.",
+   "tasks": [
+    "Conduct a structured pre-anesthesia history including prior anesthesia and sedation experiences and family history",
+    "Perform a remote airway examination and OSA risk screening (STOP-BANG) using camera-based maneuvers and patient report",
+    "Reconcile medications and supplements with the patient and provide fasting instructions",
+    "Assess anesthesia-related risk factors and determine appropriate escalation or consultation",
+    "Risk-stratify for postoperative nausea and vomiting and propose a prophylaxis approach"
+   ],
+   "timeLimitMin": 25
+  },
+  "setting": "Telehealth video visit; patient at home at her kitchen table in rural Wisconsin, 6 days before scheduled outpatient knee arthroscopy",
+  "specialty": "Nurse Anesthesia (CRNA) / Anesthesiology",
+  "summary": "A 36-year-old woman with obesity, migraines, and a prior severe post-sedation nausea/vomiting episode presents for a telehealth pre-anesthesia assessment before outpatient knee arthroscopy. The case centers on eliciting a previously undocumented family history suggestive of malignant hyperthermia susceptibility, recognizing a mismatch between the 'noncontributory' intake form and the verbally disclosed history, and appropriately escalating this finding to the anesthesia care team while also addressing GLP-1 agonist timing, bleeding-risk supplements, and PONV risk.",
+  "title": "Pre-Anesthesia Assessment Uncovering Possible Malignant Hyperthermia Family History Before Knee Arthroscopy",
+  "professions": [
+   "crna"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

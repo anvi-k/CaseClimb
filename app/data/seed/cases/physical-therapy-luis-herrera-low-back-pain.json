@@ -1,0 +1,735 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Vital signs review (from chart)",
+    "result": "BP 128/82 mmHg, HR 76 bpm, RR 14, Temp 98.2°F, reported via home cuff at urgent care visit 3 weeks ago; no vitals indicating acute illness",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "record",
+    "name": "Review urgent care X-ray report",
+    "result": "Lumbar spine X-ray (3 weeks ago): mild degenerative disc space narrowing L4-L5, no fracture, no spondylolisthesis, vertebral body heights preserved, no destructive lesion",
+    "importance": "important",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "test",
+    "name": "Red flag screening interview",
+    "result": "Patient denies fever, unexplained weight loss, history of cancer, IV drug use, recent infection, saddle anesthesia, bowel/bladder incontinence, bilateral leg weakness, or trauma beyond the lifting incident",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Camera observation of posture and gait entering/exiting frame",
+    "result": "Mild forward-flexed guarded posture while standing; slightly slow, stiff gait; no visible limp or foot drop; able to walk without assistive device",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "test",
+    "name": "Patient-guided active lumbar flexion",
+    "result": "Reaches roughly mid-shin reports pulling/sharp pain centrally and to the right at end range; stops short of full flexion due to pain",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Patient-guided active lumbar extension",
+    "result": "Extension to about 15 degrees reported, pain eases and centralizes toward midline; patient states it 'feels better' after a few reps",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "test",
+    "name": "Patient-guided active lumbar side-bending and rotation",
+    "result": "Right side-bending mildly limited by pain; left side-bending and rotation both directions near full with mild discomfort only; no sharp or radiating pain provoked",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "test",
+    "name": "Patient-performed straight leg raise (supine, self or partner-assisted)",
+    "result": "Negative bilaterally to approximately 70-80 degrees; no reproduction of leg pain, no tingling",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "test",
+    "name": "Self-reported dermatome/myotome screen (sensation and strength)",
+    "result": "Reports normal sensation throughout both legs and feet; able to perform heel walk, toe walk, and single-leg heel raise bilaterally without weakness",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Oswestry Disability Index (ODI) questionnaire score review",
+    "result": "ODI = 38% (moderate disability), consistent with difficulty sitting, lifting, and standing for prolonged periods",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Fear-avoidance beliefs discussion",
+    "result": "Patient expresses strong fear that bending or lifting will 'break' his back further; has been avoiding nearly all spinal movement and bed-resting most of the day since the X-ray report",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review of prior urgent care visit note",
+    "result": "Urgent care note (3 weeks ago): advised rest, prescribed cyclobenzaprine and naproxen, recommended follow-up with PT; no neurologic deficits documented on that exam",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review of current medication list",
+    "result": "Naproxen 500 mg twice daily as needed, cyclobenzaprine 5 mg at bedtime as needed; no other prescription medications listed",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Repeated movement testing in extension (symptom response over several reps)",
+    "result": "After 8-10 reps of standing extension, central and right-sided pain decreases from 6/10 to 3/10 with no peripheralization",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "Lumbar Spine X-ray Report",
+    "author": "Allentown Urgent Care Radiology",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "LUMBAR SPINE, 3 VIEWS: Vertebral body heights and alignment are preserved. Mild disc space narrowing at L4-L5 with mild degenerative disc changes. No acute fracture. No spondylolisthesis or spondylolysis identified. No destructive osseous lesion. IMPRESSION: Mild degenerative disc disease L4-L5, no acute fracture."
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Urgent Care Visit Note",
+    "author": "Allentown Urgent Care, PA-C",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "44-year-old male presents with acute low back pain after lifting a pallet at work 2 days prior. Pain central and right paraspinal, denies radiation below knee, denies saddle numbness, denies bowel/bladder changes. Neurologic exam: strength 5/5 bilateral lower extremities, sensation intact, reflexes symmetric, negative straight leg raise. Lumbar X-ray obtained given occupational lifting requirement and persistent pain; showed mild degenerative disc changes, no fracture. Plan: NSAID, muscle relaxant, work restriction to light duty, referral to physical therapy. Return precautions reviewed for red flag symptoms."
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "author": "Allentown Urgent Care",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Naproxen",
+        "500 mg",
+        "Oral",
+        "Twice daily as needed for pain"
+       ]
+      },
+      {
+       "cells": [
+        "Cyclobenzaprine",
+        "5 mg",
+        "Oral",
+        "At bedtime as needed for muscle spasm"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "form",
+    "title": "Oswestry Disability Index (ODI) Questionnaire Result",
+    "author": "Patient self-report, intake",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "body": "Oswestry Disability Index total score: 38% - Moderate disability. Highest-scored sections: lifting (3/5), sitting (3/5), standing (2/5), personal care (1/5), walking (1/5), social life (2/5), sleeping (1/5), pain intensity (3/5), travelling (2/5), employment/homemaking (1/5)."
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "Light Duty Work Restriction Note",
+    "author": "Allentown Urgent Care",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a1"
+    },
+    "body": "Patient restricted to light duty: no lifting greater than 10 lbs, no repetitive bending, duration 4 weeks from date of visit, re-evaluate at follow-up. Employer: regional distribution warehouse."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Initial physical therapy evaluation - low back pain following work lifting injury"
+   },
+   {
+    "label": "Problem list",
+    "value": "Acute low back pain (3 weeks); mild lumbar degenerative disc disease L4-L5 per imaging"
+   },
+   {
+    "label": "Medications",
+    "value": "Naproxen 500 mg PO twice daily PRN; Cyclobenzaprine 5 mg PO at bedtime PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 128/82, HR 76, RR 14, Temp 98.2°F (3 weeks ago, urgent care)"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care: unassigned; Urgent care PA-C (referring); Physical Therapy (new consult)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "initial evaluation",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient reports 3 weeks of low back pain after lifting a pallet awkwardly at work",
+    "says": "My lower back has been killing me for about three weeks now, ever since I twisted wrong lifting a pallet at the warehouse.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "pain location",
+    "chart": "Pain is central lumbar with right-sided predominance, no radiation below the knee",
+    "says": "It's mostly right in the middle of my lower back, a little more on the right side. It doesn't go down my leg or anything.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "pain severity",
+    "chart": "Pain rated 6/10 at its worst, variable through the day",
+    "says": "Right now it's about a 6 out of 10. Some mornings it's worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "aggravating factors",
+    "chart": "Pain worsens with bending forward and prolonged sitting",
+    "says": "Bending over makes it a lot worse, and sitting too long, like at my kitchen table, really sets it off.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "easing factors",
+    "chart": "Pain improves with walking",
+    "says": "Funny thing is, walking actually makes it feel better, not worse.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "work status",
+    "chart": "Currently on light duty work restriction, no lifting over 10 lbs, for 4 weeks per urgent care note",
+    "says": "They've got me on light duty right now at work, nothing over 10 pounds, no bending and lifting like I normally do.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "psychosocial",
+    "topic": "job security worry",
+    "chart": "Expresses fear of losing employment if unable to return to full lifting duties within one month",
+    "says": "I'm scared if I can't get back to full lifting in a month, they might let me go. We really need this job.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "imaging interpretation",
+    "chart": "Patient believes X-ray findings mean his spine is deteriorating or 'crumbling'",
+    "says": "The X-ray said I've got degenerating discs. The doctor at urgent care kind of just said it quick, but I looked it up and it sounds like my spine is basically falling apart.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "adherence",
+    "topic": "activity avoidance",
+    "chart": "Has been resting in bed most of the day, avoiding all bending movements since receiving X-ray results",
+    "says": "Ever since I saw that report I've mostly been lying in bed. I'm scared if I bend wrong I'll really mess something up.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "adherence",
+    "topic": "back belt use",
+    "chart": "Wearing a lumbar back belt/brace continuously, including at rest",
+    "says": "I bought one of those back support belts online, I wear it pretty much all day, even when I'm just sitting at home.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "leg symptoms",
+    "chart": "Denies numbness, tingling, or weakness in either leg",
+    "says": "No numbness or tingling or anything weird in my legs. They feel normal.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "bladder and bowel function",
+    "chart": "Denies any change in bladder or bowel control",
+    "says": "No, everything's normal down there, no problems going to the bathroom.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "saddle sensation",
+    "chart": "Denies numbness in the groin or inner thigh/saddle region",
+    "says": "No, I don't feel numb between my legs or anything like that.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "fever or illness",
+    "chart": "Denies fever, chills, or recent infection",
+    "says": "No fever, I haven't been sick or anything.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "cancer history",
+    "chart": "No personal history of cancer",
+    "says": "No, I've never had cancer or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "hpi",
+    "topic": "weight change",
+    "chart": "Denies unintentional weight loss",
+    "says": "My weight's been the same, I haven't lost any without trying.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "hpi",
+    "topic": "trauma mechanism",
+    "chart": "Pain began after lifting a pallet with a twisting motion; denies fall or high-energy trauma",
+    "says": "I didn't fall or get hit by anything, I just twisted funny lifting a heavy pallet off a low shelf.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "hpi",
+    "topic": "onset timing",
+    "chart": "Pain began the same day as the lifting incident, gradually worsened over following 2 days",
+    "says": "It started hurting right after I lifted it, but it really got bad over the next couple days.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "medications",
+    "topic": "current medications",
+    "chart": "Taking naproxen 500 mg twice daily and cyclobenzaprine 5 mg at bedtime, both as needed",
+    "says": "I take a naproxen pill twice a day and one of those muscle relaxers at night when I need it.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "adherence",
+    "topic": "medication effectiveness",
+    "chart": "Reports medications provide only partial, temporary relief",
+    "says": "The pills help a little but it comes right back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "psychosocial",
+    "topic": "expectation for scan",
+    "chart": "Hopes PT will order or recommend an MRI to see what's 'really wrong'",
+    "says": "I was kind of hoping you all could get me an MRI, just so we really know what's going on in there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "occupation demands",
+    "chart": "Works as an order picker in a warehouse, job requires frequent lifting up to 50 lbs and bending",
+    "says": "My job's picking orders all day, lots of lifting boxes, sometimes up to 50 pounds, and bending down to grab stuff off low shelves.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "household role",
+    "chart": "Primary financial provider for household; spouse works part-time",
+    "says": "I'm the main one bringing in money for the family, my wife only works part time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "family",
+    "topic": "family back problems",
+    "chart": "Father had chronic low back pain requiring eventual spine surgery in his 60s",
+    "says": "My dad had back trouble his whole life, ended up getting surgery on his spine when he got older.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Denies tobacco use",
+    "says": "No, I don't smoke.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol socially, 1-2 beers on weekends",
+    "says": "Maybe a beer or two on the weekend when I watch the game, that's about it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f27",
+    "category": "function",
+    "topic": "sleep impact",
+    "chart": "Reports difficulty finding comfortable sleep position, waking 1-2 times nightly due to pain",
+    "says": "I have a hard time getting comfortable at night, I wake up once or twice because of the pain.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "driving tolerance",
+    "chart": "Reports increased pain after sitting to drive for more than 20 minutes",
+    "says": "If I drive more than like 20 minutes my back starts aching bad.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "goals",
+    "topic": "return to work goal",
+    "chart": "Primary goal is returning to full warehouse lifting duties within the month without re-injury",
+    "says": "My main goal is just getting back to doing my full job again before they run out of patience with the light duty thing.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "psychosocial",
+    "topic": "catastrophizing beliefs",
+    "chart": "States belief that any bending could cause permanent spinal damage or paralysis",
+    "says": "I keep thinking if I bend the wrong way one more time, I could end up like paralyzed or something. That's what scares me the most.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f31",
+    "category": "hpi",
+    "topic": "prior back pain episodes",
+    "chart": "Denies any prior significant low back pain episodes before this injury",
+    "says": "No, this is really the first time my back has ever given me trouble like this.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "adherence",
+    "topic": "home exercise attempts",
+    "chart": "Has not attempted any stretching or exercise since the injury due to fear of worsening the condition",
+    "says": "I haven't tried stretching or exercising at all, I didn't want to risk making it worse.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f8",
+    "artifactId": "d1",
+    "patientClaim": "Patient believes the X-ray showing 'mild degenerative disc changes' means his spine is seriously deteriorating or falling apart, and that bending could cause permanent damage.",
+    "recordEvidence": "X-ray report actually states mild degenerative disc narrowing only at L4-L5, no fracture, no destructive lesion, no spondylolisthesis - a common, often age-related finding not indicative of structural failure.",
+    "teachingPoint": "Imaging findings described as 'degenerative' are frequently normal age-related changes and poorly correlate with pain severity or prognosis; clear reassurance and reframing of imaging language is a key part of reducing fear-avoidance and catastrophizing."
+   },
+   {
+    "id": "m2",
+    "factId": "f9",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports he has been resting in bed and avoiding all bending because he fears movement will cause further injury.",
+    "recordEvidence": "Urgent care note documents a normal neurologic exam (5/5 strength, intact sensation, symmetric reflexes, negative SLR) at the time of injury, indicating no evidence supporting a need for strict bed rest or activity avoidance.",
+    "teachingPoint": "Prolonged bed rest and activity avoidance are not supported by exam findings and are associated with worse outcomes in acute non-specific low back pain; early return to normal activity and movement is evidence-based."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Perform a thorough red flag screen to rule out serious spinal pathology (cauda equina, fracture, infection, malignancy) before proceeding with mechanical evaluation.",
+    "factIds": [
+     "f11",
+     "f12",
+     "f13",
+     "f14",
+     "f15",
+     "f16"
+    ],
+    "actionIds": [
+     "a3",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Use patient-guided repeated movement testing (flexion, extension, side-bending, SLR) via video to classify the directional preference and mechanical pattern of the low back pain.",
+    "factIds": [
+     "f4",
+     "f5"
+    ],
+    "actionIds": [
+     "a5",
+     "a6",
+     "a7",
+     "a8",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify and address fear-avoidance beliefs and catastrophizing stemming from misinterpretation of imaging language, and reframe benign degenerative findings appropriately.",
+    "factIds": [
+     "f8",
+     "f9",
+     "f30",
+     "f32"
+    ],
+    "actionIds": [
+     "a2",
+     "a11"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Integrate psychosocial and occupational context (job security fears, physical job demands, disability questionnaire) into the plan of care and prognosis.",
+    "factIds": [
+     "f7",
+     "f22",
+     "f29",
+     "f21"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Recognize and correctly respond to a patient-record mismatch regarding imaging interpretation and activity restriction, communicating findings in a way that reduces fear rather than reinforcing it.",
+    "factIds": [
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a2",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate an appropriate PT diagnosis, prognosis, and graded exercise plan of care emphasizing extension-biased movement, education, and graded return to work, without ordering or requesting MRI outside PT scope.",
+    "factIds": [
+     "f21",
+     "f32"
+    ],
+    "actionIds": [
+     "a6",
+     "a14",
+     "a10"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Luis Herrera",
+   "age": 44,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Dominican-American",
+   "occupation": "Warehouse order picker",
+   "language": "English (primary), Spanish spoken at home",
+   "appearance": "A sturdily built man in his mid-40s with short dark hair, visible on camera wearing a gray t-shirt, sitting carefully upright on the edge of a couch in a modestly furnished living room with a visible back brace on the armrest nearby. His expression is earnest and a bit tense, shifting position occasionally as if uncomfortable.",
+   "portrait": "/portraits/physical-therapy-luis-herrera-low-back-pain.jpg"
+  },
+  "persona": {
+   "personality": "Hardworking, earnest, and a bit anxious; values providing for his family and takes his job responsibilities seriously.",
+   "communicationStyle": "Direct and respectful, sometimes downplays fear until asked directly, uses plain non-medical language.",
+   "healthLiteracy": "low",
+   "emotionalState": "Anxious about his job and worried his back is seriously damaged, eager for reassurance or a definitive scan.",
+   "background": "Luis has worked at the same regional distribution warehouse for eight years as an order picker, a physically demanding job involving constant lifting and bending. He and his wife, who works part-time, are raising two children in Allentown, Pennsylvania. He takes pride in being a reliable provider and rarely misses work.",
+   "speechExamples": [
+    "I just want to know what's really wrong before I go back to lifting heavy stuff.",
+    "Walking actually feels better than sitting, which is weird to me.",
+    "I don't want to end up like my dad, stuck with a bad back forever.",
+    "If I can't do my job in a month, I don't know what we'll do."
+   ],
+   "concerns": [
+    "Fear that his spine is deteriorating based on the X-ray report wording",
+    "Worry about losing his job if he can't return to full duty within a month",
+    "Hope that an MRI will reveal 'what's really wrong'",
+    "Confusion about whether bending or moving will make his back worse"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the physical therapy student seeing Luis Herrera, a 44-year-old warehouse worker, for an initial telehealth evaluation of low back pain that started 3 weeks ago after a lifting injury at work. He was seen at urgent care, given an X-ray, and referred to PT. Conduct a focused history and remote movement-based examination and begin formulating a plan of care.",
+   "chiefComplaint": "Low back pain for 3 weeks following a work lifting injury",
+   "openingLine": "Hi, thanks for seeing me. My lower back has been killing me for about three weeks now, ever since I twisted wrong lifting a pallet at work.",
+   "tasks": [
+    "Take a focused history of the presenting concern",
+    "Guide the patient through camera-based active movement testing and a self-performed straight leg raise",
+    "Explore the patient's beliefs about his imaging findings and concerns about activity",
+    "Review functional limitations and occupational demands with the patient",
+    "Establish an initial PT diagnosis and agree a graded home exercise and return-to-work plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "summary": "\"This case portrays a 44-year-old warehouse worker with acute non-specific low back pain and a directional preference toward extension, complicated by fear-avoidance behavior and catastrophizing driven by misinterpretation of 'degenerative' imaging language. It teaches PT students to screen red flags via telehealth, perform camera-guided mechanical movement testing, identify a patient-chart mismatch around imaging beliefs and activity avoidance, and build a biopsychosocially-informed plan of care emphasizing education and graded exercise rather than imaging or passive rest.\"",
+  "title": "\"Fear-Avoidant Acute Low Back Pain with Extension Directional Preference in a Warehouse Worker\"",
+  "answerKey": {
+   "primaryProblem": "Acute non-specific (mechanical) low back pain with extension directional preference and significant fear-avoidance/catastrophizing behavior, in the setting of benign age-related degenerative imaging findings",
+   "differential": [
+    "Mechanical/discogenic low back pain with directional preference (most consistent with findings)",
+    "Lumbar facet or sacroiliac referred pain (less likely given clear directional preference and centralization)",
+    "Lumbar radiculopathy/disc herniation with nerve root involvement (ruled out: negative SLR, no dermatomal symptoms, normal strength/sensation)",
+    "Cauda equina syndrome (ruled out: no saddle anesthesia, no bowel/bladder dysfunction, no bilateral leg weakness)",
+    "Spinal fracture, infection, or malignancy (ruled out: no trauma beyond lifting, no fever, no weight loss, no cancer history, X-ray without fracture or destructive lesion)"
+   ],
+   "keyFindings": [
+    "3 weeks of central/right-sided low back pain after a lifting injury, worse with flexion and sitting, eased by walking and extension",
+    "Repeated extension testing reduces pain from 6/10 to 3/10 without peripheralization, indicating an extension-biased directional preference",
+    "Negative bilateral straight leg raise, normal strength/sensation/reflex screen, no red flag symptoms on history",
+    "ODI 38% (moderate disability), driven by lifting, sitting, and standing limitations",
+    "Significant fear-avoidance and catastrophizing beliefs stemming from misinterpretation of 'mild degenerative disc changes' on X-ray, leading to bed rest and continuous back belt use",
+    "Mismatch: patient believes imaging shows serious spinal deterioration and avoids all bending, but the X-ray and urgent care exam show benign findings and a normal neurologic exam not supporting bed rest"
+   ],
+   "plan": [
+    "Provide clear, reassuring education reframing the X-ray finding of 'mild degenerative disc changes' as a common, often age-related finding not indicative of structural failure or impending paralysis",
+    "Counsel against prolonged bed rest and continuous back belt use; encourage gradual resumption of normal movement and activity as tolerated",
+    "Initiate an extension-biased home exercise program (e.g., prone press-ups/McKenzie extension progressions) based on positive response to repeated extension testing, with close monitoring for any peripheralization",
+    "Address fear-avoidance beliefs directly using graded exposure to bending-type movements and pain neuroscience education",
+    "Collaborate on a graded, criterion-based return-to-work plan with the employer light-duty restriction, progressing lifting tolerance over several weeks rather than fixed calendar deadline",
+    "Reassess ODI and movement findings at follow-up visits to track progress; no indication at this time for MRI or referral back to physician given reassuring red flag screen and clear mechanical presentation",
+    "Educate that if red flag symptoms (saddle numbness, bowel/bladder changes, bilateral leg weakness/numbness, fever, unexplained weight loss) develop, prompt medical referral is needed"
+   ],
+   "redFlags": [
+    "Saddle anesthesia",
+    "Bowel or bladder incontinence or retention",
+    "Bilateral lower extremity weakness or numbness",
+    "Fever or signs of infection",
+    "Unexplained weight loss or history of cancer",
+    "Significant trauma or suspected fracture"
+   ],
+   "educationPoints": [
+    "Degenerative disc findings on imaging are extremely common with age and poorly correlate with pain or disability; language used to describe imaging can strongly influence patient fear and behavior",
+    "Prolonged bed rest and activity avoidance worsen outcomes in acute non-specific low back pain; early, graded return to movement is evidence-based",
+    "Directional preference testing (repeated movements) is a valid, low-cost tool to guide exercise selection in mechanical low back pain, feasible via telehealth with patient self-report of symptom response",
+    "A thorough red flag screen can be performed effectively through history alone in a telehealth visit when access to in-person neurologic testing is limited",
+    "Addressing fear-avoidance beliefs and job-related psychosocial stressors is essential to functional recovery and should be integrated into the plan of care alongside exercise prescription"
+   ]
+  },
+  "specialty": "Physical Therapy - Orthopedic/Musculoskeletal",
+  "setting": "Telehealth video visit; patient at home in his living room in Allentown, Pennsylvania",
+  "professions": [
+   "physical-therapy"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

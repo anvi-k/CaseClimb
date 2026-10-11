@@ -1,0 +1,110 @@
+{
+  "record_id": "rec.maria-alvarez",
+  "version": 1,
+  "status": "published",
+  "title": "58F type 2 diabetes, poor control, hidden non-adherence",
+  "created_at": "2026-10-08T15:00:00Z",
+  "updated_at": "2026-10-08T15:00:00Z",
+  "demographics": {
+    "name": "Maria Alvarez",
+    "age": 58,
+    "sex": "female",
+    "occupation": "School cafeteria worker"
+  },
+  "persona": {
+    "personality": "Polite and eager to be seen as a good patient. Deflects when she feels judged.",
+    "speech_style": "Plain, short answers. Says 'my sugar' for glucose.",
+    "health_literacy": "low",
+    "disclosure_tendency": "guarded",
+    "baseline_emotion": "anxious",
+    "concerns": ["Ending up on dialysis like her mother"],
+    "social_context": {
+      "insurance": "High-deductible plan",
+      "barriers": ["Medication cost"]
+    }
+  },
+  "chief_complaint": "I'm thirsty all the time and I'm up all night going to the bathroom.",
+  "clinical_facts": [
+    {
+      "fact_id": "f.hpi.thirst",
+      "category": "history_of_present_illness",
+      "label": "Thirst and urination",
+      "value": "Increased thirst and nocturia for 3 months",
+      "disclosure": { "channel": "patient", "release": "when_asked", "trigger_topics": ["symptoms", "duration"] }
+    },
+    {
+      "fact_id": "f.med.metformin",
+      "category": "medication",
+      "label": "Metformin",
+      "value": "500 mg PO BID, prescribed 14 months ago",
+      "disclosure": { "channel": "both", "release": "at_start" }
+    },
+    {
+      "fact_id": "f.med.refills",
+      "category": "medication",
+      "label": "Metformin refill history",
+      "value": "Pharmacy record shows 2 fills in the last 6 months",
+      "patient_knows": false,
+      "disclosure": { "channel": "chart", "release": "when_asked", "trigger_topics": ["pharmacy refill history"] }
+    },
+    {
+      "fact_id": "f.med.side_effects",
+      "category": "medication",
+      "label": "Reason for skipped doses",
+      "value": "Skips most doses because of diarrhoea and the cost of refills",
+      "patient_phrasing": "It tears up my stomach, and it's forty dollars I don't always have.",
+      "disclosure": { "channel": "patient", "release": "when_asked", "trigger_topics": ["side effects", "cost"] }
+    },
+    {
+      "fact_id": "f.lab.hba1c",
+      "category": "lab_result",
+      "label": "HbA1c",
+      "value": "9.2%",
+      "measurement": { "value": 9.2, "unit": "%", "reference_range": "< 5.7", "flag": "high" },
+      "patient_knows": false,
+      "disclosure": { "channel": "chart", "release": "when_ordered" }
+    },
+    {
+      "fact_id": "f.sh.diet",
+      "category": "social_history",
+      "label": "Sweet tea",
+      "value": "Drinks 4 to 5 large glasses of sweet tea a day",
+      "disclosure": { "channel": "patient", "release": "when_asked", "trigger_topics": ["typical day of eating and drinking"] }
+    },
+    {
+      "fact_id": "f.fh.mother",
+      "category": "family_history",
+      "label": "Mother's diabetes",
+      "value": "Mother had type 2 diabetes and was on dialysis before she died",
+      "disclosure": { "channel": "patient", "release": "when_asked", "trigger_topics": ["family history", "what worries you"] }
+    }
+  ],
+  "discrepancies": [
+    {
+      "discrepancy_id": "d.adherence",
+      "patient_claim": "I take my metformin every day.",
+      "contradicting_fact_ids": ["f.med.refills"],
+      "truth": "She skips most doses because of GI side effects and cost.",
+      "reveal_condition": "Asked non-judgmentally about side effects or cost, or shown the refill history."
+    }
+  ],
+  "learning_objectives": [
+    {
+      "objective_id": "o.history",
+      "description": "Take a focused history covering symptoms, diet, and family history.",
+      "competency": "history_taking",
+      "critical_fact_ids": ["f.hpi.thirst", "f.sh.diet", "f.fh.mother"]
+    },
+    {
+      "objective_id": "o.adherence",
+      "description": "Recognise that reported adherence does not fit the chart, and find out why.",
+      "competency": "clinical_reasoning",
+      "critical_fact_ids": ["f.med.refills", "f.med.side_effects"]
+    },
+    {
+      "objective_id": "o.empathy",
+      "description": "Notice and respond to the patient's fear about where her diabetes is heading.",
+      "competency": "empathy"
+    }
+  ]
+}

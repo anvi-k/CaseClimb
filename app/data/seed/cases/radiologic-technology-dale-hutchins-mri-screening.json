@@ -1,0 +1,897 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Review completed MRI safety screening paper form",
+    "result": "Form submitted at check-in: patient answered 'No' to all implant/device questions, 'No' to prior metal injury, 'No' to claustrophobia. Signed and dated today.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Verify patient identity and imaging order",
+    "result": "Patient confirms name Dale Hutchins, DOB on file, and states he is here for a back scan. Order in RIS: MRI lumbar spine without and with gadolinium contrast, ordered by Dr. Patel for radiculopathy/suspected spinal stenosis, prior lumbar fusion.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Direct screening interview for metal/implants (go beyond paper form)",
+    "result": "On direct questioning patient discloses: spinal fusion hardware (2014), left total knee replacement, transdermal fentanyl patch currently on right upper arm, large tattoo sleeve on left arm. No mention of any eye injury history at this point.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Occupational metal-exposure screening",
+    "result": "Patient reports 20+ years as a pipe welder/metal fabricator; grinds and welds metal regularly. When asked generally about eye protection he says 'yeah I wear the goggles,' downplaying the topic.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Camera inspection of medication patch",
+    "result": "Visual inspection via video shows an intact transdermal patch on the right upper arm; patient confirms it is prescribed fentanyl for chronic back pain. Technologist notes patch has a metallic foil backing.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Camera inspection of skin for tattoos near scan field",
+    "result": "Visual inspection shows a tattoo sleeve covering the left arm from shoulder to wrist; no visible tattoo markings over the lumbar spine region on camera. Patient denies any swelling, burning, or redness in tattooed skin with prior MRI exposure.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review surgical/implant history in chart",
+    "result": "2014 operative note: posterior lumbar fusion L4-S1 with titanium pedicle screws and rods, hardware vendor/model not specified in available records.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review most recent renal function (eGFR) for contrast safety",
+    "result": "eGFR 52 mL/min/1.73m2 (2 months ago), mildly reduced (Stage 3a CKD range). No prior gadolinium reaction on file.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d3",
+     "d5"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Check for documented contrast allergy",
+    "result": "Allergy list reviewed: No known drug or contrast allergies documented.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Claustrophobia and anxiety screening",
+    "result": "Patient reports one prior MRI during which he panicked, asked to be pulled out partway through. Minimizes it today, saying he's 'probably fine now' and does not mention any plan for today's exam.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Pregnancy screening (not applicable)",
+    "result": "Not applicable; patient is male.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review home blood glucose/diabetes control",
+    "result": "Chart notes type 2 diabetes diagnosed 2016, managed with metformin 1000 mg twice daily; last HbA1c 7.4% three months ago.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Review MRI order for consistency with clinical indication",
+    "result": "Order and chart are consistent: lumbar spine MRI without/with contrast for leg pain and suspected recurrent/adjacent-segment stenosis after 2014 fusion.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Document findings and recommendations in technologist note for radiologist",
+    "result": "Note drafted flagging: (1) occupational metal exposure with history of ocular metallic foreign body removal and inconsistent eye protection — recommend orbit X-rays to rule out retained intraorbital metal before MRI; (2) known titanium lumbar hardware, model unconfirmed — generally MR-conditional but may need surgical records clarification and will cause local artifact; (3) transdermal fentanyl patch must be removed immediately before scan and replaced per protocol after; (4) mild renal impairment (eGFR 52) — contrast dose/agent selection and metformin hold instructions to be confirmed with radiologist/ordering provider; (5) significant claustrophobia history with planned non-disclosure — recommend addressing accommodations (coaching, open MRI, or sedation referral) before proceeding.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "form",
+    "title": "MRI Safety Screening Form (patient self-report, paper, completed at check-in)",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Question",
+      "Patient response"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Do you have a cardiac pacemaker or defibrillator?",
+        "No"
+       ]
+      },
+      {
+       "cells": [
+        "Do you have any implanted metal, surgical clips, or devices?",
+        "No"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Have you ever had metal in your eyes (such as from grinding or welding)?",
+        "No"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Do you have any body piercings or tattoos?",
+        "No"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Are you wearing any medication patches?",
+        "No"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Do you feel anxious or claustrophobic in enclosed spaces?",
+        "No"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Operative Note Summary – Lumbar Spine Surgery (2014)",
+    "date": "2014 (8 years prior)",
+    "author": "Orthopedic Surgery, outside hospital",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "body": "Patient underwent posterior lumbar decompression and fusion L4-S1 for degenerative spondylolisthesis. Instrumentation: titanium pedicle screws and connecting rods placed at L4, L5, and S1. Specific hardware manufacturer/model number not recorded in the summary available to this facility; full operative report from outside hospital has been requested but not yet received."
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Basic Metabolic Panel with eGFR",
+    "date": "2 months ago",
+    "author": "Primary Care Clinic Lab",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "139",
+        "mmol/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.4",
+        "mmol/L",
+        "3.5-5.1"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.4",
+        "mg/dL",
+        "0.70-1.30"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "eGFR",
+        "52",
+        "mL/min/1.73m2",
+        "≥60 (normal); 45-59 = mild-to-moderate decrease (Stage 3a CKD)"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Glucose, fasting",
+        "148",
+        "mg/dL",
+        "70-99"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "HbA1c",
+        "7.4",
+        "%",
+        "<5.7 normal; ≥6.5 diabetes"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Metformin",
+        "1000 mg",
+        "Oral",
+        "Twice daily"
+       ]
+      },
+      {
+       "cells": [
+        "Fentanyl transdermal patch",
+        "25 mcg/hr",
+        "Transdermal",
+        "Applied every 72 hours"
+       ]
+      },
+      {
+       "cells": [
+        "Gabapentin",
+        "300 mg",
+        "Oral",
+        "Three times daily"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Once daily"
+       ]
+      },
+      {
+       "cells": [
+        "Atorvastatin",
+        "20 mg",
+        "Oral",
+        "Once daily, at bedtime"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "flowsheet",
+    "title": "eGFR Trend",
+    "date": "last 18 months",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Date",
+     "yLabel": "eGFR (mL/min/1.73m2)",
+     "refLow": 60,
+     "series": [
+      {
+       "name": "eGFR",
+       "points": [
+        {
+         "x": "18 mo ago",
+         "y": 68
+        },
+        {
+         "x": "12 mo ago",
+         "y": 63
+        },
+        {
+         "x": "6 mo ago",
+         "y": 58
+        },
+        {
+         "x": "2 mo ago",
+         "y": 52
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Prior Imaging Visit Note (outside facility, 3 years ago)",
+    "date": "3 years ago",
+    "author": "MRI Technologist, outside imaging center",
+    "release": {
+     "when": "fact",
+     "ref": "f8"
+    },
+    "body": "Patient presented for lumbar MRI. Approximately 4 minutes into acquisition, patient activated call button reporting severe anxiety and inability to continue; exam was aborted and rescheduled with oral anxiolytic premedication, which patient did not pursue at the time. No sedation or accommodation requested for today's visit per current intake."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Pre-MRI safety screening call, 3 days prior to scheduled lumbar spine MRI without/with contrast"
+   },
+   {
+    "label": "Problem list",
+    "value": "Lumbar spondylolisthesis status post L4-S1 fusion (2014); Type 2 diabetes mellitus; Chronic low back/leg pain; Stage 3a chronic kidney disease"
+   },
+   {
+    "label": "Medications",
+    "value": "Metformin 1000 mg BID; Fentanyl transdermal patch 25 mcg/hr q72h; Gabapentin 300 mg TID; Lisinopril 10 mg daily; Atorvastatin 20 mg daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug or contrast allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 134/82, HR 78, Temp 98.2F, Wt 238 lb, Ht 5'10\" (BMI ~34)"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Patel (Primary Care/Ordering), Radiology Department"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable to outpatient imaging)"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "pre-imaging safety screening",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for scan",
+    "chart": "Scheduled for lumbar spine MRI without/with contrast in 3 days for leg pain and suspected spinal stenosis after prior back surgery.",
+    "says": "I'm just calling about my MRI I got coming up for my back and this leg pain I've been having.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "leg pain description",
+    "chart": "Reports radiating pain and numbness down the left leg, worse with standing/walking, ongoing several months.",
+    "says": "My leg's been going numb and shooting pain down to my calf, especially if I'm on my feet too long.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "psh",
+    "topic": "back surgery history",
+    "chart": "Lumbar fusion surgery 2014 for slipped vertebra.",
+    "says": "Yeah I had surgery on my back years back, they put some hardware in there, screws and all that.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "other",
+    "topic": "paper screening form answers",
+    "chart": "Patient marked 'No' to all implant, metal, piercing, patch, and claustrophobia questions on written form.",
+    "says": "I filled out that paper already, didn't think any of that stuff applied to me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "social",
+    "topic": "work with metal",
+    "chart": "Works as a pipe welder/metal fabricator over 20 years.",
+    "says": "I weld pipe for a living, been doing it over twenty years now, lots of grinding and cutting metal too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "eye injury history",
+    "chart": "History of metal sliver removed from left eye in ER approximately 15 years ago.",
+    "says": "Oh, that eye thing? Yeah a piece of metal flew into my eye one time, must've been fifteen years back, they dug it out in the ER.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "social",
+    "topic": "eye protection habits",
+    "chart": "Admits inconsistent use of safety glasses/face shield while grinding, especially earlier in career.",
+    "says": "Honestly... yeah, I didn't always wear the goggles, especially back when I was younger, you get used to it. Didn't think it was a big deal.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "prior scanner experience",
+    "chart": "Panicked during a prior MRI three years ago at an outside facility; exam was stopped partway through.",
+    "says": "I tried one of them tube scans a few years back and about lost it in there, they had to pull me out.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "psychosocial",
+    "topic": "plan for claustrophobia",
+    "chart": "Plans to tough it out without disclosing anxiety or requesting accommodation.",
+    "says": "I figure I'll just white-knuckle it this time, no sense making a fuss about it.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "medications",
+    "topic": "current patch",
+    "chart": "Wears transdermal fentanyl patch 25 mcg/hr, changed every 3 days, currently on right upper arm.",
+    "says": "I got a pain patch on my arm right now, change it every few days.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "other",
+    "topic": "patch backing material",
+    "chart": "Unaware patch backing contains metallic foil.",
+    "says": "I didn't know there was metal in that patch, nobody told me that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "other",
+    "topic": "body art",
+    "chart": "Has a tattoo sleeve on the left arm, done over several sessions at a local shop.",
+    "says": "Yeah I got a whole sleeve done on this arm, took a few sittings to finish.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "tattoo skin reaction history",
+    "chart": "Denies any burning, swelling, or skin reaction in tattooed skin during or after any prior MRI.",
+    "says": "Never had any trouble with the tattoo during a scan, no burning or nothing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "psh",
+    "topic": "knee replacement",
+    "chart": "Left total knee replacement, approximately 5 years ago.",
+    "says": "Oh and I got a fake knee too, left side, had that done maybe five years ago.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "other",
+    "topic": "hardware documentation",
+    "chart": "Does not know the brand or model of his spinal hardware or knee implant; surgery was done out of state.",
+    "says": "No idea what brand it is, that surgery was done over in Texas, I don't have the paperwork.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "Type 2 diabetes diagnosed 2016, on metformin.",
+    "says": "I'm diabetic, been on metformin for a while now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "medications",
+    "topic": "metformin dosing",
+    "chart": "Takes metformin 1000 mg twice daily.",
+    "says": "I take one pill morning and one at night, the metformin.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "adherence",
+    "topic": "metformin last dose",
+    "chart": "Last took metformin this morning as usual; unaware it may need to be held around contrast administration.",
+    "says": "Took it this morning like always, why, is that a problem?",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f19",
+    "category": "allergies",
+    "topic": "contrast or iodine allergy",
+    "chart": "Denies any known allergy to contrast dye, iodine, or shellfish.",
+    "says": "Never had a bad reaction to any dye or anything like that, no.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "kidney symptoms",
+    "chart": "Denies decreased urine output, swelling in legs, or known kidney disease diagnosis beyond lab mention.",
+    "says": "Nobody's told me I got kidney trouble, I pee fine, no swelling that I notice.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "family",
+    "topic": "family history of kidney disease",
+    "chart": "No known family history of kidney disease.",
+    "says": "Not that I know of, nobody in my family's had kidney problems.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with wife in Tulsa, drove himself to appointments usually but wife will drive him for sedation if needed.",
+    "says": "My wife can run me around if I need a ride, we're over in Tulsa.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks 2-3 beers on weekends, denies daily use.",
+    "says": "I'll have a couple beers on the weekend, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f24",
+    "category": "psychosocial",
+    "topic": "attitude toward paperwork",
+    "chart": "Views safety forms as unnecessary bureaucracy, prefers quick answers.",
+    "says": "All this paperwork, half of it don't even apply to me, I just want to get the scan done.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "pain severity",
+    "chart": "Rates leg pain 6/10 on average, worse by end of workday.",
+    "says": "Pain's about a six most days, worse by the time I get off work.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "function",
+    "topic": "work impact",
+    "chart": "Pain affecting ability to stand for long welding shifts.",
+    "says": "It's getting hard to stand at the welding table a full shift anymore.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "metal sensation symptoms",
+    "chart": "Denies any current eye pain, foreign body sensation, or vision changes.",
+    "says": "My eye's fine now, no pain, seeing okay, that was years ago.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "other",
+    "topic": "eye protection today",
+    "chart": "Reports now wearing proper eye protection most of the time at current job after being told to by supervisor.",
+    "says": "Place I work now is stricter about the glasses, so I wear 'em most of the time now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "psychosocial",
+    "topic": "motivation for scan",
+    "chart": "Wants to get the MRI done quickly to find out if he needs another surgery and get back to full duty at work.",
+    "says": "I just want to know if I need another surgery so I can get back to work full strength.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "pacemaker/implanted electronics",
+    "chart": "Denies any pacemaker, defibrillator, neurostimulator, or cochlear implant.",
+    "says": "No pacemaker or nothing electrical like that in me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "recent injections or clips",
+    "chart": "Denies aneurysm clips, shrapnel, or other embedded foreign metal besides the eye history and known implants.",
+    "says": "Other than that eye thing and my hardware, I don't think I got any other metal in me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f4",
+    "artifactId": "d1",
+    "patientClaim": "Patient states he already completed the paper screening form and marked 'no' to all implant, metal, patch, and claustrophobia questions, implying there's nothing further to discuss.",
+    "recordEvidence": "The completed form (d1) shows blanket 'No' answers to every safety question, directly contradicted by what the direct interview later reveals (fusion hardware, knee replacement, fentanyl patch, prior scanner panic).",
+    "teachingPoint": "Self-administered paper screening forms are frequently incomplete or inaccurate; a structured verbal interview by the technologist is required before every MRI, especially when occupational or surgical history suggests risk."
+   },
+   {
+    "id": "m2",
+    "factId": "f9",
+    "artifactId": "d6",
+    "patientClaim": "Patient downplays his prior panic episode and does not mention any plan for how he'll handle today's scan.",
+    "recordEvidence": "Outside facility technologist note (d6) documents that three years ago the patient's MRI was aborted after about 4 minutes due to severe panic, and that he never followed up on the recommended anti-anxiety premedication.",
+    "teachingPoint": "A patient's casual minimization of claustrophobia does not reliably predict tolerance of a lengthy contrast-enhanced lumbar MRI; documented history of an aborted exam should prompt proactive, direct, rapport-building questioning about his actual plan and discussion of accommodations rather than relying on surface-level reassurance."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize that a self-reported paper MRI safety form may be inaccurate and conduct a thorough verbal screening interview that uncovers undisclosed implants, devices, and metal exposure history.",
+    "factIds": [
+     "f4",
+     "f10",
+     "f14"
+    ],
+    "actionIds": [
+     "a1",
+     "a3"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify occupational metallic foreign body risk through welding/grinding history, and through direct, sensitive, rapport-building questioning uncover a prior ocular metal injury and inconsistent eye protection use; know to flag the patient for orbit X-rays before MRI to rule out retained intraorbital metal.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f7"
+    ],
+    "actionIds": [
+     "a3",
+     "a4"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Correctly manage a known MR-conditional implant (spinal fusion hardware, knee replacement) by recognizing it is generally safe but requires documentation of model/manufacturer and anticipation of imaging artifact, and recommend obtaining outside records.",
+    "factIds": [
+     "f3",
+     "f14",
+     "f15"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify and plan removal of a transdermal medication patch with metallic backing before scanning, and counsel on reapplication after the exam.",
+    "factIds": [
+     "f10",
+     "f11"
+    ],
+    "actionIds": [
+     "a5"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Review contrast-safety factors within technologist scope — renal function (eGFR), metformin use/timing, and allergy history — and recognize when findings must be escalated to the radiologist/ordering provider rather than decided independently.",
+    "factIds": [
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ],
+    "actionIds": [
+     "a8",
+     "a9",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Elicit a history of claustrophobia and a prior aborted MRI, recognize the patient's plan to not disclose this, and escalate for accommodation planning rather than allowing the patient to proceed unprepared.",
+    "factIds": [
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a10"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Dale Hutchins",
+   "age": 58,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "white",
+   "occupation": "Pipe welder and metal fabricator",
+   "language": "English",
+   "appearance": "A heavyset man with a weathered, sun-worn face, close-cropped gray hair, and a visible tattoo sleeve on his left arm beneath a short-sleeved work shirt. He is seated in a cluttered home garage/office with tools visible on a shelf behind him, speaking in a relaxed, slightly impatient manner and occasionally glancing off-screen.",
+   "portrait": "/portraits/radiologic-technology-dale-hutchins-mri-screening.jpg"
+  },
+  "persona": {
+   "personality": "Friendly, plainspoken, a bit impatient with paperwork and formalities, takes pride in being tough and self-sufficient.",
+   "communicationStyle": "Casual and direct, uses short practical sentences, downplays symptoms and fears, warms up with rapport and humor.",
+   "healthLiteracy": "low",
+   "emotionalState": "Mildly anxious about the leg pain and eager to get the scan over with quickly, but minimizes or hides fear of the scanner itself.",
+   "background": "Grew up in rural Oklahoma, has worked as a welder and metal fabricator for over two decades, married, enjoys fishing and working on trucks on weekends, proud of being a hard worker who rarely takes sick days.",
+   "speechExamples": [
+    "I just want to get this scan done and find out what's going on with my leg.",
+    "Ah, that paperwork, half of it don't even apply to me.",
+    "I'll be fine in there, I've just gotta tough it out.",
+    "Didn't think the eye thing was a big deal, that was years ago.",
+    "My wife says I never tell the doctors the whole story, ha."
+   ],
+   "concerns": [
+    "Wants to know if he needs another back surgery",
+    "Wants to get back to full duty at work without restrictions",
+    "Worried the scan will be delayed or cancelled over 'paperwork stuff'",
+    "Does not want to seem weak about his fear of the scanner"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a radiologic technology student performing a telehealth pre-imaging safety screening call with Dale Hutchins, 58, who is scheduled for a lumbar spine MRI without/with gadolinium contrast in 3 days. He has already submitted a paper screening form. Your job is to verify his identity and the order, conduct a thorough verbal MRI safety and contrast-risk screening beyond the paper form, inspect what you can by camera, and flag any concerns to the radiologist before the exam proceeds.",
+   "chiefComplaint": "Pre-MRI safety screening for scheduled lumbar spine MRI with/without contrast, in a patient with leg pain and suspected spinal stenosis after prior fusion surgery.",
+   "openingLine": "Hey there, I'm calling about my MRI I've got coming up for my back and this leg pain I've been having. I already filled out that form, so I think we're good to go.",
+   "tasks": [
+    "Verify patient identity and confirm the imaging order.",
+    "Conduct a structured verbal MRI safety interview covering implants, devices, metal exposure, patches, and tattoos.",
+    "Screen for contrast-related risk factors including renal function, medication use, and allergy history.",
+    "Screen for prior MRI experience and scanner tolerance.",
+    "Document findings and escalate appropriate concerns to the radiologist before the scheduled exam."
+   ],
+   "timeLimitMin": 20
+  },
+  "summary": "\"A 58-year-old welder completes a paper MRI safety form marked entirely 'no,' but a careful verbal screening interview by the radiologic technology student uncovers an undisclosed ocular metal injury with ongoing occupational exposure, known spinal and knee hardware, a metallic-backed fentanyl patch, mild renal impairment relevant to contrast, and a minimized history of claustrophobia with a prior aborted scan. The case teaches structured MRI safety screening, contrast-risk recognition, and appropriate escalation to the radiologist within the technologist's scope of practice.\"",
+  "title": "\"Pre-MRI Safety Screening in a Welder with Undisclosed Metal Exposure and Claustrophobia\"",
+  "answerKey": {
+   "primaryProblem": "Pre-imaging safety screening reveals multiple undisclosed risks before lumbar spine MRI with/without contrast: occupational metallic foreign body exposure with prior ocular metal injury, known MR-conditional spinal/knee hardware with unconfirmed model, a metallic-backed fentanyl patch, mild renal impairment relevant to gadolinium contrast and metformin, and unaddressed claustrophobia with a prior aborted MRI.",
+   "differential": [
+    "Retained intraorbital metallic foreign body risk from welding/grinding exposure (requires orbit X-ray clearance before MRI)",
+    "MR-conditional spinal fusion and knee hardware (safe but needs model confirmation and artifact anticipation)",
+    "Metallic-backed transdermal patch requiring removal before scan",
+    "Mild renal impairment (eGFR 52) relevant to gadolinium-based contrast agent selection/dosing",
+    "Metformin timing/hold considerations around contrast administration per facility protocol",
+    "Claustrophobia/panic risk based on prior aborted MRI, unaddressed by patient"
+   ],
+   "keyFindings": [
+    "Paper screening form marked 'No' to all implant/metal/patch/claustrophobia questions, contradicted by verbal interview",
+    "20+ years welding/grinding with inconsistent eye protection and history of ER removal of ocular metal sliver ~15 years ago",
+    "Known L4-S1 titanium spinal fusion hardware (2014) and left total knee replacement, manufacturer/model unknown, outside records not yet obtained",
+    "Transdermal fentanyl patch 25 mcg/hr on right upper arm with metallic foil backing, not disclosed on form",
+    "eGFR 52 mL/min/1.73m2 two months ago (downtrending from 68 eighteen months ago), on metformin 1000 mg BID taken same-day",
+    "Prior MRI three years ago aborted at ~4 minutes due to panic; patient plans to not disclose and 'tough it out' this time",
+    "No known contrast, iodine, or shellfish allergy; no pacemaker or other implanted electronics"
+   ],
+   "plan": [
+    "Flag patient to radiologist for orbit X-ray screening prior to MRI given occupational metal exposure and history of ocular metallic foreign body",
+    "Document spinal fusion and knee hardware as MR-conditional; attempt to obtain outside operative records for manufacturer/model confirmation and alert radiologist to anticipated artifact near lumbar spine",
+    "Instruct patient to remove the fentanyl patch immediately before the scan and have a plan to reapply a new patch per prescriber instructions after the exam; do not improvise contrast or medication decisions as a technologist",
+    "Escalate renal function (eGFR 52) and metformin use to radiologist/ordering provider for contrast agent selection and any metformin-hold instructions per facility protocol; technologist does not independently decide to proceed or withhold contrast",
+    "Address claustrophobia proactively: discuss accommodation options (coaching/breathing techniques, open MRI referral, or sedation referral) with the patient and relay the prior aborted-exam history to the radiologist/scheduling team rather than letting the patient attempt the exam undisclosed",
+    "Correct and re-document the safety screening form findings in the chart so they are not lost before exam day"
+   ],
+   "redFlags": [
+    "Possible retained metallic intraorbital foreign body given occupational exposure and injury history — do not proceed to MRI without orbit X-ray clearance",
+    "Unconfirmed implant hardware model in a strong magnetic field environment",
+    "Risk of acute panic/inability to complete exam if claustrophobia is not proactively addressed",
+    "Mild renal impairment altering gadolinium contrast risk profile, requiring radiologist input rather than technologist decision"
+   ],
+   "educationPoints": [
+    "Verbal MRI safety screening by a trained technologist is essential even after a completed paper form, since patients often misunderstand or omit relevant history",
+    "Occupational metal exposure (welding/grinding) with any history of ocular metal injury warrants orbit imaging before MRI to exclude retained ferromagnetic foreign bodies",
+    "Known orthopedic/spinal hardware is usually MR-conditional, but documenting manufacturer/model and anticipating artifact is part of thorough screening",
+    "Transdermal patches with metallic backings must be removed before MRI and the plan for reapplication clarified with the prescribing provider",
+    "Renal function and metformin use are relevant to contrast safety, but final decisions about proceeding, withholding, or holding medication belong to the radiologist/ordering provider, not the technologist",
+    "Patients may minimize fear of the scanner out of pride; proactively screening for and normalizing accommodation options improves exam completion and patient safety"
+   ]
+  },
+  "professions": [
+   "radiologic-technology"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "specialty": "Radiologic Technology / Medical Imaging",
+  "setting": "Telehealth video visit; patient's home garage/workshop in Tulsa, Oklahoma"
+ }
+}

@@ -1,0 +1,933 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "record",
+    "name": "Review GI/endocrine referral note and biopsy result",
+    "result": "Referral note from gastroenterology: Dx celiac disease confirmed 3 weeks ago. Duodenal biopsy Marsh 3b (villous atrophy). tTG-IgA 148 U/mL (ref <4). Total IgA normal. Recommended strict gluten-free diet, referral to dietitian for GFD education, repeat celiac serology and micronutrient panel in 3-6 months.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Review most recent vitals/weight from chart",
+    "result": "Height 165 cm, weight 57.2 kg, BMI 21.0 kg/m2 (stable over past 6 months). BP 112/70 mmHg, HR 76 bpm.",
+    "importance": "important",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "lab",
+    "name": "Review celiac serology (tTG-IgA)",
+    "result": "tTG-IgA 148 U/mL (ref range <4 U/mL) — markedly elevated, drawn at diagnosis 3 weeks ago. No repeat yet.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review iron studies/ferritin",
+    "result": "Ferritin 7 ng/mL (ref 15-150 ng/mL) — Low. Consistent with iron deficiency.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review hemoglobin/CBC",
+    "result": "Hemoglobin 10.9 g/dL (ref 12.0-15.5 g/dL) — Low, microcytic indices noted (MCV 76 fL, ref 80-100 fL).",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "lab",
+    "name": "Review vitamin D level",
+    "result": "25-OH Vitamin D 16 ng/mL (ref 30-100 ng/mL) — Low.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review 3-day food record in chart",
+    "result": "Food record lists: tabbouleh salad, kibbeh, regular soy sauce (stir-fry), rolled oats, rice, lentils, hummus, grilled chicken, fish, fruit, labneh, almonds, store-bought granola bar (label not checked).",
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "assessment",
+    "name": "Take detailed gluten-free diet history (sources, labels, eating out)",
+    "result": "Patient reports reading labels mainly for the word 'wheat' but is unsure what else to look for (barley, rye, malt); says she assumed tabbouleh and kibbeh were fine since they are 'basically a salad' with 'just a little' grain; believed oats are naturally gluten-free and never thought to look for a gluten-free certification; thought soy sauce was 'just soybeans' and didn't realize it could contain wheat.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Assess kitchen cross-contact practices (shared toaster, cutting boards, utensils)",
+    "result": "Patient reports household shares one toaster and wooden cutting boards with gluten-containing bread; no dedicated gluten-free prep area; occasionally reuses a strainer used for regular pasta.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Assess social/family eating situations and support",
+    "result": "Patient describes weekly family dinners at mother's home with shared mezze platters and bread-based dishes (pita, tabbouleh); feels pressure not to seem 'difficult' or offend her mother; has not yet discussed diagnosis in detail with family.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "assessment",
+    "name": "Assess GI symptom pattern since diagnosis",
+    "result": "Patient reports bloating and loose stools have improved somewhat but still occur 2-3x/week, more often after family meals or eating out; fatigue persists.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Assess readiness/confidence for dietary change (motivational interviewing)",
+    "result": "Patient rates confidence in sticking to GFD as 6/10; expresses frustration and self-blame ('I thought I was doing everything right'); open to specific label-reading and cross-contact guidance; motivated by pregnancy planning.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Screen for pregnancy planning and relevant nutrient needs",
+    "result": "Patient confirms she and her husband are trying to conceive within the next 6-12 months; not currently taking a prenatal vitamin.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "record",
+    "name": "Review current medication/supplement list",
+    "result": "No current supplements. No prescribed iron, vitamin D, or prenatal vitamin. No other medications.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "assessment",
+    "name": "Camera inspection of pantry/label items (patient holds up oats and soy sauce containers)",
+    "result": "Oats container ingredient panel reads only 'whole grain rolled oats' with no 'gluten-free' certification mark anywhere on the label; soy sauce bottle ingredient list reads 'water, wheat, soybeans, salt.'",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "vitals",
+    "name": "Patient self-report of weight today via home scale",
+    "result": "57.0 kg today, consistent with prior stable weight; no unintentional weight loss reported.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a17",
+    "kind": "assessment",
+    "name": "Screen for other food allergies/intolerances (distractor check)",
+    "result": "No known food allergies. Reports occasional mild lactose discomfort with large amounts of milk but tolerates yogurt and cheese; not currently restricting dairy.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a18",
+    "kind": "assessment",
+    "name": "Assess physical activity level (distractor/context)",
+    "result": "Walks 30 minutes most days and does yoga twice weekly; no recent change in activity.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Inadequate adherence to a strict gluten-free diet due to incomplete knowledge of hidden gluten sources and cross-contact, in a newly diagnosed celiac disease patient with resulting iron deficiency anemia and vitamin D deficiency, planning pregnancy.",
+   "differential": [
+    "Nutrient deficiency from ongoing villous atrophy due to unintentional gluten exposure (most likely, given dietary history)",
+    "Non-adherence due to psychosocial/cultural barriers (family meals, fear of being 'difficult') compounding exposure",
+    "Co-existing lactose intolerance contributing to residual GI symptoms (minor contributor, not primary driver)",
+    "Malabsorption from incompletely healed mucosa independent of diet (would require more time off gluten before attributing symptoms solely to this)"
+   ],
+   "keyFindings": [
+    "Food record and self-report reveal unlabeled hidden gluten in tabbouleh, kibbeh (bulgur wheat), regular soy sauce (wheat), and non-gluten-free oats",
+    "Shared toaster/cutting boards/strainer create cross-contact risk despite 'strict' self-reported adherence",
+    "Ferritin 7 ng/mL, Hb 10.9 g/dL (microcytic), vitamin D 16 ng/mL consistent with malabsorption from active celiac disease",
+    "Persistent GI symptoms (bloating, loose stools 2-3x/week) despite reported strict GFD, worse after family meals/eating out",
+    "Planning pregnancy within 6-12 months with no prenatal vitamin and low ferritin/vitamin D — nutrient repletion is time-sensitive",
+    "Patient's self-report of 'completely gluten-free' conflicts with food record and pantry inspection showing multiple hidden gluten sources (mismatch for teaching)"
+   ],
+   "plan": [
+    "Provide specific, non-judgmental education on hidden gluten sources: bulgur/wheat in tabbouleh and kibbeh, wheat in regular soy sauce, and the need for certified gluten-free oats",
+    "Teach label-reading skills (identifying wheat, barley, rye, malt, and 'may contain' cross-contact statements) and point to gluten-free certification marks",
+    "Counsel on kitchen cross-contact prevention: dedicated toaster or toaster bags, separate cutting boards/colanders, careful utensil and surface cleaning",
+    "Use motivational interviewing to explore culturally appropriate swaps for family meals (e.g., rice-based tabbouleh with quinoa or certified gluten-free bulgur substitute, gluten-free pita) and collaborative problem-solving for discussing needs with her mother without feeling 'difficult'",
+    "Recommend she discuss iron and vitamin D repletion (supplementation) and prenatal vitamin initiation with her physician given pregnancy planning; dietitian to reinforce dietary iron/vitamin D sources (lean meats, legumes, fortified gluten-free products, safe sun exposure) alongside medical management — refer back to PCP/GI for supplement dosing and monitoring labs",
+    "Schedule follow-up visit in 4-6 weeks to reassess adherence, repeat food record, and check symptom trend; coordinate with GI for repeat tTG-IgA and micronutrient labs in 3-6 months",
+    "Document ADIME note capturing assessment, nutrition diagnosis (inadequate adherence to GFD related to lack of knowledge of hidden gluten sources, evidenced by food record and ongoing symptoms/abnormal labs), intervention (education, counseling), monitoring/evaluation plan"
+   ],
+   "redFlags": [
+    "Low ferritin and hemoglobin with planned pregnancy — needs timely repletion before conception",
+    "Low vitamin D with reproductive planning — bone health and fetal considerations",
+    "Dietitian should not prescribe iron or vitamin D doses or diagnose anemia severity — refer to prescribing clinician for supplementation and lab monitoring",
+    "If GI symptoms worsen or alarm symptoms (weight loss, GI bleeding, severe pain) emerge, refer back to gastroenterology promptly"
+   ],
+   "educationPoints": [
+    "Many traditional Middle Eastern dishes (tabbouleh, kibbeh) are wheat-based via bulgur and are not safe on a gluten-free diet",
+    "Standard soy sauce contains wheat; tamari or certified gluten-free soy sauce are safer alternatives",
+    "Plain oats are frequently cross-contaminated during growing/processing; only oats labeled 'gluten-free certified' should be used",
+    "Villous healing and nutrient absorption depend on strict avoidance of gluten, including trace cross-contact exposure",
+    "Family and cultural meal traditions can be preserved with thoughtful ingredient swaps; disclosure to family can be framed around health needs rather than being 'difficult'",
+    "Pregnancy planning raises the stakes for correcting iron and vitamin D deficiencies and achieving mucosal healing before conception"
+   ]
+  },
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Gastroenterology Consult & Biopsy Result",
+    "author": "Dr. Elena Castillo, Gastroenterology",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "34F with longstanding bloating, loose stools, and fatigue. tTG-IgA 148 U/mL (ref <4 U/mL), total IgA normal (confirms test validity). EGD with duodenal biopsy: Marsh 3b villous atrophy, consistent with celiac disease. Diagnosis: Celiac disease, newly confirmed. Plan: strict lifelong gluten-free diet, referral to registered dietitian for GFD education, iron studies/CBC, vitamin D, repeat tTG-IgA and nutrient panel in 3-6 months to assess response. Discussed pregnancy planning; advised nutrient repletion prior to conception given malabsorption risk."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Celiac Serology",
+    "author": "Beaumont Health Laboratory",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Tissue transglutaminase IgA (tTG-IgA)",
+        "148",
+        "U/mL",
+        "<4"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Total IgA",
+        "210",
+        "mg/dL",
+        "70-400"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "CBC with Iron Studies and Vitamin D",
+    "author": "Beaumont Health Laboratory",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "10.9",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "MCV",
+        "76",
+        "fL",
+        "80-100"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Ferritin",
+        "7",
+        "ng/mL",
+        "15-150"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "25-Hydroxyvitamin D",
+        "16",
+        "ng/mL",
+        "30-100"
+       ],
+       "flag": "L"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medications & Supplements",
+    "author": "EHR Medication Reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication/Supplement",
+      "Dose",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "None listed",
+        "—",
+        "—",
+        "—"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "form",
+    "title": "3-Day Food Record (Patient-Submitted)",
+    "author": "Patient-reported, entered by RD intake coordinator",
+    "date": "5 days ago",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "body": "Day 1: Breakfast - rolled oats with milk and honey; Lunch - tabbouleh salad, hummus, pita-free side of grilled chicken; Dinner - kibbeh, rice, cucumber yogurt salad. Day 2: Breakfast - labneh with olive oil; Lunch - lentil soup, tabbouleh; Dinner - stir-fry vegetables with regular soy sauce, rice. Day 3: Breakfast - rolled oats with fruit; Lunch - leftover kibbeh, salad; Dinner - grilled fish, rice, roasted vegetables. Snacks: fresh fruit, almonds, occasional store-bought granola bar (label not checked)."
+   },
+   {
+    "id": "d6",
+    "type": "flowsheet",
+    "title": "Weight/Vitals Flowsheet",
+    "author": "Clinic nursing staff",
+    "date": "Today and prior visits",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Weight (kg)",
+      "Height (cm)",
+      "BMI (kg/m2)",
+      "BP (mmHg)",
+      "HR (bpm)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "6 months ago",
+        "57.5",
+        "165",
+        "21.1",
+        "110/72",
+        "74"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "3 months ago",
+        "57.3",
+        "165",
+        "21.0",
+        "114/70",
+        "78"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "3 weeks ago (diagnosis)",
+        "57.2",
+        "165",
+        "21.0",
+        "112/70",
+        "76"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "chart",
+    "title": "Ferritin and Vitamin D Snapshot (3 Weeks Post-Diagnosis)",
+    "author": "Lab trend summary",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "chart": {
+     "kind": "bar",
+     "xLabel": "Lab test",
+     "yLabel": "Lab value",
+     "refLow": 15,
+     "refHigh": 150,
+     "series": [
+      {
+       "name": "Ferritin (ng/mL)",
+       "points": [
+        {
+         "x": "3 weeks ago",
+         "y": 7
+        }
+       ]
+      },
+      {
+       "name": "Vitamin D (ng/mL)",
+       "points": [
+        {
+         "x": "3 weeks ago",
+         "y": 16
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Nutrition assessment and gluten-free diet education following new celiac disease diagnosis"
+   },
+   {
+    "label": "Problem list",
+    "value": "Celiac disease (new, 3 weeks); Iron deficiency anemia; Vitamin D deficiency"
+   },
+   {
+    "label": "Medications",
+    "value": "None"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies; no known food allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Weight 57.2 kg, Height 165 cm, BMI 21.0, BP 112/70, HR 76 (3 weeks ago)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per records"
+   },
+   {
+    "label": "Care team",
+    "value": "PCP: Dr. Raj Patel; Gastroenterology: Dr. Elena Castillo; Referral to Dietetics for GFD education"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "Nutrition assessment and counseling (initial dietetics visit)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for referral",
+    "chart": "Patient referred for GFD education 3 weeks after celiac diagnosis; reports ongoing mild GI symptoms despite believing she is fully gluten-free.",
+    "says": "My doctor sent me here because I was just diagnosed with celiac disease and I need help figuring out this gluten-free thing. I thought I had it handled but I'm still bloated sometimes.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "diagnosis timeline",
+    "chart": "Diagnosed with celiac disease 3 weeks ago after years of bloating, loose stools, and fatigue.",
+    "says": "It took years of bloating and feeling exhausted before anyone figured out what was wrong. The biopsy finally confirmed celiac three weeks ago.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "current GI symptoms",
+    "chart": "Residual bloating and loose stools 2-3x/week since starting GFD, more frequent after family meals or eating out.",
+    "says": "I still get bloated and have loose stools maybe two or three times a week, especially after we eat at my mom's or when we go out.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "adherence",
+    "topic": "self-assessment of diet strictness",
+    "chart": "Patient states she has been 'completely gluten-free' since diagnosis.",
+    "says": "I've been completely gluten-free since I found out. I cut out all the obvious bread and pasta right away.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "nutrition",
+    "topic": "typical foods eaten",
+    "chart": "Reports eating tabbouleh, kibbeh, oats, soy sauce-based stir-fries, rice, lentils, hummus, labneh, grilled proteins.",
+    "says": "I eat a lot of the food I grew up with — tabbouleh, kibbeh, labneh — plus oatmeal in the morning and sometimes a stir-fry with soy sauce.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "nutrition",
+    "topic": "understanding of tabbouleh ingredients",
+    "chart": "Was unaware bulgur wheat in tabbouleh and kibbeh contains gluten.",
+    "says": "Wait, tabbouleh has bulgur in it, but I didn't think that counted — it's just a little wheat mixed with parsley, isn't it still basically a salad?",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "nutrition",
+    "topic": "oat selection habits",
+    "chart": "Buys regular rolled oats, assuming oats are naturally gluten-free; does not check for gluten-free certification.",
+    "says": "I thought oats were just oats — naturally gluten-free, right? I never looked for a special label on the container.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "nutrition",
+    "topic": "soy sauce use",
+    "chart": "Uses regular soy sauce in cooking, unaware it contains wheat.",
+    "says": "I use regular soy sauce for stir-fries. I didn't realize soy sauce could have wheat in it — I thought it was just soybeans.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "nutrition",
+    "topic": "label reading habits",
+    "chart": "Reads labels for obvious wheat flour but does not consistently check for barley, rye, malt, or cross-contact statements.",
+    "says": "I check if flour is listed, but I honestly don't always know what else to look for — barley, rye, I'm not sure what counts.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "other",
+    "topic": "kitchen setup",
+    "chart": "Shares one toaster and wooden cutting boards with gluten-containing bread in household; occasionally reuses pasta strainer.",
+    "says": "We just have the one toaster at home, and I use the same wooden cutting board my husband uses for his bread. Sometimes I'll use the same strainer for pasta too.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "social",
+    "topic": "family meal gatherings",
+    "chart": "Weekly family dinners at mother's home centered on shared mezze platters and bread dishes.",
+    "says": "Every week we go to my mom's for dinner, and everything is shared — big platters of tabbouleh, kibbeh, bread. It's how we've always eaten.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "psychosocial",
+    "topic": "family communication concerns",
+    "chart": "Reluctant to tell mother about dietary restrictions; fears being seen as difficult or causing offense.",
+    "says": "I haven't really explained the whole gluten thing to my mom yet. I don't want her to feel like I'm criticizing her cooking or that I'm being difficult.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "psychosocial",
+    "topic": "emotional response to diagnosis",
+    "chart": "Reports frustration and self-blame after learning about dietary mistakes; perfectionist tendencies.",
+    "says": "I'm honestly kind of upset with myself. I thought I was doing everything right, and finding out I've been getting it wrong this whole time is frustrating.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "goals",
+    "topic": "pregnancy planning",
+    "chart": "Patient and husband planning pregnancy within next 6-12 months.",
+    "says": "My husband and I are hoping to start trying for a baby sometime in the next six months to a year, so I really want to get this right.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "supplement use",
+    "chart": "Not currently taking any iron, vitamin D, or prenatal supplements.",
+    "says": "I'm not taking any vitamins or supplements right now, no iron pills or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "fatigue",
+    "chart": "Reports ongoing fatigue despite dietary changes.",
+    "says": "I still feel pretty tired most days, even though I thought cutting gluten would fix that by now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f17",
+    "category": "nutrition",
+    "topic": "weight history",
+    "chart": "Weight has remained stable over the past 6 months; no unintentional weight loss.",
+    "says": "My weight has pretty much stayed the same, I haven't lost or gained anything noticeable.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "dairy tolerance",
+    "chart": "No known food allergies; mild lactose discomfort with large milk volumes, tolerates yogurt/cheese well.",
+    "says": "I don't have any food allergies. Sometimes if I drink a big glass of milk my stomach feels off, but cheese and yogurt are fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "function",
+    "topic": "physical activity",
+    "chart": "Walks 30 minutes most days, does yoga twice weekly; no recent change.",
+    "says": "I try to walk every day, maybe thirty minutes, and I do yoga twice a week. Nothing's really changed there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f20",
+    "category": "nutrition",
+    "topic": "eating out habits",
+    "chart": "Eats out roughly twice weekly, often at Middle Eastern or Mediterranean restaurants; does not routinely ask about shared fryers or seasoning blends.",
+    "says": "We eat out maybe twice a week, usually Middle Eastern or Mediterranean places. I don't always ask about how things are cooked.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "other",
+    "topic": "cooking responsibilities",
+    "chart": "Patient does most of her own cooking at home; husband is supportive but not very involved in meal prep.",
+    "says": "I do most of the cooking myself. My husband's supportive, but he's not really in the kitchen much.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "psychosocial",
+    "topic": "confidence in managing diet",
+    "chart": "Rates confidence maintaining GFD as 6 out of 10; motivated but overwhelmed by hidden gluten sources.",
+    "says": "If you asked me to rate how confident I feel about doing this right, I'd say maybe a six out of ten. There's just more to learn than I thought.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "family",
+    "topic": "family history of celiac/autoimmune disease",
+    "chart": "No known family history of celiac disease; mother has type 2 diabetes, father has hypertension.",
+    "says": "No one else in my family has celiac that I know of. My mom has type 2 diabetes and my dad has high blood pressure.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks wine socially about once weekly, no beer (which would contain gluten) consumption since diagnosis.",
+    "says": "I'll have a glass of wine maybe once a week. I stopped drinking beer completely after my diagnosis.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "nutrition",
+    "topic": "snack choices",
+    "chart": "Occasionally eats store-bought granola bars without checking labels for gluten-containing ingredients.",
+    "says": "Sometimes I'll grab a granola bar from the pantry as a snack without really checking the label closely.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "support system awareness",
+    "chart": "Has not yet connected with a celiac support group or dietitian-recommended resources.",
+    "says": "I haven't looked into any support groups or anything like that yet. I didn't really know where to start.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "goals",
+    "topic": "what patient wants from visit",
+    "chart": "Hopes to leave visit with a clear, practical list of safe foods and swaps, especially for family meals.",
+    "says": "I just want a clear idea of what's actually safe to eat, especially for the stuff we eat as a family, so I'm not guessing all the time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "other GI symptoms",
+    "chart": "Denies blood in stool, unintentional weight loss, severe abdominal pain, or vomiting.",
+    "says": "No blood in my stool, no real weight loss, no severe pain or throwing up or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "sexual",
+    "topic": "menstrual history",
+    "chart": "Reports regular menstrual cycles; no current contraception as actively trying to conceive soon.",
+    "says": "My periods are regular. We're not using any birth control right now since we're planning to start trying soon.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "nutrition",
+    "topic": "fiber and fluid intake",
+    "chart": "Reports moderate fiber intake from fruits/vegetables/legumes and adequate fluid intake, around 6-8 cups water daily.",
+    "says": "I eat a decent amount of fruit, veggies, and lentils, and I'd say I drink maybe six to eight cups of water a day.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "grocery shopping habits",
+    "chart": "Primarily shops at a regular mainstream grocery store; limited access to a dedicated gluten-free specialty market nearby.",
+    "says": "I mostly shop at the regular grocery store near us. There isn't really a specialty gluten-free market close by.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "adherence",
+    "topic": "actual food record contents",
+    "chart": "Food record submitted to clinic lists bulgur-containing dishes, regular soy sauce, and non-certified oats despite patient believing she is fully gluten-free.",
+    "says": "I filled out that three-day food log you have — I thought it would show I was doing great since everything on there felt safe to me.",
+    "tier": "initial",
+    "importance": "critical"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f4",
+    "artifactId": "d5",
+    "patientClaim": "Patient states she has been 'completely gluten-free' since diagnosis.",
+    "recordEvidence": "3-day food record (d5) lists tabbouleh and kibbeh (bulgur wheat), regular soy sauce (wheat-based), and non-certified rolled oats — all common hidden gluten sources.",
+    "teachingPoint": "Sincere self-report of adherence can coexist with unintentional gluten exposure from unrecognized hidden sources; the dietitian must cross-check actual food records/pantry items rather than relying on self-report alone, and address this with empathy rather than blame."
+   },
+   {
+    "id": "m2",
+    "factId": "f17",
+    "artifactId": "d6",
+    "patientClaim": "Patient reports her weight has stayed the same over the past 6 months with no unintentional weight loss.",
+    "recordEvidence": "Weight flowsheet (d6) confirms stable weight 57.2-57.5 kg over 6 months, consistent with patient's report.",
+    "teachingPoint": "This is a confirmatory check (not a true mismatch) illustrating the importance of verifying patient-reported history against objective flowsheet data; here the record supports the patient's statement, reinforcing that weight stability does not rule out malabsorption when iron and vitamin D are low."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a detailed, non-judgmental diet history that uncovers hidden sources of gluten (bulgur in tabbouleh/kibbeh, wheat in soy sauce, non-certified oats) despite the patient's sincere belief she is gluten-free.",
+    "factIds": [
+     "f4",
+     "f5",
+     "f6",
+     "f7",
+     "f8"
+    ],
+    "actionIds": [
+     "a7",
+     "a8",
+     "a15"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify cross-contact risks in the home kitchen and propose practical, low-cost mitigation strategies.",
+    "factIds": [
+     "f10",
+     "f21",
+     "f31"
+    ],
+    "actionIds": [
+     "a9"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Use motivational interviewing techniques to explore the patient's emotional response to diagnosis, confidence level, and cultural/family barriers to strict adherence without judgment.",
+    "factIds": [
+     "f12",
+     "f13",
+     "f22",
+     "f11"
+    ],
+    "actionIds": [
+     "a10",
+     "a12"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Interpret relevant labs (ferritin, hemoglobin/MCV, vitamin D, tTG-IgA) in the context of active celiac disease and malabsorption, and correctly identify the need for medical (not dietetic) management of supplementation dosing.",
+    "factIds": [
+     "f14",
+     "f15",
+     "f16"
+    ],
+    "actionIds": [
+     "a3",
+     "a4",
+     "a5",
+     "a6"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Formulate a culturally sensitive, patient-centered plan including specific food swaps for family meals and a follow-up/monitoring plan, documented using the ADIME format.",
+    "factIds": [
+     "f27",
+     "f20",
+     "f25"
+    ],
+    "actionIds": [
+     "a8",
+     "a10",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize pertinent negatives and distractors (lactose tolerance pattern, physical activity, fiber/fluid intake, GI alarm symptoms) and appropriately deprioritize them relative to the core nutrition diagnosis.",
+    "factIds": [
+     "f18",
+     "f19",
+     "f28",
+     "f30"
+    ],
+    "actionIds": [
+     "a17",
+     "a18"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Samira Haddad",
+   "age": 34,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Lebanese-American",
+   "occupation": "Architect",
+   "language": "English (also speaks Arabic at home with family)",
+   "appearance": "A woman in her mid-30s with shoulder-length dark hair, wearing a navy blazer, seated at a home office desk with a bookshelf and architectural drawings visible behind her. She appears composed but slightly tense, occasionally glancing down at notes, with a focused, earnest expression.",
+   "portrait": "/portraits/dietetics-samira-haddad-coeliac.jpg"
+  },
+  "persona": {
+   "personality": "Detail-oriented, well-read, and a self-described perfectionist; takes pride in doing things thoroughly and is unsettled by the idea that she's been making mistakes.",
+   "communicationStyle": "Articulate and direct, asks clarifying questions, sometimes apologizes for 'not getting it right,' appreciates clear practical explanations over vague reassurance.",
+   "healthLiteracy": "high",
+   "emotionalState": "Mildly anxious and self-critical about the recent diagnosis and perceived dietary failures; motivated and hopeful once given concrete guidance.",
+   "background": "Grew up in a close-knit Lebanese-American family in Dearborn, Michigan, where food is central to weekly gatherings. Works as an architect, is married, and is actively planning to start a family in the next year. Enjoys reading extensively about health topics and tends to research things thoroughly before appointments.",
+   "speechExamples": [
+    "I read a lot about this before our appointment, but clearly I missed some things.",
+    "I just want to make sure I'm actually doing this right, not just think I am.",
+    "My mom's cooking is basically how I grew up — I don't want this to feel like I'm rejecting her.",
+    "Is there a way to still enjoy tabbouleh without the wheat, or is that just gone for good?",
+    "I promise I'm not trying to cut corners, I just didn't know what counted."
+   ],
+   "concerns": [
+    "Whether she will ever be able to eat family dishes like tabbouleh and kibbeh again",
+    "Whether her low iron and vitamin D will affect her ability to get pregnant or have a healthy pregnancy",
+    "How to tell her mother about the diagnosis without seeming critical of her cooking or causing tension",
+    "Whether she has been inadvertently damaging her gut further despite trying to do the right thing"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are seeing Samira Haddad, a 34-year-old architect, for a dietetics telehealth visit. She was diagnosed with celiac disease 3 weeks ago by her gastroenterologist and was referred to you for nutrition education and support. She reports she has been following a gluten-free diet since diagnosis but continues to experience some mild gastrointestinal symptoms. Review her chart and conduct a comprehensive nutrition assessment.",
+   "chiefComplaint": "Follow-up nutrition visit after new celiac disease diagnosis; patient reports ongoing mild GI symptoms despite believing she is fully gluten-free.",
+   "openingLine": "My doctor sent me here because I was just diagnosed with celiac disease and I need help figuring out this gluten-free thing. I thought I had it handled but I'm still bloated sometimes.",
+   "tasks": [
+    "Take a detailed diet history focusing on the presenting concern",
+    "Review relevant laboratory results and relate them to nutrition status",
+    "Explore any barriers to dietary management using patient-centered, non-judgmental communication",
+    "Provide practical, evidence-based nutrition education appropriate to the patient's needs",
+    "Develop a follow-up and monitoring plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "summary": "A 34-year-old Lebanese-American architect three weeks post celiac diagnosis believes she is strictly gluten-free, but her food record and pantry reveal hidden gluten in bulgur-based dishes, wheat-containing soy sauce, and non-certified oats, alongside iron and vitamin D deficiency and plans for pregnancy. The case teaches dietetics students to reconcile patient self-report with objective diet history, address cultural/family barriers with motivational interviewing, and coordinate nutrient repletion within scope of practice.",
+  "title": "Hidden Gluten and Nutrient Deficiency in a Newly Diagnosed Celiac Patient Planning Pregnancy",
+  "specialty": "Dietetics / Clinical Nutrition",
+  "setting": "Telehealth video visit, patient at home office in Dearborn, Michigan",
+  "professions": [
+   "dietetics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

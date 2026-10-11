@@ -1,0 +1,117 @@
+{
+ "id": "enc-demo-1",
+ "case_id": "case-demo",
+ "version": 1,
+ "started_at": 1791648000.0,
+ "deadline": 1791648600.0,
+ "status": "completed",
+ "disclosed_fact_ids": [
+  "concern",
+  "routine",
+  "unknown_lab"
+ ],
+ "disclosed_artifact_ids": [
+  "instruction_note"
+ ],
+ "simulated_mood": {
+  "mood": "guarded",
+  "rapport": 35
+ },
+ "events": [
+  {
+   "id": "e0",
+   "actor": "patient",
+   "text": "I'm worried, and I don't want to be judged. Can we talk about what has been difficult lately?",
+   "timestamp": 1791648000.0,
+   "confirmed": true,
+   "disclosed_fact_ids": [
+    "concern"
+   ],
+   "disclosed_artifact_ids": [
+    "instruction_note"
+   ],
+   "provider": "authored"
+  },
+  {
+   "id": "e1",
+   "actor": "learner",
+   "text": "Hi, I'm a student doctor. What's been worrying you?",
+   "timestamp": 1791648040.0,
+   "confirmed": true,
+   "request_id": "r1"
+  },
+  {
+   "id": "e2",
+   "actor": "patient",
+   "text": "Could you ask about my concerns or my medication routine? I don't have that information.",
+   "timestamp": 1791648042.0,
+   "confirmed": true,
+   "disclosed_fact_ids": [],
+   "disclosed_artifact_ids": [],
+   "provider": "authored",
+   "rapport_change": 0
+  },
+  {
+   "id": "e3",
+   "actor": "learner",
+   "text": "Are you taking your medication as prescribed?",
+   "timestamp": 1791648080.0,
+   "confirmed": true,
+   "request_id": "r2"
+  },
+  {
+   "id": "e4",
+   "actor": "patient",
+   "text": "I think I've been following the routine.",
+   "timestamp": 1791648082.0,
+   "confirmed": true,
+   "disclosed_fact_ids": [],
+   "disclosed_artifact_ids": [],
+   "provider": "authored",
+   "rapport_change": 0
+  },
+  {
+   "id": "e5",
+   "actor": "learner",
+   "text": "I understand. Could you walk me through your medication routine yesterday? What made it hard to remember?",
+   "timestamp": 1791648120.0,
+   "confirmed": true,
+   "request_id": "r3"
+  },
+  {
+   "id": "e6",
+   "actor": "patient",
+   "text": "Actually, I missed several doses. The routine was hard to remember, and I was embarrassed to tell you.",
+   "timestamp": 1791648122.0,
+   "confirmed": true,
+   "disclosed_fact_ids": [
+    "routine"
+   ],
+   "disclosed_artifact_ids": [],
+   "provider": "authored",
+   "rapport_change": 5
+  },
+  {
+   "id": "e7",
+   "actor": "learner",
+   "text": "Do you have any lab results?",
+   "timestamp": 1791648160.0,
+   "confirmed": true,
+   "request_id": "r4"
+  },
+  {
+   "id": "e8",
+   "actor": "patient",
+   "text": "You can review the information now available in my chart.",
+   "timestamp": 1791648162.0,
+   "confirmed": true,
+   "disclosed_fact_ids": [
+    "unknown_lab"
+   ],
+   "disclosed_artifact_ids": [],
+   "provider": "authored",
+   "rapport_change": 0
+  }
+ ],
+ "ended_at": 1791648200.0
+}

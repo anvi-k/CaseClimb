@@ -1,0 +1,884 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "exam",
+    "name": "Camera inspection of submandibular/neck swelling",
+    "result": "Firm, warm, diffusely swollen area bilaterally beneath the mandible, more pronounced on the right, extending toward midline and down toward the hyoid region. Skin appears taut and slightly shiny. No fluctuance appreciated visually. Patient reports it is tender to light self-palpation.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Floor of mouth inspection via camera",
+    "result": "Patient tilts phone light into mouth: floor of mouth appears elevated and tongue is pushed up/back slightly. Limited visualization due to trismus; patient unable to open more than ~2 fingerbreadths.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Maximal interincisal opening (patient self-measured with fingers)",
+    "result": "Patient reports approximately 2 fingerbreadths (~20-25 mm) between upper and lower incisors; pain with further attempted opening.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Home/reported temperature",
+    "result": "38.6°C (101.5°F) oral, taken this morning per patient report.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Voice and swallowing assessment",
+    "result": "Voice sounds muffled/'hot potato' quality on call. Patient reports pain and difficulty swallowing his own saliva and is drooling intermittently. He is sitting upright and says lying flat feels worse.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Work of breathing observation",
+    "result": "No visible stridor or accessory muscle use on camera at rest; respiratory rate appears normal by observation. Patient states breathing feels 'okay' but endorses needing to sit up to feel comfortable.",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "imaging",
+    "name": "Review prior panoramic radiograph (14 months old)",
+    "result": "Panoramic image shows deep carious lesion in tooth #30 (mandibular right first molar) extending to the pulp with an associated periapical radiolucency approximately 6mm in diameter. No radiograph available for other teeth of concern.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Metformin 1000 mg twice daily (diabetes); ibuprofen 800 mg every 4 hours for 2 days (patient-directed, exceeds recommended OTC/Rx max dosing frequency); amoxicillin 500 mg capsules, source and remaining course unknown, taken intermittently from a relative's leftover prescription.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review most recent HbA1c result",
+    "result": "HbA1c 9.1% (H), drawn 2 months ago, indicating poorly controlled type 2 diabetes.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "exam",
+    "name": "Camera inspection of neck for erythema/skin changes",
+    "result": "Mild diffuse redness over the submandibular area bilaterally, no obvious skin breakdown, crepitus cannot be assessed remotely.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "exam",
+    "name": "Lymph node self-palpation guidance",
+    "result": "Patient reports tender, firm, enlarged nodes under the right jaw when gently pressing per instruction; unable to distinguish nodes from diffuse swelling.",
+    "importance": "minor",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Airway risk stratification",
+    "result": "Documented as high-risk spreading odontogenic infection with bilateral submandibular space involvement, trismus, dysphagia, muffled voice, and fever — consistent with early Ludwig's angina presentation. Airway compromise risk assessed as significant and time-sensitive.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "assessment",
+    "name": "Decision for disposition (ED vs. routine dental appointment)",
+    "result": "Determined that this presentation requires immediate emergency department evaluation for airway management and IV antibiotics; outpatient dental antibiotic prescribing or scheduling a routine extraction visit is not appropriate given current signs.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "exam",
+    "name": "Hydration/drooling assessment",
+    "result": "Patient reports needing to spit frequently and some drooling; says he is still able to swallow his own saliva, slowly and with pain.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review dental insurance/coverage status",
+    "result": "No dental insurance on file; patient has previously deferred care due to cost.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "exam",
+    "name": "Camera inspection of tooth #30 region intraorally",
+    "result": "Limited view due to trismus; posterior right mandibular area appears inflamed, large carious lesion partially visible on the back molar, surrounding gum tissue reddened. Unable to fully visualize due to limited opening.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "imaging",
+    "title": "Panoramic Radiograph Report",
+    "date": "14 months ago",
+    "author": "Dr. A. Thibodeaux, DDS (prior dental office)",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "body": "PANORAMIC RADIOGRAPH, dated 14 months prior to current visit.\n\nFINDINGS: Tooth #30 (mandibular right first molar) demonstrates extensive coronal caries with radiographic involvement of the pulp chamber. A periapical radiolucency measuring approximately 6 mm in diameter is present at the mesial root apex, consistent with chronic periapical periodontitis/early abscess formation. No other significant periapical pathology noted on remaining dentition. Mandibular cortex grossly intact; no obvious widening of mandibular canal.\n\nIMPRESSION: Nonrestorable/advanced carious lesion tooth #30 with periapical pathology. Extraction or endodontic therapy recommended at time of imaging; patient did not return for treatment."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Today",
+    "author": "Patient-reported, telehealth intake",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Source/Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Metformin",
+        "1000 mg",
+        "Twice daily",
+        "Prescribed for type 2 diabetes"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Ibuprofen",
+        "800 mg",
+        "Every 4 hours x 2 days",
+        "Patient self-directed, exceeds typical max frequency (usual max q6-8h)"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Amoxicillin",
+        "500 mg",
+        "Taken 'a few times' over past 2 days",
+        "Leftover from relative's prescription, course/origin unknown"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Hemoglobin A1c Result",
+    "date": "2 months ago",
+    "author": "Primary Care Clinic Lab",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "9.1",
+        "%",
+        "4.0-5.6"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Symptom Progression Over Past 5 Days (Patient-Reported)",
+    "date": "Today",
+    "author": "Patient-reported timeline, telehealth intake",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day",
+     "yLabel": "Reported pain level (0-10) / Swelling (qualitative, 0=none 3=severe)",
+     "series": [
+      {
+       "name": "Tooth pain (0-10)",
+       "points": [
+        {
+         "x": "Day 1",
+         "y": 6
+        },
+        {
+         "x": "Day 2",
+         "y": 8
+        },
+        {
+         "x": "Day 3",
+         "y": 9
+        },
+        {
+         "x": "Day 4",
+         "y": 9
+        },
+        {
+         "x": "Day 5 (yesterday)",
+         "y": 4
+        },
+        {
+         "x": "Today",
+         "y": 3
+        }
+       ]
+      },
+      {
+       "name": "Jaw/neck swelling (0-3 scale)",
+       "points": [
+        {
+         "x": "Day 1",
+         "y": 0
+        },
+        {
+         "x": "Day 2",
+         "y": 0
+        },
+        {
+         "x": "Day 3",
+         "y": 0
+        },
+        {
+         "x": "Day 4",
+         "y": 0
+        },
+        {
+         "x": "Day 5 (yesterday)",
+         "y": 1
+        },
+        {
+         "x": "Today",
+         "y": 3
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Teledentistry Intake Note",
+    "date": "Today",
+    "author": "Intake coordinator",
+    "release": {
+     "when": "start"
+    },
+    "body": "48-year-old male presents via video visit reporting several days of lower right back tooth pain and new swelling under the jaw. Reports taking leftover amoxicillin and high-dose ibuprofen. Works as a line cook, no dental insurance, hoping to avoid missing work tonight. Appears uncomfortable, prefers sitting upright during call."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "5-day history of right mandibular molar pain, now with overnight submandibular swelling and jaw stiffness.",
+    "says": "My bottom back tooth on the right has been killing me for like five days, and now my jaw and under my neck swelled up overnight.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "pain timeline",
+    "chart": "Tooth pain began 5 days ago, worsened progressively, peaked around day 3-4, then notably decreased yesterday.",
+    "says": "The toothache was bad, real bad, kept me up at night. But yesterday it actually eased up some, which I thought was good.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "swelling onset",
+    "chart": "Jaw and submandibular swelling developed overnight, after the toothache improved.",
+    "says": "Then I woke up this morning and my jaw and the area under it was all swollen up. Came on fast overnight.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "jaw opening",
+    "chart": "Patient reports difficulty opening mouth, limited to about 2 fingerbreadths.",
+    "says": "I can barely open my mouth now, maybe two fingers wide, hurts to try more.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "voice changes",
+    "chart": "Patient's voice sounds muffled per self-report and on call.",
+    "says": "People been telling me I sound funny, like I got something in my mouth.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "swallowing difficulty",
+    "chart": "Reports pain and difficulty swallowing saliva.",
+    "says": "Swallowing my own spit hurts now. It's hard to do.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "drooling",
+    "chart": "Reports mild drooling, intermittent.",
+    "says": "I been drooling a little, which is embarrassing, but I can't help it right now.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "breathing status",
+    "chart": "Patient denies difficulty breathing but reports increased comfort sitting upright versus lying flat.",
+    "says": "My breathing's okay I think, but I just feel better sitting up than lying down.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "fever",
+    "chart": "Reports subjective fever, measured 101.5°F this morning.",
+    "says": "I took my temperature this morning and it was like 101 point something. I been feeling hot and kind of shaky.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "pain medication use",
+    "chart": "Self-medicating with ibuprofen 800mg every 4 hours for pain over past 2 days.",
+    "says": "I been taking ibuprofen, the 800 ones, every four hours or so, trying to get through my shifts.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "medications",
+    "topic": "antibiotic use",
+    "chart": "Taking leftover amoxicillin from a relative's prescription, source and completeness unknown, intermittently over past 2 days.",
+    "says": "My cousin had some amoxicillin left from his tooth thing, so I been taking a few of those too, hoping it'd help.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "goals",
+    "topic": "work concerns",
+    "chart": "Patient hoping for a prescription that allows him to work his shift tonight; expresses concern about missing work.",
+    "says": "I really need something stronger so I can get through work tonight. I can't afford to miss a shift.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "Type 2 diabetes mellitus, on metformin.",
+    "says": "I got the sugar, type 2. I take metformin for it.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "metformin regimen",
+    "chart": "Metformin 1000mg twice daily.",
+    "says": "I take two pills a day for the diabetes, metformin, 1000 milligrams each I think.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "diabetes control",
+    "chart": "HbA1c 9.1% two months ago, indicating poor glycemic control.",
+    "says": "My sugar's been running kind of high lately, doctor wasn't too happy about my last blood test.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "psh",
+    "topic": "prior dental care",
+    "chart": "Had panoramic X-ray 14 months ago showing deep decay and infection in lower right molar; did not return for recommended treatment.",
+    "says": "I went to a dentist like a year ago, they took an X-ray and said that tooth was bad and needed to come out or get a root canal, but I never went back. Money was tight.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "dental insurance",
+    "chart": "No dental insurance; cost is a significant barrier to care.",
+    "says": "I don't have dental insurance. That's a big part of why I put it off.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works as a line cook; concerned about losing income if he misses shifts.",
+    "says": "I cook at a restaurant here in New Orleans, been doing it for years. If I don't work, I don't get paid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "trismus duration",
+    "chart": "Jaw stiffness/limited opening began this morning, concurrent with swelling.",
+    "says": "The jaw thing is new today too, same time as the swelling.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "chills/sweats",
+    "chart": "Reports chills and feeling shaky along with fever.",
+    "says": "I been getting the chills on and off since last night.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "ros",
+    "topic": "ear pain",
+    "chart": "Denies ear pain or hearing changes.",
+    "says": "No, my ear's fine, no pain there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "sinus symptoms",
+    "chart": "Denies nasal congestion, sinus pressure, or recent upper respiratory infection symptoms.",
+    "says": "No stuffy nose or sinus stuff, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies visual disturbances or eye swelling.",
+    "says": "My eyes are fine, nothing wrong with my vision.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "allergies",
+    "topic": "medication allergies",
+    "chart": "No known drug allergies.",
+    "says": "I ain't allergic to nothing that I know of.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f25",
+    "category": "medications",
+    "topic": "anticoagulant use",
+    "chart": "Denies taking blood thinners or anticoagulant medications.",
+    "says": "No, I don't take no blood thinners or anything like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "medications",
+    "topic": "bisphosphonate use",
+    "chart": "Denies history of bisphosphonate or antiresorptive medication use.",
+    "says": "Never heard of that, no, I don't take anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Denies current tobacco use; quit smoking 6 years ago.",
+    "says": "I used to smoke but I quit about six years back.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f28",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports occasional alcohol use, 1-2 drinks on weekends, denies heavy or daily use.",
+    "says": "I might have a beer or two on the weekend, nothing crazy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "psychosocial",
+    "topic": "healthcare avoidance",
+    "chart": "Reports general reluctance to seek care due to cost concerns and difficulty taking time off work.",
+    "says": "I try not to go to the doctor or dentist unless I really have to, it adds up fast and I can't afford to miss work.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "psychosocial",
+    "topic": "fear of hospital costs",
+    "chart": "Expresses significant anxiety about the cost of emergency department care and reluctance to go despite severity.",
+    "says": "I really don't want to go to no emergency room, that's gonna cost me a fortune and I still got to find a way to get there and pay for whatever they do.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f31",
+    "category": "hpi",
+    "topic": "neck movement",
+    "chart": "Reports some stiffness and discomfort when turning or tilting the neck.",
+    "says": "My neck feels stiff too, kinda hurts to turn my head side to side.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "function",
+    "topic": "oral intake",
+    "chart": "Reports difficulty eating or drinking normally over past day due to pain and swelling; minimal fluid intake today.",
+    "says": "I ain't really been able to eat or drink much today, hurts too much and it's hard to swallow.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f33",
+    "category": "hpi",
+    "topic": "lying flat sensation",
+    "chart": "Reports sensation of throat tightness or pressure when attempting to lie flat.",
+    "says": "When I tried to lay down earlier it felt like my throat was getting tight, so I sat back up.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f34",
+    "category": "goals",
+    "topic": "treatment expectations",
+    "chart": "Expects a stronger antibiotic or pain prescription to manage this at home and avoid missing work.",
+    "says": "I was hoping y'all could just call in something stronger to the pharmacy so I don't have to go nowhere.",
+    "tier": "initial",
+    "importance": "important"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize signs and symptoms of a spreading odontogenic infection with impending airway compromise (bilateral submandibular swelling, trismus, dysphagia, muffled voice, fever, throat tightness when supine) consistent with early Ludwig's angina.",
+    "factIds": [
+     "f3",
+     "f4",
+     "f5",
+     "f6",
+     "f9",
+     "f33"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a5",
+     "a12"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Correlate current presentation with prior radiographic findings to identify the likely odontogenic source of infection.",
+    "factIds": [
+     "f16"
+    ],
+    "actionIds": [
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify medication-related safety concerns including excessive ibuprofen dosing frequency and inappropriate self-medication with leftover antibiotics, and recognize poorly controlled diabetes as a risk factor for infection severity.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f13",
+     "f15"
+    ],
+    "actionIds": [
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Make an appropriate urgent disposition decision within scope: recognize this requires immediate emergency department referral rather than antibiotic prescribing or routine scheduling, and communicate this clearly despite patient's stated goals.",
+    "factIds": [
+     "f12",
+     "f30",
+     "f34"
+    ],
+    "actionIds": [
+     "a12",
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Elicit and explore sensitive psychosocial barriers (cost concerns, work pressures, healthcare avoidance) with empathy while still prioritizing patient safety.",
+    "factIds": [
+     "f17",
+     "f29",
+     "f30"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o6",
+    "text": "Identify the discrepancy between the patient's belief that his breathing is fine and clinical/historical evidence suggesting early airway risk.",
+    "factIds": [
+     "f8",
+     "f33"
+    ],
+    "actionIds": [
+     "a6",
+     "a12"
+    ]
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f8",
+    "artifactId": "d4",
+    "patientClaim": "Patient states his breathing is 'okay' and does not report any breathing difficulty.",
+    "recordEvidence": "The symptom progression shows a sharp spike in swelling severity overnight (0 to 3 on a 0-3 scale) concurrent with new trismus, muffled voice, and dysphagia -- a pattern of rapid clinical progression that is a known precursor to airway compromise regardless of the patient's subjective reassurance about breathing.",
+    "teachingPoint": "Patients with early airway-threatening infections may subjectively feel their breathing is fine even as objective signs (rapid swelling progression, trismus, dysphagia, need to sit upright) indicate imminent risk. Clinical judgment and trend data must override patient self-assessment of breathing adequacy in this context."
+   },
+   {
+    "id": "m2",
+    "factId": "f11",
+    "artifactId": "d2",
+    "patientClaim": "Patient reports taking leftover amoxicillin from a relative hoping it would treat his infection.",
+    "recordEvidence": "Medication list documents the amoxicillin source and course as unknown/unverified, taken only intermittently 'a few times' over 2 days -- an inadequate, unsupervised antibiotic course that would not reliably treat a spreading infection and may have contributed to a false sense of reassurance that masked symptom progression.",
+    "teachingPoint": "Self-medication with leftover or incomplete antibiotic courses can inadequately treat an infection, potentially altering symptom presentation while the underlying process continues to spread -- this is not an effective substitute for proper diagnosis and treatment, and reinforces the clinician's duty to disclose that this does not constitute adequate care."
+   }
+  ],
+  "patient": {
+   "name": "Jerome Baker",
+   "age": 48,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Black",
+   "occupation": "Line cook at a restaurant",
+   "language": "English",
+   "appearance": "A heavyset man with short greying hair, appearing fatigued and uncomfortable, sitting upright on a couch in a dimly lit living room. He periodically dabs at his mouth with a paper towel and holds a hand near his jaw. His voice has a muffled, thick quality, and he shifts position as if trying to find a more comfortable way to sit.",
+   "portrait": "/portraits/dentistry-jerome-baker-toothache.jpg"
+  },
+  "persona": {
+   "personality": "Stoic, hardworking, and reluctant to make a fuss about his own health; prioritizes providing for himself and not missing work.",
+   "communicationStyle": "Direct and plain-spoken, downplays severity of symptoms initially, opens up more about fears (cost, hospital) when asked directly and gently.",
+   "healthLiteracy": "low",
+   "emotionalState": "Worried beneath a calm exterior, trying to minimize how bad things are so he doesn't have to deal with the implications, especially missing work or going to the ER.",
+   "background": "Jerome has worked as a line cook in New Orleans restaurants for over 15 years. He is single, lives alone, and sends some money to help support his elderly mother. He enjoys fishing on his rare days off and is well-known among coworkers for his biscuits.",
+   "speechExamples": [
+    "I don't really go to the doctor unless something's really wrong.",
+    "I just need something to get me through my shift tonight.",
+    "It is what it is, I'll manage.",
+    "I ain't trying to run up a big hospital bill if I don't have to.",
+    "Been dealing with worse, I'll be alright."
+   ],
+   "concerns": [
+    "Missing work and losing income if he can't work tonight's shift",
+    "The cost of an emergency room visit or hospital stay",
+    "Not having dental insurance and the cost of future dental treatment",
+    "Wanting a quick fix (stronger antibiotic/pain medicine) instead of a bigger medical intervention"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the dental provider on a teledentistry video visit. Jerome Baker, 48, contacted the clinic about a bad lower-right toothache over the past several days, now with new swelling under his jaw overnight. Review his history, inspect what you can by camera, and determine the appropriate next step for his care.",
+   "chiefComplaint": "Five-day history of right lower back tooth pain, now with overnight jaw and submandibular swelling, limited mouth opening, and muffled voice.",
+   "openingLine": "My bottom back tooth on the right has been killing me for like five days, and now my jaw and under my neck swelled up overnight.",
+   "tasks": [
+    "Take a focused history of the presenting concern",
+    "Review the patient's medical history, current medications, and any available prior dental records",
+    "Perform a remote examination using camera inspection and guided patient maneuvers",
+    "Determine and communicate the appropriate next steps for care",
+    "Document findings and plan in a dental SOAP note"
+   ],
+   "timeLimitMin": 20
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Right lower back tooth pain x5 days, new overnight jaw/neck swelling"
+   },
+   {
+    "label": "Problem list",
+    "value": "Type 2 diabetes mellitus; dental caries tooth #30 with periapical radiolucency (per imaging 14 months ago, untreated)"
+   },
+   {
+    "label": "Medications",
+    "value": "Metformin 1000mg PO BID; (patient-reported self-medication: ibuprofen 800mg, amoxicillin 500mg leftover - see medication list)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Temp 38.6°C (101.5°F) per patient report this morning; other vitals not available (telehealth, no home BP/pulse ox reported)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Not on file"
+   },
+   {
+    "label": "Care team",
+    "value": "No current dental home identified; last dental visit 14 months ago at a different practice"
+   },
+   {
+    "label": "Code status",
+    "value": "N/A - outpatient telehealth"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "dental emergency triage",
+  "specialty": "Dentistry (Teledentistry)",
+  "setting": "Telehealth video visit, patient at home in New Orleans, Louisiana",
+  "summary": "A 48-year-old line cook with poorly controlled type 2 diabetes presents via teledentistry video visit with a 5-day history of a right mandibular molar toothache that paradoxically improved the day before new bilateral submandibular swelling, trismus, dysphagia, and muffled voice developed overnight -- a classic pattern for a spreading odontogenic infection with airway risk (Ludwig's angina) arising from an untreated carious/abscessed tooth #30. This case teaches dental students to recognize red-flag signs of airway-threatening dental infection in a remote visit, correctly weigh patient-reported reassurance against objective trend data, and make the scope-appropriate decision to refer immediately to emergency care rather than prescribing antibiotics or scheduling routine treatment.",
+  "title": "Rapidly Progressive Submandibular Swelling and Trismus Following Untreated Molar Abscess",
+  "answerKey": {
+   "primaryProblem": "Spreading odontogenic infection (submandibular space, bilateral) secondary to untreated periapical abscess of tooth #30, with early signs concerning for Ludwig's angina and impending airway compromise.",
+   "differential": [
+    "Early Ludwig's angina / bilateral submandibular space infection from odontogenic source (most likely)",
+    "Unilateral submandibular (Vincent's) space abscess without bilateral spread",
+    "Sialadenitis or submandibular gland infection (less likely given dental source and radiographic correlation)",
+    "Reactive cervical lymphadenitis alone (does not explain trismus, dysphagia, muffled voice)",
+    "Peritonsillar abscess (less likely given exam findings localized to submandibular/jaw region and dental source)"
+   ],
+   "keyFindings": [
+    "5-day history of right mandibular molar pain that improved just before new overnight swelling -- a pattern suggesting the infection decompressed from the tooth into surrounding soft tissue spaces",
+    "Firm, bilateral submandibular swelling extending toward midline",
+    "Trismus limiting opening to ~2 fingerbreadths",
+    "Muffled ('hot potato') voice",
+    "Painful swallowing with mild drooling",
+    "Fever 38.6°C with chills",
+    "Subjective throat tightness when attempting to lie flat, preference for sitting upright",
+    "Prior panoramic radiograph (14 months ago) confirming deep caries and periapical radiolucency at tooth #30, untreated",
+    "HbA1c 9.1% indicating poorly controlled diabetes, a risk factor for rapid infection spread and poor healing",
+    "Inadequate self-treatment with excessive-frequency ibuprofen and an incomplete, unsupervised course of leftover amoxicillin"
+   ],
+   "plan": [
+    "Advise immediate emergency department evaluation today -- do not delay for a dental appointment or outpatient antibiotic trial",
+    "Clearly explain to patient that this presentation (bilateral swelling, trismus, muffled voice, dysphagia, fever) carries risk of airway obstruction and requires same-day emergency assessment, possible IV antibiotics, and surgical drainage",
+    "Advise patient to stop relying on leftover/borrowed antibiotics and not to attempt to manage this with over-the-counter analgesics alone",
+    "Instruct patient to call 911 or go immediately to the nearest ED if he develops worsening difficulty breathing, inability to swallow saliva, increasing drooling, or difficulty speaking at all while en route",
+    "Communicate empathetically about cost/work concerns while being firm that this is a time-sensitive, potentially life-threatening situation that takes priority",
+    "Document findings in a Dental SOAP note and arrange communication/handoff information for the ED team including prior radiograph findings and antibiotic history",
+    "Plan for follow-up dental treatment (likely extraction or root canal of tooth #30) only after the acute infection and airway risk have been addressed in the emergency/hospital setting",
+    "Encourage patient to also establish ongoing diabetes management given HbA1c of 9.1%, as this is a modifiable risk factor for future infection severity, with primary care follow-up"
+   ],
+   "redFlags": [
+    "Bilateral submandibular swelling extending toward midline",
+    "Trismus with limited mouth opening (~2 fingerbreadths)",
+    "Muffled 'hot potato' voice",
+    "Dysphagia/odynophagia with drooling",
+    "Patient-reported throat tightness when supine, preference for upright positioning",
+    "Rapid overnight progression of swelling following initial pain improvement (suggests spread rather than resolution)",
+    "Fever with chills in setting of poorly controlled diabetes"
+   ],
+   "educationPoints": [
+    "A decrease in tooth pain does not always mean improvement -- it can indicate that infection has decompressed into surrounding soft tissue spaces, which may be a sign of worsening, not resolving, disease.",
+    "Trismus, muffled voice, dysphagia, and drooling together are red-flag signs of a spreading deep space infection and possible impending airway compromise, and warrant emergency referral regardless of the patient's own breathing assessment.",
+    "Poorly controlled diabetes (reflected by elevated HbA1c) is a significant risk factor for rapid progression and severity of odontogenic infections.",
+    "Self-medication with leftover or incomplete antibiotic courses, and excessive-frequency NSAID dosing, are not substitutes for definitive treatment and can mask or delay recognition of a worsening infection.",
+    "Teledentistry providers must recognize when a presentation exceeds the scope of outpatient dental management and requires immediate escalation to emergency medical care rather than prescribing or scheduling routine follow-up.",
+    "Addressing patient concerns about cost and missed work with empathy, while still clearly conveying urgency, supports both patient trust and safety."
+   ]
+  },
+  "professions": [
+   "dentistry"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

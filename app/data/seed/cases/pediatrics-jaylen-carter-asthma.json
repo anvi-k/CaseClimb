@@ -1,0 +1,902 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home/clinic vitals from check-in",
+    "result": "Temp 98.2°F, HR 88 bpm, RR 18, BP 112/68 mmHg, SpO2 98% on room air (home pulse oximeter reading relayed by father at start of call).",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "test",
+    "name": "Peak expiratory flow via patient's home peak flow meter (coach through 3 attempts, best effort)",
+    "result": "Best of 3 attempts: 310 L/min. Patient's documented personal best is 420 L/min (73% of personal best).",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Observe inhaler technique with fluticasone MDI via camera",
+    "result": "Patient exhales, then presses canister and inhales in one quick sharp breath without a spacer; no breath-hold at end; coordination is poor and much of the dose likely deposits in mouth/throat.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Observe albuterol rescue inhaler technique via camera",
+    "result": "Similar technique issues: no shake visible, quick inhalation, no breath-hold.",
+    "importance": "minor",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "General appearance / work of breathing via camera",
+    "result": "Alert, conversational, speaks in full sentences, no accessory muscle use, no audible wheeze at rest, sitting comfortably.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Administer Asthma Control Test (ACT) questionnaire",
+    "result": "Score 14/25 (score <20 indicates poorly controlled asthma).",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review emergency department visit note from 2 weeks ago",
+    "result": "ED visit for acute asthma exacerbation triggered by exertion/possible viral URI; treated with nebulized albuterol x3, oral prednisone 40 mg daily x5 days (completed), discharged with instructions to follow up with pediatrics within 1-2 weeks and continue controller inhaler.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review current medication list and refill/pharmacy fill history",
+    "result": "Fluticasone propionate HFA 110 mcg, 2 puffs BID prescribed 3 months ago (120-dose canister = ~30-day supply at prescribed dosing of 4 puffs/day); pharmacy refill history shows only 1 refill in 3 months (2 canisters total, 240 doses over ~90 days), consistent with roughly 2.5-3 puffs/day average use rather than prescribed 4 puffs/day - partial underuse, less severe than patient's 'when I remember' framing might suggest but still below prescribed dosing.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review growth chart (height, weight, BMI percentile over time)",
+    "result": "Height 5'9\" (175 cm), Weight 152 lb (69 kg), BMI 22.5 kg/m2, 65th percentile for age - tracking stable along growth curve over past 2 years, no concerning change.",
+    "importance": "minor",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review immunization record",
+    "result": "Up to date for age including annual influenza vaccine this season; no COVID-19 vaccine on file (patient/family declined).",
+    "importance": "minor",
+    "artifactIds": [
+     "d7"
+    ]
+   },
+   {
+    "id": "a11",
+    "kind": "lab",
+    "name": "Review spirometry from pulmonology referral last year",
+    "result": "FEV1 82% predicted, FEV1/FVC ratio 0.76 (mildly reduced), with 14% improvement in FEV1 post-bronchodilator - consistent with mild-moderate persistent asthma with reversible airflow obstruction.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Allergy/environmental symptom screening tool (structured questionnaire administered via telehealth)",
+    "result": "Score suggests mild allergic rhinitis symptom burden; tool does not itself specify home exposures — correlate with history obtained directly from patient/caregiver.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "exam",
+    "name": "Visual inspection of nasal mucosa and oropharynx via camera (caregiver-assisted with flashlight)",
+    "result": "Nasal mucosa appears mildly erythematous with slight boggy quality; oropharynx clear, no exudate or erythema. Findings are nonspecific and should be correlated with symptom history.",
+    "importance": "minor",
+    "abnormal": true,
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Emergency Department Visit Summary",
+    "author": "Dr. A. Nguyen, Emergency Medicine",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "CHIEF COMPLAINT: Shortness of breath and wheeze x1 day.\n\nHPI: 15-year-old male with known asthma presented with acute dyspnea, wheezing, and cough that began during basketball practice and worsened overnight. Reports using rescue inhaler multiple times with minimal relief prior to arrival. No fever. Family reports possible mild upper respiratory symptoms (congestion) in the preceding days.\n\nEXAM: Moderate respiratory distress on arrival, RR 28, SpO2 93% on room air, diffuse expiratory wheeze bilaterally, mild subcostal retractions.\n\nTREATMENT: Nebulized albuterol x3 with ipratropium first dose, supplemental O2 2L briefly, oral dexamethasone in ED then prescribed prednisone 40 mg daily x5 days to complete at home. Improved to SpO2 98% RA, RR 18, resolved retractions prior to discharge.\n\nDISCHARGE INSTRUCTIONS: Continue controller inhaler (fluticasone 110 mcg 2 puffs BID) daily as prescribed, use spacer if available, follow up with primary pediatrician/asthma care within 1-2 weeks, return to ED or call 911 for worsening breathing, blue lips, or inability to speak in full sentences.\n\nDiagnosis: Acute asthma exacerbation, moderate severity."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "author": "Pediatric Primary Care",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Last filled"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Fluticasone propionate HFA 110 mcg inhaler",
+        "2 puffs",
+        "Inhaled",
+        "Twice daily",
+        "2 months ago (1 refill in past 3 months)"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Albuterol HFA 90 mcg inhaler",
+        "2 puffs",
+        "Inhaled",
+        "Every 4-6 hours as needed for wheeze/cough",
+        "3 weeks ago (new canister)"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Prednisone 20 mg tablets",
+        "2 tablets (40 mg)",
+        "Oral",
+        "Once daily x5 days - course completed",
+        "Completed, 2 weeks ago"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Pulmonology Spirometry Report (1 year ago)",
+    "author": "Pediatric Pulmonology",
+    "date": "~1 year ago",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "FEV1 (% predicted)",
+        "82",
+        "%",
+        "80-120 (normal)"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "FVC (% predicted)",
+        "95",
+        "%",
+        "80-120 (normal)"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "FEV1/FVC ratio",
+        "0.76",
+        "ratio",
+        "≥0.80 (normal for age)"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "FEV1 change post-bronchodilator",
+        "+14",
+        "%",
+        "≥12% = significant reversibility"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Peak Expiratory Flow Trend",
+    "author": "Patient-reported/home device",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a2"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Visit",
+     "yLabel": "Peak flow (L/min)",
+     "refLow": 336,
+     "series": [
+      {
+       "name": "Measured peak flow",
+       "points": [
+        {
+         "x": "6 months ago (well visit)",
+         "y": 390
+        },
+        {
+         "x": "3 months ago (controller started)",
+         "y": 400
+        },
+        {
+         "x": "ED visit, 2 weeks ago",
+         "y": 220
+        },
+        {
+         "x": "Today",
+         "y": 310
+        }
+       ]
+      },
+      {
+       "name": "Personal best (reference)",
+       "points": [
+        {
+         "x": "6 months ago (well visit)",
+         "y": 420
+        },
+        {
+         "x": "3 months ago (controller started)",
+         "y": 420
+        },
+        {
+         "x": "ED visit, 2 weeks ago",
+         "y": 420
+        },
+        {
+         "x": "Today",
+         "y": 420
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "form",
+    "title": "Asthma Control Test (ACT) - Today",
+    "author": "Self-administered, reviewed with resident",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a6"
+    },
+    "body": "Q1 (activity limitation): 3 - Some of the time\nQ2 (shortness of breath frequency): 3 - Once a week\nQ3 (night waking/early waking): 2 - 2-3 times a week\nQ4 (rescue inhaler use): 2 - 1-2 times a day\nQ5 (self-rated control): 4 - Well controlled\nTOTAL SCORE: 14/25 (score <20 = not well controlled; score ≤15 = very poorly controlled)"
+   },
+   {
+    "id": "d6",
+    "type": "flowsheet",
+    "title": "Growth Flowsheet",
+    "author": "Pediatric Primary Care",
+    "date": "today, with prior visits",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Height",
+      "Weight",
+      "BMI",
+      "BMI %ile"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "2 years ago",
+        "5'5\" (165 cm)",
+        "125 lb (57 kg)",
+        "20.8",
+        "60th"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "1 year ago",
+        "5'7\" (170 cm)",
+        "138 lb (63 kg)",
+        "21.6",
+        "62nd"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Today",
+        "5'9\" (175 cm)",
+        "152 lb (69 kg)",
+        "22.5",
+        "65th"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Immunization Record",
+    "author": "Pediatric Primary Care",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a10"
+    },
+    "body": "DTaP/Tdap: up to date (Tdap booster age 11). MMR: 2 doses complete. Varicella: 2 doses complete. HPV: 2-dose series complete. Meningococcal ACWY: dose 1 complete, dose 2 due at age 16. Influenza: received this season. COVID-19: none on file, family has declined to date."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "asthma follow-up visit",
+    "chart": "Follow-up after ED visit for asthma exacerbation 2 weeks ago.",
+    "says": "I'm here for my asthma check-up thing after I went to the ER.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "ED visit trigger",
+    "chart": "ED visit occurred after shortness of breath/wheeze starting during basketball practice.",
+    "says": "It happened at practice, I just couldn't catch my breath and it kept getting worse.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "rescue inhaler frequency",
+    "chart": "Uses albuterol rescue inhaler 5-6 times per week.",
+    "says": "I use my blue inhaler like, almost every day, maybe 5 or 6 times a week.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "nighttime symptoms",
+    "chart": "Wakes coughing approximately twice weekly.",
+    "says": "I wake up coughing maybe twice a week, it's annoying.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "medications",
+    "topic": "controller inhaler use pattern",
+    "chart": "Prescribed fluticasone 110 mcg 2 puffs BID but takes it inconsistently, 'when I remember'.",
+    "says": "I'm supposed to use the orange one twice a day but honestly I just do it when I remember.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "medications",
+    "topic": "spacer use",
+    "chart": "No spacer available or used with controller or rescue inhaler.",
+    "says": "Nah I don't have one of those spacer things, never got one.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "psychosocial",
+    "topic": "inhaler use at school/sports",
+    "chart": "Reports embarrassment using inhaler in front of basketball teammates.",
+    "says": "I don't really want to pull it out in front of the team, people look at you weird.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "substance",
+    "topic": "vaping",
+    "chart": "Discloses daily nicotine vaping for approximately 4 months after confidentiality explained.",
+    "says": "Okay... yeah, I've been vaping. Like every day for maybe 4 months now.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "substance",
+    "topic": "vaping context",
+    "chart": "Started vaping with teammates after games; uses a friend's device or buys pods himself.",
+    "says": "It started with some guys on the team after games, now I just do it on my own too.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "substance",
+    "topic": "other substance use",
+    "chart": "Denies alcohol, marijuana, or other drug use.",
+    "says": "No, I don't drink or smoke weed or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "social",
+    "topic": "new pet exposure",
+    "chart": "New cat in the home for about 6 weeks.",
+    "says": "Oh yeah, we got a cat like a month and a half ago.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "social",
+    "topic": "household smoking",
+    "chart": "No tobacco smokers in the household.",
+    "says": "Nobody smokes at home, my dad doesn't smoke.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "hpi",
+    "topic": "ED treatment received",
+    "chart": "Received nebulizer treatments and a 5-day course of oral steroids in/after ED visit, completed as directed.",
+    "says": "They gave me breathing treatments there and then I had to take steroid pills for 5 days, I finished those.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "hpi",
+    "topic": "symptoms since ED visit",
+    "chart": "Reports feeling better than during the exacerbation but still coughing at night and using rescue inhaler frequently.",
+    "says": "I feel better than I did that day but I'm still coughing some nights and using the inhaler a lot.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "chest tightness",
+    "chart": "Endorses occasional chest tightness with exertion, especially during basketball drills.",
+    "says": "Sometimes my chest feels tight when we're doing sprints at practice.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "ros",
+    "topic": "fever/infection symptoms",
+    "chart": "Denies current fever, sore throat, or significant congestion.",
+    "says": "No fever or sore throat right now.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "ros",
+    "topic": "allergy symptoms",
+    "chart": "Reports occasional nasal congestion and sneezing, worse since the cat arrived.",
+    "says": "My nose gets stuffy sometimes, maybe more since we got the cat.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "pmh",
+    "topic": "asthma diagnosis history",
+    "chart": "Diagnosed with persistent asthma around age 8; previously well-controlled on same controller dose until recent months.",
+    "says": "I've had asthma since I was like 8, it's usually not this bad.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "family",
+    "topic": "family history of atopy",
+    "chart": "Father has seasonal allergies; no family history of early cardiac or pulmonary death.",
+    "says": "My dad gets allergies in the spring but nothing serious runs in the family that I know of.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "function",
+    "topic": "impact on sports",
+    "chart": "Reports having to stop or slow down during basketball practice due to breathing symptoms over the past month.",
+    "says": "I've had to stop running during drills a couple times because I couldn't breathe right.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "psychosocial",
+    "topic": "caregiver involvement",
+    "chart": "Father present at start of visit, then stepped out to allow private conversation.",
+    "says": "My dad said he'd be in the other room if you need him.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "psychosocial",
+    "topic": "relationship with father about illness",
+    "chart": "Feels father worries a lot about his asthma and he doesn't want to add to that worry.",
+    "says": "My dad already stresses about my asthma, I don't want to make it worse.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "adherence",
+    "topic": "reason for missed controller doses",
+    "chart": "Forgets morning dose due to rushing to catch the school bus; evening dose often forgotten.",
+    "says": "Mornings I'm rushing for the bus and I just forget, and then at night I forget too sometimes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "goals",
+    "topic": "patient's goals",
+    "chart": "Wants to keep playing basketball without breathing problems or missing practice.",
+    "says": "I just want to be able to play ball without this messing me up.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "nutrition",
+    "topic": "diet pattern",
+    "chart": "Reports typical adolescent diet, no specific concerns, drinks occasional sports drinks and sodas.",
+    "says": "I eat pretty normal, drink Gatorade and stuff after practice.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "sexual",
+    "topic": "sexual activity screening",
+    "chart": "Not currently sexually active; understands STI/pregnancy prevention basics from school health class.",
+    "says": "No, I'm not with anyone like that right now.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "mood and stress",
+    "chart": "Denies feelings of sadness, hopelessness, or thoughts of self-harm; reports normal mood overall, some stress about grades and basketball season.",
+    "says": "I'm okay, just stressed about school and making varsity next year.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "social",
+    "topic": "screen time/sleep",
+    "chart": "Reports going to bed around 11pm on school nights, uses phone before bed; sleep sometimes interrupted by coughing.",
+    "says": "I'm usually up till like 11 on my phone, then the coughing wakes me up sometimes.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f29",
+    "category": "hpi",
+    "topic": "recognizing worsening symptoms",
+    "chart": "Understands asthma action plan concept loosely but cannot clearly state when to seek emergency care.",
+    "says": "I know I'm supposed to use the inhaler more if it's bad but I don't really remember the rest of the plan.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "substance",
+    "topic": "vaping device source",
+    "chart": "Obtains vape pods/devices from friends and occasionally purchases flavored disposable vapes online.",
+    "says": "Sometimes a friend gives me one, sometimes I just order the fruity ones online.",
+    "tier": "hidden",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "psychosocial",
+    "topic": "worry about disclosure",
+    "chart": "Worried that father or coach would be upset or disappointed if they knew about the vaping.",
+    "says": "If my dad or coach found out I vape, they'd be so mad, that's why I haven't told anyone.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "ros",
+    "topic": "cough character",
+    "chart": "Describes cough as dry, worse at night and with exercise, no significant sputum production.",
+    "says": "It's a dry cough mostly, worse at night and when I'm running.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit a structured asthma control history (daytime/nighttime symptoms, rescue inhaler frequency, activity limitation) and recognize poorly controlled persistent asthma despite recent ED treatment.",
+    "factIds": [
+     "f3",
+     "f4",
+     "f14",
+     "f15",
+     "f20"
+    ],
+    "actionIds": [
+     "a2",
+     "a6"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify adherence barriers to the inhaled corticosteroid (forgetting doses, no spacer, embarrassment in front of peers) and connect them to objective evidence of underuse in the record.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f7",
+     "f23"
+    ],
+    "actionIds": [
+     "a3",
+     "a8"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Establish confidential adolescent time, explain confidentiality limits, and screen for substance use, successfully eliciting a sensitive disclosure of daily nicotine vaping.",
+    "factIds": [
+     "f8",
+     "f9",
+     "f30",
+     "f31"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o4",
+    "text": "Elicit the new household cat exposure and correlating allergy symptoms through history-taking, and counsel on this modifiable environmental trigger contributing to worsened asthma control.",
+    "factIds": [
+     "f11",
+     "f17"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Correctly interpret home peak flow and spirometry/ACT data in the context of personal best and reference ranges to classify asthma control level and plan next steps within pediatric scope (step up controller therapy per protocol, correct technique, address triggers, offer cessation counseling/referral, no need for ED/pulmonology escalation today given stable vitals).",
+    "factIds": [
+     "f13",
+     "f14"
+    ],
+    "actionIds": [
+     "a2",
+     "a6",
+     "a9",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize and explore a mismatch between the patient's stated controller adherence and objective pharmacy refill/technique evidence, using it as a nonjudgmental teaching moment rather than confrontation.",
+    "factIds": [
+     "f5"
+    ],
+    "actionIds": [
+     "a8",
+     "a3"
+    ]
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f5",
+    "artifactId": "d2",
+    "patientClaim": "Jaylen says he takes his fluticasone inhaler 'when I remember,' implying inconsistent but regular-ish use.",
+    "recordEvidence": "Medication list/refill history shows only 1 refill in 3 months for a 120-dose canister that should last ~30 days at the prescribed 4 puffs/day (2 canisters = 240 doses over ~90 days, ~2.5-3 puffs/day average) - below the prescribed 4 puffs/day but higher than a casual 'when I remember' framing might suggest, indicating partial but meaningful underuse rather than near-total nonadherence.",
+    "teachingPoint": "Self-reported adherence often doesn't match objective refill data in either direction; refill/pharmacy data and demonstrated technique provide more objective evidence and should be explored supportively, not punitively."
+   }
+  ],
+  "patient": {
+   "name": "Jaylen Carter",
+   "age": 15,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Black",
+   "occupation": "High school sophomore, junior varsity basketball player",
+   "language": "English",
+   "appearance": "A tall, athletically built teenage boy sitting on the edge of his bed in a Nike t-shirt, basketball posters visible on the wall behind him. He sits with arms crossed and gives short, guarded answers early in the call, loosening up and making more eye contact with the camera as the conversation continues."
+  },
+  "persona": {
+   "personality": "Guarded at first, respectful, wants to be seen as tough and capable in front of teammates and family; opens up once he feels he won't be judged or get in trouble.",
+   "communicationStyle": "Short sentences, minimal detail unless specifically asked; uses casual teen phrasing; warms up with rapport-building and direct, nonjudgmental questions.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about being in trouble or disappointing his father/coach, otherwise even-keeled; relaxes somewhat once confidentiality is explained.",
+   "background": "Sophomore at a public high school in Atlanta, plays junior varsity basketball and hopes to make varsity next year. Lives with his father; close with a small group of teammates. Enjoys video games and following professional basketball.",
+   "speechExamples": [
+    "I mean, it's fine, I guess.",
+    "I use the inhaler a lot but it's not that big a deal.",
+    "Can this stay between us?",
+    "I don't want my dad to freak out.",
+    "Yeah... I haven't told anybody that."
+   ],
+   "concerns": [
+    "Being able to keep playing basketball without breathing problems",
+    "Not wanting teammates or coach to see him use an inhaler",
+    "Worried his dad or coach will be upset if they find out about vaping",
+    "Wants to avoid another ER visit"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the pediatrics resident conducting a telehealth follow-up video visit with Jaylen Carter, a 15-year-old male, 2 weeks after an emergency department visit for an asthma exacerbation. His father will join briefly at the start, then step out to allow private time with Jaylen. Your tasks include reviewing his asthma control, inhaler technique and adherence, screening for triggers and risk behaviors with appropriate confidentiality, and developing a follow-up plan within your scope as a pediatric resident.",
+   "chiefComplaint": "Asthma follow-up visit after an emergency department visit for an exacerbation two weeks ago.",
+   "openingLine": "I'm here for my asthma check-up thing after I went to the ER.",
+   "tasks": [
+    "Take a focused history of asthma symptoms since the emergency department visit",
+    "Review inhaler technique and adherence, using the camera to observe technique",
+    "Establish confidential time with the adolescent and screen for substance use and psychosocial concerns",
+    "Identify environmental and trigger factors",
+    "Formulate and communicate an asthma action plan and follow-up plan appropriate to a pediatric resident's scope"
+   ],
+   "timeLimitMin": 25
+  },
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Asthma follow-up post-ED visit (2 weeks ago)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Persistent asthma (diagnosed age 8); allergic rhinitis (suspected)"
+   },
+   {
+    "label": "Medications",
+    "value": "Fluticasone propionate HFA 110 mcg 2 puffs BID; Albuterol HFA 90 mcg 2 puffs q4-6h PRN; Prednisone course completed 2 weeks ago"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Temp 98.2°F, HR 88, RR 18, BP 112/68, SpO2 98% RA (today's check-in)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date including influenza this season; COVID-19 vaccine declined to date"
+   },
+   {
+    "label": "Care team",
+    "value": "Pediatric primary care (resident supervised by attending); Pediatric Pulmonology (last seen ~1 year ago)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (not applicable - outpatient pediatric patient)"
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Poorly controlled persistent asthma (ACT score 14/25; peak flow 73% of personal best) in the setting of inhaled corticosteroid underuse/poor technique, a new environmental trigger (household cat), and newly disclosed daily nicotine vaping, following a recent ED visit for exacerbation.",
+   "differential": [
+    "Suboptimal asthma control due to ICS nonadherence and poor inhaler technique (most likely primary driver)",
+    "Asthma exacerbation triggered/worsened by new cat exposure (allergic component)",
+    "Vaping-associated airway irritation contributing to cough and bronchospasm",
+    "Allergic rhinitis with postnasal drip contributing to nighttime cough",
+    "Exercise-induced bronchoconstriction superimposed on underlying persistent asthma"
+   ],
+   "keyFindings": [
+    "Rescue inhaler use 5-6x/week and nocturnal cough 2x/week indicate poorly controlled asthma",
+    "ACT score 14/25 (very poorly controlled range)",
+    "Peak flow 310 L/min = 73% of personal best (yellow zone)",
+    "Pharmacy refill pattern (1 refill in 3 months, ~2.5-3 puffs/day average) shows ICS use below the prescribed BID dosing despite patient reporting fairly regular partial use, highlighting a gap between self-report and objective data",
+    "Poor MDI technique without spacer on camera observation, likely reducing effective lung deposition",
+    "New household cat (~6 weeks), elicited on history, with correlating nasal congestion/sneezing",
+    "Daily nicotine vaping disclosed for ~4 months, previously undocumented and a plausible contributor to airway irritability",
+    "Prior spirometry showing reversible obstruction consistent with persistent asthma, supporting ongoing controller need",
+    "Stable current vitals and comfortable work of breathing today, no signs of acute distress requiring emergency referral at this visit"
+   ],
+   "plan": [
+    "Reinforce and reassess inhaled corticosteroid technique; prescribe/arrange a spacer and demonstrate correct use via video coaching",
+    "Address adherence barriers collaboratively: align dosing with existing routines (e.g., tie to toothbrushing), consider discussing simplified regimen with supervising attending if needed",
+    "Discuss step-up or confirm appropriate controller therapy with supervising attending/asthma specialist given ongoing poor control despite reported use; consider referral back to pulmonology for reassessment",
+    "Elicit and counsel on environmental trigger reduction related to the new cat (e.g., keeping cat out of bedroom, hand-washing, HEPA filtration) while respecting the family's wish to keep the pet",
+    "Provide confidential, nonjudgmental brief intervention and counseling on nicotine vaping cessation; offer referral to adolescent-focused tobacco/vaping cessation resources or counseling as appropriate within pediatric scope",
+    "Review and update the written asthma action plan with the patient and ensure he can state red-flag symptoms requiring urgent care/ED return",
+    "Schedule close follow-up (e.g., 2-4 weeks) to reassess control, technique, and adherence; coordinate with father on general asthma management while maintaining confidentiality about vaping per adolescent consent/confidentiality norms",
+    "No indication today for emergency referral given stable vitals, comfortable breathing, and no signs of acute distress; escalate immediately if red-flag symptoms (inability to speak in full sentences, retractions, SpO2 drop) develop"
+   ],
+   "redFlags": [
+    "Peak flow in red zone (<50% personal best) or inability to speak in full sentences would warrant immediate ED referral",
+    "Accessory muscle use, cyanosis, or SpO2 <92% on exam would require urgent escalation",
+    "Disclosure of suicidal ideation or severe depression would require immediate safety assessment and escalation beyond routine asthma follow-up",
+    "Signs of nicotine withdrawal or escalating substance use pattern warranting more intensive adolescent substance use intervention/referral"
+   ],
+   "educationPoints": [
+    "Objective measures (ACT score, peak flow versus personal best, pharmacy refill data) often reveal a different picture of control than patient self-report alone and should be used together, not as a 'gotcha'",
+    "Confidential adolescent interviewing, explained clearly up front, increases disclosure of sensitive behaviors like vaping that caregivers and prior acute-care encounters may miss entirely",
+    "Correct inhaler technique and spacer use substantially affect inhaled corticosteroid efficacy; technique should be observed, not assumed, at every visit",
+    "New household pets are a common and modifiable asthma trigger in adolescents and warrant specific screening after any exacerbation, elicited through history rather than assumed",
+    "Nicotine vaping is increasingly common among adolescent athletes and can worsen airway reactivity; routine, nonjudgmental screening is part of comprehensive asthma care",
+    "Pediatric residents should recognize the limits of their scope and involve supervising attendings or asthma specialists for medication step-up decisions and complex cessation counseling referrals"
+   ]
+  },
+  "professions": [
+   "pediatrics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "difficulty": 3,
+  "variants": [],
+  "title": "Poorly controlled persistent asthma in a 15-year-old athlete following emergency department visit",
+  "summary": "A 15-year-old Black male basketball player presents for asthma follow-up two weeks after an ED visit. He has frequent rescue inhaler use and nocturnal symptoms despite prescribed inhaled corticosteroid, which he takes inconsistently and without a spacer. Once confidentiality is established, he discloses daily nicotine vaping for four months and embarrassment about using inhalers in front of teammates. A new household cat and poor adherence contribute to suboptimal control (peak flow 73% of personal best). The case teaches adolescent confidential interviewing, asthma control assessment, identifying adherence barriers and environmental triggers, and shared decision-making around controller therapy intensification and vaping cessation.",
+  "specialty": "Pediatrics",
+  "setting": "Telehealth video visit; patient's bedroom at home in Atlanta",
+  "encounterType": "Follow-up visit"
+ }
+}

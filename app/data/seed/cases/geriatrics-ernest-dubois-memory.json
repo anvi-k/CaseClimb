@@ -1,0 +1,993 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Review MoCA (Montreal Cognitive Assessment) result from last week's clinic visit",
+    "result": "MoCA 19/30 (clinic, 1 week ago). Points lost in delayed recall (0/5), visuospatial/executive (trail-making and cube), and orientation (date). Language and naming intact. Prior baseline not available for comparison.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Administer brief functional screen (IADLs) via patient and caregiver report",
+    "result": "Independent in bathing, dressing, toileting, transferring, feeding (basic ADLs intact). Dependent/declining in: managing finances (daughter now co-signs checks), managing medications (missed doses per organizer), driving (unsafe per daughter), meal preparation (daughter brings groceries 2x/week), telephone use (preserved).",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection of weekly pill organizer",
+    "result": "AM compartments for Monday, Wednesday, and Thursday of current week still full/untouched; PM compartments for Tuesday and Friday also full. Patient insists he 'took them already.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "test",
+    "name": "Guide caregiver through orthostatic blood pressure check at home (manual cuff, lying then standing)",
+    "result": "Supine 142/82 mmHg, pulse 76. Standing at 1 minute: 122/70 mmHg, pulse 82. Standing at 3 minutes: 118/68 mmHg, pulse 86. Patient reports feeling 'a little woozy' on standing. Drop of 24/14 mmHg meets criteria for orthostatic hypotension; pulse rise of only 10 bpm despite this magnitude of BP drop is a blunted compensatory response, suggestive of possible autonomic impairment and/or rate-limiting medication effect rather than simple volume depletion.",
+    "abnormal": true,
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Timed Up and Go, caregiver-assisted via video (stand from chair, walk 10 feet, turn, return, sit)",
+    "result": "14.2 seconds, uses armrests to push up, mild unsteadiness on turn, no assistive device used.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review current medication list in chart",
+    "result": "Diphenhydramine 25mg nightly (OTC, self-added, not prescribed), oxybutynin 5mg twice daily, amlodipine 5mg daily, glipizide 5mg twice daily. No cholinesterase inhibitor or memantine on file.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review vitamin B12 level from last week's labs",
+    "result": "Vitamin B12 210 pg/mL (low-normal range, reference 200-900 pg/mL).",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Review TSH from last week's labs",
+    "result": "TSH 2.1 mIU/L (reference 0.4-4.0 mIU/L) — normal.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review CT head report from last week",
+    "result": "Mild generalized cerebral atrophy. Moderate chronic small-vessel ischemic changes (white matter hyperintensities) in periventricular and deep white matter. No acute hemorrhage, mass, or large territory infarct.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "lab",
+    "name": "Review home glucose log / recent fingerstick glucose readings",
+    "result": "Fasting glucose readings over past 2 weeks range 88-146 mg/dL on days checked; several days with no reading logged. One reading of 68 mg/dL on Day 4 of the log (approximately 10 days ago) with reported shakiness, treated with juice by daughter.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "exam",
+    "name": "Camera-guided hearing screen (whisper test / ask patient to repeat words at conversational vs. raised volume)",
+    "result": "Patient misses whispered words at 2 feet bilaterally; repeats correctly only when examiner raises voice. Daughter confirms he 'turns the TV up too loud' and often misunderstands phone calls. No hearing aids currently used.",
+    "abnormal": true,
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "assessment",
+    "name": "Mood screen (PHQ-2 verbally administered)",
+    "result": "Patient denies feeling down, depressed, or hopeless over past 2 weeks; denies loss of interest in boat-related hobbies. PHQ-2 score 0/6.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review driving history/incident documentation from last visit note",
+    "result": "Prior clinic note documents daughter's report of patient becoming lost for 40 minutes driving a familiar route home from the hardware store last month; patient was eventually found by a neighbor.",
+    "importance": "critical",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Clinic Visit Note - Cognitive Concern Evaluation",
+    "author": "Dr. Priya Nair, Family Medicine",
+    "date": "1 week ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "84-year-old male presents with daughter for evaluation of progressive memory concerns over 18 months, including repeated questions, missed bill payments, and one episode of becoming lost while driving a familiar route last month (found by neighbor after ~40 minutes). Patient minimizes concerns, states memory is 'fine for my age.' Cognitive screening (MoCA) administered in office; score and detailed breakdown on file, to be reviewed by consulting Geriatrics team. Labs sent for reversible causes. CT head ordered. Referred to Geriatrics for comprehensive assessment, medication review, and driving safety discussion. Daughter Annette Dubois present throughout, serves as primary support; reports increasing involvement in finances and medications over past year."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Laboratory Results - 1 week ago",
+    "author": "Terrebonne General Lab Services",
+    "date": "1 week ago",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Vitamin B12",
+        "210",
+        "pg/mL",
+        "200-900"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Folate",
+        "6.8",
+        "ng/mL",
+        "2.0-20.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "TSH",
+        "2.1",
+        "mIU/L",
+        "0.4-4.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "7.4",
+        "%",
+        "4.0-5.6"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.1",
+        "mg/dL",
+        "0.6-1.3"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "eGFR",
+        "62",
+        "mL/min/1.73m2",
+        "greater than 60"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Sodium",
+        "138",
+        "mmol/L",
+        "135-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "13.2",
+        "g/dL",
+        "13.0-17.0"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "imaging",
+    "title": "CT Head Without Contrast - Report",
+    "author": "Dr. Marcus Hebert, Radiology",
+    "date": "1 week ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "FINDINGS: Mild generalized cerebral volume loss, age-appropriate to slightly advanced. Moderate confluent periventricular and deep white matter hypodensities consistent with chronic small vessel ischemic disease. No acute intracranial hemorrhage. No mass lesion or midline shift. Ventricles mildly prominent, consistent with atrophy. No evidence of acute infarct.\nIMPRESSION: Mild cerebral atrophy with moderate chronic small vessel ischemic changes. No acute findings."
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "Terrebonne General EHR",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication",
+      "Prescriber"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Diphenhydramine",
+        "25 mg",
+        "Oral",
+        "Nightly",
+        "Self-treated insomnia (OTC, not prescribed)",
+        "Self-directed"
+       ]
+      },
+      {
+       "cells": [
+        "Oxybutynin",
+        "5 mg",
+        "Oral",
+        "Twice daily",
+        "Overactive bladder",
+        "Dr. Nair"
+       ]
+      },
+      {
+       "cells": [
+        "Amlodipine",
+        "5 mg",
+        "Oral",
+        "Once daily",
+        "Hypertension",
+        "Dr. Nair"
+       ]
+      },
+      {
+       "cells": [
+        "Glipizide",
+        "5 mg",
+        "Oral",
+        "Twice daily",
+        "Type 2 diabetes",
+        "Dr. Nair"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "chart",
+    "title": "Home Fingerstick Glucose Log - Past 2 Weeks",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day",
+     "yLabel": "Fasting glucose (mg/dL)",
+     "refLow": 80,
+     "refHigh": 130,
+     "series": [
+      {
+       "name": "Fasting glucose",
+       "points": [
+        {
+         "x": "Day 1",
+         "y": 132
+        },
+        {
+         "x": "Day 2",
+         "y": 146
+        },
+        {
+         "x": "Day 3",
+         "y": 88
+        },
+        {
+         "x": "Day 4",
+         "y": 68
+        },
+        {
+         "x": "Day 5",
+         "y": 110
+        },
+        {
+         "x": "Day 7",
+         "y": 124
+        },
+        {
+         "x": "Day 9",
+         "y": 138
+        },
+        {
+         "x": "Day 11",
+         "y": 95
+        },
+        {
+         "x": "Day 12",
+         "y": 129
+        },
+        {
+         "x": "Day 14",
+         "y": 118
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "flowsheet",
+    "title": "Orthostatic Vitals - Today's Visit",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "table": {
+     "columns": [
+      "Position",
+      "Time",
+      "Blood Pressure",
+      "Pulse"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Supine",
+        "0 min",
+        "142/82 mmHg",
+        "76 bpm"
+       ]
+      },
+      {
+       "cells": [
+        "Standing",
+        "1 min",
+        "122/70 mmHg",
+        "82 bpm"
+       ],
+       "flag": "A"
+      },
+      {
+       "cells": [
+        "Standing",
+        "3 min",
+        "118/68 mmHg",
+        "86 bpm"
+       ],
+       "flag": "A"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Prior Visit Note - 6 Months Ago (Annual Wellness Visit)",
+    "author": "Dr. Priya Nair, Family Medicine",
+    "date": "6 months ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient seen for Medicare annual wellness visit. Daughter not present. Patient reports no falls, no memory concerns, states he is 'sharp as ever' and still handles all his own bills and driving without issue. Cognitive screen deferred at patient's request ('I don't need that nonsense'). Blood pressure 138/80. No orthostatic measurement obtained. Advised routine health maintenance."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Comprehensive geriatric assessment - memory concern, referred from Family Medicine"
+   },
+   {
+    "label": "Problem list",
+    "value": "Cognitive concern - under evaluation; Hypertension; Type 2 diabetes mellitus; Overactive bladder; Bereavement (wife deceased 3 years ago)"
+   },
+   {
+    "label": "Medications",
+    "value": "Amlodipine 5mg daily; Glipizide 5mg twice daily; Oxybutynin 5mg twice daily; Diphenhydramine 25mg nightly (OTC, self-directed, not prescribed)"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 138/80, HR 74, today's orthostatics pending"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. Priya Nair (Family Medicine, referring); Geriatrics (new consult, this visit); daughter Annette Dubois listed as emergency contact and healthcare agent (unofficial, no documented POA on file)"
+   },
+   {
+    "label": "Code status",
+    "value": "Not yet addressed"
+   }
+  ],
+  "difficulty": 4,
+  "encounterType": "Comprehensive geriatric assessment (memory concern evaluation with family caregiver)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient and daughter present for evaluation of memory concerns over past 18 months, referred after low MoCA score at prior visit.",
+    "says": "My daughter wanted me to come talk to y'all about my memory, but I tell her there's nothing wrong with me, I'm just 84.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "memory timeline",
+    "chart": "Daughter reports gradually worsening forgetfulness over approximately 18 months, including repeated questions and missed bill payments.",
+    "says": "He'll ask me the same question three, four times in an hour. And I found two bills from the electric company unpaid, going to collections, that's not like him at all.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "driving incident",
+    "chart": "One month ago patient became lost for approximately 40 minutes driving a route to the hardware store he has used for 40 years; found by a neighbor.",
+    "says": "That was just a one-time thing, the construction had the road all torn up different than usual, anybody woulda got confused.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "patient's view of memory",
+    "chart": "Patient denies any memory problem, attributes forgetfulness to normal aging.",
+    "says": "My memory's fine for a man my age. Everybody forgets things now and then. My daughter worries too much, always has.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "medications",
+    "topic": "pill organizer use",
+    "chart": "Patient reports he manages and takes his own medications daily without assistance.",
+    "says": "I've been handling my own pills for sixty years, I don't need nobody checking up on me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "medications",
+    "topic": "missed doses",
+    "chart": "Daughter reports finding multiple days of medication untouched in pill organizer over the past two weeks.",
+    "says": "I checked that box Sunday and there was pills sitting in Monday, Wednesday, Thursday boxes still, and it was already Friday.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "medications",
+    "topic": "sleep aid use",
+    "chart": "Patient takes OTC diphenhydramine 25mg nightly for insomnia, self-initiated, not reviewed with prescriber.",
+    "says": "I take one of them pink Benadryl pills every night, has for years, helps me sleep. Doctor never said to stop.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "function",
+    "topic": "fall circumstances",
+    "chart": "Two falls in past 6 months: one tripping over rope in carport, one nocturnal fall getting up to urinate; no loss of consciousness, no fracture, did not seek medical care.",
+    "says": "I tripped over my own boat rope out in the carport, felt like a fool. Then another time I got up in the night to use the bathroom and went down on the floor, bruised my hip something awful.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "function",
+    "topic": "fear of falling",
+    "chart": "Patient minimizes fall risk, denies fear of falling, does not want to use a walker or cane.",
+    "says": "I'm not about to start walking around with one of them walkers like an old man. I'm fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "dizziness symptoms",
+    "chart": "Reports occasional lightheadedness on standing, especially in the morning.",
+    "says": "Sometimes when I get up too quick I get a little dizzy spell, world spins a second, then it passes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "hearing changes",
+    "chart": "Daughter reports progressive hearing loss over several years; patient has not pursued hearing aids.",
+    "says": "[Daughter] He's been hard of hearing for years now, TV's blasting all the time, he just won't go get it checked, says he hears fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "function",
+    "topic": "finances management",
+    "chart": "Daughter has taken over bill paying and finances in the past 3 months after discovering unpaid bills and an unusual charitable donation pattern.",
+    "says": "[Daughter] I had to add my name to his checking account. He gave three hundred dollars to some phone caller claiming to be his grandson needing bail money.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "function",
+    "topic": "meal preparation",
+    "chart": "Daughter now brings groceries and prepares most meals; patient previously cooked for himself.",
+    "says": "[Daughter] I bring groceries twice a week now and cook up a big pot of something he can heat up, because he was eating crackers and not much else.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "function",
+    "topic": "driving independence",
+    "chart": "Patient continues to drive daily despite the lost-driving incident; family has not removed access to the truck.",
+    "says": "That's my truck, I've driven since I was fourteen years old. Nobody's taking my keys.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f15",
+    "category": "psychosocial",
+    "topic": "grief and loss",
+    "chart": "Wife died 3 years ago; patient lives alone in the family home.",
+    "says": "My wife passed three years back. House feels awful empty some days but I manage. This is our home, built it myself.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "goals",
+    "topic": "what matters most",
+    "chart": "Patient states his top priorities are remaining in his own home, not being a burden to his daughter, and continuing to drive.",
+    "says": "All I want is to stay right here in my own house till I go, not be no burden on Annette, and keep my truck. That's all that matters to me.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "family",
+    "topic": "caregiver strain",
+    "chart": "Daughter reports increasing caregiving burden; works full-time and lives 20 minutes away, visits daily.",
+    "says": "[Daughter] I'm driving over there every single day now after my shift, checking on him, and I've got my own grandkids I'm trying to help watch. I'm stretched thin.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "adherence",
+    "topic": "glucose monitoring",
+    "chart": "Patient inconsistently checks blood sugar; several days with no reading in the past 2 weeks, including a symptomatic low reading of 68 mg/dL.",
+    "says": "I check it most days, sometimes I forget. Had one spell where I felt shaky and sweaty, Annette gave me some juice and I came right out of it.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "Type 2 diabetes diagnosed approximately 15 years ago, managed with glipizide.",
+    "says": "Had the sugar diabetes a long while now, doctor's got me on them little white pills twice a day.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "hypertension history",
+    "chart": "Hypertension diagnosed approximately 20 years ago, on amlodipine.",
+    "says": "Blood pressure pill, been taking that one forever too.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "pmh",
+    "topic": "bladder symptoms",
+    "chart": "Overactive bladder diagnosed 2 years ago, prescribed oxybutynin; reports urinary urgency and nighttime urination 2-3 times nightly.",
+    "says": "I got that bladder trouble, gotta get up two three times a night to go, that pill's supposed to help with that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "appetite and weight",
+    "chart": "Daughter reports mild unintentional weight loss over past 6 months, estimates 8-10 pounds, attributes to inconsistent meals.",
+    "says": "[Daughter] His pants are falling off him, I'd guess he's lost close to ten pounds since the summer.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "mood symptoms",
+    "chart": "Patient denies depressed mood, denies anhedonia; daughter confirms no significant mood change aside from occasional frustration when corrected.",
+    "says": "I ain't sad. Get a little annoyed when folks keep telling me I'm wrong about things, but that's just irritating, not depressing.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "work history",
+    "chart": "Retired shrimp-boat captain, worked the water for over 50 years in Terrebonne Parish.",
+    "says": "I captained my own shrimp boat near fifty years, out of this bayou right here. Toughest, best work there is.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "social",
+    "topic": "community ties",
+    "chart": "Patient is well-known and respected in his local Cajun fishing community; attends church weekly when driven by neighbor.",
+    "says": "Everybody around here knows Captain Ernest. I still go to Mass every Sunday, neighbor picks me up now and again.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Reports drinking one beer most evenings, longstanding pattern, no history of binge drinking or alcohol-related problems.",
+    "says": "I'll have me one cold beer most evenings, always have, never been a big drinker.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "family",
+    "topic": "family history of dementia",
+    "chart": "Patient's mother had 'bad memory problems' in her 80s per daughter, no formal diagnosis documented; no other known family neurocognitive history.",
+    "says": "[Daughter] My grandmother, his mama, she got real forgetful at the end too, but back then nobody called it anything, just 'old age.'",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "phone and technology use",
+    "chart": "Patient can still answer and make basic phone calls but struggles with more complex features; occasionally confuses callers.",
+    "says": "I can still work my phone to call Annette, that's about all I use it for.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "psychosocial",
+    "topic": "insight and emotional reaction",
+    "chart": "Patient becomes visibly frustrated and defensive when driving or memory concerns are raised, raises voice, daughter appears accustomed to this reaction.",
+    "says": "I don't want to talk about this no more. Y'all are making me out to be some senile old fool and I am not.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "advance care planning",
+    "chart": "No healthcare power of attorney or advance directive on file; patient has not discussed this with family.",
+    "says": "We never really talked about none of that paperwork stuff. Didn't seem like something we needed yet.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "financial vulnerability",
+    "chart": "Patient fell victim to a phone scam 2 months ago, sent money to a caller claiming to be a grandson in trouble; has not reported it to authorities.",
+    "says": "That caller sounded just like my grandson, said he was in jail and needed bail money quick. Found out after it wasn't even him. I felt like such a fool, don't go telling everybody.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f32",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Reports mild age-related vision changes, wears reading glasses, no recent eye exam in 2 years, no reported acute vision loss.",
+    "says": "My eyes ain't what they used to be, I wear my readers, but I see fine enough to drive, don't you worry.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "nutrition",
+    "topic": "appetite changes",
+    "chart": "Patient reports decreased appetite over past several months, often skips lunch.",
+    "says": "I just ain't that hungry like I used to be. Sometimes I skip lunch altogether, don't feel like fixing nothing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f34",
+    "category": "hpi",
+    "topic": "onset context",
+    "chart": "Daughter notes gradual decline without a single sudden triggering event; no history of head trauma or stroke-like episode reported.",
+    "says": "[Daughter] It wasn't like one bad day, it just crept up slow over this past year and a half.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f35",
+    "category": "pmh",
+    "topic": "prior cognitive screening refusal",
+    "chart": "At annual wellness visit 6 months ago, patient declined cognitive screening and reported no concerns at that time.",
+    "says": "That nice doctor asked me some question thing six months back and I told her I didn't need that nonsense, I was doing just fine.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f5",
+    "patientClaim": "Patient states he manages and takes his own medications independently without any help or missed doses.",
+    "recordEvidence": "Camera inspection of the pill organizer (a3) shows multiple full, untouched compartments across the current week (Monday AM, Wednesday AM, Thursday AM, Tuesday PM, Friday PM), and the medication list review (a7) confirms no supervision system is in place.",
+    "teachingPoint": "Self-report of medication independence is unreliable in cognitive impairment; direct observation (pill organizer check) is an essential, low-tech telehealth assessment that often reveals a gap between stated and actual adherence."
+   },
+   {
+    "id": "m2",
+    "factId": "f4",
+    "artifactId": "d1",
+    "patientClaim": "Patient insists his memory is 'fine for his age' and denies any functional problem.",
+    "recordEvidence": "Referring note (d1) documents a corroborated 40-minute lost-driving episode on a route driven for 40 years and that cognitive screening and workup were initiated for memory concerns; subsequent review of the MoCA result (a1) confirms objective impairment in delayed recall, visuospatial/executive function, and orientation.",
+    "teachingPoint": "Anosognosia (impaired self-awareness of deficits) is common in neurocognitive disorders; objective cognitive testing and corroborating collateral history from a caregiver are essential and should be weighted more heavily than self-report, delivered with respect for the patient's dignity."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and synthesize collateral history from a caregiver to characterize the trajectory, functional impact, and safety concerns of cognitive decline, recognizing anosognosia when it conflicts with patient self-report.",
+    "factIds": [
+     "f2",
+     "f3",
+     "f4",
+     "f6",
+     "f12"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a15"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Perform a remote medication safety review identifying high-risk anticholinergic burden (diphenhydramine, oxybutynin) and medication-adherence gaps using direct camera observation of the pill organizer.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f7"
+    ],
+    "actionIds": [
+     "a3",
+     "a7"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Conduct a falls assessment including circumstances, home hazards, and orthostatic vital signs, and generate an appropriate differential for the falls (orthostasis, medication effect, hearing/vision impairment, gait instability).",
+    "factIds": [
+     "f8",
+     "f9",
+     "f10",
+     "f21"
+    ],
+    "actionIds": [
+     "a5",
+     "a6"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Evaluate reversible/contributing causes of cognitive impairment (B12, thyroid, glycemic control, structural imaging) and integrate results into an overall assessment.",
+    "factIds": [
+     "f18",
+     "f19"
+    ],
+    "actionIds": [
+     "a8",
+     "a9",
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Elicit and prioritize the patient's own goals and values ('What Matters') and address driving safety, financial vulnerability, and advance care planning with sensitivity to the patient's autonomy and dignity.",
+    "factIds": [
+     "f14",
+     "f16",
+     "f29",
+     "f30",
+     "f31"
+    ],
+    "actionIds": [
+     "a15"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize caregiver strain and sensory impairment (hearing loss) as modifiable contributors to functional decline and safety, and determine next steps within geriatrics scope (referral for audiology, driving evaluation, social work/APS as appropriate rather than independently adjudicating legal/driving capacity).",
+    "factIds": [
+     "f11",
+     "f17",
+     "f22",
+     "f33"
+    ],
+    "actionIds": [
+     "a13",
+     "a14"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Probable major neurocognitive disorder (dementia), mixed Alzheimer's and vascular etiology, with impaired functional status (IADL decline), superimposed anticholinergic medication burden, falls risk, and unaddressed goals of care/driving safety/financial vulnerability.",
+   "differential": [
+    "Major neurocognitive disorder - mixed Alzheimer's disease and vascular dementia (supported by MoCA pattern, CT findings of atrophy plus small-vessel disease, insidious 18-month course)",
+    "Medication-related cognitive impairment / anticholinergic burden (diphenhydramine + oxybutynin contributing to or worsening cognition and falls - potentially partially reversible)",
+    "Mild cognitive impairment (less likely given degree of functional/IADL decline documented)",
+    "Depression-related cognitive impairment / pseudodementia (less likely - PHQ-2 negative, no anhedonia)",
+    "Delirium superimposed on dementia (not supported - no acute fluctuating course)",
+    "Reversible metabolic contributor from low-normal B12 (contributory but insufficient alone to explain degree of impairment; TSH normal)",
+    "Hypoglycemia-related cognitive/fall episodes from glipizide (contributes to falls/safety but not primary cause of chronic decline)"
+   ],
+   "keyFindings": [
+    "MoCA 19/30 with impaired delayed recall, visuospatial/executive function, and orientation",
+    "18-month history of progressive forgetfulness, missed bills, and a 40-minute lost-driving episode on a familiar route",
+    "IADL decline: finances, medication management, meal preparation, and driving all impaired per caregiver report",
+    "Pill organizer shows multiple missed doses despite patient's insistence he manages medications independently (mismatch)",
+    "Patient's anosognosia: denies any memory problem despite objective testing and corroborated incidents (mismatch)",
+    "Two falls in 6 months plus orthostatic hypotension (142/82 supine to 118/68 standing at 3 min, a 24/14 mmHg drop) with a blunted pulse response (76 to 86 bpm) suggesting possible autonomic impairment or rate-limiting medication effect, plus prolonged Timed Up and Go (14.2 sec)",
+    "High anticholinergic burden from nightly OTC diphenhydramine plus oxybutynin, both associated with cognitive impairment and fall risk in older adults",
+    "CT head: mild atrophy with moderate chronic small-vessel ischemic disease supporting mixed dementia etiology",
+    "Low-normal B12 (210 pg/mL) and suboptimal glycemic control (HbA1c 7.4%) with inconsistent monitoring and a symptomatic hypoglycemic episode (68 mg/dL) - a tension between overall hyperglycemia and episodic hypoglycemia that argues for loosening the glycemic target and reconsidering glipizide given this patient's falls and cognitive impairment",
+    "Progressive untreated hearing loss likely compounding apparent cognitive/communication difficulty and social withdrawal",
+    "Caregiver strain in daughter; financial exploitation (phone scam) revealing vulnerability; no advance directive or healthcare proxy in place",
+    "Patient's clearly stated goals: remain at home, avoid burdening daughter, continue driving - in direct tension with safety findings"
+   ],
+   "plan": [
+    "Document comprehensive geriatric assessment using 4Ms framework; communicate findings and diagnostic impression (probable mixed dementia) back to referring Family Medicine physician for discussion of diagnosis, possible initiation of a cholinesterase inhibitor, and ongoing primary care management (outside independent prescribing scope of this consult note alone, but recommend specific medication discussion)",
+    "Medications (M): Recommend discontinuing OTC diphenhydramine and reviewing oxybutynin for a bladder-friendly alternative with lower anticholinergic burden, in coordination with prescribing physician; recommend caregiver-supervised medication administration or blister-pack pharmacy service given demonstrated non-adherence",
+    "Mentation (M): Recommend formal neuropsychological or further cognitive workup as needed, repletion/monitoring of low-normal B12, communicate CT findings; strongly recommend caregiver supervision of finances and continue daughter's involvement",
+    "Mobility (M): Address orthostatic hypotension (consider medication contribution from amlodipine timing, hydration counseling; note the blunted heart rate response raises concern for autonomic dysfunction warranting further evaluation if symptoms persist) and anticholinergic deprescribing to reduce fall risk; home safety evaluation and physical therapy referral for gait/balance given abnormal Timed Up and Go; remove home hazards (coiled rope in carport) and consider bedside urinal or motion-sensor lighting for nocturnal bathroom trips",
+    "Driving safety: given corroborated lost-driving episode and cognitive/visuospatial impairment, recommend formal driving evaluation (occupational therapy driving assessment) and discuss with patient and family that driving cessation planning should begin now; refer to state-specific guidance/DMV medical review process as appropriate rather than this role unilaterally revoking driving privileges",
+    "What Matters: Explicitly document patient's stated goals (remain home, avoid burdening family, maintain independence/driving) and revisit these as the basis for all recommendations; use motivational, dignity-preserving language rather than confrontation",
+    "Advance care planning: initiate conversation about healthcare power of attorney and advance directive now, while patient retains capacity for these discussions; involve daughter",
+    "Safety/vulnerability: discuss financial exploitation (phone scam) findings with family; recommend caregiver or social work follow-up regarding financial safeguards and consider report to local Adult Protective Services resources per standard practice; address with sensitivity to avoid shaming patient",
+    "Hearing: refer to audiology for formal hearing evaluation and hearing aid fitting, as uncorrected hearing loss can mimic/worsen apparent cognitive impairment and contributes to social isolation",
+    "Diabetes/glucose: communicate elevated HbA1c (7.4%) alongside the hypoglycemic episode (68 mg/dL) and inconsistent monitoring to primary care/endocrine for glipizide regimen review; in an older adult with falls and cognitive impairment, standard geriatric diabetes guidelines favor a looser HbA1c target (e.g., <8%) and favor deprescribing/switching from a sulfonylurea given its high hypoglycemia risk, rather than tightening control to the elevated A1c",
+    "Caregiver support: acknowledge and address daughter's caregiving strain; provide resources for caregiver support services, respite care, and local Area Agency on Aging programs",
+    "Arrange follow-up comprehensive geriatric assessment visit to reassess function, falls, and reinforce goals-of-care discussion over time"
+   ],
+   "redFlags": [
+    "Corroborated lost-driving episode indicating immediate road safety risk to patient and public",
+    "Orthostatic hypotension with symptomatic dizziness and a blunted compensatory heart rate response compounding fall risk in a patient already with two falls in six months",
+    "Financial exploitation (scam victimization) indicating vulnerability to further abuse",
+    "Significant anticholinergic medication burden in a cognitively impaired older adult, a reversible/modifiable contributor to both cognition and falls",
+    "Symptomatic hypoglycemia (68 mg/dL) alongside elevated HbA1c (7.4%) in setting of unreliable medication/glucose monitoring adherence, indicating a sulfonylurea regimen that is simultaneously too risky (hypoglycemia) and not well-controlled (high A1c) - a case for deprescribing/switching rather than intensifying",
+    "No advance directive or healthcare power of attorney despite progressing cognitive impairment - window for patient-directed planning may be closing",
+    "Patient's strong emotional resistance and anosognosia may lead to unsafe behaviors (continued driving, medication errors) if not addressed collaboratively with family"
+   ],
+   "educationPoints": [
+    "Anosognosia is a core feature of many dementias and should not be mistaken for denial or stubbornness; collateral history from a caregiver is essential and should be actively solicited, ideally with the patient's knowledge and involvement to preserve dignity",
+    "The 4Ms framework (What Matters, Medications, Mentation, Mobility) provides a structured, patient-centered approach to geriatric assessment that centers the patient's own goals rather than a problem-list-only approach",
+    "Direct observation (e.g., camera review of a pill organizer) is a powerful, low-tech telehealth tool that can reveal discrepancies between self-reported and actual function",
+    "Anticholinergic medications (diphenhydramine, oxybutynin) carry significant risk in older adults for worsening cognition, causing or worsening delirium, and increasing fall risk; deprescribing should be considered and often requires coordination with prescribing clinicians",
+    "Orthostatic hypotension diagnosis requires a drop of ≥20 mmHg systolic or ≥10 mmHg diastolic within 3 minutes of standing; a blunted heart rate response to a significant BP drop (as seen here) suggests possible autonomic impairment or a rate-limiting medication effect and warrants further evaluation rather than being assumed to be simple volume depletion",
+    "Driving cessation is a highly sensitive topic that benefits from a team-based approach (formal driving evaluation, family involvement, gradual negotiation) rather than unilateral revocation, and may involve state DMV medical review processes",
+    "Financial exploitation is common in cognitive impairment and should be screened for directly; disclosure often requires trust-building given shame patients may feel",
+    "Reversible or contributing metabolic factors (B12, thyroid, glycemic control) should always be evaluated in a new cognitive impairment workup even when a primary neurodegenerative or vascular process is suspected",
+    "In older adults with cognitive impairment and falls, geriatric diabetes guidelines favor looser glycemic targets and deprescribing hypoglycemia-prone agents (e.g., sulfonylureas) even when HbA1c runs on the higher side, prioritizing safety over tight control",
+    "Caregiver burden assessment and support referral is a core part of comprehensive geriatric assessment, as caregiver capacity directly affects patient safety and care planning feasibility"
+   ]
+  },
+  "patient": {
+   "name": "Ernest Dubois",
+   "age": 84,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Cajun (French-Acadian descent, Louisiana)",
+   "occupation": "Retired shrimp-boat captain",
+   "language": "English (Cajun English dialect, no interpreter needed)",
+   "appearance": "An 84-year-old man with a weathered, sun-worn face, thinning white hair, and broad shoulders from decades of physical work, seated at a kitchen table in a modest home with a window showing a bayou view behind him. He wears a plaid button-up shirt, leans forward toward the camera as if trying to hear better, and his expression shifts between warm charm and visible irritation when memory or driving comes up; his daughter Annette sits beside him, visibly tired but attentive.",
+   "portrait": "/portraits/geriatrics-ernest-dubois-memory.jpg"
+  },
+  "persona": {
+   "personality": "Proud, charming, stubborn, quick with a joke to deflect, fiercely independent, protective of his dignity and reputation in his community",
+   "communicationStyle": "Talks in a warm, storytelling Cajun cadence, uses humor and anecdotes to redirect difficult topics, speaks loudly due to hearing loss but minimizes it, becomes short-tempered when he feels accused or patronized",
+   "healthLiteracy": "low",
+   "emotionalState": "Defensive and mildly irritated about being evaluated, underlying grief about his wife still present beneath the surface, occasional flashes of vulnerability when discussing being 'a burden'",
+   "background": "Captained his own shrimp boat out of Terrebonne Parish for nearly 50 years before retiring in his late 70s. Married for 55 years before his wife passed away three years ago from cancer; they built their house together. Has one daughter, Annette, and several grandchildren he dotes on. Deeply rooted in his Catholic faith and local Cajun community, well-known and respected locally as 'Captain Ernest.'",
+   "speechExamples": [
+    "I ain't never missed a payment in my life till my eyes started going bad on them little bitty numbers.",
+    "Cher, I been driving that road since before your mama was born, don't you worry about me.",
+    "My wife, Marie, she used to keep the books. I never had to worry about none of that till she passed.",
+    "I don't need no stranger telling me how to run my own house.",
+    "You ask me the same thing three times, I'm gonna start thinking it's YOU with the memory problem!"
+   ],
+   "concerns": [
+    "Being forced to stop driving and losing his independence",
+    "Being seen as a burden to his daughter",
+    "Being sent to a nursing home away from his house and community",
+    "Losing control over his own decisions and finances",
+    "Underlying grief about his late wife that he does not often discuss"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a geriatric medicine fellow conducting a telehealth comprehensive geriatric assessment. Ernest Dubois, 84, was referred by his family physician for memory concerns reported by family over the past 18 months. His daughter Annette will join the call. Your task is to conduct a 4Ms-based comprehensive geriatric assessment, incorporating collateral history, medication review, falls assessment, and the patient's own goals.",
+   "chiefComplaint": "Family-reported memory concerns over 18 months with recent lost-driving episode; patient denies any problem.",
+   "openingLine": "Well, I don't rightly know why we're here, Doc. My memory's fine for my age, but my daughter here insisted we come talk to y'all. Everybody forgets things now and then, ain't that right?",
+   "tasks": [
+    "Elicit collateral history from the daughter regarding cognitive, functional, and safety concerns, while respecting the patient's presence and dignity",
+    "Perform a remote medication safety review, including camera observation of the pill organizer",
+    "Conduct a falls assessment including orthostatic vitals and a functional mobility test",
+    "Explore the patient's own goals and values ('What Matters') and address advance care planning",
+    "Synthesize findings into a 4Ms-based geriatric assessment and plan appropriate for this role's scope, including appropriate referrals"
+   ],
+   "timeLimitMin": 30
+  },
+  "summary": "\"This case portrays an 84-year-old retired Cajun shrimp-boat captain referred for comprehensive geriatric assessment after a low MoCA score, family-reported 18-month cognitive decline, and a recent lost-driving episode, while he insists his memory is fine. It teaches geriatrics fellows to synthesize caregiver collateral history against patient anosognosia, identify anticholinergic medication burden and falls risk through remote exam techniques, and center a patient's own goals when navigating emotionally charged topics like driving cessation and advance care planning, within the bounds of a geriatrics consultant's scope of practice.\"",
+  "title": "\"Progressive Memory Decline and a Lost-Driving Episode in an 84-Year-Old Cajun Shrimp-Boat Captain\"",
+  "specialty": "\"Geriatric Medicine\"",
+  "setting": "\"Telehealth video visit; patient at home at his kitchen table in Terrebonne Parish, Louisiana, with his daughter Annette present beside him\"",
+  "professions": [
+   "geriatrics"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

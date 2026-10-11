@@ -1,0 +1,924 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Home temperature check (reported by patient)",
+    "result": "Oral temperature 38.2°C (100.8°F), taken this morning with home digital thermometer.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Heart rate and general vitals review",
+    "result": "Heart rate 96 bpm (patient-counted via home pulse oximeter), BP 112/70 from home cuff, respiratory rate 18. Confirms chills last night along with the fever and body aches she described.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection of left breast",
+    "result": "Patient holds camera close: left breast shows a well-demarcated, wedge-shaped area of redness on the outer upper quadrant, mildly swollen compared to the right breast. No skin break, no fluctuant area, no visible pus or dimpling.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Camera inspection of nipples",
+    "result": "Both nipples show a superficial crack at the base, left slightly worse than right, no active bleeding, no purulent discharge, no white patches on nipple or in baby's mouth.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "assessment",
+    "name": "Guided latch and positioning assessment (patient demonstrates on camera)",
+    "result": "Patient positions baby in cross-cradle hold; latch appears shallow with nipple visibly compressed when baby comes off breast. Patient reports clicking sound during feeds on the left side.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "assessment",
+    "name": "Edinburgh Postnatal Depression Scale (EPDS) administration",
+    "result": "Total score 14/30. Item 10 ('thoughts of harming myself') scored 0. Elevated responses on items for guilt, anxiety, feeling overwhelmed, and sleep disturbance; endorses crying 'quite often.'",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "assessment",
+    "name": "Suicide/self-harm safety screen",
+    "result": "Patient denies any thoughts of harming herself or the baby. No prior history of self-harm. Denies intrusive thoughts of harming infant.",
+    "importance": "critical",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Camera inspection of perineum/episiotomy (patient self-exam with mirror, guided)",
+    "result": "Patient reports healed anterior episiotomy site, no gaping, no discharge, mild tenderness only with prolonged sitting. Visualized scar tissue appears stable, no new tearing or distortion reported.",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Lochia/bleeding review",
+    "result": "Light brownish lochia, using a liner, no clots, no foul odor, consistent with normal day-21 postpartum involution.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review newborn weight-check record",
+    "result": "Newborn seen at day 10 visit, weight 3.62 kg, above birth weight of 3.4 kg; pediatric note documents exclusive breastfeeding, adequate wet/dirty diapers.",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review delivery and discharge summary",
+    "result": "Spontaneous vaginal delivery at 39+2 weeks, anterior episiotomy performed for perineal rigidity, estimated blood loss 350 mL, uncomplicated postpartum course, discharged day 2. Summary does not elaborate on the specific cause of the perineal rigidity.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "assessment",
+    "name": "Breast engorgement/milk supply history",
+    "result": "Reports milk 'came in' day 3, feeds 8-10 times/24h, baby produces 6+ wet diapers and 3-4 stools daily. No prior mastitis episodes.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "test",
+    "name": "Home blood pressure log review",
+    "result": "Home BP log over past week: range 108-118/64-74 mmHg, no readings above 130/80. Same log also shows the temperature trend (36.8-37.0°C baseline rising to 38.0-38.2°C over the last two days), corroborating the fever onset timeline; today's home-reported oral temperature (38.2°C) and heart rate (96 bpm) match this log.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "lab",
+    "name": "Review prior CBC from delivery admission",
+    "result": "Hemoglobin 11.8 g/dL (ref 11.5-15.0), WBC 9.2 x10^9/L (ref 4.5-11.0), platelets 240 x10^9/L (ref 150-400) — all within normal range at delivery.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": [
+     "d3"
+    ]
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Delivery & Postpartum Discharge Summary",
+    "author": "L&D Attending, Hennepin Birth Center",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient is a 27-year-old G1P1 who presented in spontaneous labor at 39+2 weeks. Progressed to spontaneous vaginal delivery of a female infant, birth weight 3.4 kg, Apgars 8/9. Anterior midline episiotomy performed for perineal rigidity to facilitate delivery and avoid uncontrolled laceration. Repair intact, hemostasis achieved. Estimated blood loss 350 mL. Postpartum course uncomplicated; ambulating, voiding, breastfeeding initiated in recovery. Discharged home on postpartum day 2 with routine instructions, pelvic floor and perineal care counseling provided, follow-up postpartum visit scheduled."
+   },
+   {
+    "id": "d2",
+    "type": "note",
+    "title": "Newborn Day-10 Pediatric Visit Note",
+    "author": "Pediatric Clinic",
+    "date": "11 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "Infant female, now 10 days old. Weight 3.62 kg (birth weight 3.40 kg), has regained birth weight and is tracking appropriately on growth curve. Exclusively breastfed per mother's report, 8-10 feeds/24h. 6+ wet diapers, 3-4 stools/day, stools yellow and seedy. Infant alert, well-hydrated, no jaundice. No concerns on exam. Mother counseled on feeding cues; mother-in-law in home assisting with care. Return to pediatrics at 1 month or sooner for concerns."
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "CBC at Delivery Admission",
+    "author": "Hennepin Birth Center Lab",
+    "date": "3 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "11.8",
+        "g/dL",
+        "11.5-15.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Hematocrit",
+        "35.2",
+        "%",
+        "33-45"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "WBC",
+        "9.2",
+        "x10^9/L",
+        "4.5-11.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Platelets",
+        "240",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Home Vital Signs Log (patient-reported, past 7 days)",
+    "author": "Patient self-report",
+    "date": "this week",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "BP (mmHg)",
+      "HR (bpm)",
+      "Temp (°C)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "6 days ago",
+        "112/70",
+        "78",
+        "36.8"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "4 days ago",
+        "110/68",
+        "80",
+        "36.9"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "2 days ago",
+        "108/64",
+        "82",
+        "37.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Yesterday",
+        "114/72",
+        "92",
+        "38.0"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Today",
+        "112/70",
+        "96",
+        "38.2"
+       ],
+       "flag": "H"
+      }
+     ]
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Date",
+     "yLabel": "Temperature (°C)",
+     "refHigh": 37.5,
+     "series": [
+      {
+       "name": "Temperature",
+       "points": [
+        {
+         "x": "6 days ago",
+         "y": 36.8
+        },
+        {
+         "x": "4 days ago",
+         "y": 36.9
+        },
+        {
+         "x": "2 days ago",
+         "y": 37
+        },
+        {
+         "x": "Yesterday",
+         "y": 38
+        },
+        {
+         "x": "Today",
+         "y": 38.2
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "form",
+    "title": "Edinburgh Postnatal Depression Scale (EPDS) Scoring Sheet",
+    "author": "Patient self-report, administered via telehealth",
+    "date": "today",
+    "release": {
+     "when": "action",
+     "ref": "a6"
+    },
+    "body": "Total score: 14/30 (score ≥13 suggests probable depression, warrants further assessment). Item-by-item responses: Item 1 (laugh/see funny side) - 'not quite so much' (1), Item 2 (looked forward to things) - 'rather less than I used to' (1), Item 3 (blamed self unnecessarily) - 'yes, some of the time' (2), Item 4 (anxious/worried for no good reason) - 'yes, quite often' (2), Item 5 (scared/panicky for no good reason) - 'no, not much' (1), Item 6 (things getting on top of her) - 'yes, sometimes I haven't been coping as well' (1), Item 7 (unhappy, difficulty sleeping) - 'yes, quite often' (2), Item 8 (sad or miserable) - 'yes, quite often' (2), Item 9 (crying) - 'yes, quite often' (2), Item 10 (thoughts of harming myself) - 'never' (0). Sum of items = 14/30. No endorsement of self-harm ideation."
+   },
+   {
+    "id": "d6",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "author": "EHR Medication Reconciliation",
+    "date": "today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Indication"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Prenatal vitamin with iron",
+        "1 tablet",
+        "Oral",
+        "Daily",
+        "Postpartum nutrition"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Ibuprofen",
+        "400 mg",
+        "Oral",
+        "Every 6-8 hours as needed",
+        "Perineal/breast pain"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Docusate sodium",
+        "100 mg",
+        "Oral",
+        "Twice daily as needed",
+        "Postpartum constipation prevention"
+       ],
+       "flag": ""
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "3-week postpartum and lactation visit; patient called to add concern about breast pain"
+   },
+   {
+    "label": "Problem list",
+    "value": "G1P1, spontaneous vaginal delivery 3 weeks ago; anterior episiotomy"
+   },
+   {
+    "label": "Medications",
+    "value": "Prenatal vitamin with iron daily; ibuprofen 400 mg PRN; docusate 100 mg BID PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "3 weeks ago at discharge: BP 118/74, HR 78, Temp 36.9°C"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Tdap given during pregnancy (28 weeks); influenza vaccine declined this season; up to date otherwise"
+   },
+   {
+    "label": "Care team",
+    "value": "Certified Nurse-Midwife (primary prenatal/postpartum), Pediatric clinic (newborn care)"
+   },
+   {
+    "label": "Code status",
+    "value": "N/A (outpatient obstetric patient)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "postpartum and lactation follow-up visit",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "breast pain reason for call",
+    "chart": "Patient reports left breast pain, redness, and fever since yesterday; also has cracked nipples.",
+    "says": "My left breast has gotten really sore and red since yesterday, and I had a fever last night. My nipples have been cracked too, so I wanted to check in.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "breast redness pattern",
+    "chart": "Describes a wedge-shaped red, tender area on outer upper left breast, onset yesterday.",
+    "says": "There's this triangle-shaped red patch on the top outside part of my left breast. It's warm and it hurts, especially when the baby feeds on that side.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "fever and body aches",
+    "chart": "Fever to 38.2°C with chills and generalized myalgia starting last night.",
+    "says": "I felt really achy all over last night, like I had the flu, and I was shivering even under a blanket.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "nipple pain timeline",
+    "chart": "Nipple cracking began around day 10 postpartum, gradually worsening with each feed.",
+    "says": "The cracking started maybe a week and a half ago. It stings every time she latches, but I just push through it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "feeding frequency",
+    "chart": "Breastfeeds 8-10 times per 24 hours, no formula given by patient directly.",
+    "says": "I feed her maybe eight to ten times a day, sometimes more if she's fussy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "pumping or skipped feeds",
+    "chart": "Has not pumped or skipped feeding the painful side; continues to feed from both breasts.",
+    "says": "I haven't stopped feeding on that side, even though it hurts. I didn't know if I was supposed to.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "breast lump or abscess signs",
+    "chart": "Denies palpable fluctuant mass; no skin breakdown or purulent nipple discharge.",
+    "says": "I don't feel any hard lump with pus or anything, it's just swollen and warm in that one area.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "baby's feeding behavior",
+    "chart": "Reports baby sometimes pulls off breast fussing on the left side; clicking sound noted during feeds.",
+    "says": "She gets fussy on that side sometimes, like she can't quite get a good grip, and I hear a little click.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "bleeding pattern",
+    "chart": "Lochia light, brownish, no clots or odor; using liner only.",
+    "says": "The bleeding has pretty much turned brown and light now, just need a liner, no big clots or smell.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "hpi",
+    "topic": "perineal healing",
+    "chart": "Reports episiotomy site feels healed; mild discomfort with prolonged sitting only.",
+    "says": "Down there feels mostly healed now. It's a little tender if I sit too long, but otherwise okay.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "psh",
+    "topic": "childhood procedure history",
+    "chart": "History of female genital cutting (Type I) performed in childhood in country of origin.",
+    "says": "I had a procedure done when I was young, back home, that's pretty common where I'm from. It made the delivery a little more complicated, that's why they had to cut.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "psh",
+    "topic": "delivery complications",
+    "chart": "Required anterior episiotomy during delivery due to perineal rigidity related to prior FGC.",
+    "says": "They told me they had to make a small cut to help her come out because of the scar tissue from before.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "psh",
+    "topic": "obstetric history",
+    "chart": "G1P1, first pregnancy, spontaneous vaginal delivery, no prior miscarriages.",
+    "says": "This is my first baby, everything about pregnancy and birth was new to me.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "social",
+    "topic": "household support",
+    "chart": "Lives with husband and mother-in-law; mother-in-law handles most housework.",
+    "says": "My husband and his mother live with us. She does most of the cooking and cleaning, which helps a lot.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "social",
+    "topic": "family pressure about feeding",
+    "chart": "Mother-in-law repeatedly suggests supplementing with formula.",
+    "says": "My mother-in-law keeps telling me the baby needs formula too, that breast milk alone isn't enough. It's hard to hear that over and over.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f16",
+    "category": "psychosocial",
+    "topic": "daily mood",
+    "chart": "Reports crying most days over the past two weeks.",
+    "says": "I end up crying almost every day, sometimes for no clear reason. I didn't expect to feel this way.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "psychosocial",
+    "topic": "sleep quality",
+    "chart": "Poor sleep quality even during baby's sleep periods; difficulty falling back asleep.",
+    "says": "Even when she's sleeping, I just lie there wide awake, or I wake up and can't settle back down.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "psychosocial",
+    "topic": "self-perception as mother",
+    "chart": "Expresses feeling like she is failing as a new mother.",
+    "says": "I feel like I'm failing at this. Like everyone else figures it out and I can't.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f19",
+    "category": "psychosocial",
+    "topic": "self-harm or infant harm thoughts",
+    "chart": "Denies any thoughts of self-harm or harming the infant.",
+    "says": "No, nothing like that. I would never think about hurting myself or her, I just feel overwhelmed.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f20",
+    "category": "psychosocial",
+    "topic": "anxiety symptoms",
+    "chart": "Reports frequent worry and feeling on edge, especially about infant's wellbeing.",
+    "says": "I worry constantly, like something bad is going to happen to her if I'm not watching every second.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "psychosocial",
+    "topic": "reason for not disclosing sooner",
+    "chart": "States she did not want to seem ungrateful or burden her family with how she has been feeling.",
+    "says": "Everyone's been so helpful, I didn't want to seem ungrateful by complaining about how I feel inside.",
+    "tier": "hidden",
+    "importance": "important"
+   },
+   {
+    "id": "f22",
+    "category": "family",
+    "topic": "family history of mood disorders",
+    "chart": "No known family history of postpartum depression or other mood disorders reported.",
+    "says": "I don't think anyone in my family has dealt with depression after having a baby, as far as I know.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "medications",
+    "topic": "current medication use",
+    "chart": "Takes prenatal vitamin with iron daily; uses ibuprofen 400 mg as needed for pain; docusate as needed.",
+    "says": "I still take my prenatal vitamin every day, and ibuprofen when things hurt too much, and a stool softener sometimes.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "allergies",
+    "topic": "drug allergy history",
+    "chart": "No known drug allergies.",
+    "says": "I'm not allergic to any medicines that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "nutrition",
+    "topic": "appetite and intake",
+    "chart": "Appetite reduced over past two weeks, skipping meals some days.",
+    "says": "I haven't been that hungry lately, some days I just forget to eat until my mother-in-law reminds me.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies dysuria, urinary frequency, or incontinence.",
+    "says": "No problems peeing, no burning or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "ros",
+    "topic": "leg swelling or calf pain",
+    "chart": "Denies unilateral leg swelling, redness, or calf pain.",
+    "says": "My legs feel fine, no swelling or pain in either one.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "ros",
+    "topic": "headache or vision changes",
+    "chart": "Denies headache, visual disturbances, or epigastric pain.",
+    "says": "No headaches, no blurry vision, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "other",
+    "topic": "recent travel history",
+    "chart": "Reports a day trip to visit relatives in Wisconsin two weeks ago; no illness contacts reported.",
+    "says": "We drove out to Wisconsin to see my cousin a couple weeks ago, just for the day. Everyone there was healthy.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "recent dietary change",
+    "chart": "Started taking a fenugreek supplement for milk supply one week ago, no adverse effects reported.",
+    "says": "I started taking fenugreek capsules about a week ago because someone said it helps with milk supply.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f31",
+    "category": "adherence",
+    "topic": "vitamin and iron adherence",
+    "chart": "Reports taking prenatal vitamin daily without missed doses.",
+    "says": "I take my prenatal vitamin every single day, I haven't missed one.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "function",
+    "topic": "return to usual activities",
+    "chart": "Has not returned to pharmacy school coursework yet; on approved leave until 6 weeks postpartum.",
+    "says": "I'm still on leave from my pharmacy program, I go back in a few weeks.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f33",
+    "category": "sexual",
+    "topic": "resumption of intercourse",
+    "chart": "Has not resumed intercourse since delivery; no plans discussed yet with partner.",
+    "says": "We haven't been intimate again since the baby, we haven't really talked about it yet.",
+    "tier": "reluctant",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f31",
+    "artifactId": "d6",
+    "patientClaim": "Patient states she takes her prenatal vitamin with iron every single day without missing doses.",
+    "recordEvidence": "Medication list confirms the prenatal vitamin is prescribed daily, but her reduced appetite and skipped meals (fact f25) combined with reported fatigue raise question of actual consistent intake; no pharmacy refill data contradicts her directly, but the clinician should note that self-report of 'perfect' adherence alongside new depressive symptoms and poor nutrition warrants gentle verification rather than assumption.",
+    "teachingPoint": "Self-reported adherence can be overstated, especially when mood or appetite changes are present; corroborate with refill history or specific recall rather than accepting a global claim at face value."
+   },
+   {
+    "id": "m2",
+    "factId": "f9",
+    "artifactId": "d1",
+    "patientClaim": "Patient reports her bleeding is light, brown, and normal with no clots or odor, implying an uncomplicated postpartum recovery overall.",
+    "recordEvidence": "Delivery summary (d1) documents an anterior episiotomy performed specifically for perineal rigidity, a detail whose underlying cause the patient does not volunteer until directly and respectfully asked, despite it being clinically significant to her perineal healing assessment.",
+    "teachingPoint": "A patient's framing of her recovery as 'normal' may not surface all clinically relevant history; the record (delivery summary) prompts the clinician to ask specifically and respectfully about the reason for her episiotomy and any related healing considerations, which the patient will not raise unprompted."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize signs and symptoms of lactational mastitis (unilateral wedge-shaped erythema, fever, myalgia) and provide guidance consistent with continued breastfeeding and conservative management, while identifying red flags that would require escalation to a physician for antibiotics or abscess evaluation.",
+    "factIds": [
+     "f1",
+     "f2",
+     "f3",
+     "f6",
+     "f7"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a12"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Assess latch and positioning as a contributing cause of nipple trauma and mastitis risk, and counsel on correction using a remote, camera-guided technique.",
+    "factIds": [
+     "f4",
+     "f8"
+    ],
+    "actionIds": [
+     "a4",
+     "a5"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Administer and interpret the Edinburgh Postnatal Depression Scale, including a mandatory direct self-harm/infant-harm safety screen, and determine next steps within midwifery scope (supportive counseling, referral to mental health, follow-up interval) for a score indicating probable postpartum depression without acute safety risk.",
+    "factIds": [
+     "f16",
+     "f17",
+     "f18",
+     "f19",
+     "f20"
+    ],
+    "actionIds": [
+     "a6",
+     "a7"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Elicit, with cultural sensitivity, a history of female genital cutting and its relevance to episiotomy and perineal healing, without judgment or stereotyping, and assess perineal recovery accordingly.",
+    "factIds": [
+     "f11",
+     "f12",
+     "f10"
+    ],
+    "actionIds": [
+     "a8",
+     "a11"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Identify psychosocial stressors (family pressure to formula-feed, caregiving burden, reluctance to disclose distress) that affect both breastfeeding continuation and maternal mental health, and incorporate family-centered counseling.",
+    "factIds": [
+     "f14",
+     "f15",
+     "f21",
+     "f25"
+    ],
+    "actionIds": [
+     "a6",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Distinguish relevant clinical findings from plausible but non-contributory distractor history (recent travel, new supplement use) during a focused postpartum history.",
+    "factIds": [
+     "f29",
+     "f30"
+    ],
+    "actionIds": [
+     "a1",
+     "a3"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Lactational mastitis (left breast) with nipple trauma from suboptimal latch, in a 3-week postpartum patient who also screens positive for probable postpartum depression/anxiety (EPDS 14, no safety risk) and has unaddressed questions about perineal healing after prior female genital cutting and episiotomy.",
+   "differential": [
+    "Lactational mastitis without abscess (most likely given wedge-shaped erythema, fever, myalgia, no fluctuant mass)",
+    "Breast abscess (less likely at this stage; no palpable fluctuance or skin breakdown, but must be monitored for failure to improve in 24-48h)",
+    "Blocked/plugged milk duct without infection (would not typically cause fever this high)",
+    "Candidal nipple infection (less likely; no white patches on nipple or infant mouth, pain pattern more consistent with mechanical trauma)",
+    "Postpartum depression vs. normal postpartum adjustment/baby blues (EPDS 14 and duration beyond 2 weeks favors depression over transient blues)"
+   ],
+   "keyFindings": [
+    "Unilateral wedge-shaped erythema and tenderness on left breast with fever 38.2°C and myalgia, consistent with mastitis",
+    "Nipple cracking and shallow latch with clicking sound, a likely contributing cause",
+    "No fluctuant mass, no purulent discharge, no skin breakdown — reassuring against abscess at this time",
+    "EPDS score 14/30 with denial of self-harm/infant-harm ideation (item 10 = 0)",
+    "History of childhood female genital cutting (Type I) requiring anterior episiotomy at delivery; patient reports healing well with only mild sitting discomfort",
+    "Family pressure to supplement with formula adding to psychosocial burden and potential breastfeeding disruption",
+    "Lochia and vital signs otherwise reassuring; no signs of endometritis, DVT, or preeclampsia-spectrum symptoms"
+   ],
+   "plan": [
+    "Advise continued frequent breastfeeding/pumping on the affected side to maintain drainage; discourage stopping feeds on that breast",
+    "Counsel on supportive measures: warm compress before feeds, cold compress after, gentle massage toward nipple during feeds, adequate hydration and rest as able",
+    "Coach correction of latch and positioning using camera-guided demonstration; consider referral to a lactation consultant (IBCLC) for hands-on follow-up if not improving",
+    "Educate on mastitis red flags requiring urgent physician evaluation: fever persisting beyond 24-48h despite conservative measures, worsening redness/pain, palpable fluctuant mass suggesting abscess, or systemic illness — consult/refer to physician for consideration of antibiotics or incision/drainage if these develop",
+    "Document EPDS score of 14 and safety screen negative; provide supportive counseling today, discuss normalcy of postpartum mood difficulty, and refer to perinatal mental health/behavioral health for further evaluation and possible treatment given score ≥13 and 2+ weeks duration",
+    "Schedule close follow-up (within 48-72 hours) by phone or video to reassess breast symptoms and mood, with explicit safety-net instructions for when to seek urgent care",
+    "Engage patient (with her permission) in a conversation about involving her husband and/or mother-in-law in understanding exclusive breastfeeding goals and emotional support needs, respecting family dynamics",
+    "Respectfully document and discuss perineal/episiotomy healing in the context of prior FGC; reassure that healing appears appropriate based on self-exam, and offer referral to pelvic health physical therapy or a clinician experienced in FGC-related care if she has ongoing concerns or desires future counseling",
+    "Reinforce that this presentation does not require physician escalation for the breast infection today given absence of abscess signs, but mood symptoms warrant referral/co-management per midwifery scope"
+   ],
+   "redFlags": [
+    "Development of a palpable fluctuant breast mass or skin necrosis suggesting abscess, requiring physician referral",
+    "Fever not resolving within 48-72 hours of conservative management, requiring escalation for possible antibiotic therapy",
+    "Any emergence of self-harm or infant-harm ideation on safety screen, which would require immediate escalation to emergency mental health services",
+    "Signs of sepsis (hypotension, tachycardia out of proportion, altered mental status) requiring emergent referral",
+    "Heavy vaginal bleeding, foul-smelling lochia, or fever pattern suggesting endometritis rather than isolated mastitis"
+   ],
+   "educationPoints": [
+    "Mastitis is generally managed by continuing breastfeeding/milk removal on the affected side, not stopping it, to prevent worsening engorgement and infection",
+    "A score of 13 or higher on the EPDS, combined with duration beyond two weeks, suggests probable postpartum depression and warrants further evaluation and referral, even when the patient denies self-harm thoughts",
+    "Routine, respectful inquiry about perineal healing after FGC and episiotomy should be part of postpartum care, as patients may not volunteer this history unprompted",
+    "Family members' well-intentioned suggestions (e.g., to supplement with formula) can create conflict and distress for breastfeeding mothers; counseling should include the support system when possible and appropriate",
+    "A normal physical exam in one area (e.g., reassuring lochia and vitals) does not rule out significant concerns in another system (e.g., mental health), underscoring the value of a holistic postpartum assessment"
+   ]
+  },
+  "patient": {
+   "name": "Aaliyah Hassan",
+   "age": 27,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Somali-American",
+   "occupation": "Pharmacy student (currently on parental leave)",
+   "language": "English (fluent, primary language at home is a mix of English and Somali)",
+   "appearance": "A young woman with a slim build, wearing a loose patterned hijab and a comfortable nursing top, sits on a couch in a softly lit living room with a bassinet visible in the background. She appears tired, with slight under-eye circles, and speaks calmly and politely, occasionally shifting the baby monitor on the table beside her.",
+   "portrait": "/portraits/nurse-midwife-aaliyah-hassan-postpartum.jpg"
+  },
+  "persona": {
+   "personality": "Composed, polite, intellectually engaged, and reluctant to complain or seem ungrateful; takes a methodical approach to problems, consistent with her pharmacy training.",
+   "communicationStyle": "Speaks in clear, organized sentences, sometimes downplays her own symptoms, and needs direct, gentle, specific questions to open up about emotional distress.",
+   "healthLiteracy": "high",
+   "emotionalState": "Outwardly calm but visibly fatigued; becomes tearful when discussing mood or feelings of inadequacy, and softens defensively when family dynamics are mentioned.",
+   "background": "Aaliyah immigrated to the U.S. with her family as a child and is now in her second year of pharmacy school, currently on approved leave after the birth of her first child. She and her husband live with his mother, who has taken on much of the household and newborn care support, which Aaliyah appreciates but also finds overwhelming to navigate alongside her own expectations of motherhood.",
+   "speechExamples": [
+    "I don't want to make a big deal out of it, but the breast pain got worse pretty fast.",
+    "Honestly, I think I'm just supposed to figure this out and I haven't been doing a great job.",
+    "My mother-in-law means well, she really does, but it's a lot to hear every day.",
+    "I know breastfeeding is supposed to feel natural, but it hasn't felt that way for me yet.",
+    "I'd rather just push through than complain, but I guess that's part of why I called today."
+   ],
+   "concerns": [
+    "Whether the breast infection means she has to stop breastfeeding",
+    "Whether her fever could harm the baby through breast milk",
+    "Feeling judged by her mother-in-law for not supplementing with formula",
+    "Whether what she's feeling emotionally is 'normal' or something more serious",
+    "Whether her prior female genital cutting will cause long-term problems with recovery or future deliveries"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are a student nurse-midwife conducting a telehealth postpartum and lactation visit with Aaliyah Hassan, 27, who is 3 weeks postpartum after a spontaneous vaginal delivery of her first child. She has called in with left breast pain, redness, and fever since yesterday. She also reports pre-existing cracked nipples. Review the chart before the visit.",
+   "chiefComplaint": "Left breast pain, redness, and fever since yesterday, with pre-existing cracked nipples",
+   "openingLine": "Hi, thanks for seeing me. My left breast has gotten really sore and red since yesterday, and I had a fever last night. My nipples have been cracked too, so I wanted to check in.",
+   "tasks": [
+    "Take a focused history of the presenting breast concern",
+    "Guide a remote camera-based examination of the breast and nipples",
+    "Assess infant feeding and latch technique",
+    "Screen for postpartum mood and wellbeing",
+    "Assess overall postpartum recovery",
+    "Formulate a management plan and arrange appropriate follow-up"
+   ],
+   "timeLimitMin": 25
+  },
+  "title": "Postpartum Mastitis with Unmasked Postpartum Depression at the 3-Week Lactation Visit",
+  "summary": "A 27-year-old first-time mother presents by telehealth 3 weeks postpartum with breast pain, fever, and cracked nipples suggestive of lactational mastitis compounded by latch difficulty. Gentle, direct questioning uncovers an EPDS score of 14 (safety-screen negative) and a reluctant disclosure of childhood female genital cutting relevant to her episiotomy and perineal healing, teaching learners to integrate physical, psychosocial, and culturally sensitive history-taking within midwifery scope.",
+  "specialty": "Nurse-Midwifery / Perinatal Care",
+  "setting": "Telehealth video visit, patient at home in Minneapolis, Minnesota",
+  "professions": [
+   "nurse-midwife"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

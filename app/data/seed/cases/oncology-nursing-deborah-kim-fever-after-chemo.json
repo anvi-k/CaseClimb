@@ -1,0 +1,901 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Current temperature (home thermometer, oral)",
+    "result": "37.9°C (100.2°F) oral, taken now on video call with patient's digital thermometer",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Current heart rate / pulse",
+    "result": "Pulse 108 bpm, regular, measured by patient at wrist per instruction (self-palpated, not an exam-grade reading — screening value only)",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "vitals",
+    "name": "Blood pressure (home cuff)",
+    "result": "BP 108/66 mmHg",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "vitals",
+    "name": "Respiratory rate and effort (observed on camera)",
+    "result": "RR 18/min, no accessory muscle use, speaking in full sentences",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "vitals",
+    "name": "Pulse oximetry (home device)",
+    "result": "SpO2 97% on room air",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera inspection of port site",
+    "result": "Right upper chest port site with surrounding erythema approximately 2 cm, no drainage or dehiscence; no streaking; patient reports mild tenderness to touch, no fluctuance seen",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Camera inspection of oral mucosa",
+    "result": "Two shallow aphthous-type ulcers on buccal mucosa and one on lateral tongue, no white plaques, no bleeding gums",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Skin survey for rash or bruising (camera, patient-directed)",
+    "result": "No petechiae, no new bruising, no rash elsewhere on arms, legs, or trunk visualized",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Review of systems for infection sources (cough, diarrhea, dysuria, abdominal pain)",
+    "result": "No cough or shortness of breath, no diarrhea or urinary symptoms, mild generalized abdominal discomfort attributed to poor appetite, no localizing pain elsewhere",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "assessment",
+    "name": "Oral intake and hydration assessment",
+    "result": "Patient reports drinking approximately 3-4 cups of fluid today, eating poorly for 2 days due to mouth soreness, no vomiting, 1 episode of loose stool yesterday",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review most recent CBC with differential (post-cycle 1 nadir)",
+    "result": "ANC 0.6 x10^9/L (severe neutropenia) drawn on day 10 after cycle 1, approximately 23 days before cycle 2 (i.e., about 32 days ago); no growth factor support ordered at that time",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": [
+     "d2",
+     "d5"
+    ]
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review chemotherapy regimen and cycle timeline",
+    "result": "Doxorubicin/cyclophosphamide (AC), cycle 2 given 9 days ago; today is post-cycle day 9, within expected nadir window",
+    "importance": "critical",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review current medication list for antipyretics/analgesics",
+    "result": "Acetaminophen 650 mg taken approximately 14 hours ago for fever/chills; no NSAIDs or growth factor (filgrastim) on medication list",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "lab",
+    "name": "Recommend stat CBC with differential and blood cultures be obtained at urgent in-person visit",
+    "result": "Deferred — cannot be drawn via telehealth; recommendation documented to obtain stat CBC w/ diff, blood cultures x2, and lactate upon arrival at infusion/urgent care per neutropenic fever protocol",
+    "importance": "critical",
+    "abnormal": false,
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Oncology Clinic Visit Note - Chemotherapy Cycle 2 Administration",
+    "author": "Infusion RN, Oncology Infusion Center",
+    "date": "9 days ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "52 y/o F with newly diagnosed stage IIB invasive ductal carcinoma, right breast, HER2-negative. Received cycle 2 of doxorubicin 60 mg/m2 and cyclophosphamide 600 mg/m2 IV via implanted port without acute infusion reaction. Tolerated premedication (ondansetron, dexamethasone). Discussed signs/symptoms of neutropenic fever and instructed to call 24-hour oncology line for any temperature ≥38.0°C (100.4°F), chills, or new site of infection. Growth factor support (filgrastim) was discussed after cycle 1 nadir but patient declined due to cost concerns; plan to revisit at this visit."
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "CBC with Differential - Post Cycle 1, Day 10",
+    "author": "Quest Diagnostics / Oncology Clinic Lab",
+    "date": "approx. 32 days ago",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "WBC",
+        "1.1",
+        "x10^9/L",
+        "4.0-11.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Absolute Neutrophil Count (ANC)",
+        "0.6",
+        "x10^9/L",
+        "1.5-8.0"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Hemoglobin",
+        "10.8",
+        "g/dL",
+        "12.0-15.5"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Platelets",
+        "142",
+        "x10^9/L",
+        "150-400"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "Hematocrit",
+        "32.0",
+        "%",
+        "36.0-46.0"
+       ],
+       "flag": "L"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Active Medication List",
+    "author": "EHR Medication Reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Last taken"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Doxorubicin",
+        "60 mg/m2",
+        "IV",
+        "Cycle 2, every 2-3 weeks",
+        "9 days ago (infusion)"
+       ]
+      },
+      {
+       "cells": [
+        "Cyclophosphamide",
+        "600 mg/m2",
+        "IV",
+        "Cycle 2, every 2-3 weeks",
+        "9 days ago (infusion)"
+       ]
+      },
+      {
+       "cells": [
+        "Ondansetron",
+        "8 mg",
+        "Oral",
+        "Every 8 hr PRN nausea",
+        "2 days ago"
+       ]
+      },
+      {
+       "cells": [
+        "Acetaminophen",
+        "650 mg",
+        "Oral",
+        "Every 6 hr PRN fever/pain",
+        "Last night, ~14 hr ago"
+       ]
+      },
+      {
+       "cells": [
+        "Magic mouthwash (lidocaine/diphenhydramine/antacid)",
+        "15 mL swish/spit",
+        "Oral topical",
+        "Every 4 hr PRN mouth pain",
+        "This morning"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "flowsheet",
+    "title": "Home Vitals Log - Patient Reported",
+    "author": "Patient self-report, reviewed by RN",
+    "date": "Last 24 hours",
+    "release": {
+     "when": "fact",
+     "ref": "f5"
+    },
+    "table": {
+     "columns": [
+      "Time",
+      "Temperature",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Last night, ~9 PM",
+        "38.4°C (101.1°F)",
+        "Felt shivery, took acetaminophen 650 mg"
+       ]
+      },
+      {
+       "cells": [
+        "This morning, ~8 AM",
+        "37.6°C (99.7°F)",
+        "Felt 'better', went to shop briefly"
+       ]
+      },
+      {
+       "cells": [
+        "Now (video call)",
+        "37.9°C (100.2°F)",
+        "Taken live during call"
+       ]
+      }
+     ]
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time",
+     "yLabel": "Temperature (°C)",
+     "refHigh": 38,
+     "series": [
+      {
+       "name": "Oral Temperature",
+       "points": [
+        {
+         "x": "9 PM (last night)",
+         "y": 38.4
+        },
+        {
+         "x": "8 AM (today)",
+         "y": 37.6
+        },
+        {
+         "x": "Now (call)",
+         "y": 37.9
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Prior Oncology Visit - Growth Factor Discussion (after Cycle 1 nadir)",
+    "author": "Oncology NP",
+    "date": "approx. 32 days ago (day 10 after cycle 1)",
+    "release": {
+     "when": "action",
+     "ref": "a11"
+    },
+    "body": "Reviewed CBC showing ANC nadir 0.6 x10^9/L after cycle 1 AC. Discussed primary prophylaxis with pegfilgrastim for subsequent cycles given high risk of febrile neutropenia. Patient voiced concern about out-of-pocket cost and asked to defer; plan was to reassess insurance coverage before cycle 2 was due. Advised to monitor temperature closely and call immediately for fever ≥38.0°C in the interim."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Nursing Telephone Triage Note - Draft (to be completed this encounter)",
+    "author": "Oncology Nursing Student",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "body": "[Template for documentation] S: ... B: ... A: ... R: ... Plan: Instruct patient to proceed immediately to Emergency Department or Infusion Center urgent slot for suspected febrile neutropenia; do not delay for additional antipyretic dosing; arrange transport if needed; notify on-call oncologist."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for call",
+    "chart": "Patient reports feeling very tired and having mouth sores since starting second round of chemo.",
+    "says": "I'm okay, really. I'm just calling in because you all asked me to check in. I've been pretty tired and I've got some sores in my mouth that are bothering me when I eat.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "timing since treatment",
+    "chart": "Nine days post cycle 2 of AC chemotherapy.",
+    "says": "Let me think... I had my second treatment, so that would make it about nine days now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "fatigue description",
+    "chart": "Fatigue worse than after cycle 1, interfering with ability to stand at shop counter all day.",
+    "says": "I'm more tired than last time. I had to sit down a lot at the shop today, which I never do.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "mouth sore onset",
+    "chart": "Mouth sores began 3 days ago, worsening, limiting oral intake.",
+    "says": "The sores started a few days ago, maybe three. They're getting worse and it hurts to eat anything with flavor or that's hot.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "fever history",
+    "chart": "Felt shivery and chilled last night, measured temperature 38.4°C, took acetaminophen, temperature came down, did not call clinic.",
+    "says": "Oh... well, last night I did feel a little shivery and cold, and when I checked it was 38.4. I took a Tylenol though and I felt a lot better after, so I figured it wasn't a big deal.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "reason did not call clinic",
+    "chart": "Did not call 24-hour line overnight because did not want to bother the on-call team and needed to open the shop in the morning.",
+    "says": "I didn't want to call in the middle of the night and bother anyone over something small, and I had to open the shop early. It felt fine by morning so I thought it had passed.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "current temperature feeling",
+    "chart": "Currently feels warm, mild chills, no shaking rigors at present.",
+    "says": "I still feel a little warm, kind of chilly off and on, but not shaking or anything.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "port site symptoms",
+    "chart": "Mild tenderness and redness noticed around port site for about 2 days, no drainage.",
+    "says": "Now that you mention it, the skin around my port has been a little red and sore the last couple days. Nothing's coming out of it though.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "chills severity",
+    "chart": "Reports one episode of shaking chills last night lasting about 20 minutes before taking acetaminophen.",
+    "says": "Actually last night it was bad enough that I was shaking under the blanket for a while before the Tylenol kicked in.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "respiratory symptoms",
+    "chart": "Denies cough, shortness of breath, or chest pain.",
+    "says": "No cough, no trouble breathing, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies dysuria, urinary frequency, or flank pain.",
+    "says": "No problems when I go to the bathroom, no burning or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "gastrointestinal symptoms",
+    "chart": "One episode of loose stool yesterday, no vomiting, mild generalized abdominal discomfort.",
+    "says": "I had loose stool once yesterday, no throwing up. My stomach feels a little off but not real pain.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "skin changes elsewhere",
+    "chart": "Denies new rash, bruising, or bleeding gums.",
+    "says": "No new rashes or bruises that I've noticed, and my gums aren't bleeding.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "nutrition",
+    "topic": "appetite and intake",
+    "chart": "Poor oral intake over past 2 days due to mouth pain, drinking small sips of water and tea.",
+    "says": "I haven't been eating much, maybe some soup, because my mouth hurts too much for most food. I'm drinking water and a little tea.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "fever medication use",
+    "chart": "Took acetaminophen 650 mg orally last night for chills/fever; last dose approximately 14 hours prior to this call.",
+    "says": "I took one Tylenol, 650 milligrams I think, last night when I felt cold and shivery.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f16",
+    "category": "medications",
+    "topic": "growth factor use",
+    "chart": "Did not receive filgrastim/pegfilgrastim growth factor support after cycle 1 or with cycle 2 due to cost concerns.",
+    "says": "They talked to me about a shot to help my white blood cells after the first round, but it was going to cost a lot out of pocket, so I said I'd wait and see.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "medications",
+    "topic": "mouth sore treatment",
+    "chart": "Using prescribed 'magic mouthwash' as needed for mouth sore pain, with some relief.",
+    "says": "They gave me a special mouthwash to swish and spit, and that helps a little with the sores.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "medications",
+    "topic": "other medications",
+    "chart": "Takes ondansetron as needed for nausea; no other new medications or supplements.",
+    "says": "I take the anti-nausea pill sometimes if I feel sick, nothing else new.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "cancer diagnosis",
+    "chart": "Stage IIB HER2-negative invasive ductal carcinoma, right breast, diagnosed approximately 2 months ago.",
+    "says": "I was told it's stage two breast cancer, on the right side.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "other medical history",
+    "chart": "History of mild hypertension, well-controlled on no medication, managed with diet.",
+    "says": "I had slightly high blood pressure a while back but I control it with my diet, no pills for it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f21",
+    "category": "psh",
+    "topic": "port placement",
+    "chart": "Implanted port placed in right chest wall about 1 month ago for chemotherapy access, no complications at placement.",
+    "says": "They put the port in my chest about a month ago, before my treatments started. It healed up fine at first.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "family",
+    "topic": "family cancer history",
+    "chart": "Mother had breast cancer in her 60s; no known hereditary syndrome testing done yet.",
+    "says": "My mother had breast cancer too, when she was older.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "occupation and workload",
+    "chart": "Owns and operates a dry-cleaning business; typically works 10-12 hour days, minimal help from staff this week.",
+    "says": "I run my dry-cleaning shop, it's just me and one part-time helper, so I really can't afford to close.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "social",
+    "topic": "support at home",
+    "chart": "Lives with husband who works a different schedule; adult daughter lives nearby but is busy with her own young children.",
+    "says": "My husband is around but works a different shift, and my daughter has little kids of her own so I don't like asking her for help.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "attitude toward illness and asking for help",
+    "chart": "Expresses reluctance to be seen as a burden; minimizes symptoms and apologizes for taking up clinician time.",
+    "says": "I'm sorry, I know you're busy, I feel bad even calling about this. I don't want to make a fuss over nothing.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "understanding of neutropenic fever risk",
+    "chart": "Has limited understanding that fever during chemotherapy can be a medical emergency; believed fever that resolves with Tylenol is not urgent.",
+    "says": "I figured since the Tylenol brought it down and I felt better, it wasn't anything serious. I didn't know a fever like that could be dangerous even if it goes away.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f27",
+    "category": "adherence",
+    "topic": "home temperature monitoring habits",
+    "chart": "Owns a digital oral thermometer and checks temperature intermittently, not on a fixed schedule.",
+    "says": "I have a thermometer at home, I just don't check it every day, only when I feel off.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "function",
+    "topic": "activity tolerance today",
+    "chart": "Able to walk around the house and stand briefly but reports feeling weak and lightheaded once when standing quickly this morning.",
+    "says": "I felt a little dizzy once this morning when I stood up fast, but it passed.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "sexual",
+    "topic": "menstrual or reproductive changes",
+    "chart": "Postmenopausal prior to diagnosis; denies vaginal bleeding or discharge.",
+    "says": "I went through menopause years ago, nothing like that going on.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "financial concerns about care",
+    "chart": "Worried about cost of emergency room visit and missing work if hospitalized.",
+    "says": "If I have to go to the ER or get admitted, I'm worried about the cost and who's going to run the shop.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "other",
+    "topic": "language and communication preference",
+    "chart": "Primary language English, fluent; occasionally uses Korean terms with family but communicates fully in English with care team.",
+    "says": "English is fine for me, I've been here since I was a kid.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f32",
+    "category": "goals",
+    "topic": "goals for this call",
+    "chart": "Hopes to get reassurance that fatigue and mouth sores are normal side effects and get tips to manage them.",
+    "says": "I was really just hoping you could tell me if the tiredness and mouth sores are normal, and maybe give me some tips.",
+    "tier": "initial",
+    "importance": "minor"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit history of fever and chills despite patient minimization, including use of antipyretic that masked ongoing fever.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f7",
+     "f9",
+     "f15"
+    ],
+    "actionIds": [
+     "a1",
+     "a13"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize signs of febrile neutropenia (recent fever ≥38.0°C with rigors, prior severe neutropenia nadir, self-measured tachycardia requiring corroboration, port site erythema) and act with urgency rather than reassurance.",
+    "factIds": [
+     "f8",
+     "f9",
+     "f16"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a6",
+     "a11"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Perform a focused remote assessment for infection sources appropriate to telehealth scope (camera exam of port and oral mucosa, vitals, review of systems) without delaying escalation.",
+    "factIds": [
+     "f4",
+     "f8",
+     "f10",
+     "f11",
+     "f12",
+     "f13"
+    ],
+    "actionIds": [
+     "a6",
+     "a7",
+     "a9",
+     "a3",
+     "a4",
+     "a5"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Identify and explore the mismatch between the patient's belief that resolution of fever with acetaminophen means it is not serious and the clinical significance of any fever during neutropenia nadir.",
+    "factIds": [
+     "f26",
+     "f15"
+    ],
+    "actionIds": [
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Escalate appropriately within nursing scope: instruct immediate in-person evaluation for suspected febrile neutropenia, notify on-call oncology provider, and do not advise watchful waiting or additional home antipyretic dosing.",
+    "factIds": [
+     "f6",
+     "f30"
+    ],
+    "actionIds": [
+     "a14",
+     "a11"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Address psychosocial and access barriers (reluctance to call, business responsibilities, cost concerns about growth factor and ER) with empathy while still ensuring urgent action is taken.",
+    "factIds": [
+     "f23",
+     "f25",
+     "f30",
+     "f16"
+    ],
+    "actionIds": []
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f6",
+    "artifactId": "d4",
+    "patientClaim": "Patient believed her fever last night 'passed' by morning and felt fine, so she did not think it was serious enough to call.",
+    "recordEvidence": "Home vitals log shows temperature only dropped to 37.6°C by morning (still elevated) and has since risen again to 37.9°C now, with pulse 108 — not a resolved fever, but a fluctuating one consistent with ongoing infection masked by antipyretic.",
+    "teachingPoint": "Antipyretics can lower but not eliminate fever in neutropenic infection; a temperature that 'comes down' after acetaminophen is not reassurance that infection has resolved, especially with a documented nadir ANC of 0.6."
+   },
+   {
+    "id": "m2",
+    "factId": "f16",
+    "artifactId": "d5",
+    "patientClaim": "Patient describes growth factor as something she 'said she'd wait and see' about due to cost, framing it as a minor deferred decision.",
+    "recordEvidence": "Prior oncology note documents ANC nadir of 0.6 x10^9/L after cycle 1 (severe neutropenia) and that growth factor was recommended specifically because of high febrile neutropenia risk, with authorization still pending at cycle 2 — a higher-stakes gap than the patient's framing suggests.",
+    "teachingPoint": "Clarify with the patient that deferring growth factor after a severe nadir leaves her at high risk for exactly this presentation, and ensure the care team revisits authorization and support resources rather than letting cost barriers silently recur."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Scheduled between-cycle symptom check call, cycle 2 of AC chemotherapy, day 9"
+   },
+   {
+    "label": "Problem list",
+    "value": "Invasive ductal carcinoma, right breast, stage IIB, HER2-negative; implanted port in place; history of mild hypertension (diet-controlled)"
+   },
+   {
+    "label": "Medications",
+    "value": "Doxorubicin/cyclophosphamide (cycle 2, 9 days ago); ondansetron PRN; acetaminophen PRN; magic mouthwash PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "Temp 36.8°C, HR 78, BP 118/72, RR 16, SpO2 99% (recorded at infusion visit 9 days ago, pre-chemo)"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Influenza vaccine current; up to date per primary care"
+   },
+   {
+    "label": "Care team",
+    "value": "Medical oncologist, oncology infusion RN team, primary care physician"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "patient": {
+   "name": "Deborah Kim",
+   "age": 52,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Korean-American",
+   "occupation": "Owner-operator of a dry-cleaning business",
+   "language": "English",
+   "appearance": "A woman with short dark hair pulled back, wearing a cardigan over a work polo shirt, sitting in a small back office at her shop with a rack of plastic-wrapped clothes visible behind her. Her posture is upright but she looks tired, with slightly flushed cheeks, and she keeps glancing toward the door as if checking for customers.",
+   "portrait": "/portraits/oncology-nursing-deborah-kim-fever-after-chemo.jpg"
+  },
+  "persona": {
+   "personality": "Stoic, hardworking, apologetic about taking up others' time, used to pushing through discomfort to keep her business running.",
+   "communicationStyle": "Polite and soft-spoken, downplays symptoms, answers directly when asked but volunteers little unprompted, often adds reassurance like 'it's probably nothing.'",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious but trying to appear composed; embarrassed about having skipped calling the night before.",
+   "background": "Immigrated with her family as a child, has run the family dry-cleaning business for over 20 years with her husband. Proud of never missing a day of work and of being self-sufficient. Diagnosed with breast cancer two months ago, which has been a major disruption to her routine and finances.",
+   "speechExamples": [
+    "I'm sure it's nothing, I just wanted to check in like you asked.",
+    "I didn't want to bother the night nurse over something small.",
+    "I took a Tylenol and felt better, so I figured I was fine.",
+    "I just worry about who's going to run the shop if I'm not there.",
+    "Is it normal to feel this tired after the second round?"
+   ],
+   "concerns": [
+    "Whether her fatigue and mouth sores are a normal part of chemo or something worse",
+    "Missing work and losing income if she has to go to the ER or get admitted",
+    "Cost of the growth factor injection and future treatments",
+    "Not wanting to be seen as dramatic or high-maintenance by the care team"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are an oncology nursing student making a scheduled telehealth between-cycle symptom check call to Deborah Kim, a 52-year-old woman who is 9 days post cycle 2 of doxorubicin/cyclophosphamide (AC) for breast cancer. She has an implanted port. Review her chart before the call. Your job is to assess for chemotherapy toxicities and escalate appropriately if needed.",
+   "chiefComplaint": "Fatigue and mouth sores 9 days after second chemotherapy cycle",
+   "openingLine": "Hi, thanks for calling. I'm okay, really — I'm just a little tired and I've got some sores in my mouth that are bothering me when I eat.",
+   "tasks": [
+    "Conduct a systematic symptom check for common AC chemotherapy toxicities",
+    "Take a focused history of fever, chills, and recent temperature measurements",
+    "Perform a camera-based inspection of the port site and oral mucosa and obtain current vital signs",
+    "Assess findings in the context of the patient's chemotherapy timeline and prior laboratory results",
+    "Discuss any concerns with the patient and agree on next steps",
+    "Document findings using SBAR format for handoff to the oncology team"
+   ],
+   "timeLimitMin": 25
+  },
+  "answerKey": {
+   "primaryProblem": "Suspected febrile neutropenia 9 days after cycle 2 of doxorubicin/cyclophosphamide (AC), in a patient with a documented severe nadir ANC (0.6 x10^9/L) after cycle 1 who did not receive growth factor support, now presenting with fever overnight (38.4°C with rigors), masked by acetaminophen, current low-grade temperature (37.9°C), self-measured tachycardia (HR 108 by patient-palpated wrist pulse), and a possible port-site source of infection (localized erythema and tenderness).",
+   "differential": [
+    "Febrile neutropenia with port-site cellulitis as possible source",
+    "Febrile neutropenia without clear localizing source (occult bacteremia)",
+    "Chemotherapy-induced mucositis with secondary oral source of infection",
+    "Non-neutropenic viral or self-limited illness (less likely given nadir timing and exam findings)",
+    "Dehydration/poor oral intake contributing to tachycardia without infection (unlikely to fully explain fever and chills)"
+   ],
+   "keyFindings": [
+    "Fever 38.4°C with rigors overnight, partially masked by acetaminophen; current temp 37.9°C",
+    "Heart rate 108 bpm by patient self-palpation at wrist — an imprecise screening measurement, not an exam-grade vital; should be corroborated with other signs (dizziness on standing, respiratory status, overall clinical picture) and confirmed on in-person arrival rather than used alone as a hard red flag",
+    "Erythema and tenderness around implanted port site, no drainage",
+    "Day 9 after cycle 2 AC chemotherapy, within expected ANC nadir window",
+    "Prior cycle 1 nadir ANC 0.6 x10^9/L (severe neutropenia), drawn ~23 days before cycle 2 (about 32 days ago); no growth factor given due to cost/deferral",
+    "Poor oral intake x2 days from mucositis, mild dizziness on standing, one episode loose stool",
+    "Patient minimized and delayed reporting fever due to not wanting to 'bother' the team and business demands"
+   ],
+   "plan": [
+    "Instruct patient to go immediately (within the hour) to the emergency department or oncology urgent-visit location for in-person evaluation — do not wait or take another dose of acetaminophen before being seen",
+    "Notify the on-call oncology provider now by phone/page to report suspected febrile neutropenia with SBAR handoff",
+    "Advise patient not to delay for transportation arrangements if any delay — call 911 or arrange immediate transport if needed, especially given dizziness and reported possible tachycardia",
+    "Recommend stat CBC with differential, blood cultures from two sites (including from the port if accessed) and peripheral site, and lactate upon arrival, per febrile neutropenia protocol — to be ordered by evaluating provider, not nursing student, and to include an exam-grade heart rate to confirm the self-measured reading",
+    "Document encounter using SBAR and nursing note; flag for medical oncology team the gap in growth factor support after a severe cycle 1 nadir for reassessment of prophylaxis for future cycles",
+    "Provide brief safety-net teaching: acetaminophen lowers fever but does not treat infection, and any fever during the nadir window after chemo requires urgent evaluation even if it comes down with medication",
+    "Follow up on psychosocial/financial barriers (business coverage, ER cost concerns) by looping in oncology social work after acute issue addressed — not something to resolve in this call before escalation"
+   ],
+   "redFlags": [
+    "Fever ≥38.0°C or rigors in a patient with known severe neutropenia nadir — medical emergency requiring immediate evaluation and antibiotics, regardless of symptom resolution with antipyretics",
+    "Reported possible tachycardia (self-measured, uncorroborated) and dizziness on standing, raising concern for early sepsis physiology and warranting confirmation with an exam-grade reading on arrival rather than acceptance at face value",
+    "Localized erythema at port site as a potential source requiring urgent assessment and possible line management by the treating team",
+    "Delay in seeking care due to minimization or desire not to 'bother' the team — a pattern that increases risk and should prompt clear, direct safety-netting instructions"
+   ],
+   "educationPoints": [
+    "Antipyretics such as acetaminophen can reduce or mask fever without resolving the underlying infection; a temperature that comes down after medication does not rule out serious infection, especially during a chemotherapy nadir window",
+    "Any single oral temperature ≥38.0°C (100.4°F) or sustained temperature ≥38.0°C for an hour in a patient at risk for neutropenia is considered a potential oncologic emergency warranting same-day/same-hour evaluation",
+    "Growth factor support (e.g., pegfilgrastim) is often recommended after a severe neutropenic nadir to reduce the risk of febrile neutropenia in subsequent cycles; cost barriers to this should be flagged to the care team rather than silently deferred",
+    "Patients may minimize or delay reporting fever due to not wanting to be a burden or due to work/financial pressures; clinicians should proactively and non-judgmentally ask directly about fever and chills every between-cycle contact",
+    "Patient self-measured vitals (e.g., wrist pulse palpation) obtained via telehealth are useful screening data but are inherently less reliable than exam-grade measurements; they should be corroborated with other findings (dizziness, respiratory effort, overall clinical picture) and explicitly confirmed with an in-person measurement rather than treated alone as definitive evidence of a critical finding"
+   ]
+  },
+  "title": "Possible Febrile Neutropenia Nine Days After Second AC Chemotherapy Cycle",
+  "summary": "A 52-year-old woman nine days post cycle 2 of doxorubicin/cyclophosphamide calls in for a routine symptom check, minimizing an overnight fever with rigors that she treated with acetaminophen and did not report. The case teaches learners to proactively screen for fever despite patient reassurance, recognize febrile neutropenia risk given a prior severe nadir ANC and current tachycardia/port-site erythema, and escalate urgently within nursing scope rather than reassure or defer.",
+  "specialty": "Oncology / Infusion Nursing",
+  "setting": "Telehealth video visit, patient at a small back office in her dry-cleaning shop in Los Angeles",
+  "encounterType": "Between-cycle symptom check (telephone/video triage)",
+  "difficulty": 3,
+  "professions": [
+   "oncology-nursing"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

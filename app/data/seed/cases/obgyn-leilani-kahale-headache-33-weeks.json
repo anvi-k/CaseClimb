@@ -1,0 +1,997 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home blood pressure log",
+    "result": "Home cuff readings this morning: 152/98 mmHg and 156/100 mmHg (repeat 10 min apart). Prior readings this week ranged 130-140/85-90 mmHg. Booking BP at 10 weeks was 112/70 mmHg.",
+    "importance": "critical",
+    "artifactIds": [
+     "d1"
+    ]
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Obtain current BP on video call (patient re-checks with home cuff)",
+    "result": "Repeat reading just now: 158/102 mmHg, correct cuff size, seated after 5 min rest.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera inspection of face, hands, and lower legs for edema",
+    "result": "Visible periorbital puffiness; bilateral hand swelling with difficulty making a fist; pitting edema to mid-shin bilaterally (2+).",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "exam",
+    "name": "Guided self-exam: patellar/ankle clonus check by patient",
+    "result": "Partner attempted ankle dorsiflexion with patient reporting no rhythmic jerking; this maneuver is not clinically reliable when performed by an untrained partner over video and cannot substitute for a formal in-person neurologic exam.",
+    "importance": "minor",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "test",
+    "name": "Home urine dipstick (patient performs on camera)",
+    "result": "Dipstick shows color change consistent with trace to 2+ protein (patient holds strip to camera; color-matched to chart on canister); self-read home test, color interpretation uncertain and not a validated substitute for formal urinalysis.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Fetal movement count reported by patient",
+    "result": "Patient counted 6 movements in 1 hour this morning, consistent with prior days; no subjective decrease noted.",
+    "importance": "important",
+    "abnormal": false,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "record",
+    "name": "Review prior prenatal labs (CBC, LFTs, creatinine) from last visit 2 weeks ago",
+    "result": "CBC, AST/ALT, creatinine, and platelets all within normal limits 2 weeks ago.",
+    "importance": "important",
+    "artifactIds": [
+     "d2"
+    ]
+   },
+   {
+    "id": "a8",
+    "kind": "record",
+    "name": "Review growth/anatomy ultrasound from 20 weeks",
+    "result": "Anatomy survey normal, placenta fundal, no anomalies, estimated fetal weight appropriate for 20 weeks.",
+    "importance": "minor",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a9",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Prenatal vitamin daily, low-dose aspirin 81 mg daily since 14 weeks (started for prior pregnancy risk factors per records), occasional acetaminophen for headache.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Order STAT in-person labs: CBC with platelets, AST/ALT, creatinine, uric acid, urine protein/creatinine ratio",
+    "result": "Order placed and routed to labor and delivery triage for same-day collection; results pending until patient arrives.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "imaging",
+    "name": "Order non-stress test and fetal ultrasound with growth/AFI at hospital triage",
+    "result": "Order placed; to be performed on arrival at labor and delivery triage.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review obstetric history summary in chart",
+    "result": "G2P1, prior spontaneous vaginal delivery at 39 weeks without hypertensive complications, now 33w2d by early ultrasound dating.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a14",
+    "kind": "vitals",
+    "name": "Review today's weight versus prior visits",
+    "result": "Weight up 3.5 kg (7.7 lb) over the past 1 week, exceeding expected weekly gain.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": [
+     "d6"
+    ]
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "flowsheet",
+    "title": "Home Blood Pressure Log - Patient Reported",
+    "date": "Past 7 days",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Time",
+      "BP (mmHg)",
+      "Notes"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "6 days ago",
+        "AM",
+        "128/82",
+        ""
+       ]
+      },
+      {
+       "cells": [
+        "5 days ago",
+        "AM",
+        "132/84",
+        ""
+       ]
+      },
+      {
+       "cells": [
+        "4 days ago",
+        "PM",
+        "136/88",
+        ""
+       ]
+      },
+      {
+       "cells": [
+        "3 days ago",
+        "AM",
+        "140/90",
+        "Mild headache started"
+       ]
+      },
+      {
+       "cells": [
+        "2 days ago",
+        "AM",
+        "145/92",
+        "Headache persisting"
+       ]
+      },
+      {
+       "cells": [
+        "1 day ago",
+        "PM",
+        "150/96",
+        "Hands feel tight"
+       ]
+      },
+      {
+       "cells": [
+        "Today",
+        "AM",
+        "152/98",
+        ""
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Today",
+        "AM (repeat)",
+        "156/100",
+        "Repeat 10 min later"
+       ],
+       "flag": "H"
+      }
+     ]
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Day",
+     "yLabel": "Systolic BP (mmHg)",
+     "refHigh": 140,
+     "series": [
+      {
+       "name": "Systolic BP",
+       "points": [
+        {
+         "x": "-6d",
+         "y": 128
+        },
+        {
+         "x": "-5d",
+         "y": 132
+        },
+        {
+         "x": "-4d",
+         "y": 136
+        },
+        {
+         "x": "-3d",
+         "y": 140
+        },
+        {
+         "x": "-2d",
+         "y": 145
+        },
+        {
+         "x": "-1d",
+         "y": 150
+        },
+        {
+         "x": "Today AM",
+         "y": 152
+        },
+        {
+         "x": "Today AM2",
+         "y": 156
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "lab_report",
+    "title": "Prenatal Labs - 2 Weeks Ago (31 weeks)",
+    "date": "2 weeks ago",
+    "release": {
+     "when": "action",
+     "ref": "a7"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin",
+        "11.8",
+        "g/dL",
+        "11.0-14.0"
+       ]
+      },
+      {
+       "cells": [
+        "Platelets",
+        "245",
+        "x10^3/uL",
+        "150-400"
+       ]
+      },
+      {
+       "cells": [
+        "AST",
+        "19",
+        "U/L",
+        "7-40"
+       ]
+      },
+      {
+       "cells": [
+        "ALT",
+        "16",
+        "U/L",
+        "7-40"
+       ]
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "0.6",
+        "mg/dL",
+        "0.4-0.8"
+       ]
+      },
+      {
+       "cells": [
+        "Uric acid",
+        "4.2",
+        "mg/dL",
+        "2.0-6.0"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "imaging",
+    "title": "Obstetric Ultrasound - Anatomy Survey, 20 weeks",
+    "date": "13 weeks ago",
+    "author": "Maternal-Fetal Medicine Sonography",
+    "release": {
+     "when": "action",
+     "ref": "a8"
+    },
+    "body": "Single live intrauterine fetus in cephalic presentation. Fetal anatomy survey unremarkable. Placenta fundal, posterior, no evidence of previa. Amniotic fluid index normal. Estimated fetal weight 345 g, appropriate for gestational age. No structural anomalies identified."
+   },
+   {
+    "id": "d4",
+    "type": "medication_list",
+    "title": "Current Medications",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a9"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Start date"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Prenatal vitamin",
+        "1 tablet",
+        "PO",
+        "Daily",
+        "Preconception"
+       ]
+      },
+      {
+       "cells": [
+        "Aspirin",
+        "81 mg",
+        "PO",
+        "Daily",
+        "14 weeks gestation"
+       ]
+      },
+      {
+       "cells": [
+        "Acetaminophen",
+        "500-1000 mg",
+        "PO",
+        "As needed for headache, max 3g/day",
+        "2 days ago"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Obstetric History Summary",
+    "date": "Today",
+    "release": {
+     "when": "action",
+     "ref": "a13"
+    },
+    "body": "G2P1. Pregnancy 1: spontaneous vaginal delivery at 39 weeks, birth weight 3400 g, no hypertensive disorder, no postpartum hemorrhage. Current pregnancy dated by first-trimester ultrasound, EDD consistent, now 33 weeks 2 days. Aspirin 81 mg started at 14 weeks for history of advanced maternal risk discussion (family history of preeclampsia). Prior visits unremarkable until today's presentation."
+   },
+   {
+    "id": "d6",
+    "type": "flowsheet",
+    "title": "Weight Trend - Prenatal Visits",
+    "date": "Last 4 visits",
+    "release": {
+     "when": "action",
+     "ref": "a14"
+    },
+    "table": {
+     "columns": [
+      "Visit",
+      "Gestational age",
+      "Weight (kg)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Visit 1",
+        "24 weeks",
+        "68.0"
+       ]
+      },
+      {
+       "cells": [
+        "Visit 2",
+        "28 weeks",
+        "70.5"
+       ]
+      },
+      {
+       "cells": [
+        "Visit 3",
+        "32 weeks 2 days",
+        "72.0"
+       ]
+      },
+      {
+       "cells": [
+        "Today",
+        "33 weeks 2 days",
+        "75.5"
+       ],
+       "flag": "H"
+      }
+     ]
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Gestational age",
+     "yLabel": "Weight (kg)",
+     "series": [
+      {
+       "name": "Weight",
+       "points": [
+        {
+         "x": "24w",
+         "y": 68
+        },
+        {
+         "x": "28w",
+         "y": 70.5
+        },
+        {
+         "x": "32w2d",
+         "y": 72
+        },
+        {
+         "x": "33w2d",
+         "y": 75.5
+        }
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Headache x2 days, swelling of hands/feet, elevated home BP readings"
+   },
+   {
+    "label": "Problem list",
+    "value": "G2P1, intrauterine pregnancy at 33 weeks 2 days; low-dose aspirin prophylaxis for preeclampsia risk"
+   },
+   {
+    "label": "Medications",
+    "value": "Prenatal vitamin daily; aspirin 81 mg daily; acetaminophen PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "1 week ago (32 weeks 2 days): BP 118/76 mmHg, weight 72.0 kg, fundal height 31 cm"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Tdap given this pregnancy at 28 weeks; influenza vaccine received this season"
+   },
+   {
+    "label": "Care team",
+    "value": "OB resident continuity clinic; scheduled delivery at regional hospital"
+   },
+   {
+    "label": "Code status",
+    "value": "N/A - obstetric outpatient"
+   }
+  ],
+  "difficulty": 4,
+  "encounterType": "prenatal visit (urgent telehealth triage)",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Headache x2 days and swelling of hands/feet; home BP elevated this morning",
+    "says": "I've had this headache for two days that won't go away, and my hands and feet are so swollen. My blood pressure at home was high this morning too.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "headache characteristics",
+    "chart": "Bilateral frontal headache, 7/10, 2 days duration, minimally responsive to acetaminophen",
+    "says": "It's right across my forehead, kind of pounding, like a 7 out of 10. I took Tylenol but it barely helped.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "swelling onset",
+    "chart": "Hand and foot swelling worsening over past 2-3 days, rings feel tight",
+    "says": "My rings don't fit anymore and my feet look like little loaves of bread by the end of the day.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "home blood pressure readings",
+    "chart": "Home BP 152/98 and 156/100 this morning; trend rising over past week",
+    "says": "My cuff said 152 over 98, and when I checked again it was even higher, 156 over 100.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f5",
+    "category": "ros",
+    "topic": "visual symptoms",
+    "chart": "Reports intermittent flashing/sparkly spots in vision over past day",
+    "says": "Now that you mention it, I have seen these little sparkly spots floating in my eyes a couple times today.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "ros",
+    "topic": "abdominal discomfort location",
+    "chart": "Right upper quadrant/epigastric discomfort for 1 day, attributed to fetal movement",
+    "says": "I've had this ache under my right ribs, but I figured the baby was just wedged up there.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f7",
+    "category": "ros",
+    "topic": "fetal movement",
+    "chart": "Fetal movement normal, no subjective decrease",
+    "says": "Baby's still kicking plenty, no change there.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "ros",
+    "topic": "vaginal bleeding or fluid leakage",
+    "chart": "Denies vaginal bleeding, fluid leakage, or contractions",
+    "says": "No bleeding, no fluid, and I don't think I'm having contractions.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "ros",
+    "topic": "nausea or vomiting",
+    "chart": "Reports mild nausea today, no vomiting",
+    "says": "I've felt a little queasy today but haven't thrown up.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "shortness of breath",
+    "chart": "Denies shortness of breath or chest pain",
+    "says": "No trouble breathing, no chest pain.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "fever or illness",
+    "chart": "Denies fever, chills, or recent illness",
+    "says": "No fever, I don't feel sick like a cold or anything.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f12",
+    "category": "pmh",
+    "topic": "first pregnancy course",
+    "chart": "First pregnancy uncomplicated, spontaneous vaginal delivery at 39 weeks, no hypertensive disorder",
+    "says": "My first pregnancy was totally smooth, no problems at all, delivered right on time.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "family",
+    "topic": "family history of hypertensive pregnancy",
+    "chart": "Mother had preeclampsia in her pregnancy with patient",
+    "says": "My mom actually had something like this when she was pregnant with me, I think they called it toxemia back then.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "medications",
+    "topic": "aspirin use",
+    "chart": "Reports taking aspirin 81mg daily as prescribed since 14 weeks",
+    "says": "I've been taking that little baby aspirin every morning like you all told me to.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "medications",
+    "topic": "acetaminophen use",
+    "chart": "Took acetaminophen 1000mg about 6 hours ago with minimal relief",
+    "says": "I took two Tylenol this morning, maybe six hours ago, but it only took the edge off a little.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "adherence",
+    "topic": "prenatal vitamin use",
+    "chart": "Reports consistent prenatal vitamin use",
+    "says": "I take my prenatal vitamin every single day, never miss it.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "transportation barrier",
+    "chart": "Lives 45 minutes from hospital; partner has the car at work",
+    "says": "My husband has the car at work and he's 45 minutes away, so I don't really have a way to get to the hospital right now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "occupation",
+    "chart": "Works as elementary school aide, currently on reduced hours due to pregnancy fatigue",
+    "says": "I work as a teacher's aide at the elementary school, though I've cut back my hours a bit lately since I get so tired.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f19",
+    "category": "goals",
+    "topic": "expectations for visit",
+    "chart": "Patient hopes to be advised to rest at home rather than go to hospital",
+    "says": "I was really hoping you'd just tell me to put my feet up and rest today instead of having to go all the way in.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "psychosocial",
+    "topic": "childcare concerns",
+    "chart": "Has a toddler at home; no immediate childcare backup if hospitalized",
+    "says": "If I have to go to the hospital, I don't know who's going to watch my little one, she's only two.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "ros",
+    "topic": "urinary symptoms",
+    "chart": "Denies dysuria, urinary frequency, or urgency",
+    "says": "No burning or anything when I pee, no problems like that.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f22",
+    "category": "ros",
+    "topic": "skin changes",
+    "chart": "Reports no rash or itching",
+    "says": "My skin's been fine, no rash or itchy spots.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "diet and salt intake",
+    "chart": "Reports no unusual dietary changes, denies high salt intake",
+    "says": "I haven't changed what I eat, nothing extra salty or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "hpi",
+    "topic": "headache response to position",
+    "chart": "Headache not relieved by lying down, not worse with standing",
+    "says": "Lying down doesn't really make it better or worse, it's just there all the time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "psychosocial",
+    "topic": "anxiety about outcome",
+    "chart": "Expresses worry about losing her job if hospitalized given limited paid leave",
+    "says": "I'm worried if I end up in the hospital for days I might lose pay I really need right now.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f26",
+    "category": "ros",
+    "topic": "swelling in face",
+    "chart": "Reports facial puffiness noticed by partner this morning",
+    "says": "My husband said my face looked kind of puffy this morning when he left for work.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f27",
+    "category": "substance",
+    "topic": "tobacco and alcohol use",
+    "chart": "Denies tobacco, alcohol, or recreational drug use during pregnancy",
+    "says": "I don't smoke or drink, never have during this pregnancy.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f28",
+    "category": "hpi",
+    "topic": "timing of swelling versus pregnancy norms",
+    "chart": "Patient believes current swelling is 'normal' late pregnancy swelling similar to friends' experiences",
+    "says": "My friends all said their feet swelled up big time near the end too, so I figured this was just normal pregnancy stuff.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f29",
+    "category": "other",
+    "topic": "recent travel or illness exposure",
+    "chart": "No recent travel, no sick contacts",
+    "says": "No, haven't traveled anywhere or been around anyone sick.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "weight gain awareness",
+    "chart": "Noticed clothes and shoes feeling tighter over the past week",
+    "says": "My shoes have been so tight this week I switched to my husband's slippers.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "sexual",
+    "topic": "recent intercourse",
+    "chart": "Denies recent intercourse or pelvic symptoms",
+    "says": "We haven't been intimate lately, nothing going on there.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f14",
+    "artifactId": "d4",
+    "patientClaim": "Patient states she takes her baby aspirin every morning as prescribed",
+    "recordEvidence": "Medication list confirms aspirin 81mg daily started at 14 weeks, consistent with her report - this is actually a confirmed match, not a conflict, included to test learner's verification skill rather than assume discrepancy",
+    "teachingPoint": "Always verify patient-reported adherence against the medication list even when the story sounds consistent; here it confirms good adherence, reinforcing that aspirin was appropriately continued."
+   },
+   {
+    "id": "m2",
+    "factId": "f28",
+    "artifactId": "d6",
+    "patientClaim": "Patient believes her swelling is normal late-pregnancy edema like her friends experienced",
+    "recordEvidence": "Weight trend flowsheet shows a 3.5 kg increase in one week, far exceeding expected gestational weight gain, and camera exam shows 2+ pitting edema with facial puffiness",
+    "teachingPoint": "Rapid weight gain and generalized (including facial) edema with rising blood pressure should prompt preeclampsia workup, not be dismissed as normal dependent edema of late pregnancy."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit and recognize symptoms and signs of preeclampsia with severe features (headache unresponsive to analgesia, visual disturbance, right upper quadrant pain, severe-range BP, rapid weight gain, facial/hand edema) during a telehealth visit.",
+    "factIds": [
+     "f2",
+     "f4",
+     "f5",
+     "f6",
+     "f26",
+     "f30"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a14"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Correctly interpret home blood pressure trend and recognize severe-range hypertension requiring urgent in-person evaluation rather than reassurance.",
+    "factIds": [
+     "f4"
+    ],
+    "actionIds": [
+     "a1",
+     "a2"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Identify that this presentation requires same-day in-person assessment (BP confirmation, urine protein, CBC, LFTs, creatinine, fetal monitoring) and cannot be managed by reassurance or home rest alone, addressing the patient's expectation.",
+    "factIds": [
+     "f19",
+     "f17"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Distinguish pertinent positives/negatives relevant to preeclampsia (fetal movement normal, no bleeding/fluid leak, no fever, no dysuria) from distractors (reduced work hours, recent travel, sexual activity) to keep the differential focused.",
+    "factIds": [
+     "f7",
+     "f8",
+     "f21",
+     "f29",
+     "f31",
+     "f18"
+    ],
+    "actionIds": [
+     "a6"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Address a patient-reported belief that mismatches objective findings in the chart (edema attributed to normal pregnancy) using the weight trend and exam findings to reframe risk and support shared decision-making about urgent transfer.",
+    "factIds": [
+     "f28"
+    ],
+    "actionIds": [
+     "a14",
+     "a3"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Problem-solve a real-world transportation barrier to urgent in-person care while keeping the clinical plan appropriate (arranging transport/EMS rather than deferring evaluation).",
+    "factIds": [
+     "f17",
+     "f20",
+     "f25"
+    ],
+    "actionIds": [
+     "a10",
+     "a11"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Leilani Kahale",
+   "age": 31,
+   "sex": "female",
+   "pronouns": "she/her",
+   "ethnicity": "Native Hawaiian",
+   "occupation": "Elementary school aide",
+   "language": "English",
+   "appearance": "A woman in her early thirties with a visibly pregnant abdomen, dark hair pulled into a loose bun, wearing a soft cotton maternity dress. She is seated on a couch in a modestly lit living room, shifting position frequently as if uncomfortable, with a slightly puffy face visible on camera and her hands resting swollen in her lap."
+  },
+  "persona": {
+   "personality": "Warm, practical, and a little stoic; tends to downplay symptoms and normalize discomfort rather than alarm easily.",
+   "communicationStyle": "Speaks in plain, friendly language, uses local phrasing occasionally, answers questions directly but may minimize severity unless specifically asked.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about her symptoms but more worried about logistics (transportation, work, childcare) than about the medical seriousness.",
+   "background": "Grew up on Maui, works part-time as an elementary school aide, married with a 2-year-old daughter at home; this is her second pregnancy and she has leaned on her mother and sister for support during her first pregnancy and postpartum period.",
+   "speechExamples": [
+    "My feet look like little loaves of bread by the end of the day.",
+    "I figured this was just normal pregnancy stuff, you know, like my friends talked about.",
+    "I was really hoping you'd just tell me to rest today.",
+    "My husband has the car at work, so getting in would be a whole thing.",
+    "No fever or anything, I just feel puffy and tired."
+   ],
+   "concerns": [
+    "Hopes to avoid an unnecessary trip to the hospital",
+    "Worried about who will watch her toddler if she is admitted",
+    "Concerned about missing paid work hours",
+    "Wants reassurance that the baby is okay"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the OB resident on telehealth triage. Leilani Kahale, 31, G2P1 at 33 weeks, booked a same-day video visit for a 2-day headache and new hand/foot swelling, with elevated home blood pressure readings this morning. Review her history and determine whether she can be managed at home or needs urgent in-person evaluation, and arrange next steps accordingly.",
+   "chiefComplaint": "Two-day headache and new swelling of hands and feet, with elevated home blood pressure readings this morning",
+   "openingLine": "Hi doctor, thanks for seeing me quick today - I've had this headache for two days that just won't quit, and my hands and feet are so swollen. My blood pressure machine at home said it was high this morning too.",
+   "tasks": [
+    "Elicit a focused history of the headache, visual symptoms, abdominal discomfort, swelling, and fetal movement",
+    "Review home blood pressure trend and today's weight and edema findings, and obtain a repeat blood pressure on camera",
+    "Determine the urgency of the clinical picture and explain your assessment and recommended next steps",
+    "Arrange appropriate investigations, monitoring, and logistics based on your clinical assessment",
+    "Communicate clearly and compassionately, exploring and addressing the patient's concerns"
+   ],
+   "timeLimitMin": 20
+  },
+  "summary": "A 31-year-old G2P1 at 33 weeks presents by telehealth with a 2-day headache, new hand/foot edema, and severe-range home blood pressure readings, with discoverable visual symptoms and right upper quadrant pain. The case teaches recognition of preeclampsia with severe features in a remote setting and the obligation to arrange urgent in-person evaluation despite the patient's hope for home rest and real logistical barriers to transport.\"",
+  "answerKey": {
+   "primaryProblem": "Preeclampsia with severe features (suspected) at 33 weeks gestation",
+   "differential": [
+    "Preeclampsia with severe features",
+    "Chronic hypertension with superimposed preeclampsia",
+    "Gestational hypertension without severe features",
+    "Normal late-pregnancy dependent edema (less likely given facial edema, rapid weight gain, severe-range BP)",
+    "HELLP syndrome (to be ruled out with labs)",
+    "Tension or migraine headache (less likely given BP and visual symptoms)"
+   ],
+   "keyFindings": [
+    "Severe-range home and repeat BP (152-158/98-102 mmHg) against a booking BP of 112/70",
+    "Persistent headache poorly responsive to acetaminophen",
+    "New visual disturbance (sparkly spots)",
+    "Right upper quadrant/epigastric discomfort",
+    "2+ pitting edema plus facial and hand swelling",
+    "Rapid weight gain of 3.5 kg in one week",
+    "Home urine dipstick suggestive of trace-2+ proteinuria (unreliable self-read, requires formal urine protein/creatinine ratio for confirmation)",
+    "Prior labs 2 weeks ago normal, so this represents a new, rapidly evolving process"
+   ],
+   "plan": [
+    "Advise patient this clinical picture is concerning for preeclampsia with severe features and requires same-day in-person evaluation, not home rest",
+    "Arrange safe transport to labor and delivery triage today (discuss emergency medical services or alternate transport given partner has the car; do not have her drive herself if symptomatic)",
+    "Order STAT CBC with platelets, AST/ALT, creatinine, uric acid, and urine protein/creatinine ratio on arrival",
+    "Order continuous fetal monitoring (non-stress test) and growth/AFI ultrasound on arrival",
+    "Communicate findings and plan to on-call OB attending/triage team prior to patient arrival",
+    "Counsel on warning signs requiring immediate 911 call en route: worsening headache, visual loss, seizure, chest pain, shortness of breath, decreased fetal movement",
+    "Do not prescribe antihypertensives or discharge home; this exceeds safe outpatient telehealth management given severe-range BP and symptoms"
+   ],
+   "redFlags": [
+    "Severe-range blood pressure (>=160/110 at any point should prompt even greater urgency)",
+    "New visual disturbance",
+    "Right upper quadrant or epigastric pain (risk of hepatic involvement/HELLP)",
+    "Headache unresponsive to analgesia",
+    "Rapid, generalized edema including face",
+    "Any decrease in fetal movement (not present here but must be monitored)"
+   ],
+   "educationPoints": [
+    "Severe-range BP plus new headache, visual symptoms, or RUQ pain meets criteria for preeclampsia with severe features until proven otherwise and mandates urgent in-person evaluation, even by telehealth triage.",
+    "Home BP cuffs can be a useful adjunct in telehealth triage, but home urine dipstick color-matching and partner-performed clonus checks are unreliable and must not be treated as equivalent to formal in-person labs, urinalysis, or neurologic exam.",
+    "Patients may normalize edema or headache as 'typical' late pregnancy; clinicians must actively screen for severe features rather than accepting reassurance at face value.",
+    "Addressing real logistical barriers (transportation, childcare, lost wages) is part of safe disposition planning and should not delay urgent referral.",
+    "This condition is outside the scope of outpatient telehealth management; the resident's role is to recognize urgency and mobilize in-person/hospital-based care, not to manage expectantly from home."
+   ]
+  },
+  "professions": [
+   "obgyn"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": [],
+  "title": "Severe headache, visual changes, and hypertension at 33 weeks gestation in G2P1",
+  "specialty": "Obstetrics and Gynecology",
+  "setting": "Telehealth video visit; patient's home on Maui"
+ }
+}

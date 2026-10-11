@@ -1,0 +1,10 @@
+{
+  "checklist_id": "pediatric_hearing_simulation",
+  "title": "Pediatric hearing simulation (speech-language pathology)",
+  "items": [
+    { "item_id": "introduce_yourself", "description": "Introduce yourself", "points": 10 },
+    { "item_id": "needs_assessment", "description": "Needs assessment", "points": 30 },
+    { "item_id": "review_audiogram", "description": "Review the audiogram", "points": 30 },
+    { "item_id": "discuss_expectations", "description": "Discuss expectations", "points": 30 }
+  ]
+}

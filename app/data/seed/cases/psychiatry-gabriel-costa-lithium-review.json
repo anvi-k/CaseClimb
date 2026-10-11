@@ -1,0 +1,927 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Mental status examination",
+    "result": "Alert, cooperative, well-groomed. Speech normal rate/rhythm/volume. Mood 'okay I guess.' Affect mildly restricted but reactive. Thought process linear, goal-directed. No SI/HI/AVH. Insight fair, judgment intact. Cognition grossly intact.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "assessment",
+    "name": "Suicide/homicide risk assessment",
+    "result": "Denies current or recent suicidal ideation, intent, or plan. Denies homicidal ideation. No access-to-firearms concern reported. No prior suicide attempts. Protective factors: job, family, future orientation.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "assessment",
+    "name": "Mania/hypomania screen (current symptoms)",
+    "result": "Denies elevated/irritable mood, decreased need for sleep, grandiosity, racing thoughts, impulsivity, or increased goal-directed activity over past 2 weeks. Sleeping about 7 hours nightly.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "assessment",
+    "name": "Depression screen (current symptoms)",
+    "result": "Denies anhedonia, hopelessness, guilt, or psychomotor changes. Describes mood as flat/subdued rather than sad. Appetite stable.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "exam",
+    "name": "Camera-guided tremor assessment (outstretched hands)",
+    "result": "Patient holds both arms outstretched on camera; visible moderate-amplitude postural tremor of both hands, worse on action (reaching for cup). No asterixis noted. No ataxia or dysarthria observed on brief exam.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "exam",
+    "name": "Camera-guided gait and coordination check",
+    "result": "Patient walks a few steps in frame and performs finger-to-nose bilaterally; gait steady, finger-to-nose intact, no dysmetria.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "vitals",
+    "name": "Home/clinic vitals review",
+    "result": "BP 122/78 mmHg, HR 88 bpm, Temp 37.1°C, Weight 86 kg (stable). No orthostatic symptoms reported.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "lab",
+    "name": "Review today's lithium level",
+    "result": "Lithium 1.4 mmol/L (therapeutic range 0.6-1.2 mmol/L) — H, drawn ~12 hours post-dose per patient report (standard trough timing); prior levels in the flowsheet were drawn at routine follow-up visits but timing relative to last dose was not documented, so comparability to today's properly-timed trough level is uncertain.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "lab",
+    "name": "Review renal function panel",
+    "result": "Creatinine 1.3 mg/dL (H, baseline 0.9 mg/dL three months ago); eGFR 68 mL/min/1.73m² (L); BUN 22 mg/dL (H). This represents a significant creatinine rise (ratio 1.3/0.9 = 1.44) concerning for lithium-related renal impairment, but it does not meet strict KDIGO AKI criteria at all: KDIGO requires a rise of ≥0.3 mg/dL within 48 hours or a 1.5-1.9x rise from baseline within 7 days, and this change occurred over 3 months with no interim creatinine data. Best characterized as a significant creatinine rise of uncertain acuity, warranting urgent medical work-up rather than labeled 'AKI.'",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "lab",
+    "name": "Review thyroid function (TSH)",
+    "result": "TSH 5.8 mIU/L (H, reference 0.4-4.5 mIU/L); free T4 pending/not yet drawn this visit.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "lab",
+    "name": "Review electrolyte panel",
+    "result": "Sodium 143 mEq/L (H end of normal), Potassium 4.1 mEq/L, Chloride 104 mEq/L, Bicarbonate 23 mEq/L — mild hemoconcentration pattern consistent with volume depletion.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "record",
+    "name": "Review pharmacy fill/refill history",
+    "result": "Lithium carbonate 300 mg capsules, #90 every 30 days, last filled on schedule — adherence by refill timing appears consistent. Ibuprofen 600 mg tablets started 3 weeks ago, OTC/prescribed by urgent care, no interaction warning flagged in pharmacy system (NSAID-lithium interaction not systematically screened).",
+    "importance": "critical",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review prior psychiatric note (14 months ago, lithium initiation)",
+    "result": "Diagnosis bipolar I disorder confirmed after manic episode with psychotic features requiring hospitalization. Lithium carbonate initiated and titrated to 900 mg nightly with good response. Baseline labs at that time: Cr 0.8 mg/dL, TSH 2.1 mIU/L, lithium level 0.7 mmol/L.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Columbia Suicide Severity Rating Scale (C-SSRS) screen",
+    "result": "Negative for current ideation, intent, plan, or lifetime attempts.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "test",
+    "name": "Review home fluid intake/urination log (patient-reported)",
+    "result": "Patient estimates drinking 10-12 glasses of water/day and urinating 'every hour,' with 2-3 loose bowel movements daily for 2 weeks.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a16",
+    "kind": "record",
+    "name": "Review EKG from lithium initiation workup (baseline)",
+    "result": "Sinus rhythm, rate 72, normal intervals, no abnormalities. No repeat EKG performed today.",
+    "importance": "minor",
+    "artifactIds": [
+     "d6"
+    ]
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "lab_report",
+    "title": "Lithium level, renal panel, electrolytes, TSH — today",
+    "author": "Quest Diagnostics, ordered by Psychiatry",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lithium, serum",
+        "1.4",
+        "mmol/L",
+        "0.6-1.2"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.3",
+        "mg/dL",
+        "0.6-1.2"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "eGFR",
+        "68",
+        "mL/min/1.73m²",
+        "≥90"
+       ],
+       "flag": "L"
+      },
+      {
+       "cells": [
+        "BUN",
+        "22",
+        "mg/dL",
+        "7-20"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Sodium",
+        "143",
+        "mEq/L",
+        "136-145"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.1",
+        "mEq/L",
+        "3.5-5.0"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Chloride",
+        "104",
+        "mEq/L",
+        "98-107"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "Bicarbonate",
+        "23",
+        "mEq/L",
+        "22-29"
+       ],
+       "flag": ""
+      },
+      {
+       "cells": [
+        "TSH",
+        "5.8",
+        "mIU/L",
+        "0.4-4.5"
+       ],
+       "flag": "H"
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "flowsheet",
+    "title": "Lithium level and renal function trend",
+    "author": "Psychiatry/Primary Care",
+    "date": "Past 14 months",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time",
+     "yLabel": "Value",
+     "refLow": 0.6,
+     "refHigh": 1.2,
+     "series": [
+      {
+       "name": "Lithium level (mmol/L)",
+       "points": [
+        {
+         "x": "14 months ago (initiation, timing not documented)",
+         "y": 0.7
+        },
+        {
+         "x": "6 months ago (timing not documented)",
+         "y": 0.8
+        },
+        {
+         "x": "3 months ago (timing not documented)",
+         "y": 0.8
+        },
+        {
+         "x": "Today (~12h post-dose trough)",
+         "y": 1.4
+        }
+       ]
+      },
+      {
+       "name": "Creatinine (mg/dL)",
+       "points": [
+        {
+         "x": "14 months ago (initiation, timing not documented)",
+         "y": 0.8
+        },
+        {
+         "x": "6 months ago (timing not documented)",
+         "y": 0.9
+        },
+        {
+         "x": "3 months ago (timing not documented)",
+         "y": 0.9
+        },
+        {
+         "x": "Today (~12h post-dose trough)",
+         "y": 1.3
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "medication_list",
+    "title": "Current medication list",
+    "author": "EHR Medication Reconciliation",
+    "date": "Today",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency",
+      "Start date",
+      "Prescriber"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Lithium carbonate",
+        "900 mg (300 mg x3)",
+        "Oral",
+        "Nightly at bedtime",
+        "14 months ago",
+        "Psychiatry"
+       ]
+      },
+      {
+       "cells": [
+        "Ibuprofen",
+        "600 mg",
+        "Oral",
+        "Three times daily, as needed",
+        "3 weeks ago",
+        "Urgent care"
+       ]
+      },
+      {
+       "cells": [
+        "Multivitamin",
+        "1 tablet",
+        "Oral",
+        "Daily",
+        "Ongoing",
+        "Self/OTC"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "note",
+    "title": "Psychiatric evaluation — lithium initiation (14 months ago)",
+    "author": "Dr. R. Alves, Psychiatry",
+    "date": "14 months ago",
+    "release": {
+     "when": "start"
+    },
+    "body": "29-year-old (then 27-year-old) male admitted with first manic episode with psychotic features (grandiosity, decreased sleep, pressured speech, delusions of special culinary talent, 5 days). Treated inpatient, started lithium carbonate, titrated as outpatient to 900 mg nightly with lithium level 0.7 mmol/L. Baseline Cr 0.8 mg/dL, TSH 2.1 mIU/L, EKG normal sinus rhythm. Diagnosis: Bipolar I disorder. Family history of bipolar disorder (mother). Patient tolerated medication well, mild baseline hand tremor noted at initiation, stable thereafter. Plan: lithium levels and renal/thyroid labs every 3-6 months, EKG as indicated."
+   },
+   {
+    "id": "d5",
+    "type": "record",
+    "title": "Pharmacy refill history",
+    "author": "Community Pharmacy",
+    "date": "Past 14 months",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "body": "Lithium carbonate 300 mg, quantity 90, refilled approximately every 30 days without gaps for 14 months, consistent with daily use as prescribed. Ibuprofen 600 mg tablets, quantity 60, filled once 3 weeks ago, no refills yet. Pharmacy interaction alert for NSAID + lithium was not triggered at time of ibuprofen fill (system limitation)."
+   },
+   {
+    "id": "d6",
+    "type": "ecg",
+    "title": "EKG at lithium initiation (baseline, 14 months ago)",
+    "author": "Cardiology/Primary Care",
+    "date": "14 months ago",
+    "release": {
+     "when": "action",
+     "ref": "a16"
+    },
+    "body": "Normal sinus rhythm, rate 72 bpm. PR 160 ms, QRS 90 ms, QTc 410 ms. No ST-T wave abnormalities. Impression: Normal EKG."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Bipolar I disorder, medication management follow-up (lithium)"
+   },
+   {
+    "label": "Problem list",
+    "value": "Bipolar I disorder, with psychotic features (first episode 14 months ago); Chronic low back strain (recent)"
+   },
+   {
+    "label": "Medications",
+    "value": "Lithium carbonate 300 mg, 3 tabs nightly (900 mg total); Ibuprofen 600 mg TID PRN (started 3 weeks ago); Multivitamin daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 122/78 mmHg, HR 88 bpm, Temp 37.1°C, Weight 86 kg"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per primary care"
+   },
+   {
+    "label": "Care team",
+    "value": "Psychiatry (Dr. R. Alves, now covered by resident clinic), Primary care physician, Urgent care (one-time visit 3 weeks ago)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code (outpatient, not applicable)"
+   }
+  ],
+  "difficulty": 3,
+  "encounterType": "medication management follow-up",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Follow-up for bipolar I disorder on lithium; reports worsening hand tremor affecting work, increased thirst and urination, and loose stools over 2 weeks.",
+    "says": "My hands have been shaking a lot more lately, I'm super thirsty all the time, going to the bathroom constantly, and my stomach's been loose too. It's starting to mess with my work.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "tremor timeline",
+    "chart": "Baseline mild hand tremor since lithium start, now significantly worse over past 2 weeks.",
+    "says": "I've always had a little shake in my hands since I started the lithium, but nothing like this. Now I can barely hold a knife steady at work.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "thirst and urination",
+    "chart": "Polydipsia and polyuria for 2 weeks, drinking ~10-12 glasses water/day, urinating hourly.",
+    "says": "I'm drinking water constantly, like 10 or 12 glasses a day, and I feel like I'm peeing every hour. It's exhausting.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "bowel changes",
+    "chart": "Loose stools 2-3 times daily for 2 weeks, no blood, no severe cramping.",
+    "says": "My stomach's been off too — loose, like diarrhea, two or three times a day for about two weeks now.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "hpi",
+    "topic": "new pain medication",
+    "chart": "Started ibuprofen 600 mg three times daily three weeks ago for back strain from urgent care.",
+    "says": "Oh yeah, I threw my back out lifting a stock pot and the urgent care doc gave me ibuprofen, 600 milligrams, three times a day. Been taking it pretty regularly.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "hpi",
+    "topic": "work conditions",
+    "chart": "Working double shifts in a hot kitchen environment over recent weeks.",
+    "says": "Work's been brutal — I've been pulling double shifts, and that kitchen gets so hot you'd think you were in a sauna.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "hpi",
+    "topic": "fluid replacement with heat",
+    "chart": "Reports sweating heavily during shifts but says he drinks water to compensate.",
+    "says": "I sweat buckets back there, but I figured I was drinking enough water to make up for it.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "hpi",
+    "topic": "current mood state",
+    "chart": "Reports mood as euthymic, describes feeling 'flat' rather than depressed or elevated.",
+    "says": "Mood's... fine, I guess. Honestly kind of flat. Not up, not down. Just flat.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "hpi",
+    "topic": "sleep pattern",
+    "chart": "Sleeping approximately 7 hours nightly, no change.",
+    "says": "Sleep's been normal, about 7 hours a night, same as usual.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "manic symptoms check",
+    "chart": "Denies decreased need for sleep, racing thoughts, grandiosity, pressured speech, or risky spending/behavior.",
+    "says": "No, nothing like that — no racing thoughts, not feeling like I don't need sleep, nothing like that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "depressive symptoms check",
+    "chart": "Denies hopelessness, guilt, anhedonia, or appetite/weight changes.",
+    "says": "I'm not hopeless or anything, I still enjoy cooking and hanging out with friends, just feel a bit numb.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "weakness or confusion",
+    "chart": "Denies new confusion, slurred speech, severe weakness, or difficulty walking.",
+    "says": "No, I don't feel confused or anything, and I can still walk fine, just the hands are the problem.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f13",
+    "category": "ros",
+    "topic": "vision changes",
+    "chart": "Denies blurred vision or visual disturbances.",
+    "says": "Vision's been fine, no blurriness.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f14",
+    "category": "ros",
+    "topic": "cold intolerance",
+    "chart": "Reports no new cold intolerance, hair thinning, or significant weight change despite elevated TSH.",
+    "says": "I haven't noticed being colder than usual or my hair falling out, nothing like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "ros",
+    "topic": "palpitations",
+    "chart": "Denies palpitations, chest pain, or shortness of breath.",
+    "says": "No chest pain or racing heart or anything like that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "medications",
+    "topic": "lithium adherence",
+    "chart": "Reports taking lithium 900 mg nightly as prescribed, rarely misses doses.",
+    "says": "I take my three lithium pills every night before bed, I almost never miss a dose, maybe once or twice a year if I forget.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f17",
+    "category": "medications",
+    "topic": "other supplements",
+    "chart": "Takes a daily multivitamin, no herbal supplements or other new OTC medications.",
+    "says": "Just a multivitamin every morning, nothing else new besides the ibuprofen.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "medications",
+    "topic": "NSAID awareness",
+    "chart": "Was not aware ibuprofen could interact with lithium; urgent care did not ask about psychiatric medications.",
+    "says": "Nobody told me ibuprofen could mess with my lithium. The urgent care guy didn't really ask what else I was taking.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f19",
+    "category": "pmh",
+    "topic": "bipolar diagnosis history",
+    "chart": "Diagnosed with bipolar I disorder after first manic episode with psychotic features 14 months ago, required brief hospitalization.",
+    "says": "Yeah, I had a pretty bad episode about a year and a bit ago, ended up in the hospital. That's when they put me on the lithium.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f20",
+    "category": "pmh",
+    "topic": "back injury",
+    "chart": "Recent lumbar strain from lifting at work, evaluated at urgent care 3 weeks ago, no imaging done, improving with ibuprofen.",
+    "says": "My back's actually feeling better since I started the ibuprofen, the pain's a lot more manageable.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f21",
+    "category": "family",
+    "topic": "family psychiatric history",
+    "chart": "Mother has bipolar disorder; no known family history of kidney or thyroid disease.",
+    "says": "My mom actually has bipolar too, that's partly why they figured out what was going on with me faster.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "social",
+    "topic": "occupation details",
+    "chart": "Works as a sous-chef at a busy restaurant in Providence, high physical demands, hot kitchen environment.",
+    "says": "I'm a sous-chef, it's a lot of standing, lifting, moving fast — and that kitchen is always hot.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with partner, describes relationship as supportive.",
+    "says": "I live with my girlfriend, she's been pretty understanding about all this.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks alcohol socially, 1-2 beers on weekends, no recent increase.",
+    "says": "I'll have a beer or two on the weekend with friends, nothing heavy.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f25",
+    "category": "substance",
+    "topic": "caffeine intake",
+    "chart": "Drinks 2-3 cups of coffee daily, no recent change in intake.",
+    "says": "I drink my coffee, two or three cups a day, same as always.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "substance",
+    "topic": "other drug use",
+    "chart": "Denies tobacco, cannabis, or illicit drug use.",
+    "says": "No smoking, no weed, none of that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "psychosocial",
+    "topic": "feelings about euthymia",
+    "chart": "Privately misses the energy and productivity of hypomanic/manic periods and feels flat on lithium; has not disclosed this to anyone.",
+    "says": "...Honestly? Sometimes I miss how I used to feel before all this, when I had all that energy. I feel kind of flat now, like something's missing. I haven't really told anyone that.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f28",
+    "category": "adherence",
+    "topic": "thoughts about stopping medication",
+    "chart": "Has been quietly considering stopping lithium on his own because he misses feeling energetic, has not acted on it yet.",
+    "says": "I've actually been thinking about just stopping the lithium myself. I haven't done it yet, but the thought's been there.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f29",
+    "category": "hpi",
+    "topic": "muscle cramps or weakness",
+    "chart": "Denies muscle cramps, significant weakness, or dizziness with standing.",
+    "says": "No cramps, and I don't get dizzy when I stand up or anything.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "hpi",
+    "topic": "appetite change",
+    "chart": "Reports appetite unchanged, no nausea or vomiting.",
+    "says": "My appetite's the same, no nausea or throwing up, just the loose stools.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f31",
+    "category": "goals",
+    "topic": "work concerns",
+    "chart": "Worried the tremor could jeopardize his job performance and reputation as a chef.",
+    "says": "I'm worried if this tremor doesn't get better I could lose my job, or at least my reputation in the kitchen.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "other",
+    "topic": "understanding of lithium monitoring",
+    "chart": "Has limited understanding of why regular blood tests are needed, thought he was 'doing fine' since he felt stable.",
+    "says": "Honestly I wasn't sure why I kept needing blood tests if I was feeling fine. I figured once I was stable that was that.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f16",
+    "artifactId": "d5",
+    "patientClaim": "Patient reports taking lithium 900 mg nightly as prescribed and rarely missing doses.",
+    "recordEvidence": "Pharmacy refill history shows lithium refilled consistently every ~30 days for 14 months with no gaps, which actually supports adherence rather than contradicting it — the real issue is that the pharmacy system did NOT flag the NSAID-lithium interaction when ibuprofen was dispensed, despite his established lithium regimen being on file.",
+    "teachingPoint": "Adherence can be confirmed objectively via refill history, redirecting attention to the real driver of toxicity (NSAID interaction plus volume depletion) rather than nonadherence — and highlights a systems gap in medication interaction screening across prescribers."
+   },
+   {
+    "id": "m2",
+    "factId": "f20",
+    "artifactId": "d3",
+    "patientClaim": "Patient says his back pain is much better since starting ibuprofen and does not connect it to his current symptoms.",
+    "recordEvidence": "Medication list confirms ibuprofen 600 mg TID started 3 weeks ago, overlapping exactly with the 2-week onset of polyuria, polydipsia, tremor, and diarrhea plus the renal function decline and lithium elevation shown in the lab trend.",
+    "teachingPoint": "Patients may not spontaneously link a seemingly unrelated new medication (treating an unrelated problem) to new systemic symptoms; the clinician must actively connect medication timing to the toxicity presentation rather than relying on the patient to flag it."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Recognize signs and symptoms of lithium toxicity (tremor, GI symptoms, polyuria/polydipsia) in the context of a rising lithium level and acute kidney injury.",
+    "factIds": [
+     "f1",
+     "f2",
+     "f3",
+     "f4"
+    ],
+    "actionIds": [
+     "a5",
+     "a8",
+     "a9"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify NSAID co-administration and volume depletion (hot kitchen, double shifts, GI losses) as precipitants of acute lithium toxicity and renal impairment.",
+    "factIds": [
+     "f5",
+     "f6",
+     "f7",
+     "f18"
+    ],
+    "actionIds": [
+     "a9",
+     "a12"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Perform a thorough current-episode mood and risk assessment to confirm euthymia and rule out acute mania, depression, or suicidality despite medication nonadherence concerns.",
+    "factIds": [
+     "f8",
+     "f9",
+     "f10",
+     "f11"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a4",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Through nonjudgmental, direct interview questioning and rapport-building (not surfaced by a generic MSE), elicit the patient's hidden ambivalence about lithium and covert consideration of self-discontinuation, and address it therapeutically.",
+    "factIds": [
+     "f27",
+     "f28"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o5",
+    "text": "Interpret trended lithium, renal, and thyroid labs to distinguish acute toxicity from chronic nephrogenic/thyroid effects, and use pharmacy refill records to assess true adherence versus an interaction-driven toxicity.",
+    "factIds": [
+     "f16",
+     "f32"
+    ],
+    "actionIds": [
+     "a8",
+     "a9",
+     "a10",
+     "a12",
+     "a13"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Formulate an appropriate, in-scope management plan: hold or reduce lithium, ensure urgent medical/renal evaluation for toxicity and AKI, discontinue the offending NSAID, arrange close lab follow-up, and address thyroid dysfunction with primary care referral rather than independently managing acute toxicity.",
+    "factIds": [
+     "f5",
+     "f18"
+    ],
+    "actionIds": [
+     "a9",
+     "a12",
+     "a16"
+    ]
+   }
+  ],
+  "answerKey": {
+   "primaryProblem": "Acute lithium toxicity (serum lithium 1.4 mmol/L, up from 0.8 three months ago) with a significant creatinine rise (1.3 mg/dL vs. baseline 0.9 mg/dL three months ago) concerning for lithium-induced renal impairment — this does not meet strict KDIGO AKI criteria (which require a defined rise within 48 hours to 7 days), as the change occurred over 3 months with no interim labs — precipitated by NSAID (ibuprofen) use combined with volume depletion from heat exposure and GI losses, in a patient with bipolar I disorder currently euthymic on long-term lithium maintenance.",
+   "differential": [
+    "Acute lithium toxicity due to NSAID interaction and dehydration (most likely)",
+    "Lithium-induced nephrogenic diabetes insipidus (chronic, contributing to polyuria/polydipsia independent of acute toxicity)",
+    "Subclinical hypothyroidism, possibly lithium-induced, contributing to fatigue but not the acute presentation",
+    "Significant creatinine rise from another cause (e.g., prerenal azotemia from volume depletion) amplifying lithium retention; does not meet KDIGO AKI timing criteria given the 3-month interval between the two available creatinine values and lack of interim data",
+    "Early breakthrough mania or mixed episode (unlikely given MSE and screens, but must be ruled out given tremor and GI symptoms)",
+    "Thyrotoxicosis (unlikely; TSH is elevated, not suppressed)",
+    "Nonadherence leading to erratic lithium dosing (ruled out by refill history)"
+   ],
+   "keyFindings": [
+    "Lithium level 1.4 mmol/L today, up from 0.8 mmol/L three months ago, now above therapeutic range (0.6-1.2)",
+    "Creatinine 1.3 mg/dL (up from baseline 0.9), eGFR 68 (L), BUN 22 (H) — a significant rise concerning for lithium-induced renal impairment, but does NOT meet KDIGO AKI criteria since the only two data points span 3 months with no interim creatinine, far outside the 48-hour/7-day window KDIGO requires",
+    "New-onset worsened postural/action tremor on camera exam, beyond baseline mild tremor",
+    "2-week history of polydipsia, polyuria, and loose stools consistent with lithium GI/renal toxicity and nephrogenic diabetes insipidus",
+    "Ibuprofen 600 mg TID started 3 weeks ago (NSAID reduces renal lithium clearance), overlapping precisely with symptom onset",
+    "Volume depletion risk factors: hot kitchen, double shifts, heavy sweating, diarrhea",
+    "TSH 5.8 mIU/L (H), subclinical hypothyroidism, a known long-term lithium effect requiring primary care follow-up",
+    "Pharmacy refill history confirms adherence, ruling out erratic dosing as the cause",
+    "Current mood euthymic; MSE and mania/depression screens negative; C-SSRS negative",
+    "Hidden ambivalence: patient privately misses hypomanic energy and has been considering stopping lithium independently, not yet acted upon — only elicitable through direct, nonjudgmental interview questioning, not through the MSE itself"
+   ],
+   "plan": [
+    "Advise patient to hold tonight's lithium dose and seek urgent same-day medical evaluation (primary care or emergency department) given the significant creatinine rise and lithium level 1.4 mmol/L — this requires physical exam, IV fluids, and lab monitoring beyond psychiatry's remote scope",
+    "Instruct patient to stop ibuprofen immediately; coordinate with urgent care/primary care for alternative non-NSAID pain management for back strain",
+    "Recommend repeat lithium level and renal panel in 24-48 hours after rehydration, coordinated with primary care, before resuming or adjusting lithium dose, which will also help clarify the trajectory of the renal picture",
+    "Counsel on maintaining adequate hydration and avoiding future NSAID use without checking with the prescribing psychiatrist",
+    "Refer to primary care for evaluation and management of elevated TSH (consider repeat TSH with free T4 off acute illness, discuss levothyroxine if persistent)",
+    "Explore and validate the patient's ambivalence about lithium and sense of flatness/missing hypomanic energy, using direct nonjudgmental questioning during the interview rather than relying on the MSE alone; psychoeducate on relapse risk of stopping lithium abruptly and the difference between toxicity (temporary, treatable) and the medication itself being wrong for him",
+    "Schedule close psychiatric follow-up (within 1 week) after acute toxicity resolves to reassess lithium dosing, consider adjunctive strategies for residual flatness, and discuss long-term lithium monitoring plan (levels, renal, thyroid every 3-6 months, with consistent post-dose timing documented)",
+    "Document clear safety plan: no current SI/HI, but monitor given ambivalence about treatment and risk of mood destabilization if lithium is self-discontinued",
+    "Do not independently manage the acute toxicity/renal impairment as psychiatry; ensure a medical clinician is involved urgently"
+   ],
+   "redFlags": [
+    "Lithium level significantly above therapeutic range with new tremor and GI/renal symptoms indicating possible evolving toxicity, which can progress to confusion, ataxia, seizures, or arrhythmia if untreated",
+    "Significant creatinine rise (falling eGFR) requiring urgent medical, not purely psychiatric, management, even though it does not meet strict KDIGO AKI timing criteria",
+    "Patient's covert consideration of self-discontinuing lithium, which carries high relapse risk for mania given prior psychotic manic episode",
+    "Need to distinguish toxicity tremor/GI symptoms from any emerging mood episode before attributing symptoms solely to toxicity"
+   ],
+   "educationPoints": [
+    "NSAIDs (including OTC ibuprofen) significantly reduce renal clearance of lithium and are a common, under-recognized cause of lithium toxicity; cross-prescriber communication and pharmacy interaction screening are essential",
+    "Lithium toxicity can present subtly with worsening tremor, GI symptoms, and polyuria/polydipsia before progressing to neurologic signs like confusion or ataxia",
+    "Routine lithium monitoring (levels, renal function, thyroid function every 3-6 months) is essential even when patients feel clinically stable, since toxicity can develop insidiously; levels should ideally be drawn at a consistent, documented time post-dose (standard is ~12 hours) to allow valid comparison across visits",
+    "Patients on long-term mood stabilizers may privately grieve the loss of hypomanic energy; nonjudgmental, direct inquiry (not the MSE itself) can uncover covert nonadherence risk before it happens",
+    "Volume depletion from occupational heat exposure, poor fluid replacement physiology, and diarrhea can precipitate lithium toxicity even without any change in dose or adherence",
+    "Subclinical hypothyroidism is a known long-term adverse effect of lithium and requires ongoing primary care collaboration, not psychiatric management alone",
+    "KDIGO AKI criteria require a creatinine rise of ≥0.3 mg/dL within 48 hours, or a 1.5-1.9x rise from baseline within 7 days; a creatinine increase documented only before and after a much longer interval (here, 3 months, with no interim data) does not meet KDIGO AKI criteria at all, regardless of the magnitude of the ratio — a key nuance for trainees to avoid misapplying diagnostic criteria to real-world lab spacing"
+   ]
+  },
+  "patient": {
+   "name": "Gabriel Costa",
+   "age": 29,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Portuguese-American",
+   "occupation": "Sous-chef",
+   "language": "English",
+   "appearance": "A lean, athletic-looking young man with short dark hair, wearing a wrinkled gray t-shirt, apparently calling from a small bedroom with a nightstand and a guitar visible in the background. He appears mildly fatigued with a flat affect, occasionally glancing down, and his hands show a visible fine-to-moderate tremor when he gestures while talking.",
+   "portrait": "/portraits/psychiatry-gabriel-costa-lithium-review.jpg"
+  },
+  "persona": {
+   "personality": "Hardworking, a bit stoic, takes pride in his career and doesn't like to complain, but is quietly worried beneath the surface.",
+   "communicationStyle": "Direct and practical, downplays symptoms at first, opens up more with specific gentle questioning, uses kitchen/work analogies.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly anxious about the tremor affecting his job, otherwise emotionally subdued/flat, guarded about deeper feelings regarding his medication.",
+   "background": "Grew up in a Portuguese immigrant family in Providence, Rhode Island; worked his way up from line cook to sous-chef over 8 years; close with his mother who also has bipolar disorder; enjoys playing guitar and cooking for friends on days off; in a supportive relationship with his girlfriend of 3 years.",
+   "speechExamples": [
+    "It's just a tremor, I didn't think it was a big deal until I almost dropped a knife yesterday.",
+    "I don't want to make a big deal out of nothing, but yeah, it's been rough.",
+    "Honestly, work's been nonstop, double shifts, that kitchen's an oven.",
+    "...I guess if you're asking, yeah, there's stuff I haven't really said out loud."
+   ],
+   "concerns": [
+    "Whether the tremor will get better or threaten his job as a chef",
+    "Why his lab numbers changed when he feels like he's been taking everything correctly",
+    "Whether he'll have to stop lithium or change doses and what that means long-term",
+    "Embarrassment about admitting he misses his manic energy and has thought about stopping his medication"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are the psychiatry resident conducting a telehealth medication management follow-up for Gabriel Costa, a 29-year-old sous-chef with bipolar I disorder stable on lithium carbonate 900 mg nightly for 14 months. He is calling in with concerns about worsening tremor, thirst, urination, and loose stools over the past 2 weeks. Review the chart, conduct the interview and mental status/risk assessment, and determine next steps.",
+   "chiefComplaint": "Worsening hand tremor, excessive thirst and urination, and loose stools for 2 weeks in a patient on long-term lithium.",
+   "openingLine": "Hey doc, thanks for fitting me in. My hands have been shaking a lot more lately, I'm super thirsty all the time, going to the bathroom constantly, and my stomach's been loose too. It's starting to mess with my work.",
+   "tasks": [
+    "Take a focused history of the tremor, thirst, urination, and gastrointestinal symptoms",
+    "Review the medication list and recent changes with the patient",
+    "Conduct a mental status examination and assess risk",
+    "Review the laboratory results with the patient",
+    "Explore the patient's experience with and feelings about his current medication regimen",
+    "Formulate and agree a management plan with appropriate follow-up"
+   ],
+   "timeLimitMin": 25
+  },
+  "setting": "Telehealth video visit, patient at home in Providence, Rhode Island, calling from his bedroom before an evening shift",
+  "summary": "A 29-year-old sous-chef with bipolar I disorder stable on lithium for 14 months presents to a telepsychiatry medication follow-up with two weeks of worsening tremor, polydipsia, polyuria, and diarrhea. The case teaches recognition of acute lithium toxicity precipitated by NSAID use and volume depletion, interpretation of trended labs, and nonjudgmental elicitation of covert ambivalence about mood-stabilizer treatment, while keeping management within psychiatry's telehealth scope by escalating the acute toxicity/AKI to urgent medical care.",
+  "title": "Worsening Tremor and Thirst in a Chef Stable on Lithium: Recognizing Acute Toxicity",
+  "specialty": "Psychiatry",
+  "professions": [
+   "psychiatry"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

@@ -1,0 +1,1090 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "vitals",
+    "name": "Review home BP log (3 weeks)",
+    "result": "Home readings over 3 weeks: average 156/95 mmHg, range 148-168/90-102, taken morning and evening with home cuff, patient reports device validated at pharmacy last year.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "vitals",
+    "name": "Measure BP via home cuff on camera",
+    "result": "Patient places cuff, student observes technique: seated, feet flat, cuff on bare upper arm at heart level. Reading obtained: 158/98 mmHg, pulse 78, correct technique confirmed.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "record",
+    "name": "Review pharmacy refill history",
+    "result": "Amlodipine 5 mg last filled 10 weeks ago (90-day supply, should have run out ~4 weeks ago). Lisinopril 20 mg last filled 2 weeks ago, on time.",
+    "importance": "critical",
+    "artifactIds": [
+     "d6"
+    ]
+   },
+   {
+    "id": "a4",
+    "kind": "lab",
+    "name": "Review basic metabolic panel",
+    "result": "Sodium 140 mmol/L, Potassium 4.4 mmol/L, Chloride 101 mmol/L, CO2 24 mmol/L, BUN 15 mg/dL, Creatinine 1.0 mg/dL, eGFR >60 mL/min/1.73m2 - all within normal range.",
+    "importance": "important",
+    "artifactIds": [
+     "d3"
+    ]
+   },
+   {
+    "id": "a5",
+    "kind": "lab",
+    "name": "Review lipid panel (from last annual visit)",
+    "result": "Total cholesterol 198 mg/dL, LDL 118 mg/dL, HDL 42 mg/dL, Triglycerides 150 mg/dL - borderline LDL, otherwise unremarkable.",
+    "importance": "minor",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a6",
+    "kind": "lab",
+    "name": "Review hemoglobin A1c (from last annual visit)",
+    "result": "A1c 5.6% - normal, no diabetes.",
+    "importance": "minor",
+    "artifactIds": [
+     "d5"
+    ]
+   },
+   {
+    "id": "a7",
+    "kind": "exam",
+    "name": "Camera inspection of neck/general appearance",
+    "result": "No visible jugular venous distension, no obvious peripheral edema on self-exam of ankles, patient appears overweight with short neck noted on camera.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Self-reported ankle edema check",
+    "result": "Patient presses on own shin on camera: no pitting edema noted bilaterally.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "test",
+    "name": "STOP-BANG sleep apnea screening questionnaire",
+    "result": "Score 6/8 (snoring, tiredness, observed apnea by partner, high BP, age >50, male sex; BMI 33.3 does not meet the >35 criterion) - high risk for obstructive sleep apnea.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "test",
+    "name": "Epworth Sleepiness Scale",
+    "result": "Score 14/24 - indicates excessive daytime sleepiness.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Amlodipine 5 mg daily, Lisinopril 20 mg daily, Ibuprofen 400-600 mg PRN (patient reports near-daily use), Pseudoephedrine 30-60 mg PRN for allergies.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "vitals",
+    "name": "Review weight/BMI trend",
+    "result": "Current weight 232 lb, height 5'10\", BMI 33.3 kg/m2 (obese class I). Weight stable over past year (prior visit 228 lb).",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a13",
+    "kind": "record",
+    "name": "Review commercial driver's license medical certification status",
+    "result": "CDL medical certificate renewed 8 months ago, valid for current period; standard certification renewal, no additional notes on file.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "exam",
+    "name": "Camera inspection of oropharynx",
+    "result": "Patient opens mouth under good lighting: large tongue base, Mallampati class III airway appearance, no tonsillar hypertrophy visible.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a15",
+    "kind": "record",
+    "name": "Review urine protein/albumin screening (from last annual visit)",
+    "result": "Urine albumin-to-creatinine ratio 12 mg/g - normal, no microalbuminuria.",
+    "importance": "minor",
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "flowsheet",
+    "title": "Home Blood Pressure Log - 3 Weeks",
+    "date": "Last 3 weeks",
+    "author": "Patient self-report, uploaded via patient portal",
+    "release": {
+     "when": "start"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Date",
+     "yLabel": "BP (mmHg)",
+     "series": [
+      {
+       "name": "Systolic",
+       "points": [
+        {
+         "x": "Wk1 Mon",
+         "y": 158
+        },
+        {
+         "x": "Wk1 Thu",
+         "y": 162
+        },
+        {
+         "x": "Wk1 Sun",
+         "y": 150
+        },
+        {
+         "x": "Wk2 Mon",
+         "y": 154
+        },
+        {
+         "x": "Wk2 Thu",
+         "y": 168
+        },
+        {
+         "x": "Wk2 Sun",
+         "y": 148
+        },
+        {
+         "x": "Wk3 Mon",
+         "y": 160
+        },
+        {
+         "x": "Wk3 Thu",
+         "y": 156
+        },
+        {
+         "x": "Wk3 Sun",
+         "y": 152
+        }
+       ]
+      },
+      {
+       "name": "Diastolic",
+       "points": [
+        {
+         "x": "Wk1 Mon",
+         "y": 96
+        },
+        {
+         "x": "Wk1 Thu",
+         "y": 98
+        },
+        {
+         "x": "Wk1 Sun",
+         "y": 90
+        },
+        {
+         "x": "Wk2 Mon",
+         "y": 94
+        },
+        {
+         "x": "Wk2 Thu",
+         "y": 102
+        },
+        {
+         "x": "Wk2 Sun",
+         "y": 90
+        },
+        {
+         "x": "Wk3 Mon",
+         "y": 98
+        },
+        {
+         "x": "Wk3 Thu",
+         "y": 96
+        },
+        {
+         "x": "Wk3 Sun",
+         "y": 92
+        }
+       ]
+      }
+     ],
+     "refHigh": 130,
+     "refLow": 80
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Time",
+      "Systolic (mmHg)",
+      "Diastolic (mmHg)",
+      "Pulse (bpm)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Wk1 Mon",
+        "AM",
+        "158",
+        "96",
+        "80"
+       ]
+      },
+      {
+       "cells": [
+        "Wk1 Thu",
+        "PM",
+        "162",
+        "98",
+        "84"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Wk1 Sun",
+        "AM",
+        "150",
+        "90",
+        "76"
+       ]
+      },
+      {
+       "cells": [
+        "Wk2 Mon",
+        "AM",
+        "154",
+        "94",
+        "78"
+       ]
+      },
+      {
+       "cells": [
+        "Wk2 Thu",
+        "PM",
+        "168",
+        "102",
+        "86"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Wk2 Sun",
+        "AM",
+        "148",
+        "90",
+        "74"
+       ]
+      },
+      {
+       "cells": [
+        "Wk3 Mon",
+        "AM",
+        "160",
+        "98",
+        "82"
+       ]
+      },
+      {
+       "cells": [
+        "Wk3 Thu",
+        "PM",
+        "156",
+        "96",
+        "80"
+       ]
+      },
+      {
+       "cells": [
+        "Wk3 Sun",
+        "AM",
+        "152",
+        "92",
+        "76"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Today",
+    "author": "EHR medication reconciliation",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Frequency",
+      "Last Refill"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Amlodipine",
+        "5 mg",
+        "Once daily",
+        "10 weeks ago"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "20 mg",
+        "Once daily",
+        "2 weeks ago"
+       ]
+      },
+      {
+       "cells": [
+        "Ibuprofen (OTC)",
+        "400-600 mg",
+        "As needed, near daily per patient",
+        "N/A - OTC"
+       ]
+      },
+      {
+       "cells": [
+        "Pseudoephedrine (OTC)",
+        "30-60 mg",
+        "As needed for allergies",
+        "N/A - OTC"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "lab_report",
+    "title": "Basic Metabolic Panel",
+    "date": "Today, drawn at local lab",
+    "author": "Quest Diagnostics",
+    "release": {
+     "when": "action",
+     "ref": "a4"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Sodium",
+        "140",
+        "mmol/L",
+        "136-145"
+       ]
+      },
+      {
+       "cells": [
+        "Potassium",
+        "4.4",
+        "mmol/L",
+        "3.5-5.0"
+       ]
+      },
+      {
+       "cells": [
+        "Chloride",
+        "101",
+        "mmol/L",
+        "98-107"
+       ]
+      },
+      {
+       "cells": [
+        "CO2",
+        "24",
+        "mmol/L",
+        "23-29"
+       ]
+      },
+      {
+       "cells": [
+        "BUN",
+        "15",
+        "mg/dL",
+        "7-20"
+       ]
+      },
+      {
+       "cells": [
+        "Creatinine",
+        "1.0",
+        "mg/dL",
+        "0.7-1.3"
+       ]
+      },
+      {
+       "cells": [
+        "eGFR",
+        "92",
+        ">60 mL/min/1.73m2",
+        "60"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "lab_report",
+    "title": "Lipid Panel (Annual Visit, 4 months ago)",
+    "date": "4 months ago",
+    "author": "Quest Diagnostics",
+    "release": {
+     "when": "action",
+     "ref": "a5"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Total Cholesterol",
+        "198",
+        "mg/dL",
+        "<200"
+       ]
+      },
+      {
+       "cells": [
+        "LDL",
+        "118",
+        "mg/dL",
+        "<100"
+       ],
+       "flag": "H"
+      },
+      {
+       "cells": [
+        "HDL",
+        "42",
+        "mg/dL",
+        ">40"
+       ]
+      },
+      {
+       "cells": [
+        "Triglycerides",
+        "150",
+        "mg/dL",
+        "<150"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "lab_report",
+    "title": "Hemoglobin A1c and Urine Albumin/Creatinine (Annual Visit, 4 months ago)",
+    "date": "4 months ago",
+    "author": "Quest Diagnostics",
+    "release": {
+     "when": "action",
+     "ref": "a6"
+    },
+    "table": {
+     "columns": [
+      "Test",
+      "Result",
+      "Units",
+      "Reference range"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Hemoglobin A1c",
+        "5.6",
+        "%",
+        "<5.7"
+       ]
+      },
+      {
+       "cells": [
+        "Urine Albumin/Creatinine Ratio",
+        "12",
+        "mg/g",
+        "<30"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Pharmacy Refill History Report",
+    "date": "Today",
+    "author": "CVS Pharmacy, electronic refill record",
+    "release": {
+     "when": "action",
+     "ref": "a3"
+    },
+    "body": "Amlodipine 5 mg tablets, 90-day supply, quantity 90: last dispensed 10 weeks ago. Based on days-supply, patient should have run out approximately 4 weeks ago with no refill since. Lisinopril 20 mg tablets, 90-day supply: last dispensed 2 weeks ago, consistent with regular use. No other antihypertensive fills on record."
+   },
+   {
+    "id": "d7",
+    "type": "note",
+    "title": "Prior Annual Visit Note (4 months ago)",
+    "date": "4 months ago",
+    "author": "Dr. A. Patel, Family Medicine",
+    "release": {
+     "when": "start"
+    },
+    "body": "52yo M here for annual exam. Hypertension on amlodipine 5mg and lisinopril 20mg, BP in clinic 142/88. Discussed lifestyle modification, home BP monitoring recommended. Labs ordered: BMP, lipid panel, A1c, urine microalbumin - reviewed above, all unremarkable aside from borderline LDL. Patient works as city bus driver, reports irregular meal schedule. Denies chest pain, SOB. Follow-up in 3-4 months with home BP log."
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Hypertension follow-up, home BP log review"
+   },
+   {
+    "label": "Problem list",
+    "value": "Essential hypertension; Obesity (BMI 33); Chronic shoulder pain, cause not yet established"
+   },
+   {
+    "label": "Medications",
+    "value": "Amlodipine 5 mg daily; Lisinopril 20 mg daily; Ibuprofen OTC PRN; Pseudoephedrine OTC PRN"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals (4 months ago, in clinic)",
+    "value": "BP 142/88 mmHg, HR 76, Weight 228 lb, BMI 32.7"
+   },
+   {
+    "label": "Immunizations",
+    "value": "Up to date per state registry; influenza vaccine given this season"
+   },
+   {
+    "label": "Care team",
+    "value": "Dr. A. Patel (Family Medicine, PCP of record); this visit covered by resident physician"
+   }
+  ],
+  "difficulty": 2,
+  "encounterType": "chronic disease follow-up",
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "blood pressure check-in",
+    "chart": "Patient presents for scheduled hypertension follow-up to review home BP log.",
+    "says": "I'm here to go over my blood pressure numbers from home, doc. They've been kind of high.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "home BP readings",
+    "chart": "Reports home BP averaging around 150s-160s/90s over past 3 weeks.",
+    "says": "My machine's been showing numbers like 155 over 95, sometimes higher.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f3",
+    "category": "medications",
+    "topic": "pill-taking habits",
+    "chart": "States he takes both blood pressure medications every day as prescribed.",
+    "says": "I take my pills every morning, never miss a day.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "symptoms with high readings",
+    "chart": "Denies headache, chest pain, vision changes, or shortness of breath with elevated readings.",
+    "says": "I don't really feel anything different when it's high, no headaches or chest pain or anything.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "social",
+    "topic": "work schedule",
+    "chart": "Works as a city bus driver, recently had hours reduced.",
+    "says": "I drive the number 22 route downtown. They cut my hours a couple months back, which hasn't helped money-wise.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f6",
+    "category": "nutrition",
+    "topic": "eating pattern",
+    "chart": "Eats most meals while working, relies on fast food and gas station snacks.",
+    "says": "Honestly most of my meals are whatever I can grab between routes - fast food, gas station stuff. Not great, I know.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "adherence",
+    "topic": "medication cost",
+    "chart": "Reports copay for amlodipine became harder to afford after hours were cut; discloses stretching tablets by skipping some days.",
+    "says": "Okay, honestly... since my hours got cut, that copay for the amlodipine's been tight. Sometimes I skip a day or two to make the bottle last longer.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f8",
+    "category": "medications",
+    "topic": "pain medication use",
+    "chart": "Uses OTC ibuprofen 400-600mg nearly daily for chronic shoulder pain from years of steering/lifting.",
+    "says": "My shoulder's been bugging me for years from the job, so I pop ibuprofen most days, maybe 2-3 pills.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f9",
+    "category": "medications",
+    "topic": "allergy medication use",
+    "chart": "Uses OTC pseudoephedrine-containing decongestant as needed for seasonal allergies, several times a week currently.",
+    "says": "My allergies have been bad this season so I've been taking that Sudafed stuff pretty often.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f10",
+    "category": "ros",
+    "topic": "sleep quality",
+    "chart": "Reports loud snoring and witnessed pauses in breathing by spouse; significant daytime sleepiness.",
+    "says": "My wife says I snore like a freight train and sometimes stop breathing for a bit, scares her. I'm tired a lot during the day too.",
+    "tier": "discoverable",
+    "importance": "critical"
+   },
+   {
+    "id": "f11",
+    "category": "ros",
+    "topic": "falling asleep while driving",
+    "chart": "Admits to nearly dozing off once while stopped at a red light during a work shift; has not reported this to anyone at work or to DOT.",
+    "says": "There was one time at a red light I kind of nodded off for a second. Didn't tell anybody at work about it. Please don't put that in a way that gets me in trouble.",
+    "tier": "hidden",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "psychosocial",
+    "topic": "commercial license worries",
+    "chart": "Expresses fear that a sleep apnea diagnosis could jeopardize his CDL medical certification and livelihood.",
+    "says": "If they find out something's wrong with my sleep, could I lose my license to drive the bus? That's my whole paycheck.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "family",
+    "topic": "family history of heart disease",
+    "chart": "Father had hypertension and died of stroke at age 68; mother has type 2 diabetes.",
+    "says": "My dad had high blood pressure too, he passed from a stroke at 68. My mom's got the sugar diabetes.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "substance",
+    "topic": "tobacco use",
+    "chart": "Former smoker, quit 6 years ago, previously 1 pack/day for 15 years.",
+    "says": "I used to smoke a pack a day but I quit about six years back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "substance",
+    "topic": "alcohol use",
+    "chart": "Drinks 1-2 beers on weekends, denies daily drinking.",
+    "says": "I'll have a beer or two on a Saturday, nothing during the week.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "function",
+    "topic": "exercise habits",
+    "chart": "Reports minimal structured exercise due to long shifts; walks occasionally.",
+    "says": "Between the long shifts I don't really have time to exercise, maybe I walk the dog sometimes.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "psychosocial",
+    "topic": "stress level",
+    "chart": "Reports increased stress related to reduced work hours and finances.",
+    "says": "Honestly, with the hours cut, money's been stressful. It's on my mind a lot.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f18",
+    "category": "ros",
+    "topic": "leg swelling",
+    "chart": "Denies leg or ankle swelling.",
+    "says": "No swelling in my legs or feet that I've noticed.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "ros",
+    "topic": "nighttime urination",
+    "chart": "Reports waking twice nightly to urinate, which disrupts sleep in addition to snoring.",
+    "says": "I get up maybe twice a night to use the bathroom, on top of everything else.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "ros",
+    "topic": "morning headaches",
+    "chart": "Reports occasional dull morning headaches a few times a week.",
+    "says": "Some mornings I wake up with a dull headache, happens a few times a week.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f21",
+    "category": "pmh",
+    "topic": "other chronic conditions",
+    "chart": "No history of diabetes, kidney disease, or heart disease; prior labs normal.",
+    "says": "No, I don't have diabetes or kidney problems, my doctor said my labs were all fine a few months back.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "allergies",
+    "topic": "drug allergies",
+    "chart": "No known drug allergies.",
+    "says": "No allergies to medicines that I know of.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "adherence",
+    "topic": "lisinopril adherence",
+    "chart": "Reports taking lisinopril consistently without missed doses, unlike amlodipine.",
+    "says": "The lisinopril one I never skip, it's the other one I've been stretching.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f24",
+    "category": "psh",
+    "topic": "surgical history",
+    "chart": "No prior surgeries.",
+    "says": "Never had any surgeries.",
+    "tier": "initial",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "hpi",
+    "topic": "shoulder pain history",
+    "chart": "Chronic right shoulder pain for 5 years, attributed to repetitive steering motion; no recent injury or acute change.",
+    "says": "My shoulder's been hurting on and off for like five years from all the driving, nothing new going on with it.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "social",
+    "topic": "home blood pressure monitor",
+    "chart": "Purchased automatic upper-arm cuff at pharmacy about a year ago; has not had it validated or recalibrated since.",
+    "says": "I got the cuff from the pharmacy, I think a year ago now. Haven't had anyone check if it's still accurate.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "goals",
+    "topic": "what patient wants from visit",
+    "chart": "Hopes to get blood pressure numbers down without adding another expensive medication if possible.",
+    "says": "I just want to get these numbers down if I can, without piling on another pricey pill if there's another way.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "sexual",
+    "topic": "erectile function",
+    "chart": "Denies erectile dysfunction or other sexual side effects.",
+    "says": "No issues in that department, everything's fine there.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f29",
+    "category": "ros",
+    "topic": "chest pain or palpitations",
+    "chart": "Denies chest pain, palpitations, or exertional symptoms.",
+    "says": "No chest pain or racing heart, nothing like that.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "other",
+    "topic": "insurance coverage",
+    "chart": "Has employer-sponsored insurance through the transit authority but copays increased after hours were reduced to part-time threshold.",
+    "says": "I've still got insurance through the job but since I dropped below full-time hours my copays went up.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "family",
+    "topic": "sleep apnea in family",
+    "chart": "Brother was diagnosed with obstructive sleep apnea and uses a CPAP machine.",
+    "says": "Funny you ask, my brother's got that sleep apnea thing too, he's got one of those machines he sleeps with.",
+    "tier": "discoverable",
+    "importance": "important"
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f3",
+    "artifactId": "d6",
+    "patientClaim": "Patient states he takes both blood pressure medications every day without missing doses.",
+    "recordEvidence": "Pharmacy refill history shows amlodipine 5mg (90-day supply) was last filled 10 weeks ago, meaning it should have run out about 4 weeks ago with no refill since; lisinopril refill is on time.",
+    "teachingPoint": "Self-reported adherence often overestimates actual medication-taking; refill history is an objective adherence check, and uncovering a cost-related nonadherence barrier (rather than assuming simple forgetfulness) changes the management plan - here, addressing copay/access matters more than adding a new drug."
+   },
+   {
+    "id": "m2",
+    "factId": "f11",
+    "patientClaim": "Patient discloses nearly falling asleep at a red light while driving the bus but asks that this not create trouble for him, implying he has not reported any sleep problem to anyone official.",
+    "recordEvidence": "CDL medical certificate record (a13) shows a routine renewal 8 months ago with no mention of any sleep-related condition or restriction on file, despite the high STOP-BANG score (a9) now indicating high risk for a condition that could affect fitness to safely operate a commercial vehicle.",
+    "teachingPoint": "When a patient's commercial driving safety may be at risk from a likely medical condition (suspected OSA), the clinician must balance patient confidentiality and trust with public safety obligations - this requires careful counseling about voluntary reporting/evaluation rather than silence, and referral for sleep study and DOT guidance, while recognizing scope: the family medicine resident refers rather than independently adjudicating fitness to drive."
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit true medication-taking patterns (vs. stated adherence) and identify cost as an access barrier, using refill history as objective evidence.",
+    "factIds": [
+     "f3",
+     "f7",
+     "f23",
+     "f30"
+    ],
+    "actionIds": [
+     "a3",
+     "a11"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Recognize resistant/uncontrolled hypertension and identify contributing factors beyond adherence (NSAID use, decongestant use, diet, obesity).",
+    "factIds": [
+     "f8",
+     "f9",
+     "f6"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a4",
+     "a12"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Screen for obstructive sleep apnea using validated tools and recognize red-flag symptoms (witnessed apneas, near-miss drowsy driving event) that affect both health and commercial driving safety.",
+    "factIds": [
+     "f10",
+     "f11",
+     "f31",
+     "f20",
+     "f19"
+    ],
+    "actionIds": [
+     "a9",
+     "a10",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Navigate the tension between patient confidentiality/trust and the clinician's responsibility regarding commercial driving safety when a reluctant patient discloses a safety-relevant symptom.",
+    "factIds": [
+     "f11",
+     "f12"
+    ],
+    "actionIds": []
+   },
+   {
+    "id": "o5",
+    "text": "Formulate an appropriately scoped family medicine plan: address adherence/cost barriers, counsel on NSAID/decongestant contribution to BP, refer for sleep study, and determine need for in-person visit or specialist referral rather than overreaching role boundaries. Note that fitness-to-drive certification itself is outside family medicine scope; the resident should rely on patient-reported CDL status and counsel on voluntary disclosure rather than independently pulling or adjudicating DOT records.",
+    "factIds": [
+     "f7",
+     "f27",
+     "f12"
+    ],
+    "actionIds": [
+     "a1",
+     "a2",
+     "a3",
+     "a9"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Interpret relevant chronic disease monitoring labs (BMP, lipids, A1c, urine albumin) in the context of hypertension follow-up.",
+    "factIds": [
+     "f21"
+    ],
+    "actionIds": [
+     "a4",
+     "a5",
+     "a6",
+     "a15"
+    ]
+   }
+  ],
+  "patient": {
+   "name": "Darnell Brooks",
+   "age": 52,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Black",
+   "occupation": "City bus driver",
+   "language": "English",
+   "appearance": "A heavyset man with short graying hair, wearing a wrinkled polo shirt, calling from what looks like a kitchen table with a coffee mug nearby. He has a tired, friendly expression, rubs his eyes once during the call, and the lighting is a bit dim but his face is clearly visible.",
+   "portrait": "/portraits/family-medicine-darnell-brooks-blood-pressure.jpg"
+  },
+  "persona": {
+   "personality": "Friendly, practical, a bit self-conscious about money troubles and about the medication-stretching, wants straightforward answers.",
+   "communicationStyle": "Talks in plain, everyday language, uses humor to deflect when embarrassed, answers directly once comfortable.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Mildly worried about his numbers and tired-looking, becomes guarded when the topic turns to his driving job and sleep.",
+   "background": "Has driven city buses for 18 years, married with two teenage kids, enjoys watching basketball on his days off and grilling for neighbors in summer. Proud of his union job and good driving record.",
+   "speechExamples": [
+    "I take my pills every morning, never miss a day.",
+    "Honestly most of my meals are whatever I can grab between routes.",
+    "If they find out something's wrong with my sleep, could I lose my license to drive the bus?",
+    "My wife says I snore like a freight train.",
+    "I just want to get these numbers down if I can, without piling on another pricey pill."
+   ],
+   "concerns": [
+    "Worried his blood pressure numbers mean something bad is happening to his heart or kidneys.",
+    "Afraid that disclosing sleep problems could threaten his commercial driver's license and income.",
+    "Concerned about affording medications on reduced work hours.",
+    "Wants practical, low-cost solutions rather than new expensive prescriptions."
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are seeing Darnell Brooks, a 52-year-old city bus driver, for a scheduled telehealth hypertension follow-up. He has been on amlodipine 5mg and lisinopril 20mg and was asked to track home blood pressure for 3 weeks. Review his history, medication use, and home readings, and decide on next steps.",
+   "chiefComplaint": "Hypertension follow-up with elevated home blood pressure readings despite being on two medications.",
+   "openingLine": "Hi doc, thanks for seeing me - I'm here to go over my blood pressure numbers from home, they've been kind of high.",
+   "tasks": [
+    "Review the home blood pressure log and confirm technique on camera.",
+    "Take a focused history of medication use and any challenges with the current regimen.",
+    "Take a focused history exploring factors that may affect blood pressure control.",
+    "Perform a relevant risk assessment and address any occupational health concerns appropriately.",
+    "Formulate a follow-up plan including any investigations, referrals, and medication adjustments within scope."
+   ],
+   "timeLimitMin": 20
+  },
+  "summary": "\"A 52-year-old bus driver with hypertension returns for a telehealth follow-up with elevated home BP readings despite being on amlodipine and lisinopril. The case teaches residents to uncover cost-related medication nonadherence, identify NSAID/decongestant contributors to poor BP control, screen for obstructive sleep apnea, and navigate the sensitive intersection of a commercial driver's safety-sensitive symptoms with patient trust and appropriate referral.\"",
+  "title": "\"Uncontrolled Hypertension in a Bus Driver: Adherence Barriers and a Hidden Sleep Apnea Risk\"",
+  "specialty": "Family Medicine",
+  "setting": "Telehealth video visit, patient at home at his kitchen table in Cleveland, Ohio",
+  "answerKey": {
+   "primaryProblem": "Uncontrolled/resistant hypertension in the setting of partial medication nonadherence (cost-related), concurrent NSAID and decongestant use, and newly identified high risk for obstructive sleep apnea.",
+   "differential": [
+    "Medication nonadherence (cost-related) as primary driver of poor BP control",
+    "NSAID-induced sodium retention/vasoconstriction contributing to elevated BP",
+    "Pseudoephedrine (sympathomimetic) contributing to elevated BP",
+    "Undiagnosed obstructive sleep apnea causing or worsening hypertension",
+    "True resistant hypertension requiring further antihypertensive titration once adherence/contributors addressed",
+    "Secondary hypertension (e.g., renal, endocrine) - less likely given normal BMP, no other red flags, but to be reconsidered if BP remains uncontrolled after addressing above"
+   ],
+   "keyFindings": [
+    "Home BP log averaging 156/96 over 3 weeks with correct cuff technique confirmed on camera",
+    "Pharmacy refill history reveals amlodipine stretched (last filled 10 weeks ago for a 90-day supply) despite patient's belief that he takes it daily; lisinopril refilled on time",
+    "Near-daily OTC ibuprofen use for chronic shoulder pain and frequent pseudoephedrine use for allergies, both of which can raise blood pressure",
+    "Positive STOP-BANG (6/8: snoring, tiredness, observed apnea, high BP, age >50, male sex) and Epworth (14/24) screens indicating high risk for obstructive sleep apnea, with witnessed apneas and a near-miss drowsy-driving event at a red light",
+    "Patient has not disclosed sleep symptoms or the near-miss driving event to anyone, including his DOT medical examiner, and is anxious about his CDL status",
+    "Basic metabolic panel, lipid panel, A1c, and urine albumin/creatinine all normal/stable, lowering likelihood of secondary hypertension or early renal injury at this time"
+   ],
+   "plan": [
+    "Address cost-related nonadherence directly and non-judgmentally: discuss copay assistance programs, generic/mail-order options, or switching to a formulary-preferred agent; coordinate with pharmacy/social work as needed",
+    "Counsel on reducing or substituting NSAID use for shoulder pain (e.g., topical NSAIDs, acetaminophen, non-pharmacologic measures) and limiting pseudoephedrine; discuss alternative allergy management (non-sympathomimetic antihistamine or saline rinses)",
+    "Order outpatient referral for diagnostic sleep study given high-risk OSA screen; explain rationale and reassure that evaluation and treatment (e.g., CPAP) are the path to protecting both his health and his ability to keep working safely",
+    "Counsel patient on voluntary disclosure to his DOT medical examiner per FMCSA guidance regarding the near-miss drowsy-driving event and suspected OSA; clarify that evaluation and treatment, not the diagnosis itself, determine certification outcome, and that the clinician cannot keep this safety-relevant information fully confidential if it poses an ongoing public safety risk - frame as collaborative next step rather than punitive",
+    "Recheck BP in 2-4 weeks once adherence and contributing OTC medication use are addressed before escalating antihypertensive regimen; defer any medication dose change until true adherence and reversible contributors are addressed, consistent with primary care scope",
+    "Reinforce home BP monitoring technique and recommend validating/recalibrating the home cuff against a clinic reading",
+    "Continue routine preventive monitoring (lipids, A1c, renal function) at next scheduled interval; no urgent escalation needed given reassuring labs",
+    "This visit remains within family medicine scope: refer to sleep medicine for formal testing/CPAP titration and rely on patient-reported CDL status rather than independently pulling or adjudicating DOT certification records; do not unilaterally report to DOT - counsel patient toward appropriate voluntary disclosure/process"
+   ],
+   "redFlags": [
+    "Witnessed breathing pauses during sleep and a near-miss drowsy-driving incident while operating a commercial vehicle warrant urgent attention given public safety implications",
+    "Severely uncontrolled BP readings (>180/120) would require same-day evaluation - not present here but should prompt escalation if seen",
+    "Significant unexplained weight gain, edema, or rising creatinine would raise concern for secondary causes or target-organ damage and need prompt work-up"
+   ],
+   "educationPoints": [
+    "Objective adherence data (refill history) often reveals gaps that patients are unaware of or reluctant to volunteer; approach discrepancies with curiosity and without judgment to uncover underlying barriers like cost",
+    "Common over-the-counter medications (NSAIDs, decongestants) are frequently overlooked contributors to poor blood pressure control and should be routinely screened for in hypertension follow-up",
+    "Validated screening tools (STOP-BANG, Epworth) are efficient, remote-feasible ways to risk-stratify for obstructive sleep apnea in primary care; STOP-BANG scoring should correctly credit all met criteria including age >50",
+    "Clinicians caring for commercial drivers must understand the balance between patient confidentiality and public safety obligations, and should know the general framework for voluntary disclosure to DOT medical examiners rather than acting unilaterally",
+    "Resistant hypertension work-up should first exclude pseudo-resistance (adherence, white-coat effect, improper technique, interfering substances) before adding medications or pursuing secondary hypertension work-up",
+    "Family medicine residents typically do not have independent access to or authority over DOT/CDL certification records; fitness-to-drive determinations and record review are outside primary care telehealth scope and should rely on patient report plus appropriate referral"
+   ]
+  },
+  "professions": [
+   "family-medicine"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}

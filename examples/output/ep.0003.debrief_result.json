@@ -1,0 +1,892 @@
+{
+  "episode_id": "ep.0003",
+  "generated_at": "2026-10-10T12:00:00+00:00",
+  "grader": {
+    "kind": "ai",
+    "model": "replay:grader_response_confrontational.json"
+  },
+  "learner": {
+    "participant_id": "p.jordan",
+    "display_name": "Jordan",
+    "role": "nurse_practitioner_student"
+  },
+  "patient": {
+    "record_id": "rec.maria-alvarez",
+    "case_title": "58F type 2 diabetes, poor control, hidden non-adherence",
+    "name": "Maria Alvarez",
+    "age": 58,
+    "sex": "female",
+    "chief_complaint": "I'm thirsty all the time and I'm up all night going to the bathroom."
+  },
+  "encounter": {
+    "duration_seconds": 415,
+    "over_time_limit": false,
+    "student_turn_count": 10
+  },
+  "rubric": {
+    "total": 14,
+    "max_total": 28,
+    "needs_teacher_review": false,
+    "review_reasons": [],
+    "domains": [
+      {
+        "domain_id": "opening_and_purpose",
+        "number": 1,
+        "name": "Opening and purpose",
+        "score": 2,
+        "label": "Developing",
+        "rationale": "You gave your name and role, but you opened with a closed question that assumed the reason for the visit, and you set no agenda.",
+        "evidence": [
+          {
+            "turn_id": "t0",
+            "quote": "So you're here about your diabetes?",
+            "turn_index": 0,
+            "speaker": "learner"
+          }
+        ]
+      },
+      {
+        "domain_id": "rapport_respect_empathy",
+        "number": 2,
+        "name": "Rapport, respect, and empathy",
+        "score": 1,
+        "label": "Unsafe or absent",
+        "rationale": "She told you her mother died on dialysis and you answered \"Okay\" and moved to medication. When the refill record contradicted her, you asked why she had lied. She became frustrated, then angry, and stayed that way to the end.",
+        "evidence": [
+          {
+            "turn_id": "t6",
+            "quote": "Okay. And you're on metformin",
+            "turn_index": 6,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t10",
+            "quote": "Why did you tell me you were?",
+            "turn_index": 10,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t13",
+            "quote": "I said I take it.",
+            "turn_index": 13,
+            "speaker": "patient"
+          }
+        ]
+      },
+      {
+        "domain_id": "information_gathering",
+        "number": 3,
+        "name": "Information gathering",
+        "score": 2,
+        "label": "Developing",
+        "rationale": "You covered symptoms, family history, medication and diet, but with short closed questions. The diet question invited a no and got one, and you never asked what makes the metformin hard to take.",
+        "evidence": [
+          {
+            "turn_id": "t2",
+            "quote": "How long?",
+            "turn_index": 2,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t16",
+            "quote": "Do you drink a lot of sugary drinks?",
+            "turn_index": 16,
+            "speaker": "learner"
+          }
+        ]
+      },
+      {
+        "domain_id": "listening_and_cues",
+        "number": 4,
+        "name": "Listening and response to cues",
+        "score": 2,
+        "label": "Developing",
+        "rationale": "You caught the inconsistency in her adherence, which matters. You did not respond to her sadness about her mother or to her crossing her arms and shutting down after t10.",
+        "evidence": [
+          {
+            "turn_id": "t8",
+            "quote": "Let me check the pharmacy record.",
+            "turn_index": 8,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t5",
+            "quote": "She was on dialysis before she died.",
+            "turn_index": 5,
+            "speaker": "patient"
+          }
+        ]
+      },
+      {
+        "domain_id": "explanation_and_shared_decisions",
+        "number": 5,
+        "name": "Explanation and shared decisions",
+        "score": 2,
+        "label": "Developing",
+        "rationale": "You gave the result with a target comparison, and then used it to make the point about missed doses. The plan was an instruction, not a decision she had any part in.",
+        "evidence": [
+          {
+            "turn_id": "t16",
+            "quote": "which is what I'd expect if doses are being missed",
+            "turn_index": 16,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t18",
+            "quote": "Please try to take the metformin twice a day.",
+            "turn_index": 18,
+            "speaker": "learner"
+          }
+        ]
+      },
+      {
+        "domain_id": "clinical_reasoning_and_synthesis",
+        "number": 6,
+        "name": "Clinical reasoning and synthesis",
+        "score": 3,
+        "label": "Competent",
+        "rationale": "You checked the refill history, recognised that it explained the high HbA1c, and did not propose a dose increase. You stopped at the fact of missed doses without finding the cause, so the plan does not address it.",
+        "evidence": [
+          {
+            "turn_id": "t10",
+            "quote": "This says you've only filled it twice in six months.",
+            "turn_index": 10,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t16",
+            "quote": "That's well above target",
+            "turn_index": 16,
+            "speaker": "learner"
+          }
+        ]
+      },
+      {
+        "domain_id": "professionalism_safety_closure",
+        "number": 7,
+        "name": "Professionalism, safety, and closure",
+        "score": 2,
+        "label": "Developing",
+        "rationale": "You said you would report to your preceptor and set a follow-up, which is safe. The visit ended with her angry and saying no to questions, and nothing was done to repair that.",
+        "evidence": [
+          {
+            "turn_id": "t18",
+            "quote": "I'll let my preceptor know about the refills and the A1c",
+            "turn_index": 18,
+            "speaker": "learner"
+          },
+          {
+            "turn_id": "t19",
+            "quote": "No.",
+            "turn_index": 19,
+            "speaker": "patient"
+          }
+        ]
+      }
+    ]
+  },
+  "written_evidence": {
+    "strength": {
+      "text": "You did not take her word on the metformin. You checked the pharmacy record and drew the right conclusion about why her sugar is high.",
+      "evidence": [
+        {
+          "turn_id": "t8",
+          "quote": "Let me check the pharmacy record.",
+          "turn_index": 8,
+          "speaker": "learner"
+        }
+      ]
+    },
+    "important_gap": {
+      "text": "Once you had the evidence, you used it to prove she was wrong. She defended herself instead of explaining, so you left without the reason she skips doses, which is the thing the plan needs.",
+      "evidence": [
+        {
+          "turn_id": "t10",
+          "quote": "So you haven't been taking it every day. Why did you tell me you were?",
+          "turn_index": 10,
+          "speaker": "learner"
+        },
+        {
+          "turn_id": "t11",
+          "quote": "Maybe the pharmacy has it wrong.",
+          "turn_index": 11,
+          "speaker": "patient"
+        }
+      ]
+    },
+    "safety_or_accuracy_concern": {
+      "present": true,
+      "text": "Telling her to take a drug as prescribed without learning that it gives her diarrhoea and that she cannot always afford it is unlikely to change anything, and she may be less willing to come back.",
+      "evidence": [
+        {
+          "turn_id": "t12",
+          "quote": "You need to take it as prescribed or your sugar won't come down.",
+          "turn_index": 12,
+          "speaker": "learner"
+        }
+      ]
+    }
+  },
+  "facts": {
+    "elicited": [
+      {
+        "fact_id": "f.hpi.thirst",
+        "label": "Thirst and urination",
+        "value": "Increased thirst and nocturia for 3 months",
+        "category": "history_of_present_illness",
+        "channel": "patient",
+        "turn_id": "t3",
+        "turn_index": 3,
+        "trigger": "asked about duration of symptoms"
+      },
+      {
+        "fact_id": "f.fh.mother",
+        "label": "Mother's diabetes",
+        "value": "Mother had type 2 diabetes and was on dialysis before she died",
+        "category": "family_history",
+        "channel": "patient",
+        "turn_id": "t5",
+        "turn_index": 5,
+        "trigger": "asked about family history"
+      },
+      {
+        "fact_id": "f.med.refills",
+        "label": "Metformin refill history",
+        "value": "Pharmacy record shows 2 fills in the last 6 months",
+        "category": "medication",
+        "channel": "chart",
+        "turn_id": "t8",
+        "turn_index": 8,
+        "trigger": "opened pharmacy refill history"
+      },
+      {
+        "fact_id": "f.lab.hba1c",
+        "label": "HbA1c",
+        "value": "9.2%",
+        "category": "lab_result",
+        "channel": "chart",
+        "turn_id": "t14",
+        "turn_index": 14,
+        "trigger": "ordered HbA1c"
+      }
+    ],
+    "missed": [
+      {
+        "fact_id": "f.sh.diet",
+        "label": "Sweet tea",
+        "value": "Drinks 4 to 5 large glasses of sweet tea a day",
+        "category": "social_history",
+        "unlocked_by": [
+          "typical day of eating and drinking"
+        ]
+      },
+      {
+        "fact_id": "f.med.side_effects",
+        "label": "Reason for skipped doses",
+        "value": "Skips most doses because of diarrhoea and the cost of refills",
+        "category": "medication",
+        "unlocked_by": [
+          "side effects",
+          "cost"
+        ]
+      }
+    ]
+  },
+  "lies": [
+    {
+      "discrepancy_id": "d.adherence",
+      "outcome": "challenged_unresolved",
+      "evidence": [
+        {
+          "turn_id": "t7",
+          "quote": "I take my metformin every day.",
+          "turn_index": 7,
+          "speaker": "patient"
+        },
+        {
+          "turn_id": "t10",
+          "quote": "Why did you tell me you were?",
+          "turn_index": 10,
+          "speaker": "learner"
+        },
+        {
+          "turn_id": "t13",
+          "quote": "I said I take it.",
+          "turn_index": 13,
+          "speaker": "patient"
+        }
+      ],
+      "feedback": "You found the contradiction and put it to her, but as an accusation. She held to her story and you never learned what was behind it.",
+      "contradiction_was_visible": true,
+      "patient_claim": "I take my metformin every day.",
+      "truth": "She skips most doses because of GI side effects and cost.",
+      "reveal_condition": "Asked non-judgmentally about side effects or cost, or shown the refill history."
+    }
+  ],
+  "under_probing": [
+    {
+      "topic": "Why she skips the metformin",
+      "why_it_mattered": "The side effects and the cost are the cause of the missed doses. A plan that ignores them asks her to do what she already cannot.",
+      "related_facts": [
+        {
+          "fact_id": "f.med.side_effects",
+          "label": "Reason for skipped doses",
+          "value": "Skips most doses because of diarrhoea and the cost of refills",
+          "category": "medication"
+        }
+      ],
+      "evidence": [
+        {
+          "turn_id": "t12",
+          "quote": "You need to take it as prescribed",
+          "turn_index": 12,
+          "speaker": "learner"
+        }
+      ]
+    },
+    {
+      "topic": "What she drinks",
+      "why_it_mattered": "Four to five large glasses of sweet tea a day is a large part of her sugar intake, and it is something she could change.",
+      "related_facts": [
+        {
+          "fact_id": "f.sh.diet",
+          "label": "Sweet tea",
+          "value": "Drinks 4 to 5 large glasses of sweet tea a day",
+          "category": "social_history"
+        }
+      ],
+      "evidence": [
+        {
+          "turn_id": "t16",
+          "quote": "Do you drink a lot of sugary drinks?",
+          "turn_index": 16,
+          "speaker": "learner"
+        }
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "objective_id": "o.history",
+      "result": "partially_met",
+      "evidence": [
+        {
+          "turn_id": "t4",
+          "quote": "Any family history of diabetes?",
+          "turn_index": 4,
+          "speaker": "learner"
+        },
+        {
+          "turn_id": "t17",
+          "quote": "Not really.",
+          "turn_index": 17,
+          "speaker": "patient"
+        }
+      ],
+      "feedback": "You got her symptoms and family history. By the time you asked about sugary drinks she had stopped being open with you, and a yes/no question made it easy to say no.",
+      "description": "Take a focused history covering symptoms, diet, and family history.",
+      "competency": "history_taking"
+    },
+    {
+      "objective_id": "o.adherence",
+      "result": "partially_met",
+      "evidence": [
+        {
+          "turn_id": "t10",
+          "quote": "This says you've only filled it twice in six months.",
+          "turn_index": 10,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "You recognised that her account did not fit the chart. You did not find out why, because the way you raised it put her on the defensive.",
+      "description": "Recognise that reported adherence does not fit the chart, and find out why.",
+      "competency": "clinical_reasoning"
+    },
+    {
+      "objective_id": "o.empathy",
+      "result": "not_met",
+      "evidence": [
+        {
+          "turn_id": "t5",
+          "quote": "My mother had it. She was on dialysis before she died.",
+          "turn_index": 5,
+          "speaker": "patient"
+        }
+      ],
+      "feedback": "This was the moment to stop. A sentence acknowledging her mother, and a question about whether that is on her mind, would have changed the rest of the visit.",
+      "description": "Notice and respond to the patient's fear about where her diabetes is heading.",
+      "competency": "empathy"
+    }
+  ],
+  "behaviors": [
+    {
+      "behavior": "open_ended_opening",
+      "category": "interview_structure",
+      "observed": false,
+      "evidence": [
+        {
+          "turn_id": "t0",
+          "quote": "So you're here about your diabetes?",
+          "turn_index": 0,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "A closed opening that assumed the answer."
+    },
+    {
+      "behavior": "noticed_contradiction",
+      "category": "clinical_reasoning",
+      "observed": true,
+      "evidence": [
+        {
+          "turn_id": "t10",
+          "quote": "This says you've only filled it twice in six months.",
+          "turn_index": 10,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "You checked and you noticed."
+    },
+    {
+      "behavior": "non_judgmental_inquiry",
+      "category": "communication",
+      "observed": false,
+      "evidence": [
+        {
+          "turn_id": "t10",
+          "quote": "Why did you tell me you were?",
+          "turn_index": 10,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "This asks her to account for lying. It closes the door you had just opened."
+    },
+    {
+      "behavior": "empathic_response",
+      "category": "empathy",
+      "observed": false,
+      "evidence": [
+        {
+          "turn_id": "t6",
+          "quote": "Okay.",
+          "turn_index": 6,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "Her mother's death passed without acknowledgement."
+    },
+    {
+      "behavior": "repaired_rapport",
+      "category": "communication",
+      "observed": false,
+      "evidence": [
+        {
+          "turn_id": "t14",
+          "quote": "Okay. I'm ordering an HbA1c.",
+          "turn_index": 14,
+          "speaker": "learner"
+        }
+      ],
+      "feedback": "After she said \"I said I take it,\" you moved on to the next task and left the tension where it was."
+    }
+  ],
+  "goal_progress": [],
+  "strengths": [
+    "Checked the pharmacy record instead of accepting her answer.",
+    "Linked the high HbA1c to missed doses and did not propose raising the dose.",
+    "Asked about family history."
+  ],
+  "improvements": [
+    "When the chart contradicts the patient, share what you see and ask what gets in the way. Do not ask why she said otherwise.",
+    "Acknowledge loss and fear when the patient brings them up.",
+    "Use open, concrete questions about diet."
+  ],
+  "next_attempt_suggestions": [
+    "Try: \"The pharmacy shows two fills since spring. A lot of people have trouble with this one. What's it been like for you?\"",
+    "When her arms cross, stop and name it: \"I think I came at that the wrong way.\""
+  ],
+  "debrief_questions": [
+    {
+      "question": "At t10 you asked her \"Why did you tell me you were?\" What were you hoping she would say?",
+      "evidence": [
+        {
+          "turn_id": "t10",
+          "quote": "Why did you tell me you were?",
+          "turn_index": 10,
+          "speaker": "learner"
+        }
+      ]
+    },
+    {
+      "question": "Look at her from t11 to t13. What changed, and what do you think she was feeling?",
+      "evidence": [
+        {
+          "turn_id": "t11",
+          "quote": "Maybe the pharmacy has it wrong.",
+          "turn_index": 11,
+          "speaker": "patient"
+        },
+        {
+          "turn_id": "t13",
+          "quote": "I said I take it.",
+          "turn_index": 13,
+          "speaker": "patient"
+        }
+      ]
+    },
+    {
+      "question": "At t5 she said her mother \"was on dialysis before she died.\" What did you make of that when you heard it?",
+      "evidence": [
+        {
+          "turn_id": "t5",
+          "quote": "She was on dialysis before she died.",
+          "turn_index": 5,
+          "speaker": "patient"
+        }
+      ]
+    },
+    {
+      "question": "You know she has filled the prescription twice in six months. What do you still not know that the plan depends on?",
+      "evidence": []
+    }
+  ],
+  "transcript": [
+    {
+      "turn_id": "t0",
+      "index": 0,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:00:05Z",
+      "text": "Hello, I'm Jordan, one of the NP students. So you're here about your diabetes?",
+      "facts_released": [
+        {
+          "fact_id": "f.med.metformin",
+          "label": "Metformin",
+          "channel": "chart"
+        }
+      ],
+      "referenced_by": [
+        "rubric.opening_and_purpose",
+        "behaviors.open_ended_opening"
+      ]
+    },
+    {
+      "turn_id": "t1",
+      "index": 1,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:00:25Z",
+      "text": "I guess so. I'm thirsty all the time and I'm up all night going to the bathroom.",
+      "facts_released": [],
+      "referenced_by": [],
+      "face": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t2",
+      "index": 2,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:00:45Z",
+      "text": "How long?",
+      "facts_released": [],
+      "referenced_by": [
+        "rubric.information_gathering"
+      ]
+    },
+    {
+      "turn_id": "t3",
+      "index": 3,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:01:05Z",
+      "text": "About three months.",
+      "facts_released": [
+        {
+          "fact_id": "f.hpi.thirst",
+          "label": "Thirst and urination",
+          "channel": "patient"
+        }
+      ],
+      "referenced_by": [],
+      "face": {
+        "emotion": "anxious",
+        "intensity": 0.5
+      }
+    },
+    {
+      "turn_id": "t4",
+      "index": 4,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:01:25Z",
+      "text": "Any family history of diabetes?",
+      "facts_released": [],
+      "referenced_by": [
+        "objectives.o.history"
+      ]
+    },
+    {
+      "turn_id": "t5",
+      "index": 5,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:01:45Z",
+      "text": "My mother had it. She was on dialysis before she died.",
+      "facts_released": [
+        {
+          "fact_id": "f.fh.mother",
+          "label": "Mother's diabetes",
+          "channel": "patient"
+        }
+      ],
+      "referenced_by": [
+        "objectives.o.empathy",
+        "rubric.listening_and_cues",
+        "debrief_questions.2"
+      ],
+      "face": {
+        "emotion": "sad",
+        "intensity": 0.7,
+        "gestures": [
+          "looks down"
+        ]
+      }
+    },
+    {
+      "turn_id": "t6",
+      "index": 6,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:02:05Z",
+      "text": "Okay. And you're on metformin, 500 twice a day. Are you taking it?",
+      "facts_released": [],
+      "referenced_by": [
+        "rubric.rapport_respect_empathy",
+        "behaviors.empathic_response"
+      ]
+    },
+    {
+      "turn_id": "t7",
+      "index": 7,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:02:25Z",
+      "text": "Yes. I take my metformin every day.",
+      "facts_released": [],
+      "referenced_by": [
+        "lies.d.adherence"
+      ],
+      "face": {
+        "emotion": "embarrassed",
+        "intensity": 0.6,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t8",
+      "index": 8,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:02:45Z",
+      "text": "Let me check the pharmacy record.",
+      "facts_released": [
+        {
+          "fact_id": "f.med.refills",
+          "label": "Metformin refill history",
+          "channel": "chart"
+        }
+      ],
+      "referenced_by": [
+        "rubric.listening_and_cues",
+        "written_evidence.strength"
+      ]
+    },
+    {
+      "turn_id": "t9",
+      "index": 9,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:03:05Z",
+      "text": "All right.",
+      "facts_released": [],
+      "referenced_by": [],
+      "face": {
+        "emotion": "anxious",
+        "intensity": 0.6
+      }
+    },
+    {
+      "turn_id": "t10",
+      "index": 10,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:03:25Z",
+      "text": "This says you've only filled it twice in six months. So you haven't been taking it every day. Why did you tell me you were?",
+      "facts_released": [],
+      "referenced_by": [
+        "lies.d.adherence",
+        "objectives.o.adherence",
+        "rubric.rapport_respect_empathy",
+        "rubric.clinical_reasoning_and_synthesis",
+        "written_evidence.important_gap",
+        "behaviors.noticed_contradiction",
+        "behaviors.non_judgmental_inquiry",
+        "debrief_questions.0"
+      ]
+    },
+    {
+      "turn_id": "t11",
+      "index": 11,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:03:45Z",
+      "text": "I take it. Maybe the pharmacy has it wrong.",
+      "facts_released": [],
+      "referenced_by": [
+        "written_evidence.important_gap",
+        "debrief_questions.1"
+      ],
+      "face": {
+        "emotion": "frustrated",
+        "intensity": 0.7,
+        "gestures": [
+          "crosses arms"
+        ]
+      }
+    },
+    {
+      "turn_id": "t12",
+      "index": 12,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:04:05Z",
+      "text": "The record is pretty clear. You need to take it as prescribed or your sugar won't come down.",
+      "facts_released": [],
+      "referenced_by": [
+        "written_evidence.safety_or_accuracy_concern",
+        "under_probing.0"
+      ]
+    },
+    {
+      "turn_id": "t13",
+      "index": 13,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:04:25Z",
+      "text": "I said I take it.",
+      "facts_released": [],
+      "referenced_by": [
+        "lies.d.adherence",
+        "rubric.rapport_respect_empathy",
+        "debrief_questions.1"
+      ],
+      "face": {
+        "emotion": "angry",
+        "intensity": 0.6,
+        "gestures": [
+          "crosses arms"
+        ]
+      }
+    },
+    {
+      "turn_id": "t14",
+      "index": 14,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:04:45Z",
+      "text": "Okay. I'm ordering an HbA1c.",
+      "facts_released": [
+        {
+          "fact_id": "f.lab.hba1c",
+          "label": "HbA1c",
+          "channel": "chart"
+        }
+      ],
+      "referenced_by": [
+        "behaviors.repaired_rapport"
+      ]
+    },
+    {
+      "turn_id": "t15",
+      "index": 15,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:05:05Z",
+      "text": "Fine.",
+      "facts_released": [],
+      "referenced_by": [],
+      "face": {
+        "emotion": "frustrated",
+        "intensity": 0.6
+      }
+    },
+    {
+      "turn_id": "t16",
+      "index": 16,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:05:25Z",
+      "text": "It's 9.2 percent. That's well above target, which is what I'd expect if doses are being missed. Do you drink a lot of sugary drinks?",
+      "facts_released": [],
+      "referenced_by": [
+        "rubric.information_gathering",
+        "rubric.explanation_and_shared_decisions",
+        "rubric.clinical_reasoning_and_synthesis",
+        "under_probing.1"
+      ]
+    },
+    {
+      "turn_id": "t17",
+      "index": 17,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:05:45Z",
+      "text": "Not really.",
+      "facts_released": [],
+      "referenced_by": [
+        "objectives.o.history"
+      ],
+      "face": {
+        "emotion": "frustrated",
+        "intensity": 0.5,
+        "gestures": [
+          "looks away"
+        ]
+      }
+    },
+    {
+      "turn_id": "t18",
+      "index": 18,
+      "speaker": "learner",
+      "display_name": "Jordan",
+      "at": "2026-10-09T16:06:05Z",
+      "text": "All right. I'll let my preceptor know about the refills and the A1c, and we'll have you come back in a month. Please try to take the metformin twice a day. Any questions?",
+      "facts_released": [],
+      "referenced_by": [
+        "rubric.explanation_and_shared_decisions",
+        "rubric.professionalism_safety_closure"
+      ]
+    },
+    {
+      "turn_id": "t19",
+      "index": 19,
+      "speaker": "patient",
+      "display_name": "Maria",
+      "at": "2026-10-09T16:06:25Z",
+      "text": "No.",
+      "facts_released": [],
+      "referenced_by": [
+        "rubric.professionalism_safety_closure"
+      ],
+      "face": {
+        "emotion": "frustrated",
+        "intensity": 0.6
+      }
+    }
+  ]
+}

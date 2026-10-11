@@ -1,0 +1,422 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://caseclimb.app/schemas/patient_record.schema.json",
+  "title": "PatientRecord",
+  "description": "A faculty-authored virtual patient. Claude plays this patient; the clinical facts here are the only clinical truth the patient or chart may present. Any published record can run in the encounter engine without patient-specific code.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "version",
+    "status",
+    "title",
+    "demographics",
+    "persona",
+    "chief_complaint",
+    "clinical_facts",
+    "learning_objectives",
+    "created_at",
+    "updated_at"
+  ],
+  "properties": {
+    "record_id": { "$ref": "#/$defs/id" },
+    "version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Incremented on every edit. Episodes pin the version they ran against."
+    },
+    "status": {
+      "enum": ["draft", "in_review", "published", "archived"],
+      "description": "Only published records can be used in an episode."
+    },
+    "title": {
+      "type": "string",
+      "description": "Case name shown to faculty, e.g. '58F new type 2 diabetes with early CKD'."
+    },
+    "authored_by": { "$ref": "#/$defs/person_ref" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+
+    "demographics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "age", "sex"],
+      "properties": {
+        "name": { "type": "string" },
+        "age": { "type": "integer", "minimum": 0, "maximum": 120 },
+        "sex": { "enum": ["female", "male", "intersex", "unknown"] },
+        "gender_identity": { "type": "string" },
+        "pronouns": { "type": "string" },
+        "race_ethnicity": { "type": "string" },
+        "preferred_language": { "type": "string" },
+        "occupation": { "type": "string" },
+        "location": { "type": "string" }
+      }
+    },
+
+    "persona": {
+      "type": "object",
+      "description": "How the patient talks and behaves. Shapes dialogue only, never clinical facts.",
+      "additionalProperties": false,
+      "required": ["personality", "speech_style"],
+      "properties": {
+        "personality": { "type": "string" },
+        "speech_style": {
+          "type": "string",
+          "description": "Vocabulary, verbosity, slang, how they describe symptoms."
+        },
+        "health_literacy": { "enum": ["low", "moderate", "high"] },
+        "disclosure_tendency": {
+          "enum": ["guarded", "neutral", "open"],
+          "description": "How readily the patient volunteers information without being asked well."
+        },
+        "baseline_emotion": { "$ref": "#/$defs/emotion" },
+        "concerns": { "type": "array", "items": { "type": "string" } },
+        "goals": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Patient's own goals, e.g. 'avoid big medication changes before my daughter's wedding'."
+        },
+        "preferences": { "type": "array", "items": { "type": "string" } },
+        "strengths": { "type": "array", "items": { "type": "string" } },
+        "social_context": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "living_situation": { "type": "string" },
+            "support_system": { "type": "string" },
+            "insurance": { "type": "string" },
+            "barriers": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "avatar": {
+      "type": "object",
+      "description": "Rendering config for the avatar that voices the patient and reacts to the conversation.",
+      "additionalProperties": false,
+      "properties": {
+        "appearance": { "type": "string" },
+        "model_ref": {
+          "type": "string",
+          "description": "Avatar asset or provider character id."
+        },
+        "voice_ref": { "type": "string", "description": "TTS voice id." },
+        "baseline_expression": { "$ref": "#/$defs/emotion" },
+        "mannerisms": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "e.g. 'rubs chest when describing pain', 'avoids eye contact when discussing weight'."
+        }
+      }
+    },
+
+    "chief_complaint": {
+      "type": "string",
+      "description": "In the patient's own words."
+    },
+
+    "clinical_facts": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/clinical_fact" }
+    },
+
+    "discrepancies": {
+      "type": "array",
+      "description": "Deliberate conflicts between what the patient says and what the chart shows, used to test clinical reasoning.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["discrepancy_id", "patient_claim", "contradicting_fact_ids"],
+        "properties": {
+          "discrepancy_id": { "$ref": "#/$defs/id" },
+          "patient_claim": {
+            "type": "string",
+            "description": "What the patient says, e.g. 'I take my metformin every day.'"
+          },
+          "contradicting_fact_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "$ref": "#/$defs/id" }
+          },
+          "truth": {
+            "type": "string",
+            "description": "What is actually going on, e.g. 'skips doses because of GI side effects and cost'."
+          },
+          "reveal_condition": {
+            "type": "string",
+            "description": "When the patient admits the truth, e.g. 'asked non-judgmentally about side effects or cost'."
+          }
+        }
+      }
+    },
+
+    "artifacts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/artifact" }
+    },
+
+    "knowledge_sources": {
+      "type": "array",
+      "description": "Guidelines, papers, or protocols that ground this case.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "type", "title"],
+        "properties": {
+          "source_id": { "$ref": "#/$defs/id" },
+          "type": { "enum": ["guideline", "paper", "protocol", "textbook", "other"] },
+          "title": { "type": "string" },
+          "uri": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+
+    "learning_objectives": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Faculty-defined objectives that drive grading.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["objective_id", "description", "competency"],
+        "properties": {
+          "objective_id": { "$ref": "#/$defs/id" },
+          "description": { "type": "string" },
+          "competency": {
+            "enum": [
+              "history_taking",
+              "clinical_reasoning",
+              "communication",
+              "empathy",
+              "professionalism",
+              "patient_education",
+              "interprofessional",
+              "other"
+            ]
+          },
+          "critical_fact_ids": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/id" },
+            "description": "Facts the student is expected to elicit for this objective."
+          },
+          "applies_to_roles": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Roles this objective applies to; empty means all roles."
+          },
+          "weight": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+
+    "care_pathway": {
+      "type": "array",
+      "description": "Optional ordered sequence of professionals the instructor routes this patient through, e.g. cardiologist, then radiologist, then physical therapist.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["step", "role"],
+        "properties": {
+          "step": { "type": "integer", "minimum": 1 },
+          "role": { "type": "string" },
+          "goal": { "type": "string" },
+          "simulated_days_after_previous": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "In-world time gap, so the patient can say 'I saw John last week'."
+          }
+        }
+      }
+    },
+
+    "review": {
+      "type": "object",
+      "description": "Consistency check and faculty approval before publishing.",
+      "additionalProperties": false,
+      "properties": {
+        "consistency_checked_at": { "type": "string", "format": "date-time" },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["severity", "message"],
+            "properties": {
+              "severity": { "enum": ["info", "warning", "error"] },
+              "message": { "type": "string" },
+              "fact_ids": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+              "resolved": { "type": "boolean" }
+            }
+          }
+        },
+        "approved_by": { "$ref": "#/$defs/person_ref" },
+        "approved_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  },
+
+  "$defs": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+
+    "person_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["user_id"],
+      "properties": {
+        "user_id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" }
+      }
+    },
+
+    "emotion": {
+      "enum": [
+        "neutral",
+        "calm",
+        "anxious",
+        "fearful",
+        "sad",
+        "frustrated",
+        "angry",
+        "confused",
+        "embarrassed",
+        "relieved",
+        "hopeful",
+        "in_pain"
+      ]
+    },
+
+    "disclosure": {
+      "type": "object",
+      "description": "When and where a fact or artifact becomes visible during an episode.",
+      "additionalProperties": false,
+      "required": ["channel", "release"],
+      "properties": {
+        "channel": {
+          "enum": ["patient", "chart", "both"],
+          "description": "patient = the patient can say it; chart = it appears in the medical record panel."
+        },
+        "release": {
+          "enum": ["at_start", "when_asked", "when_ordered", "after_fact", "never"],
+          "description": "at_start: visible immediately. when_asked: student asks about a trigger topic. when_ordered: student orders the test or exam. after_fact: unlocked once requires_fact_ids are disclosed. never: background truth only."
+        },
+        "trigger_topics": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Topics or question intents that release this item, e.g. 'medication adherence'."
+        },
+        "requires_fact_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" }
+        }
+      }
+    },
+
+    "clinical_fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fact_id", "category", "label", "value", "disclosure"],
+      "properties": {
+        "fact_id": { "$ref": "#/$defs/id" },
+        "category": {
+          "enum": [
+            "history_of_present_illness",
+            "past_medical_history",
+            "surgical_history",
+            "medication",
+            "allergy",
+            "family_history",
+            "social_history",
+            "review_of_systems",
+            "vital_sign",
+            "physical_exam",
+            "lab_result",
+            "imaging",
+            "diagnosis",
+            "procedure",
+            "other"
+          ]
+        },
+        "label": { "type": "string", "description": "e.g. 'HbA1c', 'Metformin', 'Smoking'." },
+        "value": {
+          "type": "string",
+          "description": "Approved clinical value or statement, e.g. '9.2%', '500 mg PO BID', '1 ppd x 20 years'."
+        },
+        "measurement": {
+          "type": "object",
+          "description": "Structured form for numeric results.",
+          "additionalProperties": false,
+          "required": ["value", "unit"],
+          "properties": {
+            "value": { "type": "number" },
+            "unit": { "type": "string" },
+            "reference_range": { "type": "string" },
+            "flag": { "enum": ["normal", "low", "high", "critical"] }
+          }
+        },
+        "observed_at": {
+          "type": "string",
+          "description": "ISO date or relative time, e.g. '2026-09-01' or '3 months ago'."
+        },
+        "patient_knows": {
+          "type": "boolean",
+          "default": true,
+          "description": "False for things only the chart knows (e.g. exact lab values)."
+        },
+        "patient_phrasing": {
+          "type": "string",
+          "description": "How the patient would say it, e.g. 'my sugar's been a bit high'."
+        },
+        "disclosure": { "$ref": "#/$defs/disclosure" },
+        "source_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" },
+          "description": "knowledge_sources backing this fact."
+        }
+      }
+    },
+
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "type", "title", "disclosure"],
+      "properties": {
+        "artifact_id": { "$ref": "#/$defs/id" },
+        "type": {
+          "enum": [
+            "lab_report",
+            "ecg",
+            "xray",
+            "ct",
+            "mri",
+            "ultrasound",
+            "prior_note",
+            "medication_list",
+            "photo",
+            "other"
+          ]
+        },
+        "title": { "type": "string" },
+        "uri": { "type": "string", "description": "Storage location, e.g. S3 key." },
+        "mime_type": { "type": "string" },
+        "approved_interpretation": {
+          "type": "string",
+          "description": "Faculty-approved reading. The AI may only cite this, never re-interpret the image."
+        },
+        "related_fact_ids": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "dated": { "type": "string" },
+        "disclosure": { "$ref": "#/$defs/disclosure" }
+      }
+    }
+  }
+}

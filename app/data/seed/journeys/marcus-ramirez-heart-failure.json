@@ -1,0 +1,50 @@
+{
+  "id": "seed_journey-marcus-ramirez",
+  "title": "Marcus Ramirez: heart failure, new diabetes and weight loss across four professions",
+  "caseId": "seed_sample-marcus-ramirez",
+  "spec": {
+    "summary": "Marcus Ramirez, 59, has heart failure and newly diagnosed, poorly controlled type 2 diabetes. He is seen in turn by emergency medicine, cardiology, clinical pharmacy and dietetics. Each professional starts from what the others recorded, adds their own findings, and hands off with an SBAR. Join as any one of them; the AI plays the rest.",
+    "stages": [
+      {
+        "id": "s1",
+        "order": 1,
+        "professionId": "emergency-medicine",
+        "roleTitle": "Emergency medicine attending",
+        "clinicianId": "brian_lee",
+        "focus": "First contact for the team. Find out how he is right now and what is troubling him most, review his vital signs, check for anything that needs urgent attention, and identify what cardiology, pharmacy and nutrition each need to look at.",
+        "simTime": "Week 1, Mon 10:30",
+        "visitLabel": "urgent video triage"
+      },
+      {
+        "id": "s2",
+        "order": 2,
+        "professionId": "cardiology",
+        "roleTitle": "Cardiologist",
+        "clinicianId": "david_bennet",
+        "focus": "Review his heart failure: current symptoms, what limits him day to day, and the cardiac medicines on his list. Follow up on what the triage visit flagged and say what is and is not explained by his heart.",
+        "simTime": "Week 1, Wed 14:00",
+        "visitLabel": "cardiology video follow-up"
+      },
+      {
+        "id": "s3",
+        "order": 3,
+        "professionId": "clinical-pharmacy",
+        "roleTitle": "Clinical pharmacist",
+        "clinicianId": "nasir_mahmoud",
+        "focus": "Medication reconciliation and adherence. Find out what he actually takes and when, side effects and fears, supplements and herbal products, and anything on the medication list that looks duplicated or unsafe. Flag concerns for the prescribers.",
+        "simTime": "Week 1, Fri 09:15",
+        "visitLabel": "pharmacist medication review by video"
+      },
+      {
+        "id": "s4",
+        "order": 4,
+        "professionId": "dietetics",
+        "roleTitle": "Registered dietitian",
+        "clinicianId": "tasha_dunbar",
+        "focus": "Nutrition assessment. Explore his eating pattern, appetite and weight, fluids, food access and beliefs about food, and agree realistic changes that fit both his heart failure and his diabetes and what he wants for himself.",
+        "simTime": "Week 2, Tue 11:00",
+        "visitLabel": "telehealth nutrition visit"
+      }
+    ]
+  }
+}

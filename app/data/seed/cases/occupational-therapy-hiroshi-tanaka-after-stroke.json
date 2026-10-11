@@ -1,0 +1,818 @@
+{
+ "origin": "ai_draft",
+ "reviewed": false,
+ "profile": {
+  "version": 1,
+  "actions": [
+   {
+    "id": "a1",
+    "kind": "assessment",
+    "name": "Occupational profile interview (roles, routines, COPM priorities)",
+    "result": "Patient identifies retired sushi chef role as central to identity. Top COPM priorities: cooking (performance 2/10, satisfaction 1/10), dressing (performance 4/10, satisfaction 3/10), bathing (performance 4/10, satisfaction 2/10). Reports wife has taken over most cooking and all dressing since discharge.",
+    "importance": "critical",
+    "artifactIds": []
+   },
+   {
+    "id": "a2",
+    "kind": "exam",
+    "name": "Camera-guided inspection of kitchen environment",
+    "result": "Loose throw mats on floor near stove, long cabinet/drawer at waist height holds knives, gas hob with manual ignition knobs flush with pot handles, narrow walkway between counter and table, no grab bars, lighting adequate but glare on stovetop from window on the left side of the room.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a3",
+    "kind": "exam",
+    "name": "Camera-guided inspection of left hand/forearm skin",
+    "result": "2 cm x 3 cm partial-thickness burn with blistering and mild erythema on dorsum of left hand, no drainage; wound is uncovered with no dressing or ointment visible. No other skin breakdown noted. Timing and mechanism of injury not evident on visual inspection alone and would require direct patient report.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a4",
+    "kind": "test",
+    "name": "Observed functional reach and scanning - letter cancellation style task (ask patient to find all red dots on a sheet taped to the left and right walls)",
+    "result": "Patient consistently misses targets placed on the left wall and left half of a page held centrally; when the examiner verbally redirects his attention to that side, he is able to find them, but he does not spontaneously self-correct or re-scan leftward on his own.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a5",
+    "kind": "test",
+    "name": "Patient-performed grasp-and-release task with a cup (observed on camera)",
+    "result": "Left hand able to grasp cup with effort using whole-hand pattern; marked difficulty voluntarily opening fingers to release, requires shaking hand or using right hand to pry fingers open; task takes over 15 seconds.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a6",
+    "kind": "test",
+    "name": "Patient-performed active range of motion, left shoulder/elbow/wrist/fingers on camera",
+    "result": "Shoulder flexion/abduction to about 90 degrees against gravity, elbow flexion/extension full but slow, wrist extension weak (barely clears neutral), finger extension markedly limited, finger flexion/grasp better preserved than extension.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a7",
+    "kind": "test",
+    "name": "Mini-mental/orientation screening questions (name, date, location, simple recall)",
+    "result": "Oriented x3, recalls 3/3 words at 5 minutes, follows multi-step verbal instructions without difficulty.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a8",
+    "kind": "exam",
+    "name": "Camera-guided inspection of hallway and doorway where bumping occurs",
+    "result": "Doorway to kitchen is narrow (approx 32 inches); patient's left shoulder and cane tip contact the left door frame on 2 of 3 observed passes; no padding or visual marking on frame.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a9",
+    "kind": "assessment",
+    "name": "Observed simulated dressing task (patient attempts to put on a button-front shirt with wife present)",
+    "result": "Patient needs most steps performed by wife; when permitted to attempt independently, he can push left arm partway into sleeve but cannot manage buttons with left hand; becomes fatigued and frustrated after 2 minutes, wife steps in.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a10",
+    "kind": "record",
+    "name": "Review inpatient rehabilitation discharge summary",
+    "result": "Discharge summary confirms right MCA territory ischemic stroke 5 weeks ago, left hemiparesis greater in distal upper limb, left visual/spatial neglect noted on inpatient OT and PT notes, modified independence with cane for ambulation at discharge, recommended outpatient OT/PT and home safety follow-up.",
+    "importance": "important",
+    "artifactIds": []
+   },
+   {
+    "id": "a11",
+    "kind": "record",
+    "name": "Review current medication list",
+    "result": "Atorvastatin 40 mg nightly, lisinopril 10 mg daily, aspirin 81 mg daily, metformin 500 mg twice daily; no new sedating medications; adherence reported as good by caregiver.",
+    "importance": "minor",
+    "artifactIds": []
+   },
+   {
+    "id": "a12",
+    "kind": "test",
+    "name": "Ask patient to rate fatigue and pacing across a typical day (self-report scale)",
+    "result": "Reports fatigue rated 2/10 in morning rising to 7/10 by early afternoon; naps most afternoons; has not been using any formal pacing or rest-break strategy.",
+    "importance": "important",
+    "artifactIds": [
+     "d4"
+    ]
+   },
+   {
+    "id": "a13",
+    "kind": "exam",
+    "name": "Camera-guided inspection of bathroom",
+    "result": "Standard tub with no grab bars or non-slip mat, shower curtain only, toilet is standard height without rails, bath mat on tile floor is unsecured.",
+    "importance": "important",
+    "abnormal": true,
+    "artifactIds": []
+   },
+   {
+    "id": "a14",
+    "kind": "test",
+    "name": "Observed sensation screen - light touch comparison left vs right hand using patient's own fingertip and a household object",
+    "result": "Patient reports reduced but present light touch sensation on left hand compared to right hand across fingertips and dorsum; protective sensation appears diminished on screening but patient is able to detect touch when attention is directed to the hand.",
+    "importance": "critical",
+    "abnormal": true,
+    "artifactIds": []
+   }
+  ],
+  "artifacts": [
+   {
+    "id": "d1",
+    "type": "note",
+    "title": "Inpatient Rehabilitation Discharge Summary",
+    "date": "8 days ago",
+    "author": "Inpatient Rehabilitation Service, Harbor-area Rehab Hospital",
+    "release": {
+     "when": "start"
+    },
+    "body": "70-year-old man s/p right MCA territory ischemic stroke (5 weeks prior to discharge) presenting with left hemiparesis (upper limb > lower limb), left-sided omissions noted on inpatient OT and PT screening tasks, mild left upper limb sensory impairment, and fatigue. Ambulates with a single-point cane, modified independence. Discharged home with wife as primary support. Recommendations: outpatient OT for upper limb retraining, ADL retraining, cognitive-perceptual strategies, and home safety evaluation; outpatient PT for gait and endurance; follow-up with neurology in 1 month. Patient did not consistently participate in compensatory strategy training during admission due to limited length of stay."
+   },
+   {
+    "id": "d2",
+    "type": "medication_list",
+    "title": "Current Medication List",
+    "date": "Today",
+    "author": "Primary Care Clinic",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Medication",
+      "Dose",
+      "Route",
+      "Frequency"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "Atorvastatin",
+        "40 mg",
+        "Oral",
+        "Nightly"
+       ]
+      },
+      {
+       "cells": [
+        "Lisinopril",
+        "10 mg",
+        "Oral",
+        "Daily"
+       ]
+      },
+      {
+       "cells": [
+        "Aspirin",
+        "81 mg",
+        "Oral",
+        "Daily"
+       ]
+      },
+      {
+       "cells": [
+        "Metformin",
+        "500 mg",
+        "Oral",
+        "Twice daily"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d3",
+    "type": "flowsheet",
+    "title": "Vital Signs - Last Primary Care Visit",
+    "date": "3 weeks ago",
+    "author": "Primary Care Clinic",
+    "release": {
+     "when": "start"
+    },
+    "table": {
+     "columns": [
+      "Date",
+      "Blood Pressure",
+      "Heart Rate",
+      "Weight",
+      "Blood Glucose (random)"
+     ],
+     "rows": [
+      {
+       "cells": [
+        "3 weeks ago",
+        "138/82 mmHg",
+        "76 bpm",
+        "168 lb",
+        "142 mg/dL"
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d4",
+    "type": "chart",
+    "title": "Reported Daily Fatigue Pattern",
+    "date": "Today",
+    "author": "Patient self-report",
+    "release": {
+     "when": "action",
+     "ref": "a12"
+    },
+    "chart": {
+     "kind": "line",
+     "xLabel": "Time of day",
+     "yLabel": "Fatigue (0-10)",
+     "series": [
+      {
+       "name": "Fatigue level",
+       "points": [
+        {
+         "x": "8 AM",
+         "y": 2
+        },
+        {
+         "x": "10 AM",
+         "y": 3
+        },
+        {
+         "x": "12 PM",
+         "y": 4
+        },
+        {
+         "x": "2 PM",
+         "y": 7
+        },
+        {
+         "x": "4 PM",
+         "y": 6
+        },
+        {
+         "x": "6 PM",
+         "y": 5
+        }
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "id": "d5",
+    "type": "note",
+    "title": "Primary Care Progress Note - Pre-stroke Baseline",
+    "date": "4 months ago",
+    "author": "Primary Care Clinic",
+    "release": {
+     "when": "start"
+    },
+    "body": "Patient seen for routine diabetes and hypertension follow-up. Independent in all ADLs and IADLs at that time, including cooking professionally until retirement 2 years ago and continuing to cook daily at home. No gait aid used. No cognitive complaints. Type 2 diabetes well controlled, hypertension controlled on current regimen."
+   },
+   {
+    "id": "d6",
+    "type": "note",
+    "title": "Inpatient OT Note - Neglect Screening (3 weeks ago)",
+    "date": "3 weeks ago, during inpatient stay",
+    "author": "Inpatient Occupational Therapist",
+    "release": {
+     "when": "start"
+    },
+    "body": "Line bisection and letter cancellation tasks performed during admission showed left-sided omissions. Family was educated on strategies to cue attention to the left side. Recommended continued outpatient monitoring and compensatory strategy training, noting that length of stay limited the extent of in-depth training completed prior to discharge."
+   }
+  ],
+  "facts": [
+   {
+    "id": "f1",
+    "category": "chief_complaint",
+    "topic": "reason for visit",
+    "chart": "Patient referred for initial OT evaluation at home one week after discharge from inpatient rehab following right-hemisphere stroke; goals include resuming cooking and self-care.",
+    "says": "They sent you to see how I'm doing at home now. I want to get back to cooking. That's really what I want.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f2",
+    "category": "hpi",
+    "topic": "stroke timeline",
+    "chart": "Right MCA ischemic stroke 5 weeks ago; discharged from inpatient rehab 1 week ago.",
+    "says": "It happened about five weeks back. I was in the hospital, then the rehab place, and I only came home a week ago.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f3",
+    "category": "hpi",
+    "topic": "left arm and hand weakness",
+    "chart": "Reports left arm/hand weakness since stroke; can grasp objects but has difficulty releasing them.",
+    "says": "My left hand, I can close it around something, but letting go, that's the hard part. It just won't open when I want it to.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f4",
+    "category": "hpi",
+    "topic": "fatigue pattern",
+    "chart": "Reports significant afternoon fatigue requiring daily naps; no formal pacing strategy in place.",
+    "says": "By the afternoon I'm just worn out. I have to lie down most days.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f5",
+    "category": "goals",
+    "topic": "cooking priority",
+    "chart": "Top-rated COPM priority is returning to cooking, specifically knife work and stovetop use.",
+    "says": "I was a sushi chef for over forty years. If I can't cook, I don't know what I am.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f6",
+    "category": "goals",
+    "topic": "chopsticks use",
+    "chart": "Patient specifically wants to regain ability to use chopsticks with left hand assist/right hand primary.",
+    "says": "Even just using chopsticks properly again, at the table, that matters to me.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f7",
+    "category": "goals",
+    "topic": "dressing priority",
+    "chart": "COPM priority: independent dressing, currently wife performs most steps.",
+    "says": "My wife helps me get dressed every morning now. I used to just do it myself in two minutes.",
+    "tier": "initial",
+    "importance": "important"
+   },
+   {
+    "id": "f8",
+    "category": "goals",
+    "topic": "bathing priority",
+    "chart": "COPM priority: independent and safe bathing.",
+    "says": "Bathing, I need her help too. I don't like needing help for that.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f9",
+    "category": "psychosocial",
+    "topic": "caregiver role change",
+    "chart": "Wife (Emiko) has taken over all cooking and dressing tasks since discharge 'so he does not get hurt.'",
+    "says": "My wife won't let me near the stove anymore. She says it's too dangerous for me now.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f10",
+    "category": "psychosocial",
+    "topic": "frustration with dependence",
+    "chart": "Patient expresses frustration and loss of identity related to increased dependence on wife for self-care and cooking.",
+    "says": "I don't like sitting there while she does everything. I feel useless.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f11",
+    "category": "hpi",
+    "topic": "recent hand injury",
+    "chart": "Patient sustained a left hand burn 2 days ago while attempting to cook unsupervised; did not initially feel the heat; has concealed this from his wife.",
+    "says": "I burned my hand two days ago, on a pan. I didn't feel it right away, I just saw it was red after. Please don't tell my wife, she'll never let me in the kitchen again.",
+    "tier": "reluctant",
+    "importance": "critical"
+   },
+   {
+    "id": "f12",
+    "category": "ros",
+    "topic": "visual awareness left side",
+    "chart": "Patient denies any difficulty seeing or noticing things on his left side when asked directly, despite documented neglect findings.",
+    "says": "No, I see everything fine on that side. I don't know why everyone keeps asking me that.",
+    "tier": "initial",
+    "importance": "critical"
+   },
+   {
+    "id": "f13",
+    "category": "hpi",
+    "topic": "bumping into objects",
+    "chart": "Reports occasionally bumping into the left side of doorways while walking with cane but attributes it to the cane, not to any visual or attention problem.",
+    "says": "I bump the door sometimes with my cane, that thing's clumsy, that's all it is.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f14",
+    "category": "pmh",
+    "topic": "diabetes history",
+    "chart": "History of type 2 diabetes, previously well-controlled on metformin.",
+    "says": "I've had the sugar diabetes for years, it's been fine with my pills.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f15",
+    "category": "pmh",
+    "topic": "hypertension history",
+    "chart": "History of hypertension, previously well-controlled.",
+    "says": "Blood pressure, that's been under control a long time.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f16",
+    "category": "medications",
+    "topic": "medication adherence",
+    "chart": "Wife manages and administers all medications; patient reports no missed doses.",
+    "says": "My wife gives me my pills every day, right on schedule.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f17",
+    "category": "social",
+    "topic": "living situation",
+    "chart": "Lives with wife Emiko in a single-story house in Torrance, CA; no stairs inside the home.",
+    "says": "We've lived in this house over thirty years, just the two of us now, no stairs, thank goodness.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f18",
+    "category": "social",
+    "topic": "occupation history",
+    "chart": "Retired sushi chef, worked over 40 years at the same restaurant before retiring 2 years ago.",
+    "says": "I ran the sushi counter for over forty years, same restaurant. Retired two years ago.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f19",
+    "category": "family",
+    "topic": "family support",
+    "chart": "One adult daughter lives nearby and visits weekly; otherwise wife is primary support.",
+    "says": "Our daughter comes by once a week to check on us, she lives about twenty minutes away.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f20",
+    "category": "function",
+    "topic": "knife storage access",
+    "chart": "Kitchen knives stored in a low drawer; patient has not attempted to retrieve them since the stroke.",
+    "says": "The knives are in the low drawer, same as always. I haven't tried to get them myself since I've been back.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f21",
+    "category": "function",
+    "topic": "stove type",
+    "chart": "Home kitchen has a gas stove with manual ignition knobs.",
+    "says": "It's a gas stove, same one we've had for years. You have to turn the knob and it clicks on.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f22",
+    "category": "function",
+    "topic": "walking aid use",
+    "chart": "Uses a single-point cane for ambulation at home, prescribed during inpatient rehab.",
+    "says": "They gave me this cane at the rehab place. I use it to get around the house.",
+    "tier": "initial",
+    "importance": "minor"
+   },
+   {
+    "id": "f23",
+    "category": "ros",
+    "topic": "pain",
+    "chart": "Denies shoulder or hand pain at rest; reports mild discomfort with overhead reaching on the left.",
+    "says": "No real pain, just a little pulling feeling if I reach way up with that arm.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f24",
+    "category": "ros",
+    "topic": "swallowing",
+    "chart": "Denies any swallowing difficulty; eating regular diet without choking or coughing.",
+    "says": "No trouble eating or swallowing, I eat everything fine.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f25",
+    "category": "ros",
+    "topic": "bladder and bowel",
+    "chart": "Denies bladder or bowel incontinence; toileting independent except for occasional balance concern.",
+    "says": "No accidents or anything like that, I get to the bathroom fine, just a little wobbly sometimes.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f26",
+    "category": "psychosocial",
+    "topic": "mood",
+    "chart": "Denies feeling depressed or hopeless; acknowledges frustration but denies low mood or anhedonia.",
+    "says": "I'm not sad about it, just frustrated. I still want to do things, I just can't right now the way I want.",
+    "tier": "discoverable",
+    "importance": "minor"
+   },
+   {
+    "id": "f27",
+    "category": "adherence",
+    "topic": "home exercise program",
+    "chart": "Was given a home exercise handout at discharge but reports he and wife have not consistently followed it.",
+    "says": "They gave us papers with exercises, but honestly we haven't been doing them much, things have been hectic.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f28",
+    "category": "goals",
+    "topic": "return to driving",
+    "chart": "Patient has not raised wanting to drive again; when asked, states he is not currently interested in driving.",
+    "says": "Driving? No, I'm not thinking about that right now.",
+    "tier": "discoverable",
+    "importance": "minor",
+    "distractor": true
+   },
+   {
+    "id": "f29",
+    "category": "sexual",
+    "topic": "intimacy concerns",
+    "chart": "Denies any concerns regarding sexual activity or intimacy at this time.",
+    "says": "That's not something we need to talk about today.",
+    "tier": "reluctant",
+    "importance": "minor"
+   },
+   {
+    "id": "f30",
+    "category": "function",
+    "topic": "bathroom safety awareness",
+    "chart": "Patient and wife have not installed any bathroom safety equipment since discharge despite recommendation at inpatient rehab.",
+    "says": "They mentioned bars for the tub at the hospital, but we haven't gotten around to it yet.",
+    "tier": "discoverable",
+    "importance": "important"
+   },
+   {
+    "id": "f31",
+    "category": "hpi",
+    "topic": "awareness of burn severity",
+    "chart": "Patient minimizes the burn, stating it 'is not that bad' and has not sought any wound care beyond washing it with water.",
+    "says": "It's not that bad, I just rinsed it with water. I don't think it needs anything else.",
+    "tier": "reluctant",
+    "importance": "important"
+   },
+   {
+    "id": "f32",
+    "category": "psychosocial",
+    "topic": "wife's wellbeing",
+    "chart": "Patient notes wife seems increasingly tired and stressed managing all caregiving tasks alone.",
+    "says": "She's exhausted, I can tell, doing everything for me now on top of the house.",
+    "tier": "discoverable",
+    "importance": "minor"
+   }
+  ],
+  "chartAtStart": [
+   {
+    "label": "Reason for visit",
+    "value": "Initial OT evaluation, home-based telehealth, 1 week post-discharge from inpatient rehabilitation following right-hemisphere ischemic stroke"
+   },
+   {
+    "label": "Problem list",
+    "value": "Right MCA ischemic stroke (5 weeks ago); left hemiparesis; left-sided omissions noted on inpatient screening (etiology to be characterized); type 2 diabetes mellitus; hypertension; retired, prior independent in all ADLs/IADLs"
+   },
+   {
+    "label": "Medications",
+    "value": "Atorvastatin 40 mg nightly; Lisinopril 10 mg daily; Aspirin 81 mg daily; Metformin 500 mg twice daily"
+   },
+   {
+    "label": "Allergies",
+    "value": "No known drug allergies"
+   },
+   {
+    "label": "Last vitals",
+    "value": "BP 138/82 mmHg, HR 76 bpm, Weight 168 lb (3 weeks ago, primary care)"
+   },
+   {
+    "label": "Care team",
+    "value": "Primary care physician; Neurology (follow-up pending); Inpatient rehabilitation team (discharged); Outpatient PT (referral pending); Outpatient OT (this evaluation)"
+   },
+   {
+    "label": "Code status",
+    "value": "Full code"
+   }
+  ],
+  "objectives": [
+   {
+    "id": "o1",
+    "text": "Elicit an occupational profile and client-centered priorities using the COPM framework, including roles tied to cultural identity (sushi chef) and family caregiving dynamics.",
+    "factIds": [
+     "f1",
+     "f5",
+     "f6",
+     "f7",
+     "f8",
+     "f9"
+    ],
+    "actionIds": [
+     "a1"
+    ]
+   },
+   {
+    "id": "o2",
+    "text": "Identify and reconcile a safety-relevant mismatch between the patient's self-report and documented/observed findings regarding left-sided neglect and the resulting hand burn.",
+    "factIds": [
+     "f11",
+     "f12",
+     "f13"
+    ],
+    "actionIds": [
+     "a3",
+     "a4",
+     "a14"
+    ]
+   },
+   {
+    "id": "o3",
+    "text": "Perform remote visual/functional screening of upper limb motor and sensory status relevant to grasp-release and safe kitchen task performance.",
+    "factIds": [
+     "f3",
+     "f23"
+    ],
+    "actionIds": [
+     "a5",
+     "a6",
+     "a14"
+    ]
+   },
+   {
+    "id": "o4",
+    "text": "Conduct a camera-guided home safety assessment of kitchen, hallway, and bathroom and identify specific environmental hazards relevant to stated goals.",
+    "factIds": [
+     "f20",
+     "f21",
+     "f30"
+    ],
+    "actionIds": [
+     "a2",
+     "a8",
+     "a13"
+    ]
+   },
+   {
+    "id": "o5",
+    "text": "Assess fatigue, cognitive status, and adherence to prior rehab recommendations to inform a realistic, graded return-to-cooking and ADL retraining plan.",
+    "factIds": [
+     "f4",
+     "f27"
+    ],
+    "actionIds": [
+     "a7",
+     "a12"
+    ]
+   },
+   {
+    "id": "o6",
+    "text": "Recognize findings that exceed OT scope (unaddressed burn wound, caregiver strain) and plan appropriate referral/communication rather than managing them directly.",
+    "factIds": [
+     "f11",
+     "f31",
+     "f32"
+    ],
+    "actionIds": [
+     "a3"
+    ]
+   }
+  ],
+  "mismatches": [
+   {
+    "id": "m1",
+    "factId": "f12",
+    "artifactId": "d6",
+    "patientClaim": "Patient states he sees everything fine on his left side and denies any visual or attentional problem.",
+    "recordEvidence": "Inpatient OT note documents left-sided omissions on line bisection and letter cancellation tasks during admission, and the current camera-guided cancellation task replicates this pattern with no spontaneous self-correction - findings that are inconsistent with the patient's confident denial of any left-sided problem.",
+    "teachingPoint": "Anosognosia/denial of neglect is common after right-hemisphere stroke; self-report alone is unreliable, and the OT must integrate observed performance (cancellation task, burn injury, doorway bumping) with prior documentation rather than accept the patient's verbal denial at face value, reasoning to the diagnosis themselves rather than having it stated outright in the chart."
+   },
+   {
+    "id": "m2",
+    "factId": "f31",
+    "patientClaim": "Patient states the burn 'is not that bad' and that he only rinsed it with water, implying no further care is needed.",
+    "recordEvidence": "Camera inspection shows a 2x3 cm partial-thickness burn with blistering, uncovered and unassessed by any clinician, which is outside the scope of OT wound management.",
+    "teachingPoint": "OT students must recognize when a finding requires medical referral (wound/burn care, possible loss of protective sensation) rather than being managed within the OT plan, and communicate promptly with the primary care or rehab physician."
+   }
+  ],
+  "patient": {
+   "name": "Hiroshi Tanaka",
+   "age": 70,
+   "sex": "male",
+   "pronouns": "he/him",
+   "ethnicity": "Japanese-American",
+   "occupation": "Retired sushi chef",
+   "language": "English (fluent, occasional Japanese phrases with family)",
+   "appearance": "A lean, upright 70-year-old man with close-cropped gray hair, seated in a kitchen chair wearing a buttoned cardigan over a t-shirt; his left arm rests slightly flexed in his lap. The video shows a tidy but dated kitchen behind him with a gas stove, overhead fluorescent lighting, and a cane leaning against the table within reach.",
+   "portrait": "/portraits/occupational-therapy-hiroshi-tanaka-after-stroke.jpg"
+  },
+  "persona": {
+   "personality": "Proud, stoic, and private; values competence and self-reliance built over decades as a professional chef; dry sense of humor that surfaces when he feels safe.",
+   "communicationStyle": "Speaks sparingly and directly, often downplaying difficulties; answers brief unless asked open-ended questions about cooking or his career, which he will discuss at length.",
+   "healthLiteracy": "moderate",
+   "emotionalState": "Frustrated and quietly grieving the loss of independence; guarded about admitting mistakes or injuries, especially to protect his relationship with his wife.",
+   "background": "Immigrated with his parents as a child, worked over 40 years at the same sushi restaurant in Torrance, retired two years ago. Married to Emiko for 45 years; one adult daughter lives nearby. Enjoys watching baseball and tending a small vegetable garden, though he hasn't been out to it since the stroke.",
+   "speechExamples": [
+    "I've been cutting fish since before you were born. I don't need someone watching me cut a cucumber.",
+    "It's fine. I rinsed it with water. No need to make a fuss.",
+    "My wife means well. But I'm not a child.",
+    "Chopsticks. That's all I ask. Just let me hold my chopsticks properly again."
+   ],
+   "concerns": [
+    "Will I ever cook again, even just for myself and my wife?",
+    "Will my wife ever trust me in the kitchen again?",
+    "Am I going to be a burden on my family?",
+    "Why does everyone keep asking about my left side when I feel fine?"
+   ]
+  },
+  "scenario": {
+   "studentBrief": "You are an occupational therapy student conducting an initial home-based telehealth evaluation for Hiroshi Tanaka, a 70-year-old retired sushi chef who returned home one week ago after inpatient rehabilitation following a stroke. He has requested OT help because he wants to return to cooking, dressing, and bathing independently. Conduct an occupational profile interview, use camera-guided observation to assess his home environment and functional performance, and begin building a client-centered plan.",
+   "chiefComplaint": "Difficulty resuming cooking, dressing, and bathing independently after stroke; wants OT help returning to these valued activities.",
+   "openingLine": "They sent you to see how I'm doing at home now. I want to get back to cooking. That's really what I want.",
+   "tasks": [
+    "Complete an occupational profile including COPM-style priorities and relevant roles",
+    "Use camera-guided observation to screen upper limb function and functional task performance",
+    "Assess the home environment for safety hazards relevant to stated goals",
+    "Screen for cognitive-perceptual issues and compare findings with available documentation",
+    "Identify any findings requiring referral or communication with the healthcare team and draft an initial OT evaluation note with goals and plan"
+   ],
+   "timeLimitMin": 25
+  },
+  "answerKey": {
+   "primaryProblem": "Left hemiparesis with distal-greater-than-proximal upper limb weakness and impaired voluntary finger release, superimposed on mild left spatial neglect and reduced left-hand protective sensation, limiting safe resumption of valued occupations (cooking, dressing, bathing) one week after discharge from inpatient stroke rehabilitation.",
+   "differential": [
+    "Left hemiparesis/upper limb motor impairment from right MCA stroke (primary driver of grasp-release difficulty)",
+    "Left spatial neglect/inattention (explains doorway bumping, missed left-side cancellation targets, and denial despite documented inpatient findings)",
+    "Reduced/altered sensation in left hand contributing to delayed awareness of the burn injury (possible sensory loss vs. combined sensory-attentional deficit, requires further sensory testing and medical correlation)",
+    "Deconditioning/fatigue limiting endurance for ADL tasks, distinct from but compounding the above",
+    "Caregiver-driven activity restriction (wife performing tasks 'for safety') overlaid on, and partly obscuring, the patient's own functional potential"
+   ],
+   "keyFindings": [
+    "Left hand can grasp but has marked difficulty with voluntary finger extension/release (a5, a6)",
+    "Left-sided omissions on camera-guided cancellation task and inpatient-documented neglect, despite patient's firm denial of any left-sided visual/attentional problem (a4, d6, f12)",
+    "Unrecognized and unaddressed partial-thickness burn to left hand sustained 2 days ago while attempting to cook unsupervised, disclosed reluctantly only on direct, sensitive questioning (a3, f11, f31)",
+    "Reduced light touch sensation in left hand on screening, raising concern for impaired protective sensation that may relate to delayed burn awareness once disclosed (a14)",
+    "Multiple home hazards in kitchen, hallway, and bathroom relevant to stated goals (a2, a8, a13)",
+    "Afternoon fatigue pattern without current pacing strategy; home exercise program not being followed (a12, f4, f27)",
+    "Wife has assumed all cooking and dressing tasks 'for safety,' consistent with role overload and reduced opportunity for the patient to practice/regain skills (f9, f10, f32)"
+   ],
+   "plan": [
+    "Document findings in an OT evaluation note: occupational profile, COPM-style scores, analysis of occupational performance, goals, and plan",
+    "Communicate the unaddressed left hand burn promptly to the patient's primary care physician or neurology team for wound assessment and sensory follow-up; do not manage the wound within OT scope",
+    "Initiate graded, safety-structured kitchen re-engagement starting with seated, right-hand-dominant tasks and simple left-hand assistive holding roles; any progression toward stovetop or knife-handling tasks should occur only in-person or under direct caregiver/clinician supervision with explicit safety protocols, not as unsupervised telehealth-directed practice, using adaptive equipment (non-slip mats, rocker knife, built-up chopstick aid) as tolerated",
+    "Introduce explicit compensatory strategies for left neglect (visual scanning training, anchoring/organizing the workspace to the left, verbal/tactile cueing) and provide education to patient and wife about the nature of neglect and why self-report of 'seeing fine' is not sufficient reassurance of safety",
+    "Recommend home environment modifications: remove or secure loose kitchen/bathroom mats, relocate or add safety features to the low knife drawer, install grab bars/non-slip surfaces in the bathroom, and address the narrow doorway (padding, visual marker, decluttering)",
+    "Collaborate with patient and wife on a graded dressing and bathing retraining plan with adaptive techniques (e.g., dressing weaker arm first, button hook or pullover substitution) to shift tasks back toward patient-performed with supervision rather than wife performing fully",
+    "Introduce energy conservation/pacing strategies for the afternoon fatigue pattern and reinforce/re-issue the home exercise program with a simplified schedule to improve adherence",
+    "Address caregiver strain: validate wife's efforts, discuss respite/support resources, and reframe the goal as safe shared participation rather than full takeover, to support both patient autonomy and wife's wellbeing",
+    "Refer/coordinate with outpatient PT (gait, endurance) and flag neglect/cognitive-perceptual findings for continued monitoring at upcoming neurology follow-up"
+   ],
+   "redFlags": [
+    "Unrecognized burn injury with delayed symptom awareness, suggesting impaired protective sensation/awareness on the affected hand that increases risk of further injury in the kitchen",
+    "Patient's firm denial of neglect despite objective evidence, which increases risk of unsafe independent attempts at hazardous tasks (stovetop, knives) if not addressed",
+    "Unaddressed home hazards (loose mats, exposed knife storage, ungraded doorway, bathroom without safety equipment) in a household where return to cooking is an explicit goal",
+    "Signs of caregiver strain/exhaustion that could affect sustainability of the home support system"
+   ],
+   "educationPoints": [
+    "Right-hemisphere stroke commonly produces left spatial neglect, which is frequently accompanied by anosognosia (lack of awareness), making patient self-report alone unreliable for safety determinations",
+    "Occupational therapy assessment should combine client-centered interview (COPM) with direct observation of task performance and the physical environment, since reported ability and demonstrated ability can diverge significantly after stroke",
+    "Exam/screening findings (wound appearance, sensory responses) must be distinguished from information that only the patient can disclose (mechanism, timing, awareness at the time of injury); students should recognize when a finding requires a direct, sensitive interview question rather than being assumed from an exam result",
+    "Loss of protective sensation combined with neglect substantially raises burn/injury risk during kitchen tasks and must be factored into any return-to-cooking plan",
+    "Caregivers who take over tasks 'to keep the patient safe' can inadvertently reduce opportunities for skill practice and recovery; OT's role includes helping renegotiate shared, graded participation",
+    "Findings such as an unaddressed burn wound or caregiver strain are important to recognize and route to the appropriate team member (physician, social work) rather than managed solely within OT scope",
+    "Hazardous task retraining (stovetop, knife use) in a telehealth context carries supervision limitations and should be escalated to in-person or caregiver-supervised sessions with explicit safety protocols rather than directed solely by video"
+   ]
+  },
+  "title": "Return to the Kitchen: Initial Home OT Evaluation After Right-Hemisphere Stroke",
+  "summary": "A 70-year-old retired sushi chef, one week home from inpatient rehab after a right-hemisphere stroke, wants to return to cooking, dressing, and bathing but has left hand weakness with impaired release, denies left-sided neglect despite documented inpatient findings, and has concealed a recent unnoticed hand burn. The case teaches OT students to reconcile patient self-report with observed/documented evidence, perform remote upper-limb and home safety screening, and recognize findings (wound, caregiver strain) that require referral beyond OT scope.",
+  "specialty": "Occupational Therapy",
+  "setting": "Telehealth video visit, patient at home in Torrance, California, seated in his kitchen with his wife nearby in the house",
+  "encounterType": "initial evaluation",
+  "difficulty": 3,
+  "professions": [
+   "occupational-therapy"
+  ],
+  "knowledge": [],
+  "rubricId": "default",
+  "variants": []
+ }
+}
