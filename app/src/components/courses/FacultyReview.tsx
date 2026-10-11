@@ -1,4 +1,5 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Button, Input, Label, Textarea } from "@/components/ui";
 
@@ -7,6 +8,7 @@ import { Button, Input, Label, Textarea } from "@/components/ui";
  * The note is shown to the student; the adjusted score replaces the rubric score in the gradebook.
  */
 export default function FacultyReview({ encounterId, note, score }: { encounterId: string; note: string | null; score: number | null }) {
+  const router = useRouter();
   const [text, setText] = useState(note || "");
   const [adj, setAdj] = useState(score === null || score === undefined ? "" : String(score));
   const [saved, setSaved] = useState({ note: note || "", score: score === null || score === undefined ? "" : String(score) });
@@ -27,7 +29,11 @@ export default function FacultyReview({ encounterId, note, score }: { encounterI
       setText(j.note || "");
       setAdj(s);
       setSaved({ note: j.note || "", score: s });
-      setMsg({ ok: true, text: "Review saved. The student can see your note." });
+      setMsg({ ok: true, text: "Review saved. Taking you back to your class…" });
+      // Back to the class page, where the rest of the visits waiting for review are listed.
+      router.push("/faculty");
+      router.refresh();
+      return;
     } catch (e) {
       setMsg({ ok: false, text: (e as Error).message });
     }
@@ -51,7 +57,7 @@ export default function FacultyReview({ encounterId, note, score }: { encounterI
       </div>
       <div className="mt-3 flex items-center gap-3">
         <Button size="sm" onClick={save} disabled={busy || invalid || !dirty}>
-          {busy ? "Saving…" : "Save review"}
+          {busy ? "Saving…" : "Save and go back"}
         </Button>
         {msg && <span className={`text-xs ${msg.ok ? "text-emerald-700" : "text-rose-700"}`}>{msg.text}</span>}
       </div>
