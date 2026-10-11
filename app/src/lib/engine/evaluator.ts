@@ -37,7 +37,7 @@ function runEvaluator(input: string): Promise<string> {
     const args = ["-m", "evaluator.poscere"];
     // Lets the app be exercised without Bedrock by replaying a saved grader response.
     if (process.env.EVALUATOR_REPLAY) args.push("--replay", process.env.EVALUATOR_REPLAY);
-    const child = spawn(PYTHON, args, {
+    const child = spawn(/*turbopackIgnore: true*/ PYTHON, args, {
       cwd: ROOT,
       env: { ...process.env, AWS_REGION: process.env.AWS_REGION || "us-west-2" },
     });
