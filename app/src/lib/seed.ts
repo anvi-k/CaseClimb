@@ -110,12 +110,14 @@ const DEMO_PATIENTS = ["seed_sample-walter-greene", "seed_sample-nisha-patel", "
  * has any class.
  */
 function seedDemoClass() {
+  // The class was first seeded with a lower-case "counseling"; bring existing installs in line.
+  run("UPDATE courses SET name = 'Nutrition Counseling' WHERE name = 'Nutrition counseling' AND join_code = 'NUTR48'");
   const faculty = get<{ id: string }>("SELECT id FROM users WHERE email = 'faculty@poscere.demo'");
   if (!faculty || get("SELECT 1 FROM courses WHERE faculty_id = ?", faculty.id)) return;
   const patients = DEMO_PATIENTS.filter((id) => get("SELECT 1 FROM cases WHERE id = ? AND status = 'published'", id));
   if (!patients.length) return;
   const courseId = newId("co_");
-  run("INSERT INTO courses (id, faculty_id, name, profession_id, join_code) VALUES (?,?,?,?,?)", courseId, faculty.id, "Nutrition counseling", null, "NUTR48");
+  run("INSERT INTO courses (id, faculty_id, name, profession_id, join_code) VALUES (?,?,?,?,?)", courseId, faculty.id, "Nutrition Counseling", null, "NUTR48");
   for (const s of all<{ id: string }>("SELECT id FROM users WHERE email LIKE '%@poscere.demo' AND role = 'student'")) run("INSERT OR IGNORE INTO enrollments (course_id, user_id) VALUES (?,?)", courseId, s.id);
   run(
     "INSERT INTO assignments (id, course_id, title, instructions, type, case_ids, journey_id, settings, due_at, feedback_released) VALUES (?,?,?,?,?,?,?,?,?,?)",
