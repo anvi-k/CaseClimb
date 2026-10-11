@@ -451,8 +451,17 @@ export default function CaseEditor({
       {profile.dataSource && (
         <Notice tone="teal" className="mb-3">
           <p className="text-sm">
-            <span className="font-medium">Clinical values from data.</span> Blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure come from {profile.dataSource.dataset}, row {profile.dataSource.row} (labelled {profile.dataSource.conditionLabel}). They are in the document &ldquo;Laboratory results&rdquo; and the
-            actions &ldquo;Blood tests&rdquo; and &ldquo;Blood pressure&rdquo;. Everything else about this patient was drafted by the guide.
+            {profile.dataSource.kind === "synthea" ? (
+              <>
+                <span className="font-medium">Clinical record from data.</span> This patient&rsquo;s name, age, sex, problem list, medications, allergies, vital signs, laboratory results and immunisations come from {profile.dataSource.dataset}, record {profile.dataSource.recordId}. They are in the chart summary, the documents
+                &ldquo;Problem list and history&rdquo;, &ldquo;Medication list&rdquo; and &ldquo;Laboratory results&rdquo;, and the actions &ldquo;Vital signs&rdquo;, &ldquo;Recent laboratory results&rdquo; and &ldquo;Immunisation record&rdquo;. The guide drafted the personality, the conversation and the teaching design.
+              </>
+            ) : (
+              <>
+                <span className="font-medium">Clinical values from data.</span> Blood glucose, HbA1c, lipids, haemoglobin, MCV and blood pressure come from {profile.dataSource.dataset}, row {profile.dataSource.row} (labelled {profile.dataSource.conditionLabel}). They are in the document &ldquo;Laboratory results&rdquo; and
+                the actions &ldquo;Blood tests&rdquo; and &ldquo;Blood pressure&rdquo;. Everything else about this patient was drafted by the guide.
+              </>
+            )}
           </p>
         </Notice>
       )}

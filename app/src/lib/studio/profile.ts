@@ -260,7 +260,9 @@ function dataSource(x: unknown): DataSource | undefined {
   if (!d.dataset || !d.row) return undefined;
   const values: Record<string, string> = {};
   for (const [k, v] of Object.entries(obj(d.values))) values[k] = str(v);
-  return { dataset: str(d.dataset), row: Math.round(num(d.row, 0)), condition: str(d.condition), conditionLabel: str(d.conditionLabel), values, documentId: str(d.documentId), actionIds: strs(d.actionIds) };
+  const out: DataSource = { dataset: str(d.dataset), row: Math.round(num(d.row, 0)), condition: str(d.condition), conditionLabel: str(d.conditionLabel), values, documentId: str(d.documentId), actionIds: strs(d.actionIds) };
+  if (d.kind === "synthea") Object.assign(out, { kind: "synthea", recordId: str(d.recordId), fingerprint: str(d.fingerprint) });
+  return out;
 }
 
 export function blankProfile(professionId: string): CaseProfile {
