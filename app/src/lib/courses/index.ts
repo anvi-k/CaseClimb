@@ -388,7 +388,8 @@ export interface StudentAssignment {
 export function studentAssignments(userId: string): StudentAssignment[] {
   const rows = all<AssignmentRow & { course: string }>(
     `SELECT a.*, co.name AS course FROM assignments a JOIN courses co ON co.id = a.course_id JOIN enrollments en ON en.course_id = a.course_id
-     WHERE en.user_id = ? ORDER BY a.due_at IS NULL, a.due_at, a.created_at DESC`,
+     WHERE en.user_id = ? AND (a.student_ids IS NULL OR EXISTS (SELECT 1 FROM json_each(a.student_ids) WHERE value = ?)) ORDER BY a.due_at IS NULL, a.due_at, a.created_at DESC`,
+    userId,
     userId,
   );
   const cards = new Map(publishedCaseCards().map((c) => [c.id, c]));

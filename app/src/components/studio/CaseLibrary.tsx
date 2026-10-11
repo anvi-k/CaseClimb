@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Badge, Button, Empty, Input, LinkButton, PageHeader, Select } from "@/components/ui";
 import Icon from "@/components/Icon";
 import type { LibraryItem } from "@/lib/studio/store";
@@ -38,6 +38,7 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
   const status = "active";
   const [origin, setOrigin] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
+  const [assigning, setAssigning] = useState<LibraryItem | null>(null);
   const [error, setError] = useState<string | null>(null);
   const roleName = (id: string) => professions.find((p) => p.id === id)?.name || id;
 
@@ -132,6 +133,10 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
                 </div>
               </div>
               <div className="flex shrink-0 flex-wrap items-center gap-2">
+                <Button size="sm" onClick={() => setAssigning(c)}>
+                  <Icon name="clipboard" />
+                  Assign
+                </Button>
                 <LinkButton href={`/faculty/cases/${c.id}`} variant="secondary" size="sm">
                   Open
                 </LinkButton>
@@ -149,6 +154,99 @@ export default function CaseLibrary({ initial, professions }: { initial: Library
           ))}
         </ul>
       )}
+      {assigning && <AssignDialog patient={assigning} onClose={() => setAssigning(null)} />}
     </>
+  );
+}
+
+/** Pop-up for choosing which students get a patient. */
+function AssignDialog({ patient, onClose }: { patient: LibraryItem; onClose: () => void }) {
+  const [students, setStudents] = useState<{ id: string; name: string; assigned: boolean }[] | null>(null);
+  const [picked, setPicked] = useState<Set<string>>(new Set());
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const [done, setDone] = useState<number | null>(null);
+  useEffect(() => {
+    api<{ students: { id: string; name: string; assigned: boolean }[] }>(`/api/cases/${patient.id}/assign`)
+      .then((r) => setStudents(r.students))
+      .catch((e) => setError((e as Error).message));
+  }, [patient.id]);
+  const open = (students || []).filter((s) => !s.assigned);
+  const all = open.length > 0 && open.every((s) => picked.has(s.id));
+  const toggle = (id: string) =>
+    setPicked((p) => {
+      const n = new Set(p);
+      if (n.has(id)) n.delete(id);
+      else n.add(id);
+      return n;
+    });
+  async function assign() {
+    setBusy(true);
+    setError("");
+    try {
+      const r = await api<{ assigned: number }>(`/api/cases/${patient.id}/assign`, { json: { studentIds: [...picked] } });
+      setDone(r.assigned);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  }
+  const row = "flex cursor-pointer items-center gap-3 rounded-xl px-4 py-3 hover:bg-slate-50";
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 p-4" onClick={onClose}>
+      <div role="dialog" aria-modal="true" aria-label={`Assign ${patient.patient}`} className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-7" onClick={(e) => e.stopPropagation()}>
+        <h2 className="text-[26px] leading-tight text-slate-900">Assign {patient.patient.split(",")[0]}</h2>
+        {done !== null ? (
+          <>
+            <p className="mt-3 flex items-center gap-2 text-slate-700">
+              <Icon name="check" className="h-6 w-6 text-brand-600" />
+              Assigned to {done} student{done === 1 ? "" : "s"}.
+            </p>
+            <div className="mt-6 flex justify-end">
+              <Button onClick={onClose}>Done</Button>
+            </div>
+          </>
+        ) : (
+          <>
+            <p className="mt-1 text-slate-600">Choose who sees this patient.</p>
+            {error && (
+              <Notice tone="red" className="mt-3">
+                {error}
+              </Notice>
+            )}
+            {!students ? (
+              !error && <p className="mt-5 text-slate-600">Loading students…</p>
+            ) : students.length === 0 ? (
+              <p className="mt-5 text-slate-600">No students have joined your class yet.</p>
+            ) : (
+              <div className="mt-4 max-h-80 overflow-y-auto">
+                {open.length > 1 && (
+                  <label className={`${row} font-semibold text-slate-900`}>
+                    <input type="checkbox" className="h-5 w-5 accent-brand-600" checked={all} onChange={() => setPicked(all ? new Set() : new Set(open.map((s) => s.id)))} />
+                    Select all
+                  </label>
+                )}
+                {students.map((s) => (
+                  <label key={s.id} className={`${row} ${s.assigned ? "cursor-default text-slate-500" : "text-slate-900"}`}>
+                    <input type="checkbox" className="h-5 w-5 accent-brand-600" disabled={s.assigned} checked={s.assigned || picked.has(s.id)} onChange={() => toggle(s.id)} />
+                    <span className="flex-1">{s.name}</span>
+                    {s.assigned && <span className="text-sm">Already assigned</span>}
+                  </label>
+                ))}
+              </div>
+            )}
+            <div className="mt-6 flex justify-end gap-2">
+              <Button variant="secondary" onClick={onClose}>
+                Cancel
+              </Button>
+              <Button onClick={assign} disabled={busy || picked.size === 0}>
+                {busy ? "Assigning…" : picked.size ? `Assign to ${picked.size}` : "Assign"}
+              </Button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
   );
 }

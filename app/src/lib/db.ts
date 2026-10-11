@@ -271,6 +271,8 @@ export function db(): Database.Database {
     };
     // The provided sample patients were expanded by the case generator; no clinician has reviewed the expansion.
     once("encounters-paused-at", "ALTER TABLE encounters ADD COLUMN paused_at TEXT");
+    // Null means the whole class; otherwise a JSON list of the students an assignment is for.
+    once("assignments-student-ids", "ALTER TABLE assignments ADD COLUMN student_ids TEXT");
     once("samples-not-reviewed", "UPDATE cases SET reviewed = 0 WHERE origin = 'sample'");
     g.__db = d;
   }
